@@ -18,14 +18,16 @@ namespace PROJECT_PRG2
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAboutUs_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

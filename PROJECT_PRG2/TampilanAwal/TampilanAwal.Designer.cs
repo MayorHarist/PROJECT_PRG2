@@ -28,48 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnAboutUs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnStart
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.warna_button;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(190, 780);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 64);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Start";
-            this.button1.UseMnemonic = false;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnStart.AutoSize = true;
+            this.btnStart.BackColor = System.Drawing.SystemColors.Control;
+            this.btnStart.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.warna_button;
+            this.btnStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.ForeColor = System.Drawing.Color.White;
+            this.btnStart.Location = new System.Drawing.Point(190, 780);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(202, 64);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseMnemonic = false;
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // button2
+            // btnAboutUs
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.warna_button;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(706, 781);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 64);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "About Us";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAboutUs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAboutUs.AutoSize = true;
+            this.btnAboutUs.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAboutUs.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.warna_button;
+            this.btnAboutUs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAboutUs.FlatAppearance.BorderSize = 0;
+            this.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAboutUs.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAboutUs.ForeColor = System.Drawing.Color.White;
+            this.btnAboutUs.Location = new System.Drawing.Point(706, 781);
+            this.btnAboutUs.Name = "btnAboutUs";
+            this.btnAboutUs.Size = new System.Drawing.Size(202, 64);
+            this.btnAboutUs.TabIndex = 1;
+            this.btnAboutUs.Text = "About Us";
+            this.btnAboutUs.UseVisualStyleBackColor = false;
+            this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
             // 
             // TampilanAwal
             // 
@@ -78,8 +78,8 @@
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.tampilan_awal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAboutUs);
+            this.Controls.Add(this.btnStart);
             this.Name = "TampilanAwal";
             this.Text = "Tampilan Awal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -90,8 +90,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnAboutUs;
     }
 }
 
