@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROJECT_PRG2.FormLogin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace PROJECT_PRG2
 {
@@ -17,9 +19,6 @@ namespace PROJECT_PRG2
             InitializeComponent();
             
         }
-
-        
-
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
             Close();
@@ -27,7 +26,13 @@ namespace PROJECT_PRG2
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            FormLogin formLogin = new FormLogin();
 
+            
+            formLogin.Show();
+
+            
+            this.Hide();
         }
     }
 }
