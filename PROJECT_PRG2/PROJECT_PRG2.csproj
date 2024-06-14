@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DashboardTenagaPendidik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardTenagaPendidik.Designer.cs">
+      <DependentUpon>DashboardTenagaPendidik.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
