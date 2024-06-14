@@ -80,6 +80,7 @@
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.btnAboutUs);
             this.Controls.Add(this.btnStart);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TampilanAwal";
             this.Text = "Tampilan Awal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

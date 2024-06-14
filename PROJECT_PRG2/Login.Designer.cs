@@ -120,6 +120,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.labelLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

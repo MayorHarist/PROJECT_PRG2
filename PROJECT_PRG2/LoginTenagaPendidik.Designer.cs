@@ -32,10 +32,12 @@
             // 
             // LoginTenagaPendidik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.login;
-            this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginTenagaPendidik";
             this.Text = "Login Tenaga Kependidikan";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

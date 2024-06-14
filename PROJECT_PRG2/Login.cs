@@ -15,6 +15,11 @@ namespace PROJECT_PRG2
         public Login()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer |
+                          ControlStyles.UserPaint |
+                          ControlStyles.AllPaintingInWmPaint,
+                          true);
+            this.UpdateStyles();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

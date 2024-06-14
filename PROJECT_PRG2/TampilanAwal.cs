@@ -16,7 +16,11 @@ namespace PROJECT_PRG2
         public TampilanAwal()
         {
             InitializeComponent();
-            
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer |
+                          ControlStyles.UserPaint |
+                          ControlStyles.AllPaintingInWmPaint,
+                          true);
+            this.UpdateStyles();
         }
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
