@@ -28,54 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnMhs = new System.Windows.Forms.Button();
-            this.btnTKN = new System.Windows.Forms.Button();
             this.labelLogin = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.White;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(179, 778);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(458, 69);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnMhs
-            // 
-            this.btnMhs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(148)))), ((int)(((byte)(237)))));
-            this.btnMhs.FlatAppearance.BorderSize = 0;
-            this.btnMhs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMhs.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMhs.ForeColor = System.Drawing.Color.White;
-            this.btnMhs.Location = new System.Drawing.Point(179, 600);
-            this.btnMhs.Name = "btnMhs";
-            this.btnMhs.Size = new System.Drawing.Size(458, 69);
-            this.btnMhs.TabIndex = 6;
-            this.btnMhs.Text = "Mahasiswa";
-            this.btnMhs.UseVisualStyleBackColor = false;
-            // 
-            // btnTKN
-            // 
-            this.btnTKN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(148)))), ((int)(((byte)(237)))));
-            this.btnTKN.FlatAppearance.BorderSize = 0;
-            this.btnTKN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTKN.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKN.ForeColor = System.Drawing.Color.White;
-            this.btnTKN.Location = new System.Drawing.Point(179, 415);
-            this.btnTKN.Name = "btnTKN";
-            this.btnTKN.Size = new System.Drawing.Size(458, 69);
-            this.btnTKN.TabIndex = 5;
-            this.btnTKN.Text = "Tenaga Kependidikan";
-            this.btnTKN.UseVisualStyleBackColor = false;
             // 
             // labelLogin
             // 
@@ -88,6 +45,70 @@
             this.labelLogin.TabIndex = 4;
             this.labelLogin.Text = "PILIHAN LOGIN";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 33;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(148)))), ((int)(((byte)(237)))));
+            this.guna2Button1.FocusedColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Poppins", 19.8F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(189, 415);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(504, 69);
+            this.guna2Button1.TabIndex = 8;
+            this.guna2Button1.Text = "Tenaga Kependidikan";
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.Animated = true;
+            this.guna2Button3.AutoRoundedCorners = true;
+            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.BorderRadius = 33;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.White;
+            this.guna2Button3.FocusedColor = System.Drawing.Color.White;
+            this.guna2Button3.Font = new System.Drawing.Font("Poppins", 19.8F, System.Drawing.FontStyle.Bold);
+            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button3.Location = new System.Drawing.Point(189, 778);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(504, 69);
+            this.guna2Button3.TabIndex = 10;
+            this.guna2Button3.Text = "Exit";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.Animated = true;
+            this.guna2Button4.AutoRoundedCorners = true;
+            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.BorderRadius = 33;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(148)))), ((int)(((byte)(237)))));
+            this.guna2Button4.FocusedColor = System.Drawing.Color.White;
+            this.guna2Button4.Font = new System.Drawing.Font("Poppins", 19.8F, System.Drawing.FontStyle.Bold);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Location = new System.Drawing.Point(189, 599);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(504, 69);
+            this.guna2Button4.TabIndex = 11;
+            this.guna2Button4.Text = "Mahasiswa";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -95,9 +116,9 @@
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1710, 840);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnMhs);
-            this.Controls.Add(this.btnTKN);
+            this.Controls.Add(this.guna2Button4);
+            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.labelLogin);
             this.Name = "Login";
             this.Text = "Login";
@@ -107,10 +128,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnMhs;
-        private System.Windows.Forms.Button btnTKN;
         private System.Windows.Forms.Label labelLogin;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
     }
 }
