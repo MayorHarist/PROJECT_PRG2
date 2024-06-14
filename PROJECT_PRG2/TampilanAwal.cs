@@ -20,7 +20,9 @@ namespace PROJECT_PRG2
         }
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
-            Close();
+            AboutUs aboutUs = new AboutUs();
+            aboutUs.Show();
+            this.Hide();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
