@@ -16,8 +16,7 @@ namespace PROJECT_PRG2
         {
             InitializeComponent();
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnKembali_Click(object sender, EventArgs e)
         {
             TampilanAwal tampilanAwal = new TampilanAwal();
             tampilanAwal.Show();

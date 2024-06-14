@@ -52,7 +52,7 @@
             this.btnKembali.Size = new System.Drawing.Size(263, 86);
             this.btnKembali.TabIndex = 11;
             this.btnKembali.Text = "Kembali";
-            this.btnKembali.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
             // AboutUs
             // 

@@ -16,6 +16,7 @@ namespace PROJECT_PRG2
         {
             InitializeComponent();
         }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
