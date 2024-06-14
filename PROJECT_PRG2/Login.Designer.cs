@@ -41,10 +41,9 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(119, 972);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExit.Location = new System.Drawing.Point(179, 778);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(695, 86);
+            this.btnExit.Size = new System.Drawing.Size(458, 69);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -57,10 +56,9 @@
             this.btnMhs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMhs.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMhs.ForeColor = System.Drawing.Color.White;
-            this.btnMhs.Location = new System.Drawing.Point(119, 750);
-            this.btnMhs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMhs.Location = new System.Drawing.Point(179, 600);
             this.btnMhs.Name = "btnMhs";
-            this.btnMhs.Size = new System.Drawing.Size(695, 86);
+            this.btnMhs.Size = new System.Drawing.Size(458, 69);
             this.btnMhs.TabIndex = 6;
             this.btnMhs.Text = "Mahasiswa";
             this.btnMhs.UseVisualStyleBackColor = false;
@@ -72,10 +70,9 @@
             this.btnTKN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTKN.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTKN.ForeColor = System.Drawing.Color.White;
-            this.btnTKN.Location = new System.Drawing.Point(119, 511);
-            this.btnTKN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTKN.Location = new System.Drawing.Point(179, 415);
             this.btnTKN.Name = "btnTKN";
-            this.btnTKN.Size = new System.Drawing.Size(695, 86);
+            this.btnTKN.Size = new System.Drawing.Size(458, 69);
             this.btnTKN.TabIndex = 5;
             this.btnTKN.Text = "Tenaga Kependidikan";
             this.btnTKN.UseVisualStyleBackColor = false;
@@ -85,24 +82,23 @@
             this.labelLogin.BackColor = System.Drawing.Color.Transparent;
             this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 70.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogin.ForeColor = System.Drawing.Color.White;
-            this.labelLogin.Location = new System.Drawing.Point(51, 112);
+            this.labelLogin.Location = new System.Drawing.Point(45, 90);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(1187, 254);
+            this.labelLogin.Size = new System.Drawing.Size(1055, 203);
             this.labelLogin.TabIndex = 4;
             this.labelLogin.Text = "PILIHAN LOGIN";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.ClientSize = new System.Drawing.Size(1710, 840);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnMhs);
             this.Controls.Add(this.btnTKN);
             this.Controls.Add(this.labelLogin);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
