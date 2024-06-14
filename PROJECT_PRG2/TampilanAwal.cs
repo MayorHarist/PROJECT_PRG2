@@ -27,12 +27,8 @@ namespace PROJECT_PRG2
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            Login formLogin = new Login();
-
-
+            Login formLogin = new Login();            
             formLogin.Show();
-
-
             this.Hide();
         }
     }

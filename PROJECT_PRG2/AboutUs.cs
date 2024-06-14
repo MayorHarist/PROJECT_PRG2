@@ -10,15 +10,18 @@ using System.Windows.Forms;
 
 namespace PROJECT_PRG2
 {
-    public partial class Login : Form
+    public partial class AboutUs : Form
     {
-        public Login()
+        public AboutUs()
         {
             InitializeComponent();
         }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Close();
+            TampilanAwal tampilanAwal = new TampilanAwal();
+            tampilanAwal.Show();
+            this.Hide();
         }
     }
 }

@@ -52,11 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DashboardTenagaPendidik.cs">
+    <Compile Include="AboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashboardTenagaPendidik.Designer.cs">
-      <DependentUpon>DashboardTenagaPendidik.cs</DependentUpon>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginTenagaPendidik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginTenagaPendidik.Designer.cs">
+      <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -72,6 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginTenagaPendidik.resx">
+      <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About FIND SMART.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

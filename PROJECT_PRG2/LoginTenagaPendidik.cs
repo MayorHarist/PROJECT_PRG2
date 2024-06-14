@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PROJECT_PRG2
 {
-    public partial class DashboardTenagaPendidik : Form
+    public partial class LoginTenagaPendidik : Form
     {
-        public DashboardTenagaPendidik()
+        public LoginTenagaPendidik()
         {
             InitializeComponent();
         }
