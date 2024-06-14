@@ -8,13 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PROJECT_PRG2.FormLogin
+namespace PROJECT_PRG2
 {
-    public partial class FormLogin : Form
+    public partial class Login : Form
     {
-        public FormLogin()
+        public Login()
         {
             InitializeComponent();
+        }
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
