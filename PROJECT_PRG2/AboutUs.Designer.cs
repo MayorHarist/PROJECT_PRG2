@@ -37,7 +37,7 @@
             this.btnKembali.AutoRoundedCorners = true;
             this.btnKembali.BackColor = System.Drawing.Color.Transparent;
             this.btnKembali.BorderColor = System.Drawing.Color.Transparent;
-            this.btnKembali.BorderRadius = 42;
+            this.btnKembali.BorderRadius = 33;
             this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -46,22 +46,22 @@
             this.btnKembali.FocusedColor = System.Drawing.Color.White;
             this.btnKembali.Font = new System.Drawing.Font("Poppins", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKembali.ForeColor = System.Drawing.Color.Black;
-            this.btnKembali.Location = new System.Drawing.Point(86, 948);
-            this.btnKembali.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnKembali.Location = new System.Drawing.Point(101, 847);
             this.btnKembali.Name = "btnKembali";
-            this.btnKembali.Size = new System.Drawing.Size(263, 86);
+            this.btnKembali.Size = new System.Drawing.Size(234, 69);
             this.btnKembali.TabIndex = 11;
             this.btnKembali.Text = "Kembali";
             this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
             // AboutUs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.About_FIND_SMART;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.btnKembali);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AboutUs";
             this.Text = "AboutUs";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
