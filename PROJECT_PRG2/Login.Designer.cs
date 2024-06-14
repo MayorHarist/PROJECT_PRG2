@@ -37,7 +37,7 @@
             // labelLogin
             // 
             this.labelLogin.BackColor = System.Drawing.Color.Transparent;
-            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 70.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogin.Font = new System.Drawing.Font("Poppins ExtraBold", 70.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogin.ForeColor = System.Drawing.Color.White;
             this.labelLogin.Location = new System.Drawing.Point(45, 90);
             this.labelLogin.Name = "labelLogin";
