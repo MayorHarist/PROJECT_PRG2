@@ -64,10 +64,21 @@
     <Compile Include="CRUD_Dosen\InputDosen.Designer.cs">
       <DependentUpon>InputDosen.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Dosen\ViewDosen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Dosen\ViewDosen.Designer.cs">
+      <DependentUpon>ViewDosen.cs</DependentUpon>
+    </Compile>
     <Compile Include="FINDSMART.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMART.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINDSMARTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMARTDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
@@ -94,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Dosen\InputDosen.resx">
       <DependentUpon>InputDosen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Dosen\ViewDosen.resx">
+      <DependentUpon>ViewDosen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginTenagaPendidik.resx">
       <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
@@ -124,6 +138,17 @@
     </None>
     <None Include="FINDSMART.xss">
       <DependentUpon>FINDSMART.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet.xsc">
+      <DependentUpon>FINDSMARTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMARTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMARTDataSet.xss">
+      <DependentUpon>FINDSMARTDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
