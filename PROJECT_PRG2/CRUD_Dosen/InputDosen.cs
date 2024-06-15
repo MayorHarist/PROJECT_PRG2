@@ -20,18 +20,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
-            txtPegawai.Text = "";
-            txtNIDN.Text = "";
-            txtNama.Text = "";
-            txtBidang.Text = "";
-            txtPendidikan.Text = "";
-            DateTimeTanggal.Value = DateTime.Now;
-            rbLaki.Checked = false;
-            rbPerempuan.Checked = false;
-            txtAlamat.Text = "";
-            txtEmail.Text = "";
-            txtTelepon.Text = "";
-            txtStatus.Text = "";
+            clear();
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -48,7 +37,9 @@ namespace PROJECT_PRG2.CRUD_Dosen
             insert.Parameters.AddWithValue("Bidang_Kompetensi", txtBidang.Text);
             insert.Parameters.AddWithValue("Pendidikan_Terakhir", txtPendidikan.Text);
             insert.Parameters.AddWithValue("Tanggal_Lahir", DateTimeTanggal.Value);
-            insert.Parameters.AddWithValue("Jenis_Kelamin", rbLaki.Checked | rbPerempuan.Checked);
+            // Tentukan nilai jenis kelamin berdasarkan radio button yang dipilih
+            string jenisKelamin = rbLaki.Checked ? "Laki-Laki" : rbPerempuan.Checked ? "Perempuan" : string.Empty;
+            insert.Parameters.AddWithValue("Jenis_Kelamin", jenisKelamin);
             insert.Parameters.AddWithValue("Alamat", txtAlamat.Text);
             insert.Parameters.AddWithValue("Email", txtEmail.Text);
             insert.Parameters.AddWithValue("Telepon", txtTelepon.Text);
@@ -66,6 +57,22 @@ namespace PROJECT_PRG2.CRUD_Dosen
             {
                 MessageBox.Show("Unable to saved: " + ex.Message);
             }
+        }
+
+        private void clear()
+        {
+            txtPegawai.Text = "";
+            txtNIDN.Text = "";
+            txtNama.Text = "";
+            txtBidang.Text = "";
+            txtPendidikan.Text = "";
+            DateTimeTanggal.Value = DateTime.Now;
+            rbLaki.Checked = false;
+            rbPerempuan.Checked = false;
+            txtAlamat.Text = "";
+            txtEmail.Text = "";
+            txtTelepon.Text = "";
+            txtStatus.Text = "";
         }
     }
 }
