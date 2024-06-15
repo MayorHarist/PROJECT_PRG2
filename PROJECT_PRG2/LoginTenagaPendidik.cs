@@ -7,14 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
+
+
 
 namespace PROJECT_PRG2
 {
-    public partial class LoginTenagaPendidik : Form
+    public partial class LoginSbgTenDik : Form
     {
-        public LoginTenagaPendidik()
+        
+        public LoginSbgTenDik()
         {
             InitializeComponent();
+        }
+
+        private void LoginSbgTenDik_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogFormTendik_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExitLogTendik_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
