@@ -58,6 +58,12 @@
     <Compile Include="AboutUs.Designer.cs">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashboardTen_Dik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardTen_Dik.Designer.cs">
+      <DependentUpon>DashboardTen_Dik.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
