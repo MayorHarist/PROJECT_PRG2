@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROJECT_PRG2.CRUD_Dosen;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,13 @@ namespace PROJECT_PRG2
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnLoginTendik_Click(object sender, EventArgs e)
+        {
+            InputDosen inputDosen = new InputDosen();
+            inputDosen.Show();
+            this.Hide();
         }
     }
 }

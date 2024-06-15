@@ -58,6 +58,12 @@
     <Compile Include="AboutUs.Designer.cs">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Dosen\InputDosen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Dosen\InputDosen.Designer.cs">
+      <DependentUpon>InputDosen.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutUs.resx">
       <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Dosen\InputDosen.resx">
+      <DependentUpon>InputDosen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginTenagaPendidik.resx">
       <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
@@ -126,5 +135,6 @@
   <ItemGroup>
     <None Include="Resources\About FIND SMART.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
