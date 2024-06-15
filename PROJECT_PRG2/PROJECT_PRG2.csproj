@@ -64,6 +64,11 @@
     <Compile Include="CRUD_Dosen\InputDosen.Designer.cs">
       <DependentUpon>InputDosen.cs</DependentUpon>
     </Compile>
+    <Compile Include="FINDSMART.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMART.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +114,17 @@
     <EmbeddedResource Include="TampilanAwal.resx">
       <DependentUpon>TampilanAwal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="FINDSMART.xsc">
+      <DependentUpon>FINDSMART.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMART.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMART.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FINDSMART.xss">
+      <DependentUpon>FINDSMART.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

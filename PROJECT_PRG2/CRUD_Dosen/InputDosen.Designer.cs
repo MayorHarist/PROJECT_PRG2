@@ -356,7 +356,7 @@
             this.btnBatal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnBatal.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(316, 795);
+            this.btnBatal.Location = new System.Drawing.Point(577, 792);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(168, 55);
             this.btnBatal.TabIndex = 18;
@@ -374,7 +374,7 @@
             this.btnSimpan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSimpan.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimpan.ForeColor = System.Drawing.Color.White;
-            this.btnSimpan.Location = new System.Drawing.Point(541, 795);
+            this.btnSimpan.Location = new System.Drawing.Point(312, 792);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(168, 55);
             this.btnSimpan.TabIndex = 19;

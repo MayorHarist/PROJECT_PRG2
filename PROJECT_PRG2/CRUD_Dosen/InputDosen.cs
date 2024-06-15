@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PROJECT_PRG2.CRUD_Dosen
 {
@@ -35,7 +36,36 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            SqlConnection connection = new SqlConnection(connectionstring);
 
+            SqlCommand insert = new SqlCommand("sp_InsertDosen", connection);
+            insert.CommandType = CommandType.StoredProcedure;
+
+            insert.Parameters.AddWithValue("No_Pegawai", txtPegawai.Text);
+            insert.Parameters.AddWithValue("NIDN", txtNIDN.Text);
+            insert.Parameters.AddWithValue("Nama", txtNama.Text);
+            insert.Parameters.AddWithValue("Bidang_Kompetensi", txtBidang.Text);
+            insert.Parameters.AddWithValue("Pendidikan_Terakhir", txtPendidikan.Text);
+            insert.Parameters.AddWithValue("Tanggal_Lahir", DateTimeTanggal.Value);
+            insert.Parameters.AddWithValue("Jenis_Kelamin", rbLaki.Checked | rbPerempuan.Checked);
+            insert.Parameters.AddWithValue("Alamat", txtAlamat.Text);
+            insert.Parameters.AddWithValue("Email", txtEmail.Text);
+            insert.Parameters.AddWithValue("Telepon", txtTelepon.Text);
+            insert.Parameters.AddWithValue("Status", txtStatus.Text);
+
+            try
+            {
+                connection.Open();
+                insert.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil disimpan", "Information",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to saved: " + ex.Message);
+            }
         }
     }
 }
