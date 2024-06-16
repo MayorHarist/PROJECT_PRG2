@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_PosisiPrestasi));
+            this.SuspendLayout();
+            // 
+            // View_PosisiPrestasi
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "View_PosisiPrestasi";
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Name = "View_PosisiPrestasi";
+            this.Text = "Lihat Posisi Prestasi";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

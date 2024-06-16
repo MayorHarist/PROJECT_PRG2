@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateDelete_JenisPrestasi));
+            this.SuspendLayout();
+            // 
+            // UpdateDelete_JenisPrestasi
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "UpdateDelete_JenisPrestasi";
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1902, 1055);
+            this.Name = "UpdateDelete_JenisPrestasi";
+            this.Text = "Update & Delete Jenis Prestasi";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
