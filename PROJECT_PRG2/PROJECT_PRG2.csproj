@@ -70,6 +70,42 @@
     <Compile Include="CRUD_Dosen\ViewDosen.Designer.cs">
       <DependentUpon>ViewDosen.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_JenisPrestasi\Input_JenisPrestasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_JenisPrestasi\Input_JenisPrestasi.Designer.cs">
+      <DependentUpon>Input_JenisPrestasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_JenisPrestasi\UpdateDelete_JenisPrestasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_JenisPrestasi\UpdateDelete_JenisPrestasi.Designer.cs">
+      <DependentUpon>UpdateDelete_JenisPrestasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_JenisPrestasi\View_JenisPrestasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_JenisPrestasi\View_JenisPrestasi.Designer.cs">
+      <DependentUpon>View_JenisPrestasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.Designer.cs">
+      <DependentUpon>Input_PosisiPrestasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_PosisiPrestasi\UpdateDelete_PosisiPrestasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_PosisiPrestasi\UpdateDelete_PosisiPrestasi.Designer.cs">
+      <DependentUpon>UpdateDelete_PosisiPrestasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_PosisiPrestasi\View_PosisiPrestasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_PosisiPrestasi\View_PosisiPrestasi.Designer.cs">
+      <DependentUpon>View_PosisiPrestasi.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_Tendik\DataTendik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Dosen\ViewDosen.resx">
       <DependentUpon>ViewDosen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_JenisPrestasi\Input_JenisPrestasi.resx">
+      <DependentUpon>Input_JenisPrestasi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Tendik\DataTendik.resx">
       <DependentUpon>DataTendik.cs</DependentUpon>
