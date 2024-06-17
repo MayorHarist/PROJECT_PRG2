@@ -64,6 +64,12 @@
     <Compile Include="CRUD_Dosen\InputDosen.Designer.cs">
       <DependentUpon>InputDosen.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Dosen\UpdateDeleteDosen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Dosen\UpdateDeleteDosen.Designer.cs">
+      <DependentUpon>UpdateDeleteDosen.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_Dosen\ViewDosen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Dosen\InputDosen.resx">
       <DependentUpon>InputDosen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Dosen\UpdateDeleteDosen.resx">
+      <DependentUpon>UpdateDeleteDosen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Dosen\ViewDosen.resx">
       <DependentUpon>ViewDosen.cs</DependentUpon>

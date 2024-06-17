@@ -164,7 +164,7 @@
             this.DateTimeTanggal.BackColor = System.Drawing.Color.Transparent;
             this.DateTimeTanggal.BorderRadius = 25;
             this.DateTimeTanggal.Checked = true;
-            this.DateTimeTanggal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.DateTimeTanggal.FillColor = System.Drawing.Color.Cyan;
             this.DateTimeTanggal.Font = new System.Drawing.Font("Poppins", 9F);
             this.DateTimeTanggal.ForeColor = System.Drawing.Color.Black;
             this.DateTimeTanggal.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -187,7 +187,7 @@
             this.rbLaki.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
             this.rbLaki.CheckedState.InnerOffset = -4;
             this.rbLaki.Font = new System.Drawing.Font("Poppins", 9F);
-            this.rbLaki.ForeColor = System.Drawing.Color.White;
+            this.rbLaki.ForeColor = System.Drawing.Color.Black;
             this.rbLaki.Location = new System.Drawing.Point(388, 438);
             this.rbLaki.Name = "rbLaki";
             this.rbLaki.Size = new System.Drawing.Size(121, 36);
@@ -209,7 +209,7 @@
             this.rbPerempuan.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
             this.rbPerempuan.CheckedState.InnerOffset = -4;
             this.rbPerempuan.Font = new System.Drawing.Font("Poppins", 9F);
-            this.rbPerempuan.ForeColor = System.Drawing.Color.White;
+            this.rbPerempuan.ForeColor = System.Drawing.Color.Black;
             this.rbPerempuan.Location = new System.Drawing.Point(515, 438);
             this.rbPerempuan.Name = "rbPerempuan";
             this.rbPerempuan.Size = new System.Drawing.Size(145, 36);
@@ -392,6 +392,7 @@
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel1.TabIndex = 20;
+            this.guna2HtmlLabel1.Text = null;
             // 
             // guna2HtmlLabel2
             // 
@@ -401,6 +402,7 @@
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel2.TabIndex = 21;
+            this.guna2HtmlLabel2.Text = null;
             // 
             // label1
             // 
