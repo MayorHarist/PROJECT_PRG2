@@ -1,5 +1,6 @@
 ﻿using PROJECT_PRG2.CRUD_Dosen;
 using PROJECT_PRG2.CRUD_JenisPrestasi;
+using PROJECT_PRG2.CRUD_MataKuliah;
 using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace PROJECT_PRG2
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new Input_PosisiPrestasi());
             //Application.Run(new UpdateDelete_PosisiPrestasi());
-            Application.Run(new UpdateDeleteDosen());
+            Application.Run(new InputMatkul());
 
         }
     }

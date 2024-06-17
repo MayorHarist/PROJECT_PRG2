@@ -94,6 +94,12 @@
     <Compile Include="CRUD_JenisPrestasi\View_JenisPrestasi.Designer.cs">
       <DependentUpon>View_JenisPrestasi.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_MataKuliah\InputMatkul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_MataKuliah\InputMatkul.Designer.cs">
+      <DependentUpon>InputMatkul.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FINDSMARTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMARTDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINDSMARTDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMARTDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_JenisPrestasi\View_JenisPrestasi.resx">
       <DependentUpon>View_JenisPrestasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_MataKuliah\InputMatkul.resx">
+      <DependentUpon>InputMatkul.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.resx">
       <DependentUpon>Input_PosisiPrestasi.cs</DependentUpon>
@@ -252,6 +271,28 @@
     </None>
     <None Include="FINDSMARTDataSet.xss">
       <DependentUpon>FINDSMARTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet1.xsc">
+      <DependentUpon>FINDSMARTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMARTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMARTDataSet1.xss">
+      <DependentUpon>FINDSMARTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet2.xsc">
+      <DependentUpon>FINDSMARTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMARTDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMARTDataSet2.xss">
+      <DependentUpon>FINDSMARTDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -395,7 +395,7 @@
             this.DateTimeTanggal.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DateTimeTanggal.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DateTimeTanggal.Name = "DateTimeTanggal";
-            this.DateTimeTanggal.Size = new System.Drawing.Size(286, 52);
+            this.DateTimeTanggal.Size = new System.Drawing.Size(327, 52);
             this.DateTimeTanggal.TabIndex = 38;
             this.DateTimeTanggal.Value = new System.DateTime(2024, 6, 15, 22, 37, 28, 314);
             // 
