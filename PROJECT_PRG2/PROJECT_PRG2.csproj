@@ -76,6 +76,23 @@
     <Compile Include="CRUD_Tendik\DataTendik.Designer.cs">
       <DependentUpon>DataTendik.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Tendik\UpdateTendik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Tendik\UpdateTendik.Designer.cs">
+      <DependentUpon>UpdateTendik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DsTendik.cs">
+      <DependentUpon>DsTendik.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsTendik.Designer.cs">
+      <DependentUpon>DsTendik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DsTendik1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsTendik.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FINDSMART.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -118,6 +135,9 @@
     <EmbeddedResource Include="CRUD_Tendik\DataTendik.resx">
       <DependentUpon>DataTendik.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Tendik\UpdateTendik.resx">
+      <DependentUpon>UpdateTendik.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginTenagaPendidik.resx">
       <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +157,17 @@
     <EmbeddedResource Include="TampilanAwal.resx">
       <DependentUpon>TampilanAwal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DsTendik.xsc">
+      <DependentUpon>DsTendik.xsd</DependentUpon>
+    </None>
+    <None Include="DsTendik.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsTendik1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsTendik.xss">
+      <DependentUpon>DsTendik.xsd</DependentUpon>
+    </None>
     <None Include="FINDSMART.xsc">
       <DependentUpon>FINDSMART.xsd</DependentUpon>
     </None>
