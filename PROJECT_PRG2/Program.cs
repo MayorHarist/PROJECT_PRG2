@@ -23,7 +23,8 @@ namespace PROJECT_PRG2
             //Application.Run(new Input_JenisPrestasi());
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new Input_PosisiPrestasi());
-            Application.Run(new UpdateDelete_PosisiPrestasi());
+            //Application.Run(new UpdateDelete_PosisiPrestasi());
+            Application.Run(new UpdateDeleteDosen());
 
         }
     }
