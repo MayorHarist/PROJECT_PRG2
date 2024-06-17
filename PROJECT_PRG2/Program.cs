@@ -18,8 +18,8 @@ namespace PROJECT_PRG2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TampilanAwal());
-            //Application.Run(new Input_JenisPrestasi());
+            //Application.Run(new TampilanAwal());
+            Application.Run(new Input_JenisPrestasi());
         }
     }
 }
