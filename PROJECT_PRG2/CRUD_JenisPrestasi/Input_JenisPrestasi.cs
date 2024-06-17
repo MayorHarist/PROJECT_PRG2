@@ -40,6 +40,8 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 insert.ExecuteNonQuery();
                 MessageBox.Show("Data jenis prestasi berhasil disimpan", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clear();
+
             }
             catch (Exception ex)
             {

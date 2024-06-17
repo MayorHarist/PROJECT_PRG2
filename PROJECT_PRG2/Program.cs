@@ -1,5 +1,6 @@
 ﻿using PROJECT_PRG2.CRUD_Dosen;
 using PROJECT_PRG2.CRUD_JenisPrestasi;
+using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,11 @@ namespace PROJECT_PRG2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new TampilanAwal());
-            Application.Run(new Input_JenisPrestasi());
+            //Application.Run(new Input_JenisPrestasi());
+            //Application.Run(new UpdateDelete_JenisPrestasi());
+            //Application.Run(new Input_PosisiPrestasi());
+            Application.Run(new UpdateDelete_PosisiPrestasi());
+
         }
     }
 }

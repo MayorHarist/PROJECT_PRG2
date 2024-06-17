@@ -41,47 +41,47 @@
             // 
             // txtIdJenisPrestasi
             // 
-            this.txtIdJenisPrestasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdJenisPrestasi.Location = new System.Drawing.Point(1236, 241);
+            this.txtIdJenisPrestasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdJenisPrestasi.Location = new System.Drawing.Point(1236, 251);
             this.txtIdJenisPrestasi.Multiline = true;
             this.txtIdJenisPrestasi.Name = "txtIdJenisPrestasi";
-            this.txtIdJenisPrestasi.Size = new System.Drawing.Size(600, 50);
+            this.txtIdJenisPrestasi.Size = new System.Drawing.Size(600, 31);
             this.txtIdJenisPrestasi.TabIndex = 2;
             // 
             // txtNama
             // 
-            this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNama.Location = new System.Drawing.Point(1236, 337);
+            this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNama.Location = new System.Drawing.Point(1236, 344);
             this.txtNama.Multiline = true;
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(600, 50);
+            this.txtNama.Size = new System.Drawing.Size(600, 31);
             this.txtNama.TabIndex = 3;
             // 
             // txtPeran
             // 
-            this.txtPeran.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeran.Location = new System.Drawing.Point(1236, 444);
+            this.txtPeran.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeran.Location = new System.Drawing.Point(1236, 454);
             this.txtPeran.Multiline = true;
             this.txtPeran.Name = "txtPeran";
-            this.txtPeran.Size = new System.Drawing.Size(600, 50);
+            this.txtPeran.Size = new System.Drawing.Size(600, 31);
             this.txtPeran.TabIndex = 4;
             // 
             // txtPenyelenggara
             // 
-            this.txtPenyelenggara.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPenyelenggara.Location = new System.Drawing.Point(1236, 549);
+            this.txtPenyelenggara.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPenyelenggara.Location = new System.Drawing.Point(1236, 558);
             this.txtPenyelenggara.Multiline = true;
             this.txtPenyelenggara.Name = "txtPenyelenggara";
-            this.txtPenyelenggara.Size = new System.Drawing.Size(600, 50);
+            this.txtPenyelenggara.Size = new System.Drawing.Size(600, 31);
             this.txtPenyelenggara.TabIndex = 5;
             // 
             // txtPoint
             // 
-            this.txtPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPoint.Location = new System.Drawing.Point(1236, 667);
+            this.txtPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPoint.Location = new System.Drawing.Point(1236, 676);
             this.txtPoint.Multiline = true;
             this.txtPoint.Name = "txtPoint";
-            this.txtPoint.Size = new System.Drawing.Size(600, 50);
+            this.txtPoint.Size = new System.Drawing.Size(600, 31);
             this.txtPoint.TabIndex = 6;
             // 
             // btnCancel
@@ -107,11 +107,11 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(1236, 775);
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.Location = new System.Drawing.Point(1236, 784);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(600, 50);
+            this.txtStatus.Size = new System.Drawing.Size(600, 31);
             this.txtStatus.TabIndex = 10;
             // 
             // Input_JenisPrestasi
@@ -119,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1904, 1061);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);

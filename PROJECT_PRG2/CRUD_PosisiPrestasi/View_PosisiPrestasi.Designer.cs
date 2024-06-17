@@ -33,10 +33,11 @@
             // 
             // View_PosisiPrestasi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "View_PosisiPrestasi";
             this.Text = "Lihat Posisi Prestasi";
             this.ResumeLayout(false);
