@@ -239,6 +239,7 @@
             this.btnUbah.Size = new System.Drawing.Size(168, 55);
             this.btnUbah.TabIndex = 74;
             this.btnUbah.Text = "Ubah";
+            this.btnUbah.Click += new System.EventHandler(this.btnUbah_Click);
             // 
             // btnHapus
             // 
@@ -257,6 +258,7 @@
             this.btnHapus.Size = new System.Drawing.Size(168, 55);
             this.btnHapus.TabIndex = 73;
             this.btnHapus.Text = "Hapus";
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // txtSemester
             // 
