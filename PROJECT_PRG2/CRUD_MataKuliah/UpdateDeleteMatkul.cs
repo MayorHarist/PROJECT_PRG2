@@ -52,17 +52,12 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                         cbProdi.SelectedText = dataTable.Rows[0]["Id_Prodi"].ToString();
                     }
 
-                    txtNIDN.Enabled = true;
                     txtNama.Enabled = true;
-                    txtBidang.Enabled = true;
-                    txtPendidikan.Enabled = true;
-                    DateTimeTanggal.Enabled = true;
-                    rbLaki.Enabled = true;
-                    rbPerempuan.Enabled = true;
-                    txtAlamat.Enabled = true;
-                    txtEmail.Enabled = true;
-                    txtTelepon.Enabled = true;
-                    txtStatus.Enabled = true;
+                    txtSKS.Enabled = true;
+                    txtJenis.Enabled = true;
+                    txtSemester.Enabled = true;
+                    cbPegawai.Enabled = true;
+                    cbProdi.Enabled = true;
 
                     btnUbah.Enabled = true;
                     btnHapus.Enabled = true;
