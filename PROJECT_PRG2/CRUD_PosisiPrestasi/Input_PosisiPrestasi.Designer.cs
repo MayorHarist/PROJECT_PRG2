@@ -71,6 +71,7 @@
             this.btnSubmit.Size = new System.Drawing.Size(378, 44);
             this.btnSubmit.TabIndex = 11;
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnCancel
             // 
@@ -81,6 +82,7 @@
             this.btnCancel.Size = new System.Drawing.Size(378, 44);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Input_PosisiPrestasi
             // 
@@ -93,7 +95,7 @@
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtNama);
             this.Controls.Add(this.txtIdPosisiPrestasi);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Input_PosisiPrestasi";
             this.Text = "Form Posisi Prestasi";
             this.ResumeLayout(false);

@@ -195,6 +195,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FINDSMARTDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMARTDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +366,17 @@
     </None>
     <None Include="FINDSMARTDataSet4.xss">
       <DependentUpon>FINDSMARTDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet5.xsc">
+      <DependentUpon>FINDSMARTDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMARTDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMARTDataSet5.xss">
+      <DependentUpon>FINDSMARTDataSet5.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

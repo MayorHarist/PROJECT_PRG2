@@ -32,7 +32,6 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             insert.Parameters.AddWithValue("Penyelenggara", txtPenyelenggara.Text);
             insert.Parameters.AddWithValue("Point", txtPoint.Text);
             insert.Parameters.AddWithValue("Status", txtStatus.Text);
-            //insert.Parameters.AddWithValue("Status", cbStatus.SelectedValue.ToString());
 
             try
             {
@@ -57,7 +56,6 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             txtPenyelenggara.Text = "";
             txtPoint.Text = "";
             txtStatus.Text = "";
-            //cbStatus.Text = "";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
