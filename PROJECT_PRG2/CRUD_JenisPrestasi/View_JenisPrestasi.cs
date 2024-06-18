@@ -16,5 +16,18 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         {
             InitializeComponent();
         }
+
+        private void btnTampil_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet4.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet4.JenisPrestasi);
+        }
+
+        private void View_JenisPrestasi_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet4.JenisPrestasi' table. You can move, or remove it, as needed.
+            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet4.JenisPrestasi);
+
+        }
     }
 }

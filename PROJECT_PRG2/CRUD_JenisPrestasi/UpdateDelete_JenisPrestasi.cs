@@ -16,40 +16,32 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         public UpdateDelete_JenisPrestasi()
         {
             InitializeComponent();
-            txtNama.Enabled = false;
-            txtPeran.Enabled = false;
-            txtPenyelenggara.Enabled = false;
-            txtPoint.Enabled = false;
-            txtStatus.Enabled = false;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string connnectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connnectionstring);
-            SqlCommand cmd = new SqlCommand("sp_CariJenisSupplier", connection);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("Id_JenisSupplier", txtIdJenisPrestasi.Text);
-            connection.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.Read())
+            try
             {
-                txtNama.Enabled = true;
-                txtPeran.Enabled = true;
-                txtPenyelenggara.Enabled = true;
-                txtPoint.Enabled = true;
-                txtStatus.Enabled = true;
+                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                SqlConnection connection = new SqlConnection(connnectionString);
+                connection.Open();
 
-                txtNama.Text = reader["Nama"].ToString();
-                txtPeran.Text = reader["Peran"].ToString();
-                txtPenyelenggara.Text = reader["Penyelenggara"].ToString();
-                txtPoint.Text = reader["Point"].ToString();
-                txtStatus.Text = reader["status"].ToString();
+                DataTable dataTable = new DataTable();
+                SqlCommand myCommand = new SqlCommand("Select * from JenisPrestasi where Id_JenisPrestasi= @Id_JenisPrestasi", connection);
+                myCommand.Parameters.AddWithValue("Id_JenisPrestasi", txtIdJenisPrestasi.Text);
+                SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
+                myAdapter.Fill(dataTable);
+
+                txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
+                txtPeran.Text = dataTable.Rows[0]["Peran"].ToString();
+                txtPenyelenggara.Text = dataTable.Rows[0]["Penyelenggara"].ToString();
+                txtPoint.Text = dataTable.Rows[0]["Point"].ToString();
+                txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
+                connection.Close();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Data jenis prestasi tidak ditemui", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Error : " + ex.Message);
             }
         }
 
@@ -61,33 +53,48 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             txtPenyelenggara.Text = "";
             txtPoint.Text = "";
             txtStatus.Text = "";
-
-            txtNama.Enabled = false;
-            txtPeran.Enabled = false;
-            txtPenyelenggara.Enabled = false;
-            txtPoint.Enabled = false;
-            txtStatus.Enabled = false;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data soruce=.; initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            try
+            {
+                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                SqlConnection connection = new SqlConnection(connnectionString);
+                connection.Open();
 
-            SqlCommand update = new SqlCommand("sp_UpdateJenisPrestasi", connection);
-            update.CommandType = CommandType.StoredProcedure;
+                SqlCommand myCommand = new SqlCommand();
+                myCommand.Connection = connection;
 
-            update.Parameters.AddWithValue("Id_JenisPrestasi", txtIdJenisPrestasi.Text);
-            update.Parameters.AddWithValue("Nama", txtNama.Text);
-            update.Parameters.AddWithValue("Peran", txtPeran.Text);
-            update.Parameters.AddWithValue("Penyelenggara", txtPenyelenggara.Text);
-            update.Parameters.AddWithValue("Point", txtPoint.Text);
-            update.Parameters.AddWithValue("Status", txtStatus.Text);
-            connection.Open();
-            update.ExecuteNonQuery();
+                myCommand.CommandText = "UPDATE JenisPrestasi " +
+                                        "SET Nama = @Nama, " +
+                                        "   Peran = @Peran, " +
+                                        "   Penyelenggara = @Penyelenggara, " +
+                                        "   Point = @Point, " +
+                                        "   Status = @Status " +
+                                        "WHERE Id_JenisPrestasi = @Id_JenisPrestasi";
 
-            MessageBox.Show("Data berhasil diperbaharui", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            clear();
+                // Tambahkan parameter untuk menghindari SQL injection dan masalah dengan nilai string
+                myCommand.Parameters.AddWithValue("Nama", txtNama.Text);
+                myCommand.Parameters.AddWithValue("Peran", txtPeran.Text);
+                myCommand.Parameters.AddWithValue("Penyelenggara", txtPenyelenggara.Text);
+                myCommand.Parameters.AddWithValue("Point", txtPoint.Text);
+                myCommand.Parameters.AddWithValue("Status", txtStatus.Text);
+                myCommand.Parameters.AddWithValue("Id_JenisPrestasi", txtIdJenisPrestasi.Text);
+
+                //eksekusi perintah SQL
+                myCommand.ExecuteNonQuery();
+
+                //menampilkan pesan jika eksekusi berhasil
+                MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -97,24 +104,27 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data soruce=.; initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
-
-            SqlCommand delete = new SqlCommand("sp_DeleteJenisPrestasi", connection);
-            delete.CommandType = CommandType.StoredProcedure;
-
-            delete.Parameters.AddWithValue("Id_JenisPrestasi", txtIdJenisPrestasi.Text);
-            MessageBox.Show("Anda yakin menghapus data ini?", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             try
             {
+                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                SqlConnection connection = new SqlConnection(connnectionString);
                 connection.Open();
+
+                SqlCommand delete = new SqlCommand("sp_DeleteJenisPrestasi", connection);
+                delete.CommandType = CommandType.StoredProcedure;
+
+                delete.Parameters.AddWithValue("@Id_JenisPrestasi", txtIdJenisPrestasi.Text);
+                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
                 delete.ExecuteNonQuery();
-                MessageBox.Show("Data berhasil dihapus", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                MessageBox.Show("Data berhasil dihapus", "Informasi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clear();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Tidak berhasil disimpan" + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
