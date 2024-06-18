@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="dsTendik" targetNamespace="http://tempuri.org/dsTendik.xsd" xmlns:mstns="http://tempuri.org/dsTendik.xsd" xmlns="http://tempuri.org/dsTendik.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="Tendik" targetNamespace="http://tempuri.org/Tendik.xsd" xmlns:mstns="http://tempuri.org/Tendik.xsd" xmlns="http://tempuri.org/Tendik.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FINDSMARTConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FINDSMARTConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PROJECT_PRG2.Properties.Settings.GlobalReference.Default.FINDSMARTConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FINDSMARTConnectionString4" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FINDSMARTConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PROJECT_PRG2.Properties.Settings.GlobalReference.Default.FINDSMARTConnectionString4" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TenagaKependidikanTableAdapter" GeneratorDataComponentClassName="TenagaKependidikanTableAdapter" Name="TenagaKependidikan" UserDataComponentName="TenagaKependidikanTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="FINDSMARTConnectionString1 (Settings)" DbObjectName="FINDSMART.dbo.TenagaKependidikan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="FINDSMARTConnectionString4 (Settings)" DbObjectName="FINDSMART.dbo.TenagaKependidikan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[TenagaKependidikan] WHERE (([Id_TKN] = @Original_Id_TKN) AND ([Nama] = @Original_Nama) AND ([Tanggal_Lahir] = @Original_Tanggal_Lahir) AND ([Jenis_Kelamin] = @Original_Jenis_Kelamin) AND ([Alamat] = @Original_Alamat) AND ([Email] = @Original_Email) AND ([Telepon] = @Original_Telepon) AND ([Username] = @Original_Username) AND ([Password] = @Original_Password) AND ([Status] = @Original_Status))</CommandText>
@@ -100,7 +100,7 @@ SELECT Id_TKN, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Usern
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsTendik" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsTendik" msprop:Generator_DataSetName="dsTendik">
+  <xs:element name="Tendik" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="Tendik" msprop:Generator_DataSetName="Tendik">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="TenagaKependidikan" msprop:Generator_RowEvHandlerName="TenagaKependidikanRowChangeEventHandler" msprop:Generator_RowDeletedName="TenagaKependidikanRowDeleted" msprop:Generator_RowDeletingName="TenagaKependidikanRowDeleting" msprop:Generator_RowEvArgName="TenagaKependidikanRowChangeEvent" msprop:Generator_TablePropName="TenagaKependidikan" msprop:Generator_RowChangedName="TenagaKependidikanRowChanged" msprop:Generator_RowChangingName="TenagaKependidikanRowChanging" msprop:Generator_TableClassName="TenagaKependidikanDataTable" msprop:Generator_RowClassName="TenagaKependidikanRow" msprop:Generator_TableVarName="tableTenagaKependidikan" msprop:Generator_UserTableName="TenagaKependidikan">

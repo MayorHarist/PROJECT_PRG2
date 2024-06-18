@@ -20,9 +20,9 @@ namespace PROJECT_PRG2 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsTendik")]
+    [global::System.Xml.Serialization.XmlRootAttribute("TendikBaru")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsTendik : global::System.Data.DataSet {
+    public partial class TendikBaru : global::System.Data.DataSet {
         
         private TenagaKependidikanDataTable tableTenagaKependidikan;
         
@@ -30,7 +30,7 @@ namespace PROJECT_PRG2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public dsTendik() {
+        public TendikBaru() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PROJECT_PRG2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected dsTendik(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected TendikBaru(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace PROJECT_PRG2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsTendik cln = ((dsTendik)(base.Clone()));
+            TendikBaru cln = ((TendikBaru)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace PROJECT_PRG2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsTendik";
+            this.DataSetName = "TendikBaru";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsTendik.xsd";
+            this.Namespace = "http://tempuri.org/TendikBaru.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTenagaKependidikan = new TenagaKependidikanDataTable();
@@ -225,7 +225,7 @@ namespace PROJECT_PRG2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsTendik ds = new dsTendik();
+            TendikBaru ds = new TendikBaru();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -615,7 +615,7 @@ namespace PROJECT_PRG2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsTendik ds = new dsTendik();
+                TendikBaru ds = new TendikBaru();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -834,7 +834,7 @@ namespace PROJECT_PRG2 {
         }
     }
 }
-namespace PROJECT_PRG2.dsTendikTableAdapters {
+namespace PROJECT_PRG2.TendikBaruTableAdapters {
     
     
     /// <summary>
@@ -1029,7 +1029,7 @@ SELECT Id_TKN, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Usern
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PROJECT_PRG2.Properties.Settings.Default.FINDSMARTConnectionString1;
+            this._connection.ConnectionString = global::PROJECT_PRG2.Properties.Settings.Default.FINDSMARTConnectionString4;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1047,7 +1047,7 @@ SELECT Id_TKN, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Usern
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsTendik.TenagaKependidikanDataTable dataTable) {
+        public virtual int Fill(TendikBaru.TenagaKependidikanDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1060,9 +1060,9 @@ SELECT Id_TKN, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Usern
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsTendik.TenagaKependidikanDataTable GetData() {
+        public virtual TendikBaru.TenagaKependidikanDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsTendik.TenagaKependidikanDataTable dataTable = new dsTendik.TenagaKependidikanDataTable();
+            TendikBaru.TenagaKependidikanDataTable dataTable = new TendikBaru.TenagaKependidikanDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1070,14 +1070,14 @@ SELECT Id_TKN, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Usern
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsTendik.TenagaKependidikanDataTable dataTable) {
+        public virtual int Update(TendikBaru.TenagaKependidikanDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsTendik dataSet) {
+        public virtual int Update(TendikBaru dataSet) {
             return this.Adapter.Update(dataSet, "TenagaKependidikan");
         }
         
@@ -1518,7 +1518,7 @@ SELECT Id_TKN, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Usern
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(dsTendik dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(TendikBaru dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tenagaKependidikanTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.TenagaKependidikan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1537,7 +1537,7 @@ SELECT Id_TKN, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Usern
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(dsTendik dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(TendikBaru dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tenagaKependidikanTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.TenagaKependidikan.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1555,7 +1555,7 @@ SELECT Id_TKN, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Usern
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(dsTendik dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(TendikBaru dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._tenagaKependidikanTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.TenagaKependidikan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1597,7 +1597,7 @@ SELECT Id_TKN, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Usern
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(dsTendik dataSet) {
+        public virtual int UpdateAll(TendikBaru dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

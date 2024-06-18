@@ -424,8 +424,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnSimpan;
         private Guna.UI2.WinForms.Guna2Button btnBatal;
         private Guna.UI2.WinForms.Guna2TextBox txtSemester;

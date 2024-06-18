@@ -154,17 +154,6 @@
     <Compile Include="CRUD_Tendik\UpdateTendik.Designer.cs">
       <DependentUpon>UpdateTendik.cs</DependentUpon>
     </Compile>
-    <Compile Include="DsTendik.cs">
-      <DependentUpon>DsTendik.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DsTendik.Designer.cs">
-      <DependentUpon>DsTendik.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DsTendik1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DsTendik.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FINDSMART.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -215,6 +204,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tendik.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tendik.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TendikBaru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TendikBaru.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutUs.resx">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,17 +284,6 @@
     <EmbeddedResource Include="TampilanAwal.resx">
       <DependentUpon>TampilanAwal.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DsTendik.xsc">
-      <DependentUpon>DsTendik.xsd</DependentUpon>
-    </None>
-    <None Include="DsTendik.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DsTendik1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DsTendik.xss">
-      <DependentUpon>DsTendik.xsd</DependentUpon>
-    </None>
     <None Include="FINDSMART.xsc">
       <DependentUpon>FINDSMART.xsd</DependentUpon>
     </None>
@@ -372,6 +360,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Tendik.xsc">
+      <DependentUpon>Tendik.xsd</DependentUpon>
+    </None>
+    <None Include="Tendik.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tendik.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Tendik.xss">
+      <DependentUpon>Tendik.xsd</DependentUpon>
+    </None>
+    <None Include="TendikBaru.xsc">
+      <DependentUpon>TendikBaru.xsd</DependentUpon>
+    </None>
+    <None Include="TendikBaru.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TendikBaru.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TendikBaru.xss">
+      <DependentUpon>TendikBaru.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -21,8 +21,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void UpdateTendik_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART.TenagaKependidikan);
             // TODO: This line of code loads data into the 'dsTendik.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter.Fill(this.dsTendik.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter.Fill(this.dsTendik.TenagaKependidikan);
         }
 
         private void btnCariTendik_Click(object sender, EventArgs e)
