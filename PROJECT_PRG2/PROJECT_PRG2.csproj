@@ -100,6 +100,12 @@
     <Compile Include="CRUD_MataKuliah\InputMatkul.Designer.cs">
       <DependentUpon>InputMatkul.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_MataKuliah\UpdateDeleteMatkul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_MataKuliah\UpdateDeleteMatkul.Designer.cs">
+      <DependentUpon>UpdateDeleteMatkul.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_MataKuliah\ViewMatkul.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_MataKuliah\InputMatkul.resx">
       <DependentUpon>InputMatkul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_MataKuliah\UpdateDeleteMatkul.resx">
+      <DependentUpon>UpdateDeleteMatkul.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_MataKuliah\ViewMatkul.resx">
       <DependentUpon>ViewMatkul.cs</DependentUpon>
