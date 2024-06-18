@@ -117,5 +117,18 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 MessageBox.Show("Tidak berhasil disimpan" + ex.Message);
             }
         }
+
+        private void UpdateDelete_JenisPrestasi_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet4.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet4.JenisPrestasi);
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet4.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet4.JenisPrestasi);
+        }
     }
 }

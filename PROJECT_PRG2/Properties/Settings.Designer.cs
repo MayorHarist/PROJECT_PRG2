@@ -55,5 +55,16 @@ namespace PROJECT_PRG2.Properties {
                 return ((string)(this["FINDSMARTConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=IRENA;Initial Catalog=FINDSMART;Integrated Security=True;Encrypt=True" +
+            ";TrustServerCertificate=True")]
+        public string FINDSMARTConnectionString3 {
+            get {
+                return ((string)(this["FINDSMARTConnectionString3"]));
+            }
+        }
     }
 }
