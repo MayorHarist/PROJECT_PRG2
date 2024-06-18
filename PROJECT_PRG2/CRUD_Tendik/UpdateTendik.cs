@@ -21,22 +21,21 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void UpdateTendik_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMART.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMART.TenagaKependidikan);
-
+            // TODO: This line of code loads data into the 'dsTendik.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter.Fill(this.dsTendik.TenagaKependidikan);
         }
 
         private void btnCariTendik_Click(object sender, EventArgs e)
         {
             try
             {
-                string connectionstring = "integrated security=false; data source=.; user=sa2; password=polman; initial catalog=FINDSMART";
+                string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connectionstring);
 
                 connection.Open();
 
                 DataTable dataTable = new DataTable();
-                SqlCommand myCommand = new SqlCommand("SELECT * FROM Tenaga Kependidikan WHERE Id_TKN=@Id_TKN", connection);
+                SqlCommand myCommand = new SqlCommand("SELECT * FROM TenagaKependidikan WHERE Id_TKN=@Id_TKN", connection);
                 myCommand.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
                 SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                 myAdapter.Fill(dataTable);
@@ -102,21 +101,21 @@ namespace PROJECT_PRG2.CRUD_Tendik
             string connectionstring = "integrated security=false; data source=.; user=sa2; password=polman; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
-            SqlCommand insert = new SqlCommand("sp_updateTendik", connection);
+            SqlCommand insert = new SqlCommand("sp_UpdateTendik", connection);
             insert.CommandType = CommandType.StoredProcedure;
 
-            insert.Parameters.AddWithValue("ID TKN", txtIDTendik.Text);
-            insert.Parameters.AddWithValue("Nama", txtNamaTendik.Text);
-            insert.Parameters.AddWithValue("Tanggal_Lahir", tglLahirTendik.Value);
+            insert.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
+            insert.Parameters.AddWithValue("@Tendik", txtNamaTendik.Text);
+            insert.Parameters.AddWithValue("@Tanggal_Lahir", tglLahirTendik.Value);
             // Tentukan nilai jenis kelamin berdasarkan radio button yang dipilih
             string jenisKelamin = rbLaki.Checked ? "Laki-Laki" : rbPuan.Checked ? "Perempuan" : string.Empty;
-            insert.Parameters.AddWithValue("Jenis_Kelamin", jenisKelamin);
-            insert.Parameters.AddWithValue("Alamat", txtAlmatTendik.Text);
-            insert.Parameters.AddWithValue("Email", txtEmailTendik.Text);
-            insert.Parameters.AddWithValue("Telepon", TelpTendik.Text);
-            insert.Parameters.AddWithValue("Username", userNmTendik.Text);
-            insert.Parameters.AddWithValue("Password", txtPassTendik.Text);
-            insert.Parameters.AddWithValue("Status", txtStatusTendik.Text);
+            insert.Parameters.AddWithValue("@Jenis_Kelamin", jenisKelamin);
+            insert.Parameters.AddWithValue("@Alamat", txtAlmatTendik.Text);
+            insert.Parameters.AddWithValue("@Email", txtEmailTendik.Text);
+            insert.Parameters.AddWithValue("@Telepon", TelpTendik.Text);
+            insert.Parameters.AddWithValue("@Username", userNmTendik.Text);
+            insert.Parameters.AddWithValue("@Password", txtPassTendik.Text);
+            insert.Parameters.AddWithValue("@Status", txtStatusTendik.Text);
 
             try
             {
@@ -153,7 +152,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             {
                 string connectionstring = "integrated security=false; data source=.; user=sa2; password=polman; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connectionstring);
-                SqlCommand myCommand = new SqlCommand("sp_hapusTendik", connection);
+                SqlCommand myCommand = new SqlCommand("sp_DeleteTendik", connection);
                 myCommand.CommandType = CommandType.StoredProcedure;
 
                 myCommand.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
