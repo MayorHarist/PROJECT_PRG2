@@ -16,35 +16,34 @@ namespace PROJECT_PRG2.CRUD_Tendik
         public DataTendik()
         {
             InitializeComponent();
-
+            autoid();
         }
 
         private void DataTendik_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMART.TenagaKependidikan' table. You can move, or remove it, as needed.
- 
+            // TODO: This line of code loads data into the 'dsTendik.TenagaKependidikan
         }
 
         private void btnTambahTendik_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=false; data source=.; user=sa2; password=polman; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
-            SqlCommand insert = new SqlCommand("sp_InsertDosen", connection);
+            SqlCommand insert = new SqlCommand("sp_InsertTendik", connection);
             insert.CommandType = CommandType.StoredProcedure;
 
-            insert.Parameters.AddWithValue("ID TKN", txtIDTendik.Text);
-            insert.Parameters.AddWithValue("Nama", txtNamaTendik.Text);
-            insert.Parameters.AddWithValue("Tanggal_Lahir", tglLahirTendik.Value);
+            insert.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
+            insert.Parameters.AddWithValue("@Tendik", txtNamaTendik.Text);
+            insert.Parameters.AddWithValue("@Tanggal_Lahir", tglLahirTendik.Value);
             // Tentukan nilai jenis kelamin berdasarkan radio button yang dipilih
             string jenisKelamin = rbLaki.Checked ? "Laki-Laki" : rbPuan.Checked ? "Perempuan" : string.Empty;
-            insert.Parameters.AddWithValue("Jenis_Kelamin", jenisKelamin);
-            insert.Parameters.AddWithValue("Alamat", txtAlmatTendik.Text);
-            insert.Parameters.AddWithValue("Email", txtEmailTendik.Text);
-            insert.Parameters.AddWithValue("Telepon", TelpTendik.Text);
-            insert.Parameters.AddWithValue("Username", userNmTendik.Text);
-            insert.Parameters.AddWithValue("Password", txtPassTendik.Text);
-            insert.Parameters.AddWithValue("Status", txtStatusTendik.Text);
+            insert.Parameters.AddWithValue("@Jenis_Kelamin", jenisKelamin);
+            insert.Parameters.AddWithValue("@Alamat", txtAlmatTendik.Text);
+            insert.Parameters.AddWithValue("@Email", txtEmailTendik.Text);
+            insert.Parameters.AddWithValue("@Telepon", TelpTendik.Text);
+            insert.Parameters.AddWithValue("@Username", userNmTendik.Text);
+            insert.Parameters.AddWithValue("@Password", txtPassTendik.Text);
+            insert.Parameters.AddWithValue("@Status", txtStatusTendik.Text);
 
             try
             {
@@ -77,11 +76,11 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         public string autoid()
         {
-            string connectionstring = "integrated security=false; data source=.; user=sa2; password=polman; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
             {
                 connection.Open();
-                string countQuery = "SELECT COUNT(*) FROM Tenaga Kependidikan";
+                string countQuery = "SELECT COUNT(*) FROM TenagaKependidikan";
 
                 using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
                 {
@@ -98,12 +97,18 @@ namespace PROJECT_PRG2.CRUD_Tendik
         private void btnBatalTendik_Click(object sender, EventArgs e)
         {
             clear();
-            
+
         }
 
         private void btnTampilTendik_Click(object sender, EventArgs e)
         {
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMART.TenagaKependidikan);
+            this.tenagaKependidikanTableAdapter.Fill(this.dsTendik.TenagaKependidikan);
+
+        }
+
+        private void tenagaKependidikanBindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
