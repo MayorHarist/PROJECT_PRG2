@@ -25,7 +25,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 // Validasi apakah txtIdMatkul kosong
                 if (string.IsNullOrWhiteSpace(txtIdMatkul.Text))
                 {
-                    MessageBox.Show("Silakan isi Id Mata Kuliah dahulu.", "Peringatan", 
+                    MessageBox.Show("Silakan isi Id Mata Kuliah dahulu.", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
@@ -48,6 +48,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                         txtSKS.Text = dataTable.Rows[0]["Jumlah_SKS"].ToString();
                         txtJenis.Text = dataTable.Rows[0]["Jenis"].ToString();
                         txtSemester.Text = dataTable.Rows[0]["Semester"].ToString();
+                        txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
                         cbPegawai.SelectedText = dataTable.Rows[0]["No_Pegawai"].ToString();
                         cbProdi.SelectedText = dataTable.Rows[0]["Id_Prodi"].ToString();
                     }
@@ -56,6 +57,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     txtSKS.Enabled = true;
                     txtJenis.Enabled = true;
                     txtSemester.Enabled = true;
+                    txtStatus.Enabled = true;
                     cbPegawai.Enabled = true;
                     cbProdi.Enabled = true;
 
@@ -69,6 +71,84 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             {
                 MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnUbah_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    SqlCommand update = new SqlCommand("sp_UpdateMatkul", connection);
+                    update.CommandType = CommandType.StoredProcedure;
+
+                    // Tambahkan parameter untuk stored procedure
+                    update.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
+                    update.Parameters.AddWithValue("@Nama", txtNama.Text);
+                    update.Parameters.AddWithValue("@Jumlah_SKS", txtSKS.Text);
+                    update.Parameters.AddWithValue("@Jenis", txtJenis.Text);
+                    update.Parameters.AddWithValue("@Semester", txtSemester.Text);
+                    update.Parameters.AddWithValue("@Status", txtStatus.Text);
+                    update.Parameters.AddWithValue("@No_Pegawai", cbPegawai.SelectedText);
+                    update.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedText);
+
+                    // Eksekusi stored procedure
+                    update.ExecuteNonQuery();
+
+                    // Menampilkan pesan jika eksekusi berhasil
+                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                SqlConnection connection = new SqlConnection(connectionString);
+
+                connection.Open();
+
+                SqlCommand delete = new SqlCommand("sp_DeleteMatkul", connection);
+                delete.CommandType = CommandType.StoredProcedure;
+
+                delete.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
+                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
+
+                delete.ExecuteNonQuery();
+
+
+                MessageBox.Show("Data berhasil dihapus", "Informasi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void clear()
+        {
+            txtIdMatkul.Text = "";
+            txtNama.Text = "";
+            txtSKS.Text = "";
+            txtJenis.Text = "";
+            txtSemester.Text = "";
+            txtStatus.Text = "";
+            cbPegawai.SelectedText = "";
+            cbProdi.SelectedText = "";
         }
     }
 }

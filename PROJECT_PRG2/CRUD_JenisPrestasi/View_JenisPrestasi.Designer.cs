@@ -111,9 +111,9 @@
             // 
             this.btnTampil.BackColor = System.Drawing.Color.Transparent;
             this.btnTampil.Image = ((System.Drawing.Image)(resources.GetObject("btnTampil.Image")));
-            this.btnTampil.Location = new System.Drawing.Point(614, 948);
+            this.btnTampil.Location = new System.Drawing.Point(754, 948);
             this.btnTampil.Name = "btnTampil";
-            this.btnTampil.Size = new System.Drawing.Size(814, 44);
+            this.btnTampil.Size = new System.Drawing.Size(447, 44);
             this.btnTampil.TabIndex = 14;
             this.btnTampil.UseVisualStyleBackColor = false;
             this.btnTampil.Click += new System.EventHandler(this.btnTampil_Click);
