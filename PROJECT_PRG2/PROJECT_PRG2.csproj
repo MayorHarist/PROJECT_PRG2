@@ -100,6 +100,12 @@
     <Compile Include="CRUD_MataKuliah\InputMatkul.Designer.cs">
       <DependentUpon>InputMatkul.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_MataKuliah\ViewMatkul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_MataKuliah\ViewMatkul.Designer.cs">
+      <DependentUpon>ViewMatkul.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_MataKuliah\InputMatkul.resx">
       <DependentUpon>InputMatkul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_MataKuliah\ViewMatkul.resx">
+      <DependentUpon>ViewMatkul.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.resx">
       <DependentUpon>Input_PosisiPrestasi.cs</DependentUpon>

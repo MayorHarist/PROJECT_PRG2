@@ -26,7 +26,7 @@ namespace PROJECT_PRG2
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new Input_PosisiPrestasi());
             //Application.Run(new UpdateDelete_PosisiPrestasi());
-            Application.Run(new Input_Prodi());
+            Application.Run(new ViewMatkul());
 
         }
     }
