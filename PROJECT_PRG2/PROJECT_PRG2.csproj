@@ -118,6 +118,12 @@
     <Compile Include="CRUD_PosisiPrestasi\View_PosisiPrestasi.Designer.cs">
       <DependentUpon>View_PosisiPrestasi.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Prodi\Input_Prodi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Prodi\Input_Prodi.Designer.cs">
+      <DependentUpon>Input_Prodi.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_Tendik\DataTendik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_PosisiPrestasi\View_PosisiPrestasi.resx">
       <DependentUpon>View_PosisiPrestasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Prodi\Input_Prodi.resx">
+      <DependentUpon>Input_Prodi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Tendik\DataTendik.resx">
       <DependentUpon>DataTendik.cs</DependentUpon>
