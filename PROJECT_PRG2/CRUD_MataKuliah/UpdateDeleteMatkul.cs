@@ -43,27 +43,13 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
                     if (dataTable.Rows.Count > 0)
                     {
-                        txtPegawai.Text = dataTable.Rows[0]["No_Pegawai"].ToString();
-                        txtNIDN.Text = dataTable.Rows[0]["NIDN"].ToString();
+                        txtIdMatkul.Text = dataTable.Rows[0]["Id_Matkul"].ToString();
                         txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
-                        txtBidang.Text = dataTable.Rows[0]["Bidang_Kompetensi"].ToString();
-                        txtPendidikan.Text = dataTable.Rows[0]["Pendidikan_Terakhir"].ToString();
-
-                        // Convert Tanggal_Lahir to DateTime
-                        DateTime tanggalLahir;
-                        if (DateTime.TryParse(dataTable.Rows[0]["Tanggal_Lahir"].ToString(), out tanggalLahir))
-                        {
-                            DateTimeTanggal.Value = tanggalLahir;
-                        }
-
-                        // Set the radio button based on Jenis_Kelamin
-                        string jenisKelamin = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
-                        rbLaki.Checked = jenisKelamin == "Laki-laki";
-                        rbPerempuan.Checked = jenisKelamin == "Perempuan";
-                        txtAlamat.Text = dataTable.Rows[0]["Alamat"].ToString();
-                        txtEmail.Text = dataTable.Rows[0]["Email"].ToString();
-                        txtTelepon.Text = dataTable.Rows[0]["Telepon"].ToString();
-                        txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
+                        txtSKS.Text = dataTable.Rows[0]["Jumlah_SKS"].ToString();
+                        txtJenis.Text = dataTable.Rows[0]["Jenis"].ToString();
+                        txtSemester.Text = dataTable.Rows[0]["Semester"].ToString();
+                        cbPegawai.SelectedText = dataTable.Rows[0]["No_Pegawai"].ToString();
+                        cbProdi.SelectedText = dataTable.Rows[0]["Id_Prodi"].ToString();
                     }
 
                     txtNIDN.Enabled = true;
