@@ -21,10 +21,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void DataTendik_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tendikBaru.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter.Fill(this.tendikBaru.TenagaKependidikan);
             // TODO: This line of code loads data into the 'tendik.TenagaKependidikan' table. You can move, or remove it, as needed.
-
+           
         }
 
         private void btnTambahTendik_Click(object sender, EventArgs e)
@@ -105,7 +103,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void btnTampilTendik_Click(object sender, EventArgs e)
         {
-            this.tenagaKependidikanTableAdapter.Fill(this.tendikBaru.TenagaKependidikan);
+            this.tenagaKependidikanTableAdapter.Fill(this.tendik.TenagaKependidikan);
         }
 
         private void tenagaKependidikanBindingSource1_CurrentChanged(object sender, EventArgs e)
@@ -114,6 +112,11 @@ namespace PROJECT_PRG2.CRUD_Tendik
         }
 
         private void tenagaKependidikanBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvTendik_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

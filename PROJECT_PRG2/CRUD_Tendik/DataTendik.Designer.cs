@@ -63,9 +63,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnBatalTendik = new Guna.UI2.WinForms.Guna2Button();
             this.btnTampilTendik = new Guna.UI2.WinForms.Guna2Button();
             this.dgvTendik = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.tendikBaru = new PROJECT_PRG2.TendikBaru();
+            this.tendik = new PROJECT_PRG2.Tendik();
             this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.TendikBaruTableAdapters.TenagaKependidikanTableAdapter();
+            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.TendikTableAdapters.TenagaKependidikanTableAdapter();
             this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggalLahirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,7 +77,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTendik)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tendikBaru)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tendik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -588,7 +588,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTendik.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTendik.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTendik.Location = new System.Drawing.Point(907, 682);
+            this.dgvTendik.Location = new System.Drawing.Point(811, 645);
             this.dgvTendik.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dgvTendik.Name = "dgvTendik";
             this.dgvTendik.ReadOnly = true;
@@ -617,16 +617,17 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.dgvTendik.ThemeStyle.RowsStyle.Height = 22;
             this.dgvTendik.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTendik.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvTendik.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTendik_CellContentClick);
             // 
-            // tendikBaru
+            // tendik
             // 
-            this.tendikBaru.DataSetName = "TendikBaru";
-            this.tendikBaru.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tendik.DataSetName = "Tendik";
+            this.tendik.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tenagaKependidikanBindingSource
             // 
             this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource.DataSource = this.tendikBaru;
+            this.tenagaKependidikanBindingSource.DataSource = this.tendik;
             // 
             // tenagaKependidikanTableAdapter
             // 
@@ -750,7 +751,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.Text = "DataTendik";
             this.Load += new System.EventHandler(this.DataTendik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTendik)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tendikBaru)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tendik)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -799,9 +800,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
         private Guna.UI2.WinForms.Guna2Button btnBatalTendik;
         private Guna.UI2.WinForms.Guna2Button btnTampilTendik;
         private Guna.UI2.WinForms.Guna2DataGridView dgvTendik;
-        private TendikBaru tendikBaru;
+        private Tendik tendik;
         private BindingSource tenagaKependidikanBindingSource;
-        private TendikBaruTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter;
+        private TendikTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter;
         private DataGridViewTextBoxColumn idTKNDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tanggalLahirDataGridViewTextBoxColumn;
