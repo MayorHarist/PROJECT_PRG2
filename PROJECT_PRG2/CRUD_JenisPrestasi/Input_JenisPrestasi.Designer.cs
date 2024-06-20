@@ -83,6 +83,7 @@
             this.txtPoint.Name = "txtPoint";
             this.txtPoint.Size = new System.Drawing.Size(600, 31);
             this.txtPoint.TabIndex = 6;
+            this.txtPoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPoint_KeyPress);
             // 
             // btnCancel
             // 

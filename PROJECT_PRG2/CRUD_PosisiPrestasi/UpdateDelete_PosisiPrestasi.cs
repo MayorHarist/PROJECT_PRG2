@@ -56,41 +56,133 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             txtStatus.Text = "";
         }
 
+        /*        private void btnUbah_Click(object sender, EventArgs e)
+                {
+                    DialogResult result = MessageBox.Show("Apakah anda yakin ingin update data posisi prestasi?", "Konfirmasi Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.No)
+                    {
+                        return; // Jika pengguna memilih 'No', hentikan proses update
+                    }
+
+                    try
+                    {
+                        string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                        SqlConnection connection = new SqlConnection(connnectionString);
+                        connection.Open();
+
+                        SqlCommand myCommand = new SqlCommand();
+                        myCommand.Connection = connection;
+
+                        myCommand.CommandText = "UPDATE PosisiPrestasi " +
+                                                "SET Nama = @Nama, " +
+                                                "   Status = @Status " +
+                                                "WHERE Id_PosisiPrestasi = @Id_PosisiPrestasi";
+
+                        // Tambahkan parameter untuk menghindari SQL injection dan masalah dengan nilai string
+                        myCommand.Parameters.AddWithValue("Nama", txtNama.Text);
+                        myCommand.Parameters.AddWithValue("Status", txtStatus.Text);
+                        myCommand.Parameters.AddWithValue("Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
+
+                        //eksekusi perintah SQL
+                        myCommand.ExecuteNonQuery();
+
+                        //menampilkan pesan jika eksekusi berhasil
+                        MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        clear();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+                }*/
+
         private void btnUbah_Click(object sender, EventArgs e)
         {
+
             try
             {
                 string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connnectionString);
                 connection.Open();
 
-                SqlCommand myCommand = new SqlCommand();
-                myCommand.Connection = connection;
+                SqlCommand checkCommand = new SqlCommand("SELECT Nama, Status FROM PosisiPrestasi WHERE Id_PosisiPrestasi = @Id_PosisiPrestasi", connection);
+                checkCommand.Parameters.AddWithValue("Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
+                SqlDataReader reader = checkCommand.ExecuteReader();
 
-                myCommand.CommandText = "UPDATE PosisiPrestasi " +
-                                        "SET Nama = @Nama, " +
-                                        "   Status = @Status " +
-                                        "WHERE Id_PosisiPrestasi = @Id_PosisiPrestasi";
+                if (reader.Read())
+                {
+                    string existingNama = reader["Nama"].ToString();
+                    string existingStatus = reader["Status"].ToString();
+                    reader.Close();
 
-                // Tambahkan parameter untuk menghindari SQL injection dan masalah dengan nilai string
+                    if (existingNama == txtNama.Text && existingStatus == txtStatus.Text)
+                    {
+                        MessageBox.Show("Tidak ada perubahan pada data.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Tidak ada perubahan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                DialogResult result = MessageBox.Show("Apakah anda yakin ingin update data posisi prestasi?", "Konfirmasi Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    return; // Jika pengguna memilih 'No', hentikan proses update
+                }
+
+                SqlCommand myCommand = new SqlCommand("UPDATE PosisiPrestasi SET Nama = @Nama, Status = @Status WHERE Id_PosisiPrestasi = @Id_PosisiPrestasi", connection);
                 myCommand.Parameters.AddWithValue("Nama", txtNama.Text);
                 myCommand.Parameters.AddWithValue("Status", txtStatus.Text);
                 myCommand.Parameters.AddWithValue("Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
 
-                //eksekusi perintah SQL
                 myCommand.ExecuteNonQuery();
-
-                //menampilkan pesan jika eksekusi berhasil
-                MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
+                MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clear();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+        /*        private void btnHapus_Click(object sender, EventArgs e)
+               {
+                   DialogResult result = MessageBox.Show("Apakah anda yakin akan menghapus data posisi prestasi?", "Konfirmasi Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                   if (result == DialogResult.No)
+                   {
+                       return; // Jika pengguna memilih 'No', hentikan proses delete
+                   }
+
+                   try
+                   {
+                       string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                       SqlConnection connection = new SqlConnection(connnectionString);
+                       connection.Open();
+
+                       SqlCommand delete = new SqlCommand("sp_DeletePosisiPrestasi", connection);
+                       delete.CommandType = CommandType.StoredProcedure;
+
+                       delete.Parameters.AddWithValue("@Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
+                       delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
+                       delete.ExecuteNonQuery();
+
+
+                       MessageBox.Show("Data berhasil dihapus", "Informasi",
+                           MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       clear();
+                   }
+                   catch (Exception ex)
+                   {
+                       MessageBox.Show("Error: " + ex.Message);
+                   }
+               }*/
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
@@ -100,16 +192,29 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
                 SqlConnection connection = new SqlConnection(connnectionString);
                 connection.Open();
 
+                SqlCommand checkCommand = new SqlCommand("SELECT 1 FROM PosisiPrestasi WHERE Id_PosisiPrestasi = @Id_PosisiPrestasi", connection);
+                checkCommand.Parameters.AddWithValue("Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
+                object exists = checkCommand.ExecuteScalar();
+
+                if (exists == null)
+                {
+                    MessageBox.Show("Tidak ada data yang dihapus.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                DialogResult result = MessageBox.Show("Apakah anda yakin akan menghapus data posisi prestasi?", "Konfirmasi Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    return; // Jika pengguna memilih 'No', hentikan proses delete
+                }
+
                 SqlCommand delete = new SqlCommand("sp_DeletePosisiPrestasi", connection);
                 delete.CommandType = CommandType.StoredProcedure;
-
                 delete.Parameters.AddWithValue("@Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
                 delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
                 delete.ExecuteNonQuery();
 
-
-                MessageBox.Show("Data berhasil dihapus", "Informasi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clear();
             }
             catch (Exception ex)
@@ -117,6 +222,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
