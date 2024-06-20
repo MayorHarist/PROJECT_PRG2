@@ -148,6 +148,12 @@
     <Compile Include="CRUD_Prodi\Input_Prodi.Designer.cs">
       <DependentUpon>Input_Prodi.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Prodi\UpDelet_Prodi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Prodi\UpDelet_Prodi.Designer.cs">
+      <DependentUpon>UpDelet_Prodi.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_Prodi\View_Prodi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Prodi\Input_Prodi.resx">
       <DependentUpon>Input_Prodi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Prodi\UpDelet_Prodi.resx">
+      <DependentUpon>UpDelet_Prodi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Prodi\View_Prodi.resx">
       <DependentUpon>View_Prodi.cs</DependentUpon>
