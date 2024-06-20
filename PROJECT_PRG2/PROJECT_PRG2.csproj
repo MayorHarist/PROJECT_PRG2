@@ -94,6 +94,12 @@
     <Compile Include="CRUD_JenisPrestasi\View_JenisPrestasi.Designer.cs">
       <DependentUpon>View_JenisPrestasi.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Mahasiswa\InputMahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Mahasiswa\InputMahasiswa.Designer.cs">
+      <DependentUpon>InputMahasiswa.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_MataKuliah\InputMatkul.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_JenisPrestasi\View_JenisPrestasi.resx">
       <DependentUpon>View_JenisPrestasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Mahasiswa\InputMahasiswa.resx">
+      <DependentUpon>InputMahasiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_MataKuliah\InputMatkul.resx">
       <DependentUpon>InputMatkul.cs</DependentUpon>
