@@ -31,7 +31,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                 // Validasi apakah txtIdMatkul kosong
                 if (string.IsNullOrWhiteSpace(txtIDPengumuman.Text))
                 {
-                    MessageBox.Show("Silakan isi Id Pengumuman dahulu.", "Peringatan",
+                    MessageBox.Show("ID Pengumuman masih kosong.", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
@@ -56,19 +56,22 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                         txtStatusPengumuman.Text = dataTable.Rows[0]["Status"].ToString();
                         cbIDTendik.SelectedText = dataTable.Rows[0]["Id_TKN"].ToString();
                     }
+                    else
+                    {
 
-                    txtIDPengumuman.Enabled = true;
-                    txtPengumuman.Enabled = true;
-                    tglPengumuman.Enabled = true;
-                    txtDeskripsi.Enabled = true;
-                    txtStatusPengumuman.Enabled = true;
-                    cbIDTendik.Enabled = true;
+                        txtIDPengumuman.Enabled = true;
+                        txtPengumuman.Enabled = true;
+                        tglPengumuman.Enabled = true;
+                        txtDeskripsi.Enabled = true;
+                        txtStatusPengumuman.Enabled = true;
+                        cbIDTendik.Enabled = true;
 
-                    btnUpdatePengumuman.Enabled = true;
-                    btnHapusPengumuman.Enabled = true;
-                    btnBatalPengumuman.Enabled = true;
+                        btnUpdatePengumuman.Enabled = true;
+                        btnHapusPengumuman.Enabled = true;
+                        btnBatalPengumuman.Enabled = true;
 
-                    connection.Close();
+                        connection.Close();
+                    }
                 }
             }
             catch (Exception ex)
@@ -128,29 +131,42 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void btnHapusPengumuman_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Apakah anda yakin ingin menghapus data ini ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connectionString);
+                try
+                {
+                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                    SqlConnection connection = new SqlConnection(connectionString);
 
-                connection.Open();
+                    connection.Open();
 
-                SqlCommand delete = new SqlCommand("sp_DeletePengumuman", connection);
-                delete.CommandType = CommandType.StoredProcedure;
+                    SqlCommand delete = new SqlCommand("sp_DeletePengumuman", connection);
+                    delete.CommandType = CommandType.StoredProcedure;
 
-                delete.Parameters.AddWithValue("@Id_Pengumuman", txtIDPengumuman.Text);
-                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
+                    delete.Parameters.AddWithValue("@Id_Pengumuman", txtIDPengumuman.Text);
+                    delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
 
-                delete.ExecuteNonQuery();
+                    delete.ExecuteNonQuery();
 
 
-                MessageBox.Show("Data berhasil dihapus", "Informasi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
+                    MessageBox.Show("Data berhasil dihapus", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+        }
+
+        private void txtPengumuman_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+                MessageBox.Show("Hanya masukkan huruf!");
             }
         }
     }
