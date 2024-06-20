@@ -30,7 +30,6 @@
         {
             this.btnTampilPengumuman = new Guna.UI2.WinForms.Guna2Button();
             this.btnBatalPengumuman = new Guna.UI2.WinForms.Guna2Button();
-            this.btnTambahPengumuman = new Guna.UI2.WinForms.Guna2Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.txtPengumuman = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIDPengumuman = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbIDTendik = new System.Windows.Forms.ComboBox();
+            this.btnTambahPengumuman = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // btnTampilPengumuman
@@ -90,25 +90,6 @@
             this.btnBatalPengumuman.TabIndex = 111;
             this.btnBatalPengumuman.Text = "Batal";
             this.btnBatalPengumuman.Click += new System.EventHandler(this.btnBatalPengumuman_Click);
-            // 
-            // btnTambahPengumuman
-            // 
-            this.btnTambahPengumuman.AutoRoundedCorners = true;
-            this.btnTambahPengumuman.BorderRadius = 32;
-            this.btnTambahPengumuman.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTambahPengumuman.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTambahPengumuman.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTambahPengumuman.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTambahPengumuman.FillColor = System.Drawing.Color.HotPink;
-            this.btnTambahPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.btnTambahPengumuman.ForeColor = System.Drawing.Color.White;
-            this.btnTambahPengumuman.Location = new System.Drawing.Point(403, 513);
-            this.btnTambahPengumuman.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnTambahPengumuman.Name = "btnTambahPengumuman";
-            this.btnTambahPengumuman.Size = new System.Drawing.Size(205, 66);
-            this.btnTambahPengumuman.TabIndex = 110;
-            this.btnTambahPengumuman.Text = "Tambah";
-            this.btnTambahPengumuman.Click += new System.EventHandler(this.btnTambahPengumuman_Click);
             // 
             // label11
             // 
@@ -342,15 +323,37 @@
             this.cbIDTendik.TabIndex = 113;
             this.cbIDTendik.ValueMember = "No_Pegawai";
             // 
+            // btnTambahPengumuman
+            // 
+            this.btnTambahPengumuman.AutoRoundedCorners = true;
+            this.btnTambahPengumuman.BackColor = System.Drawing.Color.Transparent;
+            this.btnTambahPengumuman.BorderRadius = 32;
+            this.btnTambahPengumuman.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTambahPengumuman.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTambahPengumuman.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTambahPengumuman.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTambahPengumuman.FillColor = System.Drawing.Color.HotPink;
+            this.btnTambahPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTambahPengumuman.ForeColor = System.Drawing.Color.White;
+            this.btnTambahPengumuman.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnTambahPengumuman.ImageOffset = new System.Drawing.Point(20, 20);
+            this.btnTambahPengumuman.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnTambahPengumuman.Location = new System.Drawing.Point(403, 513);
+            this.btnTambahPengumuman.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTambahPengumuman.Name = "btnTambahPengumuman";
+            this.btnTambahPengumuman.Size = new System.Drawing.Size(205, 66);
+            this.btnTambahPengumuman.TabIndex = 114;
+            this.btnTambahPengumuman.Text = "Tambah";
+            // 
             // Pengumuman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 831);
+            this.ClientSize = new System.Drawing.Size(1451, 1016);
+            this.Controls.Add(this.btnTambahPengumuman);
             this.Controls.Add(this.cbIDTendik);
             this.Controls.Add(this.btnTampilPengumuman);
             this.Controls.Add(this.btnBatalPengumuman);
-            this.Controls.Add(this.btnTambahPengumuman);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
@@ -377,7 +380,6 @@
 
         private Guna.UI2.WinForms.Guna2Button btnTampilPengumuman;
         private Guna.UI2.WinForms.Guna2Button btnBatalPengumuman;
-        private Guna.UI2.WinForms.Guna2Button btnTambahPengumuman;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
@@ -393,5 +395,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPengumuman;
         private Guna.UI2.WinForms.Guna2TextBox txtIDPengumuman;
         private System.Windows.Forms.ComboBox cbIDTendik;
+        private Guna.UI2.WinForms.Guna2Button btnTambahPengumuman;
     }
 }
