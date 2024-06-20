@@ -34,6 +34,15 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             insert.Parameters.AddWithValue("@Id_TKN", cbIDTendik.SelectedValue);
             insert.Parameters.AddWithValue("@Status", txtStatusPengumuman.Text);
 
+            //Create Requred Validator untuk verifikasi masukan pengguna wajib diisi,
+            //dengan memeriksa apakah semua data terisi atau belum
+            if (string.IsNullOrWhiteSpace(txtIDPengumuman.Text) || string.IsNullOrWhiteSpace(txtPengumuman.Text) || string.IsNullOrWhiteSpace(tglPengumuman.Text) ||
+                string.IsNullOrWhiteSpace(txtDeskripsi.Text) || string.IsNullOrWhiteSpace(txtStatusPengumuman.Text))
+            {
+                MessageBox.Show("Harap lengkapi semua data!", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 connection.Open();
