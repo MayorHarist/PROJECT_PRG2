@@ -106,6 +106,19 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.tenagaKependidikanTableAdapter.Fill(this.tendik.TenagaKependidikan);
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         private void tenagaKependidikanBindingSource1_CurrentChanged(object sender, EventArgs e)
         {
 
