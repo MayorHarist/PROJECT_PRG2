@@ -23,7 +23,7 @@ namespace PROJECT_PRG2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new TampilanAwal());
-            Application.Run(new UpDelet_Prodi());
+            Application.Run(new ViewMatkul());
             //Application.Run(new DataTendik());
             //Application.Run(new Input_JenisPrestasi());
             //Application.Run(new UpdateDelete_JenisPrestasi());
