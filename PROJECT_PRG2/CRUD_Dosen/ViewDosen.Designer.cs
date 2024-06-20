@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -44,10 +45,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDosen = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dosenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMARTDataSet = new PROJECT_PRG2.FINDSMARTDataSet();
-            this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSetTableAdapters.DosenTableAdapter();
-            this.btnTampil = new Guna.UI2.WinForms.Guna2Button();
             this.noPegawaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nIDNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +56,10 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teleponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet = new PROJECT_PRG2.FINDSMARTDataSet();
+            this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSetTableAdapters.DosenTableAdapter();
+            this.btnTampil = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet)).BeginInit();
@@ -69,9 +70,9 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvDosen.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDosen.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -101,12 +102,20 @@
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDosen.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvDosen.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDosen.Location = new System.Drawing.Point(156, 109);
+            this.dgvDosen.Location = new System.Drawing.Point(172, 216);
             this.dgvDosen.Name = "dgvDosen";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDosen.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvDosen.RowHeadersVisible = false;
             this.dgvDosen.RowHeadersWidth = 62;
             this.dgvDosen.RowTemplate.Height = 28;
-            this.dgvDosen.Size = new System.Drawing.Size(1521, 336);
+            this.dgvDosen.Size = new System.Drawing.Size(1521, 602);
             this.dgvDosen.TabIndex = 0;
             this.dgvDosen.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDosen.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -129,38 +138,6 @@
             this.dgvDosen.ThemeStyle.RowsStyle.Height = 28;
             this.dgvDosen.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDosen.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // dosenBindingSource
-            // 
-            this.dosenBindingSource.DataMember = "Dosen";
-            this.dosenBindingSource.DataSource = this.fINDSMARTDataSet;
-            // 
-            // fINDSMARTDataSet
-            // 
-            this.fINDSMARTDataSet.DataSetName = "FINDSMARTDataSet";
-            this.fINDSMARTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dosenTableAdapter
-            // 
-            this.dosenTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnTampil
-            // 
-            this.btnTampil.AutoRoundedCorners = true;
-            this.btnTampil.BorderRadius = 26;
-            this.btnTampil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTampil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTampil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTampil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTampil.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnTampil.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTampil.ForeColor = System.Drawing.Color.White;
-            this.btnTampil.Location = new System.Drawing.Point(865, 485);
-            this.btnTampil.Name = "btnTampil";
-            this.btnTampil.Size = new System.Drawing.Size(168, 55);
-            this.btnTampil.TabIndex = 20;
-            this.btnTampil.Text = "Tampilkan";
-            this.btnTampil.Click += new System.EventHandler(this.btnTampil_Click);
             // 
             // noPegawaiDataGridViewTextBoxColumn
             // 
@@ -283,10 +260,46 @@
             this.statusDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
+            // dosenBindingSource
+            // 
+            this.dosenBindingSource.DataMember = "Dosen";
+            this.dosenBindingSource.DataSource = this.fINDSMARTDataSet;
+            // 
+            // fINDSMARTDataSet
+            // 
+            this.fINDSMARTDataSet.DataSetName = "FINDSMARTDataSet";
+            this.fINDSMARTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dosenTableAdapter
+            // 
+            this.dosenTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnTampil
+            // 
+            this.btnTampil.AutoRoundedCorners = true;
+            this.btnTampil.BackColor = System.Drawing.Color.Transparent;
+            this.btnTampil.BorderRadius = 26;
+            this.btnTampil.BorderThickness = -1;
+            this.btnTampil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTampil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTampil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTampil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTampil.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTampil.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold);
+            this.btnTampil.ForeColor = System.Drawing.Color.White;
+            this.btnTampil.Location = new System.Drawing.Point(850, 871);
+            this.btnTampil.Name = "btnTampil";
+            this.btnTampil.Size = new System.Drawing.Size(168, 55);
+            this.btnTampil.TabIndex = 20;
+            this.btnTampil.Text = "Tampilkan";
+            this.btnTampil.UseTransparentBackground = true;
+            this.btnTampil.Click += new System.EventHandler(this.btnTampil_Click);
+            // 
             // ViewDosen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.Lihat_Dosen_FIND_SMART;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.btnTampil);
             this.Controls.Add(this.dgvDosen);

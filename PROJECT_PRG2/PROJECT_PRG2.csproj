@@ -432,6 +432,8 @@
   <ItemGroup>
     <None Include="Resources\About FIND SMART.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Lihat Dosen FIND SMART.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
