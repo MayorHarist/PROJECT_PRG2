@@ -32,7 +32,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                 if (string.IsNullOrWhiteSpace(txtIDPengumuman.Text))
                 {
                     MessageBox.Show("ID Pengumuman masih kosong.", "Peringatan",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);//validasi jika ID pengumuman kosong 
                     return;
                 }
 
@@ -57,23 +57,24 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                         cbIDTendik.SelectedText = dataTable.Rows[0]["Id_TKN"].ToString();
                     }
                     else
+
                     {
+                        MessageBox.Show("ID Pengumuman tidak ditemukan.","Peringatan",MessageBoxButtons.OK, MessageBoxIcon.Warning); //Validasi jika ID tidak ditemukan
+                    }
+                    txtIDPengumuman.Enabled = true;
+                    txtPengumuman.Enabled = true;
+                    tglPengumuman.Enabled = true;
+                    txtDeskripsi.Enabled = true;
+                    txtStatusPengumuman.Enabled = true;
+                    cbIDTendik.Enabled = true;
 
-                        txtIDPengumuman.Enabled = true;
-                        txtPengumuman.Enabled = true;
-                        tglPengumuman.Enabled = true;
-                        txtDeskripsi.Enabled = true;
-                        txtStatusPengumuman.Enabled = true;
-                        cbIDTendik.Enabled = true;
-
-                        btnUpdatePengumuman.Enabled = true;
-                        btnHapusPengumuman.Enabled = true;
-                        btnBatalPengumuman.Enabled = true;
+                    btnUpdatePengumuman.Enabled = true;
+                    btnHapusPengumuman.Enabled = true;
+                    btnBatalPengumuman.Enabled = true;
 
                         connection.Close();
                     }
                 }
-            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -162,7 +163,6 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void txtPengumuman_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;

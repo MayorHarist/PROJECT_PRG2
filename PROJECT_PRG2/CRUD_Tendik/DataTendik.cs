@@ -46,6 +46,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
             insert.Parameters.AddWithValue("@Password", txtPassTendik.Text);
             insert.Parameters.AddWithValue("@Status", txtStatusTendik.Text);
 
+
+
             try
             {
                 connection.Open();
@@ -107,6 +109,44 @@ namespace PROJECT_PRG2.CRUD_Tendik
         }
 
 
+        private void txtNamaTendik_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Masukkan hanya berupa huruf!");
+            }
+        }
+        private void TelpTendik_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Masukkan hanya berupa Angka !");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -133,5 +173,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
         {
 
         }
+
+      
     }
 }
