@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
             this.btnHapus = new Guna.UI2.WinForms.Guna2Button();
             this.btnUbah = new Guna.UI2.WinForms.Guna2Button();
@@ -44,7 +44,7 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label16 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtStatusTendik = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAkreditasi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtJenjangPendidikan = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
@@ -98,6 +98,7 @@
             this.btnHapus.Size = new System.Drawing.Size(149, 44);
             this.btnHapus.TabIndex = 198;
             this.btnHapus.Text = "Hapus";
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnUbah
             // 
@@ -221,30 +222,30 @@
             this.guna2HtmlLabel4.TabIndex = 183;
             this.guna2HtmlLabel4.Text = null;
             // 
-            // txtStatusTendik
+            // txtStatus
             // 
-            this.txtStatusTendik.Animated = true;
-            this.txtStatusTendik.BackColor = System.Drawing.Color.Transparent;
-            this.txtStatusTendik.BorderColor = System.Drawing.Color.Black;
-            this.txtStatusTendik.BorderRadius = 10;
-            this.txtStatusTendik.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStatusTendik.DefaultText = "";
-            this.txtStatusTendik.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStatusTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStatusTendik.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStatusTendik.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStatusTendik.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatusTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtStatusTendik.ForeColor = System.Drawing.Color.Black;
-            this.txtStatusTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatusTendik.Location = new System.Drawing.Point(431, 437);
-            this.txtStatusTendik.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.txtStatusTendik.Name = "txtStatusTendik";
-            this.txtStatusTendik.PasswordChar = '\0';
-            this.txtStatusTendik.PlaceholderText = "";
-            this.txtStatusTendik.SelectedText = "";
-            this.txtStatusTendik.Size = new System.Drawing.Size(255, 38);
-            this.txtStatusTendik.TabIndex = 182;
+            this.txtStatus.Animated = true;
+            this.txtStatus.BackColor = System.Drawing.Color.Transparent;
+            this.txtStatus.BorderColor = System.Drawing.Color.Black;
+            this.txtStatus.BorderRadius = 10;
+            this.txtStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStatus.DefaultText = "";
+            this.txtStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtStatus.ForeColor = System.Drawing.Color.Black;
+            this.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStatus.Location = new System.Drawing.Point(431, 437);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.PasswordChar = '\0';
+            this.txtStatus.PlaceholderText = "";
+            this.txtStatus.SelectedText = "";
+            this.txtStatus.Size = new System.Drawing.Size(255, 38);
+            this.txtStatus.TabIndex = 182;
             // 
             // txtAkreditasi
             // 
@@ -348,17 +349,17 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProdiDataGridViewTextBoxColumn,
@@ -367,21 +368,21 @@
             this.akreditasiDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.guna2DataGridView1.DataSource = this.programStudiBindingSource;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(792, 153);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(987, 489);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1098, 489);
             this.guna2DataGridView1.TabIndex = 200;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -421,8 +422,8 @@
             // 
             // idProdiDataGridViewTextBoxColumn
             // 
-            this.idProdiDataGridViewTextBoxColumn.DataPropertyName = "Id Prodi";
-            this.idProdiDataGridViewTextBoxColumn.HeaderText = "Id_Prodi";
+            this.idProdiDataGridViewTextBoxColumn.DataPropertyName = "Id_Prodi";
+            this.idProdiDataGridViewTextBoxColumn.HeaderText = "Id Prodi";
             this.idProdiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idProdiDataGridViewTextBoxColumn.Name = "idProdiDataGridViewTextBoxColumn";
             // 
@@ -435,8 +436,8 @@
             // 
             // jenjangPendidikanDataGridViewTextBoxColumn
             // 
-            this.jenjangPendidikanDataGridViewTextBoxColumn.DataPropertyName = "Jenjang Pendidikan";
-            this.jenjangPendidikanDataGridViewTextBoxColumn.HeaderText = "Jenjang_Pendidikan";
+            this.jenjangPendidikanDataGridViewTextBoxColumn.DataPropertyName = "Jenjang_Pendidikan";
+            this.jenjangPendidikanDataGridViewTextBoxColumn.HeaderText = "Jenjang Pendidikan";
             this.jenjangPendidikanDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.jenjangPendidikanDataGridViewTextBoxColumn.Name = "jenjangPendidikanDataGridViewTextBoxColumn";
             // 
@@ -472,7 +473,7 @@
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.txtStatusTendik);
+            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtAkreditasi);
             this.Controls.Add(this.txtJenjangPendidikan);
             this.Controls.Add(this.txtNama);
@@ -501,7 +502,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox txtStatusTendik;
+        private Guna.UI2.WinForms.Guna2TextBox txtStatus;
         private Guna.UI2.WinForms.Guna2TextBox txtAkreditasi;
         private Guna.UI2.WinForms.Guna2TextBox txtJenjangPendidikan;
         private Guna.UI2.WinForms.Guna2TextBox txtNama;
