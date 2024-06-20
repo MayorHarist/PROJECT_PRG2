@@ -78,7 +78,7 @@
             dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDosen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
-            this.dgvDosen.ColumnHeadersHeight = 42;
+            this.dgvDosen.ColumnHeadersHeight = 45;
             this.dgvDosen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDosen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.noPegawaiDataGridViewTextBoxColumn,
@@ -102,7 +102,8 @@
             dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDosen.DefaultCellStyle = dataGridViewCellStyle44;
             this.dgvDosen.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDosen.Location = new System.Drawing.Point(172, 216);
+            this.dgvDosen.Location = new System.Drawing.Point(248, 222);
+            this.dgvDosen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDosen.Name = "dgvDosen";
             dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control;
@@ -115,7 +116,7 @@
             this.dgvDosen.RowHeadersVisible = false;
             this.dgvDosen.RowHeadersWidth = 62;
             this.dgvDosen.RowTemplate.Height = 28;
-            this.dgvDosen.Size = new System.Drawing.Size(1521, 602);
+            this.dgvDosen.Size = new System.Drawing.Size(1551, 581);
             this.dgvDosen.TabIndex = 0;
             this.dgvDosen.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDosen.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -129,7 +130,7 @@
             this.dgvDosen.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDosen.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvDosen.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvDosen.ThemeStyle.HeaderStyle.Height = 42;
+            this.dgvDosen.ThemeStyle.HeaderStyle.Height = 45;
             this.dgvDosen.ThemeStyle.ReadOnly = false;
             this.dgvDosen.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDosen.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -278,7 +279,7 @@
             // 
             this.btnTampil.AutoRoundedCorners = true;
             this.btnTampil.BackColor = System.Drawing.Color.Transparent;
-            this.btnTampil.BorderRadius = 26;
+            this.btnTampil.BorderRadius = 25;
             this.btnTampil.BorderThickness = -1;
             this.btnTampil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTampil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -287,9 +288,10 @@
             this.btnTampil.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTampil.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold);
             this.btnTampil.ForeColor = System.Drawing.Color.White;
-            this.btnTampil.Location = new System.Drawing.Point(850, 871);
+            this.btnTampil.Location = new System.Drawing.Point(935, 849);
+            this.btnTampil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTampil.Name = "btnTampil";
-            this.btnTampil.Size = new System.Drawing.Size(168, 55);
+            this.btnTampil.Size = new System.Drawing.Size(174, 52);
             this.btnTampil.TabIndex = 20;
             this.btnTampil.Text = "Tampilkan";
             this.btnTampil.UseTransparentBackground = true;
@@ -297,16 +299,18 @@
             // 
             // ViewDosen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.Lihat_Dosen_FIND_SMART;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.btnTampil);
             this.Controls.Add(this.dgvDosen);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ViewDosen";
-            this.Text = "ViewDosen";
+            this.Text = "View Dosen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ViewDosen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).EndInit();
