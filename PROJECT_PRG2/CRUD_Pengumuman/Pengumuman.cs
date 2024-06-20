@@ -16,6 +16,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         public Pengumuman()
         {
             InitializeComponent();
+            autoid();
         }
 
         private void btnTambahPengumuman_Click(object sender, EventArgs e)

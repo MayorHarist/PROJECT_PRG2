@@ -46,13 +46,22 @@ namespace PROJECT_PRG2.CRUD_Tendik
             insert.Parameters.AddWithValue("@Password", txtPassTendik.Text);
             insert.Parameters.AddWithValue("@Status", txtStatusTendik.Text);
 
-
+            //Create Requred Validator untuk verifikasi masukan pengguna wajib diisi,
+            //dengan memeriksa apakah semua data terisi atau belum
+            if (string.IsNullOrWhiteSpace(txtIDTendik.Text) || string.IsNullOrWhiteSpace(txtNamaTendik.Text) || string.IsNullOrWhiteSpace(txtAlmatTendik.Text) || 
+                string.IsNullOrWhiteSpace(txtEmailTendik.Text) || string.IsNullOrWhiteSpace(TelpTendik.Text) || string.IsNullOrWhiteSpace(userNmTendik.Text) || 
+                string.IsNullOrWhiteSpace(txtPassTendik.Text) || string.IsNullOrWhiteSpace(txtStatusTendik.Text))
+            {
+                MessageBox.Show("Harap lengkapi semua data!", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             try
             {
                 connection.Open();
                 insert.ExecuteNonQuery();
-                MessageBox.Show("Data berhasil disimpan", "Information",
+                MessageBox.Show("Data berhasil disimpan", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clear();
             }
