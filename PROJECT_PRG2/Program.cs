@@ -1,6 +1,7 @@
 ﻿using PROJECT_PRG2.CRUD_Dosen;
 using PROJECT_PRG2.CRUD_JenisPrestasi;
 using PROJECT_PRG2.CRUD_MataKuliah;
+using PROJECT_PRG2.CRUD_Pengumuman;
 using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using PROJECT_PRG2.CRUD_Prodi;
 using PROJECT_PRG2.CRUD_Tendik;
@@ -23,8 +24,11 @@ namespace PROJECT_PRG2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new TampilanAwal());
-            Application.Run(new ViewMatkul());
+            //Application.Run(new ViewMatkul());
             //Application.Run(new DataTendik());
+            //Application.Run(new UpTendik());
+            //Application.Run(new Pengumuman());
+            Application.Run(new UpdatePengumuman());
             //Application.Run(new Input_JenisPrestasi());
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new View_JenisPrestasi());
