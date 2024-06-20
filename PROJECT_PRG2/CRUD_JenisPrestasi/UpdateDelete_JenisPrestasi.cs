@@ -57,6 +57,12 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Apakah anda yakin ingin update data jenis prestasi?", "Konfirmasi Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return; // Jika pengguna memilih 'No', hentikan proses update
+            }
+
             try
             {
                 string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
@@ -88,11 +94,12 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 //menampilkan pesan jika eksekusi berhasil
                 MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+                clear();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK,
+                MessageBox.Show(ex.ToString(), "Error: ", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
         }
@@ -104,6 +111,12 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Apakah anda yakin akan menghapus data jenis prestasi?", "Konfirmasi Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return; // Jika pengguna memilih 'No', hentikan proses delete
+            }
+
             try
             {
                 string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
@@ -139,6 +152,15 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet4.JenisPrestasi' table. You can move, or remove it, as needed.
             this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet4.JenisPrestasi);
+        }
+
+        private void txtPoint_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Menghentikan input karakter yang bukan angka
+                MessageBox.Show("Point diisikan hanya oleh angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

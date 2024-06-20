@@ -23,6 +23,40 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
+            // Meletakkan masukan pengguna dalam variabel
+            string idJenisPrestasi = txtIdJenisPrestasi.Text;
+            string nama = txtNama.Text;
+            string peran = txtPeran.Text;
+            string penyelenggara = txtPenyelenggara.Text;
+            string point = txtPoint.Text;
+            string status = txtStatus.Text;
+
+            // Periksa apakah ada inputan kosong
+            if (string.IsNullOrEmpty(idJenisPrestasi) || string.IsNullOrEmpty(nama) ||
+                string.IsNullOrEmpty(peran) || string.IsNullOrEmpty(penyelenggara) ||
+                string.IsNullOrEmpty(point) || string.IsNullOrEmpty(status))
+            {
+                // Tampilkan pesan kesalahan
+                MessageBox.Show("Seluruh data wajib diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Menghentikan eksekusi jika ada input yang kosong
+            }
+
+            // Tampilkan data yang telah diinputkan untuk konfirmasi
+            string message = $"Apakah data berikut sudah benar?\n\n" +
+                             $"ID Jenis Prestasi: {idJenisPrestasi}\n" +
+                             $"Nama: {nama}\n" +
+                             $"Peran: {peran}\n" +
+                             $"Penyelenggara: {penyelenggara}\n" +
+                             $"Point: {point}\n" +
+                             $"Status: {status}";
+
+            DialogResult result = MessageBox.Show(message, "Konfirmasi Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return; // Jika pengguna menekan 'No', hentikan proses submit
+            }
+
+
             SqlCommand insert = new SqlCommand("sp_InsertJenisPrestasi", connection);
             insert.CommandType = CommandType.StoredProcedure;
 
@@ -61,6 +95,15 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         private void btnCancel_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+        private void txtPoint_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Menghentikan input karakter yang bukan angka
+                MessageBox.Show("Point diisikan hanya oleh angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

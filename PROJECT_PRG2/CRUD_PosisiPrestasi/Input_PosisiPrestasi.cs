@@ -23,6 +23,31 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
+            // Meletakkan masukan pengguna dalam variabel
+            string idPosisiPrestasi = txtIdPosisiPrestasi.Text;
+            string nama = txtNama.Text;
+            string status = txtStatus.Text;
+
+            // Periksa apakah ada inputan kosong
+            if (string.IsNullOrEmpty(idPosisiPrestasi) || string.IsNullOrEmpty(nama) || string.IsNullOrEmpty(status))
+            {
+                // Tampilkan pesan kesalahan
+                MessageBox.Show("Seluruh data wajib diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Menghentikan eksekusi jika ada input yang kosong
+            }
+
+            // Tampilkan data yang telah diinputkan untuk konfirmasi
+            string message = $"Apakah data berikut sudah benar?\n\n" +
+                             $"ID Posisi Prestasi: {idPosisiPrestasi}\n" +
+                             $"Nama: {nama}\n" +
+                             $"Status: {status}";
+
+            DialogResult result = MessageBox.Show(message, "Konfirmasi Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return; // Jika pengguna menekan 'No', hentikan proses submit
+            }
+
             SqlCommand insert = new SqlCommand("sp_InsertPosisiPrestasi", connection);
             insert.CommandType = CommandType.StoredProcedure;
 
