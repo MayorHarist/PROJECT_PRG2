@@ -112,6 +112,18 @@
     <Compile Include="CRUD_MataKuliah\ViewMatkul.Designer.cs">
       <DependentUpon>ViewMatkul.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Pengumuman\Pengumuman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Pengumuman\Pengumuman.Designer.cs">
+      <DependentUpon>Pengumuman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_Pengumuman\UpdatePengumuman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Pengumuman\UpdatePengumuman.Designer.cs">
+      <DependentUpon>UpdatePengumuman.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +260,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_MataKuliah\ViewMatkul.resx">
       <DependentUpon>ViewMatkul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Pengumuman\Pengumuman.resx">
+      <DependentUpon>Pengumuman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Pengumuman\UpdatePengumuman.resx">
+      <DependentUpon>UpdatePengumuman.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.resx">
       <DependentUpon>Input_PosisiPrestasi.cs</DependentUpon>
