@@ -156,7 +156,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
                 connection.Open();
 
-                SqlCommand delete = new SqlCommand("sp_DeleteDosen", connection);
+                SqlCommand delete = new SqlCommand("sp_DeleteTendik", connection);
                 delete.CommandType = CommandType.StoredProcedure;
 
                 delete.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
