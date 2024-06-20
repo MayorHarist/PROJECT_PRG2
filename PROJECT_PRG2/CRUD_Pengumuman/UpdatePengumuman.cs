@@ -24,7 +24,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnCari_Click(object sender, EventArgs e)
         {
             try
             {
@@ -42,27 +42,27 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     connection.Open();
 
                     DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("select * from Pengymuman where Id_Pengumuman= @Id_Pengumuman", connection);
+                    SqlCommand myCommand = new SqlCommand("select * from Pengumuman where Id_Pengumuman= @Id_Pengumuman", connection);
                     myCommand.Parameters.AddWithValue("@Id_Pengumuman", txtIDPengumuman.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
                     if (dataTable.Rows.Count > 0)
                     {
-                        txtIDPengumuman.Text = dataTable.Rows[0]["Id_Matkul"].ToString();
+                        txtIDPengumuman.Text = dataTable.Rows[0]["Id_Pengumuman"].ToString();
                         txtPengumuman.Text = dataTable.Rows[0]["Nama"].ToString();
                         tglPengumuman.Text = DateTime.Now.ToString();
-                        txtDeskripsi.Text = dataTable.Rows[0]["Jumlah_SKS"].ToString();
-                        cbIDTendik.SelectedText = dataTable.Rows[0]["No_Pegawai"].ToString();
+                        txtDeskripsi.Text = dataTable.Rows[0]["Deskripsi"].ToString();
                         txtStatusPengumuman.Text = dataTable.Rows[0]["Status"].ToString();
+                        cbIDTendik.SelectedText = dataTable.Rows[0]["Id_TKN"].ToString();
                     }
 
                     txtIDPengumuman.Enabled = true;
                     txtPengumuman.Enabled = true;
                     tglPengumuman.Enabled = true;
                     txtDeskripsi.Enabled = true;
-                    cbIDTendik.Enabled = true;
                     txtStatusPengumuman.Enabled = true;
+                    cbIDTendik.Enabled = true;
 
                     btnUpdatePengumuman.Enabled = true;
                     btnHapusPengumuman.Enabled = true;
@@ -94,8 +94,8 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     update.Parameters.AddWithValue("@Nama", txtPengumuman.Text);
                     update.Parameters.AddWithValue("@Tanggal", tglPengumuman.Value);
                     update.Parameters.AddWithValue("@Deskripsi", txtDeskripsi.Text);
-                    update.Parameters.AddWithValue("@Id_TKN", cbIDTendik.SelectedValue);
                     update.Parameters.AddWithValue("@Status", txtStatusPengumuman.Text);
+                    update.Parameters.AddWithValue("@Id_TKN", cbIDTendik.SelectedValue);
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
 
@@ -117,8 +117,41 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             txtPengumuman.Text = "";
             tglPengumuman.Value = DateTime.Now;
             txtDeskripsi.Text = "";
-            cbIDTendik.SelectedValue = "";
             txtStatusPengumuman.Text = "";
+            cbIDTendik.SelectedValue = "";
+        }
+
+        private void btnBatalPengumuman_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        private void btnHapusPengumuman_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                SqlConnection connection = new SqlConnection(connectionString);
+
+                connection.Open();
+
+                SqlCommand delete = new SqlCommand("sp_DeletePengumuman", connection);
+                delete.CommandType = CommandType.StoredProcedure;
+
+                delete.Parameters.AddWithValue("@Id_Pengumuman", txtIDPengumuman.Text);
+                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
+
+                delete.ExecuteNonQuery();
+
+
+                MessageBox.Show("Data berhasil dihapus", "Informasi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
