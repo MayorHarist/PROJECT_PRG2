@@ -16,6 +16,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         public InputMatkul()
         {
             InitializeComponent();
+            autoid();
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -73,6 +74,26 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             // TODO: This line of code loads data into the 'fINDSMARTDataSet1.Dosen' table. You can move, or remove it, as needed.
             this.dosenTableAdapter.Fill(this.fINDSMARTDataSet1.Dosen);
 
+        }
+
+        public string autoid()
+        {
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            SqlConnection connection = new SqlConnection(connectionstring);
+            {
+                connection.Open();
+                string countQuery = "SELECT COUNT(*) FROM MataKuliah";
+
+                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                {
+                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
+
+                    string newID = "M" + count.ToString("000");
+
+                    txtIdMatkul.Text = newID;
+                    return newID;
+                }
+            }
         }
     }
 }

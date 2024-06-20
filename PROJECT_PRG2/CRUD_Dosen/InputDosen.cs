@@ -16,6 +16,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
         public InputDosen()
         {
             InitializeComponent();
+            autoid();
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
@@ -73,6 +74,26 @@ namespace PROJECT_PRG2.CRUD_Dosen
             txtEmail.Text = "";
             txtTelepon.Text = "";
             txtStatus.Text = "";
+        }
+
+        public string autoid()
+        {
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            SqlConnection connection = new SqlConnection(connectionstring);
+            {
+                connection.Open();
+                string countQuery = "SELECT COUNT(*) FROM Dosen";
+
+                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                {
+                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
+
+                    string newID = "DOS" + count.ToString("000");
+
+                    txtPegawai.Text = newID;
+                    return newID;
+                }
+            }
         }
     }
 }
