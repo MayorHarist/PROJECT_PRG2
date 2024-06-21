@@ -100,6 +100,18 @@
     <Compile Include="CRUD_Mahasiswa\InputMahasiswa.Designer.cs">
       <DependentUpon>InputMahasiswa.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Mahasiswa\UpDeletMahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Mahasiswa\UpDeletMahasiswa.Designer.cs">
+      <DependentUpon>UpDeletMahasiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_Mahasiswa\ViewMahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Mahasiswa\ViewMahasiswa.Designer.cs">
+      <DependentUpon>ViewMahasiswa.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_MataKuliah\InputMatkul.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +225,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FINDSMARTDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMARTDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Mahasiswa\InputMahasiswa.resx">
       <DependentUpon>InputMahasiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Mahasiswa\ViewMahasiswa.resx">
+      <DependentUpon>ViewMahasiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_MataKuliah\InputMatkul.resx">
       <DependentUpon>InputMatkul.cs</DependentUpon>
@@ -401,6 +421,17 @@
     </None>
     <None Include="FINDSMARTDataSet5.xss">
       <DependentUpon>FINDSMARTDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet6.xsc">
+      <DependentUpon>FINDSMARTDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMARTDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMARTDataSet6.xss">
+      <DependentUpon>FINDSMARTDataSet6.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

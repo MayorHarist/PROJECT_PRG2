@@ -19,14 +19,15 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
         private void View_Prodi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'fINDSMARTDataSet3.ProgramStudi' table. You can move, or remove it, as needed.
-           
+
 
         }
 
         private void btnTampilkan_Click(object sender, EventArgs e)
         {
-            this.programStudiTableAdapter1.Fill(this.fINDSMARTDataSet3.ProgramStudi);
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
         }
     }
 }

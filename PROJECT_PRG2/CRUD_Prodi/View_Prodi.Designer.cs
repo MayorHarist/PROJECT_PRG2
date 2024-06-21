@@ -29,43 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnTampilkan = new Guna.UI2.WinForms.Guna2Button();
-            this.fINDSMART = new PROJECT_PRG2.FINDSMART();
+            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTTableAdapters.ProgramStudiTableAdapter();
+            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter();
             this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jenjangPendidikanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.akreditasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fINDSMARTDataSet3 = new PROJECT_PRG2.FINDSMARTDataSet3();
-            this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMARTDataSet3TableAdapters.ProgramStudiTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idProdiDataGridViewTextBoxColumn,
-            this.namaDataGridViewTextBoxColumn,
-            this.jenjangPendidikanDataGridViewTextBoxColumn,
-            this.akreditasiDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.programStudiBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(404, 110);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(680, 150);
-            this.dataGridView1.TabIndex = 0;
             // 
             // btnTampilkan
             // 
@@ -86,15 +66,74 @@
             this.btnTampilkan.Text = "Tampilkan";
             this.btnTampilkan.Click += new System.EventHandler(this.btnTampilkan_Click);
             // 
-            // fINDSMART
+            // guna2DataGridView1
             // 
-            this.fINDSMART.DataSetName = "FINDSMART";
-            this.fINDSMART.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.guna2DataGridView1.AutoGenerateColumns = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idProdiDataGridViewTextBoxColumn,
+            this.namaDataGridViewTextBoxColumn,
+            this.jenjangPendidikanDataGridViewTextBoxColumn,
+            this.akreditasiDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn});
+            this.guna2DataGridView1.DataSource = this.programStudiBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.Location = new System.Drawing.Point(316, 113);
+            this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.RowHeadersVisible = false;
+            this.guna2DataGridView1.RowHeadersWidth = 51;
+            this.guna2DataGridView1.RowTemplate.Height = 24;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(717, 196);
+            this.guna2DataGridView1.TabIndex = 2;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 34;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // programStudiBindingSource
             // 
             this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMART;
+            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet6;
             // 
             // programStudiTableAdapter
             // 
@@ -103,10 +142,9 @@
             // idProdiDataGridViewTextBoxColumn
             // 
             this.idProdiDataGridViewTextBoxColumn.DataPropertyName = "Id_Prodi";
-            this.idProdiDataGridViewTextBoxColumn.HeaderText = "Id_Prodi";
+            this.idProdiDataGridViewTextBoxColumn.HeaderText = "Id Prodi";
             this.idProdiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idProdiDataGridViewTextBoxColumn.Name = "idProdiDataGridViewTextBoxColumn";
-            this.idProdiDataGridViewTextBoxColumn.Width = 125;
             // 
             // namaDataGridViewTextBoxColumn
             // 
@@ -114,15 +152,13 @@
             this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
             this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            this.namaDataGridViewTextBoxColumn.Width = 125;
             // 
             // jenjangPendidikanDataGridViewTextBoxColumn
             // 
             this.jenjangPendidikanDataGridViewTextBoxColumn.DataPropertyName = "Jenjang_Pendidikan";
-            this.jenjangPendidikanDataGridViewTextBoxColumn.HeaderText = "Jenjang_Pendidikan";
+            this.jenjangPendidikanDataGridViewTextBoxColumn.HeaderText = "Jenjang Pendidikan";
             this.jenjangPendidikanDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.jenjangPendidikanDataGridViewTextBoxColumn.Name = "jenjangPendidikanDataGridViewTextBoxColumn";
-            this.jenjangPendidikanDataGridViewTextBoxColumn.Width = 125;
             // 
             // akreditasiDataGridViewTextBoxColumn
             // 
@@ -130,7 +166,6 @@
             this.akreditasiDataGridViewTextBoxColumn.HeaderText = "Akreditasi";
             this.akreditasiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.akreditasiDataGridViewTextBoxColumn.Name = "akreditasiDataGridViewTextBoxColumn";
-            this.akreditasiDataGridViewTextBoxColumn.Width = 125;
             // 
             // statusDataGridViewTextBoxColumn
             // 
@@ -138,55 +173,34 @@
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fINDSMARTDataSet3
-            // 
-            this.fINDSMARTDataSet3.DataSetName = "FINDSMARTDataSet3";
-            this.fINDSMARTDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // programStudiBindingSource1
-            // 
-            this.programStudiBindingSource1.DataMember = "ProgramStudi";
-            this.programStudiBindingSource1.DataSource = this.fINDSMARTDataSet3;
-            // 
-            // programStudiTableAdapter1
-            // 
-            this.programStudiTableAdapter1.ClearBeforeFill = true;
             // 
             // View_Prodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.btnTampilkan);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "View_Prodi";
             this.Text = "View_Prodi";
             this.Load += new System.EventHandler(this.View_Prodi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2Button btnTampilkan;
-        private FINDSMART fINDSMART;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private FINDSMARTDataSet6 fINDSMARTDataSet6;
         private System.Windows.Forms.BindingSource programStudiBindingSource;
-        private FINDSMARTTableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
+        private FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProdiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jenjangPendidikanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn akreditasiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private FINDSMARTDataSet3 fINDSMARTDataSet3;
-        private System.Windows.Forms.BindingSource programStudiBindingSource1;
-        private FINDSMARTDataSet3TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter1;
     }
 }
