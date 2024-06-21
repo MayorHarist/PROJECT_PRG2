@@ -21,8 +21,10 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
         private void UpDelet_Prodi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'fINDSMARTDataSet3.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet3.ProgramStudi);
+
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
 
 
         }
@@ -99,7 +101,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
                     // Menampilkan pesan jika eksekusi berhasil
                     MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet3.ProgramStudi);
+                    this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
                     clear();
                 }
             }
@@ -137,7 +139,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
                 MessageBox.Show("Data berhasil dihapus", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet3.ProgramStudi);
+                this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
                 clear();
             }
             catch (Exception ex)

@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDosen = new Guna.UI2.WinForms.Guna2DataGridView();
             this.noPegawaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nIDNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,24 +60,29 @@
             this.fINDSMARTDataSet = new PROJECT_PRG2.FINDSMARTDataSet();
             this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSetTableAdapters.DosenTableAdapter();
             this.btnTampil = new Guna.UI2.WinForms.Guna2Button();
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.dosenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dosenTableAdapter1 = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.DosenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDosen
             // 
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            this.dgvDosen.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvDosen.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDosen.AutoGenerateColumns = false;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDosen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDosen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDosen.ColumnHeadersHeight = 45;
             this.dgvDosen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDosen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -92,27 +97,27 @@
             this.emailDataGridViewTextBoxColumn,
             this.teleponDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
-            this.dgvDosen.DataSource = this.dosenBindingSource;
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDosen.DefaultCellStyle = dataGridViewCellStyle44;
+            this.dgvDosen.DataSource = this.dosenBindingSource1;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDosen.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvDosen.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDosen.Location = new System.Drawing.Point(248, 222);
             this.dgvDosen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDosen.Name = "dgvDosen";
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDosen.RowHeadersDefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDosen.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvDosen.RowHeadersVisible = false;
             this.dgvDosen.RowHeadersWidth = 62;
             this.dgvDosen.RowTemplate.Height = 28;
@@ -144,9 +149,9 @@
             // 
             this.noPegawaiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.noPegawaiDataGridViewTextBoxColumn.DataPropertyName = "No_Pegawai";
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noPegawaiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noPegawaiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.noPegawaiDataGridViewTextBoxColumn.HeaderText = "No Pegawai";
             this.noPegawaiDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.noPegawaiDataGridViewTextBoxColumn.Name = "noPegawaiDataGridViewTextBoxColumn";
@@ -155,9 +160,9 @@
             // 
             this.nIDNDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nIDNDataGridViewTextBoxColumn.DataPropertyName = "NIDN";
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nIDNDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nIDNDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.nIDNDataGridViewTextBoxColumn.HeaderText = "NIDN";
             this.nIDNDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.nIDNDataGridViewTextBoxColumn.Name = "nIDNDataGridViewTextBoxColumn";
@@ -166,9 +171,9 @@
             // 
             this.namaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.namaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
             this.namaDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
@@ -177,9 +182,9 @@
             // 
             this.bidangKompetensiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.bidangKompetensiDataGridViewTextBoxColumn.DataPropertyName = "Bidang_Kompetensi";
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bidangKompetensiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bidangKompetensiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.bidangKompetensiDataGridViewTextBoxColumn.HeaderText = "Bidang Kompetensi";
             this.bidangKompetensiDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.bidangKompetensiDataGridViewTextBoxColumn.Name = "bidangKompetensiDataGridViewTextBoxColumn";
@@ -188,9 +193,9 @@
             // 
             this.pendidikanTerakhirDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.pendidikanTerakhirDataGridViewTextBoxColumn.DataPropertyName = "Pendidikan_Terakhir";
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pendidikanTerakhirDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pendidikanTerakhirDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.pendidikanTerakhirDataGridViewTextBoxColumn.HeaderText = "Pendidikan Terakhir";
             this.pendidikanTerakhirDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.pendidikanTerakhirDataGridViewTextBoxColumn.Name = "pendidikanTerakhirDataGridViewTextBoxColumn";
@@ -199,9 +204,9 @@
             // 
             this.tanggalLahirDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tanggalLahirDataGridViewTextBoxColumn.DataPropertyName = "Tanggal_Lahir";
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tanggalLahirDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tanggalLahirDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.tanggalLahirDataGridViewTextBoxColumn.HeaderText = "Tanggal Lahir";
             this.tanggalLahirDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.tanggalLahirDataGridViewTextBoxColumn.Name = "tanggalLahirDataGridViewTextBoxColumn";
@@ -210,9 +215,9 @@
             // 
             this.jenisKelaminDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.jenisKelaminDataGridViewTextBoxColumn.DataPropertyName = "Jenis_Kelamin";
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jenisKelaminDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jenisKelaminDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.jenisKelaminDataGridViewTextBoxColumn.HeaderText = "Jenis Kelamin";
             this.jenisKelaminDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.jenisKelaminDataGridViewTextBoxColumn.Name = "jenisKelaminDataGridViewTextBoxColumn";
@@ -221,9 +226,9 @@
             // 
             this.alamatDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alamatDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alamatDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
             this.alamatDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
@@ -232,9 +237,9 @@
             // 
             this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
@@ -243,9 +248,9 @@
             // 
             this.teleponDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.teleponDataGridViewTextBoxColumn.DataPropertyName = "Telepon";
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teleponDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teleponDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.teleponDataGridViewTextBoxColumn.HeaderText = "Telepon";
             this.teleponDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.teleponDataGridViewTextBoxColumn.Name = "teleponDataGridViewTextBoxColumn";
@@ -254,9 +259,9 @@
             // 
             this.statusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
@@ -297,6 +302,20 @@
             this.btnTampil.UseTransparentBackground = true;
             this.btnTampil.Click += new System.EventHandler(this.btnTampil_Click);
             // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dosenBindingSource1
+            // 
+            this.dosenBindingSource1.DataMember = "Dosen";
+            this.dosenBindingSource1.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // dosenTableAdapter1
+            // 
+            this.dosenTableAdapter1.ClearBeforeFill = true;
+            // 
             // ViewDosen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,6 +335,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,5 +359,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn teleponDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private FINDSMARTDataSet6 fINDSMARTDataSet6;
+        private System.Windows.Forms.BindingSource dosenBindingSource1;
+        private FINDSMARTDataSet6TableAdapters.DosenTableAdapter dosenTableAdapter1;
     }
 }

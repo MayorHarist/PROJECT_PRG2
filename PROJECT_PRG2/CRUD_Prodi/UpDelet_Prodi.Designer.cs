@@ -49,17 +49,17 @@
             this.txtJenjangPendidikan = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdProdi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.fINDSMARTDataSet3 = new PROJECT_PRG2.FINDSMARTDataSet3();
+            this.dtgProdi = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet3TableAdapters.ProgramStudiTableAdapter();
+            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter();
             this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jenjangPendidikanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.akreditasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -347,11 +347,11 @@
             this.txtIdProdi.Size = new System.Drawing.Size(148, 38);
             this.txtIdProdi.TabIndex = 172;
             // 
-            // guna2DataGridView1
+            // dtgProdi
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.guna2DataGridView1.AutoGenerateColumns = false;
+            this.dtgProdi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgProdi.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -359,15 +359,16 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgProdi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgProdi.ColumnHeadersHeight = 18;
+            this.dtgProdi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgProdi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProdiDataGridViewTextBoxColumn,
             this.namaDataGridViewTextBoxColumn,
             this.jenjangPendidikanDataGridViewTextBoxColumn,
             this.akreditasiDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
-            this.guna2DataGridView1.DataSource = this.programStudiBindingSource;
+            this.dtgProdi.DataSource = this.programStudiBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -375,46 +376,46 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(792, 153);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowHeadersWidth = 51;
-            this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1098, 489);
-            this.guna2DataGridView1.TabIndex = 200;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 18;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgProdi.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgProdi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgProdi.Location = new System.Drawing.Point(792, 153);
+            this.dtgProdi.Name = "dtgProdi";
+            this.dtgProdi.RowHeadersVisible = false;
+            this.dtgProdi.RowHeadersWidth = 51;
+            this.dtgProdi.RowTemplate.Height = 24;
+            this.dtgProdi.Size = new System.Drawing.Size(1098, 489);
+            this.dtgProdi.TabIndex = 200;
+            this.dtgProdi.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgProdi.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgProdi.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgProdi.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgProdi.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgProdi.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dtgProdi.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgProdi.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgProdi.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgProdi.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgProdi.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgProdi.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgProdi.ThemeStyle.HeaderStyle.Height = 18;
+            this.dtgProdi.ThemeStyle.ReadOnly = false;
+            this.dtgProdi.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgProdi.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgProdi.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgProdi.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgProdi.ThemeStyle.RowsStyle.Height = 24;
+            this.dtgProdi.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgProdi.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // fINDSMARTDataSet3
+            // fINDSMARTDataSet6
             // 
-            this.fINDSMARTDataSet3.DataSetName = "FINDSMARTDataSet3";
-            this.fINDSMARTDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // programStudiBindingSource
             // 
             this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet3;
+            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet6;
             // 
             // programStudiTableAdapter
             // 
@@ -460,7 +461,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.guna2DataGridView1);
+            this.Controls.Add(this.dtgProdi);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnUbah);
@@ -481,8 +482,8 @@
             this.Name = "UpDelet_Prodi";
             this.Text = "UpDelet_Prodi";
             this.Load += new System.EventHandler(this.UpDelet_Prodi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -507,10 +508,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtJenjangPendidikan;
         private Guna.UI2.WinForms.Guna2TextBox txtNama;
         private Guna.UI2.WinForms.Guna2TextBox txtIdProdi;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private FINDSMARTDataSet3 fINDSMARTDataSet3;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgProdi;
+        private FINDSMARTDataSet6 fINDSMARTDataSet6;
         private System.Windows.Forms.BindingSource programStudiBindingSource;
-        private FINDSMARTDataSet3TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
+        private FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProdiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jenjangPendidikanDataGridViewTextBoxColumn;

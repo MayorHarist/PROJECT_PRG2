@@ -29,7 +29,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                     return;
                 }
 
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -93,7 +93,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -136,7 +136,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connectionString);
                 
                 connection.Open();

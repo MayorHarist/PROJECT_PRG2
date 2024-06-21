@@ -46,7 +46,6 @@
             this.txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTelepon = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAlamat = new Guna.UI2.WinForms.Guna2TextBox();
             this.rbPerempuan = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbLaki = new Guna.UI2.WinForms.Guna2RadioButton();
             this.DateTimeTanggal = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -58,11 +57,12 @@
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbProdi = new System.Windows.Forms.ComboBox();
-            this.fINDSMARTDataSet3 = new PROJECT_PRG2.FINDSMARTDataSet3();
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet3 = new PROJECT_PRG2.FINDSMARTDataSet3();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet3TableAdapters.ProgramStudiTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet3)).BeginInit();
+            this.txtAlamat = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -301,32 +301,6 @@
             this.txtEmail.Size = new System.Drawing.Size(254, 38);
             this.txtEmail.TabIndex = 42;
             // 
-            // txtAlamat
-            // 
-            this.txtAlamat.Animated = true;
-            this.txtAlamat.BackColor = System.Drawing.Color.Transparent;
-            this.txtAlamat.BorderColor = System.Drawing.Color.Black;
-            this.txtAlamat.BorderRadius = 10;
-            this.txtAlamat.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAlamat.DefaultText = "";
-            this.txtAlamat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAlamat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAlamat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAlamat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAlamat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAlamat.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtAlamat.ForeColor = System.Drawing.Color.Black;
-            this.txtAlamat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAlamat.Location = new System.Drawing.Point(391, 380);
-            this.txtAlamat.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAlamat.Multiline = true;
-            this.txtAlamat.Name = "txtAlamat";
-            this.txtAlamat.PasswordChar = '\0';
-            this.txtAlamat.PlaceholderText = "";
-            this.txtAlamat.SelectedText = "";
-            this.txtAlamat.Size = new System.Drawing.Size(254, 59);
-            this.txtAlamat.TabIndex = 41;
-            // 
             // rbPerempuan
             // 
             this.rbPerempuan.AutoSize = true;
@@ -552,25 +526,34 @@
             this.cbProdi.TabIndex = 68;
             this.cbProdi.ValueMember = "Id_Prodi";
             // 
-            // fINDSMARTDataSet3
-            // 
-            this.fINDSMARTDataSet3.DataSetName = "FINDSMARTDataSet3";
-            this.fINDSMARTDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // programStudiBindingSource
             // 
             this.programStudiBindingSource.DataMember = "ProgramStudi";
             this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet3;
             // 
+            // fINDSMARTDataSet3
+            // 
+            this.fINDSMARTDataSet3.DataSetName = "FINDSMARTDataSet3";
+            this.fINDSMARTDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // programStudiTableAdapter
             // 
             this.programStudiTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtAlamat
+            // 
+            this.txtAlamat.Location = new System.Drawing.Point(391, 370);
+            this.txtAlamat.Name = "txtAlamat";
+            this.txtAlamat.Size = new System.Drawing.Size(255, 70);
+            this.txtAlamat.TabIndex = 69;
+            this.txtAlamat.Text = "";
             // 
             // InputMahasiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.txtAlamat);
             this.Controls.Add(this.cbProdi);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
@@ -592,7 +575,6 @@
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtTelepon);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtAlamat);
             this.Controls.Add(this.rbPerempuan);
             this.Controls.Add(this.rbLaki);
             this.Controls.Add(this.DateTimeTanggal);
@@ -603,8 +585,8 @@
             this.Name = "InputMahasiswa";
             this.Text = "InputMahasiswa";
             this.Load += new System.EventHandler(this.InputMahasiswa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -629,7 +611,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtStatus;
         private Guna.UI2.WinForms.Guna2TextBox txtTelepon;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2TextBox txtAlamat;
         private Guna.UI2.WinForms.Guna2RadioButton rbPerempuan;
         private Guna.UI2.WinForms.Guna2RadioButton rbLaki;
         private Guna.UI2.WinForms.Guna2DateTimePicker DateTimeTanggal;
@@ -644,5 +625,6 @@
         private FINDSMARTDataSet3 fINDSMARTDataSet3;
         private System.Windows.Forms.BindingSource programStudiBindingSource;
         private FINDSMARTDataSet3TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
+        private System.Windows.Forms.RichTextBox txtAlamat;
     }
 }
