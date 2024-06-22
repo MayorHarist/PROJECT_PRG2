@@ -78,8 +78,9 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         private void InputMahasiswa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet3.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet3.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
+            
 
         }
     }

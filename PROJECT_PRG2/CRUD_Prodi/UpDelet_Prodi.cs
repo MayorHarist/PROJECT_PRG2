@@ -59,7 +59,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
                         txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
                     }
 
-                    txtIdProdi.Enabled = true;
+                   
                     txtNama.Enabled = true;
                     txtJenjangPendidikan.Enabled = true;
                     txtAkreditasi.Enabled = true;

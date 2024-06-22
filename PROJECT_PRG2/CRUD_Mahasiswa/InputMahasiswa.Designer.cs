@@ -57,12 +57,12 @@
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbProdi = new System.Windows.Forms.ComboBox();
-            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMARTDataSet3 = new PROJECT_PRG2.FINDSMARTDataSet3();
-            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet3TableAdapters.ProgramStudiTableAdapter();
             this.txtAlamat = new System.Windows.Forms.RichTextBox();
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -516,7 +516,6 @@
             // cbProdi
             // 
             this.cbProdi.DataSource = this.programStudiBindingSource;
-            this.cbProdi.DisplayMember = "Id_Prodi";
             this.cbProdi.FormattingEnabled = true;
             this.cbProdi.ItemHeight = 16;
             this.cbProdi.Location = new System.Drawing.Point(391, 205);
@@ -526,20 +525,6 @@
             this.cbProdi.TabIndex = 68;
             this.cbProdi.ValueMember = "Id_Prodi";
             // 
-            // programStudiBindingSource
-            // 
-            this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet3;
-            // 
-            // fINDSMARTDataSet3
-            // 
-            this.fINDSMARTDataSet3.DataSetName = "FINDSMARTDataSet3";
-            this.fINDSMARTDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // programStudiTableAdapter
-            // 
-            this.programStudiTableAdapter.ClearBeforeFill = true;
-            // 
             // txtAlamat
             // 
             this.txtAlamat.Location = new System.Drawing.Point(391, 370);
@@ -547,6 +532,20 @@
             this.txtAlamat.Size = new System.Drawing.Size(255, 70);
             this.txtAlamat.TabIndex = 69;
             this.txtAlamat.Text = "";
+            // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // programStudiBindingSource
+            // 
+            this.programStudiBindingSource.DataMember = "ProgramStudi";
+            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // programStudiTableAdapter
+            // 
+            this.programStudiTableAdapter.ClearBeforeFill = true;
             // 
             // InputMahasiswa
             // 
@@ -585,8 +584,8 @@
             this.Name = "InputMahasiswa";
             this.Text = "InputMahasiswa";
             this.Load += new System.EventHandler(this.InputMahasiswa_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -622,9 +621,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbProdi;
-        private FINDSMARTDataSet3 fINDSMARTDataSet3;
-        private System.Windows.Forms.BindingSource programStudiBindingSource;
-        private FINDSMARTDataSet3TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
         private System.Windows.Forms.RichTextBox txtAlamat;
+        private FINDSMARTDataSet6 fINDSMARTDataSet6;
+        private System.Windows.Forms.BindingSource programStudiBindingSource;
+        private FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
     }
 }

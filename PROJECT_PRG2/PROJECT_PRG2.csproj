@@ -284,6 +284,9 @@
     <EmbeddedResource Include="CRUD_Mahasiswa\InputMahasiswa.resx">
       <DependentUpon>InputMahasiswa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Mahasiswa\UpDeletMahasiswa.resx">
+      <DependentUpon>UpDeletMahasiswa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Mahasiswa\ViewMahasiswa.resx">
       <DependentUpon>ViewMahasiswa.cs</DependentUpon>
     </EmbeddedResource>
