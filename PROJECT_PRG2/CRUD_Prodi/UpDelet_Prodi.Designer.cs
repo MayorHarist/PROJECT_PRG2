@@ -36,7 +36,6 @@
             this.btnHapus = new Guna.UI2.WinForms.Guna2Button();
             this.btnUbah = new Guna.UI2.WinForms.Guna2Button();
             this.btnCari = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -50,22 +49,23 @@
             this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdProdi = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtgProdi = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
-            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter();
             this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jenjangPendidikanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.akreditasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBatal
             // 
             this.btnBatal.AutoRoundedCorners = true;
+            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
             this.btnBatal.BorderRadius = 21;
             this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -74,7 +74,7 @@
             this.btnBatal.FillColor = System.Drawing.Color.HotPink;
             this.btnBatal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(431, 587);
+            this.btnBatal.Location = new System.Drawing.Point(309, 658);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(149, 44);
@@ -84,6 +84,7 @@
             // btnHapus
             // 
             this.btnHapus.AutoRoundedCorners = true;
+            this.btnHapus.BackColor = System.Drawing.Color.Transparent;
             this.btnHapus.BorderRadius = 21;
             this.btnHapus.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHapus.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -92,7 +93,7 @@
             this.btnHapus.FillColor = System.Drawing.Color.HotPink;
             this.btnHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.Color.White;
-            this.btnHapus.Location = new System.Drawing.Point(613, 587);
+            this.btnHapus.Location = new System.Drawing.Point(491, 658);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(149, 44);
@@ -103,6 +104,7 @@
             // btnUbah
             // 
             this.btnUbah.AutoRoundedCorners = true;
+            this.btnUbah.BackColor = System.Drawing.Color.Transparent;
             this.btnUbah.BorderRadius = 21;
             this.btnUbah.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUbah.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -111,7 +113,7 @@
             this.btnUbah.FillColor = System.Drawing.Color.HotPink;
             this.btnUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUbah.ForeColor = System.Drawing.Color.White;
-            this.btnUbah.Location = new System.Drawing.Point(247, 587);
+            this.btnUbah.Location = new System.Drawing.Point(125, 658);
             this.btnUbah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUbah.Name = "btnUbah";
             this.btnUbah.Size = new System.Drawing.Size(149, 44);
@@ -122,6 +124,7 @@
             // btnCari
             // 
             this.btnCari.AutoRoundedCorners = true;
+            this.btnCari.BackColor = System.Drawing.Color.Transparent;
             this.btnCari.BorderRadius = 21;
             this.btnCari.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCari.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -130,7 +133,7 @@
             this.btnCari.FillColor = System.Drawing.Color.HotPink;
             this.btnCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.btnCari.ForeColor = System.Drawing.Color.White;
-            this.btnCari.Location = new System.Drawing.Point(585, 153);
+            this.btnCari.Location = new System.Drawing.Point(463, 224);
             this.btnCari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(100, 44);
@@ -138,54 +141,51 @@
             this.btnCari.Text = "Cari";
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(550, 85);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 25);
-            this.label2.TabIndex = 195;
-            this.label2.Text = "DATA PROGRAM STUDI";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(244, 225);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(122, 296);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 18);
+            this.label3.Size = new System.Drawing.Size(59, 26);
             this.label3.TabIndex = 194;
             this.label3.Text = "Nama";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(245, 294);
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(123, 365);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(153, 18);
+            this.label14.Size = new System.Drawing.Size(162, 26);
             this.label14.TabIndex = 188;
             this.label14.Text = "Jenjang Pendidikan";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(245, 366);
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(123, 437);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(82, 18);
+            this.label15.Size = new System.Drawing.Size(89, 26);
             this.label15.TabIndex = 187;
             this.label15.Text = "Akreditasi";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(244, 158);
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(122, 229);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(66, 18);
+            this.label17.Size = new System.Drawing.Size(68, 26);
             this.label17.TabIndex = 185;
             this.label17.Text = "Id Prodi";
             // 
@@ -193,7 +193,7 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(285, 158);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(163, 229);
             this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(3, 2);
@@ -203,10 +203,12 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(245, 437);
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(123, 508);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 18);
+            this.label16.Size = new System.Drawing.Size(61, 26);
             this.label16.TabIndex = 186;
             this.label16.Text = "Status";
             // 
@@ -215,7 +217,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(285, 158);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(163, 229);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(3, 2);
@@ -238,7 +240,7 @@
             this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtStatus.ForeColor = System.Drawing.Color.Black;
             this.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatus.Location = new System.Drawing.Point(431, 437);
+            this.txtStatus.Location = new System.Drawing.Point(309, 508);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.PasswordChar = '\0';
@@ -263,7 +265,7 @@
             this.txtAkreditasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtAkreditasi.ForeColor = System.Drawing.Color.Black;
             this.txtAkreditasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAkreditasi.Location = new System.Drawing.Point(431, 366);
+            this.txtAkreditasi.Location = new System.Drawing.Point(309, 437);
             this.txtAkreditasi.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtAkreditasi.Name = "txtAkreditasi";
             this.txtAkreditasi.PasswordChar = '\0';
@@ -288,7 +290,7 @@
             this.txtJenjangPendidikan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtJenjangPendidikan.ForeColor = System.Drawing.Color.Black;
             this.txtJenjangPendidikan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJenjangPendidikan.Location = new System.Drawing.Point(431, 294);
+            this.txtJenjangPendidikan.Location = new System.Drawing.Point(309, 365);
             this.txtJenjangPendidikan.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtJenjangPendidikan.Name = "txtJenjangPendidikan";
             this.txtJenjangPendidikan.PasswordChar = '\0';
@@ -313,7 +315,7 @@
             this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Location = new System.Drawing.Point(431, 225);
+            this.txtNama.Location = new System.Drawing.Point(309, 296);
             this.txtNama.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
@@ -338,7 +340,7 @@
             this.txtIdProdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtIdProdi.ForeColor = System.Drawing.Color.Black;
             this.txtIdProdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdProdi.Location = new System.Drawing.Point(431, 158);
+            this.txtIdProdi.Location = new System.Drawing.Point(309, 229);
             this.txtIdProdi.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtIdProdi.Name = "txtIdProdi";
             this.txtIdProdi.PasswordChar = '\0';
@@ -378,7 +380,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgProdi.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgProdi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgProdi.Location = new System.Drawing.Point(792, 153);
+            this.dtgProdi.Location = new System.Drawing.Point(670, 224);
             this.dtgProdi.Name = "dtgProdi";
             this.dtgProdi.RowHeadersVisible = false;
             this.dtgProdi.RowHeadersWidth = 51;
@@ -406,20 +408,6 @@
             this.dtgProdi.ThemeStyle.RowsStyle.Height = 24;
             this.dtgProdi.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgProdi.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // fINDSMARTDataSet6
-            // 
-            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
-            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // programStudiBindingSource
-            // 
-            this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet6;
-            // 
-            // programStudiTableAdapter
-            // 
-            this.programStudiTableAdapter.ClearBeforeFill = true;
             // 
             // idProdiDataGridViewTextBoxColumn
             // 
@@ -456,17 +444,31 @@
             this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
+            // programStudiBindingSource
+            // 
+            this.programStudiBindingSource.DataMember = "ProgramStudi";
+            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // programStudiTableAdapter
+            // 
+            this.programStudiTableAdapter.ClearBeforeFill = true;
+            // 
             // UpDelet_Prodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.formProdi;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.dtgProdi);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnUbah);
             this.Controls.Add(this.btnCari);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
@@ -483,8 +485,8 @@
             this.Text = "UpDelet_Prodi";
             this.Load += new System.EventHandler(this.UpDelet_Prodi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -495,7 +497,6 @@
         private Guna.UI2.WinForms.Guna2Button btnHapus;
         private Guna.UI2.WinForms.Guna2Button btnUbah;
         private Guna.UI2.WinForms.Guna2Button btnCari;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;

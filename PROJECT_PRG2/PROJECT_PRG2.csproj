@@ -490,5 +490,11 @@
   <ItemGroup>
     <None Include="Resources\Lihat Matkul FIND SMART.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formProdi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
