@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PROJECT_PRG2.CRUD_Dosen
 {
-    public partial class DashboardDosen : Form
+    public partial class o : Form
     {
-        public DashboardDosen()
+        public o()
         {
             InitializeComponent();
+        }
+
+        private void DashboardDosen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

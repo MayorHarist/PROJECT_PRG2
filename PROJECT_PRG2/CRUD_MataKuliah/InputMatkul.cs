@@ -126,7 +126,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             this.dosenTableAdapter.Fill(this.fINDSMARTDataSet6.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet2.ProgramStudi' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'fINDSMARTDataSet1.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet1.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet1.Dosen);
 
         }
 
