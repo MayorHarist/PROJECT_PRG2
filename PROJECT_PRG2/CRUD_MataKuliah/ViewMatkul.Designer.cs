@@ -106,13 +106,13 @@
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gdvMatkul.DefaultCellStyle = dataGridViewCellStyle11;
             this.gdvMatkul.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gdvMatkul.Location = new System.Drawing.Point(344, 252);
+            this.gdvMatkul.Location = new System.Drawing.Point(387, 315);
             this.gdvMatkul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gdvMatkul.Name = "gdvMatkul";
             this.gdvMatkul.RowHeadersVisible = false;
             this.gdvMatkul.RowHeadersWidth = 62;
             this.gdvMatkul.RowTemplate.Height = 28;
-            this.gdvMatkul.Size = new System.Drawing.Size(1362, 567);
+            this.gdvMatkul.Size = new System.Drawing.Size(1532, 709);
             this.gdvMatkul.TabIndex = 0;
             this.gdvMatkul.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gdvMatkul.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -220,7 +220,7 @@
             // 
             this.btnTampil.AutoRoundedCorners = true;
             this.btnTampil.BackColor = System.Drawing.Color.Transparent;
-            this.btnTampil.BorderRadius = 25;
+            this.btnTampil.BorderRadius = 32;
             this.btnTampil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTampil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTampil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -228,10 +228,10 @@
             this.btnTampil.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTampil.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold);
             this.btnTampil.ForeColor = System.Drawing.Color.White;
-            this.btnTampil.Location = new System.Drawing.Point(914, 902);
+            this.btnTampil.Location = new System.Drawing.Point(1028, 1128);
             this.btnTampil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTampil.Name = "btnTampil";
-            this.btnTampil.Size = new System.Drawing.Size(225, 53);
+            this.btnTampil.Size = new System.Drawing.Size(253, 66);
             this.btnTampil.TabIndex = 21;
             this.btnTampil.Text = "Tampilkan";
             this.btnTampil.UseTransparentBackground = true;
@@ -239,11 +239,11 @@
             // 
             // ViewMatkul
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.Lihat_Matkul_FIND_SMART;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1946, 1106);
             this.Controls.Add(this.btnTampil);
             this.Controls.Add(this.gdvMatkul);
             this.DoubleBuffered = true;
