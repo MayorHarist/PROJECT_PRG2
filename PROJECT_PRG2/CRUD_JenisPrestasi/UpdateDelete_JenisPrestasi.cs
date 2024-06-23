@@ -22,7 +22,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         {
             try
             {
-                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connnectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connnectionString);
                 connection.Open();
 
@@ -143,8 +143,10 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void UpdateDelete_JenisPrestasi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet6.JenisPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet4.JenisPrestasi' table. You can move, or remove it, as needed.
-            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet4.JenisPrestasi);
+            
 
         }
 

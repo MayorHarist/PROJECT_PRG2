@@ -27,7 +27,7 @@ namespace PROJECT_PRG2
             //Application.Run(new TampilanAwal());
             //Application.Run(new ViewMatkul());
             //Application.Run(new DataTendik());
-            Application.Run(new InputMahasiswa());
+            Application.Run(new Input_JenisPrestasi());
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new View_JenisPrestasi());
             //Application.Run(new Input_PosisiPrestasi());

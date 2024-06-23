@@ -45,27 +45,33 @@
             this.txtNama = new System.Windows.Forms.TextBox();
             this.txtIdJenisPrestasi = new System.Windows.Forms.TextBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.jenisPrestasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet4 = new PROJECT_PRG2.FINDSMARTDataSet4();
+            this.jenisPrestasiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet4TableAdapters.JenisPrestasiTableAdapter();
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.jenisPrestasiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.jenisPrestasiTableAdapter1 = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.JenisPrestasiTableAdapter();
             this.idJenisPrestasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.peranDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.penyelenggaraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jenisPrestasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMARTDataSet4 = new PROJECT_PRG2.FINDSMARTDataSet4();
-            this.jenisPrestasiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet4TableAdapters.JenisPrestasiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(1025, 939);
+            this.btnCancel.Location = new System.Drawing.Point(1367, 1156);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(378, 44);
+            this.btnCancel.Size = new System.Drawing.Size(504, 54);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -74,9 +80,10 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(1025, 864);
+            this.btnSearch.Location = new System.Drawing.Point(1367, 1063);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(378, 44);
+            this.btnSearch.Size = new System.Drawing.Size(504, 54);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -85,9 +92,10 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(1446, 864);
+            this.btnUpdate.Location = new System.Drawing.Point(1928, 1063);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(378, 44);
+            this.btnUpdate.Size = new System.Drawing.Size(504, 54);
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -96,9 +104,10 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(1446, 939);
+            this.btnDelete.Location = new System.Drawing.Point(1928, 1156);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(378, 44);
+            this.btnDelete.Size = new System.Drawing.Size(504, 54);
             this.btnDelete.TabIndex = 12;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -107,9 +116,10 @@
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(64, 938);
+            this.btnRefresh.Location = new System.Drawing.Point(85, 1154);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(814, 44);
+            this.btnRefresh.Size = new System.Drawing.Size(1085, 54);
             this.btnRefresh.TabIndex = 13;
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -117,56 +127,62 @@
             // txtStatus
             // 
             this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(1237, 784);
+            this.txtStatus.Location = new System.Drawing.Point(1649, 965);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(600, 31);
+            this.txtStatus.Size = new System.Drawing.Size(799, 37);
             this.txtStatus.TabIndex = 19;
             // 
             // txtPoint
             // 
             this.txtPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPoint.Location = new System.Drawing.Point(1237, 676);
+            this.txtPoint.Location = new System.Drawing.Point(1649, 832);
+            this.txtPoint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPoint.Multiline = true;
             this.txtPoint.Name = "txtPoint";
-            this.txtPoint.Size = new System.Drawing.Size(600, 31);
+            this.txtPoint.Size = new System.Drawing.Size(799, 37);
             this.txtPoint.TabIndex = 18;
             this.txtPoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPoint_KeyPress);
             // 
             // txtPenyelenggara
             // 
             this.txtPenyelenggara.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPenyelenggara.Location = new System.Drawing.Point(1237, 558);
+            this.txtPenyelenggara.Location = new System.Drawing.Point(1649, 687);
+            this.txtPenyelenggara.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPenyelenggara.Multiline = true;
             this.txtPenyelenggara.Name = "txtPenyelenggara";
-            this.txtPenyelenggara.Size = new System.Drawing.Size(600, 31);
+            this.txtPenyelenggara.Size = new System.Drawing.Size(799, 37);
             this.txtPenyelenggara.TabIndex = 17;
             // 
             // txtPeran
             // 
             this.txtPeran.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeran.Location = new System.Drawing.Point(1237, 454);
+            this.txtPeran.Location = new System.Drawing.Point(1649, 559);
+            this.txtPeran.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPeran.Multiline = true;
             this.txtPeran.Name = "txtPeran";
-            this.txtPeran.Size = new System.Drawing.Size(600, 31);
+            this.txtPeran.Size = new System.Drawing.Size(799, 37);
             this.txtPeran.TabIndex = 16;
             // 
             // txtNama
             // 
             this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNama.Location = new System.Drawing.Point(1237, 344);
+            this.txtNama.Location = new System.Drawing.Point(1649, 423);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNama.Multiline = true;
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(600, 31);
+            this.txtNama.Size = new System.Drawing.Size(799, 37);
             this.txtNama.TabIndex = 15;
             // 
             // txtIdJenisPrestasi
             // 
             this.txtIdJenisPrestasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdJenisPrestasi.Location = new System.Drawing.Point(1237, 251);
+            this.txtIdJenisPrestasi.Location = new System.Drawing.Point(1649, 309);
+            this.txtIdJenisPrestasi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdJenisPrestasi.Multiline = true;
             this.txtIdJenisPrestasi.Name = "txtIdJenisPrestasi";
-            this.txtIdJenisPrestasi.Size = new System.Drawing.Size(600, 31);
+            this.txtIdJenisPrestasi.Size = new System.Drawing.Size(799, 37);
             this.txtIdJenisPrestasi.TabIndex = 14;
             // 
             // guna2DataGridView1
@@ -191,7 +207,7 @@
             this.penyelenggaraDataGridViewTextBoxColumn,
             this.pointDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
-            this.guna2DataGridView1.DataSource = this.jenisPrestasiBindingSource;
+            this.guna2DataGridView1.DataSource = this.jenisPrestasiBindingSource1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,10 +217,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(64, 235);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(85, 289);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(814, 673);
+            this.guna2DataGridView1.RowHeadersWidth = 51;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1085, 828);
             this.guna2DataGridView1.TabIndex = 20;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -228,42 +246,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // idJenisPrestasiDataGridViewTextBoxColumn
-            // 
-            this.idJenisPrestasiDataGridViewTextBoxColumn.DataPropertyName = "Id_JenisPrestasi";
-            this.idJenisPrestasiDataGridViewTextBoxColumn.HeaderText = "Id_JenisPrestasi";
-            this.idJenisPrestasiDataGridViewTextBoxColumn.Name = "idJenisPrestasiDataGridViewTextBoxColumn";
-            // 
-            // namaDataGridViewTextBoxColumn
-            // 
-            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
-            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
-            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            // 
-            // peranDataGridViewTextBoxColumn
-            // 
-            this.peranDataGridViewTextBoxColumn.DataPropertyName = "Peran";
-            this.peranDataGridViewTextBoxColumn.HeaderText = "Peran";
-            this.peranDataGridViewTextBoxColumn.Name = "peranDataGridViewTextBoxColumn";
-            // 
-            // penyelenggaraDataGridViewTextBoxColumn
-            // 
-            this.penyelenggaraDataGridViewTextBoxColumn.DataPropertyName = "Penyelenggara";
-            this.penyelenggaraDataGridViewTextBoxColumn.HeaderText = "Penyelenggara";
-            this.penyelenggaraDataGridViewTextBoxColumn.Name = "penyelenggaraDataGridViewTextBoxColumn";
-            // 
-            // pointDataGridViewTextBoxColumn
-            // 
-            this.pointDataGridViewTextBoxColumn.DataPropertyName = "Point";
-            this.pointDataGridViewTextBoxColumn.HeaderText = "Point";
-            this.pointDataGridViewTextBoxColumn.Name = "pointDataGridViewTextBoxColumn";
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            // 
             // jenisPrestasiBindingSource
             // 
             this.jenisPrestasiBindingSource.DataMember = "JenisPrestasi";
@@ -278,12 +260,68 @@
             // 
             this.jenisPrestasiTableAdapter.ClearBeforeFill = true;
             // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jenisPrestasiBindingSource1
+            // 
+            this.jenisPrestasiBindingSource1.DataMember = "JenisPrestasi";
+            this.jenisPrestasiBindingSource1.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // jenisPrestasiTableAdapter1
+            // 
+            this.jenisPrestasiTableAdapter1.ClearBeforeFill = true;
+            // 
+            // idJenisPrestasiDataGridViewTextBoxColumn
+            // 
+            this.idJenisPrestasiDataGridViewTextBoxColumn.DataPropertyName = "Id_JenisPrestasi";
+            this.idJenisPrestasiDataGridViewTextBoxColumn.HeaderText = "Id Jenis Prestasi";
+            this.idJenisPrestasiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idJenisPrestasiDataGridViewTextBoxColumn.Name = "idJenisPrestasiDataGridViewTextBoxColumn";
+            // 
+            // namaDataGridViewTextBoxColumn
+            // 
+            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
+            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            // 
+            // peranDataGridViewTextBoxColumn
+            // 
+            this.peranDataGridViewTextBoxColumn.DataPropertyName = "Peran";
+            this.peranDataGridViewTextBoxColumn.HeaderText = "Peran";
+            this.peranDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.peranDataGridViewTextBoxColumn.Name = "peranDataGridViewTextBoxColumn";
+            // 
+            // penyelenggaraDataGridViewTextBoxColumn
+            // 
+            this.penyelenggaraDataGridViewTextBoxColumn.DataPropertyName = "Penyelenggara";
+            this.penyelenggaraDataGridViewTextBoxColumn.HeaderText = "Penyelenggara";
+            this.penyelenggaraDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.penyelenggaraDataGridViewTextBoxColumn.Name = "penyelenggaraDataGridViewTextBoxColumn";
+            // 
+            // pointDataGridViewTextBoxColumn
+            // 
+            this.pointDataGridViewTextBoxColumn.DataPropertyName = "Point";
+            this.pointDataGridViewTextBoxColumn.HeaderText = "Point";
+            this.pointDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pointDataGridViewTextBoxColumn.Name = "pointDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            // 
             // UpdateDelete_JenisPrestasi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtPoint);
@@ -296,13 +334,15 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnCancel);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UpdateDelete_JenisPrestasi";
             this.Text = "Update & Delete Jenis Prestasi";
             this.Load += new System.EventHandler(this.UpdateDelete_JenisPrestasi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,6 +365,9 @@
         private FINDSMARTDataSet4 fINDSMARTDataSet4;
         private System.Windows.Forms.BindingSource jenisPrestasiBindingSource;
         private FINDSMARTDataSet4TableAdapters.JenisPrestasiTableAdapter jenisPrestasiTableAdapter;
+        private FINDSMARTDataSet6 fINDSMARTDataSet6;
+        private System.Windows.Forms.BindingSource jenisPrestasiBindingSource1;
+        private FINDSMARTDataSet6TableAdapters.JenisPrestasiTableAdapter jenisPrestasiTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idJenisPrestasiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn peranDataGridViewTextBoxColumn;
