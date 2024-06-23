@@ -121,7 +121,7 @@
   <data name="btnSubmit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZgAAABDCAYAAAChtRMNAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAciJJREFUeF7VnQe8ZUWV7m93oxLkoEgSAR3HPM6oE5xxoo5iGlFRcuomNhlUEAOK
+        vgAADr4B6kKxwAAAciJJREFUeF7VnQe8ZUWV7m93oxLkoEgSAR3HPM6oE5xxoo5iGlFRcuomNhlUEAOK
         4xBEMSBJRDIdCCo5g2QaOkN339B98+0GswdRmKY59b5vrVq1q2rvfc65DfreO7/fx7ncvvfcHarWv761
         qmr3vFivOcNjPZcNj0+5bHhi2mXj8jU00XPJyMTWl4xO7Ij3Qy4emTgduv7i0dW9F42ufvKikdW/u3Bk
         9XMXjq52UIvvPxKtEV3g9cOxQueLnhD9wOu8SOdC54w+4c4efsKdNfSE+/6qNe7MlWvc9/pXu+/2rXbf
@@ -614,7 +614,7 @@
   <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZgAAABDCAIAAAAu14RaAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAChdJREFUeF7tnHtMzm8fxyNJyS8qp04IJRZRLYeKjbSVQzJrxpI5jZmEzBCb05bj
+        vQAADr0BR/uQrQAAChdJREFUeF7tnHtMzm8fxyNJyS8qp04IJRZRLYeKjbSVQzJrxpI5jZmEzBCb05bj
         zNjUbJb4A42ZTjaUEn+gROVQiwylk1SU4/N+fOx67ue+1e/nef76fu/364/vrutzfa7r+73/uF67Pvf9
         LYsfhBCicSgyQojmocgIIZqHIiOEaB6KjBCieSgyQojmocgIIZqHIiOEaB6KjBCieSgyQojmocgIIZqH
         IiOEaB6KjBCieSgyQojmocgIIZqHIiOEaB6KjBCieSgyQojmocgIIZqHIiOEaB6KjOiW79+/f/v2Dddf
@@ -663,7 +663,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAA/7JJREFUeF7s3Qe4XFW5N3C++3n99F6v9apXvYoVe0dRsYFYUUTpTaoFAemI0kV6
+        wQAADsEBuJFr7QAA/7JJREFUeF7s3Qe4XFW5N3C++3n99F6v9apXvYoVe0dRsYFYUUTpTaoFAemI0kV6
         byJIkd5bCISQEAIkIaSS3nsCIRB6L64v787Zhzlz1pwz55xJcib83uf5PSRrr71nz549E53/rLXWWOMn
         1yUAAAAAAAAAVgPZRgAAAAAAAACaT7YRAAAAAAAAgOaTbQQAAAAAAACg+WQbAQAAAAAAAGg+2UYAAAAA
         AAAAmk+2EQAAAAAAAIDmk20EAAAAAAAAoPlkGwEAAAAAAABoPtlGAAAAAAAAAJpPthEAAAAAAACA5pNt

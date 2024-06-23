@@ -19,14 +19,16 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void ViewMatkul_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.MataKuliah' table. You can move, or remove it, as needed.
+            
             // TODO: This line of code loads data into the 'fINDSMART.MataKuliah' table. You can move, or remove it, as needed.
-           
+
 
         }
 
         private void btnTampil_Click(object sender, EventArgs e)
         {
-            this.mataKuliahTableAdapter.Fill(this.fINDSMART.MataKuliah);
+            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet6.MataKuliah);
         }
     }
 }

@@ -20,8 +20,10 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void UpdateDelete_PosisiPrestasi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.PosisiPrestasi' table. You can move, or remove it, as needed.
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet6.PosisiPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet5.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet5.PosisiPrestasi);
+           
 
         }
 
@@ -29,7 +31,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         {
             try
             {
-                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connnectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connnectionString);
                 connection.Open();
 
@@ -188,7 +190,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         {
             try
             {
-                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connnectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connnectionString);
                 connection.Open();
 
@@ -232,7 +234,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet5.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet5.PosisiPrestasi);
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet6.PosisiPrestasi);
         }
     }
 }
