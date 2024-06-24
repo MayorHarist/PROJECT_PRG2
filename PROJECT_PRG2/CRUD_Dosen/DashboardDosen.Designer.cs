@@ -1,6 +1,6 @@
 ﻿namespace PROJECT_PRG2.CRUD_Dosen
 {
-    partial class o
+    partial class DashboardDosen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(o));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardDosen));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -247,7 +247,7 @@
             this.guna2ImageButton2.TabIndex = 2;
             this.guna2ImageButton2.UseTransparentBackground = true;
             // 
-            // o
+            // DashboardDosen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,7 +266,7 @@
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.btnDashboard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "o";
+            this.Name = "DashboardDosen";
             this.Text = "Dashboard Dosen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashboardDosen_Load);

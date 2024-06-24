@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PROJECT_PRG2.CRUD_Dosen
 {
-    public partial class o : Form
+    public partial class DashboardDosen : Form
     {
-        public o()
+        public DashboardDosen()
         {
             InitializeComponent();
         }
