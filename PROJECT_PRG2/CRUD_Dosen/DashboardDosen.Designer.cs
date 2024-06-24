@@ -61,7 +61,7 @@
             this.btnDashboard.FillColor = System.Drawing.Color.CornflowerBlue;
             this.btnDashboard.Font = new System.Drawing.Font("Poppins ExtraBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Location = new System.Drawing.Point(60, 149);
+            this.btnDashboard.Location = new System.Drawing.Point(60, 181);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(373, 85);
             this.btnDashboard.TabIndex = 0;
@@ -79,7 +79,7 @@
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
             this.guna2ImageButton1.IndicateFocus = true;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(79, 161);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(79, 193);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Size = new System.Drawing.Size(64, 64);
@@ -97,7 +97,7 @@
             this.btnCreate.FillColor = System.Drawing.Color.CornflowerBlue;
             this.btnCreate.Font = new System.Drawing.Font("Poppins ExtraBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(60, 311);
+            this.btnCreate.Location = new System.Drawing.Point(60, 343);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(373, 85);
             this.btnCreate.TabIndex = 3;
@@ -116,7 +116,7 @@
             this.btnView.FillColor = System.Drawing.Color.CornflowerBlue;
             this.btnView.Font = new System.Drawing.Font("Poppins ExtraBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(60, 465);
+            this.btnView.Location = new System.Drawing.Point(60, 497);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(373, 85);
             this.btnView.TabIndex = 4;
@@ -135,7 +135,7 @@
             this.btnUpdateDel.FillColor = System.Drawing.Color.CornflowerBlue;
             this.btnUpdateDel.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateDel.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateDel.Location = new System.Drawing.Point(60, 622);
+            this.btnUpdateDel.Location = new System.Drawing.Point(60, 654);
             this.btnUpdateDel.Name = "btnUpdateDel";
             this.btnUpdateDel.Size = new System.Drawing.Size(373, 85);
             this.btnUpdateDel.TabIndex = 5;
@@ -154,7 +154,7 @@
             this.btnKembali.FillColor = System.Drawing.Color.CornflowerBlue;
             this.btnKembali.Font = new System.Drawing.Font("Poppins ExtraBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(60, 779);
+            this.btnKembali.Location = new System.Drawing.Point(60, 811);
             this.btnKembali.Name = "btnKembali";
             this.btnKembali.Size = new System.Drawing.Size(373, 85);
             this.btnKembali.TabIndex = 6;
@@ -173,7 +173,7 @@
             this.guna2ImageButton3.ImageRotate = 0F;
             this.guna2ImageButton3.ImageSize = new System.Drawing.Size(45, 45);
             this.guna2ImageButton3.IndicateFocus = true;
-            this.guna2ImageButton3.Location = new System.Drawing.Point(59, 307);
+            this.guna2ImageButton3.Location = new System.Drawing.Point(59, 339);
             this.guna2ImageButton3.Name = "guna2ImageButton3";
             this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton3.Size = new System.Drawing.Size(96, 89);
@@ -191,7 +191,7 @@
             this.guna2ImageButton4.ImageRotate = 0F;
             this.guna2ImageButton4.ImageSize = new System.Drawing.Size(45, 45);
             this.guna2ImageButton4.IndicateFocus = true;
-            this.guna2ImageButton4.Location = new System.Drawing.Point(61, 459);
+            this.guna2ImageButton4.Location = new System.Drawing.Point(61, 491);
             this.guna2ImageButton4.Name = "guna2ImageButton4";
             this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton4.Size = new System.Drawing.Size(102, 101);
@@ -209,7 +209,7 @@
             this.guna2ImageButton5.ImageRotate = 0F;
             this.guna2ImageButton5.ImageSize = new System.Drawing.Size(45, 45);
             this.guna2ImageButton5.IndicateFocus = true;
-            this.guna2ImageButton5.Location = new System.Drawing.Point(58, 610);
+            this.guna2ImageButton5.Location = new System.Drawing.Point(58, 642);
             this.guna2ImageButton5.Name = "guna2ImageButton5";
             this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton5.Size = new System.Drawing.Size(100, 109);
@@ -227,7 +227,7 @@
             this.guna2ImageButton6.ImageRotate = 0F;
             this.guna2ImageButton6.ImageSize = new System.Drawing.Size(43, 43);
             this.guna2ImageButton6.IndicateFocus = true;
-            this.guna2ImageButton6.Location = new System.Drawing.Point(62, 763);
+            this.guna2ImageButton6.Location = new System.Drawing.Point(62, 795);
             this.guna2ImageButton6.Name = "guna2ImageButton6";
             this.guna2ImageButton6.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton6.Size = new System.Drawing.Size(98, 113);
@@ -245,7 +245,7 @@
             this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton2.ImageRotate = 0F;
             this.guna2ImageButton2.IndicateFocus = true;
-            this.guna2ImageButton2.Location = new System.Drawing.Point(84, 158);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(84, 190);
             this.guna2ImageButton2.Name = "guna2ImageButton2";
             this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton2.Size = new System.Drawing.Size(64, 64);
@@ -270,6 +270,7 @@
             this.Controls.Add(this.guna2ImageButton2);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.btnDashboard);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardDosen";
             this.Text = "Dashboard Dosen";
