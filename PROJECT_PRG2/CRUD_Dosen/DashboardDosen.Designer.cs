@@ -67,6 +67,7 @@
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseTransparentBackground = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // guna2ImageButton1
             // 
@@ -102,6 +103,7 @@
             this.btnCreate.TabIndex = 3;
             this.btnCreate.Text = "Buat Data";
             this.btnCreate.UseTransparentBackground = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnView
             // 
@@ -120,6 +122,7 @@
             this.btnView.TabIndex = 4;
             this.btnView.Text = "         Tampilkan Data";
             this.btnView.UseTransparentBackground = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnUpdateDel
             // 
@@ -138,6 +141,7 @@
             this.btnUpdateDel.TabIndex = 5;
             this.btnUpdateDel.Text = "                 Ubah dan Hapus Data";
             this.btnUpdateDel.UseTransparentBackground = true;
+            this.btnUpdateDel.Click += new System.EventHandler(this.btnUpdateDel_Click);
             // 
             // btnKembali
             // 
@@ -156,6 +160,7 @@
             this.btnKembali.TabIndex = 6;
             this.btnKembali.Text = "Kembali";
             this.btnKembali.UseTransparentBackground = true;
+            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
             // guna2ImageButton3
             // 
@@ -269,7 +274,6 @@
             this.Name = "DashboardDosen";
             this.Text = "Dashboard Dosen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.DashboardDosen_Load);
             this.ResumeLayout(false);
 
         }

@@ -78,7 +78,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01;initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
             {
                 connection.Open();
@@ -94,6 +94,26 @@ namespace PROJECT_PRG2.CRUD_Dosen
                     return newID;
                 }
             }
+        }
+
+        private void InputDosen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DateTimeTanggal_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbLaki_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbPerempuan_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
