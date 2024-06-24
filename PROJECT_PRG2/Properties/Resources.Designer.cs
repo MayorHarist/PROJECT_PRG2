@@ -83,6 +83,26 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_Jenis_Prestasi {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN Jenis Prestasi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_JenisPrestasi {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN JenisPrestasi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap formProdi {
             get {
                 object obj = ResourceManager.GetObject("formProdi", resourceCulture);

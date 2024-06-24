@@ -18,7 +18,35 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             InitializeComponent();
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        
+
+        private void clear()
+        {
+            txtIdJenisPrestasi.Text = "";
+            txtNama.Text = "";
+            txtPeran.Text = "";
+            txtPenyelenggara.Text = "";
+            txtPoint.Text = "";
+            txtStatus.Text = "";
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        private void txtPoint_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Menghentikan input karakter yang bukan angka
+                MessageBox.Show("Point diisikan hanya oleh angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        
+
+        private void btnSimpan_Click(object sender, EventArgs e)
         {
             string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01;initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
@@ -80,30 +108,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             {
                 MessageBox.Show("Gagal simpan: " + ex.Message);
             }
-        }
 
-        private void clear()
-        {
-            txtIdJenisPrestasi.Text = "";
-            txtNama.Text = "";
-            txtPeran.Text = "";
-            txtPenyelenggara.Text = "";
-            txtPoint.Text = "";
-            txtStatus.Text = "";
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            clear();
-        }
-
-        private void txtPoint_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true; // Menghentikan input karakter yang bukan angka
-                MessageBox.Show("Point diisikan hanya oleh angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
     }
 }

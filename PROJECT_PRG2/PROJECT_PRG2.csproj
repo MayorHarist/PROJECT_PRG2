@@ -505,5 +505,11 @@
   <ItemGroup>
     <None Include="Resources\Button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN Jenis Prestasi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN JenisPrestasi.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
