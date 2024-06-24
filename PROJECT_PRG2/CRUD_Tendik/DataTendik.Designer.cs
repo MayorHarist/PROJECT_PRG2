@@ -63,6 +63,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnBatalTendik = new Guna.UI2.WinForms.Guna2Button();
             this.btnTampilTendik = new Guna.UI2.WinForms.Guna2Button();
             this.dgvTendik = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.TenagaKependidikanTableAdapter();
             this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggalLahirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,12 +76,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tendik = new PROJECT_PRG2.Tendik();
-            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.TendikTableAdapters.TenagaKependidikanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTendik)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tendik)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTambahTendik
@@ -248,7 +248,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtStatusTendik.ForeColor = System.Drawing.Color.Black;
             this.txtStatusTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtStatusTendik.Location = new System.Drawing.Point(716, 273);
-            this.txtStatusTendik.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtStatusTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtStatusTendik.Name = "txtStatusTendik";
             this.txtStatusTendik.PasswordChar = '\0';
             this.txtStatusTendik.PlaceholderText = "";
@@ -273,7 +273,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.TelpTendik.ForeColor = System.Drawing.Color.Black;
             this.TelpTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TelpTendik.Location = new System.Drawing.Point(716, 137);
-            this.TelpTendik.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TelpTendik.Margin = new System.Windows.Forms.Padding(5);
             this.TelpTendik.Name = "TelpTendik";
             this.TelpTendik.PasswordChar = '\0';
             this.TelpTendik.PlaceholderText = "";
@@ -299,7 +299,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtEmailTendik.ForeColor = System.Drawing.Color.Black;
             this.txtEmailTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmailTendik.Location = new System.Drawing.Point(716, 90);
-            this.txtEmailTendik.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEmailTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtEmailTendik.Name = "txtEmailTendik";
             this.txtEmailTendik.PasswordChar = '\0';
             this.txtEmailTendik.PlaceholderText = "";
@@ -324,7 +324,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtAlmatTendik.ForeColor = System.Drawing.Color.Black;
             this.txtAlmatTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAlmatTendik.Location = new System.Drawing.Point(336, 263);
-            this.txtAlmatTendik.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtAlmatTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtAlmatTendik.Multiline = true;
             this.txtAlmatTendik.Name = "txtAlmatTendik";
             this.txtAlmatTendik.PasswordChar = '\0';
@@ -414,7 +414,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtPassTendik.ForeColor = System.Drawing.Color.Black;
             this.txtPassTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassTendik.Location = new System.Drawing.Point(716, 228);
-            this.txtPassTendik.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPassTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassTendik.Name = "txtPassTendik";
             this.txtPassTendik.PasswordChar = '\0';
             this.txtPassTendik.PlaceholderText = "";
@@ -439,7 +439,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.userNmTendik.ForeColor = System.Drawing.Color.Black;
             this.userNmTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.userNmTendik.Location = new System.Drawing.Point(719, 181);
-            this.userNmTendik.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.userNmTendik.Margin = new System.Windows.Forms.Padding(5);
             this.userNmTendik.Name = "userNmTendik";
             this.userNmTendik.PasswordChar = '\0';
             this.userNmTendik.PlaceholderText = "";
@@ -464,7 +464,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtNamaTendik.ForeColor = System.Drawing.Color.Black;
             this.txtNamaTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNamaTendik.Location = new System.Drawing.Point(336, 134);
-            this.txtNamaTendik.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNamaTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtNamaTendik.Name = "txtNamaTendik";
             this.txtNamaTendik.PasswordChar = '\0';
             this.txtNamaTendik.PlaceholderText = "";
@@ -490,7 +490,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtIDTendik.ForeColor = System.Drawing.Color.Black;
             this.txtIDTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDTendik.Location = new System.Drawing.Point(336, 87);
-            this.txtIDTendik.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtIDTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtIDTendik.Name = "txtIDTendik";
             this.txtIDTendik.PasswordChar = '\0';
             this.txtIDTendik.PlaceholderText = "";
@@ -572,13 +572,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTendik.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTendik.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTendik.Location = new System.Drawing.Point(589, 429);
-            this.dgvTendik.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTendik.Location = new System.Drawing.Point(63, 418);
+            this.dgvTendik.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTendik.Name = "dgvTendik";
             this.dgvTendik.ReadOnly = true;
             this.dgvTendik.RowHeadersVisible = false;
             this.dgvTendik.RowHeadersWidth = 62;
-            this.dgvTendik.Size = new System.Drawing.Size(759, 378);
+            this.dgvTendik.Size = new System.Drawing.Size(1158, 378);
             this.dgvTendik.TabIndex = 86;
             this.dgvTendik.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvTendik.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -603,11 +603,25 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.dgvTendik.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvTendik.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTendik_CellContentClick);
             // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tenagaKependidikanBindingSource
+            // 
+            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // tenagaKependidikanTableAdapter
+            // 
+            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
+            // 
             // idTKNDataGridViewTextBoxColumn
             // 
             this.idTKNDataGridViewTextBoxColumn.DataPropertyName = "Id_TKN";
             this.idTKNDataGridViewTextBoxColumn.HeaderText = "Id_TKN";
-            this.idTKNDataGridViewTextBoxColumn.MinimumWidth = 9;
+            this.idTKNDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idTKNDataGridViewTextBoxColumn.Name = "idTKNDataGridViewTextBoxColumn";
             this.idTKNDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -615,7 +629,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
             this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
-            this.namaDataGridViewTextBoxColumn.MinimumWidth = 9;
+            this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
             this.namaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -623,7 +637,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.tanggalLahirDataGridViewTextBoxColumn.DataPropertyName = "Tanggal_Lahir";
             this.tanggalLahirDataGridViewTextBoxColumn.HeaderText = "Tanggal_Lahir";
-            this.tanggalLahirDataGridViewTextBoxColumn.MinimumWidth = 9;
+            this.tanggalLahirDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tanggalLahirDataGridViewTextBoxColumn.Name = "tanggalLahirDataGridViewTextBoxColumn";
             this.tanggalLahirDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -631,7 +645,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.jenisKelaminDataGridViewTextBoxColumn.DataPropertyName = "Jenis_Kelamin";
             this.jenisKelaminDataGridViewTextBoxColumn.HeaderText = "Jenis_Kelamin";
-            this.jenisKelaminDataGridViewTextBoxColumn.MinimumWidth = 9;
+            this.jenisKelaminDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.jenisKelaminDataGridViewTextBoxColumn.Name = "jenisKelaminDataGridViewTextBoxColumn";
             this.jenisKelaminDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -639,7 +653,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
             this.alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
-            this.alamatDataGridViewTextBoxColumn.MinimumWidth = 9;
+            this.alamatDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
             this.alamatDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -647,7 +661,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 9;
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -655,7 +669,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.teleponDataGridViewTextBoxColumn.DataPropertyName = "Telepon";
             this.teleponDataGridViewTextBoxColumn.HeaderText = "Telepon";
-            this.teleponDataGridViewTextBoxColumn.MinimumWidth = 9;
+            this.teleponDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.teleponDataGridViewTextBoxColumn.Name = "teleponDataGridViewTextBoxColumn";
             this.teleponDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -663,7 +677,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
             this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 9;
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
             this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -671,7 +685,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
             this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 9;
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -679,23 +693,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 9;
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tenagaKependidikanBindingSource
-            // 
-            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource.DataSource = this.tendik;
-            // 
-            // tendik
-            // 
-            this.tendik.DataSetName = "Tendik";
-            this.tendik.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tenagaKependidikanTableAdapter
-            // 
-            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
             // 
             // DataTendik
             // 
@@ -730,13 +730,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.Controls.Add(this.userNmTendik);
             this.Controls.Add(this.txtNamaTendik);
             this.Controls.Add(this.txtIDTendik);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DataTendik";
             this.Text = "DataTendik";
             this.Load += new System.EventHandler(this.DataTendik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTendik)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tendik)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,9 +784,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
         private Guna.UI2.WinForms.Guna2Button btnBatalTendik;
         private Guna.UI2.WinForms.Guna2Button btnTampilTendik;
         private Guna.UI2.WinForms.Guna2DataGridView dgvTendik;
-        private Tendik tendik;
+        private FINDSMARTDataSet6 fINDSMARTDataSet6;
         private BindingSource tenagaKependidikanBindingSource;
-        private TendikTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter;
+        private FINDSMARTDataSet6TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter;
         private DataGridViewTextBoxColumn idTKNDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tanggalLahirDataGridViewTextBoxColumn;

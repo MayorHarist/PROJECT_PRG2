@@ -771,7 +771,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1898, 1106);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.guna2ImageButton6);
             this.Controls.Add(this.guna2ImageButton5);
             this.Controls.Add(this.guna2ImageButton4);
