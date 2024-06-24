@@ -78,7 +78,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01;initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
             {
                 connection.Open();
