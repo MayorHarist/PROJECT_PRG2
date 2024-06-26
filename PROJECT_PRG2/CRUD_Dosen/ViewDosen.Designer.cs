@@ -52,6 +52,7 @@
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTTableAdapters.DosenTableAdapter();
             this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
+            this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTBindingSource)).BeginInit();
@@ -248,8 +249,8 @@
             this.guna2VScrollBar1.Location = new System.Drawing.Point(1823, 557);
             this.guna2VScrollBar1.Minimum = 1;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 10;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(10, 454);
+            this.guna2VScrollBar1.ScrollbarSize = 26;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(26, 454);
             this.guna2VScrollBar1.TabIndex = 33;
             this.guna2VScrollBar1.Value = 1;
             this.guna2VScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2VScrollBar1_Scroll);
@@ -269,6 +270,23 @@
             this.guna2HScrollBar1.TabIndex = 34;
             this.guna2HScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2HScrollBar1_Scroll);
             // 
+            // btnKembali
+            // 
+            this.btnKembali.BackColor = System.Drawing.Color.Transparent;
+            this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKembali.FillColor = System.Drawing.Color.Transparent;
+            this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKembali.ForeColor = System.Drawing.Color.White;
+            this.btnKembali.Location = new System.Drawing.Point(73, 993);
+            this.btnKembali.Name = "btnKembali";
+            this.btnKembali.Size = new System.Drawing.Size(369, 66);
+            this.btnKembali.TabIndex = 35;
+            this.btnKembali.UseTransparentBackground = true;
+            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
+            // 
             // ViewDosen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -277,6 +295,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1946, 1106);
+            this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.guna2HScrollBar1);
             this.Controls.Add(this.btnTampil);
@@ -317,5 +336,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn teleponDataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;
+        private Guna.UI2.WinForms.Guna2Button btnKembali;
     }
 }

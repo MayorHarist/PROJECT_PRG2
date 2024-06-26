@@ -781,7 +781,6 @@
             this.btnDashboard.TabIndex = 33;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseTransparentBackground = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // InputDosen
             // 
@@ -829,6 +828,7 @@
             this.Controls.Add(this.txtNIDN);
             this.Controls.Add(this.txtPegawai);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "InputDosen";
             this.Text = "Input Dosen";
