@@ -83,6 +83,26 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dasboard {
+            get {
+                object obj = ResourceManager.GetObject("Dasboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dasboard_tendik {
+            get {
+                object obj = ResourceManager.GetObject("dasboard tendik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DESIGN_Jenis_Prestasi {
             get {
                 object obj = ResourceManager.GetObject("DESIGN Jenis Prestasi", resourceCulture);
@@ -96,6 +116,16 @@ namespace PROJECT_PRG2.Properties {
         internal static System.Drawing.Bitmap DESIGN_JenisPrestasi {
             get {
                 object obj = ResourceManager.GetObject("DESIGN JenisPrestasi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_log_sebagai {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN log sebagai", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +166,16 @@ namespace PROJECT_PRG2.Properties {
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mahasiswa {
+            get {
+                object obj = ResourceManager.GetObject("Mahasiswa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -25,7 +25,9 @@ namespace PROJECT_PRG2
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Close();
+            TampilanAwal tampilanAwal = new TampilanAwal();
+            tampilanAwal.Show();
+            this.Hide();
         }
 
         private void btnLoginTendik_Click(object sender, EventArgs e)
