@@ -141,11 +141,14 @@
   <metadata name="timerLaporan.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>542, 53</value>
   </metadata>
+  <metadata name="dosenBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>714, 53</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB4AAAAQ4CAYAAADo08FDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAkGVJREFUeF7s3QmYXfdd33+ahgBtGgIUKLRAgLLzh0BLKS1t0pYWSojjLCYkDbEN
+        vAAADrwBlbxySQAAkGVJREFUeF7s3QmYXfdd33+ahgBtGgIUKLRAgLLzh0BLKS1t0pYWSojjLCYkDbEN
         2Uw2JyW4hISEBJJAsBMCTuIsdhbHZLMly4tsS15kyZIX2bIkW1602rJkWeto30Zz/vreOddz597fnU1z
         NXN/v9fred4Pydxz78zcGUXPw0fnnG+pAAAAAAAAAMiCARgAAAAAAAAgEwZgAAAAAAAAgEwYgAEAAAAA
         AAAyYQAGAAAAAAAAyIQBGAAAAAAAACATBmAAAAAAAACATBiAAQAAAAAAADJhAAYAAAAAAADIhAEYAAAA

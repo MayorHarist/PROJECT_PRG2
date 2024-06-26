@@ -17,8 +17,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
             InitializeComponent();
             panelData.Height = 0;
-            panelTransaksi.Height = 0;
-            panelLaporan.Height = 0;
+
             timerData.Interval = 10;
             timerData.Tick += timerData_Tick;
             timerTRS.Interval = 10;
@@ -54,16 +53,23 @@ namespace PROJECT_PRG2.CRUD_Dosen
             // Your code to display data in DataGridView
         }
 
-        private void VScroll_Scroll(object sender, ScrollEventArgs e)
+
+        private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             // Link the Guna2ScrollBar to the DataGridView
-            this.dgvDosen.FirstDisplayedScrollingRowIndex = e.NewValue;
+            if (e.NewValue >= 0 && e.NewValue < dgvDosen.RowCount)
+            {
+                dgvDosen.FirstDisplayedScrollingRowIndex = e.NewValue;
+            }
         }
 
-        private void HScroll_Scroll(object sender, ScrollEventArgs e)
+        private void guna2HScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             // Link the Guna2ScrollBar to the DataGridView
-            this.dgvDosen.HorizontalScrollingOffset = e.NewValue;
+            if (e.NewValue >= 0 && e.NewValue <= dgvDosen.HorizontalScrollingOffset)
+            {
+                dgvDosen.HorizontalScrollingOffset = e.NewValue;
+            }
         }
 
         private void btnKembali_Click(object sender, EventArgs e)
@@ -109,30 +115,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void timerTRS_Tick(object sender, EventArgs e)
         {
-            if (panelTransaksiMuncul)
-            {
-                if (panelTransaksi.Height < 103)
-                {
-                    panelTransaksi.Height += step;
-                    if (panelTransaksi.Height >= 103)
-                    {
-                        panelTransaksi.Height = 103;
-                        timerTRS.Stop();
-                    }
-                }
-            }
-            else
-            {
-                if (panelTransaksi.Height > 0)
-                {
-                    panelTransaksi.Height -= step;
-                    if (panelTransaksi.Height <= 0)
-                    {
-                        panelTransaksi.Height = 0;
-                        timerTRS.Stop();
-                    }
-                }
-            }
+          
         }
 
         private void btnTransaksi_Click(object sender, EventArgs e)
@@ -149,30 +132,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void timerLaporan_Tick(object sender, EventArgs e)
         {
-            if (panelLaporanMuncul)
-            {
-                if (panelLaporan.Height < 103)
-                {
-                    panelLaporan.Height += step;
-                    if (panelLaporan.Height >= 103)
-                    {
-                        panelLaporan.Height = 103;
-                        timerLaporan.Stop();
-                    }
-                }
-            }
-            else
-            {
-                if (panelLaporan.Height > 0)
-                {
-                    panelLaporan.Height -= step;
-                    if (panelLaporan.Height <= 0)
-                    {
-                        panelLaporan.Height = 0;
-                        timerLaporan.Stop();
-                    }
-                }
-            }
+           
         }
 
         private void btnProdi_Click(object sender, EventArgs e)
