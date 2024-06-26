@@ -196,6 +196,12 @@
     <Compile Include="CRUD_Tendik\UpTendik.Designer.cs">
       <DependentUpon>UpTendik.cs</DependentUpon>
     </Compile>
+    <Compile Include="DasboardTendik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DasboardTendik.Designer.cs">
+      <DependentUpon>DasboardTendik.cs</DependentUpon>
+    </Compile>
     <Compile Include="FINDSMART.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Tendik\UpTendik.resx">
       <DependentUpon>UpTendik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DasboardTendik.resx">
+      <DependentUpon>DasboardTendik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginTenagaPendidik.resx">
       <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
@@ -526,6 +535,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DESIGN JenisPrestasi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN log sebagai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dasboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mahasiswa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dasboard tendik.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
