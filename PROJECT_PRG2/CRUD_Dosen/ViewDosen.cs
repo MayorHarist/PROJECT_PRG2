@@ -141,5 +141,12 @@ namespace PROJECT_PRG2.CRUD_Dosen
             upDelet_Prodi.Show();
             this.Hide();
         }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            InputDosen inputDosen = new InputDosen();
+            inputDosen.Show();
+            this.Hide();
+        }
     }
 }

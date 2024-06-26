@@ -86,7 +86,6 @@
             this.timerTRS = new System.Windows.Forms.Timer(this.components);
             this.timerLaporan = new System.Windows.Forms.Timer(this.components);
             this.dgvDsn = new System.Windows.Forms.DataGridView();
-            this.dosenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.noPegawaiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nIDNDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,6 +96,38 @@
             this.alamatDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teleponDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtTelepon = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAlamat = new Guna.UI2.WinForms.Guna2TextBox();
+            this.rbPerempuan = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbLaki = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.DateTimeTanggal = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtPendidikan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBidang = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNIDN = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPegawai = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gambarCari = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnTambah = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnHapus = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART)).BeginInit();
@@ -627,11 +658,6 @@
             this.dgvDsn.Size = new System.Drawing.Size(1244, 397);
             this.dgvDsn.TabIndex = 45;
             // 
-            // dosenBindingSource2
-            // 
-            this.dosenBindingSource2.DataMember = "Dosen";
-            this.dosenBindingSource2.DataSource = this.fINDSMARTBindingSource;
-            // 
             // noPegawaiDataGridViewTextBoxColumn1
             // 
             this.noPegawaiDataGridViewTextBoxColumn1.DataPropertyName = "No_Pegawai";
@@ -719,6 +745,556 @@
             this.teleponDataGridViewTextBoxColumn1.Name = "teleponDataGridViewTextBoxColumn1";
             this.teleponDataGridViewTextBoxColumn1.Width = 150;
             // 
+            // dosenBindingSource2
+            // 
+            this.dosenBindingSource2.DataMember = "Dosen";
+            this.dosenBindingSource2.DataSource = this.fINDSMARTBindingSource;
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(653, 232);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 32);
+            this.label11.TabIndex = 87;
+            this.label11.Text = "NIDN";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(654, 322);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 32);
+            this.label10.TabIndex = 86;
+            this.label10.Text = "Nama";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(654, 416);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(194, 32);
+            this.label9.TabIndex = 85;
+            this.label9.Text = "Bidang Kompetensi";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(652, 517);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(199, 32);
+            this.label8.TabIndex = 84;
+            this.label8.Text = "Pendidikan Terakhir";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1078, 149);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(140, 32);
+            this.label7.TabIndex = 83;
+            this.label7.Text = "Tanggal Lahir";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1078, 264);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(143, 32);
+            this.label6.TabIndex = 82;
+            this.label6.Text = "Jenis Kelamin";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1078, 347);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 32);
+            this.label5.TabIndex = 81;
+            this.label5.Text = "Alamat";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1543, 155);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 32);
+            this.label4.TabIndex = 80;
+            this.label4.Text = "Email";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1543, 260);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 32);
+            this.label3.TabIndex = 79;
+            this.label3.Text = "Telepon";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(651, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 32);
+            this.label1.TabIndex = 77;
+            this.label1.Text = "No Pegawai";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(710, 231);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(3, 2);
+            this.guna2HtmlLabel2.TabIndex = 76;
+            this.guna2HtmlLabel2.Text = null;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(710, 183);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
+            this.guna2HtmlLabel1.TabIndex = 75;
+            this.guna2HtmlLabel1.Text = null;
+            // 
+            // txtTelepon
+            // 
+            this.txtTelepon.Animated = true;
+            this.txtTelepon.BackColor = System.Drawing.Color.Transparent;
+            this.txtTelepon.BorderColor = System.Drawing.Color.Black;
+            this.txtTelepon.BorderRadius = 10;
+            this.txtTelepon.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTelepon.DefaultText = "";
+            this.txtTelepon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTelepon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTelepon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelepon.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelepon.Enabled = false;
+            this.txtTelepon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelepon.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtTelepon.ForeColor = System.Drawing.Color.Black;
+            this.txtTelepon.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelepon.Location = new System.Drawing.Point(1526, 293);
+            this.txtTelepon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTelepon.Name = "txtTelepon";
+            this.txtTelepon.PasswordChar = '\0';
+            this.txtTelepon.PlaceholderText = "";
+            this.txtTelepon.SelectedText = "";
+            this.txtTelepon.Size = new System.Drawing.Size(286, 48);
+            this.txtTelepon.TabIndex = 71;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Animated = true;
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmail.BorderColor = System.Drawing.Color.Black;
+            this.txtEmail.BorderRadius = 10;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.Enabled = false;
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Location = new System.Drawing.Point(1526, 187);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(286, 48);
+            this.txtEmail.TabIndex = 70;
+            // 
+            // txtAlamat
+            // 
+            this.txtAlamat.Animated = true;
+            this.txtAlamat.BackColor = System.Drawing.Color.Transparent;
+            this.txtAlamat.BorderColor = System.Drawing.Color.Black;
+            this.txtAlamat.BorderRadius = 10;
+            this.txtAlamat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAlamat.DefaultText = "";
+            this.txtAlamat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAlamat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAlamat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAlamat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAlamat.Enabled = false;
+            this.txtAlamat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAlamat.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtAlamat.ForeColor = System.Drawing.Color.Black;
+            this.txtAlamat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAlamat.Location = new System.Drawing.Point(1075, 384);
+            this.txtAlamat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAlamat.Multiline = true;
+            this.txtAlamat.Name = "txtAlamat";
+            this.txtAlamat.PasswordChar = '\0';
+            this.txtAlamat.PlaceholderText = "";
+            this.txtAlamat.SelectedText = "";
+            this.txtAlamat.Size = new System.Drawing.Size(337, 213);
+            this.txtAlamat.TabIndex = 69;
+            // 
+            // rbPerempuan
+            // 
+            this.rbPerempuan.AutoSize = true;
+            this.rbPerempuan.BackColor = System.Drawing.Color.Transparent;
+            this.rbPerempuan.CheckedState.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.rbPerempuan.CheckedState.BorderThickness = 0;
+            this.rbPerempuan.CheckedState.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.rbPerempuan.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
+            this.rbPerempuan.CheckedState.InnerOffset = -4;
+            this.rbPerempuan.Enabled = false;
+            this.rbPerempuan.Font = new System.Drawing.Font("Poppins", 9F);
+            this.rbPerempuan.ForeColor = System.Drawing.Color.Black;
+            this.rbPerempuan.Location = new System.Drawing.Point(1252, 298);
+            this.rbPerempuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbPerempuan.Name = "rbPerempuan";
+            this.rbPerempuan.Size = new System.Drawing.Size(145, 36);
+            this.rbPerempuan.TabIndex = 68;
+            this.rbPerempuan.Text = "Perempuan";
+            this.rbPerempuan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbPerempuan.UncheckedState.BorderThickness = 2;
+            this.rbPerempuan.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbPerempuan.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbPerempuan.UseVisualStyleBackColor = false;
+            // 
+            // rbLaki
+            // 
+            this.rbLaki.AutoSize = true;
+            this.rbLaki.BackColor = System.Drawing.Color.Transparent;
+            this.rbLaki.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rbLaki.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbLaki.CheckedState.BorderThickness = 0;
+            this.rbLaki.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbLaki.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
+            this.rbLaki.CheckedState.InnerOffset = -4;
+            this.rbLaki.Enabled = false;
+            this.rbLaki.Font = new System.Drawing.Font("Poppins", 9F);
+            this.rbLaki.ForeColor = System.Drawing.Color.Black;
+            this.rbLaki.Location = new System.Drawing.Point(1084, 298);
+            this.rbLaki.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbLaki.Name = "rbLaki";
+            this.rbLaki.Size = new System.Drawing.Size(121, 36);
+            this.rbLaki.TabIndex = 67;
+            this.rbLaki.Text = "Laki - laki";
+            this.rbLaki.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbLaki.UncheckedState.BorderThickness = 2;
+            this.rbLaki.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbLaki.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbLaki.UseVisualStyleBackColor = false;
+            // 
+            // DateTimeTanggal
+            // 
+            this.DateTimeTanggal.Animated = true;
+            this.DateTimeTanggal.AutoRoundedCorners = true;
+            this.DateTimeTanggal.BackColor = System.Drawing.Color.Transparent;
+            this.DateTimeTanggal.BorderColor = System.Drawing.Color.White;
+            this.DateTimeTanggal.BorderRadius = 25;
+            this.DateTimeTanggal.Checked = true;
+            this.DateTimeTanggal.Enabled = false;
+            this.DateTimeTanggal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(173)))));
+            this.DateTimeTanggal.Font = new System.Drawing.Font("Poppins", 9F);
+            this.DateTimeTanggal.ForeColor = System.Drawing.Color.White;
+            this.DateTimeTanggal.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DateTimeTanggal.Location = new System.Drawing.Point(1070, 185);
+            this.DateTimeTanggal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DateTimeTanggal.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DateTimeTanggal.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DateTimeTanggal.Name = "DateTimeTanggal";
+            this.DateTimeTanggal.Size = new System.Drawing.Size(327, 52);
+            this.DateTimeTanggal.TabIndex = 66;
+            this.DateTimeTanggal.Value = new System.DateTime(2024, 6, 15, 22, 37, 28, 314);
+            // 
+            // txtPendidikan
+            // 
+            this.txtPendidikan.Animated = true;
+            this.txtPendidikan.BackColor = System.Drawing.Color.Transparent;
+            this.txtPendidikan.BorderColor = System.Drawing.Color.Black;
+            this.txtPendidikan.BorderRadius = 10;
+            this.txtPendidikan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPendidikan.DefaultText = "";
+            this.txtPendidikan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPendidikan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPendidikan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPendidikan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPendidikan.Enabled = false;
+            this.txtPendidikan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPendidikan.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtPendidikan.ForeColor = System.Drawing.Color.Black;
+            this.txtPendidikan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPendidikan.Location = new System.Drawing.Point(632, 549);
+            this.txtPendidikan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPendidikan.Name = "txtPendidikan";
+            this.txtPendidikan.PasswordChar = '\0';
+            this.txtPendidikan.PlaceholderText = "";
+            this.txtPendidikan.SelectedText = "";
+            this.txtPendidikan.Size = new System.Drawing.Size(286, 48);
+            this.txtPendidikan.TabIndex = 65;
+            // 
+            // txtBidang
+            // 
+            this.txtBidang.Animated = true;
+            this.txtBidang.BackColor = System.Drawing.Color.Transparent;
+            this.txtBidang.BorderColor = System.Drawing.Color.Black;
+            this.txtBidang.BorderRadius = 10;
+            this.txtBidang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBidang.DefaultText = "";
+            this.txtBidang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBidang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBidang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBidang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBidang.Enabled = false;
+            this.txtBidang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBidang.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtBidang.ForeColor = System.Drawing.Color.Black;
+            this.txtBidang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBidang.Location = new System.Drawing.Point(632, 448);
+            this.txtBidang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBidang.Name = "txtBidang";
+            this.txtBidang.PasswordChar = '\0';
+            this.txtBidang.PlaceholderText = "";
+            this.txtBidang.SelectedText = "";
+            this.txtBidang.Size = new System.Drawing.Size(286, 48);
+            this.txtBidang.TabIndex = 64;
+            // 
+            // txtNama
+            // 
+            this.txtNama.Animated = true;
+            this.txtNama.BackColor = System.Drawing.Color.Transparent;
+            this.txtNama.BorderColor = System.Drawing.Color.Black;
+            this.txtNama.BorderRadius = 10;
+            this.txtNama.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNama.DefaultText = "";
+            this.txtNama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNama.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNama.Enabled = false;
+            this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNama.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtNama.ForeColor = System.Drawing.Color.Black;
+            this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNama.Location = new System.Drawing.Point(632, 354);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.PasswordChar = '\0';
+            this.txtNama.PlaceholderText = "";
+            this.txtNama.SelectedText = "";
+            this.txtNama.Size = new System.Drawing.Size(286, 48);
+            this.txtNama.TabIndex = 63;
+            // 
+            // txtNIDN
+            // 
+            this.txtNIDN.Animated = true;
+            this.txtNIDN.BackColor = System.Drawing.Color.Transparent;
+            this.txtNIDN.BorderColor = System.Drawing.Color.Transparent;
+            this.txtNIDN.BorderRadius = 10;
+            this.txtNIDN.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNIDN.DefaultText = "";
+            this.txtNIDN.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNIDN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNIDN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNIDN.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNIDN.Enabled = false;
+            this.txtNIDN.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNIDN.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtNIDN.ForeColor = System.Drawing.Color.Black;
+            this.txtNIDN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNIDN.Location = new System.Drawing.Point(632, 264);
+            this.txtNIDN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNIDN.Name = "txtNIDN";
+            this.txtNIDN.PasswordChar = '\0';
+            this.txtNIDN.PlaceholderText = "";
+            this.txtNIDN.SelectedText = "";
+            this.txtNIDN.Size = new System.Drawing.Size(286, 48);
+            this.txtNIDN.TabIndex = 62;
+            // 
+            // txtPegawai
+            // 
+            this.txtPegawai.Animated = true;
+            this.txtPegawai.BackColor = System.Drawing.Color.Transparent;
+            this.txtPegawai.BorderColor = System.Drawing.Color.Black;
+            this.txtPegawai.BorderRadius = 10;
+            this.txtPegawai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPegawai.DefaultText = "";
+            this.txtPegawai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPegawai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPegawai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPegawai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPegawai.Enabled = false;
+            this.txtPegawai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPegawai.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtPegawai.ForeColor = System.Drawing.Color.Black;
+            this.txtPegawai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPegawai.Location = new System.Drawing.Point(632, 171);
+            this.txtPegawai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPegawai.Name = "txtPegawai";
+            this.txtPegawai.PasswordChar = '\0';
+            this.txtPegawai.PlaceholderText = "";
+            this.txtPegawai.SelectedText = "";
+            this.txtPegawai.Size = new System.Drawing.Size(286, 48);
+            this.txtPegawai.TabIndex = 61;
+            // 
+            // txtCari
+            // 
+            this.txtCari.Animated = true;
+            this.txtCari.BackColor = System.Drawing.Color.Transparent;
+            this.txtCari.BorderColor = System.Drawing.Color.Black;
+            this.txtCari.BorderRadius = 10;
+            this.txtCari.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCari.DefaultText = "";
+            this.txtCari.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCari.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCari.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCari.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCari.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCari.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtCari.ForeColor = System.Drawing.Color.Black;
+            this.txtCari.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCari.Location = new System.Drawing.Point(952, 31);
+            this.txtCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCari.Name = "txtCari";
+            this.txtCari.PasswordChar = '\0';
+            this.txtCari.PlaceholderText = "";
+            this.txtCari.SelectedText = "";
+            this.txtCari.Size = new System.Drawing.Size(286, 48);
+            this.txtCari.TabIndex = 89;
+            // 
+            // gambarCari
+            // 
+            this.gambarCari.BackColor = System.Drawing.Color.Transparent;
+            this.gambarCari.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.gambarCari.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.gambarCari.Image = ((System.Drawing.Image)(resources.GetObject("gambarCari.Image")));
+            this.gambarCari.ImageOffset = new System.Drawing.Point(0, 0);
+            this.gambarCari.ImageRotate = 0F;
+            this.gambarCari.ImageSize = new System.Drawing.Size(30, 30);
+            this.gambarCari.Location = new System.Drawing.Point(844, 3);
+            this.gambarCari.Name = "gambarCari";
+            this.gambarCari.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.gambarCari.Size = new System.Drawing.Size(140, 105);
+            this.gambarCari.TabIndex = 90;
+            this.gambarCari.UseTransparentBackground = true;
+            // 
+            // btnTambah
+            // 
+            this.btnTambah.BackColor = System.Drawing.Color.Transparent;
+            this.btnTambah.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnTambah.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnTambah.Image = ((System.Drawing.Image)(resources.GetObject("btnTambah.Image")));
+            this.btnTambah.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnTambah.ImageRotate = 0F;
+            this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnTambah.Location = new System.Drawing.Point(1526, 514);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnTambah.Size = new System.Drawing.Size(140, 105);
+            this.btnTambah.TabIndex = 91;
+            this.btnTambah.UseTransparentBackground = true;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnUpdate.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnUpdate.ImageRotate = 0F;
+            this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnUpdate.Location = new System.Drawing.Point(1591, 515);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnUpdate.Size = new System.Drawing.Size(140, 105);
+            this.btnUpdate.TabIndex = 92;
+            this.btnUpdate.UseTransparentBackground = true;
+            // 
+            // btnHapus
+            // 
+            this.btnHapus.BackColor = System.Drawing.Color.Transparent;
+            this.btnHapus.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnHapus.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnHapus.Image = ((System.Drawing.Image)(resources.GetObject("btnHapus.Image")));
+            this.btnHapus.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnHapus.ImageRotate = 0F;
+            this.btnHapus.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnHapus.Location = new System.Drawing.Point(1657, 515);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnHapus.Size = new System.Drawing.Size(140, 105);
+            this.btnHapus.TabIndex = 93;
+            this.btnHapus.UseTransparentBackground = true;
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Animated = true;
+            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.BorderRadius = 10;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 9F);
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(1551, 538);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(215, 58);
+            this.guna2TextBox1.TabIndex = 94;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1562, 501);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 32);
+            this.label2.TabIndex = 95;
+            this.label2.Text = "Aksi";
+            // 
             // ViewDosen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -727,6 +1303,34 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1946, 1106);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnHapus);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnTambah);
+            this.Controls.Add(this.txtCari);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtNama);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.txtTelepon);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtAlamat);
+            this.Controls.Add(this.rbPerempuan);
+            this.Controls.Add(this.rbLaki);
+            this.Controls.Add(this.DateTimeTanggal);
+            this.Controls.Add(this.txtPendidikan);
+            this.Controls.Add(this.txtBidang);
+            this.Controls.Add(this.txtNIDN);
+            this.Controls.Add(this.txtPegawai);
             this.Controls.Add(this.dgvDsn);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.panelData);
@@ -735,6 +1339,8 @@
             this.Controls.Add(this.btnTampil);
             this.Controls.Add(this.btnData);
             this.Controls.Add(this.btnTransaksi);
+            this.Controls.Add(this.gambarCari);
+            this.Controls.Add(this.guna2TextBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -752,6 +1358,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -804,5 +1411,36 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn alamatDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn teleponDataGridViewTextBoxColumn1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TextBox txtTelepon;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2TextBox txtAlamat;
+        private Guna.UI2.WinForms.Guna2RadioButton rbPerempuan;
+        private Guna.UI2.WinForms.Guna2RadioButton rbLaki;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DateTimeTanggal;
+        private Guna.UI2.WinForms.Guna2TextBox txtPendidikan;
+        private Guna.UI2.WinForms.Guna2TextBox txtBidang;
+        private Guna.UI2.WinForms.Guna2TextBox txtNama;
+        private Guna.UI2.WinForms.Guna2TextBox txtNIDN;
+        private Guna.UI2.WinForms.Guna2TextBox txtPegawai;
+        private Guna.UI2.WinForms.Guna2TextBox txtCari;
+        private Guna.UI2.WinForms.Guna2ImageButton gambarCari;
+        private Guna.UI2.WinForms.Guna2ImageButton btnTambah;
+        private Guna.UI2.WinForms.Guna2ImageButton btnHapus;
+        private Guna.UI2.WinForms.Guna2ImageButton btnUpdate;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
