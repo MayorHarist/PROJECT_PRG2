@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnData = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelData = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -37,7 +38,8 @@
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1.SuspendLayout();
+            this.dataTimer = new System.Windows.Forms.Timer(this.components);
+            this.panelData.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnData
@@ -57,19 +59,19 @@
             this.btnData.TabIndex = 0;
             this.btnData.UseTransparentBackground = true;
             // 
-            // panel1
+            // panelData
             // 
-            this.panel1.Controls.Add(this.guna2Button7);
-            this.panel1.Controls.Add(this.guna2Button6);
-            this.panel1.Controls.Add(this.guna2Button5);
-            this.panel1.Controls.Add(this.guna2Button4);
-            this.panel1.Controls.Add(this.guna2Button3);
-            this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.guna2Button1);
-            this.panel1.Location = new System.Drawing.Point(-1, 226);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(501, 355);
-            this.panel1.TabIndex = 1;
+            this.panelData.Controls.Add(this.guna2Button7);
+            this.panelData.Controls.Add(this.guna2Button6);
+            this.panelData.Controls.Add(this.guna2Button5);
+            this.panelData.Controls.Add(this.guna2Button4);
+            this.panelData.Controls.Add(this.guna2Button3);
+            this.panelData.Controls.Add(this.guna2Button2);
+            this.panelData.Controls.Add(this.guna2Button1);
+            this.panelData.Location = new System.Drawing.Point(-1, 226);
+            this.panelData.Name = "panelData";
+            this.panelData.Size = new System.Drawing.Size(517, 355);
+            this.panelData.TabIndex = 1;
             // 
             // guna2Button1
             // 
@@ -81,7 +83,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(0, 0);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(501, 45);
+            this.guna2Button1.Size = new System.Drawing.Size(501, 55);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Text = "Program Studi";
             // 
@@ -93,11 +95,11 @@
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 90);
+            this.guna2Button2.Location = new System.Drawing.Point(0, 93);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(501, 45);
+            this.guna2Button2.Size = new System.Drawing.Size(501, 57);
             this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "Program Studi";
+            this.guna2Button2.Text = "Mata Kuliah";
             // 
             // guna2Button3
             // 
@@ -107,11 +109,11 @@
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button3.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(0, 45);
+            this.guna2Button3.Location = new System.Drawing.Point(0, 52);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(501, 45);
             this.guna2Button3.TabIndex = 2;
-            this.guna2Button3.Text = "Program Studi";
+            this.guna2Button3.Text = "Dosen";
             // 
             // guna2Button4
             // 
@@ -121,11 +123,11 @@
             this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button4.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(0, 135);
+            this.guna2Button4.Location = new System.Drawing.Point(0, 138);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(501, 45);
+            this.guna2Button4.Size = new System.Drawing.Size(501, 57);
             this.guna2Button4.TabIndex = 3;
-            this.guna2Button4.Text = "Program Studi";
+            this.guna2Button4.Text = "Mahasiswa";
             // 
             // guna2Button5
             // 
@@ -135,11 +137,11 @@
             this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button5.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Location = new System.Drawing.Point(0, 177);
+            this.guna2Button5.Location = new System.Drawing.Point(0, 190);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(501, 45);
+            this.guna2Button5.Size = new System.Drawing.Size(501, 57);
             this.guna2Button5.TabIndex = 4;
-            this.guna2Button5.Text = "Program Studi";
+            this.guna2Button5.Text = "Jenis Prestasi";
             // 
             // guna2Button6
             // 
@@ -149,11 +151,11 @@
             this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button6.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Location = new System.Drawing.Point(0, 222);
+            this.guna2Button6.Location = new System.Drawing.Point(0, 245);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(501, 45);
+            this.guna2Button6.Size = new System.Drawing.Size(501, 57);
             this.guna2Button6.TabIndex = 5;
-            this.guna2Button6.Text = "Program Studi";
+            this.guna2Button6.Text = "Posisi Prestasi";
             // 
             // guna2Button7
             // 
@@ -163,11 +165,16 @@
             this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button7.Font = new System.Drawing.Font("Poppins", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Location = new System.Drawing.Point(0, 267);
+            this.guna2Button7.Location = new System.Drawing.Point(0, 298);
             this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(501, 45);
+            this.guna2Button7.Size = new System.Drawing.Size(501, 57);
             this.guna2Button7.TabIndex = 6;
-            this.guna2Button7.Text = "Program Studi";
+            this.guna2Button7.Text = "Pengumuman";
+            // 
+            // dataTimer
+            // 
+            this.dataTimer.Interval = 10;
+            this.dataTimer.Tick += new System.EventHandler(this.dataTimer_Tick);
             // 
             // DasboardTendik
             // 
@@ -176,13 +183,13 @@
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.dasboard_tendik;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelData);
             this.Controls.Add(this.btnData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DasboardTendik";
             this.Text = "DasboardTendik";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
+            this.panelData.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -190,7 +197,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button btnData;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelData;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
@@ -198,5 +205,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private System.Windows.Forms.Timer dataTimer;
     }
 }
