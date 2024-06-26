@@ -141,5 +141,13 @@ namespace PROJECT_PRG2
             upDelet_Prodi.Show();
             this.Hide();
         }
+        private void btnMahasiswa_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void DasboardTendik_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
