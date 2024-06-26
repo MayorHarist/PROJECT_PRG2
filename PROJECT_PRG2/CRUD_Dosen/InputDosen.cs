@@ -97,12 +97,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
         }
 
 
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            DashboardDosen dashboardDosen = new DashboardDosen();
-            dashboardDosen.Show();
-            this.Hide();
-        }
+     
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
