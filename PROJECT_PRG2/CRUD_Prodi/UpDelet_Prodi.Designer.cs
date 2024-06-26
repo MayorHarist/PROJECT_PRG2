@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnTambah = new Guna.UI2.WinForms.Guna2Button();
             this.btnHapus = new Guna.UI2.WinForms.Guna2Button();
             this.btnUbah = new Guna.UI2.WinForms.Guna2Button();
             this.btnCari = new Guna.UI2.WinForms.Guna2Button();
@@ -83,25 +83,25 @@
             this.panelLaporan.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnBatal
+            // btnTambah
             // 
-            this.btnBatal.AutoRoundedCorners = true;
-            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
-            this.btnBatal.BorderRadius = 21;
-            this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBatal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBatal.FillColor = System.Drawing.Color.HotPink;
-            this.btnBatal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(1610, 401);
-            this.btnBatal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(149, 44);
-            this.btnBatal.TabIndex = 199;
-            this.btnBatal.Text = "Tambah";
-            this.btnBatal.Click += new System.EventHandler(this.btnTambah_Click);
+            this.btnTambah.AutoRoundedCorners = true;
+            this.btnTambah.BackColor = System.Drawing.Color.Transparent;
+            this.btnTambah.BorderRadius = 21;
+            this.btnTambah.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTambah.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTambah.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTambah.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTambah.FillColor = System.Drawing.Color.HotPink;
+            this.btnTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTambah.ForeColor = System.Drawing.Color.White;
+            this.btnTambah.Location = new System.Drawing.Point(1610, 401);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(149, 44);
+            this.btnTambah.TabIndex = 199;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // btnHapus
             // 
@@ -324,17 +324,17 @@
             // 
             // dtgProdi
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dtgProdi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgProdi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgProdi.AutoGenerateColumns = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgProdi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgProdi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgProdi.ColumnHeadersHeight = 18;
             this.dtgProdi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgProdi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -344,14 +344,14 @@
             this.akreditasiDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dtgProdi.DataSource = this.programStudiBindingSource;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgProdi.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgProdi.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgProdi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgProdi.Location = new System.Drawing.Point(619, 532);
             this.dtgProdi.Name = "dtgProdi";
@@ -736,7 +736,7 @@
             this.Controls.Add(this.panelLaporan);
             this.Controls.Add(this.btnTransaksi);
             this.Controls.Add(this.dtgProdi);
-            this.Controls.Add(this.btnBatal);
+            this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnUbah);
             this.Controls.Add(this.btnCari);
@@ -766,7 +766,7 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Button btnBatal;
+        private Guna.UI2.WinForms.Guna2Button btnTambah;
         private Guna.UI2.WinForms.Guna2Button btnHapus;
         private Guna.UI2.WinForms.Guna2Button btnUbah;
         private Guna.UI2.WinForms.Guna2Button btnCari;
