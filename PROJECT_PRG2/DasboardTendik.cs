@@ -141,12 +141,5 @@ namespace PROJECT_PRG2
             upDelet_Prodi.Show();
             this.Hide();
         }
-
-        private void btnMahasiswa_Click(object sender, EventArgs e)
-        {
-            UpDeletMahasiswa upDeletMahasiswa = new UpDeletMahasiswa();
-            upDeletMahasiswa.Show();
-            this.Hide();
-        }
     }
 }
