@@ -196,11 +196,8 @@
     <Compile Include="CRUD_Tendik\UpTendik.Designer.cs">
       <DependentUpon>UpTendik.cs</DependentUpon>
     </Compile>
-    <Compile Include="DasboardTendik.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DasboardTendik.Designer.cs">
-      <DependentUpon>DasboardTendik.cs</DependentUpon>
+    <Compile Include="FINDSMART.cs">
+      <DependentUpon>FINDSMART.xsd</DependentUpon>
     </Compile>
     <Compile Include="FINDSMART.Designer.cs">
       <AutoGen>True</AutoGen>
