@@ -29,5 +29,15 @@ namespace PROJECT_PRG2.CRUD_Dosen
             
 
         }
+
+        private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            ScrollableControl scrollableControl = (ScrollableControl)sender;        
+        }
+
+        private void guna2HScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            ScrollableControl scrollableControl = (ScrollableControl)(sender);
+        }
     }
 }
