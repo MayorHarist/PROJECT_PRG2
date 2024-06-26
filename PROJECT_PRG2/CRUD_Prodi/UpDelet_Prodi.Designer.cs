@@ -41,25 +41,23 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label16 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAkreditasi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtJenjangPendidikan = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdProdi = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtgProdi = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
+            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
             this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jenjangPendidikanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.akreditasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
-            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBatal
@@ -200,18 +198,6 @@
             this.guna2HtmlLabel3.TabIndex = 184;
             this.guna2HtmlLabel3.Text = null;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(123, 508);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(61, 26);
-            this.label16.TabIndex = 186;
-            this.label16.Text = "Status";
-            // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
@@ -223,31 +209,6 @@
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel4.TabIndex = 183;
             this.guna2HtmlLabel4.Text = null;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Animated = true;
-            this.txtStatus.BackColor = System.Drawing.Color.Transparent;
-            this.txtStatus.BorderColor = System.Drawing.Color.Black;
-            this.txtStatus.BorderRadius = 10;
-            this.txtStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStatus.DefaultText = "";
-            this.txtStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtStatus.ForeColor = System.Drawing.Color.Black;
-            this.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatus.Location = new System.Drawing.Point(309, 508);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.PasswordChar = '\0';
-            this.txtStatus.PlaceholderText = "";
-            this.txtStatus.SelectedText = "";
-            this.txtStatus.Size = new System.Drawing.Size(255, 38);
-            this.txtStatus.TabIndex = 182;
             // 
             // txtAkreditasi
             // 
@@ -409,10 +370,24 @@
             this.dtgProdi.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgProdi.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // fINDSMARTDataSet7
+            // 
+            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
+            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // programStudiBindingSource
+            // 
+            this.programStudiBindingSource.DataMember = "ProgramStudi";
+            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // programStudiTableAdapter
+            // 
+            this.programStudiTableAdapter.ClearBeforeFill = true;
+            // 
             // idProdiDataGridViewTextBoxColumn
             // 
             this.idProdiDataGridViewTextBoxColumn.DataPropertyName = "Id_Prodi";
-            this.idProdiDataGridViewTextBoxColumn.HeaderText = "Id Prodi";
+            this.idProdiDataGridViewTextBoxColumn.HeaderText = "Id_Prodi";
             this.idProdiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idProdiDataGridViewTextBoxColumn.Name = "idProdiDataGridViewTextBoxColumn";
             // 
@@ -426,7 +401,7 @@
             // jenjangPendidikanDataGridViewTextBoxColumn
             // 
             this.jenjangPendidikanDataGridViewTextBoxColumn.DataPropertyName = "Jenjang_Pendidikan";
-            this.jenjangPendidikanDataGridViewTextBoxColumn.HeaderText = "Jenjang Pendidikan";
+            this.jenjangPendidikanDataGridViewTextBoxColumn.HeaderText = "Jenjang_Pendidikan";
             this.jenjangPendidikanDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.jenjangPendidikanDataGridViewTextBoxColumn.Name = "jenjangPendidikanDataGridViewTextBoxColumn";
             // 
@@ -444,20 +419,6 @@
             this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
-            // programStudiBindingSource
-            // 
-            this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet6;
-            // 
-            // fINDSMARTDataSet6
-            // 
-            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
-            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // programStudiTableAdapter
-            // 
-            this.programStudiTableAdapter.ClearBeforeFill = true;
-            // 
             // UpDelet_Prodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -474,9 +435,7 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtAkreditasi);
             this.Controls.Add(this.txtJenjangPendidikan);
             this.Controls.Add(this.txtNama);
@@ -485,8 +444,8 @@
             this.Text = "UpDelet_Prodi";
             this.Load += new System.EventHandler(this.UpDelet_Prodi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,17 +461,15 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox txtStatus;
         private Guna.UI2.WinForms.Guna2TextBox txtAkreditasi;
         private Guna.UI2.WinForms.Guna2TextBox txtJenjangPendidikan;
         private Guna.UI2.WinForms.Guna2TextBox txtNama;
         private Guna.UI2.WinForms.Guna2TextBox txtIdProdi;
         private Guna.UI2.WinForms.Guna2DataGridView dtgProdi;
-        private FINDSMARTDataSet6 fINDSMARTDataSet6;
+        private FINDSMARTDataSet7 fINDSMARTDataSet7;
         private System.Windows.Forms.BindingSource programStudiBindingSource;
-        private FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
+        private FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProdiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jenjangPendidikanDataGridViewTextBoxColumn;

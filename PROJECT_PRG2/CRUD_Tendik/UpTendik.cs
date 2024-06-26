@@ -107,7 +107,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     update.CommandType = CommandType.StoredProcedure;
 
                     update.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
-                    update.Parameters.AddWithValue("@Tendik", txtNamaTendik.Text);
+                    update.Parameters.AddWithValue("@Nama", txtNamaTendik.Text);
                     update.Parameters.AddWithValue("@Tanggal_Lahir", tglLahirTendik.Value);
                     // Tentukan nilai jenis kelamin berdasarkan radio button yang dipilih
                     string jenisKelamin = rbLaki.Checked ? "Laki-Laki" : rbPuan.Checked ? "Perempuan" : string.Empty;

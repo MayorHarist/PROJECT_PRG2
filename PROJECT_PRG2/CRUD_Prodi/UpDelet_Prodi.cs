@@ -21,10 +21,11 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
         private void UpDelet_Prodi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'fINDSMARTDataSet3.ProgramStudi' table. You can move, or remove it, as needed.
 
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
 
 
         }
@@ -33,13 +34,12 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
             try
             {
-                // Validasi apakah txtPegawai kosong
                 if (string.IsNullOrWhiteSpace(txtIdProdi.Text))
                 {
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -56,14 +56,12 @@ namespace PROJECT_PRG2.CRUD_Prodi
                         txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
                         txtJenjangPendidikan.Text = dataTable.Rows[0]["Jenjang_Pendidikan"].ToString();
                         txtAkreditasi.Text = dataTable.Rows[0]["Akreditasi"].ToString();
-                        txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
                     }
 
                    
                     txtNama.Enabled = true;
                     txtJenjangPendidikan.Enabled = true;
                     txtAkreditasi.Enabled = true;
-                    txtStatus.Enabled = true;
 
                     btnUbah.Enabled = true;
                     btnHapus.Enabled = true;
@@ -81,7 +79,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
             try
             {
-                string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionstring))
                 {
                     connection.Open();
@@ -93,15 +91,13 @@ namespace PROJECT_PRG2.CRUD_Prodi
                     update.Parameters.AddWithValue("@Nama",txtNama.Text);
                     update.Parameters.AddWithValue("@Jenjang_Pendidikan", txtJenjangPendidikan.Text);
                     update.Parameters.AddWithValue("@Akreditasi", txtAkreditasi.Text);
-                    update.Parameters.AddWithValue("@Status", txtStatus.Text);
-
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
 
                     // Menampilkan pesan jika eksekusi berhasil
                     MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
+                    this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
                     clear();
                 }
             }
@@ -116,14 +112,13 @@ namespace PROJECT_PRG2.CRUD_Prodi
             txtNama.Text = "";
             txtJenjangPendidikan.Text = "";
             txtAkreditasi.Text = "";
-            txtStatus.Text = "";
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
             try
             {
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connectionString);
 
                 connection.Open();
@@ -139,7 +134,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
                 MessageBox.Show("Data berhasil dihapus", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
+                this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
                 clear();
             }
             catch (Exception ex)
