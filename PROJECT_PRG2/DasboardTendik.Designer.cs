@@ -280,7 +280,7 @@
             this.panelData.Controls.Add(this.btnDosen);
             this.panelData.Controls.Add(this.btnMahasiswa);
             this.panelData.Controls.Add(this.btnProdi);
-            this.panelData.Location = new System.Drawing.Point(0, 217);
+            this.panelData.Location = new System.Drawing.Point(0, 228);
             this.panelData.Name = "panelData";
             this.panelData.Size = new System.Drawing.Size(503, 356);
             this.panelData.TabIndex = 13;
@@ -332,7 +332,7 @@
             this.btnData.FillColor = System.Drawing.Color.Transparent;
             this.btnData.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnData.ForeColor = System.Drawing.Color.White;
-            this.btnData.Location = new System.Drawing.Point(-1, 144);
+            this.btnData.Location = new System.Drawing.Point(-1, 155);
             this.btnData.Name = "btnData";
             this.btnData.Size = new System.Drawing.Size(203, 67);
             this.btnData.TabIndex = 10;
