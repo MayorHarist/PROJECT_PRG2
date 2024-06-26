@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROJECT_PRG2.CRUD_Prodi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -131,6 +132,13 @@ namespace PROJECT_PRG2
                     }
                 }
             }
+        }
+
+        private void btnProdi_Click(object sender, EventArgs e)
+        {
+            UpDelet_Prodi upDelet_Prodi = new UpDelet_Prodi();
+            upDelet_Prodi.Show();
+            this.Hide();
         }
     }
 }

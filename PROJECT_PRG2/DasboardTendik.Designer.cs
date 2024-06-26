@@ -69,7 +69,7 @@
             this.btnLaporanKRPP.FillColor = System.Drawing.Color.Transparent;
             this.btnLaporanKRPP.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporanKRPP.ForeColor = System.Drawing.Color.White;
-            this.btnLaporanKRPP.Location = new System.Drawing.Point(0, 52);
+            this.btnLaporanKRPP.Location = new System.Drawing.Point(0, 59);
             this.btnLaporanKRPP.Name = "btnLaporanKRPP";
             this.btnLaporanKRPP.Size = new System.Drawing.Size(500, 55);
             this.btnLaporanKRPP.TabIndex = 2;
@@ -84,7 +84,7 @@
             this.btnLaporanKRS.FillColor = System.Drawing.Color.Transparent;
             this.btnLaporanKRS.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporanKRS.ForeColor = System.Drawing.Color.White;
-            this.btnLaporanKRS.Location = new System.Drawing.Point(-2, 0);
+            this.btnLaporanKRS.Location = new System.Drawing.Point(-2, 7);
             this.btnLaporanKRS.Name = "btnLaporanKRS";
             this.btnLaporanKRS.Size = new System.Drawing.Size(500, 55);
             this.btnLaporanKRS.TabIndex = 0;
@@ -95,7 +95,7 @@
             this.panelLaporan.BackColor = System.Drawing.Color.Transparent;
             this.panelLaporan.Controls.Add(this.btnLaporanKRPP);
             this.panelLaporan.Controls.Add(this.btnLaporanKRS);
-            this.panelLaporan.Location = new System.Drawing.Point(0, 823);
+            this.panelLaporan.Location = new System.Drawing.Point(0, 830);
             this.panelLaporan.Name = "panelLaporan";
             this.panelLaporan.Size = new System.Drawing.Size(503, 103);
             this.panelLaporan.TabIndex = 15;
@@ -109,7 +109,7 @@
             this.btnJenisPrestasi.FillColor = System.Drawing.Color.Transparent;
             this.btnJenisPrestasi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJenisPrestasi.ForeColor = System.Drawing.Color.White;
-            this.btnJenisPrestasi.Location = new System.Drawing.Point(0, 206);
+            this.btnJenisPrestasi.Location = new System.Drawing.Point(0, 213);
             this.btnJenisPrestasi.Name = "btnJenisPrestasi";
             this.btnJenisPrestasi.Size = new System.Drawing.Size(500, 55);
             this.btnJenisPrestasi.TabIndex = 6;
@@ -124,7 +124,7 @@
             this.btnPosisiPrestasi.FillColor = System.Drawing.Color.Transparent;
             this.btnPosisiPrestasi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPosisiPrestasi.ForeColor = System.Drawing.Color.White;
-            this.btnPosisiPrestasi.Location = new System.Drawing.Point(0, 257);
+            this.btnPosisiPrestasi.Location = new System.Drawing.Point(0, 264);
             this.btnPosisiPrestasi.Name = "btnPosisiPrestasi";
             this.btnPosisiPrestasi.Size = new System.Drawing.Size(500, 55);
             this.btnPosisiPrestasi.TabIndex = 5;
@@ -139,7 +139,7 @@
             this.btnPengumuman.FillColor = System.Drawing.Color.Transparent;
             this.btnPengumuman.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPengumuman.ForeColor = System.Drawing.Color.White;
-            this.btnPengumuman.Location = new System.Drawing.Point(0, 311);
+            this.btnPengumuman.Location = new System.Drawing.Point(0, 318);
             this.btnPengumuman.Name = "btnPengumuman";
             this.btnPengumuman.Size = new System.Drawing.Size(500, 45);
             this.btnPengumuman.TabIndex = 4;
@@ -154,7 +154,7 @@
             this.btnMatakuliah.FillColor = System.Drawing.Color.Transparent;
             this.btnMatakuliah.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMatakuliah.ForeColor = System.Drawing.Color.White;
-            this.btnMatakuliah.Location = new System.Drawing.Point(0, 103);
+            this.btnMatakuliah.Location = new System.Drawing.Point(0, 110);
             this.btnMatakuliah.Name = "btnMatakuliah";
             this.btnMatakuliah.Size = new System.Drawing.Size(500, 55);
             this.btnMatakuliah.TabIndex = 4;
@@ -170,7 +170,7 @@
             this.btnDosen.FillColor = System.Drawing.Color.Transparent;
             this.btnDosen.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDosen.ForeColor = System.Drawing.Color.White;
-            this.btnDosen.Location = new System.Drawing.Point(0, 52);
+            this.btnDosen.Location = new System.Drawing.Point(0, 59);
             this.btnDosen.Name = "btnDosen";
             this.btnDosen.Size = new System.Drawing.Size(500, 55);
             this.btnDosen.TabIndex = 2;
@@ -185,7 +185,7 @@
             this.btnMahasiswa.FillColor = System.Drawing.Color.Transparent;
             this.btnMahasiswa.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMahasiswa.ForeColor = System.Drawing.Color.White;
-            this.btnMahasiswa.Location = new System.Drawing.Point(0, 153);
+            this.btnMahasiswa.Location = new System.Drawing.Point(0, 160);
             this.btnMahasiswa.Name = "btnMahasiswa";
             this.btnMahasiswa.Size = new System.Drawing.Size(500, 55);
             this.btnMahasiswa.TabIndex = 1;
@@ -205,7 +205,7 @@
             this.btnTrsKRPP.FillColor = System.Drawing.Color.Transparent;
             this.btnTrsKRPP.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrsKRPP.ForeColor = System.Drawing.Color.White;
-            this.btnTrsKRPP.Location = new System.Drawing.Point(0, 52);
+            this.btnTrsKRPP.Location = new System.Drawing.Point(0, 59);
             this.btnTrsKRPP.Name = "btnTrsKRPP";
             this.btnTrsKRPP.Size = new System.Drawing.Size(500, 55);
             this.btnTrsKRPP.TabIndex = 2;
@@ -220,7 +220,7 @@
             this.btnTrsKRS.FillColor = System.Drawing.Color.Transparent;
             this.btnTrsKRS.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrsKRS.ForeColor = System.Drawing.Color.White;
-            this.btnTrsKRS.Location = new System.Drawing.Point(-2, 0);
+            this.btnTrsKRS.Location = new System.Drawing.Point(-2, 7);
             this.btnTrsKRS.Name = "btnTrsKRS";
             this.btnTrsKRS.Size = new System.Drawing.Size(500, 55);
             this.btnTrsKRS.TabIndex = 0;
@@ -235,11 +235,12 @@
             this.btnProdi.FillColor = System.Drawing.Color.Transparent;
             this.btnProdi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProdi.ForeColor = System.Drawing.Color.White;
-            this.btnProdi.Location = new System.Drawing.Point(-2, 0);
+            this.btnProdi.Location = new System.Drawing.Point(-2, 7);
             this.btnProdi.Name = "btnProdi";
             this.btnProdi.Size = new System.Drawing.Size(500, 55);
             this.btnProdi.TabIndex = 0;
             this.btnProdi.Text = "Program Studi";
+            this.btnProdi.Click += new System.EventHandler(this.btnProdi_Click);
             // 
             // btnKembali
             // 
@@ -254,7 +255,7 @@
             this.btnKembali.FillColor = System.Drawing.Color.Transparent;
             this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(84, 946);
+            this.btnKembali.Location = new System.Drawing.Point(84, 953);
             this.btnKembali.Name = "btnKembali";
             this.btnKembali.Size = new System.Drawing.Size(377, 62);
             this.btnKembali.TabIndex = 16;
@@ -265,7 +266,7 @@
             this.panelTransaksi.BackColor = System.Drawing.Color.Transparent;
             this.panelTransaksi.Controls.Add(this.btnTrsKRPP);
             this.panelTransaksi.Controls.Add(this.btnTrsKRS);
-            this.panelTransaksi.Location = new System.Drawing.Point(0, 652);
+            this.panelTransaksi.Location = new System.Drawing.Point(0, 659);
             this.panelTransaksi.Name = "panelTransaksi";
             this.panelTransaksi.Size = new System.Drawing.Size(503, 103);
             this.panelTransaksi.TabIndex = 14;
@@ -280,7 +281,7 @@
             this.panelData.Controls.Add(this.btnDosen);
             this.panelData.Controls.Add(this.btnMahasiswa);
             this.panelData.Controls.Add(this.btnProdi);
-            this.panelData.Location = new System.Drawing.Point(0, 228);
+            this.panelData.Location = new System.Drawing.Point(0, 235);
             this.panelData.Name = "panelData";
             this.panelData.Size = new System.Drawing.Size(503, 356);
             this.panelData.TabIndex = 13;
@@ -296,7 +297,7 @@
             this.btnLaporan.FillColor = System.Drawing.Color.Transparent;
             this.btnLaporan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLaporan.ForeColor = System.Drawing.Color.White;
-            this.btnLaporan.Location = new System.Drawing.Point(-2, 758);
+            this.btnLaporan.Location = new System.Drawing.Point(-2, 765);
             this.btnLaporan.Name = "btnLaporan";
             this.btnLaporan.Size = new System.Drawing.Size(252, 67);
             this.btnLaporan.TabIndex = 12;
@@ -314,7 +315,7 @@
             this.btnTransaksi.FillColor = System.Drawing.Color.Transparent;
             this.btnTransaksi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTransaksi.ForeColor = System.Drawing.Color.White;
-            this.btnTransaksi.Location = new System.Drawing.Point(0, 592);
+            this.btnTransaksi.Location = new System.Drawing.Point(0, 599);
             this.btnTransaksi.Name = "btnTransaksi";
             this.btnTransaksi.Size = new System.Drawing.Size(252, 67);
             this.btnTransaksi.TabIndex = 11;
@@ -332,7 +333,7 @@
             this.btnData.FillColor = System.Drawing.Color.Transparent;
             this.btnData.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnData.ForeColor = System.Drawing.Color.White;
-            this.btnData.Location = new System.Drawing.Point(-1, 155);
+            this.btnData.Location = new System.Drawing.Point(-1, 162);
             this.btnData.Name = "btnData";
             this.btnData.Size = new System.Drawing.Size(203, 67);
             this.btnData.TabIndex = 10;
