@@ -17,8 +17,11 @@ namespace PROJECT_PRG2.CRUD_Prodi
         private bool panelTransaksiMuncul = false;
         private bool panelLaporanMuncul = false;
         private int step = 10;
+
+
         public UpDelet_Prodi()
         {
+
             InitializeComponent();
             panelData.Height = 0;
             panelTransaksi.Height = 0;

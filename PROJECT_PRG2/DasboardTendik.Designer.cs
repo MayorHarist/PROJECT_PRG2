@@ -199,6 +199,7 @@
             this.btnMahasiswa.Size = new System.Drawing.Size(562, 69);
             this.btnMahasiswa.TabIndex = 1;
             this.btnMahasiswa.Text = "Mahasiswa";
+            this.btnMahasiswa.Click += new System.EventHandler(this.btnMahasiswa_Click);
             // 
             // timerTRS
             // 

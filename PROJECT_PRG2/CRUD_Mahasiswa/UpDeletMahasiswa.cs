@@ -42,18 +42,16 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             txtTahunMasuk.Enabled = enabled;
             txtUsername.Enabled = enabled;
             txtPassword.Enabled = enabled;
-            txtStatus.Enabled = enabled;
 
             btnUbah.Enabled = enabled;
             btnHapus.Enabled = enabled;
-            btnBatal.Enabled = enabled;
         }
 
         private void btnUbah_Click(object sender, EventArgs e)
         {
             try
             {
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -80,7 +78,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     update.Parameters.AddWithValue("@Tahun_Masuk", txtTahunMasuk.Text);
                     update.Parameters.AddWithValue("@Username", txtUsername.Text);
                     update.Parameters.AddWithValue("@Password", txtPassword.Text);
-                    update.Parameters.AddWithValue("@Status", txtStatus.Text);
 
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
@@ -114,7 +111,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             txtTahunMasuk.Clear();
             txtUsername.Clear();
             txtPassword.Clear();
-            txtStatus.Clear();
 
             // Reset ComboBox
             cbProdi.SelectedIndex = -1;  // Mengatur ulang ComboBox ke nilai default (tidak ada pilihan)
@@ -137,7 +133,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -181,7 +177,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                         txtTahunMasuk.Text = dataTable.Rows[0]["Tahun_Masuk"].ToString();
                         txtUsername.Text = dataTable.Rows[0]["Username"].ToString();
                         txtPassword.Text = dataTable.Rows[0]["Password"].ToString();
-                        txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
 
                         // Mengaktifkan kontrol jika data ditemukan
                         SetControlsEnabled(true);
@@ -208,7 +203,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         {
             try
             {
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -232,6 +227,13 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            InputMahasiswa inputMahasiswa = new InputMahasiswa();
+            inputMahasiswa.Show();
+            this.Hide();
         }
     }
 }
