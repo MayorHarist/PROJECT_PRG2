@@ -244,6 +244,7 @@
             this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
             this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton2.ImageRotate = 0F;
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(45, 45);
             this.guna2ImageButton2.IndicateFocus = true;
             this.guna2ImageButton2.Location = new System.Drawing.Point(84, 190);
             this.guna2ImageButton2.Name = "guna2ImageButton2";

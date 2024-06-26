@@ -109,7 +109,7 @@
             this.emailDataGridViewTextBoxColumn,
             this.teleponDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
-            this.dgvDosen.DataSource = this.dosenBindingSource1;
+            this.dgvDosen.DataSource = this.dosenBindingSource;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,7 +119,7 @@
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDosen.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvDosen.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDosen.Location = new System.Drawing.Point(279, 278);
+            this.dgvDosen.Location = new System.Drawing.Point(104, 269);
             this.dgvDosen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDosen.Name = "dgvDosen";
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
