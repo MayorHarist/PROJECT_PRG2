@@ -1,4 +1,5 @@
-﻿using PROJECT_PRG2.CRUD_Prodi;
+﻿using PROJECT_PRG2.CRUD_Mahasiswa;
+using PROJECT_PRG2.CRUD_Prodi;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -138,6 +139,13 @@ namespace PROJECT_PRG2
         {
             UpDelet_Prodi upDelet_Prodi = new UpDelet_Prodi();
             upDelet_Prodi.Show();
+            this.Hide();
+        }
+
+        private void btnMahasiswa_Click(object sender, EventArgs e)
+        {
+            UpDeletMahasiswa upDeletMahasiswa = new UpDeletMahasiswa();
+            upDeletMahasiswa.Show();
             this.Hide();
         }
     }

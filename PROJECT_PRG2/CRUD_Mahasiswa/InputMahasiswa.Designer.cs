@@ -38,12 +38,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSimpan = new Guna.UI2.WinForms.Guna2Button();
             this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
-            this.txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTelepon = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.rbPerempuan = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -57,12 +55,12 @@
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbProdi = new System.Windows.Forms.ComboBox();
-            this.txtAlamat = new System.Windows.Forms.RichTextBox();
-            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.txtAlamat = new System.Windows.Forms.RichTextBox();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -155,16 +153,6 @@
             this.label3.TabIndex = 51;
             this.label3.Text = "Telepon";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(235, 677);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 26);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Status";
-            // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
@@ -225,31 +213,6 @@
             this.btnBatal.TabIndex = 45;
             this.btnBatal.Text = "Batal";
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Animated = true;
-            this.txtStatus.BackColor = System.Drawing.Color.Transparent;
-            this.txtStatus.BorderColor = System.Drawing.Color.Black;
-            this.txtStatus.BorderRadius = 10;
-            this.txtStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStatus.DefaultText = "";
-            this.txtStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatus.Font = new System.Drawing.Font("Poppins", 9F);
-            this.txtStatus.ForeColor = System.Drawing.Color.Black;
-            this.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatus.Location = new System.Drawing.Point(391, 677);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.PasswordChar = '\0';
-            this.txtStatus.PlaceholderText = "";
-            this.txtStatus.SelectedText = "";
-            this.txtStatus.Size = new System.Drawing.Size(254, 38);
-            this.txtStatus.TabIndex = 44;
             // 
             // txtTelepon
             // 
@@ -516,6 +479,7 @@
             // cbProdi
             // 
             this.cbProdi.DataSource = this.programStudiBindingSource;
+            this.cbProdi.DisplayMember = "Id_Prodi";
             this.cbProdi.FormattingEnabled = true;
             this.cbProdi.ItemHeight = 16;
             this.cbProdi.Location = new System.Drawing.Point(391, 205);
@@ -525,6 +489,16 @@
             this.cbProdi.TabIndex = 68;
             this.cbProdi.ValueMember = "Id_Prodi";
             // 
+            // programStudiBindingSource
+            // 
+            this.programStudiBindingSource.DataMember = "ProgramStudi";
+            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtAlamat
             // 
             this.txtAlamat.Location = new System.Drawing.Point(391, 370);
@@ -532,16 +506,6 @@
             this.txtAlamat.Size = new System.Drawing.Size(255, 70);
             this.txtAlamat.TabIndex = 69;
             this.txtAlamat.Text = "";
-            // 
-            // fINDSMARTDataSet6
-            // 
-            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
-            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // programStudiBindingSource
-            // 
-            this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet6;
             // 
             // programStudiTableAdapter
             // 
@@ -551,7 +515,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(972, 880);
             this.Controls.Add(this.txtAlamat);
             this.Controls.Add(this.cbProdi);
             this.Controls.Add(this.label12);
@@ -566,12 +530,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.btnBatal);
-            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtTelepon);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.rbPerempuan);
@@ -584,8 +546,8 @@
             this.Name = "InputMahasiswa";
             this.Text = "InputMahasiswa";
             this.Load += new System.EventHandler(this.InputMahasiswa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -602,12 +564,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnSimpan;
         private Guna.UI2.WinForms.Guna2Button btnBatal;
-        private Guna.UI2.WinForms.Guna2TextBox txtStatus;
         private Guna.UI2.WinForms.Guna2TextBox txtTelepon;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2RadioButton rbPerempuan;

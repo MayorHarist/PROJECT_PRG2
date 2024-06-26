@@ -25,7 +25,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             // Validasi semua data harus diisi
             if (IsFormValid())
             {
-                string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01;initial catalog=FINDSMART";
+                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionstring))
                 {
                     SqlCommand insert = new SqlCommand("sp_InsertMahasiswa", connection);
@@ -45,7 +45,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     insert.Parameters.AddWithValue("Tahun_Masuk", txtTahunMasuk.Text);
                     insert.Parameters.AddWithValue("Username", txtUsername.Text);
                     insert.Parameters.AddWithValue("Password", txtPassword.Text);
-                    insert.Parameters.AddWithValue("Status", txtStatus.Text);
 
                     try
                     {
@@ -77,8 +76,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                 string.IsNullOrWhiteSpace(txtTelepon.Text) ||
                 string.IsNullOrWhiteSpace(txtTahunMasuk.Text) ||
                 string.IsNullOrWhiteSpace(txtUsername.Text) ||
-                string.IsNullOrWhiteSpace(txtPassword.Text) ||
-                string.IsNullOrWhiteSpace(txtStatus.Text))
+                string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 return false;
             }
@@ -123,7 +121,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             txtTahunMasuk.Text = "";
             txtUsername.Text = "";
             txtPassword.Text = "";
-            txtStatus.Text = "";
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
