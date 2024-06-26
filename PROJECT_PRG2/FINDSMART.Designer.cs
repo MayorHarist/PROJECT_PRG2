@@ -572,8 +572,6 @@ namespace PROJECT_PRG2 {
             
             private global::System.Data.DataColumn columnTelepon;
             
-            private global::System.Data.DataColumn columnStatus;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public DosenDataTable() {
@@ -689,14 +687,6 @@ namespace PROJECT_PRG2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn StatusColumn {
-                get {
-                    return this.columnStatus;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -732,7 +722,7 @@ namespace PROJECT_PRG2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DosenRow AddDosenRow(string No_Pegawai, string NIDN, string Nama, string Bidang_Kompetensi, string Pendidikan_Terakhir, System.DateTime Tanggal_Lahir, string Jenis_Kelamin, string Alamat, string Email, string Telepon, string Status) {
+            public DosenRow AddDosenRow(string No_Pegawai, string NIDN, string Nama, string Bidang_Kompetensi, string Pendidikan_Terakhir, System.DateTime Tanggal_Lahir, string Jenis_Kelamin, string Alamat, string Email, string Telepon) {
                 DosenRow rowDosenRow = ((DosenRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         No_Pegawai,
@@ -744,8 +734,7 @@ namespace PROJECT_PRG2 {
                         Jenis_Kelamin,
                         Alamat,
                         Email,
-                        Telepon,
-                        Status};
+                        Telepon};
                 rowDosenRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDosenRow);
                 return rowDosenRow;
@@ -785,7 +774,6 @@ namespace PROJECT_PRG2 {
                 this.columnAlamat = base.Columns["Alamat"];
                 this.columnEmail = base.Columns["Email"];
                 this.columnTelepon = base.Columns["Telepon"];
-                this.columnStatus = base.Columns["Status"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -811,8 +799,6 @@ namespace PROJECT_PRG2 {
                 base.Columns.Add(this.columnEmail);
                 this.columnTelepon = new global::System.Data.DataColumn("Telepon", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTelepon);
-                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStatus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNo_Pegawai}, true));
                 this.columnNo_Pegawai.AllowDBNull = false;
@@ -835,8 +821,6 @@ namespace PROJECT_PRG2 {
                 this.columnEmail.MaxLength = 50;
                 this.columnTelepon.AllowDBNull = false;
                 this.columnTelepon.MaxLength = 15;
-                this.columnStatus.AllowDBNull = false;
-                this.columnStatus.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3595,17 +3579,6 @@ namespace PROJECT_PRG2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Status {
-                get {
-                    return ((string)(this[this.tableDosen.StatusColumn]));
-                }
-                set {
-                    this[this.tableDosen.StatusColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MataKuliahRow[] GetMataKuliahRows() {
                 if ((this.Table.ChildRelations["FK__MataKulia__No_Pe__5070F446"] == null)) {
                     return new MataKuliahRow[0];
@@ -4755,27 +4728,22 @@ namespace PROJECT_PRG2.FINDSMARTTableAdapters {
             tableMapping.ColumnMappings.Add("Alamat", "Alamat");
             tableMapping.ColumnMappings.Add("Email", "Email");
             tableMapping.ColumnMappings.Add("Telepon", "Telepon");
-            tableMapping.ColumnMappings.Add("Status", "Status");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Dosen] WHERE (([No_Pegawai] = @Original_No_Pegawai) AND ([NIDN] = @Original_NIDN) AND ([Nama] = @Original_Nama) AND ([Bidang_Kompetensi] = @Original_Bidang_Kompetensi) AND ([Pendidikan_Terakhir] = @Original_Pendidikan_Terakhir) AND ([Tanggal_Lahir] = @Original_Tanggal_Lahir) AND ([Jenis_Kelamin] = @Original_Jenis_Kelamin) AND ([Alamat] = @Original_Alamat) AND ([Email] = @Original_Email) AND ([Telepon] = @Original_Telepon) AND ([Status] = @Original_Status))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Dosen] WHERE (([No_Pegawai] = @Original_No_Pegawai) AND ([NIDN] = @Original_NIDN) AND ([Bidang_Kompetensi] = @Original_Bidang_Kompetensi) AND ([Pendidikan_Terakhir] = @Original_Pendidikan_Terakhir) AND ([Tanggal_Lahir] = @Original_Tanggal_Lahir) AND ([Jenis_Kelamin] = @Original_Jenis_Kelamin) AND ([Telepon] = @Original_Telepon))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_No_Pegawai", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "No_Pegawai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NIDN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIDN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nama", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nama", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Bidang_Kompetensi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bidang_Kompetensi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pendidikan_Terakhir", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pendidikan_Terakhir", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tanggal_Lahir", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tanggal_Lahir", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jenis_Kelamin", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jenis_Kelamin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alamat", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alamat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telepon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telepon", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Dosen] ([No_Pegawai], [NIDN], [Nama], [Bidang_Kompetensi], [Pendidikan_Terakhir], [Tanggal_Lahir], [Jenis_Kelamin], [Alamat], [Email], [Telepon], [Status]) VALUES (@No_Pegawai, @NIDN, @Nama, @Bidang_Kompetensi, @Pendidikan_Terakhir, @Tanggal_Lahir, @Jenis_Kelamin, @Alamat, @Email, @Telepon, @Status);
-SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Status FROM Dosen WHERE (No_Pegawai = @No_Pegawai)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Dosen] ([No_Pegawai], [NIDN], [Nama], [Bidang_Kompetensi], [Pendidikan_Terakhir], [Tanggal_Lahir], [Jenis_Kelamin], [Alamat], [Email], [Telepon]) VALUES (@No_Pegawai, @NIDN, @Nama, @Bidang_Kompetensi, @Pendidikan_Terakhir, @Tanggal_Lahir, @Jenis_Kelamin, @Alamat, @Email, @Telepon);
+SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon FROM Dosen WHERE (No_Pegawai = @No_Pegawai)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@No_Pegawai", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "No_Pegawai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIDN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIDN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4787,11 +4755,10 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alamat", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alamat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telepon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telepon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Dosen] SET [No_Pegawai] = @No_Pegawai, [NIDN] = @NIDN, [Nama] = @Nama, [Bidang_Kompetensi] = @Bidang_Kompetensi, [Pendidikan_Terakhir] = @Pendidikan_Terakhir, [Tanggal_Lahir] = @Tanggal_Lahir, [Jenis_Kelamin] = @Jenis_Kelamin, [Alamat] = @Alamat, [Email] = @Email, [Telepon] = @Telepon, [Status] = @Status WHERE (([No_Pegawai] = @Original_No_Pegawai) AND ([NIDN] = @Original_NIDN) AND ([Nama] = @Original_Nama) AND ([Bidang_Kompetensi] = @Original_Bidang_Kompetensi) AND ([Pendidikan_Terakhir] = @Original_Pendidikan_Terakhir) AND ([Tanggal_Lahir] = @Original_Tanggal_Lahir) AND ([Jenis_Kelamin] = @Original_Jenis_Kelamin) AND ([Alamat] = @Original_Alamat) AND ([Email] = @Original_Email) AND ([Telepon] = @Original_Telepon) AND ([Status] = @Original_Status));
-SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Status FROM Dosen WHERE (No_Pegawai = @No_Pegawai)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Dosen] SET [No_Pegawai] = @No_Pegawai, [NIDN] = @NIDN, [Nama] = @Nama, [Bidang_Kompetensi] = @Bidang_Kompetensi, [Pendidikan_Terakhir] = @Pendidikan_Terakhir, [Tanggal_Lahir] = @Tanggal_Lahir, [Jenis_Kelamin] = @Jenis_Kelamin, [Alamat] = @Alamat, [Email] = @Email, [Telepon] = @Telepon WHERE (([No_Pegawai] = @Original_No_Pegawai) AND ([NIDN] = @Original_NIDN) AND ([Bidang_Kompetensi] = @Original_Bidang_Kompetensi) AND ([Pendidikan_Terakhir] = @Original_Pendidikan_Terakhir) AND ([Tanggal_Lahir] = @Original_Tanggal_Lahir) AND ([Jenis_Kelamin] = @Original_Jenis_Kelamin) AND ([Telepon] = @Original_Telepon));
+SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon FROM Dosen WHERE (No_Pegawai = @No_Pegawai)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@No_Pegawai", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "No_Pegawai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIDN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIDN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4803,18 +4770,13 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alamat", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alamat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telepon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telepon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_No_Pegawai", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "No_Pegawai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NIDN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIDN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nama", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nama", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Bidang_Kompetensi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bidang_Kompetensi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pendidikan_Terakhir", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pendidikan_Terakhir", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tanggal_Lahir", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tanggal_Lahir", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jenis_Kelamin", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jenis_Kelamin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alamat", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alamat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telepon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telepon", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4831,7 +4793,7 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_La" +
-                "hir, Jenis_Kelamin, Alamat, Email, Telepon, Status FROM dbo.Dosen";
+                "hir, Jenis_Kelamin, Alamat, Email, Telepon FROM dbo.Dosen";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4892,7 +4854,7 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_No_Pegawai, string Original_NIDN, string Original_Nama, string Original_Bidang_Kompetensi, string Original_Pendidikan_Terakhir, System.DateTime Original_Tanggal_Lahir, string Original_Jenis_Kelamin, string Original_Alamat, string Original_Email, string Original_Telepon, string Original_Status) {
+        public virtual int Delete(string Original_No_Pegawai, string Original_NIDN, string Original_Bidang_Kompetensi, string Original_Pendidikan_Terakhir, System.DateTime Original_Tanggal_Lahir, string Original_Jenis_Kelamin, string Original_Telepon) {
             if ((Original_No_Pegawai == null)) {
                 throw new global::System.ArgumentNullException("Original_No_Pegawai");
             }
@@ -4905,54 +4867,30 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_NIDN));
             }
-            if ((Original_Nama == null)) {
-                throw new global::System.ArgumentNullException("Original_Nama");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Nama));
-            }
             if ((Original_Bidang_Kompetensi == null)) {
                 throw new global::System.ArgumentNullException("Original_Bidang_Kompetensi");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Bidang_Kompetensi));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Bidang_Kompetensi));
             }
             if ((Original_Pendidikan_Terakhir == null)) {
                 throw new global::System.ArgumentNullException("Original_Pendidikan_Terakhir");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Pendidikan_Terakhir));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Pendidikan_Terakhir));
             }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_Tanggal_Lahir));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_Tanggal_Lahir));
             if ((Original_Jenis_Kelamin == null)) {
                 throw new global::System.ArgumentNullException("Original_Jenis_Kelamin");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Jenis_Kelamin));
-            }
-            if ((Original_Alamat == null)) {
-                throw new global::System.ArgumentNullException("Original_Alamat");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Alamat));
-            }
-            if ((Original_Email == null)) {
-                throw new global::System.ArgumentNullException("Original_Email");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Email));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Jenis_Kelamin));
             }
             if ((Original_Telepon == null)) {
                 throw new global::System.ArgumentNullException("Original_Telepon");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_Telepon));
-            }
-            if ((Original_Status == null)) {
-                throw new global::System.ArgumentNullException("Original_Status");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Status));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Telepon));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4974,7 +4912,7 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string No_Pegawai, string NIDN, string Nama, string Bidang_Kompetensi, string Pendidikan_Terakhir, System.DateTime Tanggal_Lahir, string Jenis_Kelamin, string Alamat, string Email, string Telepon, string Status) {
+        public virtual int Insert(string No_Pegawai, string NIDN, string Nama, string Bidang_Kompetensi, string Pendidikan_Terakhir, System.DateTime Tanggal_Lahir, string Jenis_Kelamin, string Alamat, string Email, string Telepon) {
             if ((No_Pegawai == null)) {
                 throw new global::System.ArgumentNullException("No_Pegawai");
             }
@@ -5030,12 +4968,6 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Telepon));
             }
-            if ((Status == null)) {
-                throw new global::System.ArgumentNullException("Status");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Status));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5067,18 +4999,13 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
                     string Alamat, 
                     string Email, 
                     string Telepon, 
-                    string Status, 
                     string Original_No_Pegawai, 
                     string Original_NIDN, 
-                    string Original_Nama, 
                     string Original_Bidang_Kompetensi, 
                     string Original_Pendidikan_Terakhir, 
                     System.DateTime Original_Tanggal_Lahir, 
                     string Original_Jenis_Kelamin, 
-                    string Original_Alamat, 
-                    string Original_Email, 
-                    string Original_Telepon, 
-                    string Original_Status) {
+                    string Original_Telepon) {
             if ((No_Pegawai == null)) {
                 throw new global::System.ArgumentNullException("No_Pegawai");
             }
@@ -5134,72 +5061,42 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Telepon));
             }
-            if ((Status == null)) {
-                throw new global::System.ArgumentNullException("Status");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Status));
-            }
             if ((Original_No_Pegawai == null)) {
                 throw new global::System.ArgumentNullException("Original_No_Pegawai");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_No_Pegawai));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_No_Pegawai));
             }
             if ((Original_NIDN == null)) {
                 throw new global::System.ArgumentNullException("Original_NIDN");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_NIDN));
-            }
-            if ((Original_Nama == null)) {
-                throw new global::System.ArgumentNullException("Original_Nama");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Nama));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_NIDN));
             }
             if ((Original_Bidang_Kompetensi == null)) {
                 throw new global::System.ArgumentNullException("Original_Bidang_Kompetensi");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Bidang_Kompetensi));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Bidang_Kompetensi));
             }
             if ((Original_Pendidikan_Terakhir == null)) {
                 throw new global::System.ArgumentNullException("Original_Pendidikan_Terakhir");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Pendidikan_Terakhir));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Pendidikan_Terakhir));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_Tanggal_Lahir));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_Tanggal_Lahir));
             if ((Original_Jenis_Kelamin == null)) {
                 throw new global::System.ArgumentNullException("Original_Jenis_Kelamin");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Jenis_Kelamin));
-            }
-            if ((Original_Alamat == null)) {
-                throw new global::System.ArgumentNullException("Original_Alamat");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Alamat));
-            }
-            if ((Original_Email == null)) {
-                throw new global::System.ArgumentNullException("Original_Email");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Email));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Jenis_Kelamin));
             }
             if ((Original_Telepon == null)) {
                 throw new global::System.ArgumentNullException("Original_Telepon");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Telepon));
-            }
-            if ((Original_Status == null)) {
-                throw new global::System.ArgumentNullException("Original_Status");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Status));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Telepon));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5231,19 +5128,14 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
                     string Alamat, 
                     string Email, 
                     string Telepon, 
-                    string Status, 
                     string Original_No_Pegawai, 
                     string Original_NIDN, 
-                    string Original_Nama, 
                     string Original_Bidang_Kompetensi, 
                     string Original_Pendidikan_Terakhir, 
                     System.DateTime Original_Tanggal_Lahir, 
                     string Original_Jenis_Kelamin, 
-                    string Original_Alamat, 
-                    string Original_Email, 
-                    string Original_Telepon, 
-                    string Original_Status) {
-            return this.Update(Original_No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Status, Original_No_Pegawai, Original_NIDN, Original_Nama, Original_Bidang_Kompetensi, Original_Pendidikan_Terakhir, Original_Tanggal_Lahir, Original_Jenis_Kelamin, Original_Alamat, Original_Email, Original_Telepon, Original_Status);
+                    string Original_Telepon) {
+            return this.Update(Original_No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Original_No_Pegawai, Original_NIDN, Original_Bidang_Kompetensi, Original_Pendidikan_Terakhir, Original_Tanggal_Lahir, Original_Jenis_Kelamin, Original_Telepon);
         }
     }
     

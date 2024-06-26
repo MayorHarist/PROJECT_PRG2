@@ -19,15 +19,14 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void ViewDosen_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.Dosen' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet.Dosen' table. You can move, or remove it, as needed.
-
+            // TODO: This line of code loads data into the 'fINDSMART.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter.Fill(this.fINDSMART.Dosen);
 
         }
 
         private void btnTampil_Click(object sender, EventArgs e)
         {
-            this.dosenTableAdapter1.Fill(this.fINDSMARTDataSet6.Dosen);
+            
 
         }
     }
