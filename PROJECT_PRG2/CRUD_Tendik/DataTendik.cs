@@ -21,13 +21,15 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void DataTendik_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.TenagaKependidikan' table. You can move, or remove it, as needed.
+            
             // TODO: This line of code loads data into the 'tendik.TenagaKependidikan' table. You can move, or remove it, as needed.
-           
+
         }
 
         private void btnTambahTendik_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
             SqlCommand insert = new SqlCommand("sp_InsertTendik", connection);
@@ -88,7 +90,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         public string autoid()
         {
-            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
             {
                 connection.Open();
@@ -114,7 +116,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void btnTampilTendik_Click(object sender, EventArgs e)
         {
-            this.tenagaKependidikanTableAdapter.Fill(this.tendik.TenagaKependidikan);
+            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet6.TenagaKependidikan);
         }
 
 
