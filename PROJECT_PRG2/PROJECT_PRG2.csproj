@@ -346,9 +346,6 @@
     <EmbeddedResource Include="CRUD_Tendik\UpTendik.resx">
       <DependentUpon>UpTendik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DasboardTendik.resx">
-      <DependentUpon>DasboardTendik.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginTenagaPendidik.resx">
       <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
     </EmbeddedResource>
