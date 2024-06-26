@@ -95,12 +95,6 @@
     <Compile Include="AboutUs.Designer.cs">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRUD_Dosen\DashboardDosen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRUD_Dosen\DashboardDosen.Designer.cs">
-      <DependentUpon>DashboardDosen.cs</DependentUpon>
-    </Compile>
     <Compile Include="CRUD_Dosen\InputDosen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,9 +313,6 @@
     </Compile>
     <EmbeddedResource Include="AboutUs.resx">
       <DependentUpon>AboutUs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_Dosen\DashboardDosen.resx">
-      <DependentUpon>DashboardDosen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Dosen\InputDosen.resx">
       <DependentUpon>InputDosen.cs</DependentUpon>
