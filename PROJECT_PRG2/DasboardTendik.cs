@@ -140,5 +140,10 @@ namespace PROJECT_PRG2
             upDelet_Prodi.Show();
             this.Hide();
         }
+
+        private void DasboardTendik_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
