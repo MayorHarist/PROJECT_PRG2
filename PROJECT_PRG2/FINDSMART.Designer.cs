@@ -964,8 +964,6 @@ namespace PROJECT_PRG2 {
             
             private global::System.Data.DataColumn columnSemester;
             
-            private global::System.Data.DataColumn columnStatus;
-            
             private global::System.Data.DataColumn columnNo_Pegawai;
             
             private global::System.Data.DataColumn columnId_Prodi;
@@ -1045,14 +1043,6 @@ namespace PROJECT_PRG2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn StatusColumn {
-                get {
-                    return this.columnStatus;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn No_PegawaiColumn {
                 get {
                     return this.columnNo_Pegawai;
@@ -1104,7 +1094,7 @@ namespace PROJECT_PRG2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MataKuliahRow AddMataKuliahRow(string Id_Matkul, string Nama, int Jumlah_SKS, string Jenis, int Semester, string Status, DosenRow parentDosenRowByFK__MataKulia__No_Pe__5070F446, ProgramStudiRow parentProgramStudiRowByFK__MataKulia__Id_Pr__5165187F) {
+            public MataKuliahRow AddMataKuliahRow(string Id_Matkul, string Nama, int Jumlah_SKS, string Jenis, int Semester, DosenRow parentDosenRowByFK__MataKulia__No_Pe__5070F446, ProgramStudiRow parentProgramStudiRowByFK__MataKulia__Id_Pr__5165187F) {
                 MataKuliahRow rowMataKuliahRow = ((MataKuliahRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id_Matkul,
@@ -1112,14 +1102,13 @@ namespace PROJECT_PRG2 {
                         Jumlah_SKS,
                         Jenis,
                         Semester,
-                        Status,
                         null,
                         null};
                 if ((parentDosenRowByFK__MataKulia__No_Pe__5070F446 != null)) {
-                    columnValuesArray[6] = parentDosenRowByFK__MataKulia__No_Pe__5070F446[0];
+                    columnValuesArray[5] = parentDosenRowByFK__MataKulia__No_Pe__5070F446[0];
                 }
                 if ((parentProgramStudiRowByFK__MataKulia__Id_Pr__5165187F != null)) {
-                    columnValuesArray[7] = parentProgramStudiRowByFK__MataKulia__Id_Pr__5165187F[0];
+                    columnValuesArray[6] = parentProgramStudiRowByFK__MataKulia__Id_Pr__5165187F[0];
                 }
                 rowMataKuliahRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMataKuliahRow);
@@ -1155,7 +1144,6 @@ namespace PROJECT_PRG2 {
                 this.columnJumlah_SKS = base.Columns["Jumlah_SKS"];
                 this.columnJenis = base.Columns["Jenis"];
                 this.columnSemester = base.Columns["Semester"];
-                this.columnStatus = base.Columns["Status"];
                 this.columnNo_Pegawai = base.Columns["No_Pegawai"];
                 this.columnId_Prodi = base.Columns["Id_Prodi"];
             }
@@ -1173,8 +1161,6 @@ namespace PROJECT_PRG2 {
                 base.Columns.Add(this.columnJenis);
                 this.columnSemester = new global::System.Data.DataColumn("Semester", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSemester);
-                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStatus);
                 this.columnNo_Pegawai = new global::System.Data.DataColumn("No_Pegawai", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNo_Pegawai);
                 this.columnId_Prodi = new global::System.Data.DataColumn("Id_Prodi", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1190,8 +1176,6 @@ namespace PROJECT_PRG2 {
                 this.columnJenis.AllowDBNull = false;
                 this.columnJenis.MaxLength = 20;
                 this.columnSemester.AllowDBNull = false;
-                this.columnStatus.AllowDBNull = false;
-                this.columnStatus.MaxLength = 20;
                 this.columnNo_Pegawai.AllowDBNull = false;
                 this.columnNo_Pegawai.MaxLength = 10;
                 this.columnId_Prodi.AllowDBNull = false;
@@ -3660,17 +3644,6 @@ namespace PROJECT_PRG2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Status {
-                get {
-                    return ((string)(this[this.tableMataKuliah.StatusColumn]));
-                }
-                set {
-                    this[this.tableMataKuliah.StatusColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string No_Pegawai {
                 get {
                     return ((string)(this[this.tableMataKuliah.No_PegawaiColumn]));
@@ -5265,54 +5238,47 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
             tableMapping.ColumnMappings.Add("Jumlah_SKS", "Jumlah_SKS");
             tableMapping.ColumnMappings.Add("Jenis", "Jenis");
             tableMapping.ColumnMappings.Add("Semester", "Semester");
-            tableMapping.ColumnMappings.Add("Status", "Status");
             tableMapping.ColumnMappings.Add("No_Pegawai", "No_Pegawai");
             tableMapping.ColumnMappings.Add("Id_Prodi", "Id_Prodi");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[MataKuliah] WHERE (([Id_Matkul] = @Original_Id_Matkul) AND ([Nama] = @Original_Nama) AND ([Jumlah_SKS] = @Original_Jumlah_SKS) AND ([Jenis] = @Original_Jenis) AND ([Semester] = @Original_Semester) AND ([Status] = @Original_Status) AND ([No_Pegawai] = @Original_No_Pegawai) AND ([Id_Prodi] = @Original_Id_Prodi))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[MataKuliah] WHERE (([Id_Matkul] = @Original_Id_Matkul) AND ([Jumlah_SKS] = @Original_Jumlah_SKS) AND ([Jenis] = @Original_Jenis) AND ([Semester] = @Original_Semester) AND ([No_Pegawai] = @Original_No_Pegawai) AND ([Id_Prodi] = @Original_Id_Prodi))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Matkul", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Matkul", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nama", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nama", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jumlah_SKS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jumlah_SKS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jenis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jenis", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Semester", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Semester", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_No_Pegawai", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "No_Pegawai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Prodi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Prodi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[MataKuliah] ([Id_Matkul], [Nama], [Jumlah_SKS], [Jenis], [Semester], [Status], [No_Pegawai], [Id_Prodi]) VALUES (@Id_Matkul, @Nama, @Jumlah_SKS, @Jenis, @Semester, @Status, @No_Pegawai, @Id_Prodi);
-SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prodi FROM MataKuliah WHERE (Id_Matkul = @Id_Matkul)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[MataKuliah] ([Id_Matkul], [Nama], [Jumlah_SKS], [Jenis], [Semester], [No_Pegawai], [Id_Prodi]) VALUES (@Id_Matkul, @Nama, @Jumlah_SKS, @Jenis, @Semester, @No_Pegawai, @Id_Prodi);
+SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, No_Pegawai, Id_Prodi FROM MataKuliah WHERE (Id_Matkul = @Id_Matkul)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Matkul", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Matkul", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nama", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nama", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jumlah_SKS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jumlah_SKS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jenis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jenis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semester", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Semester", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@No_Pegawai", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "No_Pegawai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Prodi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Prodi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[MataKuliah] SET [Id_Matkul] = @Id_Matkul, [Nama] = @Nama, [Jumlah_SKS] = @Jumlah_SKS, [Jenis] = @Jenis, [Semester] = @Semester, [Status] = @Status, [No_Pegawai] = @No_Pegawai, [Id_Prodi] = @Id_Prodi WHERE (([Id_Matkul] = @Original_Id_Matkul) AND ([Nama] = @Original_Nama) AND ([Jumlah_SKS] = @Original_Jumlah_SKS) AND ([Jenis] = @Original_Jenis) AND ([Semester] = @Original_Semester) AND ([Status] = @Original_Status) AND ([No_Pegawai] = @Original_No_Pegawai) AND ([Id_Prodi] = @Original_Id_Prodi));
-SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prodi FROM MataKuliah WHERE (Id_Matkul = @Id_Matkul)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[MataKuliah] SET [Id_Matkul] = @Id_Matkul, [Nama] = @Nama, [Jumlah_SKS] = @Jumlah_SKS, [Jenis] = @Jenis, [Semester] = @Semester, [No_Pegawai] = @No_Pegawai, [Id_Prodi] = @Id_Prodi WHERE (([Id_Matkul] = @Original_Id_Matkul) AND ([Jumlah_SKS] = @Original_Jumlah_SKS) AND ([Jenis] = @Original_Jenis) AND ([Semester] = @Original_Semester) AND ([No_Pegawai] = @Original_No_Pegawai) AND ([Id_Prodi] = @Original_Id_Prodi));
+SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, No_Pegawai, Id_Prodi FROM MataKuliah WHERE (Id_Matkul = @Id_Matkul)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Matkul", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Matkul", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nama", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nama", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jumlah_SKS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jumlah_SKS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Jenis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jenis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semester", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Semester", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@No_Pegawai", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "No_Pegawai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Prodi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Prodi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Matkul", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Matkul", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nama", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nama", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jumlah_SKS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jumlah_SKS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Jenis", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Jenis", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Semester", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Semester", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_No_Pegawai", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "No_Pegawai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Prodi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Prodi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -5330,8 +5296,8 @@ SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prod
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prodi" +
-                " FROM dbo.MataKuliah";
+            this._commandCollection[0].CommandText = "SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, No_Pegawai, Id_Prodi FROM db" +
+                "o.MataKuliah";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5392,44 +5358,32 @@ SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Id_Matkul, string Original_Nama, int Original_Jumlah_SKS, string Original_Jenis, int Original_Semester, string Original_Status, string Original_No_Pegawai, string Original_Id_Prodi) {
+        public virtual int Delete(string Original_Id_Matkul, int Original_Jumlah_SKS, string Original_Jenis, int Original_Semester, string Original_No_Pegawai, string Original_Id_Prodi) {
             if ((Original_Id_Matkul == null)) {
                 throw new global::System.ArgumentNullException("Original_Id_Matkul");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Id_Matkul));
             }
-            if ((Original_Nama == null)) {
-                throw new global::System.ArgumentNullException("Original_Nama");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nama));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Jumlah_SKS));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Jumlah_SKS));
             if ((Original_Jenis == null)) {
                 throw new global::System.ArgumentNullException("Original_Jenis");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Jenis));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Jenis));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Semester));
-            if ((Original_Status == null)) {
-                throw new global::System.ArgumentNullException("Original_Status");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Status));
-            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Semester));
             if ((Original_No_Pegawai == null)) {
                 throw new global::System.ArgumentNullException("Original_No_Pegawai");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_No_Pegawai));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_No_Pegawai));
             }
             if ((Original_Id_Prodi == null)) {
                 throw new global::System.ArgumentNullException("Original_Id_Prodi");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Id_Prodi));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Id_Prodi));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5451,7 +5405,7 @@ SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Id_Matkul, string Nama, int Jumlah_SKS, string Jenis, int Semester, string Status, string No_Pegawai, string Id_Prodi) {
+        public virtual int Insert(string Id_Matkul, string Nama, int Jumlah_SKS, string Jenis, int Semester, string No_Pegawai, string Id_Prodi) {
             if ((Id_Matkul == null)) {
                 throw new global::System.ArgumentNullException("Id_Matkul");
             }
@@ -5472,23 +5426,17 @@ SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prod
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Jenis));
             }
             this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Semester));
-            if ((Status == null)) {
-                throw new global::System.ArgumentNullException("Status");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Status));
-            }
             if ((No_Pegawai == null)) {
                 throw new global::System.ArgumentNullException("No_Pegawai");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(No_Pegawai));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(No_Pegawai));
             }
             if ((Id_Prodi == null)) {
                 throw new global::System.ArgumentNullException("Id_Prodi");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Id_Prodi));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Id_Prodi));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5510,23 +5458,7 @@ SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Id_Matkul, 
-                    string Nama, 
-                    int Jumlah_SKS, 
-                    string Jenis, 
-                    int Semester, 
-                    string Status, 
-                    string No_Pegawai, 
-                    string Id_Prodi, 
-                    string Original_Id_Matkul, 
-                    string Original_Nama, 
-                    int Original_Jumlah_SKS, 
-                    string Original_Jenis, 
-                    int Original_Semester, 
-                    string Original_Status, 
-                    string Original_No_Pegawai, 
-                    string Original_Id_Prodi) {
+        public virtual int Update(string Id_Matkul, string Nama, int Jumlah_SKS, string Jenis, int Semester, string No_Pegawai, string Id_Prodi, string Original_Id_Matkul, int Original_Jumlah_SKS, string Original_Jenis, int Original_Semester, string Original_No_Pegawai, string Original_Id_Prodi) {
             if ((Id_Matkul == null)) {
                 throw new global::System.ArgumentNullException("Id_Matkul");
             }
@@ -5547,61 +5479,43 @@ SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prod
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Jenis));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Semester));
-            if ((Status == null)) {
-                throw new global::System.ArgumentNullException("Status");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Status));
-            }
             if ((No_Pegawai == null)) {
                 throw new global::System.ArgumentNullException("No_Pegawai");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(No_Pegawai));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(No_Pegawai));
             }
             if ((Id_Prodi == null)) {
                 throw new global::System.ArgumentNullException("Id_Prodi");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Id_Prodi));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Id_Prodi));
             }
             if ((Original_Id_Matkul == null)) {
                 throw new global::System.ArgumentNullException("Original_Id_Matkul");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Id_Matkul));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Id_Matkul));
             }
-            if ((Original_Nama == null)) {
-                throw new global::System.ArgumentNullException("Original_Nama");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Nama));
-            }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Jumlah_SKS));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Jumlah_SKS));
             if ((Original_Jenis == null)) {
                 throw new global::System.ArgumentNullException("Original_Jenis");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Jenis));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Jenis));
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Semester));
-            if ((Original_Status == null)) {
-                throw new global::System.ArgumentNullException("Original_Status");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Status));
-            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Semester));
             if ((Original_No_Pegawai == null)) {
                 throw new global::System.ArgumentNullException("Original_No_Pegawai");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_No_Pegawai));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_No_Pegawai));
             }
             if ((Original_Id_Prodi == null)) {
                 throw new global::System.ArgumentNullException("Original_Id_Prodi");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Id_Prodi));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Id_Prodi));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5623,8 +5537,8 @@ SELECT Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nama, int Jumlah_SKS, string Jenis, int Semester, string Status, string No_Pegawai, string Id_Prodi, string Original_Id_Matkul, string Original_Nama, int Original_Jumlah_SKS, string Original_Jenis, int Original_Semester, string Original_Status, string Original_No_Pegawai, string Original_Id_Prodi) {
-            return this.Update(Original_Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, Status, No_Pegawai, Id_Prodi, Original_Id_Matkul, Original_Nama, Original_Jumlah_SKS, Original_Jenis, Original_Semester, Original_Status, Original_No_Pegawai, Original_Id_Prodi);
+        public virtual int Update(string Nama, int Jumlah_SKS, string Jenis, int Semester, string No_Pegawai, string Id_Prodi, string Original_Id_Matkul, int Original_Jumlah_SKS, string Original_Jenis, int Original_Semester, string Original_No_Pegawai, string Original_Id_Prodi) {
+            return this.Update(Original_Id_Matkul, Nama, Jumlah_SKS, Jenis, Semester, No_Pegawai, Id_Prodi, Original_Id_Matkul, Original_Jumlah_SKS, Original_Jenis, Original_Semester, Original_No_Pegawai, Original_Id_Prodi);
         }
     }
     

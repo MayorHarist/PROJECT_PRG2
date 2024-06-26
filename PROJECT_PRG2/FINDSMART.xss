@@ -7,7 +7,7 @@
 <DiagramLayout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ex:showrelationlabel="False" ViewPortX="-10" ViewPortY="184" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Dosen" ZOrder="1" X="566" Y="202" Height="371" Width="247" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="304" />
-    <Shape ID="DesignTable:MataKuliah" ZOrder="12" X="150" Y="204" Height="317" Width="293" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="250" />
+    <Shape ID="DesignTable:MataKuliah" ZOrder="12" X="150" Y="204" Height="290" Width="293" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="223" />
     <Shape ID="DesignTable:Mahasiswa" ZOrder="4" X="153" Y="787" Height="425" Width="288" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="358" />
     <Shape ID="DesignTable:Pengumuman" ZOrder="8" X="941" Y="710" Height="263" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="196" />
     <Shape ID="DesignTable:TenagaKependidikan" ZOrder="10" X="878" Y="209" Height="371" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="304" />
@@ -60,7 +60,7 @@
         </Point>
         <Point>
           <X>426</X>
-          <Y>521</Y>
+          <Y>494</Y>
         </Point>
       </RoutePoints>
     </Connector>
