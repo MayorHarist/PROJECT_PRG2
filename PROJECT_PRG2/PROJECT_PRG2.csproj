@@ -196,6 +196,12 @@
     <Compile Include="CRUD_Tendik\UpTendik.Designer.cs">
       <DependentUpon>UpTendik.cs</DependentUpon>
     </Compile>
+    <Compile Include="DasboardTendik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DasboardTendik.Designer.cs">
+      <DependentUpon>DasboardTendik.cs</DependentUpon>
+    </Compile>
     <Compile Include="FINDSMART.cs">
       <DependentUpon>FINDSMART.xsd</DependentUpon>
     </Compile>
@@ -346,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Tendik\UpTendik.resx">
       <DependentUpon>UpTendik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DasboardTendik.resx">
+      <DependentUpon>DasboardTendik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginTenagaPendidik.resx">
       <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
