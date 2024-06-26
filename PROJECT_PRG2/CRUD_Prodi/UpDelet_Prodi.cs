@@ -23,7 +23,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
 
             InitializeComponent();
-            panelData.Height = 0;
+            /*panelData.Height = 0;
             panelTransaksi.Height = 0;
             panelLaporan.Height = 0;
             timerData.Interval = 10;
@@ -31,7 +31,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             timerTRS.Interval = 10;
             timerTRS.Tick += timerTRS_Tick;
             timerLaporan.Interval = 10;
-            timerLaporan.Tick += timerLaporan_Tick;
+            timerLaporan.Tick += timerLaporan_Tick;*/
         }
 
         private void UpDelet_Prodi_Load(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'fINDSMARTDataSet3.ProgramStudi' table. You can move, or remove it, as needed.
-
+            
 
 
         }
@@ -265,6 +265,13 @@ namespace PROJECT_PRG2.CRUD_Prodi
                     }
                 }
             }
+        }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            DasboardTendik dasboardTendik = new DasboardTendik();
+            dasboardTendik.Show();
+            this.Hide();
         }
     }
 }

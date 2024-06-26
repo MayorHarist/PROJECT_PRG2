@@ -20,10 +20,11 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         private void UpDeletMahasiswa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.Mahasiswa' table. You can move, or remove it, as needed.
-            this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet6.Mahasiswa);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Mahasiswa' table. You can move, or remove it, as needed.
+            this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
+            
 
             // Set default state of controls
             SetControlsEnabled(false);
@@ -87,8 +88,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Memperbarui data di tampilan (jika ada)
-                    this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet6.Mahasiswa);
-
+                    this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
                     // Panggil metode clear() jika ingin membersihkan form setelah update
                     clear();
                     SetControlsEnabled(false);
@@ -218,7 +218,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
                     MessageBox.Show("Data berhasil dihapus", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet6.Mahasiswa);
+                    this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
                     clear();
                     SetControlsEnabled(false);
                 }
@@ -233,6 +233,13 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         {
             InputMahasiswa inputMahasiswa = new InputMahasiswa();
             inputMahasiswa.Show();
+            this.Hide();
+        }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            DasboardTendik dasboardTendik = new DasboardTendik();  
+            dasboardTendik.Show();
             this.Hide();
         }
     }

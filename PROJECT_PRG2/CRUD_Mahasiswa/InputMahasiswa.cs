@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROJECT_PRG2.CRUD_Prodi;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
@@ -15,8 +16,9 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         private void InputMahasiswa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+           
 
         }
 
@@ -135,6 +137,13 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                 e.Handled = true; // Menghentikan input karakter yang bukan angka
                 MessageBox.Show("Nomor telepon hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            UpDeletMahasiswa upDeletMahasiswa = new UpDeletMahasiswa();
+            upDeletMahasiswa.Show();
+            this.Hide();
         }
     }
 }

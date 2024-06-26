@@ -32,8 +32,8 @@ namespace PROJECT_PRG2
 
         private void btnLoginTendik_Click(object sender, EventArgs e)
         {
-            InputDosen inputDosen = new InputDosen();
-            inputDosen.Show();
+            DasboardTendik dasboardTendik = new DasboardTendik();
+            dasboardTendik.Show();
             this.Hide();
         }
     }

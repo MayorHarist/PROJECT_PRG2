@@ -58,5 +58,12 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
             clear();    
         }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            UpDelet_Prodi upDelet_Prodi = new UpDelet_Prodi();
+            upDelet_Prodi.Show();
+            this.Hide();
+        }
     }
 }

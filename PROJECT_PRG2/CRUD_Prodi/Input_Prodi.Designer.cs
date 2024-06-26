@@ -40,6 +40,7 @@
             this.txtJenjangPendidikan = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdProdi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // label10
@@ -127,7 +128,7 @@
             this.btnSimpan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSimpan.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold);
             this.btnSimpan.ForeColor = System.Drawing.Color.White;
-            this.btnSimpan.Location = new System.Drawing.Point(709, 562);
+            this.btnSimpan.Location = new System.Drawing.Point(539, 572);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(149, 44);
@@ -147,7 +148,7 @@
             this.btnBatal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnBatal.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(945, 562);
+            this.btnBatal.Location = new System.Drawing.Point(775, 572);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(149, 44);
@@ -255,6 +256,26 @@
             this.txtIdProdi.Size = new System.Drawing.Size(254, 38);
             this.txtIdProdi.TabIndex = 33;
             // 
+            // btnKembali
+            // 
+            this.btnKembali.AutoRoundedCorners = true;
+            this.btnKembali.BackColor = System.Drawing.Color.Transparent;
+            this.btnKembali.BorderRadius = 21;
+            this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKembali.FillColor = System.Drawing.Color.Navy;
+            this.btnKembali.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKembali.ForeColor = System.Drawing.Color.White;
+            this.btnKembali.Location = new System.Drawing.Point(1002, 572);
+            this.btnKembali.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKembali.Name = "btnKembali";
+            this.btnKembali.Size = new System.Drawing.Size(149, 44);
+            this.btnKembali.TabIndex = 71;
+            this.btnKembali.Text = "Kembali";
+            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
+            // 
             // Input_Prodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -262,6 +283,7 @@
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.formProdi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -274,6 +296,7 @@
             this.Controls.Add(this.txtJenjangPendidikan);
             this.Controls.Add(this.txtNama);
             this.Controls.Add(this.txtIdProdi);
+            this.DoubleBuffered = true;
             this.Name = "Input_Prodi";
             this.Text = "Input_Prodi";
             this.ResumeLayout(false);
@@ -294,5 +317,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtJenjangPendidikan;
         private Guna.UI2.WinForms.Guna2TextBox txtNama;
         private Guna.UI2.WinForms.Guna2TextBox txtIdProdi;
+        private Guna.UI2.WinForms.Guna2Button btnKembali;
     }
 }

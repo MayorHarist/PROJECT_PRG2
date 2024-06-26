@@ -449,6 +449,7 @@
             this.btnKembali.Size = new System.Drawing.Size(377, 62);
             this.btnKembali.TabIndex = 207;
             this.btnKembali.UseTransparentBackground = true;
+            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
             // panelTransaksi
             // 

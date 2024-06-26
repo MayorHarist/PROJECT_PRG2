@@ -1,4 +1,5 @@
-﻿using PROJECT_PRG2.CRUD_Mahasiswa;
+﻿using PROJECT_PRG2.CRUD_Dosen;
+using PROJECT_PRG2.CRUD_Mahasiswa;
 using PROJECT_PRG2.CRUD_Prodi;
 using System;
 using System.Collections.Generic;
@@ -143,11 +144,23 @@ namespace PROJECT_PRG2
         }
         private void btnMahasiswa_Click(object sender, EventArgs e)
         {
-
+            UpDeletMahasiswa upDeletMahasiswa = new UpDeletMahasiswa();
+            upDeletMahasiswa.Show();
+            this.Hide();
         }
-        private void DasboardTendik_Load(object sender, EventArgs e)
-        {
 
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void btnDosen_Click(object sender, EventArgs e)
+        {
+            UpdateDeleteDosen updateDeleteDosen = new UpdateDeleteDosen();
+            updateDeleteDosen.Show();
+            this.Hide();
         }
     }
 }
