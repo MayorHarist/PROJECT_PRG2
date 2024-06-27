@@ -108,7 +108,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             {
                 string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connnectionString);
-                connection.Open();
+                /*connection.Open();
 
                 SqlCommand checkCommand = new SqlCommand("SELECT Nama, Status FROM PosisiPrestasi WHERE Id_PosisiPrestasi = @Id_PosisiPrestasi", connection);
                 checkCommand.Parameters.AddWithValue("Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
@@ -145,7 +145,26 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
                 myCommand.ExecuteNonQuery();
                 MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
+                clear();*/
+                {
+                    connection.Open();
+
+                    SqlCommand update = new SqlCommand("sp_UpdatePosisiPrestasi", connection);
+                    update.CommandType = CommandType.StoredProcedure;
+
+                    //tambahkan parameter untuk stored procedure
+                    update.Parameters.AddWithValue("@Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
+                    update.Parameters.AddWithValue("@Nama", txtNama.Text);
+                    update.Parameters.AddWithValue("@Status", txtStatus.Text);
+
+                    //eksekusi stored procedure
+                    update.ExecuteNonQuery();
+
+                    //Menampilkan pesan jika eksekusi berhasil
+                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                    clear();
+                }
             }
             catch (Exception ex)
             {
