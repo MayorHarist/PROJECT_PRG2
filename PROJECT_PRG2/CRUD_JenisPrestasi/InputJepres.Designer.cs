@@ -145,6 +145,7 @@
             this.txtNama.SelectedText = "";
             this.txtNama.Size = new System.Drawing.Size(245, 28);
             this.txtNama.TabIndex = 8;
+            this.txtNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNama_KeyPress);
             // 
             // txtPeran
             // 
@@ -208,6 +209,7 @@
             this.txtPoint.SelectedText = "";
             this.txtPoint.Size = new System.Drawing.Size(94, 28);
             this.txtPoint.TabIndex = 11;
+            this.txtPoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPoint_KeyPress);
             // 
             // btnKembali
             // 

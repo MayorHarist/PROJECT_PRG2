@@ -119,11 +119,11 @@
     <Compile Include="CRUD_JenisPrestasi\InputJepres.Designer.cs">
       <DependentUpon>InputJepres.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRUD_JenisPrestasi\Input_JenisPrestasi.cs">
+    <Compile Include="CRUD_JenisPrestasi\UDJepres.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CRUD_JenisPrestasi\Input_JenisPrestasi.Designer.cs">
-      <DependentUpon>Input_JenisPrestasi.cs</DependentUpon>
+    <Compile Include="CRUD_JenisPrestasi\UDJepres.Designer.cs">
+      <DependentUpon>UDJepres.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD_JenisPrestasi\UpdateDelete_JenisPrestasi.cs">
       <SubType>Form</SubType>
@@ -281,6 +281,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FINDSMARTDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMARTDataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,8 +332,8 @@
     <EmbeddedResource Include="CRUD_JenisPrestasi\InputJepres.resx">
       <DependentUpon>InputJepres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_JenisPrestasi\Input_JenisPrestasi.resx">
-      <DependentUpon>Input_JenisPrestasi.cs</DependentUpon>
+    <EmbeddedResource Include="CRUD_JenisPrestasi\UDJepres.resx">
+      <DependentUpon>UDJepres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_JenisPrestasi\UpdateDelete_JenisPrestasi.resx">
       <DependentUpon>UpdateDelete_JenisPrestasi.cs</DependentUpon>
@@ -502,6 +507,17 @@
     <None Include="FINDSMARTDataSet7.xss">
       <DependentUpon>FINDSMARTDataSet7.xsd</DependentUpon>
     </None>
+    <None Include="FINDSMARTDataSet8.xsc">
+      <DependentUpon>FINDSMARTDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMARTDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMARTDataSet8.xss">
+      <DependentUpon>FINDSMARTDataSet8.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -582,6 +598,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\magnifying-glass_10977492.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Jepres.png" />
+    <None Include="Resources\magnifying-glass_109774921.png" />
+    <None Include="Resources\Jepres1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
