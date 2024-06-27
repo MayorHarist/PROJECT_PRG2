@@ -203,7 +203,7 @@
             this.btnKembali.FillColor = System.Drawing.Color.Transparent;
             this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(45, 524);
+            this.btnKembali.Location = new System.Drawing.Point(37, 506);
             this.btnKembali.Name = "btnKembali";
             this.btnKembali.Size = new System.Drawing.Size(369, 66);
             this.btnKembali.TabIndex = 35;
@@ -429,7 +429,7 @@
             this.panelData.Controls.Add(this.btnDosen);
             this.panelData.Controls.Add(this.btnMahasiswa);
             this.panelData.Controls.Add(this.btnProdi);
-            this.panelData.Location = new System.Drawing.Point(0, 237);
+            this.panelData.Location = new System.Drawing.Point(-8, 219);
             this.panelData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelData.Name = "panelData";
             this.panelData.Size = new System.Drawing.Size(566, 445);
@@ -577,7 +577,7 @@
             this.btnData.FillColor = System.Drawing.Color.Transparent;
             this.btnData.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnData.ForeColor = System.Drawing.Color.White;
-            this.btnData.Location = new System.Drawing.Point(-1, 145);
+            this.btnData.Location = new System.Drawing.Point(-9, 127);
             this.btnData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnData.Name = "btnData";
             this.btnData.Size = new System.Drawing.Size(228, 84);
