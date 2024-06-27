@@ -125,12 +125,6 @@
     <Compile Include="CRUD_JenisPrestasi\UpdateDelete_JenisPrestasi.Designer.cs">
       <DependentUpon>UpdateDelete_JenisPrestasi.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRUD_JenisPrestasi\View_JenisPrestasi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRUD_JenisPrestasi\View_JenisPrestasi.Designer.cs">
-      <DependentUpon>View_JenisPrestasi.cs</DependentUpon>
-    </Compile>
     <Compile Include="CRUD_Mahasiswa\InputMahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,12 +184,6 @@
     </Compile>
     <Compile Include="CRUD_PosisiPrestasi\UpdateDelete_PosisiPrestasi.Designer.cs">
       <DependentUpon>UpdateDelete_PosisiPrestasi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CRUD_PosisiPrestasi\View_PosisiPrestasi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRUD_PosisiPrestasi\View_PosisiPrestasi.Designer.cs">
-      <DependentUpon>View_PosisiPrestasi.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD_Prodi\Input_Prodi.cs">
       <SubType>Form</SubType>
@@ -330,9 +318,6 @@
     <EmbeddedResource Include="CRUD_JenisPrestasi\UpdateDelete_JenisPrestasi.resx">
       <DependentUpon>UpdateDelete_JenisPrestasi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_JenisPrestasi\View_JenisPrestasi.resx">
-      <DependentUpon>View_JenisPrestasi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Mahasiswa\InputMahasiswa.resx">
       <DependentUpon>InputMahasiswa.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,9 +347,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_PosisiPrestasi\UpdateDelete_PosisiPrestasi.resx">
       <DependentUpon>UpdateDelete_PosisiPrestasi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_PosisiPrestasi\View_PosisiPrestasi.resx">
-      <DependentUpon>View_PosisiPrestasi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Prodi\Input_Prodi.resx">
       <DependentUpon>Input_Prodi.cs</DependentUpon>

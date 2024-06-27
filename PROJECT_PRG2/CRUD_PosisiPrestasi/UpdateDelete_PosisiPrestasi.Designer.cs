@@ -38,29 +38,28 @@
             this.btnCari = new System.Windows.Forms.Button();
             this.btnBatal = new System.Windows.Forms.Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idPosisiPrestasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.posisiPrestasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtNama = new System.Windows.Forms.TextBox();
             this.txtIdPosisiPrestasi = new System.Windows.Forms.TextBox();
-            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
-            this.posisiPrestasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.posisiPrestasiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.PosisiPrestasiTableAdapter();
-            this.idPosisiPrestasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.posisiPrestasiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHapus
             // 
             this.btnHapus.BackColor = System.Drawing.Color.Transparent;
             this.btnHapus.Image = ((System.Drawing.Image)(resources.GetObject("btnHapus.Image")));
-            this.btnHapus.Location = new System.Drawing.Point(1499, 375);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHapus.Location = new System.Drawing.Point(1272, 375);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(309, 54);
+            this.btnHapus.Size = new System.Drawing.Size(232, 44);
             this.btnHapus.TabIndex = 16;
             this.btnHapus.UseVisualStyleBackColor = false;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
@@ -69,10 +68,9 @@
             // 
             this.btnUbah.BackColor = System.Drawing.Color.Transparent;
             this.btnUbah.Image = ((System.Drawing.Image)(resources.GetObject("btnUbah.Image")));
-            this.btnUbah.Location = new System.Drawing.Point(1499, 296);
-            this.btnUbah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUbah.Location = new System.Drawing.Point(1272, 310);
             this.btnUbah.Name = "btnUbah";
-            this.btnUbah.Size = new System.Drawing.Size(309, 54);
+            this.btnUbah.Size = new System.Drawing.Size(232, 44);
             this.btnUbah.TabIndex = 15;
             this.btnUbah.UseVisualStyleBackColor = false;
             this.btnUbah.Click += new System.EventHandler(this.btnUbah_Click);
@@ -81,10 +79,9 @@
             // 
             this.btnCari.BackColor = System.Drawing.Color.Transparent;
             this.btnCari.Image = ((System.Drawing.Image)(resources.GetObject("btnCari.Image")));
-            this.btnCari.Location = new System.Drawing.Point(1499, 216);
-            this.btnCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCari.Location = new System.Drawing.Point(1272, 246);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(309, 54);
+            this.btnCari.Size = new System.Drawing.Size(232, 44);
             this.btnCari.TabIndex = 14;
             this.btnCari.UseVisualStyleBackColor = false;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
@@ -93,10 +90,9 @@
             // 
             this.btnBatal.BackColor = System.Drawing.Color.Transparent;
             this.btnBatal.Image = ((System.Drawing.Image)(resources.GetObject("btnBatal.Image")));
-            this.btnBatal.Location = new System.Drawing.Point(1499, 451);
-            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBatal.Location = new System.Drawing.Point(1272, 436);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(309, 54);
+            this.btnBatal.Size = new System.Drawing.Size(232, 44);
             this.btnBatal.TabIndex = 13;
             this.btnBatal.UseVisualStyleBackColor = false;
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
@@ -130,12 +126,11 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(171, 558);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(128, 453);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1637, 464);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1228, 377);
             this.guna2DataGridView1.TabIndex = 17;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -159,62 +154,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(801, 1035);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(553, 54);
-            this.btnRefresh.TabIndex = 18;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(667, 391);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtStatus.Multiline = true;
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(799, 37);
-            this.txtStatus.TabIndex = 21;
-            // 
-            // txtNama
-            // 
-            this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNama.Location = new System.Drawing.Point(667, 306);
-            this.txtNama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNama.Multiline = true;
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(799, 37);
-            this.txtNama.TabIndex = 20;
-            // 
-            // txtIdPosisiPrestasi
-            // 
-            this.txtIdPosisiPrestasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPosisiPrestasi.Location = new System.Drawing.Point(667, 224);
-            this.txtIdPosisiPrestasi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtIdPosisiPrestasi.Multiline = true;
-            this.txtIdPosisiPrestasi.Name = "txtIdPosisiPrestasi";
-            this.txtIdPosisiPrestasi.Size = new System.Drawing.Size(799, 37);
-            this.txtIdPosisiPrestasi.TabIndex = 19;
-            // 
-            // fINDSMARTDataSet6
-            // 
-            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
-            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // posisiPrestasiBindingSource
-            // 
-            this.posisiPrestasiBindingSource.DataMember = "PosisiPrestasi";
-            this.posisiPrestasiBindingSource.DataSource = this.fINDSMARTDataSet6;
-            // 
-            // posisiPrestasiTableAdapter
-            // 
-            this.posisiPrestasiTableAdapter.ClearBeforeFill = true;
-            // 
             // idPosisiPrestasiDataGridViewTextBoxColumn
             // 
             this.idPosisiPrestasiDataGridViewTextBoxColumn.DataPropertyName = "Id_PosisiPrestasi";
@@ -236,12 +175,64 @@
             this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
+            // posisiPrestasiBindingSource
+            // 
+            this.posisiPrestasiBindingSource.DataMember = "PosisiPrestasi";
+            this.posisiPrestasiBindingSource.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(601, 841);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(415, 44);
+            this.btnRefresh.TabIndex = 18;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.Location = new System.Drawing.Point(648, 388);
+            this.txtStatus.Multiline = true;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(600, 31);
+            this.txtStatus.TabIndex = 21;
+            // 
+            // txtNama
+            // 
+            this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNama.Location = new System.Drawing.Point(648, 319);
+            this.txtNama.Multiline = true;
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(600, 31);
+            this.txtNama.TabIndex = 20;
+            // 
+            // txtIdPosisiPrestasi
+            // 
+            this.txtIdPosisiPrestasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdPosisiPrestasi.Location = new System.Drawing.Point(648, 252);
+            this.txtIdPosisiPrestasi.Multiline = true;
+            this.txtIdPosisiPrestasi.Name = "txtIdPosisiPrestasi";
+            this.txtIdPosisiPrestasi.Size = new System.Drawing.Size(600, 31);
+            this.txtIdPosisiPrestasi.TabIndex = 19;
+            // 
+            // posisiPrestasiTableAdapter
+            // 
+            this.posisiPrestasiTableAdapter.ClearBeforeFill = true;
+            // 
             // UpdateDelete_PosisiPrestasi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1443, 857);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtNama);
             this.Controls.Add(this.txtIdPosisiPrestasi);
@@ -251,13 +242,13 @@
             this.Controls.Add(this.btnUbah);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.btnBatal);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UpdateDelete_PosisiPrestasi";
             this.Text = "Update & Delete Posisi Prestasi";
             this.Load += new System.EventHandler(this.UpdateDelete_PosisiPrestasi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.posisiPrestasiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
