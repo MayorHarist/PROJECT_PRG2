@@ -50,6 +50,7 @@
             this.btnLaporan = new Guna.UI2.WinForms.Guna2Button();
             this.btnTransaksi = new Guna.UI2.WinForms.Guna2Button();
             this.btnData = new Guna.UI2.WinForms.Guna2Button();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelLaporan.SuspendLayout();
             this.panelTransaksi.SuspendLayout();
             this.panelData.SuspendLayout();
@@ -343,6 +344,17 @@
             this.btnData.UseTransparentBackground = true;
             this.btnData.Click += new System.EventHandler(this.btnData_Click);
             // 
+            // panelMain
+            // 
+            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelMain.BackColor = System.Drawing.Color.Transparent;
+            this.panelMain.Location = new System.Drawing.Point(548, 34);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1360, 1016);
+            this.panelMain.TabIndex = 17;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            // 
             // DasboardTendik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -350,6 +362,7 @@
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.dasboard_tendik;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelLaporan);
             this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.panelTransaksi);
@@ -392,5 +405,6 @@
         private Guna.UI2.WinForms.Guna2Button btnLaporan;
         private Guna.UI2.WinForms.Guna2Button btnTransaksi;
         private Guna.UI2.WinForms.Guna2Button btnData;
+        private System.Windows.Forms.Panel panelMain;
     }
 }

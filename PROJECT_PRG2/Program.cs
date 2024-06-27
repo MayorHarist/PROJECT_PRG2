@@ -28,7 +28,7 @@ namespace PROJECT_PRG2
             //Application.Run(new InputMatkul());
             //Application.Run(new DataTendik());
             //Application.Run(new DasboardTendik());
-            Application.Run(new ViewDosen());
+            Application.Run(new DasboardTendik());
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new View_JenisPrestasi());
             //Application.Run(new UpdateDelete_JenisPrestasi());
@@ -38,7 +38,7 @@ namespace PROJECT_PRG2
             //Application.Run(new View_PosisiPrestasi());
             //Application.Run(new View_Prodi());
             //Application.Run(new UpdateDeleteMatkul());
-            Application.Run(new InputJepres());
+            //Application.Run(new InputJepres());
         }
     }
 }

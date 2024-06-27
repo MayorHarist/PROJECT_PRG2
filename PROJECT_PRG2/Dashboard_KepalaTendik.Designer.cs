@@ -1,4 +1,5 @@
-﻿namespace PROJECT_PRG2
+﻿
+namespace PROJECT_PRG2
 {
     partial class Dashboard_KepalaTendik
     {

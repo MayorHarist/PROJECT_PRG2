@@ -32,6 +32,14 @@ namespace PROJECT_PRG2
             timerTRS.Tick += timerTRS_Tick;
             timerLaporan.Interval = 10;
             timerLaporan.Tick += timerLaporan_Tick;
+
+
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+
         }
 
         private void timerData_Tick(object sender, EventArgs e)
@@ -136,11 +144,21 @@ namespace PROJECT_PRG2
             }
         }
 
-        private void btnProdi_Click(object sender, EventArgs e)
+        public void btnProdi_Click(object sender, EventArgs e)
         {
+
+            // Buat instance form UpDelet_Prodi
+            UpDelet_Prodi upDeletProdiForm = new UpDelet_Prodi();
+
+            // Atur parent form UpDelet_Prodi ke panelMain
+            upDeletProdiForm.TopLevel = false;
+            upDeletProdiForm.AutoScroll = true;
+            panelMain.Controls.Add(upDeletProdiForm);
+            upDeletProdiForm.Show();
+/*
             UpDelet_Prodi upDelet_Prodi = new UpDelet_Prodi();
             upDelet_Prodi.Show();
-            this.Hide();
+            this.Hide();*/
         }
         private void btnMahasiswa_Click(object sender, EventArgs e)
         {
@@ -162,5 +180,7 @@ namespace PROJECT_PRG2
             viewDosen.Show();
             this.Hide();
         }
+
+       
     }
 }
