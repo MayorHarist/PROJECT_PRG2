@@ -102,7 +102,6 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                     update.Parameters.AddWithValue("@Peran", txtPeran.Text);
                     update.Parameters.AddWithValue("@Penyelenggara", txtPenyelenggara.Text);
                     update.Parameters.AddWithValue("@Point", txtPoint.Text);
-                    update.Parameters.AddWithValue("@Status", txtStatus.Text);
 
                     //eksekusi stored procedure
                     update.ExecuteNonQuery();
@@ -144,7 +143,6 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 delete.CommandType = CommandType.StoredProcedure;
 
                 delete.Parameters.AddWithValue("@Id_JenisPrestasi", txtIdJenisPrestasi.Text);
-                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
                 delete.ExecuteNonQuery();
 
 
