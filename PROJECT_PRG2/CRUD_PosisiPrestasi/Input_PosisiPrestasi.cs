@@ -20,16 +20,16 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01;initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
             // Meletakkan masukan pengguna dalam variabel
             string idPosisiPrestasi = txtIdPosisiPrestasi.Text;
             string nama = txtNama.Text;
-            string status = txtStatus.Text;
+            string deskripsi = txtDeskripsi.Text;
 
             // Periksa apakah ada inputan kosong
-            if (string.IsNullOrEmpty(idPosisiPrestasi) || string.IsNullOrEmpty(nama) || string.IsNullOrEmpty(status))
+            if (string.IsNullOrEmpty(idPosisiPrestasi) || string.IsNullOrEmpty(nama))
             {
                 // Tampilkan pesan kesalahan
                 MessageBox.Show("Seluruh data wajib diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -40,7 +40,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             string message = $"Apakah data berikut sudah benar?\n\n" +
                              $"ID Posisi Prestasi: {idPosisiPrestasi}\n" +
                              $"Nama: {nama}\n" +
-                             $"Status: {status}";
+                             $"Deskripsi: {deskripsi}\n";
 
             DialogResult result = MessageBox.Show(message, "Konfirmasi Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
@@ -53,7 +53,8 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
             insert.Parameters.AddWithValue("Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
             insert.Parameters.AddWithValue("Nama", txtNama.Text);
-            insert.Parameters.AddWithValue("Status", txtStatus.Text);
+            insert.Parameters.AddWithValue("Deskripsi", txtDeskripsi.Text);
+
 
             try
             {
@@ -74,7 +75,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         {
             txtIdPosisiPrestasi.Text = "";
             txtNama.Text = "";
-            txtStatus.Text = "";
+            txtDeskripsi.Text ="";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

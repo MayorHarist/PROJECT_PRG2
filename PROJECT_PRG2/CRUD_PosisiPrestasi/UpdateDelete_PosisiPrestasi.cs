@@ -20,8 +20,9 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void UpdateDelete_PosisiPrestasi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.PosisiPrestasi' table. You can move, or remove it, as needed.
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet7.PosisiPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet6.PosisiPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet5.PosisiPrestasi' table. You can move, or remove it, as needed.
            
 
@@ -31,7 +32,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         {
             try
             {
-                string connnectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connnectionString);
                 connection.Open();
 
@@ -42,7 +43,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
                 myAdapter.Fill(dataTable);
 
                 txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
-                txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
+
                 connection.Close();
             }
             catch (Exception ex)
@@ -55,7 +56,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         {
             txtIdPosisiPrestasi.Text = "";
             txtNama.Text = "";
-            txtStatus.Text = "";
+            txtDeskripsi.Text = "";
         }
 
         /*        private void btnUbah_Click(object sender, EventArgs e)
@@ -155,7 +156,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
                     //tambahkan parameter untuk stored procedure
                     update.Parameters.AddWithValue("@Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
                     update.Parameters.AddWithValue("@Nama", txtNama.Text);
-                    update.Parameters.AddWithValue("@Status", txtStatus.Text);
+                    update.Parameters.AddWithValue("@Deskripsi", txtDeskripsi.Text);
 
                     //eksekusi stored procedure
                     update.ExecuteNonQuery();
@@ -209,7 +210,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         {
             try
             {
-                string connnectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connnectionString);
                 connection.Open();
 
@@ -233,7 +234,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
                 SqlCommand delete = new SqlCommand("sp_DeletePosisiPrestasi", connection);
                 delete.CommandType = CommandType.StoredProcedure;
                 delete.Parameters.AddWithValue("@Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
-                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
+                //delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
                 delete.ExecuteNonQuery();
 
                 MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -254,7 +255,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet5.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet6.PosisiPrestasi);
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet7.PosisiPrestasi);
         }
     }
 }
