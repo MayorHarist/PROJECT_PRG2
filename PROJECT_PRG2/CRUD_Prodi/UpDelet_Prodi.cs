@@ -85,7 +85,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
             Input_Prodi input_Prodi = new Input_Prodi();
             input_Prodi.Show();
-            this.Hide();
+            
         }
 
 

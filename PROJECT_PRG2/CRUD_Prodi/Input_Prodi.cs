@@ -81,8 +81,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            DasboardTendik dasboardTendik = new DasboardTendik();
-            dasboardTendik.Show();
+            
             this.Hide();
 
 
