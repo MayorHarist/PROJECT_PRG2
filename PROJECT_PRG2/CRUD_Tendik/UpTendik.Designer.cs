@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,7 +44,6 @@
             this.btnHapusTendik = new Guna.UI2.WinForms.Guna2Button();
             this.btnUbahTendik = new Guna.UI2.WinForms.Guna2Button();
             this.btnCariTendik = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,9 +68,6 @@
             this.txtNamaTendik = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIDTendik = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvUpTendik = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
-            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.TenagaKependidikanTableAdapter();
             this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggalLahirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,19 +78,23 @@
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.TenagaKependidikanTableAdapter();
+            this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(125, -50);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(94, -41);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(331, 25);
+            this.label11.Size = new System.Drawing.Size(269, 20);
             this.label11.TabIndex = 134;
             this.label11.Text = "DATA TENAGA KEPENDIDIKAN";
             // 
@@ -102,9 +102,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(-121, 70);
+            this.label10.Location = new System.Drawing.Point(-91, 57);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 18);
+            this.label10.Size = new System.Drawing.Size(45, 15);
             this.label10.TabIndex = 133;
             this.label10.Text = "Nama";
             // 
@@ -112,9 +113,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(-121, 116);
+            this.label7.Location = new System.Drawing.Point(-91, 94);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 18);
+            this.label7.Size = new System.Drawing.Size(96, 15);
             this.label7.TabIndex = 130;
             this.label7.Text = "Tanggal Lahir";
             // 
@@ -122,9 +124,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(-121, 165);
+            this.label6.Location = new System.Drawing.Point(-91, 134);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 18);
+            this.label6.Size = new System.Drawing.Size(98, 15);
             this.label6.TabIndex = 129;
             this.label6.Text = "Jenis Kelamin";
             // 
@@ -132,9 +135,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-121, 210);
+            this.label5.Location = new System.Drawing.Point(-91, 171);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 18);
+            this.label5.Size = new System.Drawing.Size(51, 15);
             this.label5.TabIndex = 128;
             this.label5.Text = "Alamat";
             // 
@@ -142,9 +146,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-121, 25);
+            this.label1.Location = new System.Drawing.Point(-91, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 18);
+            this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 124;
             this.label1.Text = "ID TKDN";
             // 
@@ -152,8 +157,8 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(-80, 25);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(-60, 20);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel2.TabIndex = 123;
@@ -164,8 +169,8 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(-80, 25);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(-60, 20);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel1.TabIndex = 122;
@@ -174,7 +179,7 @@
             // btnBatalUpTendik
             // 
             this.btnBatalUpTendik.AutoRoundedCorners = true;
-            this.btnBatalUpTendik.BorderRadius = 21;
+            this.btnBatalUpTendik.BorderRadius = 17;
             this.btnBatalUpTendik.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBatalUpTendik.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBatalUpTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -182,17 +187,17 @@
             this.btnBatalUpTendik.FillColor = System.Drawing.Color.HotPink;
             this.btnBatalUpTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatalUpTendik.ForeColor = System.Drawing.Color.White;
-            this.btnBatalUpTendik.Location = new System.Drawing.Point(915, 395);
-            this.btnBatalUpTendik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBatalUpTendik.Location = new System.Drawing.Point(1453, 509);
+            this.btnBatalUpTendik.Margin = new System.Windows.Forms.Padding(2);
             this.btnBatalUpTendik.Name = "btnBatalUpTendik";
-            this.btnBatalUpTendik.Size = new System.Drawing.Size(149, 44);
+            this.btnBatalUpTendik.Size = new System.Drawing.Size(62, 36);
             this.btnBatalUpTendik.TabIndex = 162;
             this.btnBatalUpTendik.Text = "Batal";
             // 
             // btnHapusTendik
             // 
             this.btnHapusTendik.AutoRoundedCorners = true;
-            this.btnHapusTendik.BorderRadius = 21;
+            this.btnHapusTendik.BorderRadius = 17;
             this.btnHapusTendik.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHapusTendik.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHapusTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -200,10 +205,10 @@
             this.btnHapusTendik.FillColor = System.Drawing.Color.HotPink;
             this.btnHapusTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapusTendik.ForeColor = System.Drawing.Color.White;
-            this.btnHapusTendik.Location = new System.Drawing.Point(1139, 395);
-            this.btnHapusTendik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHapusTendik.Location = new System.Drawing.Point(1524, 509);
+            this.btnHapusTendik.Margin = new System.Windows.Forms.Padding(2);
             this.btnHapusTendik.Name = "btnHapusTendik";
-            this.btnHapusTendik.Size = new System.Drawing.Size(149, 44);
+            this.btnHapusTendik.Size = new System.Drawing.Size(70, 36);
             this.btnHapusTendik.TabIndex = 161;
             this.btnHapusTendik.Text = "Hapus";
             this.btnHapusTendik.Click += new System.EventHandler(this.btnHapusTendik_Click);
@@ -211,7 +216,7 @@
             // btnUbahTendik
             // 
             this.btnUbahTendik.AutoRoundedCorners = true;
-            this.btnUbahTendik.BorderRadius = 21;
+            this.btnUbahTendik.BorderRadius = 17;
             this.btnUbahTendik.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUbahTendik.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUbahTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -219,10 +224,10 @@
             this.btnUbahTendik.FillColor = System.Drawing.Color.HotPink;
             this.btnUbahTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUbahTendik.ForeColor = System.Drawing.Color.White;
-            this.btnUbahTendik.Location = new System.Drawing.Point(667, 395);
-            this.btnUbahTendik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUbahTendik.Location = new System.Drawing.Point(1381, 509);
+            this.btnUbahTendik.Margin = new System.Windows.Forms.Padding(2);
             this.btnUbahTendik.Name = "btnUbahTendik";
-            this.btnUbahTendik.Size = new System.Drawing.Size(149, 44);
+            this.btnUbahTendik.Size = new System.Drawing.Size(63, 36);
             this.btnUbahTendik.TabIndex = 160;
             this.btnUbahTendik.Text = "Ubah";
             this.btnUbahTendik.Click += new System.EventHandler(this.btnUbahTendik_Click);
@@ -230,40 +235,30 @@
             // btnCariTendik
             // 
             this.btnCariTendik.AutoRoundedCorners = true;
-            this.btnCariTendik.BorderRadius = 21;
+            this.btnCariTendik.BorderRadius = 17;
             this.btnCariTendik.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCariTendik.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCariTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCariTendik.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCariTendik.FillColor = System.Drawing.Color.HotPink;
+            this.btnCariTendik.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(230)))));
             this.btnCariTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCariTendik.ForeColor = System.Drawing.Color.White;
-            this.btnCariTendik.Location = new System.Drawing.Point(851, 108);
-            this.btnCariTendik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCariTendik.Location = new System.Drawing.Point(963, 103);
+            this.btnCariTendik.Margin = new System.Windows.Forms.Padding(2);
             this.btnCariTendik.Name = "btnCariTendik";
-            this.btnCariTendik.Size = new System.Drawing.Size(100, 44);
+            this.btnCariTendik.Size = new System.Drawing.Size(62, 36);
             this.btnCariTendik.TabIndex = 159;
             this.btnCariTendik.Text = "Cari";
             this.btnCariTendik.Click += new System.EventHandler(this.btnCariTendik_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(787, 38);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(331, 25);
-            this.label2.TabIndex = 158;
-            this.label2.Text = "DATA TENAGA KEPENDIDIKAN";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(540, 159);
+            this.label3.Location = new System.Drawing.Point(805, 297);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 18);
+            this.label3.Size = new System.Drawing.Size(45, 15);
             this.label3.TabIndex = 157;
             this.label3.Text = "Nama";
             // 
@@ -271,9 +266,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(995, 206);
+            this.label9.Location = new System.Drawing.Point(1401, 301);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 18);
+            this.label9.Size = new System.Drawing.Size(73, 15);
             this.label9.TabIndex = 156;
             this.label9.Text = "Username";
             // 
@@ -281,9 +277,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(995, 252);
+            this.label8.Location = new System.Drawing.Point(1404, 366);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 18);
+            this.label8.Size = new System.Drawing.Size(69, 15);
             this.label8.TabIndex = 155;
             this.label8.Text = "Password";
             // 
@@ -291,9 +288,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(540, 204);
+            this.label4.Location = new System.Drawing.Point(804, 365);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 18);
+            this.label4.Size = new System.Drawing.Size(96, 15);
             this.label4.TabIndex = 154;
             this.label4.Text = "Tanggal Lahir";
             // 
@@ -301,9 +299,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(540, 254);
+            this.label12.Location = new System.Drawing.Point(805, 430);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 18);
+            this.label12.Size = new System.Drawing.Size(98, 15);
             this.label12.TabIndex = 153;
             this.label12.Text = "Jenis Kelamin";
             // 
@@ -311,9 +310,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(540, 299);
+            this.label13.Location = new System.Drawing.Point(1119, 231);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 18);
+            this.label13.Size = new System.Drawing.Size(51, 15);
             this.label13.TabIndex = 152;
             this.label13.Text = "Alamat";
             // 
@@ -321,9 +321,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(995, 114);
+            this.label14.Location = new System.Drawing.Point(1119, 366);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 18);
+            this.label14.Size = new System.Drawing.Size(44, 15);
             this.label14.TabIndex = 151;
             this.label14.Text = "Email";
             // 
@@ -331,9 +332,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(995, 162);
+            this.label15.Location = new System.Drawing.Point(1404, 235);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(68, 18);
+            this.label15.Size = new System.Drawing.Size(59, 15);
             this.label15.TabIndex = 150;
             this.label15.Text = "Telepon";
             // 
@@ -341,9 +343,10 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(995, 299);
+            this.label16.Location = new System.Drawing.Point(1403, 430);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 18);
+            this.label16.Size = new System.Drawing.Size(47, 15);
             this.label16.TabIndex = 149;
             this.label16.Text = "Status";
             // 
@@ -351,9 +354,10 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(540, 113);
+            this.label17.Location = new System.Drawing.Point(805, 231);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 18);
+            this.label17.Size = new System.Drawing.Size(62, 15);
             this.label17.TabIndex = 148;
             this.label17.Text = "ID TKDN";
             // 
@@ -361,8 +365,8 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(581, 113);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(718, 188);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel3.TabIndex = 147;
@@ -373,8 +377,8 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(581, 113);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(718, 188);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel4.TabIndex = 146;
@@ -396,21 +400,22 @@
             this.txtStatusTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtStatusTendik.ForeColor = System.Drawing.Color.Black;
             this.txtStatusTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatusTendik.Location = new System.Drawing.Point(1108, 299);
-            this.txtStatusTendik.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtStatusTendik.Location = new System.Drawing.Point(1401, 452);
+            this.txtStatusTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtStatusTendik.Name = "txtStatusTendik";
             this.txtStatusTendik.PasswordChar = '\0';
             this.txtStatusTendik.PlaceholderText = "";
             this.txtStatusTendik.SelectedText = "";
-            this.txtStatusTendik.Size = new System.Drawing.Size(255, 38);
+            this.txtStatusTendik.Size = new System.Drawing.Size(191, 31);
             this.txtStatusTendik.TabIndex = 145;
             // 
             // TelpTendik
             // 
             this.TelpTendik.Animated = true;
+            this.TelpTendik.AutoRoundedCorners = true;
             this.TelpTendik.BackColor = System.Drawing.Color.Transparent;
             this.TelpTendik.BorderColor = System.Drawing.Color.Black;
-            this.TelpTendik.BorderRadius = 10;
+            this.TelpTendik.BorderRadius = 14;
             this.TelpTendik.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TelpTendik.DefaultText = "";
             this.TelpTendik.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -421,13 +426,13 @@
             this.TelpTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.TelpTendik.ForeColor = System.Drawing.Color.Black;
             this.TelpTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TelpTendik.Location = new System.Drawing.Point(1108, 162);
-            this.TelpTendik.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TelpTendik.Location = new System.Drawing.Point(1403, 258);
+            this.TelpTendik.Margin = new System.Windows.Forms.Padding(5);
             this.TelpTendik.Name = "TelpTendik";
             this.TelpTendik.PasswordChar = '\0';
             this.TelpTendik.PlaceholderText = "";
             this.TelpTendik.SelectedText = "";
-            this.TelpTendik.Size = new System.Drawing.Size(255, 38);
+            this.TelpTendik.Size = new System.Drawing.Size(191, 31);
             this.TelpTendik.TabIndex = 144;
             // 
             // txtEmailTendik
@@ -446,13 +451,13 @@
             this.txtEmailTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtEmailTendik.ForeColor = System.Drawing.Color.Black;
             this.txtEmailTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailTendik.Location = new System.Drawing.Point(1108, 114);
-            this.txtEmailTendik.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtEmailTendik.Location = new System.Drawing.Point(1111, 388);
+            this.txtEmailTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtEmailTendik.Name = "txtEmailTendik";
             this.txtEmailTendik.PasswordChar = '\0';
             this.txtEmailTendik.PlaceholderText = "";
             this.txtEmailTendik.SelectedText = "";
-            this.txtEmailTendik.Size = new System.Drawing.Size(255, 38);
+            this.txtEmailTendik.Size = new System.Drawing.Size(191, 31);
             this.txtEmailTendik.TabIndex = 143;
             // 
             // txtAlmatTendik
@@ -471,14 +476,14 @@
             this.txtAlmatTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtAlmatTendik.ForeColor = System.Drawing.Color.Black;
             this.txtAlmatTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAlmatTendik.Location = new System.Drawing.Point(697, 289);
-            this.txtAlmatTendik.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtAlmatTendik.Location = new System.Drawing.Point(1111, 255);
+            this.txtAlmatTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtAlmatTendik.Multiline = true;
             this.txtAlmatTendik.Name = "txtAlmatTendik";
             this.txtAlmatTendik.PasswordChar = '\0';
             this.txtAlmatTendik.PlaceholderText = "";
             this.txtAlmatTendik.SelectedText = "";
-            this.txtAlmatTendik.Size = new System.Drawing.Size(255, 59);
+            this.txtAlmatTendik.Size = new System.Drawing.Size(191, 99);
             this.txtAlmatTendik.TabIndex = 142;
             // 
             // rbPuan
@@ -492,10 +497,10 @@
             this.rbPuan.CheckedState.InnerOffset = -4;
             this.rbPuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.rbPuan.ForeColor = System.Drawing.Color.Black;
-            this.rbPuan.Location = new System.Drawing.Point(809, 254);
-            this.rbPuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbPuan.Location = new System.Drawing.Point(892, 459);
+            this.rbPuan.Margin = new System.Windows.Forms.Padding(2);
             this.rbPuan.Name = "rbPuan";
-            this.rbPuan.Size = new System.Drawing.Size(105, 22);
+            this.rbPuan.Size = new System.Drawing.Size(90, 19);
             this.rbPuan.TabIndex = 141;
             this.rbPuan.Text = "Perempuan";
             this.rbPuan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -516,10 +521,10 @@
             this.rbLaki.CheckedState.InnerOffset = -4;
             this.rbLaki.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.rbLaki.ForeColor = System.Drawing.Color.Black;
-            this.rbLaki.Location = new System.Drawing.Point(697, 254);
-            this.rbLaki.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbLaki.Location = new System.Drawing.Point(808, 457);
+            this.rbLaki.Margin = new System.Windows.Forms.Padding(2);
             this.rbLaki.Name = "rbLaki";
-            this.rbLaki.Size = new System.Drawing.Size(91, 22);
+            this.rbLaki.Size = new System.Drawing.Size(77, 19);
             this.rbLaki.TabIndex = 140;
             this.rbLaki.Text = "Laki - laki";
             this.rbLaki.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -533,18 +538,18 @@
             this.tglLahirTendik.Animated = true;
             this.tglLahirTendik.AutoRoundedCorners = true;
             this.tglLahirTendik.BackColor = System.Drawing.Color.Transparent;
-            this.tglLahirTendik.BorderRadius = 20;
+            this.tglLahirTendik.BorderRadius = 16;
             this.tglLahirTendik.Checked = true;
-            this.tglLahirTendik.FillColor = System.Drawing.Color.HotPink;
+            this.tglLahirTendik.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(173)))));
             this.tglLahirTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.tglLahirTendik.ForeColor = System.Drawing.Color.Black;
+            this.tglLahirTendik.ForeColor = System.Drawing.Color.White;
             this.tglLahirTendik.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.tglLahirTendik.Location = new System.Drawing.Point(697, 204);
-            this.tglLahirTendik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tglLahirTendik.Location = new System.Drawing.Point(799, 385);
+            this.tglLahirTendik.Margin = new System.Windows.Forms.Padding(2);
             this.tglLahirTendik.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.tglLahirTendik.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.tglLahirTendik.Name = "tglLahirTendik";
-            this.tglLahirTendik.Size = new System.Drawing.Size(255, 42);
+            this.tglLahirTendik.Size = new System.Drawing.Size(191, 34);
             this.tglLahirTendik.TabIndex = 139;
             this.tglLahirTendik.Value = new System.DateTime(2024, 6, 15, 22, 37, 28, 314);
             // 
@@ -564,13 +569,13 @@
             this.txtPassTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtPassTendik.ForeColor = System.Drawing.Color.Black;
             this.txtPassTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassTendik.Location = new System.Drawing.Point(1108, 252);
-            this.txtPassTendik.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtPassTendik.Location = new System.Drawing.Point(1401, 389);
+            this.txtPassTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassTendik.Name = "txtPassTendik";
             this.txtPassTendik.PasswordChar = '\0';
             this.txtPassTendik.PlaceholderText = "";
             this.txtPassTendik.SelectedText = "";
-            this.txtPassTendik.Size = new System.Drawing.Size(255, 38);
+            this.txtPassTendik.Size = new System.Drawing.Size(191, 31);
             this.txtPassTendik.TabIndex = 138;
             // 
             // userNmTendik
@@ -589,13 +594,13 @@
             this.userNmTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.userNmTendik.ForeColor = System.Drawing.Color.Black;
             this.userNmTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.userNmTendik.Location = new System.Drawing.Point(1111, 206);
-            this.userNmTendik.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.userNmTendik.Location = new System.Drawing.Point(1403, 323);
+            this.userNmTendik.Margin = new System.Windows.Forms.Padding(5);
             this.userNmTendik.Name = "userNmTendik";
             this.userNmTendik.PasswordChar = '\0';
             this.userNmTendik.PlaceholderText = "";
             this.userNmTendik.SelectedText = "";
-            this.userNmTendik.Size = new System.Drawing.Size(255, 38);
+            this.userNmTendik.Size = new System.Drawing.Size(191, 31);
             this.userNmTendik.TabIndex = 137;
             // 
             // txtNamaTendik
@@ -614,13 +619,13 @@
             this.txtNamaTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNamaTendik.ForeColor = System.Drawing.Color.Black;
             this.txtNamaTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNamaTendik.Location = new System.Drawing.Point(697, 159);
-            this.txtNamaTendik.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtNamaTendik.Location = new System.Drawing.Point(802, 317);
+            this.txtNamaTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtNamaTendik.Name = "txtNamaTendik";
             this.txtNamaTendik.PasswordChar = '\0';
             this.txtNamaTendik.PlaceholderText = "";
             this.txtNamaTendik.SelectedText = "";
-            this.txtNamaTendik.Size = new System.Drawing.Size(255, 38);
+            this.txtNamaTendik.Size = new System.Drawing.Size(191, 31);
             this.txtNamaTendik.TabIndex = 136;
             // 
             // txtIDTendik
@@ -639,28 +644,28 @@
             this.txtIDTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtIDTendik.ForeColor = System.Drawing.Color.Black;
             this.txtIDTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDTendik.Location = new System.Drawing.Point(697, 113);
-            this.txtIDTendik.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtIDTendik.Location = new System.Drawing.Point(801, 251);
+            this.txtIDTendik.Margin = new System.Windows.Forms.Padding(5);
             this.txtIDTendik.Name = "txtIDTendik";
             this.txtIDTendik.PasswordChar = '\0';
             this.txtIDTendik.PlaceholderText = "";
             this.txtIDTendik.SelectedText = "";
-            this.txtIDTendik.Size = new System.Drawing.Size(148, 38);
+            this.txtIDTendik.Size = new System.Drawing.Size(191, 31);
             this.txtIDTendik.TabIndex = 135;
             // 
             // dgvUpTendik
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvUpTendik.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvUpTendik.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUpTendik.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUpTendik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUpTendik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvUpTendik.ColumnHeadersHeight = 30;
             this.dgvUpTendik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvUpTendik.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -675,22 +680,22 @@
             this.passwordDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dgvUpTendik.DataSource = this.tenagaKependidikanBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUpTendik.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUpTendik.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvUpTendik.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvUpTendik.Location = new System.Drawing.Point(418, 446);
-            this.dgvUpTendik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvUpTendik.Location = new System.Drawing.Point(742, 614);
+            this.dgvUpTendik.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUpTendik.Name = "dgvUpTendik";
             this.dgvUpTendik.RowHeadersVisible = false;
             this.dgvUpTendik.RowHeadersWidth = 72;
             this.dgvUpTendik.RowTemplate.Height = 31;
-            this.dgvUpTendik.Size = new System.Drawing.Size(935, 166);
+            this.dgvUpTendik.Size = new System.Drawing.Size(903, 289);
             this.dgvUpTendik.TabIndex = 163;
             this.dgvUpTendik.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvUpTendik.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -713,20 +718,6 @@
             this.dgvUpTendik.ThemeStyle.RowsStyle.Height = 31;
             this.dgvUpTendik.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvUpTendik.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // fINDSMARTDataSet6
-            // 
-            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
-            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tenagaKependidikanBindingSource
-            // 
-            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource.DataSource = this.fINDSMARTDataSet6;
-            // 
-            // tenagaKependidikanTableAdapter
-            // 
-            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
             // 
             // idTKNDataGridViewTextBoxColumn
             // 
@@ -798,17 +789,75 @@
             this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
+            // tenagaKependidikanBindingSource
+            // 
+            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tenagaKependidikanTableAdapter
+            // 
+            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtCari
+            // 
+            this.txtCari.Animated = true;
+            this.txtCari.BackColor = System.Drawing.Color.Transparent;
+            this.txtCari.BorderColor = System.Drawing.Color.Black;
+            this.txtCari.BorderRadius = 10;
+            this.txtCari.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCari.DefaultText = "";
+            this.txtCari.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCari.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCari.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCari.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCari.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtCari.ForeColor = System.Drawing.Color.Black;
+            this.txtCari.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCari.Location = new System.Drawing.Point(1099, 108);
+            this.txtCari.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCari.Name = "txtCari";
+            this.txtCari.PasswordChar = '\0';
+            this.txtCari.PlaceholderText = "";
+            this.txtCari.SelectedText = "";
+            this.txtCari.Size = new System.Drawing.Size(191, 31);
+            this.txtCari.TabIndex = 164;
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton1.Image = global::PROJECT_PRG2.Properties.Resources.magnifying_glass_10977492;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(1037, 93);
+            this.guna2ImageButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(55, 56);
+            this.guna2ImageButton1.TabIndex = 165;
+            this.guna2ImageButton1.UseTransparentBackground = true;
+            // 
             // UpTendik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1483, 601);
+            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.DESIGN_FINDSMART__1_2;
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.txtCari);
             this.Controls.Add(this.dgvUpTendik);
             this.Controls.Add(this.btnBatalUpTendik);
             this.Controls.Add(this.btnHapusTendik);
             this.Controls.Add(this.btnUbahTendik);
             this.Controls.Add(this.btnCariTendik);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -840,13 +889,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UpTendik";
             this.Text = "UpTendik";
             this.Load += new System.EventHandler(this.UpTendik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -865,7 +914,6 @@
         private Guna.UI2.WinForms.Guna2Button btnHapusTendik;
         private Guna.UI2.WinForms.Guna2Button btnUbahTendik;
         private Guna.UI2.WinForms.Guna2Button btnCariTendik;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -903,5 +951,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private Guna.UI2.WinForms.Guna2TextBox txtCari;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }

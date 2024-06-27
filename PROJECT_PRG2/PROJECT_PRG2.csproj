@@ -565,5 +565,14 @@
   <ItemGroup>
     <None Include="Resources\magnifying-glass_10977492.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN FINDSMART %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN FINDSMART %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN FINDSMART %281%292.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
