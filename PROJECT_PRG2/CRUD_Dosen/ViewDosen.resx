@@ -123,12 +123,6 @@
   <metadata name="fINDSMARTBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>178, 7</value>
   </metadata>
-  <metadata name="fINDSMARTBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>178, 7</value>
-  </metadata>
-  <metadata name="fINDSMART.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 7</value>
-  </metadata>
   <metadata name="fINDSMART.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 7</value>
   </metadata>
@@ -147,11 +141,11 @@
   <metadata name="timerLaporan.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>542, 53</value>
   </metadata>
+  <metadata name="dosenBindingSource4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>451, 94</value>
+  </metadata>
   <metadata name="dosenBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 94</value>
-  </metadata>
-  <metadata name="fINDSMARTDataSet7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1162, 53</value>
   </metadata>
   <metadata name="fINDSMARTDataSet7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1162, 53</value>
@@ -791,7 +785,7 @@
   <data name="btnHapus.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACLSSURBVHhe7d2L
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACLSSURBVHhe7d2L
         t2RVYSdgZkVda0zia2UyM2vNHzArzhgzrIyDwO3qiPiIZohOz6TrVkP7AAUMKPJQVETFBzoahIgiKtCK
         ggiCEVQcJj5QHmLEICoKtjYgb0QFGumm95zdd2fQe3d338c5tav2+X5rfWtBV93a+5yqc/bv3nrt1oeE
         PdY8JQzW7hVWDdeFVbPHNc4IM7Ofb1zZ/PePG/cmv2kEAKoUz/H/cr6P5/4rtq8FcU3YvjY0a8Tq2T3D
@@ -946,7 +940,7 @@
   <data name="btnUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC5nSURBVHhe7d15
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC5nSURBVHhe7d15
         lFzlfebxxuBje3ImsT224z9snPhMzpmcTOLY2PH4ZM6krapqSYg1tnBsErDBxib2mBBv8XihTQB1VbUW
         BMKAEMgCBIgliNWyhYzEIlYDYpFYxCIQiE1IaO+W9Jv3Vb0dSbfflqq73/fe933v9znnM0zUy711q32f
         371VdW8H8ZNDLpB3VifJx7uaMqbakBOqdemuNuUc9f+fqyxQ//fv1X9XKquVtUa/IgCQKL2PG9jf6X3f
@@ -1151,7 +1145,7 @@
   <data name="btnTambah.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHo1SURBVHhe7d0H
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHo1SURBVHhe7d0H
         nJTVvf/x0WiiwFKUJppEATWJMbck96b8cxOVtlhubqLYYgAbsSNiTcUkGhvdhmJvAdnFEjXG2CtIVSnS
         EQSx0OtSzv/3e57fmTlz5jw7s8vM7Hme+f5er88L9uwzAV5Z5/2b2d3ZFAZjz8E3qY4HD637wSHDtp7Q
         ZWhd/0OGbR/cZdi26+j3d3Uetr2Gfn2l89C6KdSHhwytW9h56LZFh9yybbW0kVLutobdXEhbwm4KOziy
