@@ -16,6 +16,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
         public Input_Prodi()
         {
             InitializeComponent();
+            autoid();
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -43,6 +44,25 @@ namespace PROJECT_PRG2.CRUD_Prodi
             catch (Exception ex)
             {
                 MessageBox.Show("Unable to saved: " + ex.Message);
+            }
+        }
+        public string autoid()
+        {
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            SqlConnection connection = new SqlConnection(connectionstring);
+            {
+                connection.Open();
+                string countQuery = "SELECT COUNT(*) FROM ProgramStudi";
+
+                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                {
+                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
+
+                    string newID = "PROD" + count.ToString("000");
+
+                    txtIdProdi.Text = newID;
+                    return newID;
+                }
             }
         }
         private void clear()

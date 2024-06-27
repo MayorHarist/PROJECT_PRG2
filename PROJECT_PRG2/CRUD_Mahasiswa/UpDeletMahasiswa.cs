@@ -212,7 +212,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     delete.CommandType = CommandType.StoredProcedure;
 
                     delete.Parameters.AddWithValue("@NIM", txtNIM.Text);
-                    delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
 
                     delete.ExecuteNonQuery();
 

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace PROJECT_PRG2.CRUD_Tendik
@@ -175,6 +176,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            Dashboard_KepalaTendik dashboard_KepalaTendik = new Dashboard_KepalaTendik();
+            dashboard_KepalaTendik.Show();
+            this.Hide();
         }
     }
 }

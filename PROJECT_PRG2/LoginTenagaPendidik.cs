@@ -36,5 +36,11 @@ namespace PROJECT_PRG2
         {
             Application.Exit();
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

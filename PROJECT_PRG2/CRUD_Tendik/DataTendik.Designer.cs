@@ -63,9 +63,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnBatalTendik = new Guna.UI2.WinForms.Guna2Button();
             this.btnTampilTendik = new Guna.UI2.WinForms.Guna2Button();
             this.dgvTendik = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
-            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.TenagaKependidikanTableAdapter();
             this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggalLahirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,15 +73,18 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.TenagaKependidikanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTendik)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTambahTendik
             // 
             this.btnTambahTendik.AutoRoundedCorners = true;
-            this.btnTambahTendik.BorderRadius = 21;
+            this.btnTambahTendik.BorderRadius = 17;
             this.btnTambahTendik.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTambahTendik.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTambahTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -92,9 +92,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnTambahTendik.FillColor = System.Drawing.Color.HotPink;
             this.btnTambahTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambahTendik.ForeColor = System.Drawing.Color.White;
-            this.btnTambahTendik.Location = new System.Drawing.Point(233, 367);
+            this.btnTambahTendik.Location = new System.Drawing.Point(175, 298);
+            this.btnTambahTendik.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambahTendik.Name = "btnTambahTendik";
-            this.btnTambahTendik.Size = new System.Drawing.Size(149, 44);
+            this.btnTambahTendik.Size = new System.Drawing.Size(112, 36);
             this.btnTambahTendik.TabIndex = 83;
             this.btnTambahTendik.Text = "Tambah";
             this.btnTambahTendik.Click += new System.EventHandler(this.btnTambahTendik_Click);
@@ -103,10 +104,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(392, 13);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(294, 11);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(331, 25);
+            this.label11.Size = new System.Drawing.Size(269, 20);
             this.label11.TabIndex = 82;
             this.label11.Text = "DATA TENAGA KEPENDIDIKAN";
             // 
@@ -114,9 +114,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(180, 134);
+            this.label10.Location = new System.Drawing.Point(135, 109);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 18);
+            this.label10.Size = new System.Drawing.Size(45, 15);
             this.label10.TabIndex = 81;
             this.label10.Text = "Nama";
             // 
@@ -124,9 +125,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(617, 182);
+            this.label9.Location = new System.Drawing.Point(463, 148);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 18);
+            this.label9.Size = new System.Drawing.Size(73, 15);
             this.label9.TabIndex = 80;
             this.label9.Text = "Username";
             // 
@@ -134,9 +136,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(617, 229);
+            this.label8.Location = new System.Drawing.Point(463, 186);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 18);
+            this.label8.Size = new System.Drawing.Size(69, 15);
             this.label8.TabIndex = 79;
             this.label8.Text = "Password";
             // 
@@ -144,9 +147,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(180, 180);
+            this.label7.Location = new System.Drawing.Point(135, 146);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 18);
+            this.label7.Size = new System.Drawing.Size(96, 15);
             this.label7.TabIndex = 78;
             this.label7.Text = "Tanggal Lahir";
             // 
@@ -154,9 +158,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(180, 229);
+            this.label6.Location = new System.Drawing.Point(135, 186);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 18);
+            this.label6.Size = new System.Drawing.Size(98, 15);
             this.label6.TabIndex = 77;
             this.label6.Text = "Jenis Kelamin";
             // 
@@ -164,9 +169,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(180, 273);
+            this.label5.Location = new System.Drawing.Point(135, 222);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 18);
+            this.label5.Size = new System.Drawing.Size(51, 15);
             this.label5.TabIndex = 76;
             this.label5.Text = "Alamat";
             // 
@@ -174,9 +180,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(617, 91);
+            this.label4.Location = new System.Drawing.Point(463, 74);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 18);
+            this.label4.Size = new System.Drawing.Size(44, 15);
             this.label4.TabIndex = 75;
             this.label4.Text = "Email";
             // 
@@ -184,9 +191,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(617, 138);
+            this.label3.Location = new System.Drawing.Point(463, 112);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 18);
+            this.label3.Size = new System.Drawing.Size(59, 15);
             this.label3.TabIndex = 74;
             this.label3.Text = "Telepon";
             // 
@@ -194,9 +202,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(617, 275);
+            this.label2.Location = new System.Drawing.Point(463, 223);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 18);
+            this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 73;
             this.label2.Text = "Status";
             // 
@@ -204,9 +213,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 87);
+            this.label1.Location = new System.Drawing.Point(135, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 18);
+            this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 72;
             this.label1.Text = "ID TKDN";
             // 
@@ -214,7 +224,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(221, 87);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(166, 71);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel2.TabIndex = 71;
@@ -225,7 +236,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(221, 87);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(166, 71);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel1.TabIndex = 70;
@@ -247,13 +259,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtStatusTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtStatusTendik.ForeColor = System.Drawing.Color.Black;
             this.txtStatusTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatusTendik.Location = new System.Drawing.Point(716, 273);
-            this.txtStatusTendik.Margin = new System.Windows.Forms.Padding(5);
+            this.txtStatusTendik.Location = new System.Drawing.Point(537, 222);
+            this.txtStatusTendik.Margin = new System.Windows.Forms.Padding(4);
             this.txtStatusTendik.Name = "txtStatusTendik";
             this.txtStatusTendik.PasswordChar = '\0';
             this.txtStatusTendik.PlaceholderText = "";
             this.txtStatusTendik.SelectedText = "";
-            this.txtStatusTendik.Size = new System.Drawing.Size(255, 38);
+            this.txtStatusTendik.Size = new System.Drawing.Size(191, 31);
             this.txtStatusTendik.TabIndex = 69;
             // 
             // TelpTendik
@@ -272,13 +284,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.TelpTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.TelpTendik.ForeColor = System.Drawing.Color.Black;
             this.TelpTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TelpTendik.Location = new System.Drawing.Point(716, 137);
-            this.TelpTendik.Margin = new System.Windows.Forms.Padding(5);
+            this.TelpTendik.Location = new System.Drawing.Point(537, 111);
+            this.TelpTendik.Margin = new System.Windows.Forms.Padding(4);
             this.TelpTendik.Name = "TelpTendik";
             this.TelpTendik.PasswordChar = '\0';
             this.TelpTendik.PlaceholderText = "";
             this.TelpTendik.SelectedText = "";
-            this.TelpTendik.Size = new System.Drawing.Size(255, 38);
+            this.TelpTendik.Size = new System.Drawing.Size(191, 31);
             this.TelpTendik.TabIndex = 68;
             this.TelpTendik.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelpTendik_KeyPress);
             // 
@@ -298,13 +310,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtEmailTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtEmailTendik.ForeColor = System.Drawing.Color.Black;
             this.txtEmailTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailTendik.Location = new System.Drawing.Point(716, 90);
-            this.txtEmailTendik.Margin = new System.Windows.Forms.Padding(5);
+            this.txtEmailTendik.Location = new System.Drawing.Point(537, 73);
+            this.txtEmailTendik.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmailTendik.Name = "txtEmailTendik";
             this.txtEmailTendik.PasswordChar = '\0';
             this.txtEmailTendik.PlaceholderText = "";
             this.txtEmailTendik.SelectedText = "";
-            this.txtEmailTendik.Size = new System.Drawing.Size(255, 38);
+            this.txtEmailTendik.Size = new System.Drawing.Size(191, 31);
             this.txtEmailTendik.TabIndex = 67;
             // 
             // txtAlmatTendik
@@ -323,14 +335,14 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtAlmatTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtAlmatTendik.ForeColor = System.Drawing.Color.Black;
             this.txtAlmatTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAlmatTendik.Location = new System.Drawing.Point(336, 263);
-            this.txtAlmatTendik.Margin = new System.Windows.Forms.Padding(5);
+            this.txtAlmatTendik.Location = new System.Drawing.Point(252, 214);
+            this.txtAlmatTendik.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlmatTendik.Multiline = true;
             this.txtAlmatTendik.Name = "txtAlmatTendik";
             this.txtAlmatTendik.PasswordChar = '\0';
             this.txtAlmatTendik.PlaceholderText = "";
             this.txtAlmatTendik.SelectedText = "";
-            this.txtAlmatTendik.Size = new System.Drawing.Size(255, 59);
+            this.txtAlmatTendik.Size = new System.Drawing.Size(191, 48);
             this.txtAlmatTendik.TabIndex = 66;
             // 
             // rbPuan
@@ -344,9 +356,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.rbPuan.CheckedState.InnerOffset = -4;
             this.rbPuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.rbPuan.ForeColor = System.Drawing.Color.Black;
-            this.rbPuan.Location = new System.Drawing.Point(448, 229);
+            this.rbPuan.Location = new System.Drawing.Point(336, 186);
+            this.rbPuan.Margin = new System.Windows.Forms.Padding(2);
             this.rbPuan.Name = "rbPuan";
-            this.rbPuan.Size = new System.Drawing.Size(105, 22);
+            this.rbPuan.Size = new System.Drawing.Size(90, 19);
             this.rbPuan.TabIndex = 65;
             this.rbPuan.Text = "Perempuan";
             this.rbPuan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -367,9 +380,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.rbLaki.CheckedState.InnerOffset = -4;
             this.rbLaki.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.rbLaki.ForeColor = System.Drawing.Color.Black;
-            this.rbLaki.Location = new System.Drawing.Point(336, 229);
+            this.rbLaki.Location = new System.Drawing.Point(252, 186);
+            this.rbLaki.Margin = new System.Windows.Forms.Padding(2);
             this.rbLaki.Name = "rbLaki";
-            this.rbLaki.Size = new System.Drawing.Size(91, 22);
+            this.rbLaki.Size = new System.Drawing.Size(77, 19);
             this.rbLaki.TabIndex = 64;
             this.rbLaki.Text = "Laki - laki";
             this.rbLaki.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -383,17 +397,18 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.tglLahirTendik.Animated = true;
             this.tglLahirTendik.AutoRoundedCorners = true;
             this.tglLahirTendik.BackColor = System.Drawing.Color.Transparent;
-            this.tglLahirTendik.BorderRadius = 20;
+            this.tglLahirTendik.BorderRadius = 16;
             this.tglLahirTendik.Checked = true;
             this.tglLahirTendik.FillColor = System.Drawing.Color.HotPink;
             this.tglLahirTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tglLahirTendik.ForeColor = System.Drawing.Color.Black;
             this.tglLahirTendik.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.tglLahirTendik.Location = new System.Drawing.Point(336, 180);
+            this.tglLahirTendik.Location = new System.Drawing.Point(252, 146);
+            this.tglLahirTendik.Margin = new System.Windows.Forms.Padding(2);
             this.tglLahirTendik.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.tglLahirTendik.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.tglLahirTendik.Name = "tglLahirTendik";
-            this.tglLahirTendik.Size = new System.Drawing.Size(255, 42);
+            this.tglLahirTendik.Size = new System.Drawing.Size(191, 34);
             this.tglLahirTendik.TabIndex = 63;
             this.tglLahirTendik.Value = new System.DateTime(2024, 6, 15, 22, 37, 28, 314);
             // 
@@ -413,13 +428,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtPassTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtPassTendik.ForeColor = System.Drawing.Color.Black;
             this.txtPassTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassTendik.Location = new System.Drawing.Point(716, 228);
-            this.txtPassTendik.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPassTendik.Location = new System.Drawing.Point(537, 185);
+            this.txtPassTendik.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassTendik.Name = "txtPassTendik";
             this.txtPassTendik.PasswordChar = '\0';
             this.txtPassTendik.PlaceholderText = "";
             this.txtPassTendik.SelectedText = "";
-            this.txtPassTendik.Size = new System.Drawing.Size(255, 38);
+            this.txtPassTendik.Size = new System.Drawing.Size(191, 31);
             this.txtPassTendik.TabIndex = 62;
             // 
             // userNmTendik
@@ -438,13 +453,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.userNmTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.userNmTendik.ForeColor = System.Drawing.Color.Black;
             this.userNmTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.userNmTendik.Location = new System.Drawing.Point(719, 181);
-            this.userNmTendik.Margin = new System.Windows.Forms.Padding(5);
+            this.userNmTendik.Location = new System.Drawing.Point(539, 147);
+            this.userNmTendik.Margin = new System.Windows.Forms.Padding(4);
             this.userNmTendik.Name = "userNmTendik";
             this.userNmTendik.PasswordChar = '\0';
             this.userNmTendik.PlaceholderText = "";
             this.userNmTendik.SelectedText = "";
-            this.userNmTendik.Size = new System.Drawing.Size(255, 38);
+            this.userNmTendik.Size = new System.Drawing.Size(191, 31);
             this.userNmTendik.TabIndex = 61;
             // 
             // txtNamaTendik
@@ -463,13 +478,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtNamaTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNamaTendik.ForeColor = System.Drawing.Color.Black;
             this.txtNamaTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNamaTendik.Location = new System.Drawing.Point(336, 134);
-            this.txtNamaTendik.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNamaTendik.Location = new System.Drawing.Point(252, 109);
+            this.txtNamaTendik.Margin = new System.Windows.Forms.Padding(4);
             this.txtNamaTendik.Name = "txtNamaTendik";
             this.txtNamaTendik.PasswordChar = '\0';
             this.txtNamaTendik.PlaceholderText = "";
             this.txtNamaTendik.SelectedText = "";
-            this.txtNamaTendik.Size = new System.Drawing.Size(255, 38);
+            this.txtNamaTendik.Size = new System.Drawing.Size(191, 31);
             this.txtNamaTendik.TabIndex = 60;
             this.txtNamaTendik.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNamaTendik_KeyPress);
             // 
@@ -489,19 +504,19 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtIDTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtIDTendik.ForeColor = System.Drawing.Color.Black;
             this.txtIDTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDTendik.Location = new System.Drawing.Point(336, 87);
-            this.txtIDTendik.Margin = new System.Windows.Forms.Padding(5);
+            this.txtIDTendik.Location = new System.Drawing.Point(252, 71);
+            this.txtIDTendik.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDTendik.Name = "txtIDTendik";
             this.txtIDTendik.PasswordChar = '\0';
             this.txtIDTendik.PlaceholderText = "";
             this.txtIDTendik.SelectedText = "";
-            this.txtIDTendik.Size = new System.Drawing.Size(255, 38);
+            this.txtIDTendik.Size = new System.Drawing.Size(191, 31);
             this.txtIDTendik.TabIndex = 59;
             // 
             // btnBatalTendik
             // 
             this.btnBatalTendik.AutoRoundedCorners = true;
-            this.btnBatalTendik.BorderRadius = 21;
+            this.btnBatalTendik.BorderRadius = 17;
             this.btnBatalTendik.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBatalTendik.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBatalTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -509,9 +524,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnBatalTendik.FillColor = System.Drawing.Color.HotPink;
             this.btnBatalTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatalTendik.ForeColor = System.Drawing.Color.White;
-            this.btnBatalTendik.Location = new System.Drawing.Point(412, 367);
+            this.btnBatalTendik.Location = new System.Drawing.Point(309, 298);
+            this.btnBatalTendik.Margin = new System.Windows.Forms.Padding(2);
             this.btnBatalTendik.Name = "btnBatalTendik";
-            this.btnBatalTendik.Size = new System.Drawing.Size(149, 44);
+            this.btnBatalTendik.Size = new System.Drawing.Size(112, 36);
             this.btnBatalTendik.TabIndex = 84;
             this.btnBatalTendik.Text = "Batal";
             this.btnBatalTendik.Click += new System.EventHandler(this.btnBatalTendik_Click);
@@ -519,7 +535,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // btnTampilTendik
             // 
             this.btnTampilTendik.AutoRoundedCorners = true;
-            this.btnTampilTendik.BorderRadius = 21;
+            this.btnTampilTendik.BorderRadius = 17;
             this.btnTampilTendik.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTampilTendik.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTampilTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -527,9 +543,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnTampilTendik.FillColor = System.Drawing.Color.HotPink;
             this.btnTampilTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTampilTendik.ForeColor = System.Drawing.Color.White;
-            this.btnTampilTendik.Location = new System.Drawing.Point(719, 367);
+            this.btnTampilTendik.Location = new System.Drawing.Point(539, 298);
+            this.btnTampilTendik.Margin = new System.Windows.Forms.Padding(2);
             this.btnTampilTendik.Name = "btnTampilTendik";
-            this.btnTampilTendik.Size = new System.Drawing.Size(149, 44);
+            this.btnTampilTendik.Size = new System.Drawing.Size(112, 36);
             this.btnTampilTendik.TabIndex = 85;
             this.btnTampilTendik.Text = "Tampilkan";
             this.btnTampilTendik.Click += new System.EventHandler(this.btnTampilTendik_Click);
@@ -572,13 +589,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTendik.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTendik.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTendik.Location = new System.Drawing.Point(63, 418);
-            this.dgvTendik.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvTendik.Location = new System.Drawing.Point(47, 340);
             this.dgvTendik.Name = "dgvTendik";
             this.dgvTendik.ReadOnly = true;
             this.dgvTendik.RowHeadersVisible = false;
             this.dgvTendik.RowHeadersWidth = 62;
-            this.dgvTendik.Size = new System.Drawing.Size(1158, 378);
+            this.dgvTendik.Size = new System.Drawing.Size(868, 307);
             this.dgvTendik.TabIndex = 86;
             this.dgvTendik.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvTendik.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -602,20 +618,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.dgvTendik.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTendik.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvTendik.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTendik_CellContentClick);
-            // 
-            // fINDSMARTDataSet6
-            // 
-            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
-            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tenagaKependidikanBindingSource
-            // 
-            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource.DataSource = this.fINDSMARTDataSet6;
-            // 
-            // tenagaKependidikanTableAdapter
-            // 
-            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
             // 
             // idTKNDataGridViewTextBoxColumn
             // 
@@ -697,11 +699,25 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // tenagaKependidikanBindingSource
+            // 
+            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tenagaKependidikanTableAdapter
+            // 
+            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
+            // 
             // DataTendik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1426, 839);
             this.Controls.Add(this.dgvTendik);
             this.Controls.Add(this.btnTampilTendik);
             this.Controls.Add(this.btnBatalTendik);
@@ -730,13 +746,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.Controls.Add(this.userNmTendik);
             this.Controls.Add(this.txtNamaTendik);
             this.Controls.Add(this.txtIDTendik);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DataTendik";
             this.Text = "DataTendik";
             this.Load += new System.EventHandler(this.DataTendik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTendik)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
