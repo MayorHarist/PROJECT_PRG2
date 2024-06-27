@@ -54,7 +54,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.Dashboard_Kepala_Tendik;
+            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.Dashboard_Kepala_Tendik;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.btnKembali);
             this.Name = "Dashboard_KepalaTendik";

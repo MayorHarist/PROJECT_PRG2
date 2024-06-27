@@ -22,25 +22,9 @@ namespace PROJECT_PRG2
             InitializeComponent();
         }
 
-        private void LoginSbgTenDik_Load(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnLogFormTendik_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnExitLogTendik_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
         }
     }
 }

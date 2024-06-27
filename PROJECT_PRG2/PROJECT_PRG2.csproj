@@ -599,10 +599,5 @@
   <ItemGroup>
     <None Include="Resources\magnifying-glass_10977492.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Jepres.png" />
-    <None Include="Resources\magnifying-glass_109774921.png" />
-    <None Include="Resources\Jepres1.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
