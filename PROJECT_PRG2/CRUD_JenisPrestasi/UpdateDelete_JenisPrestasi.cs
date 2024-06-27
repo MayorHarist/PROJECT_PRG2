@@ -67,34 +67,52 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             {
                 string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connnectionString);
-                connection.Open();
+                /*                connection.Open();
 
-                SqlCommand myCommand = new SqlCommand();
-                myCommand.Connection = connection;
+                                SqlCommand myCommand = new SqlCommand();
+                                myCommand.Connection = connection;
 
-                myCommand.CommandText = "UPDATE JenisPrestasi " +
-                                        "SET Nama = @Nama, " +
-                                        "   Peran = @Peran, " +
-                                        "   Penyelenggara = @Penyelenggara, " +
-                                        "   Point = @Point, " +
+                                myCommand.CommandText = "UPDATE JenisPrestasi " +
+                                                        "SET Nama = @Nama, " +
+                                                        "   Peran = @Peran, " +
+                                                        "   Penyelenggara = @Penyelenggara, " +
+                                                        "   Point = @Point, " +
 
-                                        "WHERE Id_JenisPrestasi = @Id_JenisPrestasi";
+                                                        "WHERE Id_JenisPrestasi = @Id_JenisPrestasi";
 
-                // Tambahkan parameter untuk menghindari SQL injection dan masalah dengan nilai string
-                myCommand.Parameters.AddWithValue("Nama", txtNama.Text);
-                myCommand.Parameters.AddWithValue("Peran", txtPeran.Text);
-                myCommand.Parameters.AddWithValue("Penyelenggara", txtPenyelenggara.Text);
-                myCommand.Parameters.AddWithValue("Point", txtPoint.Text);
-                myCommand.Parameters.AddWithValue("Id_JenisPrestasi", txtIdJenisPrestasi.Text);
+                                // Tambahkan parameter untuk menghindari SQL injection dan masalah dengan nilai string
+                                myCommand.Parameters.AddWithValue("Nama", txtNama.Text);
+                                myCommand.Parameters.AddWithValue("Peran", txtPeran.Text);
+                                myCommand.Parameters.AddWithValue("Penyelenggara", txtPenyelenggara.Text);
+                                myCommand.Parameters.AddWithValue("Point", txtPoint.Text);
+                                myCommand.Parameters.AddWithValue("Id_JenisPrestasi", txtIdJenisPrestasi.Text);
 
-                //eksekusi perintah SQL
-                myCommand.ExecuteNonQuery();
+                                //eksekusi perintah SQL
+                                myCommand.ExecuteNonQuery();*/
 
-                //menampilkan pesan jika eksekusi berhasil
-                MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK,
+                {
+                    connection.Open();
+
+                    SqlCommand update = new SqlCommand("sp_UpdateJenisPrestasi", connection);
+                    update.CommandType = CommandType.StoredProcedure;
+
+                    //tambahkan parameter untuk stored procedure
+                    update.Parameters.AddWithValue("@Id_JenisPrestasi",txtIdJenisPrestasi.Text);
+                    update.Parameters.AddWithValue("@Nama", txtNama.Text);
+                    update.Parameters.AddWithValue("@Peran", txtPeran.Text);
+                    update.Parameters.AddWithValue("@Penyelenggara", txtPenyelenggara.Text);
+                    update.Parameters.AddWithValue("@Point", txtPoint.Text);
+                    update.Parameters.AddWithValue("@Status", txtStatus.Text);
+
+                    //eksekusi stored procedure
+                    update.ExecuteNonQuery();
+
+                    //Menampilkan pesan jika eksekusi berhasil
+                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-                clear();
+                    clear();
 
+                }
             }
             catch (Exception ex)
             {
