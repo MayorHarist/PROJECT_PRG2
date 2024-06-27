@@ -28,12 +28,12 @@ namespace PROJECT_PRG2
             //Application.Run(new InputMatkul());
             //Application.Run(new DataTendik());
             //Application.Run(new DasboardTendik());
-            //Application.Run(new ViewDosen());
+            Application.Run(new ViewDosen());
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new View_JenisPrestasi());
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new Input_JenisPrestasi());
-            Application.Run(new UpdateDelete_PosisiPrestasi());
+            //Application.Run(new UpdateDelete_PosisiPrestasi());
             //Application.Run(new Input_PosisiPrestasi());
             //Application.Run(new View_PosisiPrestasi());
             //Application.Run(new View_Prodi());
