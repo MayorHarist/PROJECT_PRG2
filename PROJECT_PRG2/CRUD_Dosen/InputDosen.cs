@@ -44,8 +44,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             insert.Parameters.AddWithValue("Alamat", txtAlamat.Text);
             insert.Parameters.AddWithValue("Email", txtEmail.Text);
             insert.Parameters.AddWithValue("Telepon", txtTelepon.Text);
-            insert.Parameters.AddWithValue("Status", txtStatus.Text);
-
+           
             try
             {
                 connection.Open();
@@ -73,7 +72,6 @@ namespace PROJECT_PRG2.CRUD_Dosen
             txtAlamat.Text = "";
             txtEmail.Text = "";
             txtTelepon.Text = "";
-            txtStatus.Text = "";
         }
 
         public string autoid()
