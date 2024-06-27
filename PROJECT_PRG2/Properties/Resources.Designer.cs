@@ -103,16 +103,6 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Dashboard_Kepala_Tendik {
-            get {
-                object obj = ResourceManager.GetObject("Dashboard Kepala Tendik", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap DESIGN_FINDSMART__1_ {
             get {
                 object obj = ResourceManager.GetObject("DESIGN FINDSMART (1)", resourceCulture);
@@ -203,19 +193,9 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login {
+        internal static System.Drawing.Bitmap LoginTendik {
             get {
-                object obj = ResourceManager.GetObject("login", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap loginTendik {
-            get {
-                object obj = ResourceManager.GetObject("loginTendik", resourceCulture);
+                object obj = ResourceManager.GetObject("LoginTendik", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
