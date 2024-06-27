@@ -40,23 +40,23 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(487, 497);
+            this.label2.Location = new System.Drawing.Point(548, 621);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 16);
+            this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 1;
             // 
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 29;
+            this.guna2Button1.BorderRadius = 37;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -64,9 +64,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(113, 555);
+            this.guna2Button1.Location = new System.Drawing.Point(127, 694);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(506, 61);
+            this.guna2Button1.Size = new System.Drawing.Size(569, 76);
             this.guna2Button1.TabIndex = 2;
             this.guna2Button1.UseTransparentBackground = true;
             // 
@@ -74,7 +75,7 @@
             // 
             this.guna2Button2.AutoRoundedCorners = true;
             this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 29;
+            this.guna2Button2.BorderRadius = 37;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -82,20 +83,21 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(113, 646);
+            this.guna2Button2.Location = new System.Drawing.Point(127, 808);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(506, 61);
+            this.guna2Button2.Size = new System.Drawing.Size(569, 76);
             this.guna2Button2.TabIndex = 3;
             this.guna2Button2.UseTransparentBackground = true;
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // LoginSbgTenDik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.loginTendik;
+            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.LoginTendik;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label2);
