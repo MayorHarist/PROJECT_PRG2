@@ -34,6 +34,8 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSandi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMasuk = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // label1
@@ -101,6 +103,43 @@
             this.txtSandi.Size = new System.Drawing.Size(501, 44);
             this.txtSandi.TabIndex = 3;
             // 
+            // btnKembali
+            // 
+            this.btnKembali.BackColor = System.Drawing.Color.Transparent;
+            this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKembali.FillColor = System.Drawing.Color.Transparent;
+            this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKembali.ForeColor = System.Drawing.Color.White;
+            this.btnKembali.Location = new System.Drawing.Point(134, 654);
+            this.btnKembali.Name = "btnKembali";
+            this.btnKembali.Size = new System.Drawing.Size(477, 67);
+            this.btnKembali.TabIndex = 5;
+            this.btnKembali.UseTransparentBackground = true;
+            // 
+            // btnMasuk
+            // 
+            this.btnMasuk.Animated = true;
+            this.btnMasuk.AutoRoundedCorners = true;
+            this.btnMasuk.BackColor = System.Drawing.Color.Transparent;
+            this.btnMasuk.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMasuk.BorderRadius = 28;
+            this.btnMasuk.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMasuk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMasuk.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMasuk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMasuk.FillColor = System.Drawing.Color.Transparent;
+            this.btnMasuk.FocusedColor = System.Drawing.Color.White;
+            this.btnMasuk.Font = new System.Drawing.Font("Poppins", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMasuk.ForeColor = System.Drawing.Color.White;
+            this.btnMasuk.Location = new System.Drawing.Point(134, 566);
+            this.btnMasuk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMasuk.Name = "btnMasuk";
+            this.btnMasuk.Size = new System.Drawing.Size(477, 58);
+            this.btnMasuk.TabIndex = 13;
+            // 
             // LoginSbgTenDik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -108,6 +147,8 @@
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.LoginTendik;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.btnMasuk);
+            this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.txtSandi);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
@@ -120,7 +161,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Tenaga Kependidikan";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.LoginSbgTenDik_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +173,7 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtSandi;
+        private Guna.UI2.WinForms.Guna2Button btnKembali;
+        private Guna.UI2.WinForms.Guna2Button btnMasuk;
     }
 }
