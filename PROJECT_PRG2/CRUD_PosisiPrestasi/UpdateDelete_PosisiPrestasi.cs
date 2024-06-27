@@ -219,6 +219,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
                 if (exists == null)
                 {
+
                     MessageBox.Show("Tidak ada data yang dihapus.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
