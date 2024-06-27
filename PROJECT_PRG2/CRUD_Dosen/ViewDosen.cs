@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using PROJECT_PRG2.CRUD_Prodi;
@@ -150,5 +151,61 @@ namespace PROJECT_PRG2.CRUD_Dosen
             inputDosen.Show();
             this.Hide();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            DasboardTendik dasboardTendik = new DasboardTendik();
+            dasboardTendik.Show();
+            this.Hide();
+        }
+
+        private void txtCari_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cek jika tombol yang ditekan adalah karakter valid (bukan karakter kontrol seperti backspace)
+            if (!char.IsControl(e.KeyChar))
+            {
+                // Tambahkan karakter baru ke teks pencarian saat ini
+                string teksPencarian = txtCari.Text + e.KeyChar;
+
+                // Panggil metode untuk menyaring DataGridView
+                FilterDataGridView(teksPencarian);
+            }
+            else if (e.KeyChar == (char)Keys.Back && txtCari.Text.Length > 0)
+            {
+                // Tangani tombol backspace
+                string teksPencarian = txtCari.Text.Substring(0, txtCari.Text.Length - 1);
+                FilterDataGridView(teksPencarian);
+            }
+        }
+
+        private void FilterDataGridView(string teksPencarian)
+        {
+            // Asumsikan `dosenTableAdapter` adalah adapter dan `fINDSMART` adalah DataSet
+            string query = $@"SELECT * FROM Dosen WHERE 
+            No_Pegawai LIKE '%{teksPencarian}%' OR 
+            NIDN LIKE '%{teksPencarian}%' OR 
+            Nama LIKE '%{teksPencarian}%' OR 
+            Bidang_Kompetensi LIKE '%{teksPencarian}%' OR 
+            Pendidikan_Terakhir LIKE '%{teksPencarian}%' OR 
+            Tanggal_Lahir LIKE '%{teksPencarian}%' OR 
+            Jenis_Kelamin LIKE '%{teksPencarian}%' OR 
+            Alamat LIKE '%{teksPencarian}%' OR 
+            Email LIKE '%{teksPencarian}%' OR 
+            Telepon LIKE '%{teksPencarian}%'
+            ";
+
+            // Buat DataTable baru untuk menampung hasil pencarian
+            DataTable hasilPencarian = new DataTable();
+
+            // Gunakan adapter untuk mengisi DataTable dengan hasil pencarian
+            using (var adapter = new SqlDataAdapter(query, dosenTableAdapter.Connection))
+            {
+                adapter.Fill(hasilPencarian);
+            }
+
+            // Perbarui DataGridView dengan hasil pencarian
+            dgvDosen.DataSource = hasilPencarian;
+        }
+
     }
 }

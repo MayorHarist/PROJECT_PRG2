@@ -141,5 +141,12 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
 
         }
+
+        private void btnKembali_Click_1(object sender, EventArgs e)
+        {
+            ViewDosen viewDosen = new ViewDosen();
+            viewDosen.Show();
+            this.Hide();
+        }
     }
 }
