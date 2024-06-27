@@ -173,6 +173,16 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loginTendik {
+            get {
+                object obj = ResourceManager.GetObject("loginTendik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap magnifying_glass_10977492 {
             get {
                 object obj = ResourceManager.GetObject("magnifying-glass_10977492", resourceCulture);

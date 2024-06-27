@@ -44,83 +44,6 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
 
         }
-
-        private void btnCari_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(txtIdProdi.Text))
-                {
-                    MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("SELECT * FROM ProgramStudi WHERE Id_Prodi=@Id_Prodi", connection);
-                    myCommand.Parameters.AddWithValue("@Id_Prodi", txtIdProdi.Text);
-                    SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
-                    myAdapter.Fill(dataTable);
-
-                    if (dataTable.Rows.Count > 0)
-                    {
-                        txtIdProdi.Text = dataTable.Rows[0]["Id_Prodi"].ToString();
-                        txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
-                        txtJenjangPendidikan.Text = dataTable.Rows[0]["Jenjang_Pendidikan"].ToString();
-                        txtAkreditasi.Text = dataTable.Rows[0]["Akreditasi"].ToString();
-                    }
-
-                   
-                    txtNama.Enabled = true;
-                    txtJenjangPendidikan.Enabled = true;
-                    txtAkreditasi.Enabled = true;
-
-                    btnUbah.Enabled = true;
-                    btnHapus.Enabled = true;
-
-                    connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnUbah_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionstring))
-                {
-                    connection.Open();
-
-                    SqlCommand update = new SqlCommand("sp_UpdateProdi", connection);
-                    update.CommandType = CommandType.StoredProcedure;
-
-                    update.Parameters.AddWithValue("@Id_Prodi", txtIdProdi.Text);
-                    update.Parameters.AddWithValue("@Nama",txtNama.Text);
-                    update.Parameters.AddWithValue("@Jenjang_Pendidikan", txtJenjangPendidikan.Text);
-                    update.Parameters.AddWithValue("@Akreditasi", txtAkreditasi.Text);
-                    // Eksekusi stored procedure
-                    update.ExecuteNonQuery();
-
-                    // Menampilkan pesan jika eksekusi berhasil
-                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-                    clear();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         private void clear()
         {
             txtIdProdi.Text = "";
@@ -142,7 +65,6 @@ namespace PROJECT_PRG2.CRUD_Prodi
                 delete.CommandType = CommandType.StoredProcedure;
 
                 delete.Parameters.AddWithValue("@Id_Prodi", txtIdProdi.Text);
-                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
 
                 delete.ExecuteNonQuery();
 
@@ -156,6 +78,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void btnTambah_Click(object sender, EventArgs e)
@@ -272,6 +195,82 @@ namespace PROJECT_PRG2.CRUD_Prodi
             DasboardTendik dasboardTendik = new DasboardTendik();
             dasboardTendik.Show();
             this.Hide();
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtIdProdi.Text))
+                {
+                    MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    DataTable dataTable = new DataTable();
+                    SqlCommand myCommand = new SqlCommand("SELECT * FROM ProgramStudi WHERE Id_Prodi=@Id_Prodi", connection);
+                    myCommand.Parameters.AddWithValue("@Id_Prodi", txtIdProdi.Text);
+                    SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
+                    myAdapter.Fill(dataTable);
+
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        txtIdProdi.Text = dataTable.Rows[0]["Id_Prodi"].ToString();
+                        txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
+                        txtJenjangPendidikan.Text = dataTable.Rows[0]["Jenjang_Pendidikan"].ToString();
+                        txtAkreditasi.Text = dataTable.Rows[0]["Akreditasi"].ToString();
+                    }
+
+
+                    
+
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
+
+        
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                using (SqlConnection connection = new SqlConnection(connectionstring))
+                {
+                    connection.Open();
+
+                    SqlCommand update = new SqlCommand("sp_UpdateProdi", connection);
+                    update.CommandType = CommandType.StoredProcedure;
+
+                    update.Parameters.AddWithValue("@Id_Prodi", txtIdProdi.Text);
+                    update.Parameters.AddWithValue("@Nama", txtNama.Text);
+                    update.Parameters.AddWithValue("@Jenjang_Pendidikan", txtJenjangPendidikan.Text);
+                    update.Parameters.AddWithValue("@Akreditasi", txtAkreditasi.Text);
+                    // Eksekusi stored procedure
+                    update.ExecuteNonQuery();
+
+                    // Menampilkan pesan jika eksekusi berhasil
+                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+                    clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

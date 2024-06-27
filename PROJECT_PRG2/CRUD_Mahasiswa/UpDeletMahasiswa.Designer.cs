@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnTambah = new Guna.UI2.WinForms.Guna2Button();
             this.btnHapus = new Guna.UI2.WinForms.Guna2Button();
             this.btnUbah = new Guna.UI2.WinForms.Guna2Button();
@@ -43,6 +43,8 @@
             this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNIM = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbProdi = new System.Windows.Forms.ComboBox();
+            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.DateTimeTanggal = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -62,10 +64,6 @@
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTahunMasuk = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
-            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
-            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mahasiswaTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.MahasiswaTableAdapter();
             this.nIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,12 +76,14 @@
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
+            this.mahasiswaTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.MahasiswaTableAdapter();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTambah
@@ -98,7 +98,7 @@
             this.btnTambah.FillColor = System.Drawing.Color.HotPink;
             this.btnTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.ForeColor = System.Drawing.Color.White;
-            this.btnTambah.Location = new System.Drawing.Point(1597, 387);
+            this.btnTambah.Location = new System.Drawing.Point(1663, 866);
             this.btnTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(149, 44);
@@ -118,7 +118,7 @@
             this.btnHapus.FillColor = System.Drawing.Color.HotPink;
             this.btnHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.Color.White;
-            this.btnHapus.Location = new System.Drawing.Point(1779, 387);
+            this.btnHapus.Location = new System.Drawing.Point(1663, 924);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(149, 44);
@@ -138,7 +138,7 @@
             this.btnUbah.FillColor = System.Drawing.Color.HotPink;
             this.btnUbah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUbah.ForeColor = System.Drawing.Color.White;
-            this.btnUbah.Location = new System.Drawing.Point(1413, 387);
+            this.btnUbah.Location = new System.Drawing.Point(1654, 793);
             this.btnUbah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUbah.Name = "btnUbah";
             this.btnUbah.Size = new System.Drawing.Size(149, 44);
@@ -171,7 +171,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(610, 252);
+            this.label3.Location = new System.Drawing.Point(605, 783);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 26);
             this.label3.TabIndex = 211;
@@ -226,7 +226,7 @@
             this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Location = new System.Drawing.Point(601, 268);
+            this.txtNama.Location = new System.Drawing.Point(596, 799);
             this.txtNama.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
@@ -267,19 +267,29 @@
             this.cbProdi.Enabled = false;
             this.cbProdi.FormattingEnabled = true;
             this.cbProdi.ItemHeight = 16;
-            this.cbProdi.Location = new System.Drawing.Point(601, 178);
+            this.cbProdi.Location = new System.Drawing.Point(596, 709);
             this.cbProdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbProdi.Name = "cbProdi";
             this.cbProdi.Size = new System.Drawing.Size(255, 24);
             this.cbProdi.TabIndex = 218;
             this.cbProdi.ValueMember = "Id_Prodi";
             // 
+            // programStudiBindingSource
+            // 
+            this.programStudiBindingSource.DataMember = "ProgramStudi";
+            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // fINDSMARTDataSet7
+            // 
+            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
+            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(610, 150);
+            this.label12.Location = new System.Drawing.Point(605, 681);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 26);
             this.label12.TabIndex = 217;
@@ -290,7 +300,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(610, 362);
+            this.label7.Location = new System.Drawing.Point(605, 893);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 26);
             this.label7.TabIndex = 220;
@@ -308,7 +318,7 @@
             this.DateTimeTanggal.Font = new System.Drawing.Font("Poppins", 9F);
             this.DateTimeTanggal.ForeColor = System.Drawing.Color.Black;
             this.DateTimeTanggal.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DateTimeTanggal.Location = new System.Drawing.Point(601, 389);
+            this.DateTimeTanggal.Location = new System.Drawing.Point(596, 920);
             this.DateTimeTanggal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DateTimeTanggal.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DateTimeTanggal.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -320,7 +330,7 @@
             // txtAlamat
             // 
             this.txtAlamat.Enabled = false;
-            this.txtAlamat.Location = new System.Drawing.Point(601, 623);
+            this.txtAlamat.Location = new System.Drawing.Point(948, 799);
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(255, 70);
             this.txtAlamat.TabIndex = 237;
@@ -331,7 +341,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1106, 607);
+            this.label1.Location = new System.Drawing.Point(1635, 693);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 26);
             this.label1.TabIndex = 236;
@@ -354,7 +364,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(1092, 623);
+            this.txtPassword.Location = new System.Drawing.Point(1621, 709);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
@@ -368,7 +378,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1106, 378);
+            this.label9.Location = new System.Drawing.Point(1298, 784);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 26);
             this.label9.TabIndex = 234;
@@ -379,7 +389,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1106, 495);
+            this.label8.Location = new System.Drawing.Point(1298, 903);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 26);
             this.label8.TabIndex = 233;
@@ -390,7 +400,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(610, 494);
+            this.label6.Location = new System.Drawing.Point(954, 691);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 26);
             this.label6.TabIndex = 232;
@@ -401,7 +411,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(610, 599);
+            this.label5.Location = new System.Drawing.Point(957, 775);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 26);
             this.label5.TabIndex = 231;
@@ -412,7 +422,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1106, 147);
+            this.label4.Location = new System.Drawing.Point(963, 907);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 26);
             this.label4.TabIndex = 230;
@@ -423,7 +433,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1106, 251);
+            this.label10.Location = new System.Drawing.Point(1298, 692);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 26);
             this.label10.TabIndex = 229;
@@ -446,7 +456,7 @@
             this.txtTelepon.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtTelepon.ForeColor = System.Drawing.Color.Black;
             this.txtTelepon.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelepon.Location = new System.Drawing.Point(1092, 268);
+            this.txtTelepon.Location = new System.Drawing.Point(1284, 709);
             this.txtTelepon.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelepon.Name = "txtTelepon";
             this.txtTelepon.PasswordChar = '\0';
@@ -472,7 +482,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(1092, 164);
+            this.txtEmail.Location = new System.Drawing.Point(949, 924);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -493,7 +503,7 @@
             this.rbPerempuan.Enabled = false;
             this.rbPerempuan.Font = new System.Drawing.Font("Poppins", 9F);
             this.rbPerempuan.ForeColor = System.Drawing.Color.Black;
-            this.rbPerempuan.Location = new System.Drawing.Point(717, 512);
+            this.rbPerempuan.Location = new System.Drawing.Point(1061, 709);
             this.rbPerempuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbPerempuan.Name = "rbPerempuan";
             this.rbPerempuan.Size = new System.Drawing.Size(121, 30);
@@ -518,7 +528,7 @@
             this.rbLaki.Enabled = false;
             this.rbLaki.Font = new System.Drawing.Font("Poppins", 9F);
             this.rbLaki.ForeColor = System.Drawing.Color.Black;
-            this.rbLaki.Location = new System.Drawing.Point(604, 512);
+            this.rbLaki.Location = new System.Drawing.Point(948, 709);
             this.rbLaki.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbLaki.Name = "rbLaki";
             this.rbLaki.Size = new System.Drawing.Size(103, 30);
@@ -547,7 +557,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(1092, 512);
+            this.txtUsername.Location = new System.Drawing.Point(1284, 920);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -573,7 +583,7 @@
             this.txtTahunMasuk.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtTahunMasuk.ForeColor = System.Drawing.Color.Black;
             this.txtTahunMasuk.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTahunMasuk.Location = new System.Drawing.Point(1092, 393);
+            this.txtTahunMasuk.Location = new System.Drawing.Point(1284, 799);
             this.txtTahunMasuk.Margin = new System.Windows.Forms.Padding(4);
             this.txtTahunMasuk.Name = "txtTahunMasuk";
             this.txtTahunMasuk.PasswordChar = '\0';
@@ -584,17 +594,17 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 34;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -611,21 +621,21 @@
             this.passwordDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.guna2DataGridView1.DataSource = this.mahasiswaBindingSource;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(651, 823);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(570, 144);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1137, 198);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1139, 488);
             this.guna2DataGridView1.TabIndex = 238;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -648,40 +658,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // btnKembali
-            // 
-            this.btnKembali.Animated = true;
-            this.btnKembali.AutoRoundedCorners = true;
-            this.btnKembali.BackColor = System.Drawing.Color.Transparent;
-            this.btnKembali.BorderRadius = 28;
-            this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKembali.FillColor = System.Drawing.Color.Transparent;
-            this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(86, 957);
-            this.btnKembali.Name = "btnKembali";
-            this.btnKembali.Size = new System.Drawing.Size(377, 59);
-            this.btnKembali.TabIndex = 239;
-            this.btnKembali.UseTransparentBackground = true;
-            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
-            // 
-            // fINDSMARTDataSet7
-            // 
-            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
-            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mahasiswaBindingSource
-            // 
-            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
-            this.mahasiswaBindingSource.DataSource = this.fINDSMARTDataSet7;
-            // 
-            // mahasiswaTableAdapter
-            // 
-            this.mahasiswaTableAdapter.ClearBeforeFill = true;
             // 
             // nIMDataGridViewTextBoxColumn
             // 
@@ -767,10 +743,34 @@
             this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
-            // programStudiBindingSource
+            // mahasiswaBindingSource
             // 
-            this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet7;
+            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
+            this.mahasiswaBindingSource.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // btnKembali
+            // 
+            this.btnKembali.Animated = true;
+            this.btnKembali.AutoRoundedCorners = true;
+            this.btnKembali.BackColor = System.Drawing.Color.Transparent;
+            this.btnKembali.BorderRadius = 28;
+            this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKembali.FillColor = System.Drawing.Color.Transparent;
+            this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKembali.ForeColor = System.Drawing.Color.White;
+            this.btnKembali.Location = new System.Drawing.Point(86, 957);
+            this.btnKembali.Name = "btnKembali";
+            this.btnKembali.Size = new System.Drawing.Size(377, 59);
+            this.btnKembali.TabIndex = 239;
+            this.btnKembali.UseTransparentBackground = true;
+            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
+            // 
+            // mahasiswaTableAdapter
+            // 
+            this.mahasiswaTableAdapter.ClearBeforeFill = true;
             // 
             // programStudiTableAdapter
             // 
@@ -820,10 +820,10 @@
             this.Text = "UpDeletMahasiswa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UpDeletMahasiswa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
