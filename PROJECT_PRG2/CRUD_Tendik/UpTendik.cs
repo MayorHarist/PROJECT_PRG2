@@ -176,5 +176,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
