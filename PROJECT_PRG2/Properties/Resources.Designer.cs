@@ -173,6 +173,16 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Jepres {
+            get {
+                object obj = ResourceManager.GetObject("Jepres", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lihat_Dosen_FIND_SMART {
             get {
                 object obj = ResourceManager.GetObject("Lihat Dosen FIND SMART", resourceCulture);
@@ -183,9 +193,9 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Lihat_Matkul_FIND_SMART {
+        internal static System.Drawing.Bitmap login {
             get {
-                object obj = ResourceManager.GetObject("Lihat Matkul FIND SMART", resourceCulture);
+                object obj = ResourceManager.GetObject("login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +203,9 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LoginTendik {
+        internal static System.Drawing.Bitmap loginTendik {
             get {
-                object obj = ResourceManager.GetObject("LoginTendik", resourceCulture);
+                object obj = ResourceManager.GetObject("loginTendik", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +213,9 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap magnifying_glass_10977492 {
+        internal static System.Drawing.Bitmap magnifying_glass_109774921 {
             get {
-                object obj = ResourceManager.GetObject("magnifying-glass_10977492", resourceCulture);
+                object obj = ResourceManager.GetObject("magnifying-glass_109774921", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

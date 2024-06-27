@@ -154,6 +154,9 @@
   <data name="DESIGN FINDSMART (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DESIGN FINDSMART (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Jepres" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jepres1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DESIGN log sebagai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DESIGN log sebagai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,7 +172,7 @@
   <data name="DESIGN FINDSMART (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DESIGN FINDSMART (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoginTendik" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoginTendik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="magnifying-glass_10977492" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magnifying-glass_10977492.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

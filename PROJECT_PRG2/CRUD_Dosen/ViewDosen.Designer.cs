@@ -1336,7 +1336,7 @@
             this.btnCari.BackColor = System.Drawing.Color.Transparent;
             this.btnCari.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnCari.HoverState.ImageSize = new System.Drawing.Size(34, 34);
-            this.btnCari.Image = global::PROJECT_PRG2.Properties.Resources.magnifying_glass_10977492;
+           // this.btnCari.Image = global::PROJECT_PRG2.Properties.Resources.magnifying_glass_10977492;
             this.btnCari.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnCari.ImageRotate = 0F;
             this.btnCari.ImageSize = new System.Drawing.Size(30, 30);
