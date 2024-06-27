@@ -32,7 +32,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
             //this.dosenTableAdapter1.Fill(this.fINDSMARTDataSet7.Dosen);
             // Load data into the 'fINDSMART.Dosen' table.
-            this.dosenTableAdapter.Fill(this.fINDSMART.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMART.Dosen);
 
             // Ensure the Guna2DataGridView scrollbars are set correctly
             this.dgvDosen.ScrollBars = ScrollBars.Both;
