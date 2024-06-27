@@ -22,7 +22,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         {
             try
             {
-                string connnectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connnectionString);
                 connection.Open();
 
@@ -36,7 +36,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 txtPeran.Text = dataTable.Rows[0]["Peran"].ToString();
                 txtPenyelenggara.Text = dataTable.Rows[0]["Penyelenggara"].ToString();
                 txtPoint.Text = dataTable.Rows[0]["Point"].ToString();
-                txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
+
                 connection.Close();
             }
             catch (Exception ex)
@@ -52,7 +52,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             txtPeran.Text = "";
             txtPenyelenggara.Text = "";
             txtPoint.Text = "";
-            txtStatus.Text = "";
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                                         "   Peran = @Peran, " +
                                         "   Penyelenggara = @Penyelenggara, " +
                                         "   Point = @Point, " +
-                                        "   Status = @Status " +
+
                                         "WHERE Id_JenisPrestasi = @Id_JenisPrestasi";
 
                 // Tambahkan parameter untuk menghindari SQL injection dan masalah dengan nilai string
@@ -85,7 +85,6 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 myCommand.Parameters.AddWithValue("Peran", txtPeran.Text);
                 myCommand.Parameters.AddWithValue("Penyelenggara", txtPenyelenggara.Text);
                 myCommand.Parameters.AddWithValue("Point", txtPoint.Text);
-                myCommand.Parameters.AddWithValue("Status", txtStatus.Text);
                 myCommand.Parameters.AddWithValue("Id_JenisPrestasi", txtIdJenisPrestasi.Text);
 
                 //eksekusi perintah SQL
@@ -143,8 +142,10 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void UpdateDelete_JenisPrestasi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter2.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.JenisPrestasi' table. You can move, or remove it, as needed.
-            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet6.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet6.JenisPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet4.JenisPrestasi' table. You can move, or remove it, as needed.
             
 
@@ -153,7 +154,8 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet4.JenisPrestasi' table. You can move, or remove it, as needed.
-            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet4.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet4.JenisPrestasi);
+            this.jenisPrestasiTableAdapter2.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
         }
 
         private void txtPoint_KeyPress(object sender, KeyPressEventArgs e)

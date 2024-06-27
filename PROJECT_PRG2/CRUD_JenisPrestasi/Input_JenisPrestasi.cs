@@ -27,7 +27,6 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             txtPeran.Text = "";
             txtPenyelenggara.Text = "";
             txtPoint.Text = "";
-            txtStatus.Text = "";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -48,7 +47,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01;initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
             // Meletakkan masukan pengguna dalam variabel
@@ -57,12 +56,12 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             string peran = txtPeran.Text;
             string penyelenggara = txtPenyelenggara.Text;
             string point = txtPoint.Text;
-            string status = txtStatus.Text;
+
 
             // Periksa apakah ada inputan kosong
             if (string.IsNullOrEmpty(idJenisPrestasi) || string.IsNullOrEmpty(nama) ||
                 string.IsNullOrEmpty(peran) || string.IsNullOrEmpty(penyelenggara) ||
-                string.IsNullOrEmpty(point) || string.IsNullOrEmpty(status))
+                string.IsNullOrEmpty(point))
             {
                 // Tampilkan pesan kesalahan
                 MessageBox.Show("Seluruh data wajib diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -75,8 +74,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                              $"Nama: {nama}\n" +
                              $"Peran: {peran}\n" +
                              $"Penyelenggara: {penyelenggara}\n" +
-                             $"Point: {point}\n" +
-                             $"Status: {status}";
+                             $"Point: {point}\n";
 
             DialogResult result = MessageBox.Show(message, "Konfirmasi Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
@@ -93,7 +91,6 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             insert.Parameters.AddWithValue("Peran", txtPeran.Text);
             insert.Parameters.AddWithValue("Penyelenggara", txtPenyelenggara.Text);
             insert.Parameters.AddWithValue("Point", txtPoint.Text);
-            insert.Parameters.AddWithValue("Status", txtStatus.Text);
 
             try
             {

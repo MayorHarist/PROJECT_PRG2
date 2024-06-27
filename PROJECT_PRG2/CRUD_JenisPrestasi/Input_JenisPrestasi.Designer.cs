@@ -33,7 +33,6 @@
             this.txtPeran = new System.Windows.Forms.TextBox();
             this.txtPenyelenggara = new System.Windows.Forms.TextBox();
             this.txtPoint = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.btnSimpan = new System.Windows.Forms.Button();
             this.btnBatal = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtIdJenisPrestasi
@@ -94,16 +92,6 @@
             this.txtPoint.Size = new System.Drawing.Size(475, 33);
             this.txtPoint.TabIndex = 6;
             this.txtPoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPoint_KeyPress);
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(1242, 716);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStatus.Multiline = true;
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(475, 33);
-            this.txtStatus.TabIndex = 10;
             // 
             // btnSimpan
             // 
@@ -203,18 +191,6 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Point";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(806, 716);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 35);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Status";
-            // 
             // Input_JenisPrestasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,7 +198,6 @@
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.DESIGN_JenisPrestasi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -230,7 +205,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.btnSimpan);
-            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtPoint);
             this.Controls.Add(this.txtPenyelenggara);
             this.Controls.Add(this.txtPeran);
@@ -252,7 +226,6 @@
         private System.Windows.Forms.TextBox txtPeran;
         private System.Windows.Forms.TextBox txtPenyelenggara;
         private System.Windows.Forms.TextBox txtPoint;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.Button btnBatal;
         private System.Windows.Forms.Label label1;
@@ -260,6 +233,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
     }
 }
