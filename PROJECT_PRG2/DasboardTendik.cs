@@ -158,8 +158,8 @@ namespace PROJECT_PRG2
 
         private void btnDosen_Click(object sender, EventArgs e)
         {
-            UpdateDeleteDosen updateDeleteDosen = new UpdateDeleteDosen();
-            updateDeleteDosen.Show();
+            ViewDosen viewDosen = new ViewDosen();
+            viewDosen.Show();
             this.Hide();
         }
     }

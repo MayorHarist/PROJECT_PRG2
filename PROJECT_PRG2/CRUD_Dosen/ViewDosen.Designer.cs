@@ -131,6 +131,7 @@
             this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.dosenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dosenTableAdapter1 = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.DosenTableAdapter();
+            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART)).BeginInit();
@@ -210,6 +211,7 @@
             this.btnKembali.ForeColor = System.Drawing.Color.White;
             this.btnKembali.Location = new System.Drawing.Point(40, 419);
             this.btnKembali.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKembali.Location = new System.Drawing.Point(37, 506);
             this.btnKembali.Name = "btnKembali";
             this.btnKembali.Size = new System.Drawing.Size(328, 53);
             this.btnKembali.TabIndex = 35;
@@ -435,6 +437,8 @@
             this.panelData.Controls.Add(this.btnMahasiswa);
             this.panelData.Controls.Add(this.btnProdi);
             this.panelData.Location = new System.Drawing.Point(0, 190);
+            this.panelData.Location = new System.Drawing.Point(-8, 219);
+            this.panelData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelData.Name = "panelData";
             this.panelData.Size = new System.Drawing.Size(503, 356);
             this.panelData.TabIndex = 41;
@@ -574,6 +578,8 @@
             this.btnData.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnData.ForeColor = System.Drawing.Color.White;
             this.btnData.Location = new System.Drawing.Point(-1, 116);
+            this.btnData.Location = new System.Drawing.Point(-9, 127);
+            this.btnData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnData.Name = "btnData";
             this.btnData.Size = new System.Drawing.Size(203, 67);
             this.btnData.TabIndex = 38;
@@ -1188,6 +1194,7 @@
             this.txtCari.SelectedText = "";
             this.txtCari.Size = new System.Drawing.Size(254, 38);
             this.txtCari.TabIndex = 89;
+            this.txtCari.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCari_KeyPress);
             // 
             // gambarCari
             // 
@@ -1308,6 +1315,22 @@
             // 
             this.dosenTableAdapter1.ClearBeforeFill = true;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.FillColor = System.Drawing.Color.Transparent;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(68, 991);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(380, 67);
+            this.btnBack.TabIndex = 96;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // ViewDosen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1316,6 +1339,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1946, 1106);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnUpdate);
@@ -1460,5 +1485,6 @@
         private FINDSMARTDataSet7 fINDSMARTDataSet7;
         private System.Windows.Forms.BindingSource dosenBindingSource3;
         private FINDSMARTDataSet7TableAdapters.DosenTableAdapter dosenTableAdapter1;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
     }
 }
