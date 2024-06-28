@@ -39,7 +39,8 @@ namespace PROJECT_PRG2
             //Application.Run(new View_Prodi());
             //Application.Run(new UpdateDeleteMatkul());
             //Application.Run(new InputJepres());
-            Application.Run(new UDJepres());
+            //Application.Run(new UDJepres());
+            Application.Run(new LoginSbgTenDik());
         }
     }
 }

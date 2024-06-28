@@ -16,15 +16,57 @@ namespace PROJECT_PRG2
 {
     public partial class LoginSbgTenDik : Form
     {
-        
+        private string connectionString = "integrated security=true; data source =.; initial catalog=FINDSMART";
+
         public LoginSbgTenDik()
         {
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnMasuk_Click(object sender, EventArgs e)
         {
+            string username = txtUsername.Text;
+            string password = txtSandi.Text;
 
+
+            // SQL Query untuk memverifikasi username dan password
+            string query = "SELECT COUNT(1) FROM TenagaKependidikan WHERE Username=@Username AND Password=@Password";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    // Tambahkan parameter untuk query
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+
+                    try
+                    {
+                        // Buka koneksi ke database
+                        conn.Open();
+
+                        // Eksekusi query dan ambil hasil
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        if (count == 1)
+                        {
+                            MessageBox.Show("Login berhasil!");
+                            // Anda dapat membuka form baru di sini atau mengarahkan pengguna ke bagian lain dari aplikasi Anda
+                            DasboardTendik dasboardTendik = new DasboardTendik();
+                            dasboardTendik.Show();
+                            this.Hide(); // Sembunyikan form login saat form kedua dibuka
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nama Pengguna dan Kata Sandi salah.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }
