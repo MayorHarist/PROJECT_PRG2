@@ -141,8 +141,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            UpDeletMahasiswa upDeletMahasiswa = new UpDeletMahasiswa();
-            upDeletMahasiswa.Show();
+           
             this.Hide();
         }
     }

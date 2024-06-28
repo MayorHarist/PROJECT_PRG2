@@ -1,5 +1,7 @@
 ﻿using PROJECT_PRG2.CRUD_Dosen;
+using PROJECT_PRG2.CRUD_JenisPrestasi;
 using PROJECT_PRG2.CRUD_Mahasiswa;
+using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using PROJECT_PRG2.CRUD_Prodi;
 using System;
 using System.Collections.Generic;
@@ -162,9 +164,13 @@ namespace PROJECT_PRG2
         }
         private void btnMahasiswa_Click(object sender, EventArgs e)
         {
+            // Buat instance form UpDelete_Mahasiswa
             UpDeletMahasiswa upDeletMahasiswa = new UpDeletMahasiswa();
+            // Atur parent form UpDelet_Prodi ke panelMain
+            upDeletMahasiswa.TopLevel = false;
+            upDeletMahasiswa.AutoScroll = true;
+            panelMain.Controls.Add(upDeletMahasiswa);
             upDeletMahasiswa.Show();
-            this.Hide();
         }
 
         private void btnKembali_Click(object sender, EventArgs e)
@@ -176,11 +182,29 @@ namespace PROJECT_PRG2
 
         private void btnDosen_Click(object sender, EventArgs e)
         {
-            ViewDosen viewDosen = new ViewDosen();
-            viewDosen.Show();
-            this.Hide();
+            
         }
 
-       
+        private void btnJenisPrestasi_Click(object sender, EventArgs e)
+        {
+            // Buat instance form UDJenisPrestasi
+            UDJepres udJepres = new UDJepres();
+            // Atur parent form UpDelet_Prodi ke panelMain
+            udJepres.TopLevel = false;
+            udJepres.AutoScroll = true;
+            panelMain.Controls.Add(udJepres);
+            udJepres.Show();
+        }
+
+        private void btnPosisiPrestasi_Click(object sender, EventArgs e)
+        {
+            // Buat instance form UDPosisPrestasi
+            UDPospres udPospres = new UDPospres();
+            // Atur parent form UpDelet_Prodi ke panelMain
+            udPospres.TopLevel = false;
+            udPospres.AutoScroll = true;
+            panelMain.Controls.Add(udPospres);
+            udPospres.Show();
+        }
     }
 }

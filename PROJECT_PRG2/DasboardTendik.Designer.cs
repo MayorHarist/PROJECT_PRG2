@@ -115,6 +115,7 @@
             this.btnJenisPrestasi.Size = new System.Drawing.Size(500, 55);
             this.btnJenisPrestasi.TabIndex = 6;
             this.btnJenisPrestasi.Text = "Jenis Prestasi";
+            this.btnJenisPrestasi.Click += new System.EventHandler(this.btnJenisPrestasi_Click);
             // 
             // btnPosisiPrestasi
             // 
@@ -130,6 +131,7 @@
             this.btnPosisiPrestasi.Size = new System.Drawing.Size(500, 55);
             this.btnPosisiPrestasi.TabIndex = 5;
             this.btnPosisiPrestasi.Text = "Posisi Prestasi";
+            this.btnPosisiPrestasi.Click += new System.EventHandler(this.btnPosisiPrestasi_Click);
             // 
             // btnPengumuman
             // 

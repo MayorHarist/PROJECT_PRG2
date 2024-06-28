@@ -48,9 +48,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(252, 26);
+            this.label1.Location = new System.Drawing.Point(336, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 33);
+            this.label1.Size = new System.Drawing.Size(255, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Form Jenis Prestasi";
             // 
@@ -58,9 +59,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 78);
+            this.label2.Location = new System.Drawing.Point(40, 96);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 28);
+            this.label2.Size = new System.Drawing.Size(181, 35);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID Jenis Prestasi";
             // 
@@ -68,9 +70,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 118);
+            this.label3.Location = new System.Drawing.Point(40, 145);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 28);
+            this.label3.Size = new System.Drawing.Size(79, 35);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nama";
             // 
@@ -78,9 +81,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 161);
+            this.label4.Location = new System.Drawing.Point(40, 198);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 28);
+            this.label4.Size = new System.Drawing.Size(75, 35);
             this.label4.TabIndex = 3;
             this.label4.Text = "Peran";
             // 
@@ -88,9 +92,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 205);
+            this.label5.Location = new System.Drawing.Point(40, 252);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 28);
+            this.label5.Size = new System.Drawing.Size(173, 35);
             this.label5.TabIndex = 4;
             this.label5.Text = "Penyelenggara";
             // 
@@ -98,16 +103,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 249);
+            this.label6.Location = new System.Drawing.Point(40, 306);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 28);
+            this.label6.Size = new System.Drawing.Size(67, 35);
             this.label6.TabIndex = 5;
             this.label6.Text = "Point";
             // 
             // txtIdJenisPrestasi
             // 
             this.txtIdJenisPrestasi.AutoRoundedCorners = true;
-            this.txtIdJenisPrestasi.BorderRadius = 13;
+            this.txtIdJenisPrestasi.BorderRadius = 16;
             this.txtIdJenisPrestasi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIdJenisPrestasi.DefaultText = "";
             this.txtIdJenisPrestasi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -117,20 +123,21 @@
             this.txtIdJenisPrestasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdJenisPrestasi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdJenisPrestasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdJenisPrestasi.Location = new System.Drawing.Point(259, 78);
+            this.txtIdJenisPrestasi.Location = new System.Drawing.Point(345, 96);
+            this.txtIdJenisPrestasi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdJenisPrestasi.Name = "txtIdJenisPrestasi";
             this.txtIdJenisPrestasi.PasswordChar = '\0';
             this.txtIdJenisPrestasi.PlaceholderText = "";
             this.txtIdJenisPrestasi.ReadOnly = true;
             this.txtIdJenisPrestasi.SelectedText = "";
-            this.txtIdJenisPrestasi.Size = new System.Drawing.Size(175, 28);
+            this.txtIdJenisPrestasi.Size = new System.Drawing.Size(233, 34);
             this.txtIdJenisPrestasi.TabIndex = 7;
             this.txtIdJenisPrestasi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdJenisPrestasi_KeyPress);
             // 
             // txtNama
             // 
             this.txtNama.AutoRoundedCorners = true;
-            this.txtNama.BorderRadius = 13;
+            this.txtNama.BorderRadius = 16;
             this.txtNama.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNama.DefaultText = "";
             this.txtNama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -140,19 +147,20 @@
             this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Location = new System.Drawing.Point(259, 118);
+            this.txtNama.Location = new System.Drawing.Point(345, 145);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
             this.txtNama.PlaceholderText = "";
             this.txtNama.SelectedText = "";
-            this.txtNama.Size = new System.Drawing.Size(245, 28);
+            this.txtNama.Size = new System.Drawing.Size(327, 34);
             this.txtNama.TabIndex = 8;
             this.txtNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNama_KeyPress);
             // 
             // txtPeran
             // 
             this.txtPeran.AutoRoundedCorners = true;
-            this.txtPeran.BorderRadius = 13;
+            this.txtPeran.BorderRadius = 16;
             this.txtPeran.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPeran.DefaultText = "";
             this.txtPeran.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -162,18 +170,19 @@
             this.txtPeran.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPeran.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPeran.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPeran.Location = new System.Drawing.Point(259, 161);
+            this.txtPeran.Location = new System.Drawing.Point(345, 198);
+            this.txtPeran.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPeran.Name = "txtPeran";
             this.txtPeran.PasswordChar = '\0';
             this.txtPeran.PlaceholderText = "";
             this.txtPeran.SelectedText = "";
-            this.txtPeran.Size = new System.Drawing.Size(245, 28);
+            this.txtPeran.Size = new System.Drawing.Size(327, 34);
             this.txtPeran.TabIndex = 9;
             // 
             // txtPenyelenggara
             // 
             this.txtPenyelenggara.AutoRoundedCorners = true;
-            this.txtPenyelenggara.BorderRadius = 13;
+            this.txtPenyelenggara.BorderRadius = 16;
             this.txtPenyelenggara.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPenyelenggara.DefaultText = "";
             this.txtPenyelenggara.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -183,18 +192,19 @@
             this.txtPenyelenggara.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPenyelenggara.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPenyelenggara.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPenyelenggara.Location = new System.Drawing.Point(259, 205);
+            this.txtPenyelenggara.Location = new System.Drawing.Point(345, 252);
+            this.txtPenyelenggara.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPenyelenggara.Name = "txtPenyelenggara";
             this.txtPenyelenggara.PasswordChar = '\0';
             this.txtPenyelenggara.PlaceholderText = "";
             this.txtPenyelenggara.SelectedText = "";
-            this.txtPenyelenggara.Size = new System.Drawing.Size(245, 28);
+            this.txtPenyelenggara.Size = new System.Drawing.Size(327, 34);
             this.txtPenyelenggara.TabIndex = 10;
             // 
             // txtPoint
             // 
             this.txtPoint.AutoRoundedCorners = true;
-            this.txtPoint.BorderRadius = 13;
+            this.txtPoint.BorderRadius = 16;
             this.txtPoint.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPoint.DefaultText = "";
             this.txtPoint.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -204,28 +214,30 @@
             this.txtPoint.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPoint.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPoint.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPoint.Location = new System.Drawing.Point(259, 249);
+            this.txtPoint.Location = new System.Drawing.Point(345, 306);
+            this.txtPoint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPoint.Name = "txtPoint";
             this.txtPoint.PasswordChar = '\0';
             this.txtPoint.PlaceholderText = "";
             this.txtPoint.SelectedText = "";
-            this.txtPoint.Size = new System.Drawing.Size(94, 28);
+            this.txtPoint.Size = new System.Drawing.Size(125, 34);
             this.txtPoint.TabIndex = 11;
             this.txtPoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPoint_KeyPress);
             // 
             // btnKembali
             // 
             this.btnKembali.AutoRoundedCorners = true;
-            this.btnKembali.BorderRadius = 13;
+            this.btnKembali.BorderRadius = 16;
             this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(577, 26);
+            this.btnKembali.Location = new System.Drawing.Point(769, 32);
+            this.btnKembali.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKembali.Name = "btnKembali";
-            this.btnKembali.Size = new System.Drawing.Size(108, 28);
+            this.btnKembali.Size = new System.Drawing.Size(144, 34);
             this.btnKembali.TabIndex = 13;
             this.btnKembali.Text = "Kembali";
             this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
@@ -233,16 +245,17 @@
             // btnBatal
             // 
             this.btnBatal.AutoRoundedCorners = true;
-            this.btnBatal.BorderRadius = 13;
+            this.btnBatal.BorderRadius = 16;
             this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBatal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(207, 311);
+            this.btnBatal.Location = new System.Drawing.Point(276, 383);
+            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(108, 28);
+            this.btnBatal.Size = new System.Drawing.Size(144, 34);
             this.btnBatal.TabIndex = 14;
             this.btnBatal.Text = "Batal";
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
@@ -250,25 +263,26 @@
             // btnSimpan
             // 
             this.btnSimpan.AutoRoundedCorners = true;
-            this.btnSimpan.BorderRadius = 13;
+            this.btnSimpan.BorderRadius = 16;
             this.btnSimpan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSimpan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSimpan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSimpan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSimpan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSimpan.ForeColor = System.Drawing.Color.White;
-            this.btnSimpan.Location = new System.Drawing.Point(411, 311);
+            this.btnSimpan.Location = new System.Drawing.Point(548, 383);
+            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(108, 28);
+            this.btnSimpan.Size = new System.Drawing.Size(144, 34);
             this.btnSimpan.TabIndex = 15;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // InputJepres
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 372);
+            this.ClientSize = new System.Drawing.Size(965, 458);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.btnKembali);
@@ -283,6 +297,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "InputJepres";
             this.Text = "InputJenisPrestasi";
             this.ResumeLayout(false);

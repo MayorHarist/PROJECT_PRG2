@@ -12,12 +12,7 @@ using System.Windows.Forms;
 namespace PROJECT_PRG2.CRUD_Prodi
 {
     public partial class UpDelet_Prodi : Form
-    {
-        private bool panelDataMuncul = false;
-        private bool panelTransaksiMuncul = false;
-        private bool panelLaporanMuncul = false;
-        private int step = 10;
-
+    { 
 
         public UpDelet_Prodi()
         {
@@ -89,57 +84,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
         }
 
 
-        private void btnKembali_Click(object sender, EventArgs e)
-        {
-            DasboardTendik dasboardTendik = new DasboardTendik();
-            dasboardTendik.Show();
-            this.Hide();
-        }
-
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(txtIdProdi.Text))
-                {
-                    MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("SELECT * FROM ProgramStudi WHERE Id_Prodi=@Id_Prodi", connection);
-                    myCommand.Parameters.AddWithValue("@Id_Prodi", txtIdProdi.Text);
-                    SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
-                    myAdapter.Fill(dataTable);
-
-                    if (dataTable.Rows.Count > 0)
-                    {
-                        txtIdProdi.Text = dataTable.Rows[0]["Id_Prodi"].ToString();
-                        txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
-                        txtJenjangPendidikan.Text = dataTable.Rows[0]["Jenjang_Pendidikan"].ToString();
-                        txtAkreditasi.Text = dataTable.Rows[0]["Akreditasi"].ToString();
-                    }
-
-
-                    
-
-                    connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         
-
-        
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -169,6 +114,42 @@ namespace PROJECT_PRG2.CRUD_Prodi
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtIdProdi.Text))
+                {
+                    MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    DataTable dataTable = new DataTable();
+                    SqlCommand myCommand = new SqlCommand("SELECT * FROM ProgramStudi WHERE Id_Prodi=@Id_Prodi", connection);
+                    myCommand.Parameters.AddWithValue("@Id_Prodi", txtIdProdi.Text);
+                    SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
+                    myAdapter.Fill(dataTable);
+
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        txtIdProdi.Text = dataTable.Rows[0]["Id_Prodi"].ToString();
+                        txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
+                        txtJenjangPendidikan.Text = dataTable.Rows[0]["Jenjang_Pendidikan"].ToString();
+                        txtAkreditasi.Text = dataTable.Rows[0]["Akreditasi"].ToString();
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

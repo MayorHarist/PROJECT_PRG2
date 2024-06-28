@@ -22,7 +22,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
         }
 
 

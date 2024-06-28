@@ -21,7 +21,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
         }
 
         public string autoid()

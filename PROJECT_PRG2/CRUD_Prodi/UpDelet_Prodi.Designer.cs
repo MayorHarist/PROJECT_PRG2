@@ -49,12 +49,12 @@
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnHapus = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnTambah = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnCari = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
@@ -305,24 +305,6 @@
             // 
             this.programStudiTableAdapter.ClearBeforeFill = true;
             // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(34, 34);
-            //this.guna2ImageButton1.Image = global::PROJECT_PRG2.Properties.Resources.magnifying_glass_10977492;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(190, 13);
-            this.guna2ImageButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(73, 69);
-            this.guna2ImageButton1.TabIndex = 208;
-            this.guna2ImageButton1.UseTransparentBackground = true;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -333,6 +315,31 @@
             this.label2.Size = new System.Drawing.Size(44, 26);
             this.label2.TabIndex = 213;
             this.label2.Text = "Aksi";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Animated = true;
+            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.BorderRadius = 10;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 9F);
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(873, 905);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(193, 46);
+            this.guna2TextBox1.TabIndex = 212;
             // 
             // btnHapus
             // 
@@ -388,30 +395,23 @@
             this.btnTambah.UseTransparentBackground = true;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
-            // guna2TextBox1
+            // btnCari
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(873, 905);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(193, 46);
-            this.guna2TextBox1.TabIndex = 212;
+            this.btnCari.BackColor = System.Drawing.Color.Transparent;
+            this.btnCari.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnCari.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnCari.Image = global::PROJECT_PRG2.Properties.Resources.cari;
+            this.btnCari.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnCari.ImageRotate = 0F;
+            this.btnCari.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCari.Location = new System.Drawing.Point(204, 26);
+            this.btnCari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnCari.Size = new System.Drawing.Size(43, 40);
+            this.btnCari.TabIndex = 208;
+            this.btnCari.UseTransparentBackground = true;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // UpDelet_Prodi
             // 
@@ -425,7 +425,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.btnCari);
             this.Controls.Add(this.dtgProdi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label14);
@@ -465,7 +465,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn jenjangPendidikanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn akreditasiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnCari;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ImageButton btnHapus;
         private Guna.UI2.WinForms.Guna2ImageButton btnUpdate;

@@ -627,5 +627,8 @@
   <ItemGroup>
     <None Include="Resources\LoginKepalaTendik.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cari.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
