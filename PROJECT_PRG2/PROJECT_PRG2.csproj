@@ -125,12 +125,6 @@
     <Compile Include="CRUD_JenisPrestasi\UDJepres.Designer.cs">
       <DependentUpon>UDJepres.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRUD_JenisPrestasi\UpdateDelete_JenisPrestasi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRUD_JenisPrestasi\UpdateDelete_JenisPrestasi.Designer.cs">
-      <DependentUpon>UpdateDelete_JenisPrestasi.cs</DependentUpon>
-    </Compile>
     <Compile Include="CRUD_Mahasiswa\InputMahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,17 +173,17 @@
     <Compile Include="CRUD_Pengumuman\UpdatePengumuman.Designer.cs">
       <DependentUpon>UpdatePengumuman.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.cs">
+    <Compile Include="CRUD_PosisiPrestasi\InputPospres.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.Designer.cs">
-      <DependentUpon>Input_PosisiPrestasi.cs</DependentUpon>
+    <Compile Include="CRUD_PosisiPrestasi\InputPospres.Designer.cs">
+      <DependentUpon>InputPospres.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRUD_PosisiPrestasi\UpdateDelete_PosisiPrestasi.cs">
+    <Compile Include="CRUD_PosisiPrestasi\UDPospres.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CRUD_PosisiPrestasi\UpdateDelete_PosisiPrestasi.Designer.cs">
-      <DependentUpon>UpdateDelete_PosisiPrestasi.cs</DependentUpon>
+    <Compile Include="CRUD_PosisiPrestasi\UDPospres.Designer.cs">
+      <DependentUpon>UDPospres.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD_Prodi\Input_Prodi.cs">
       <SubType>Form</SubType>
@@ -286,12 +280,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet8.xsd</DependentUpon>
     </Compile>
-    <Compile Include="LoginMenu\LoginKepalaTendik.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginMenu\LoginKepalaTendik.Designer.cs">
-      <DependentUpon>LoginKepalaTendik.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginMenu\LoginMahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,9 +335,6 @@
     <EmbeddedResource Include="CRUD_JenisPrestasi\UDJepres.resx">
       <DependentUpon>UDJepres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_JenisPrestasi\UpdateDelete_JenisPrestasi.resx">
-      <DependentUpon>UpdateDelete_JenisPrestasi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Mahasiswa\InputMahasiswa.resx">
       <DependentUpon>InputMahasiswa.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,11 +359,11 @@
     <EmbeddedResource Include="CRUD_Pengumuman\UpdatePengumuman.resx">
       <DependentUpon>UpdatePengumuman.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_PosisiPrestasi\Input_PosisiPrestasi.resx">
-      <DependentUpon>Input_PosisiPrestasi.cs</DependentUpon>
+    <EmbeddedResource Include="CRUD_PosisiPrestasi\InputPospres.resx">
+      <DependentUpon>InputPospres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_PosisiPrestasi\UpdateDelete_PosisiPrestasi.resx">
-      <DependentUpon>UpdateDelete_PosisiPrestasi.cs</DependentUpon>
+    <EmbeddedResource Include="CRUD_PosisiPrestasi\UDPospres.resx">
+      <DependentUpon>UDPospres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Prodi\Input_Prodi.resx">
       <DependentUpon>Input_Prodi.cs</DependentUpon>
@@ -535,6 +520,17 @@
     </None>
     <None Include="FINDSMARTDataSet8.xss">
       <DependentUpon>FINDSMARTDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet9.xsc">
+      <DependentUpon>FINDSMARTDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMARTDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMARTDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMARTDataSet9.xss">
+      <DependentUpon>FINDSMARTDataSet9.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
