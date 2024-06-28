@@ -59,6 +59,9 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
             // Menampilkan form InputJepres
             inputPospres.Show();
+
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -109,6 +112,9 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
                 MessageBox.Show(ex.ToString(), "Error: ", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
@@ -134,6 +140,9 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
         }
 
         private void txtIdPosisiPrestasi_KeyPress(object sender, KeyPressEventArgs e)

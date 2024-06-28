@@ -804,14 +804,14 @@ namespace PROJECT_PRG2.FINDSMARTDataSet9TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[PosisiPrestasi] WHERE (([Id_PosisiPrestasi] = @Original_Id_Pos" +
-                "isiPrestasi) AND ([Status] = @Original_Status))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [PosisiPrestasi] WHERE (([Id_PosisiPrestasi] = @Original_Id_PosisiPre" +
+                "stasi) AND ([Status] = @Original_Status))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_PosisiPrestasi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_PosisiPrestasi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[PosisiPrestasi] ([Id_PosisiPrestasi], [Nama], [Deskripsi], [Status]) VALUES (@Id_PosisiPrestasi, @Nama, @Deskripsi, @Status);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [PosisiPrestasi] ([Id_PosisiPrestasi], [Nama], [Deskripsi], [Status]) VALUES (@Id_PosisiPrestasi, @Nama, @Deskripsi, @Status);
 SELECT Id_PosisiPrestasi, Nama, Deskripsi, Status FROM PosisiPrestasi WHERE (Id_PosisiPrestasi = @Id_PosisiPrestasi)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_PosisiPrestasi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_PosisiPrestasi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -820,7 +820,7 @@ SELECT Id_PosisiPrestasi, Nama, Deskripsi, Status FROM PosisiPrestasi WHERE (Id_
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[PosisiPrestasi] SET [Id_PosisiPrestasi] = @Id_PosisiPrestasi, [Nama] = @Nama, [Deskripsi] = @Deskripsi, [Status] = @Status WHERE (([Id_PosisiPrestasi] = @Original_Id_PosisiPrestasi) AND ([Status] = @Original_Status));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [PosisiPrestasi] SET [Id_PosisiPrestasi] = @Id_PosisiPrestasi, [Nama] = @Nama, [Deskripsi] = @Deskripsi, [Status] = @Status WHERE (([Id_PosisiPrestasi] = @Original_Id_PosisiPrestasi) AND ([Status] = @Original_Status));
 SELECT Id_PosisiPrestasi, Nama, Deskripsi, Status FROM PosisiPrestasi WHERE (Id_PosisiPrestasi = @Id_PosisiPrestasi)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_PosisiPrestasi", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_PosisiPrestasi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -844,7 +844,7 @@ SELECT Id_PosisiPrestasi, Nama, Deskripsi, Status FROM PosisiPrestasi WHERE (Id_
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id_PosisiPrestasi, Nama, Deskripsi, Status FROM dbo.PosisiPrestasi";
+            this._commandCollection[0].CommandText = "SELECT * FROM PosisiPrestasi WHERE Status = \'Aktif\'\r\n";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
