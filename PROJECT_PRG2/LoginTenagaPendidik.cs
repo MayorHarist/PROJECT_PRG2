@@ -68,5 +68,12 @@ namespace PROJECT_PRG2
                 }
             }
         }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

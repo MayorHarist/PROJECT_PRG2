@@ -130,6 +130,7 @@
             this.btnKembali.Size = new System.Drawing.Size(477, 67);
             this.btnKembali.TabIndex = 5;
             this.btnKembali.UseTransparentBackground = true;
+            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
             // btnMasuk
             // 
