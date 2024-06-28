@@ -201,12 +201,12 @@
             // 
             // statusDataGridViewTextBoxColumn
             // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            //this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            //this.statusDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            //this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            //this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
             // jenisPrestasiBindingSource
             // 
