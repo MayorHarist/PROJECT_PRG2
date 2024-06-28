@@ -40,7 +40,7 @@ namespace PROJECT_PRG2
             //Application.Run(new UpdateDeleteMatkul());
             //Application.Run(new InputJepres());
             //Application.Run(new UDJepres());
-            Application.Run(new LoginSbgTenDik());
+            Application.Run(new LoginMahasiswa());
         }
     }
 }
