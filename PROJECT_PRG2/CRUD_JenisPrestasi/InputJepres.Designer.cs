@@ -121,9 +121,11 @@
             this.txtIdJenisPrestasi.Name = "txtIdJenisPrestasi";
             this.txtIdJenisPrestasi.PasswordChar = '\0';
             this.txtIdJenisPrestasi.PlaceholderText = "";
+            this.txtIdJenisPrestasi.ReadOnly = true;
             this.txtIdJenisPrestasi.SelectedText = "";
             this.txtIdJenisPrestasi.Size = new System.Drawing.Size(175, 28);
             this.txtIdJenisPrestasi.TabIndex = 7;
+            this.txtIdJenisPrestasi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdJenisPrestasi_KeyPress);
             // 
             // txtNama
             // 

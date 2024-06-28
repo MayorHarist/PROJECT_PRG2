@@ -140,5 +140,15 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 MessageBox.Show("Error : " + ex.Message);
             }
         }
+
+        private void txtIdJenisPrestasi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Jika tombol yang ditekan adalah backspace atau delete
+            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete)
+            {
+                e.Handled = true; // Membatalkan aksi penghapusan
+                MessageBox.Show("Id sudah dibuat otomatis", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

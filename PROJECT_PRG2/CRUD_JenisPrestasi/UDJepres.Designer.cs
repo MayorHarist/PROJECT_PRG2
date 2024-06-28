@@ -229,7 +229,7 @@
             this.btnHapus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnHapus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnHapus.ForeColor = System.Drawing.Color.White;
-            this.btnHapus.Location = new System.Drawing.Point(1346, 969);
+            this.btnHapus.Location = new System.Drawing.Point(1320, 851);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(108, 28);
             this.btnHapus.TabIndex = 28;
@@ -247,7 +247,7 @@
             this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(1012, 969);
+            this.btnBatal.Location = new System.Drawing.Point(986, 851);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(108, 28);
             this.btnBatal.TabIndex = 27;
@@ -265,7 +265,7 @@
             this.btnPerbaharui.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnPerbaharui.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPerbaharui.ForeColor = System.Drawing.Color.White;
-            this.btnPerbaharui.Location = new System.Drawing.Point(1177, 969);
+            this.btnPerbaharui.Location = new System.Drawing.Point(1151, 851);
             this.btnPerbaharui.Name = "btnPerbaharui";
             this.btnPerbaharui.Size = new System.Drawing.Size(108, 28);
             this.btnPerbaharui.TabIndex = 26;
@@ -378,9 +378,11 @@
             this.txtIdJenisPrestasi.Name = "txtIdJenisPrestasi";
             this.txtIdJenisPrestasi.PasswordChar = '\0';
             this.txtIdJenisPrestasi.PlaceholderText = "";
+            this.txtIdJenisPrestasi.ReadOnly = true;
             this.txtIdJenisPrestasi.SelectedText = "";
             this.txtIdJenisPrestasi.Size = new System.Drawing.Size(175, 28);
             this.txtIdJenisPrestasi.TabIndex = 21;
+            this.txtIdJenisPrestasi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdJenisPrestasi_KeyPress);
             // 
             // label6
             // 
@@ -480,16 +482,18 @@
             // btnCari
             // 
             this.btnCari.BackColor = System.Drawing.Color.Transparent;
+            this.btnCari.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.magnifying_glass_10977492;
+            this.btnCari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCari.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCari.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCari.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCari.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCari.FillColor = System.Drawing.Color.Transparent;
             this.btnCari.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCari.ForeColor = System.Drawing.Color.White;
-            this.btnCari.Location = new System.Drawing.Point(874, 57);
+            this.btnCari.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCari.Location = new System.Drawing.Point(881, 60);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(46, 39);
+            this.btnCari.Size = new System.Drawing.Size(35, 36);
             this.btnCari.TabIndex = 31;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
@@ -497,7 +501,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.Jepres;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.btnRefresh);
