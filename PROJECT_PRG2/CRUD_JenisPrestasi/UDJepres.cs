@@ -21,7 +21,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         private void UDJepres_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
-            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
 
         }
 
@@ -41,6 +41,9 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
             // Menampilkan form InputJepres
             inputJepres.Show();
+
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -81,6 +84,9 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 MessageBox.Show(ex.ToString(), "Error: ", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
@@ -111,6 +117,9 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
         }
 
         private void btnCari_Click(object sender, EventArgs e)
