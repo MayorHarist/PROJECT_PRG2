@@ -144,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.loginTendik;
+            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.LoginTendik;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.btnMasuk);

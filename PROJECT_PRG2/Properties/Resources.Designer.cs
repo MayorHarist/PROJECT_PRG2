@@ -193,9 +193,9 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login {
+        internal static System.Drawing.Bitmap Lihat_Matkul_FIND_SMART {
             get {
-                object obj = ResourceManager.GetObject("login", resourceCulture);
+                object obj = ResourceManager.GetObject("Lihat Matkul FIND SMART", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap loginTendik {
+        internal static System.Drawing.Bitmap LoginTendik {
             get {
-                object obj = ResourceManager.GetObject("loginTendik", resourceCulture);
+                object obj = ResourceManager.GetObject("LoginTendik", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap magnifying_glass_109774921 {
+        internal static System.Drawing.Bitmap magnifying_glass_10977492 {
             get {
-                object obj = ResourceManager.GetObject("magnifying-glass_109774921", resourceCulture);
+                object obj = ResourceManager.GetObject("magnifying-glass_10977492", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
