@@ -25,9 +25,35 @@ namespace PROJECT_PRG2
 
         private void btnMasuk_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtSandi.Text;
+            // Ambil input dari pengguna
+            string username = txtUsername.Text.Trim();
+            string password = txtSandi.Text.Trim();
 
+            // Validasi input kosong
+            if (string.IsNullOrEmpty(username))
+            {
+                MessageBox.Show("Nama pengguna tidak boleh kosong.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Kata sandi tidak boleh kosong.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validasi panjang input (misal, maksimum 50 karakter)
+            if (username.Length > 50)
+            {
+                MessageBox.Show("Nama pengguna terlalu panjang.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (password.Length > 50)
+            {
+                MessageBox.Show("Kata sandi terlalu panjang.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             // SQL Query untuk memverifikasi username dan password
             string query = "SELECT COUNT(1) FROM TenagaKependidikan WHERE Username=@Username AND Password=@Password";
@@ -50,7 +76,7 @@ namespace PROJECT_PRG2
 
                         if (count == 1)
                         {
-                            MessageBox.Show("Login berhasil!");
+                            MessageBox.Show("Login berhasil!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             // Anda dapat membuka form baru di sini atau mengarahkan pengguna ke bagian lain dari aplikasi Anda
                             DasboardTendik dasboardTendik = new DasboardTendik();
                             dasboardTendik.Show();
@@ -58,16 +84,17 @@ namespace PROJECT_PRG2
                         }
                         else
                         {
-                            MessageBox.Show("Nama Pengguna dan Kata Sandi salah.");
+                            MessageBox.Show("Nama Pengguna dan Kata Sandi salah.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("An error occurred: " + ex.Message);
+                        MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
         }
+
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
