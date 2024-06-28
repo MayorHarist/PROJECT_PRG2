@@ -75,7 +75,7 @@
             this.txtCari.AutoRoundedCorners = true;
             this.txtCari.BackColor = System.Drawing.Color.Transparent;
             this.txtCari.BorderColor = System.Drawing.Color.Gray;
-            this.txtCari.BorderRadius = 17;
+            this.txtCari.BorderRadius = 26;
             this.txtCari.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCari.DefaultText = "";
             this.txtCari.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -86,13 +86,14 @@
             this.txtCari.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCari.ForeColor = System.Drawing.Color.Black;
             this.txtCari.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCari.Location = new System.Drawing.Point(922, 60);
+            this.txtCari.Location = new System.Drawing.Point(1383, 92);
+            this.txtCari.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtCari.Name = "txtCari";
             this.txtCari.PasswordChar = '\0';
             this.txtCari.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtCari.PlaceholderText = "";
             this.txtCari.SelectedText = "";
-            this.txtCari.Size = new System.Drawing.Size(491, 36);
+            this.txtCari.Size = new System.Drawing.Size(736, 55);
             this.txtCari.TabIndex = 0;
             // 
             // guna2DataGridView1
@@ -127,10 +128,12 @@
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(594, 221);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(891, 340);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1155, 303);
+            this.guna2DataGridView1.RowHeadersWidth = 62;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1732, 466);
             this.guna2DataGridView1.TabIndex = 1;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -161,6 +164,7 @@
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idJenisPrestasiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.idJenisPrestasiDataGridViewTextBoxColumn.HeaderText = "ID Jenis Prestasi";
+            this.idJenisPrestasiDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.idJenisPrestasiDataGridViewTextBoxColumn.Name = "idJenisPrestasiDataGridViewTextBoxColumn";
             // 
             // namaDataGridViewTextBoxColumn
@@ -170,6 +174,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.namaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            this.namaDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
             // 
             // peranDataGridViewTextBoxColumn
@@ -179,6 +184,7 @@
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.peranDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.peranDataGridViewTextBoxColumn.HeaderText = "Peran";
+            this.peranDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.peranDataGridViewTextBoxColumn.Name = "peranDataGridViewTextBoxColumn";
             // 
             // penyelenggaraDataGridViewTextBoxColumn
@@ -188,6 +194,7 @@
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.penyelenggaraDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.penyelenggaraDataGridViewTextBoxColumn.HeaderText = "Penyelenggara";
+            this.penyelenggaraDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.penyelenggaraDataGridViewTextBoxColumn.Name = "penyelenggaraDataGridViewTextBoxColumn";
             // 
             // pointDataGridViewTextBoxColumn
@@ -197,6 +204,7 @@
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pointDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.pointDataGridViewTextBoxColumn.HeaderText = "Point";
+            this.pointDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.pointDataGridViewTextBoxColumn.Name = "pointDataGridViewTextBoxColumn";
             // 
             // statusDataGridViewTextBoxColumn
@@ -206,6 +214,7 @@
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
             // jenisPrestasiBindingSource
@@ -222,16 +231,17 @@
             // 
             this.btnHapus.AutoRoundedCorners = true;
             this.btnHapus.BackColor = System.Drawing.Color.Transparent;
-            this.btnHapus.BorderRadius = 13;
+            this.btnHapus.BorderRadius = 20;
             this.btnHapus.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHapus.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHapus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnHapus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnHapus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnHapus.ForeColor = System.Drawing.Color.White;
-            this.btnHapus.Location = new System.Drawing.Point(1320, 851);
+            this.btnHapus.Location = new System.Drawing.Point(1980, 1309);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(108, 28);
+            this.btnHapus.Size = new System.Drawing.Size(162, 43);
             this.btnHapus.TabIndex = 28;
             this.btnHapus.Text = "Hapus";
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
@@ -240,16 +250,17 @@
             // 
             this.btnBatal.AutoRoundedCorners = true;
             this.btnBatal.BackColor = System.Drawing.Color.Transparent;
-            this.btnBatal.BorderRadius = 13;
+            this.btnBatal.BorderRadius = 20;
             this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBatal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(986, 851);
+            this.btnBatal.Location = new System.Drawing.Point(1479, 1309);
+            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(108, 28);
+            this.btnBatal.Size = new System.Drawing.Size(162, 43);
             this.btnBatal.TabIndex = 27;
             this.btnBatal.Text = "Batal";
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
@@ -258,16 +269,17 @@
             // 
             this.btnPerbaharui.AutoRoundedCorners = true;
             this.btnPerbaharui.BackColor = System.Drawing.Color.Transparent;
-            this.btnPerbaharui.BorderRadius = 13;
+            this.btnPerbaharui.BorderRadius = 20;
             this.btnPerbaharui.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPerbaharui.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnPerbaharui.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPerbaharui.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnPerbaharui.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPerbaharui.ForeColor = System.Drawing.Color.White;
-            this.btnPerbaharui.Location = new System.Drawing.Point(1151, 851);
+            this.btnPerbaharui.Location = new System.Drawing.Point(1726, 1309);
+            this.btnPerbaharui.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPerbaharui.Name = "btnPerbaharui";
-            this.btnPerbaharui.Size = new System.Drawing.Size(108, 28);
+            this.btnPerbaharui.Size = new System.Drawing.Size(162, 43);
             this.btnPerbaharui.TabIndex = 26;
             this.btnPerbaharui.Text = "Perbaharui";
             this.btnPerbaharui.Click += new System.EventHandler(this.btnPerbaharui_Click);
@@ -276,7 +288,7 @@
             // 
             this.txtPoint.AutoRoundedCorners = true;
             this.txtPoint.BackColor = System.Drawing.Color.Transparent;
-            this.txtPoint.BorderRadius = 13;
+            this.txtPoint.BorderRadius = 20;
             this.txtPoint.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPoint.DefaultText = "";
             this.txtPoint.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -286,19 +298,20 @@
             this.txtPoint.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPoint.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPoint.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPoint.Location = new System.Drawing.Point(1502, 713);
+            this.txtPoint.Location = new System.Drawing.Point(2253, 1097);
+            this.txtPoint.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtPoint.Name = "txtPoint";
             this.txtPoint.PasswordChar = '\0';
             this.txtPoint.PlaceholderText = "";
             this.txtPoint.SelectedText = "";
-            this.txtPoint.Size = new System.Drawing.Size(94, 28);
+            this.txtPoint.Size = new System.Drawing.Size(141, 43);
             this.txtPoint.TabIndex = 25;
             // 
             // txtPenyelenggara
             // 
             this.txtPenyelenggara.AutoRoundedCorners = true;
             this.txtPenyelenggara.BackColor = System.Drawing.Color.Transparent;
-            this.txtPenyelenggara.BorderRadius = 13;
+            this.txtPenyelenggara.BorderRadius = 20;
             this.txtPenyelenggara.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPenyelenggara.DefaultText = "";
             this.txtPenyelenggara.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -308,19 +321,20 @@
             this.txtPenyelenggara.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPenyelenggara.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPenyelenggara.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPenyelenggara.Location = new System.Drawing.Point(1502, 669);
+            this.txtPenyelenggara.Location = new System.Drawing.Point(2253, 1029);
+            this.txtPenyelenggara.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtPenyelenggara.Name = "txtPenyelenggara";
             this.txtPenyelenggara.PasswordChar = '\0';
             this.txtPenyelenggara.PlaceholderText = "";
             this.txtPenyelenggara.SelectedText = "";
-            this.txtPenyelenggara.Size = new System.Drawing.Size(245, 28);
+            this.txtPenyelenggara.Size = new System.Drawing.Size(368, 43);
             this.txtPenyelenggara.TabIndex = 24;
             // 
             // txtPeran
             // 
             this.txtPeran.AutoRoundedCorners = true;
             this.txtPeran.BackColor = System.Drawing.Color.Transparent;
-            this.txtPeran.BorderRadius = 13;
+            this.txtPeran.BorderRadius = 20;
             this.txtPeran.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPeran.DefaultText = "";
             this.txtPeran.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -330,19 +344,20 @@
             this.txtPeran.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPeran.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPeran.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPeran.Location = new System.Drawing.Point(897, 756);
+            this.txtPeran.Location = new System.Drawing.Point(1346, 1163);
+            this.txtPeran.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtPeran.Name = "txtPeran";
             this.txtPeran.PasswordChar = '\0';
             this.txtPeran.PlaceholderText = "";
             this.txtPeran.SelectedText = "";
-            this.txtPeran.Size = new System.Drawing.Size(245, 28);
+            this.txtPeran.Size = new System.Drawing.Size(368, 43);
             this.txtPeran.TabIndex = 23;
             // 
             // txtNama
             // 
             this.txtNama.AutoRoundedCorners = true;
             this.txtNama.BackColor = System.Drawing.Color.Transparent;
-            this.txtNama.BorderRadius = 13;
+            this.txtNama.BorderRadius = 20;
             this.txtNama.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNama.DefaultText = "";
             this.txtNama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -352,19 +367,20 @@
             this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Location = new System.Drawing.Point(897, 713);
+            this.txtNama.Location = new System.Drawing.Point(1346, 1097);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
             this.txtNama.PlaceholderText = "";
             this.txtNama.SelectedText = "";
-            this.txtNama.Size = new System.Drawing.Size(245, 28);
+            this.txtNama.Size = new System.Drawing.Size(368, 43);
             this.txtNama.TabIndex = 22;
             // 
             // txtIdJenisPrestasi
             // 
             this.txtIdJenisPrestasi.AutoRoundedCorners = true;
             this.txtIdJenisPrestasi.BackColor = System.Drawing.Color.Transparent;
-            this.txtIdJenisPrestasi.BorderRadius = 13;
+            this.txtIdJenisPrestasi.BorderRadius = 20;
             this.txtIdJenisPrestasi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIdJenisPrestasi.DefaultText = "";
             this.txtIdJenisPrestasi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -374,13 +390,14 @@
             this.txtIdJenisPrestasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdJenisPrestasi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdJenisPrestasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdJenisPrestasi.Location = new System.Drawing.Point(897, 673);
+            this.txtIdJenisPrestasi.Location = new System.Drawing.Point(1346, 1035);
+            this.txtIdJenisPrestasi.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtIdJenisPrestasi.Name = "txtIdJenisPrestasi";
             this.txtIdJenisPrestasi.PasswordChar = '\0';
             this.txtIdJenisPrestasi.PlaceholderText = "";
             this.txtIdJenisPrestasi.ReadOnly = true;
             this.txtIdJenisPrestasi.SelectedText = "";
-            this.txtIdJenisPrestasi.Size = new System.Drawing.Size(175, 28);
+            this.txtIdJenisPrestasi.Size = new System.Drawing.Size(262, 43);
             this.txtIdJenisPrestasi.TabIndex = 21;
             this.txtIdJenisPrestasi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdJenisPrestasi_KeyPress);
             // 
@@ -389,9 +406,10 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1273, 713);
+            this.label6.Location = new System.Drawing.Point(1910, 1097);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 28);
+            this.label6.Size = new System.Drawing.Size(81, 42);
             this.label6.TabIndex = 20;
             this.label6.Text = "Point";
             // 
@@ -400,9 +418,10 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1273, 669);
+            this.label5.Location = new System.Drawing.Point(1910, 1029);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 28);
+            this.label5.Size = new System.Drawing.Size(206, 42);
             this.label5.TabIndex = 19;
             this.label5.Text = "Penyelenggara";
             // 
@@ -411,9 +430,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(668, 756);
+            this.label4.Location = new System.Drawing.Point(1002, 1163);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 28);
+            this.label4.Size = new System.Drawing.Size(90, 42);
             this.label4.TabIndex = 18;
             this.label4.Text = "Peran";
             // 
@@ -422,9 +442,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(668, 713);
+            this.label3.Location = new System.Drawing.Point(1002, 1097);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 28);
+            this.label3.Size = new System.Drawing.Size(93, 42);
             this.label3.TabIndex = 17;
             this.label3.Text = "Nama";
             // 
@@ -433,9 +454,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(668, 673);
+            this.label2.Location = new System.Drawing.Point(1002, 1035);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 28);
+            this.label2.Size = new System.Drawing.Size(216, 42);
             this.label2.TabIndex = 16;
             this.label2.Text = "ID Jenis Prestasi";
             // 
@@ -447,16 +469,17 @@
             // 
             this.btnTambah.AutoRoundedCorners = true;
             this.btnTambah.BackColor = System.Drawing.Color.Transparent;
-            this.btnTambah.BorderRadius = 13;
+            this.btnTambah.BorderRadius = 20;
             this.btnTambah.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTambah.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTambah.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTambah.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTambah.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTambah.ForeColor = System.Drawing.Color.White;
-            this.btnTambah.Location = new System.Drawing.Point(594, 555);
+            this.btnTambah.Location = new System.Drawing.Point(891, 854);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(108, 28);
+            this.btnTambah.Size = new System.Drawing.Size(162, 43);
             this.btnTambah.TabIndex = 29;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
@@ -465,16 +488,17 @@
             // 
             this.btnRefresh.AutoRoundedCorners = true;
             this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BorderRadius = 13;
+            this.btnRefresh.BorderRadius = 20;
             this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(1641, 555);
+            this.btnRefresh.Location = new System.Drawing.Point(2462, 854);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(108, 28);
+            this.btnRefresh.Size = new System.Drawing.Size(162, 43);
             this.btnRefresh.TabIndex = 30;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -491,17 +515,18 @@
             this.btnCari.FillColor = System.Drawing.Color.Transparent;
             this.btnCari.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCari.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCari.Location = new System.Drawing.Point(881, 60);
+            this.btnCari.Location = new System.Drawing.Point(1322, 92);
+            this.btnCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(35, 36);
+            this.btnCari.Size = new System.Drawing.Size(52, 55);
             this.btnCari.TabIndex = 31;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // UDJepres
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnTambah);
@@ -520,6 +545,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.txtCari);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UDJepres";
             this.Text = "UDJepres";
             this.Load += new System.EventHandler(this.UDJepres_Load);

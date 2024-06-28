@@ -280,6 +280,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FINDSMARTDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMARTDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMenu\LoginKepalaTendik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMenu\LoginKepalaTendik.Designer.cs">
+      <DependentUpon>LoginKepalaTendik.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginMenu\LoginMahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -618,6 +629,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LoginMhs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginKepalaTendik.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
