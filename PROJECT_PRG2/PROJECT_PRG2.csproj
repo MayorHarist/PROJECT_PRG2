@@ -283,9 +283,6 @@
     <Compile Include="LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginMenu\LoginMahasiswa.Designer.cs">
-      <DependentUpon>LoginMahasiswa.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginMenu\LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -385,9 +382,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard_KepalaTendik.resx">
       <DependentUpon>Dashboard_KepalaTendik.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginMenu\LoginMahasiswa.resx">
-      <DependentUpon>LoginMahasiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginMenu\LoginTenagaPendidik.resx">
       <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
