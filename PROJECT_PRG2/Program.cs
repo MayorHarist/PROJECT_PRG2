@@ -38,10 +38,8 @@ namespace PROJECT_PRG2
             //Application.Run(new View_PosisiPrestasi());
             //Application.Run(new View_Prodi());
             //Application.Run(new UpdateDeleteMatkul());
-            Application.Run(new InputJepres());
-            //Application.Run(new InputPospres());
-            //Application.Run(new UDJepres());
-            //Application.Run(new UDPospres());
+            //Application.Run(new InputJepres());
+            Application.Run(new UDJepres());
         }
     }
 }

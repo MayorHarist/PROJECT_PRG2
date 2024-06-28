@@ -280,21 +280,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet8.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FINDSMARTDataSet9.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FINDSMARTDataSet9.xsd</DependentUpon>
-    </Compile>
     <Compile Include="LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginTenagaPendidik.Designer.cs">
-      <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
+    <Compile Include="LoginMenu\LoginMahasiswa.Designer.cs">
+      <DependentUpon>LoginMahasiswa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="LoginMenu\LoginTenagaPendidik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="LoginMenu\LoginTenagaPendidik.Designer.cs">
+      <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMenu\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMenu\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="TampilanAwal.cs">
@@ -385,10 +386,13 @@
     <EmbeddedResource Include="Dashboard_KepalaTendik.resx">
       <DependentUpon>Dashboard_KepalaTendik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginTenagaPendidik.resx">
+    <EmbeddedResource Include="LoginMenu\LoginMahasiswa.resx">
+      <DependentUpon>LoginMahasiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMenu\LoginTenagaPendidik.resx">
       <DependentUpon>LoginTenagaPendidik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="LoginMenu\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -608,6 +612,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LoginTendik1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginMhs.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
