@@ -642,5 +642,8 @@
   <ItemGroup>
     <None Include="Resources\Dashboard Utama Smart.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Utama Smart1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

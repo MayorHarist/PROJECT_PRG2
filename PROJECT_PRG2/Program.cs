@@ -6,6 +6,7 @@ using PROJECT_PRG2.CRUD_Pengumuman;
 using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using PROJECT_PRG2.CRUD_Prodi;
 using PROJECT_PRG2.CRUD_Tendik;
+using PROJECT_PRG2.Dashboard;
 using PROJECT_PRG2.LoginMenu;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,7 @@ namespace PROJECT_PRG2
             //Application.Run(new InputJepres());
             //Application.Run(new UDJepres());
             //Application.Run(new LoginKepalaTendik());
-            Application.Run(new ViewDosen());
+            Application.Run(new DashboardUtama());
         }
     }
 }
