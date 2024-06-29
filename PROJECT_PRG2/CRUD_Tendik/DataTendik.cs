@@ -32,6 +32,36 @@ namespace PROJECT_PRG2.CRUD_Tendik
             string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
+            
+
+            //Create Requred Validator untuk verifikasi masukan pengguna wajib diisi,
+            //dengan memeriksa apakah semua data terisi atau belum
+            if (string.IsNullOrWhiteSpace(txtIDTendik.Text) || string.IsNullOrWhiteSpace(txtNamaTendik.Text) || string.IsNullOrWhiteSpace(txtAlmatTendik.Text) || 
+                string.IsNullOrWhiteSpace(txtEmailTendik.Text) || string.IsNullOrWhiteSpace(TelpTendik.Text) || string.IsNullOrWhiteSpace(userNmTendik.Text) || 
+                string.IsNullOrWhiteSpace(txtPassTendik.Text))
+            {
+                MessageBox.Show("Seluruh Data wajib diisi!", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //Memastikan apakah data yang akan diismpan sudah benar, jika belum maka masih bisa mengisi ulang sebelum simpan
+            string message = $"Apakah data berikut sudah benar?\n\n" +
+                    $"ID TKN: {txtIDTendik.Text}\n" +
+                    $"Nama: {txtNamaTendik.Text}\n" +
+                    $"Tanggal Lahir: {tglLahirTendik.Value}\n" +
+                    $"Jenis Kelamin: {(rbLaki.Checked ? "Laki-Laki" : rbPuan.Checked ? "Perempuan" : "Belum dipilih")}\n" +
+                    $"Alamat: {txtAlmatTendik.Text}\n" +
+                    $"Email: {txtEmailTendik.Text}\n" +
+                    $"Telepon: {TelpTendik.Text}\n" +
+                    $"Username: {userNmTendik.Text}\n" +
+                    $"Password: {txtPassTendik.Text}\n";
+
+            DialogResult result = MessageBox.Show(message, "Konfirmasi Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return; // Jika pengguna menekan 'No', hentikan proses submit
+            }
+
             SqlCommand insert = new SqlCommand("sp_InsertTendik", connection);
             insert.CommandType = CommandType.StoredProcedure;
 
@@ -46,17 +76,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
             insert.Parameters.AddWithValue("@Telepon", TelpTendik.Text);
             insert.Parameters.AddWithValue("@Username", userNmTendik.Text);
             insert.Parameters.AddWithValue("@Password", txtPassTendik.Text);
-
-            //Create Requred Validator untuk verifikasi masukan pengguna wajib diisi,
-            //dengan memeriksa apakah semua data terisi atau belum
-            if (string.IsNullOrWhiteSpace(txtIDTendik.Text) || string.IsNullOrWhiteSpace(txtNamaTendik.Text) || string.IsNullOrWhiteSpace(txtAlmatTendik.Text) || 
-                string.IsNullOrWhiteSpace(txtEmailTendik.Text) || string.IsNullOrWhiteSpace(TelpTendik.Text) || string.IsNullOrWhiteSpace(userNmTendik.Text) || 
-                string.IsNullOrWhiteSpace(txtPassTendik.Text))
-            {
-                MessageBox.Show("Harap lengkapi semua data!", "Peringatan",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
             try
             {
@@ -88,7 +107,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01 ; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
             {
                 connection.Open();
