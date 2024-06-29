@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.SuspendLayout();
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // DashboardUtama
             // 
@@ -37,6 +45,7 @@
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.Dashboard_Utama_Smart;
             this.ClientSize = new System.Drawing.Size(1898, 1050);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DashboardUtama";
             this.Text = "DashboardUtama";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -45,5 +54,7 @@
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }
