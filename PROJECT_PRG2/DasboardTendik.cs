@@ -182,7 +182,13 @@ namespace PROJECT_PRG2
 
         private void btnDosen_Click(object sender, EventArgs e)
         {
-            
+            // Buat instance form UDJenisPrestasi
+            ViewDosen viewDosen = new ViewDosen();
+            // Atur parent form UpDelet_Prodi ke panelMain
+            viewDosen.TopLevel = false;
+            viewDosen.AutoScroll = true;
+            panelMain.Controls.Add(viewDosen);
+            viewDosen.Show();
         }
 
         private void btnJenisPrestasi_Click(object sender, EventArgs e)
