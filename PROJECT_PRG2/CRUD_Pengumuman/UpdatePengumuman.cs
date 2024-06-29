@@ -70,7 +70,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
                     btnUpdatePengumuman.Enabled = true;
                     btnHapusPengumuman.Enabled = true;
-                    btnBatalPengumuman.Enabled = true;
+                    btnTambah.Enabled = true;
 
                         connection.Close();
                     }

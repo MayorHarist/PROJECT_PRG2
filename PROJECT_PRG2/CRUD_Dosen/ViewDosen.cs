@@ -17,20 +17,17 @@ namespace PROJECT_PRG2.CRUD_Dosen
         public ViewDosen()
         {
             InitializeComponent();
-            panelData.Height = 0;
-
-            timerData.Interval = 10;
-            timerData.Tick += timerData_Tick;
-            timerTRS.Interval = 10;
-            timerTRS.Tick += timerTRS_Tick;
-            timerLaporan.Interval = 10;
-            timerLaporan.Tick += timerLaporan_Tick;
+            
         }
 
         private void ViewDosen_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter1.Fill(this.fINDSMARTDataSet7.Dosen);
+            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
+            //this.dosenTableAdapter1.Fill(this.fINDSMARTDataSet7.Dosen);
             // Load data into the 'fINDSMART.Dosen' table.
             //this.dosenTableAdapter.Fill(this.fINDSMART.Dosen);
 
@@ -74,90 +71,14 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 dgvDosen.HorizontalScrollingOffset = e.NewValue;
             }
         }
-
-        private void btnKembali_Click(object sender, EventArgs e)
-        {
-            DasboardTendik dasboardTendik = new DasboardTendik();
-            dasboardTendik.Show();
-            this.Hide();
-        }
-
-        private void timerData_Tick(object sender, EventArgs e)
-        {
-            if (panelDataMuncul)
-            {
-                if (panelData.Height < 290)
-                {
-                    panelData.Height += step;
-                    if (panelData.Height >= 290)
-                    {
-                        panelData.Height = 290;
-                        timerData.Stop();
-                    }
-                }
-            }
-            else
-            {
-                if (panelData.Height > 0)
-                {
-                    panelData.Height -= step;
-                    if (panelData.Height <= 0)
-                    {
-                        panelData.Height = 0;
-                        timerData.Stop();
-                    }
-                }
-            }
-        }
-
-        private void btnData_Click(object sender, EventArgs e)
-        {
-            panelDataMuncul = !panelDataMuncul;
-            timerData.Start();
-        }
-
-        private void timerTRS_Tick(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void btnTransaksi_Click(object sender, EventArgs e)
-        {
-            panelTransaksiMuncul = !panelTransaksiMuncul;
-            timerTRS.Start();
-        }
-
-        private void btnLaporan_Click(object sender, EventArgs e)
-        {
-            panelLaporanMuncul = !panelLaporanMuncul;
-            timerLaporan.Start();
-        }
-
-        private void timerLaporan_Tick(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnProdi_Click(object sender, EventArgs e)
-        {
-            UpDelet_Prodi upDelet_Prodi = new UpDelet_Prodi();
-            upDelet_Prodi.Show();
-            this.Hide();
-        }
-
         private void btnTambah_Click(object sender, EventArgs e)
         {
             InputDosen inputDosen = new InputDosen();
             inputDosen.Show();
-            this.Hide();
+         
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            DasboardTendik dasboardTendik = new DasboardTendik();
-            dasboardTendik.Show();
-            this.Hide();
-        }
+        
 
         private void txtCari_KeyPress(object sender, KeyPressEventArgs e)
         {

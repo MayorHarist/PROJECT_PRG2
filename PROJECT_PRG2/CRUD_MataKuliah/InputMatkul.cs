@@ -149,5 +149,10 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 }
             }
         }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

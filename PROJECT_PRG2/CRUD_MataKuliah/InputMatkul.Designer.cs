@@ -46,14 +46,15 @@
             this.txtStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbPegawai = new System.Windows.Forms.ComboBox();
-            this.cbProdi = new System.Windows.Forms.ComboBox();
-            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
             this.dosenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.DosenTableAdapter();
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.cbProdi = new System.Windows.Forms.ComboBox();
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.DosenTableAdapter();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
+            this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,7 +183,7 @@
             this.txtSemester.ForeColor = System.Drawing.Color.Black;
             this.txtSemester.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSemester.Location = new System.Drawing.Point(780, 290);
-            this.txtSemester.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSemester.Margin = new System.Windows.Forms.Padding(4);
             this.txtSemester.Name = "txtSemester";
             this.txtSemester.PasswordChar = '\0';
             this.txtSemester.PlaceholderText = "";
@@ -207,7 +208,7 @@
             this.txtJenis.ForeColor = System.Drawing.Color.Black;
             this.txtJenis.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJenis.Location = new System.Drawing.Point(782, 243);
-            this.txtJenis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtJenis.Margin = new System.Windows.Forms.Padding(4);
             this.txtJenis.Name = "txtJenis";
             this.txtJenis.PasswordChar = '\0';
             this.txtJenis.PlaceholderText = "";
@@ -232,7 +233,7 @@
             this.txtSKS.ForeColor = System.Drawing.Color.Black;
             this.txtSKS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSKS.Location = new System.Drawing.Point(782, 197);
-            this.txtSKS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSKS.Margin = new System.Windows.Forms.Padding(4);
             this.txtSKS.Name = "txtSKS";
             this.txtSKS.PasswordChar = '\0';
             this.txtSKS.PlaceholderText = "";
@@ -257,7 +258,7 @@
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Location = new System.Drawing.Point(782, 150);
-            this.txtNama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(4);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
             this.txtNama.PlaceholderText = "";
@@ -282,7 +283,7 @@
             this.txtIdMatkul.ForeColor = System.Drawing.Color.Black;
             this.txtIdMatkul.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdMatkul.Location = new System.Drawing.Point(782, 104);
-            this.txtIdMatkul.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdMatkul.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdMatkul.Name = "txtIdMatkul";
             this.txtIdMatkul.PasswordChar = '\0';
             this.txtIdMatkul.PlaceholderText = "";
@@ -307,7 +308,7 @@
             this.txtStatus.ForeColor = System.Drawing.Color.Black;
             this.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtStatus.Location = new System.Drawing.Point(780, 336);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.PasswordChar = '\0';
             this.txtStatus.PlaceholderText = "";
@@ -328,6 +329,7 @@
             // cbPegawai
             // 
             this.cbPegawai.DataSource = this.dosenBindingSource;
+            this.cbPegawai.DisplayMember = "No_Pegawai";
             this.cbPegawai.FormattingEnabled = true;
             this.cbPegawai.ItemHeight = 16;
             this.cbPegawai.Location = new System.Drawing.Point(780, 386);
@@ -336,6 +338,16 @@
             this.cbPegawai.Size = new System.Drawing.Size(255, 24);
             this.cbPegawai.TabIndex = 66;
             this.cbPegawai.ValueMember = "No_Pegawai";
+            // 
+            // dosenBindingSource
+            // 
+            this.dosenBindingSource.DataMember = "Dosen";
+            this.dosenBindingSource.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbProdi
             // 
@@ -350,34 +362,44 @@
             this.cbProdi.TabIndex = 67;
             this.cbProdi.ValueMember = "Id_Prodi";
             // 
-            // fINDSMARTDataSet6
-            // 
-            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
-            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dosenBindingSource
-            // 
-            this.dosenBindingSource.DataMember = "Dosen";
-            this.dosenBindingSource.DataSource = this.fINDSMARTDataSet6;
-            // 
-            // dosenTableAdapter
-            // 
-            this.dosenTableAdapter.ClearBeforeFill = true;
-            // 
             // programStudiBindingSource
             // 
             this.programStudiBindingSource.DataMember = "ProgramStudi";
             this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet6;
             // 
+            // dosenTableAdapter
+            // 
+            this.dosenTableAdapter.ClearBeforeFill = true;
+            // 
             // programStudiTableAdapter
             // 
             this.programStudiTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnKembali
+            // 
+            this.btnKembali.AutoRoundedCorners = true;
+            this.btnKembali.BorderRadius = 21;
+            this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKembali.FillColor = System.Drawing.Color.Navy;
+            this.btnKembali.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKembali.ForeColor = System.Drawing.Color.White;
+            this.btnKembali.Location = new System.Drawing.Point(1113, 517);
+            this.btnKembali.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKembali.Name = "btnKembali";
+            this.btnKembali.Size = new System.Drawing.Size(149, 44);
+            this.btnKembali.TabIndex = 71;
+            this.btnKembali.Text = "Kembali";
+            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
             // InputMatkul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1687, 819);
+            this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.cbProdi);
             this.Controls.Add(this.cbPegawai);
             this.Controls.Add(this.label2);
@@ -401,8 +423,8 @@
             this.Text = "Input Mata Kuliah";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.InputMatkul_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -434,5 +456,6 @@
         private FINDSMARTDataSet6TableAdapters.DosenTableAdapter dosenTableAdapter;
         private System.Windows.Forms.BindingSource programStudiBindingSource;
         private FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
+        private Guna.UI2.WinForms.Guna2Button btnKembali;
     }
 }

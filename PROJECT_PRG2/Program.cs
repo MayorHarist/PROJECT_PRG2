@@ -43,7 +43,7 @@ namespace PROJECT_PRG2
             //Application.Run(new InputJepres());
             //Application.Run(new UDJepres());
             //Application.Run(new LoginKepalaTendik());
-            Application.Run(new DashboardUtama());
+            Application.Run(new DasboardTendik());
         }
     }
 }
