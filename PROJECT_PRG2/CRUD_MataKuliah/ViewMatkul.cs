@@ -45,7 +45,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         private void btnTambah_Click(object sender, EventArgs e)
         {
             InputMatkul inputMatkul = new InputMatkul();
-            inputMatkul.ShowDialog();
+            inputMatkul.Show();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

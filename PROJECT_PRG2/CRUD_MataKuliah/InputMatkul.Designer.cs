@@ -421,7 +421,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "InputMatkul";
             this.Text = "Input Mata Kuliah";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.InputMatkul_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();

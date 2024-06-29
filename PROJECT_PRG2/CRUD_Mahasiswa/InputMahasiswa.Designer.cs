@@ -55,13 +55,13 @@
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbProdi = new System.Windows.Forms.ComboBox();
-            this.txtAlamat = new System.Windows.Forms.RichTextBox();
-            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
+            this.txtAlamat = new System.Windows.Forms.RichTextBox();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
             this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -473,9 +473,9 @@
             this.label12.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(235, 203);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 26);
+            this.label12.Size = new System.Drawing.Size(51, 26);
             this.label12.TabIndex = 62;
-            this.label12.Text = "Id Prodi";
+            this.label12.Text = "Prodi";
             // 
             // cbProdi
             // 
@@ -490,6 +490,16 @@
             this.cbProdi.TabIndex = 68;
             this.cbProdi.ValueMember = "Id_Prodi";
             // 
+            // programStudiBindingSource
+            // 
+            this.programStudiBindingSource.DataMember = "ProgramStudi";
+            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // fINDSMARTDataSet7
+            // 
+            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
+            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtAlamat
             // 
             this.txtAlamat.Location = new System.Drawing.Point(391, 370);
@@ -497,16 +507,6 @@
             this.txtAlamat.Size = new System.Drawing.Size(255, 70);
             this.txtAlamat.TabIndex = 69;
             this.txtAlamat.Text = "";
-            // 
-            // fINDSMARTDataSet7
-            // 
-            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
-            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // programStudiBindingSource
-            // 
-            this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet7;
             // 
             // programStudiTableAdapter
             // 
@@ -567,8 +567,8 @@
             this.Name = "InputMahasiswa";
             this.Text = "InputMahasiswa";
             this.Load += new System.EventHandler(this.InputMahasiswa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
