@@ -101,7 +101,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
         {
             // Pattern regex untuk validasi email
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-
             // Mengecek apakah email cocok dengan pattern regex
             return Regex.IsMatch(email, pattern);
         }
