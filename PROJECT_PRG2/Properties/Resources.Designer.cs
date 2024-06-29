@@ -113,6 +113,16 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dashboard_Utama_Smart {
+            get {
+                object obj = ResourceManager.GetObject("Dashboard Utama Smart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DESIGN_FINDSMART__1_ {
             get {
                 object obj = ResourceManager.GetObject("DESIGN FINDSMART (1)", resourceCulture);
