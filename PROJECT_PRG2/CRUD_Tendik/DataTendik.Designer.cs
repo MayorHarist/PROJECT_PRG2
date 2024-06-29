@@ -45,11 +45,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtStatusTendik = new Guna.UI2.WinForms.Guna2TextBox();
             this.TelpTendik = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmailTendik = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAlmatTendik = new Guna.UI2.WinForms.Guna2TextBox();
@@ -63,6 +61,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnBatalTendik = new Guna.UI2.WinForms.Guna2Button();
             this.btnTampilTendik = new Guna.UI2.WinForms.Guna2Button();
             this.dgvTendik = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.TenagaKependidikanTableAdapter();
             this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggalLahirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,10 +73,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.teleponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
-            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.TenagaKependidikanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTendik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
@@ -198,17 +195,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.label3.TabIndex = 74;
             this.label3.Text = "Telepon";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(463, 223);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
-            this.label2.TabIndex = 73;
-            this.label2.Text = "Status";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -242,31 +228,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel1.TabIndex = 70;
             this.guna2HtmlLabel1.Text = null;
-            // 
-            // txtStatusTendik
-            // 
-            this.txtStatusTendik.Animated = true;
-            this.txtStatusTendik.BackColor = System.Drawing.Color.Transparent;
-            this.txtStatusTendik.BorderColor = System.Drawing.Color.Black;
-            this.txtStatusTendik.BorderRadius = 10;
-            this.txtStatusTendik.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStatusTendik.DefaultText = "";
-            this.txtStatusTendik.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStatusTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStatusTendik.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStatusTendik.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStatusTendik.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatusTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtStatusTendik.ForeColor = System.Drawing.Color.Black;
-            this.txtStatusTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatusTendik.Location = new System.Drawing.Point(537, 222);
-            this.txtStatusTendik.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStatusTendik.Name = "txtStatusTendik";
-            this.txtStatusTendik.PasswordChar = '\0';
-            this.txtStatusTendik.PlaceholderText = "";
-            this.txtStatusTendik.SelectedText = "";
-            this.txtStatusTendik.Size = new System.Drawing.Size(191, 31);
-            this.txtStatusTendik.TabIndex = 69;
             // 
             // TelpTendik
             // 
@@ -577,8 +538,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.emailDataGridViewTextBoxColumn,
             this.teleponDataGridViewTextBoxColumn,
             this.usernameDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn});
+            this.passwordDataGridViewTextBoxColumn});
             this.dgvTendik.DataSource = this.tenagaKependidikanBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -589,12 +549,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTendik.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTendik.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTendik.Location = new System.Drawing.Point(47, 340);
+            this.dgvTendik.Location = new System.Drawing.Point(87, 339);
             this.dgvTendik.Name = "dgvTendik";
             this.dgvTendik.ReadOnly = true;
             this.dgvTendik.RowHeadersVisible = false;
             this.dgvTendik.RowHeadersWidth = 62;
-            this.dgvTendik.Size = new System.Drawing.Size(868, 307);
+            this.dgvTendik.Size = new System.Drawing.Size(714, 296);
             this.dgvTendik.TabIndex = 86;
             this.dgvTendik.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvTendik.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -618,6 +578,20 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.dgvTendik.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTendik.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvTendik.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTendik_CellContentClick);
+            // 
+            // tenagaKependidikanBindingSource
+            // 
+            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tenagaKependidikanTableAdapter
+            // 
+            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
             // 
             // idTKNDataGridViewTextBoxColumn
             // 
@@ -691,33 +665,11 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tenagaKependidikanBindingSource
-            // 
-            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource.DataSource = this.fINDSMARTDataSet6;
-            // 
-            // fINDSMARTDataSet6
-            // 
-            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
-            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tenagaKependidikanTableAdapter
-            // 
-            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
-            // 
             // DataTendik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 839);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.dgvTendik);
             this.Controls.Add(this.btnTampilTendik);
             this.Controls.Add(this.btnBatalTendik);
@@ -731,11 +683,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.txtStatusTendik);
             this.Controls.Add(this.TelpTendik);
             this.Controls.Add(this.txtEmailTendik);
             this.Controls.Add(this.txtAlmatTendik);
@@ -781,11 +731,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtStatusTendik;
         private Guna.UI2.WinForms.Guna2TextBox TelpTendik;
         private Guna.UI2.WinForms.Guna2TextBox txtEmailTendik;
         private Guna.UI2.WinForms.Guna2TextBox txtAlmatTendik;
@@ -811,6 +759,5 @@ namespace PROJECT_PRG2.CRUD_Tendik
         private DataGridViewTextBoxColumn teleponDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
     }
 }
