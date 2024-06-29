@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -32,7 +33,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
             string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
-            
+            // Validasi email menggunakan regex
+            if (!IsValidEmail(txtEmailTendik.Text))
+            {
+                MessageBox.Show("Format email tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Menghentikan proses penyimpanan data jika email tidak valid
+            }
 
             //Create Requred Validator untuk verifikasi masukan pengguna wajib diisi,
             //dengan memeriksa apakah semua data terisi atau belum
@@ -91,6 +97,15 @@ namespace PROJECT_PRG2.CRUD_Tendik
             }
         }
 
+        private bool IsValidEmail(string email)
+        {
+            // Pattern regex untuk validasi email
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            // Mengecek apakah email cocok dengan pattern regex
+            return Regex.IsMatch(email, pattern);
+        }
+
         private void clear()
         {
             txtIDTendik.Text = "";
@@ -134,6 +149,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
         private void btnTampilTendik_Click(object sender, EventArgs e)
         {
             this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet6.TenagaKependidikan);
+        }
+
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
 
@@ -202,6 +223,5 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         }
 
-      
     }
 }
