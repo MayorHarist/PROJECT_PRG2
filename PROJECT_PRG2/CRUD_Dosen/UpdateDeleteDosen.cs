@@ -175,5 +175,10 @@ namespace PROJECT_PRG2.CRUD_Dosen
             txtTelepon.Text = "";
             txtStatus.Text = "";
         }
+
+        private void UpdateDeleteDosen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

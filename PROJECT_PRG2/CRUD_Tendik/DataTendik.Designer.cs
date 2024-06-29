@@ -32,9 +32,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnTambahTendik = new Guna.UI2.WinForms.Guna2Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -87,10 +87,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnTambahTendik.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTambahTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTambahTendik.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTambahTendik.FillColor = System.Drawing.Color.HotPink;
+            this.btnTambahTendik.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(255)))));
             this.btnTambahTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambahTendik.ForeColor = System.Drawing.Color.White;
-            this.btnTambahTendik.Location = new System.Drawing.Point(277, 290);
+            this.btnTambahTendik.Location = new System.Drawing.Point(513, 315);
             this.btnTambahTendik.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambahTendik.Name = "btnTambahTendik";
             this.btnTambahTendik.Size = new System.Drawing.Size(112, 36);
@@ -123,7 +123,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(361, 149);
+            this.label9.Location = new System.Drawing.Point(360, 195);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 15);
@@ -134,7 +134,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(361, 187);
+            this.label8.Location = new System.Drawing.Point(360, 233);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 15);
@@ -178,7 +178,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(361, 75);
+            this.label4.Location = new System.Drawing.Point(360, 121);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 15);
@@ -189,7 +189,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(361, 113);
+            this.label3.Location = new System.Drawing.Point(360, 159);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 15);
@@ -246,7 +246,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.TelpTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.TelpTendik.ForeColor = System.Drawing.Color.Black;
             this.TelpTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TelpTendik.Location = new System.Drawing.Point(435, 112);
+            this.TelpTendik.Location = new System.Drawing.Point(434, 158);
             this.TelpTendik.Margin = new System.Windows.Forms.Padding(4);
             this.TelpTendik.Name = "TelpTendik";
             this.TelpTendik.PasswordChar = '\0';
@@ -272,7 +272,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtEmailTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtEmailTendik.ForeColor = System.Drawing.Color.Black;
             this.txtEmailTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailTendik.Location = new System.Drawing.Point(435, 74);
+            this.txtEmailTendik.Location = new System.Drawing.Point(434, 120);
             this.txtEmailTendik.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmailTendik.Name = "txtEmailTendik";
             this.txtEmailTendik.PasswordChar = '\0';
@@ -304,7 +304,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtAlmatTendik.PasswordChar = '\0';
             this.txtAlmatTendik.PlaceholderText = "";
             this.txtAlmatTendik.SelectedText = "";
-            this.txtAlmatTendik.Size = new System.Drawing.Size(191, 48);
+            this.txtAlmatTendik.Size = new System.Drawing.Size(191, 69);
             this.txtAlmatTendik.TabIndex = 66;
             // 
             // rbPuan
@@ -361,9 +361,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.tglLahirTendik.BackColor = System.Drawing.Color.Transparent;
             this.tglLahirTendik.BorderRadius = 16;
             this.tglLahirTendik.Checked = true;
-            this.tglLahirTendik.FillColor = System.Drawing.Color.HotPink;
+            this.tglLahirTendik.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.tglLahirTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.tglLahirTendik.ForeColor = System.Drawing.Color.Black;
+            this.tglLahirTendik.ForeColor = System.Drawing.Color.White;
             this.tglLahirTendik.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.tglLahirTendik.Location = new System.Drawing.Point(150, 147);
             this.tglLahirTendik.Margin = new System.Windows.Forms.Padding(2);
@@ -390,7 +390,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtPassTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtPassTendik.ForeColor = System.Drawing.Color.Black;
             this.txtPassTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassTendik.Location = new System.Drawing.Point(435, 186);
+            this.txtPassTendik.Location = new System.Drawing.Point(434, 232);
             this.txtPassTendik.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassTendik.Name = "txtPassTendik";
             this.txtPassTendik.PasswordChar = '\0';
@@ -415,7 +415,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.userNmTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.userNmTendik.ForeColor = System.Drawing.Color.Black;
             this.userNmTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.userNmTendik.Location = new System.Drawing.Point(437, 148);
+            this.userNmTendik.Location = new System.Drawing.Point(436, 194);
             this.userNmTendik.Margin = new System.Windows.Forms.Padding(4);
             this.userNmTendik.Name = "userNmTendik";
             this.userNmTendik.PasswordChar = '\0';
@@ -483,10 +483,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnBatalTendik.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBatalTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBatalTendik.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBatalTendik.FillColor = System.Drawing.Color.HotPink;
+            this.btnBatalTendik.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(255)))));
             this.btnBatalTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatalTendik.ForeColor = System.Drawing.Color.White;
-            this.btnBatalTendik.Location = new System.Drawing.Point(150, 290);
+            this.btnBatalTendik.Location = new System.Drawing.Point(150, 315);
             this.btnBatalTendik.Margin = new System.Windows.Forms.Padding(2);
             this.btnBatalTendik.Name = "btnBatalTendik";
             this.btnBatalTendik.Size = new System.Drawing.Size(112, 36);
@@ -517,17 +517,17 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.dgvTendik.AllowUserToAddRows = false;
             this.dgvTendik.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvTendik.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgvTendik.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvTendik.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTendik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTendik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvTendik.ColumnHeadersHeight = 28;
             this.dgvTendik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvTendik.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -541,14 +541,14 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.usernameDataGridViewTextBoxColumn,
             this.passwordDataGridViewTextBoxColumn});
             this.dgvTendik.DataSource = this.tenagaKependidikanBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTendik.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTendik.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvTendik.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTendik.Location = new System.Drawing.Point(125, 373);
             this.dgvTendik.Name = "dgvTendik";
@@ -674,10 +674,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKembali.FillColor = System.Drawing.Color.HotPink;
+            this.btnKembali.FillColor = System.Drawing.SystemColors.Highlight;
             this.btnKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(488, 290);
+            this.btnKembali.Location = new System.Drawing.Point(513, 67);
             this.btnKembali.Margin = new System.Windows.Forms.Padding(2);
             this.btnKembali.Name = "btnKembali";
             this.btnKembali.Size = new System.Drawing.Size(112, 36);

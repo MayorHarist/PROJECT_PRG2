@@ -54,8 +54,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
             string message = $"Apakah data berikut sudah benar?\n\n" +
                     $"ID TKN: {txtIDTendik.Text}\n" +
                     $"Nama: {txtNamaTendik.Text}\n" +
-                    $"Tanggal Lahir: {tglLahirTendik.Value}\n" +
-                    $"Jenis Kelamin: {(rbLaki.Checked ? "Laki-Laki" : rbPuan.Checked ? "Perempuan" : "Belum dipilih")}\n" +
+                    $"Tanggal_Lahir: {tglLahirTendik.Value}\n" +
+                    $"Jenis_Kelamin: {(rbLaki.Checked ? "Laki-Laki" : rbPuan.Checked ? "Perempuan" : "Belum dipilih")}\n" +
                     $"Alamat: {txtAlmatTendik.Text}\n" +
                     $"Email: {txtEmailTendik.Text}\n" +
                     $"Telepon: {TelpTendik.Text}\n" +

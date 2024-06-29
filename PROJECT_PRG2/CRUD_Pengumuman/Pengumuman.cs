@@ -21,9 +21,22 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void btnTambahPengumuman_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
+            //Memastikan apakah data yang akan diismpan sudah benar, jika belum maka masih bisa mengisi ulang sebelum simpan
+            string message = $"Apakah data berikut sudah benar?\n\n" +
+                    $"Id_Pengumuman: {txtIDPengumuman.Text}\n" +
+                    $"Nama: {txtPengumuman.Text}\n" +
+                    $"Tanggal: {tglPengumuman.Value}\n" +
+                    $"Deskripsi: {txtDeskripsi.Text}\n" +
+                    $"Id_TKN : {cbIDTendik.Text}\n";
+
+            DialogResult result = MessageBox.Show(message, "Konfirmasi Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return; // Jika pengguna menekan 'No', hentikan proses submit
+            }
             SqlCommand insert = new SqlCommand("sp_InsertPengumuman", connection);
             insert.CommandType = CommandType.StoredProcedure;
 
@@ -32,14 +45,13 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             insert.Parameters.AddWithValue("@Tanggal", tglPengumuman.Value);
             insert.Parameters.AddWithValue("@Deskripsi", txtDeskripsi.Text);
             insert.Parameters.AddWithValue("@Id_TKN", cbIDTendik.SelectedValue);
-            insert.Parameters.AddWithValue("@Status", txtStatusPengumuman.Text);
 
             //Create Requred Validator untuk verifikasi masukan pengguna wajib diisi,
             //dengan memeriksa apakah semua data terisi atau belum
             if (string.IsNullOrWhiteSpace(txtIDPengumuman.Text) || string.IsNullOrWhiteSpace(txtPengumuman.Text) || string.IsNullOrWhiteSpace(tglPengumuman.Text) ||
-                string.IsNullOrWhiteSpace(txtDeskripsi.Text) || string.IsNullOrWhiteSpace(txtStatusPengumuman.Text))
+                string.IsNullOrWhiteSpace(txtDeskripsi.Text))
             {
-                MessageBox.Show("Harap lengkapi semua data!", "Peringatan",
+                MessageBox.Show("Seluruh Data Wajib diisi!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -64,12 +76,11 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             tglPengumuman.Value = DateTime.Now;
             txtDeskripsi.Text = "";
             cbIDTendik.SelectedValue = "";
-            txtStatusPengumuman.Text = "";
         }
 
         public string autoid()
         {
-            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
             {
                 connection.Open();
@@ -90,6 +101,11 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         private void btnBatalPengumuman_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
