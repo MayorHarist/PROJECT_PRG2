@@ -46,13 +46,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
             insert.Parameters.AddWithValue("@Telepon", TelpTendik.Text);
             insert.Parameters.AddWithValue("@Username", userNmTendik.Text);
             insert.Parameters.AddWithValue("@Password", txtPassTendik.Text);
-            insert.Parameters.AddWithValue("@Status", txtStatusTendik.Text);
 
             //Create Requred Validator untuk verifikasi masukan pengguna wajib diisi,
             //dengan memeriksa apakah semua data terisi atau belum
             if (string.IsNullOrWhiteSpace(txtIDTendik.Text) || string.IsNullOrWhiteSpace(txtNamaTendik.Text) || string.IsNullOrWhiteSpace(txtAlmatTendik.Text) || 
                 string.IsNullOrWhiteSpace(txtEmailTendik.Text) || string.IsNullOrWhiteSpace(TelpTendik.Text) || string.IsNullOrWhiteSpace(userNmTendik.Text) || 
-                string.IsNullOrWhiteSpace(txtPassTendik.Text) || string.IsNullOrWhiteSpace(txtStatusTendik.Text))
+                string.IsNullOrWhiteSpace(txtPassTendik.Text))
             {
                 MessageBox.Show("Harap lengkapi semua data!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -85,7 +84,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
             TelpTendik.Text = "";
             userNmTendik.Text = "";
             txtPassTendik.Text = "";
-            txtStatusTendik.Text = "";
         }
 
         public string autoid()

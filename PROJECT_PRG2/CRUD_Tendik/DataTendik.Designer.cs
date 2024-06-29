@@ -64,15 +64,15 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
             this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.TenagaKependidikanTableAdapter();
-            this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tanggalLahirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jenisKelaminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alamatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teleponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teleponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jenisKelaminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tanggalLahirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTendik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
@@ -593,61 +593,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // 
             this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
             // 
-            // idTKNDataGridViewTextBoxColumn
+            // passwordDataGridViewTextBoxColumn
             // 
-            this.idTKNDataGridViewTextBoxColumn.DataPropertyName = "Id_TKN";
-            this.idTKNDataGridViewTextBoxColumn.HeaderText = "Id_TKN";
-            this.idTKNDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idTKNDataGridViewTextBoxColumn.Name = "idTKNDataGridViewTextBoxColumn";
-            this.idTKNDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // namaDataGridViewTextBoxColumn
-            // 
-            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
-            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
-            this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            this.namaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tanggalLahirDataGridViewTextBoxColumn
-            // 
-            this.tanggalLahirDataGridViewTextBoxColumn.DataPropertyName = "Tanggal_Lahir";
-            this.tanggalLahirDataGridViewTextBoxColumn.HeaderText = "Tanggal_Lahir";
-            this.tanggalLahirDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tanggalLahirDataGridViewTextBoxColumn.Name = "tanggalLahirDataGridViewTextBoxColumn";
-            this.tanggalLahirDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // jenisKelaminDataGridViewTextBoxColumn
-            // 
-            this.jenisKelaminDataGridViewTextBoxColumn.DataPropertyName = "Jenis_Kelamin";
-            this.jenisKelaminDataGridViewTextBoxColumn.HeaderText = "Jenis_Kelamin";
-            this.jenisKelaminDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.jenisKelaminDataGridViewTextBoxColumn.Name = "jenisKelaminDataGridViewTextBoxColumn";
-            this.jenisKelaminDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // alamatDataGridViewTextBoxColumn
-            // 
-            this.alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
-            this.alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
-            this.alamatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
-            this.alamatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // teleponDataGridViewTextBoxColumn
-            // 
-            this.teleponDataGridViewTextBoxColumn.DataPropertyName = "Telepon";
-            this.teleponDataGridViewTextBoxColumn.HeaderText = "Telepon";
-            this.teleponDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.teleponDataGridViewTextBoxColumn.Name = "teleponDataGridViewTextBoxColumn";
-            this.teleponDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // usernameDataGridViewTextBoxColumn
             // 
@@ -657,13 +609,61 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
             this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // passwordDataGridViewTextBoxColumn
+            // teleponDataGridViewTextBoxColumn
             // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.teleponDataGridViewTextBoxColumn.DataPropertyName = "Telepon";
+            this.teleponDataGridViewTextBoxColumn.HeaderText = "Telepon";
+            this.teleponDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.teleponDataGridViewTextBoxColumn.Name = "teleponDataGridViewTextBoxColumn";
+            this.teleponDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // alamatDataGridViewTextBoxColumn
+            // 
+            this.alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
+            this.alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
+            this.alamatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
+            this.alamatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jenisKelaminDataGridViewTextBoxColumn
+            // 
+            this.jenisKelaminDataGridViewTextBoxColumn.DataPropertyName = "Jenis_Kelamin";
+            this.jenisKelaminDataGridViewTextBoxColumn.HeaderText = "Jenis_Kelamin";
+            this.jenisKelaminDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.jenisKelaminDataGridViewTextBoxColumn.Name = "jenisKelaminDataGridViewTextBoxColumn";
+            this.jenisKelaminDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tanggalLahirDataGridViewTextBoxColumn
+            // 
+            this.tanggalLahirDataGridViewTextBoxColumn.DataPropertyName = "Tanggal_Lahir";
+            this.tanggalLahirDataGridViewTextBoxColumn.HeaderText = "Tanggal_Lahir";
+            this.tanggalLahirDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tanggalLahirDataGridViewTextBoxColumn.Name = "tanggalLahirDataGridViewTextBoxColumn";
+            this.tanggalLahirDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // namaDataGridViewTextBoxColumn
+            // 
+            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
+            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            this.namaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idTKNDataGridViewTextBoxColumn
+            // 
+            this.idTKNDataGridViewTextBoxColumn.DataPropertyName = "Id_TKN";
+            this.idTKNDataGridViewTextBoxColumn.HeaderText = "Id_TKN";
+            this.idTKNDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idTKNDataGridViewTextBoxColumn.Name = "idTKNDataGridViewTextBoxColumn";
+            this.idTKNDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // DataTendik
             // 
