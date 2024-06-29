@@ -96,7 +96,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 MessageBox.Show("Unable to saved: " + ex.Message);
             }
         }
-
         private bool IsValidEmail(string email)
         {
             // Pattern regex untuk validasi email
@@ -104,7 +103,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // Mengecek apakah email cocok dengan pattern regex
             return Regex.IsMatch(email, pattern);
         }
-
         private void clear()
         {
             txtIDTendik.Text = "";
