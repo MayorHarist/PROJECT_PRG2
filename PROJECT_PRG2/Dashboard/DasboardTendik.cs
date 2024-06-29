@@ -1,6 +1,7 @@
 ﻿using PROJECT_PRG2.CRUD_Dosen;
 using PROJECT_PRG2.CRUD_JenisPrestasi;
 using PROJECT_PRG2.CRUD_Mahasiswa;
+using PROJECT_PRG2.CRUD_MataKuliah;
 using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using PROJECT_PRG2.CRUD_Prodi;
 using System;
@@ -211,6 +212,16 @@ namespace PROJECT_PRG2
             udPospres.AutoScroll = true;
             panelMain.Controls.Add(udPospres);
             udPospres.Show();
+        }
+
+        private void btnMatakuliah_Click(object sender, EventArgs e)
+        {
+            ViewMatkul viewMatkul = new ViewMatkul();
+            // Atur parent form UpDelet_Prodi ke panelMain
+            viewMatkul.TopLevel = false;
+            viewMatkul.AutoScroll = true;
+            panelMain.Controls.Add(viewMatkul);
+            viewMatkul.Show();
         }
     }
 }

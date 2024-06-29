@@ -46,7 +46,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             InputMatkul inputMatkul = new InputMatkul();
             inputMatkul.ShowDialog();
-            this.Hide();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

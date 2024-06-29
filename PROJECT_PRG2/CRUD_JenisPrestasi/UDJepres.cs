@@ -20,8 +20,10 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void UDJepres_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
-            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
 
         }
 
@@ -43,13 +45,15 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             inputJepres.Show();
 
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
-            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
-            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
+
         }
 
         private void btnPerbaharui_Click(object sender, EventArgs e)
@@ -86,7 +90,9 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             }
 
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
-            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
+
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
@@ -119,7 +125,9 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             }
 
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
-            this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
+
         }
 
         private void btnCari_Click(object sender, EventArgs e)

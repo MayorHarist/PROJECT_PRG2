@@ -221,6 +221,12 @@
     <Compile Include="Dashboard\DasboardTendik.Designer.cs">
       <DependentUpon>DasboardTendik.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\DashboardUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardUtama.Designer.cs">
+      <DependentUpon>DashboardUtama.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\Dashboard_KepalaTendik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -390,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\DasboardTendik.resx">
       <DependentUpon>DasboardTendik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DashboardUtama.resx">
+      <DependentUpon>DashboardUtama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Dashboard_KepalaTendik.resx">
       <DependentUpon>Dashboard_KepalaTendik.cs</DependentUpon>
@@ -629,6 +638,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cari.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Utama Smart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Utama Smart1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

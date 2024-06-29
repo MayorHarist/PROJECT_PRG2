@@ -63,9 +63,14 @@
             this.btnTambah = new Guna.UI2.WinForms.Guna2Button();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.btnCari = new Guna.UI2.WinForms.Guna2Button();
+            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
+            this.jenisPrestasiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.jenisPrestasiTableAdapter1 = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.JenisPrestasiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCari
@@ -115,7 +120,7 @@
             this.peranDataGridViewTextBoxColumn,
             this.penyelenggaraDataGridViewTextBoxColumn,
             this.pointDataGridViewTextBoxColumn});
-            this.guna2DataGridView1.DataSource = this.jenisPrestasiBindingSource;
+            this.guna2DataGridView1.DataSource = this.jenisPrestasiBindingSource1;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,7 +131,7 @@
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(43, 121);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 62;
@@ -226,7 +231,7 @@
             this.btnHapus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnHapus.ForeColor = System.Drawing.Color.White;
             this.btnHapus.Location = new System.Drawing.Point(860, 863);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(4);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(144, 34);
             this.btnHapus.TabIndex = 28;
@@ -245,7 +250,7 @@
             this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBatal.ForeColor = System.Drawing.Color.White;
             this.btnBatal.Location = new System.Drawing.Point(415, 863);
-            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBatal.Margin = new System.Windows.Forms.Padding(4);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(144, 34);
             this.btnBatal.TabIndex = 27;
@@ -264,7 +269,7 @@
             this.btnPerbaharui.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPerbaharui.ForeColor = System.Drawing.Color.White;
             this.btnPerbaharui.Location = new System.Drawing.Point(634, 863);
-            this.btnPerbaharui.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPerbaharui.Margin = new System.Windows.Forms.Padding(4);
             this.btnPerbaharui.Name = "btnPerbaharui";
             this.btnPerbaharui.Size = new System.Drawing.Size(144, 34);
             this.btnPerbaharui.TabIndex = 26;
@@ -464,7 +469,7 @@
             this.btnTambah.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTambah.ForeColor = System.Drawing.Color.White;
             this.btnTambah.Location = new System.Drawing.Point(79, 565);
-            this.btnTambah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(4);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(144, 34);
             this.btnTambah.TabIndex = 29;
@@ -483,7 +488,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Location = new System.Drawing.Point(1091, 565);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(144, 34);
             this.btnRefresh.TabIndex = 30;
@@ -508,6 +513,20 @@
             this.btnCari.Size = new System.Drawing.Size(46, 44);
             this.btnCari.TabIndex = 31;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            // 
+            // fINDSMARTDataSet7
+            // 
+            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
+            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jenisPrestasiBindingSource1
+            // 
+            this.jenisPrestasiBindingSource1.DataMember = "JenisPrestasi";
+            this.jenisPrestasiBindingSource1.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // jenisPrestasiTableAdapter1
+            // 
+            this.jenisPrestasiTableAdapter1.ClearBeforeFill = true;
             // 
             // UDJepres
             // 
@@ -534,7 +553,7 @@
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.txtCari);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UDJepres";
             this.Text = "UDJepres";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -542,6 +561,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,5 +596,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn peranDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn penyelenggaraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pointDataGridViewTextBoxColumn;
+        private FINDSMARTDataSet7 fINDSMARTDataSet7;
+        private System.Windows.Forms.BindingSource jenisPrestasiBindingSource1;
+        private FINDSMARTDataSet7TableAdapters.JenisPrestasiTableAdapter jenisPrestasiTableAdapter1;
     }
 }

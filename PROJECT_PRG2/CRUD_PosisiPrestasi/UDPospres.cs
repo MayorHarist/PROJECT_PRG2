@@ -21,10 +21,8 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void UDPospres_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.PosisiPrestasi);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
-            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet71.PosisiPrestasi' table. You can move, or remove it, as needed.
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
 
         }
 
@@ -63,14 +61,15 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             inputPospres.Show();
 
             // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
+            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
             //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
-            this.posisiPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.PosisiPrestasi);
+            //this.posisiPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.PosisiPrestasi);
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
 
         }
 
@@ -118,7 +117,8 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             }
 
             // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
+            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
@@ -146,7 +146,8 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             }
 
             // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
+            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
         }
 
         private void txtIdPosisiPrestasi_KeyPress(object sender, KeyPressEventArgs e)

@@ -162,6 +162,7 @@
             this.btnMatakuliah.Size = new System.Drawing.Size(500, 55);
             this.btnMatakuliah.TabIndex = 4;
             this.btnMatakuliah.Text = "Mata Kuliah";
+            this.btnMatakuliah.Click += new System.EventHandler(this.btnMatakuliah_Click);
             // 
             // btnDosen
             // 
