@@ -89,10 +89,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutUs.cs">
+    <Compile Include="Dashboard\AboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutUs.Designer.cs">
+    <Compile Include="Dashboard\AboutUs.Designer.cs">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD_Dosen\InputDosen.cs">
@@ -215,16 +215,16 @@
     <Compile Include="CRUD_Tendik\UpTendik.Designer.cs">
       <DependentUpon>UpTendik.cs</DependentUpon>
     </Compile>
-    <Compile Include="DasboardTendik.cs">
+    <Compile Include="Dashboard\DasboardTendik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DasboardTendik.Designer.cs">
+    <Compile Include="Dashboard\DasboardTendik.Designer.cs">
       <DependentUpon>DasboardTendik.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard_KepalaTendik.cs">
+    <Compile Include="Dashboard\Dashboard_KepalaTendik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard_KepalaTendik.Designer.cs">
+    <Compile Include="Dashboard\Dashboard_KepalaTendik.Designer.cs">
       <DependentUpon>Dashboard_KepalaTendik.cs</DependentUpon>
     </Compile>
     <Compile Include="FINDSMART.cs">
@@ -306,10 +306,10 @@
     <Compile Include="LoginMenu\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="TampilanAwal.cs">
+    <Compile Include="Dashboard\TampilanAwal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TampilanAwal.Designer.cs">
+    <Compile Include="Dashboard\TampilanAwal.Designer.cs">
       <DependentUpon>TampilanAwal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -324,7 +324,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TendikBaru.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutUs.resx">
+    <EmbeddedResource Include="Dashboard\AboutUs.resx">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Dosen\InputDosen.resx">
@@ -388,10 +388,10 @@
     <EmbeddedResource Include="CRUD_Tendik\UpTendik.resx">
       <DependentUpon>UpTendik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DasboardTendik.resx">
+    <EmbeddedResource Include="Dashboard\DasboardTendik.resx">
       <DependentUpon>DasboardTendik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard_KepalaTendik.resx">
+    <EmbeddedResource Include="Dashboard\Dashboard_KepalaTendik.resx">
       <DependentUpon>Dashboard_KepalaTendik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginMenu\LoginMahasiswa.resx">
@@ -413,7 +413,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TampilanAwal.resx">
+    <EmbeddedResource Include="Dashboard\TampilanAwal.resx">
       <DependentUpon>TampilanAwal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FINDSMART.xsc">

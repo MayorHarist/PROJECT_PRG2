@@ -710,7 +710,7 @@
             this.dgvDsn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDsn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDsn.DataSource = this.dosenBindingSource4;
-            this.dgvDsn.Location = new System.Drawing.Point(159, 132);
+            this.dgvDsn.Location = new System.Drawing.Point(163, 132);
             this.dgvDsn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDsn.Name = "dgvDsn";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
