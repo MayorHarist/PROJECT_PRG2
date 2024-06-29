@@ -170,7 +170,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     cbPegawai.Enabled = true;
                     cbProdi.Enabled = true;
 
-                    btnUbah.Enabled = true;
+                    btnUpdate.Enabled = true;
                     btnHapus.Enabled = true;
 
                     connection.Close();
