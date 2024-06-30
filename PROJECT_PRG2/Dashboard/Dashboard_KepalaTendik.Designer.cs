@@ -37,7 +37,6 @@ namespace PROJECT_PRG2
             this.panelLaporan = new System.Windows.Forms.Panel();
             this.btnLaporanKRPP = new Guna.UI2.WinForms.Guna2Button();
             this.btnLaporanKRS = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnLaporan = new Guna.UI2.WinForms.Guna2Button();
             this.timerData = new System.Windows.Forms.Timer(this.components);
             this.timerLaporan = new System.Windows.Forms.Timer(this.components);
@@ -65,6 +64,7 @@ namespace PROJECT_PRG2
             this.btnKembali.TabIndex = 167;
             this.btnKembali.Text = "Kembali";
             this.btnKembali.UseTransparentBackground = true;
+            this.btnKembali.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // panelData
             // 
@@ -150,26 +150,6 @@ namespace PROJECT_PRG2
             this.btnLaporanKRS.TabIndex = 0;
             this.btnLaporanKRS.Text = "Laporan KRS Mahasiswa";
             // 
-            // btnBack
-            // 
-            this.btnBack.Animated = true;
-            this.btnBack.AutoRoundedCorners = true;
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.BorderRadius = 30;
-            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBack.FillColor = System.Drawing.Color.Transparent;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(68, 941);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(377, 62);
-            this.btnBack.TabIndex = 172;
-            this.btnBack.UseTransparentBackground = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // btnLaporan
             // 
             this.btnLaporan.Animated = true;
@@ -217,7 +197,6 @@ namespace PROJECT_PRG2
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelLaporan);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnLaporan);
             this.Controls.Add(this.panelData);
             this.Controls.Add(this.btnData);
@@ -243,7 +222,6 @@ namespace PROJECT_PRG2
         private System.Windows.Forms.Panel panelLaporan;
         private Guna.UI2.WinForms.Guna2Button btnLaporanKRPP;
         private Guna.UI2.WinForms.Guna2Button btnLaporanKRS;
-        private Guna.UI2.WinForms.Guna2Button btnBack;
         private Guna.UI2.WinForms.Guna2Button btnLaporan;
         private System.Windows.Forms.Timer timerData;
         private System.Windows.Forms.Timer timerLaporan;
