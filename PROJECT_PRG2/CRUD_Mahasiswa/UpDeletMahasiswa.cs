@@ -232,7 +232,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         {
             InputMahasiswa inputMahasiswa = new InputMahasiswa();
             inputMahasiswa.Show();
-            this.Hide();
         }
 
         private void btnKembali_Click(object sender, EventArgs e)

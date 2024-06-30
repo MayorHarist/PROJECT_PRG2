@@ -147,6 +147,7 @@
             this.btnPengumuman.Size = new System.Drawing.Size(500, 45);
             this.btnPengumuman.TabIndex = 4;
             this.btnPengumuman.Text = "Pengumuman";
+            this.btnPengumuman.Click += new System.EventHandler(this.btnPengumuman_Click);
             // 
             // btnMatakuliah
             // 
@@ -162,6 +163,7 @@
             this.btnMatakuliah.Size = new System.Drawing.Size(500, 55);
             this.btnMatakuliah.TabIndex = 4;
             this.btnMatakuliah.Text = "Mata Kuliah";
+            this.btnMatakuliah.Click += new System.EventHandler(this.btnMatakuliah_Click);
             // 
             // btnDosen
             // 

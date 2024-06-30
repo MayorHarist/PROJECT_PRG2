@@ -25,7 +25,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.TenagaKependidikan' table. You can move, or remove it, as needed.
             
             // TODO: This line of code loads data into the 'tendik.TenagaKependidikan' table. You can move, or remove it, as needed.
-
+            //karna tadinya ada tabel view gitu... di inputnya
         }
 
         private void btnTambahTendik_Click(object sender, EventArgs e)

@@ -26,7 +26,7 @@ namespace PROJECT_PRG2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new TampilanAwal());
+            Application.Run(new TampilanAwal());
             //Application.Run(new InputMatkul());
             //Application.Run(new DataTendik());
             //Application.Run(new DasboardTendik());
@@ -43,7 +43,7 @@ namespace PROJECT_PRG2
             //Application.Run(new InputJepres());
             //Application.Run(new UDJepres());
             //Application.Run(new LoginKepalaTendik());
-            Application.Run(new DashboardUtama());
+            Application.Run(new DasboardTendik());
         }
     }
 }

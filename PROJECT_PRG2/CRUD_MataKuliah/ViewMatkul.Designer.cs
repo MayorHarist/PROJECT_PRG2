@@ -140,13 +140,13 @@
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gdvMatkul.DefaultCellStyle = dataGridViewCellStyle11;
             this.gdvMatkul.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gdvMatkul.Location = new System.Drawing.Point(12, 175);
+            this.gdvMatkul.Location = new System.Drawing.Point(11, 140);
             this.gdvMatkul.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gdvMatkul.Name = "gdvMatkul";
             this.gdvMatkul.RowHeadersVisible = false;
             this.gdvMatkul.RowHeadersWidth = 62;
             this.gdvMatkul.RowTemplate.Height = 28;
-            this.gdvMatkul.Size = new System.Drawing.Size(1506, 315);
+            this.gdvMatkul.Size = new System.Drawing.Size(1339, 252);
             this.gdvMatkul.TabIndex = 0;
             this.gdvMatkul.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gdvMatkul.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -268,13 +268,13 @@
             this.txtCari.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtCari.ForeColor = System.Drawing.Color.Black;
             this.txtCari.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCari.Location = new System.Drawing.Point(639, 28);
-            this.txtCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCari.Location = new System.Drawing.Point(568, 22);
+            this.txtCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCari.Name = "txtCari";
             this.txtCari.PasswordChar = '\0';
             this.txtCari.PlaceholderText = "";
             this.txtCari.SelectedText = "";
-            this.txtCari.Size = new System.Drawing.Size(286, 48);
+            this.txtCari.Size = new System.Drawing.Size(254, 38);
             this.txtCari.TabIndex = 98;
             // 
             // btnCari
@@ -286,11 +286,11 @@
             this.btnCari.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnCari.ImageRotate = 0F;
             this.btnCari.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCari.Location = new System.Drawing.Point(560, 11);
+            this.btnCari.Location = new System.Drawing.Point(498, 9);
             this.btnCari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCari.Name = "btnCari";
             this.btnCari.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnCari.Size = new System.Drawing.Size(82, 86);
+            this.btnCari.Size = new System.Drawing.Size(73, 69);
             this.btnCari.TabIndex = 99;
             this.btnCari.UseTransparentBackground = true;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
@@ -309,9 +309,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(216, 663);
+            this.label11.Location = new System.Drawing.Point(192, 530);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 32);
+            this.label11.Size = new System.Drawing.Size(59, 26);
             this.label11.TabIndex = 113;
             this.label11.Text = "Nama";
             // 
@@ -319,9 +319,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(216, 792);
+            this.label10.Location = new System.Drawing.Point(192, 634);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 32);
+            this.label10.Size = new System.Drawing.Size(102, 26);
             this.label10.TabIndex = 112;
             this.label10.Text = "Jumlah SKS";
             // 
@@ -343,9 +343,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1049, 663);
+            this.label2.Location = new System.Drawing.Point(932, 530);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 32);
+            this.label2.Size = new System.Drawing.Size(68, 26);
             this.label2.TabIndex = 115;
             this.label2.Text = "Id Prodi";
             // 
@@ -366,22 +366,22 @@
             this.txtStatus.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtStatus.ForeColor = System.Drawing.Color.Black;
             this.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatus.Location = new System.Drawing.Point(616, 829);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtStatus.Location = new System.Drawing.Point(548, 663);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.PasswordChar = '\0';
             this.txtStatus.PlaceholderText = "";
             this.txtStatus.SelectedText = "";
-            this.txtStatus.Size = new System.Drawing.Size(286, 48);
+            this.txtStatus.Size = new System.Drawing.Size(254, 38);
             this.txtStatus.TabIndex = 114;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(610, 547);
+            this.label9.Location = new System.Drawing.Point(542, 438);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 32);
+            this.label9.Size = new System.Drawing.Size(52, 26);
             this.label9.TabIndex = 111;
             this.label9.Text = "Jenis";
             // 
@@ -389,9 +389,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(610, 663);
+            this.label8.Location = new System.Drawing.Point(542, 530);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 32);
+            this.label8.Size = new System.Drawing.Size(84, 26);
             this.label8.TabIndex = 110;
             this.label8.Text = "Semester";
             // 
@@ -399,9 +399,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(610, 792);
+            this.label7.Location = new System.Drawing.Point(542, 634);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 32);
+            this.label7.Size = new System.Drawing.Size(61, 26);
             this.label7.TabIndex = 109;
             this.label7.Text = "Status";
             // 
@@ -409,9 +409,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1049, 547);
+            this.label6.Location = new System.Drawing.Point(932, 438);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 32);
+            this.label6.Size = new System.Drawing.Size(101, 26);
             this.label6.TabIndex = 108;
             this.label6.Text = "No Pegawai";
             // 
@@ -419,9 +419,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(216, 547);
+            this.label1.Location = new System.Drawing.Point(192, 438);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 32);
+            this.label1.Size = new System.Drawing.Size(82, 26);
             this.label1.TabIndex = 107;
             this.label1.Text = "Id Matkul";
             // 
@@ -442,13 +442,13 @@
             this.txtSemester.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtSemester.ForeColor = System.Drawing.Color.Black;
             this.txtSemester.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSemester.Location = new System.Drawing.Point(616, 700);
-            this.txtSemester.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSemester.Location = new System.Drawing.Point(548, 560);
+            this.txtSemester.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSemester.Name = "txtSemester";
             this.txtSemester.PasswordChar = '\0';
             this.txtSemester.PlaceholderText = "";
             this.txtSemester.SelectedText = "";
-            this.txtSemester.Size = new System.Drawing.Size(286, 48);
+            this.txtSemester.Size = new System.Drawing.Size(254, 38);
             this.txtSemester.TabIndex = 104;
             // 
             // txtJenis
@@ -468,13 +468,13 @@
             this.txtJenis.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtJenis.ForeColor = System.Drawing.Color.Black;
             this.txtJenis.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJenis.Location = new System.Drawing.Point(616, 589);
-            this.txtJenis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtJenis.Location = new System.Drawing.Point(548, 471);
+            this.txtJenis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtJenis.Name = "txtJenis";
             this.txtJenis.PasswordChar = '\0';
             this.txtJenis.PlaceholderText = "";
             this.txtJenis.SelectedText = "";
-            this.txtJenis.Size = new System.Drawing.Size(286, 48);
+            this.txtJenis.Size = new System.Drawing.Size(254, 38);
             this.txtJenis.TabIndex = 103;
             // 
             // txtSKS
@@ -494,13 +494,13 @@
             this.txtSKS.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtSKS.ForeColor = System.Drawing.Color.Black;
             this.txtSKS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSKS.Location = new System.Drawing.Point(202, 829);
-            this.txtSKS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSKS.Location = new System.Drawing.Point(180, 663);
+            this.txtSKS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSKS.Name = "txtSKS";
             this.txtSKS.PasswordChar = '\0';
             this.txtSKS.PlaceholderText = "";
             this.txtSKS.SelectedText = "";
-            this.txtSKS.Size = new System.Drawing.Size(286, 48);
+            this.txtSKS.Size = new System.Drawing.Size(254, 38);
             this.txtSKS.TabIndex = 102;
             // 
             // txtNama
@@ -520,13 +520,13 @@
             this.txtNama.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Location = new System.Drawing.Point(202, 700);
-            this.txtNama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNama.Location = new System.Drawing.Point(180, 560);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
             this.txtNama.PlaceholderText = "";
             this.txtNama.SelectedText = "";
-            this.txtNama.Size = new System.Drawing.Size(286, 48);
+            this.txtNama.Size = new System.Drawing.Size(254, 38);
             this.txtNama.TabIndex = 101;
             // 
             // txtIdMatkul
@@ -545,18 +545,36 @@
             this.txtIdMatkul.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtIdMatkul.ForeColor = System.Drawing.Color.Black;
             this.txtIdMatkul.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdMatkul.Location = new System.Drawing.Point(202, 589);
-            this.txtIdMatkul.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIdMatkul.Location = new System.Drawing.Point(180, 471);
+            this.txtIdMatkul.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdMatkul.Name = "txtIdMatkul";
             this.txtIdMatkul.PasswordChar = '\0';
             this.txtIdMatkul.PlaceholderText = "";
             this.txtIdMatkul.SelectedText = "";
-            this.txtIdMatkul.Size = new System.Drawing.Size(286, 48);
+            this.txtIdMatkul.Size = new System.Drawing.Size(254, 38);
             this.txtIdMatkul.TabIndex = 100;
             // 
             // programStudiTableAdapter
             // 
             this.programStudiTableAdapter.ClearBeforeFill = true;
+            // 
+            // cbPegawai
+            // 
+            this.cbPegawai.BackColor = System.Drawing.Color.Transparent;
+            this.cbPegawai.BorderColor = System.Drawing.Color.Black;
+            this.cbPegawai.BorderRadius = 10;
+            this.cbPegawai.DataSource = this.dosenBindingSource;
+            this.cbPegawai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbPegawai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPegawai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbPegawai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbPegawai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbPegawai.ForeColor = System.Drawing.Color.Black;
+            this.cbPegawai.ItemHeight = 45;
+            this.cbPegawai.Location = new System.Drawing.Point(1055, 589);
+            this.cbPegawai.Name = "cbPegawai";
+            this.cbPegawai.Size = new System.Drawing.Size(297, 51);
+            this.cbPegawai.TabIndex = 119;
             // 
             // cbProdi
             // 
@@ -571,9 +589,10 @@
             this.cbProdi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbProdi.ForeColor = System.Drawing.Color.Black;
             this.cbProdi.ItemHeight = 45;
-            this.cbProdi.Location = new System.Drawing.Point(1055, 700);
+            this.cbProdi.Location = new System.Drawing.Point(938, 560);
+            this.cbProdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbProdi.Name = "cbProdi";
-            this.cbProdi.Size = new System.Drawing.Size(297, 51);
+            this.cbProdi.Size = new System.Drawing.Size(264, 51);
             this.cbProdi.TabIndex = 120;
             // 
             // label3
@@ -581,9 +600,9 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1062, 792);
+            this.label3.Location = new System.Drawing.Point(944, 634);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 32);
+            this.label3.Size = new System.Drawing.Size(44, 26);
             this.label3.TabIndex = 127;
             this.label3.Text = "Aksi";
             // 
@@ -596,11 +615,11 @@
             this.btnHapus.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnHapus.ImageRotate = 0F;
             this.btnHapus.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHapus.Location = new System.Drawing.Point(1219, 834);
+            this.btnHapus.Location = new System.Drawing.Point(1084, 667);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnHapus.Size = new System.Drawing.Size(35, 39);
+            this.btnHapus.Size = new System.Drawing.Size(31, 31);
             this.btnHapus.TabIndex = 125;
             this.btnHapus.UseTransparentBackground = true;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
@@ -614,11 +633,11 @@
             this.btnUpdate.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnUpdate.ImageRotate = 0F;
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdate.Location = new System.Drawing.Point(1145, 829);
+            this.btnUpdate.Location = new System.Drawing.Point(1018, 663);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnUpdate.Size = new System.Drawing.Size(35, 48);
+            this.btnUpdate.Size = new System.Drawing.Size(31, 38);
             this.btnUpdate.TabIndex = 124;
             this.btnUpdate.UseTransparentBackground = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -632,11 +651,11 @@
             this.btnTambah.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnTambah.ImageRotate = 0F;
             this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTambah.Location = new System.Drawing.Point(1068, 826);
+            this.btnTambah.Location = new System.Drawing.Point(949, 661);
             this.btnTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnTambah.Size = new System.Drawing.Size(40, 49);
+            this.btnTambah.Size = new System.Drawing.Size(36, 39);
             this.btnTambah.TabIndex = 123;
             this.btnTambah.UseTransparentBackground = true;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
@@ -657,13 +676,13 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(1055, 824);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Location = new System.Drawing.Point(938, 659);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(217, 58);
+            this.guna2TextBox1.Size = new System.Drawing.Size(193, 46);
             this.guna2TextBox1.TabIndex = 126;
             // 
             // cbPegawai
@@ -686,11 +705,11 @@
             // 
             // ViewMatkul
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1538, 1106);
+            this.ClientSize = new System.Drawing.Size(1367, 882);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnUpdate);

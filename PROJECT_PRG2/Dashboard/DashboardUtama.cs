@@ -18,10 +18,10 @@ namespace PROJECT_PRG2.Dashboard
             guna2Panel1.Controls.Add(guna2PictureBox1);
 
             // Initialize the scrollbar
-            guna2VScrollBar1.Maximum = guna2PictureBox1.Height - panel1.ClientSize.Height;
+            /*guna2VScrollBar1.Maximum = guna2PictureBox1.Height - panel1.ClientSize.Height;
             guna2VScrollBar1.Minimum = 0;
             guna2VScrollBar1.SmallChange = 1;
-            guna2VScrollBar1.LargeChange = 10;
+            guna2VScrollBar1.LargeChange = 10;*/
         }
 
         private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
