@@ -207,5 +207,18 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             }
 
         }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.dosenTableAdapter.FillBy1(this.fINDSMARTDataSet1.Dosen);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

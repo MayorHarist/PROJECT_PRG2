@@ -75,17 +75,13 @@
             this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdMatkul = new Guna.UI2.WinForms.Guna2TextBox();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet2TableAdapters.ProgramStudiTableAdapter();
-            this.cbPegawai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbProdi = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.fillByToolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.label3 = new System.Windows.Forms.Label();
             this.btnHapus = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnTambah = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbPegawai = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvMatkul)).BeginInit();
@@ -93,8 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet1)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
-            this.fillByToolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mataKuliahTableAdapter
@@ -564,24 +558,6 @@
             // 
             this.programStudiTableAdapter.ClearBeforeFill = true;
             // 
-            // cbPegawai
-            // 
-            this.cbPegawai.BackColor = System.Drawing.Color.Transparent;
-            this.cbPegawai.BorderColor = System.Drawing.Color.Black;
-            this.cbPegawai.BorderRadius = 10;
-            this.cbPegawai.DataSource = this.dosenBindingSource;
-            this.cbPegawai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbPegawai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPegawai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbPegawai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbPegawai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbPegawai.ForeColor = System.Drawing.Color.Black;
-            this.cbPegawai.ItemHeight = 45;
-            this.cbPegawai.Location = new System.Drawing.Point(1055, 589);
-            this.cbPegawai.Name = "cbPegawai";
-            this.cbPegawai.Size = new System.Drawing.Size(297, 51);
-            this.cbPegawai.TabIndex = 119;
-            // 
             // cbProdi
             // 
             this.cbProdi.BackColor = System.Drawing.Color.Transparent;
@@ -599,44 +575,6 @@
             this.cbProdi.Name = "cbProdi";
             this.cbProdi.Size = new System.Drawing.Size(297, 51);
             this.cbProdi.TabIndex = 120;
-            // 
-            // fillByToolStrip
-            // 
-            this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(1538, 38);
-            this.fillByToolStrip.TabIndex = 121;
-            this.fillByToolStrip.Text = "fillByToolStrip";
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(56, 33);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
-            // 
-            // fillByToolStrip1
-            // 
-            this.fillByToolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.fillByToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton1});
-            this.fillByToolStrip1.Location = new System.Drawing.Point(0, 38);
-            this.fillByToolStrip1.Name = "fillByToolStrip1";
-            this.fillByToolStrip1.Size = new System.Drawing.Size(1538, 38);
-            this.fillByToolStrip1.TabIndex = 122;
-            this.fillByToolStrip1.Text = "fillByToolStrip1";
-            // 
-            // fillByToolStripButton1
-            // 
-            this.fillByToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton1.Name = "fillByToolStripButton1";
-            this.fillByToolStripButton1.Size = new System.Drawing.Size(56, 33);
-            this.fillByToolStripButton1.Text = "FillBy";
-            this.fillByToolStripButton1.Click += new System.EventHandler(this.fillByToolStripButton1_Click);
             // 
             // label3
             // 
@@ -728,6 +666,24 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(217, 58);
             this.guna2TextBox1.TabIndex = 126;
             // 
+            // cbPegawai
+            // 
+            this.cbPegawai.BackColor = System.Drawing.Color.Transparent;
+            this.cbPegawai.BorderColor = System.Drawing.Color.Black;
+            this.cbPegawai.BorderRadius = 10;
+            this.cbPegawai.DataSource = this.dosenBindingSource;
+            this.cbPegawai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbPegawai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPegawai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbPegawai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbPegawai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbPegawai.ForeColor = System.Drawing.Color.Black;
+            this.cbPegawai.ItemHeight = 45;
+            this.cbPegawai.Location = new System.Drawing.Point(1055, 589);
+            this.cbPegawai.Name = "cbPegawai";
+            this.cbPegawai.Size = new System.Drawing.Size(297, 51);
+            this.cbPegawai.TabIndex = 119;
+            // 
             // ViewMatkul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -740,8 +696,6 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.fillByToolStrip1);
-            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.cbProdi);
             this.Controls.Add(this.cbPegawai);
             this.Controls.Add(this.label11);
@@ -775,10 +729,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet1)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
-            this.fillByToolStrip1.ResumeLayout(false);
-            this.fillByToolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -820,16 +770,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNama;
         private Guna.UI2.WinForms.Guna2TextBox txtIdMatkul;
         private FINDSMARTDataSet2TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
-        private Guna.UI2.WinForms.Guna2ComboBox cbPegawai;
         private Guna.UI2.WinForms.Guna2ComboBox cbProdi;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
-        private System.Windows.Forms.ToolStrip fillByToolStrip1;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton1;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ImageButton btnHapus;
         private Guna.UI2.WinForms.Guna2ImageButton btnUpdate;
         private Guna.UI2.WinForms.Guna2ImageButton btnTambah;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbPegawai;
     }
 }
