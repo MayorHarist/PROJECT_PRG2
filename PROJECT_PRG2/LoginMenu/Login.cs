@@ -1,4 +1,5 @@
 ﻿using PROJECT_PRG2.CRUD_Dosen;
+using PROJECT_PRG2.LoginMenu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,8 +33,22 @@ namespace PROJECT_PRG2
 
         private void btnLoginTendik_Click(object sender, EventArgs e)
         {
-            DasboardTendik dasboardTendik = new DasboardTendik();
-            dasboardTendik.Show();
+            LoginSbgTenDik loginTenagaPendidik = new LoginSbgTenDik();
+            loginTenagaPendidik.Show(); 
+            this.Hide();
+        }
+
+        private void btnKepalaTendik_Click(object sender, EventArgs e)
+        {
+            LoginKepalaTendik loginKepalaTendik = new LoginKepalaTendik();  
+            loginKepalaTendik.Show();
+            this.Hide();
+        }
+
+        private void btnLoginMhs_Click(object sender, EventArgs e)
+        {
+            LoginMahasiswa loginMahasiwa = new LoginMahasiswa();
+            loginMahasiwa.Show();
             this.Hide();
         }
     }
