@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpTendik));
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnBatalUpTendik = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTambah = new Guna.UI2.WinForms.Guna2Button();
             this.btnHapusTendik = new Guna.UI2.WinForms.Guna2Button();
             this.btnUbahTendik = new Guna.UI2.WinForms.Guna2Button();
             this.btnCariTendik = new Guna.UI2.WinForms.Guna2Button();
@@ -83,7 +83,6 @@
             this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.TenagaKependidikanTableAdapter();
             this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
@@ -173,23 +172,24 @@
             this.guna2HtmlLabel1.TabIndex = 122;
             this.guna2HtmlLabel1.Text = null;
             // 
-            // btnBatalUpTendik
+            // btnTambah
             // 
-            this.btnBatalUpTendik.AutoRoundedCorners = true;
-            this.btnBatalUpTendik.BorderRadius = 21;
-            this.btnBatalUpTendik.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBatalUpTendik.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBatalUpTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBatalUpTendik.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBatalUpTendik.FillColor = System.Drawing.Color.HotPink;
-            this.btnBatalUpTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBatalUpTendik.ForeColor = System.Drawing.Color.White;
-            this.btnBatalUpTendik.Location = new System.Drawing.Point(1561, 589);
-            this.btnBatalUpTendik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBatalUpTendik.Name = "btnBatalUpTendik";
-            this.btnBatalUpTendik.Size = new System.Drawing.Size(83, 44);
-            this.btnBatalUpTendik.TabIndex = 162;
-            this.btnBatalUpTendik.Text = "Batal";
+            this.btnTambah.AutoRoundedCorners = true;
+            this.btnTambah.BorderRadius = 21;
+            this.btnTambah.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTambah.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTambah.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTambah.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTambah.FillColor = System.Drawing.Color.HotPink;
+            this.btnTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTambah.ForeColor = System.Drawing.Color.White;
+            this.btnTambah.Location = new System.Drawing.Point(1537, 589);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(104, 44);
+            this.btnTambah.TabIndex = 162;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // btnHapusTendik
             // 
@@ -221,7 +221,7 @@
             this.btnUbahTendik.FillColor = System.Drawing.Color.HotPink;
             this.btnUbahTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUbahTendik.ForeColor = System.Drawing.Color.White;
-            this.btnUbahTendik.Location = new System.Drawing.Point(1465, 589);
+            this.btnUbahTendik.Location = new System.Drawing.Point(1435, 589);
             this.btnUbahTendik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUbahTendik.Name = "btnUbahTendik";
             this.btnUbahTendik.Size = new System.Drawing.Size(84, 44);
@@ -631,17 +631,17 @@
             // 
             // dgvUpTendik
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvUpTendik.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgvUpTendik.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvUpTendik.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUpTendik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUpTendik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvUpTendik.ColumnHeadersHeight = 30;
             this.dgvUpTendik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvUpTendik.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -656,14 +656,14 @@
             this.passwordDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dgvUpTendik.DataSource = this.tenagaKependidikanBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUpTendik.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUpTendik.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvUpTendik.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvUpTendik.Location = new System.Drawing.Point(613, 719);
             this.dgvUpTendik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -821,38 +821,16 @@
             this.guna2ImageButton1.TabIndex = 165;
             this.guna2ImageButton1.UseTransparentBackground = true;
             // 
-            // btnKembali
-            // 
-            this.btnKembali.AutoRoundedCorners = true;
-            this.btnKembali.BackColor = System.Drawing.Color.Transparent;
-            this.btnKembali.BorderRadius = 35;
-            this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKembali.FillColor = System.Drawing.Color.White;
-            this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKembali.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btnKembali.Location = new System.Drawing.Point(-284, 1162);
-            this.btnKembali.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnKembali.Name = "btnKembali";
-            this.btnKembali.Size = new System.Drawing.Size(497, 73);
-            this.btnKembali.TabIndex = 166;
-            this.btnKembali.Text = "Kembali";
-            this.btnKembali.UseTransparentBackground = true;
-            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
-            // 
             // UpTendik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.DESIGN_FINDSMART__1_2;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
-            this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.txtCari);
             this.Controls.Add(this.dgvUpTendik);
-            this.Controls.Add(this.btnBatalUpTendik);
+            this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.btnHapusTendik);
             this.Controls.Add(this.btnUbahTendik);
             this.Controls.Add(this.btnCariTendik);
@@ -907,7 +885,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Button btnBatalUpTendik;
+        private Guna.UI2.WinForms.Guna2Button btnTambah;
         private Guna.UI2.WinForms.Guna2Button btnHapusTendik;
         private Guna.UI2.WinForms.Guna2Button btnUbahTendik;
         private Guna.UI2.WinForms.Guna2Button btnCariTendik;
@@ -949,6 +927,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2TextBox txtCari;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2Button btnKembali;
     }
 }

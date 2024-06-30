@@ -124,7 +124,7 @@ namespace PROJECT_PRG2
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(414, 544);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 15;
             // 
             // label1
@@ -132,7 +132,7 @@ namespace PROJECT_PRG2
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(49, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 14;
             // 
             // guna2BorderlessForm1
@@ -238,7 +238,7 @@ namespace PROJECT_PRG2
             // 
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.LoginMhs;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMasuk);

@@ -66,8 +66,8 @@ namespace PROJECT_PRG2.LoginMenu
             {
                 MessageBox.Show("Login berhasil!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Anda dapat membuka form baru di sini atau mengarahkan pengguna ke bagian lain dari aplikasi Anda
-                DasboardTendik dasboardTendik = new DasboardTendik();
-                dasboardTendik.Show();
+                Dashboard_KepalaTendik dashboard_KepalaTendik = new Dashboard_KepalaTendik();
+                dashboard_KepalaTendik.Show();
                 this.Hide(); // Sembunyikan form login saat form kedua dibuka
             }
             else
@@ -85,6 +85,11 @@ namespace PROJECT_PRG2.LoginMenu
         }
 
         private void txtSandi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginKepalaTendik_Load(object sender, EventArgs e)
         {
 
         }

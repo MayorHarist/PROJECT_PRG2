@@ -59,6 +59,7 @@
             // timerLaporan
             // 
             this.timerLaporan.Interval = 10;
+            this.timerLaporan.Tick += new System.EventHandler(this.timerLaporan_Tick);
             // 
             // btnLaporanKRPP
             // 
@@ -201,6 +202,7 @@
             // timerTRS
             // 
             this.timerTRS.Interval = 10;
+            this.timerTRS.Tick += new System.EventHandler(this.timerTRS_Tick);
             // 
             // btnTrsKRPP
             // 
@@ -248,6 +250,11 @@
             this.btnProdi.TabIndex = 0;
             this.btnProdi.Text = "Program Studi";
             this.btnProdi.Click += new System.EventHandler(this.btnProdi_Click);
+            // 
+            // timerData
+            // 
+            this.timerData.Interval = 10;
+            this.timerData.Tick += new System.EventHandler(this.timerData_Tick);
             // 
             // btnKembali
             // 

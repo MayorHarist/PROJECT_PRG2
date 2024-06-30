@@ -67,7 +67,9 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(235, 163);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 26);
@@ -77,7 +79,9 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(235, 248);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 26);
@@ -87,7 +91,9 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(235, 539);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 26);
@@ -97,7 +103,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(235, 585);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 26);
@@ -107,7 +115,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(235, 292);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 26);
@@ -117,7 +127,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(235, 344);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 26);
@@ -127,7 +139,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(235, 389);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 26);
@@ -137,7 +151,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(235, 447);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 26);
@@ -147,7 +163,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(235, 493);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 26);
@@ -180,6 +198,7 @@
             // btnSimpan
             // 
             this.btnSimpan.AutoRoundedCorners = true;
+            this.btnSimpan.BackColor = System.Drawing.Color.Transparent;
             this.btnSimpan.BorderRadius = 21;
             this.btnSimpan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSimpan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -199,6 +218,7 @@
             // btnBatal
             // 
             this.btnBatal.AutoRoundedCorners = true;
+            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
             this.btnBatal.BorderRadius = 21;
             this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -275,7 +295,7 @@
             this.rbPerempuan.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
             this.rbPerempuan.CheckedState.InnerOffset = -4;
             this.rbPerempuan.Font = new System.Drawing.Font("Poppins", 9F);
-            this.rbPerempuan.ForeColor = System.Drawing.Color.Black;
+            this.rbPerempuan.ForeColor = System.Drawing.Color.White;
             this.rbPerempuan.Location = new System.Drawing.Point(504, 344);
             this.rbPerempuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbPerempuan.Name = "rbPerempuan";
@@ -299,7 +319,7 @@
             this.rbLaki.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
             this.rbLaki.CheckedState.InnerOffset = -4;
             this.rbLaki.Font = new System.Drawing.Font("Poppins", 9F);
-            this.rbLaki.ForeColor = System.Drawing.Color.Black;
+            this.rbLaki.ForeColor = System.Drawing.Color.White;
             this.rbLaki.Location = new System.Drawing.Point(391, 344);
             this.rbLaki.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbLaki.Name = "rbLaki";
@@ -435,7 +455,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(235, 631);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 26);
@@ -470,7 +492,9 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(235, 203);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 26);
@@ -515,6 +539,7 @@
             // btnKembali
             // 
             this.btnKembali.AutoRoundedCorners = true;
+            this.btnKembali.BackColor = System.Drawing.Color.Transparent;
             this.btnKembali.BorderRadius = 21;
             this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -535,6 +560,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.DESIGN_FINDSMART__2_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(972, 880);
             this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.txtAlamat);
@@ -564,6 +591,7 @@
             this.Controls.Add(this.txtTahunMasuk);
             this.Controls.Add(this.txtNama);
             this.Controls.Add(this.txtNIM);
+            this.DoubleBuffered = true;
             this.Name = "InputMahasiswa";
             this.Text = "InputMahasiswa";
             this.Load += new System.EventHandler(this.InputMahasiswa_Load);

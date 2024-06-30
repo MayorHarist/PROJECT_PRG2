@@ -1,4 +1,5 @@
 ﻿using PROJECT_PRG2.CRUD_Dosen;
+using PROJECT_PRG2.Dashboard;
 using PROJECT_PRG2.LoginMenu;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,7 @@ namespace PROJECT_PRG2
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            TampilanAwal tampilanAwal = new TampilanAwal();
+            DashboardUtama tampilanAwal = new DashboardUtama();
             tampilanAwal.Show();
             this.Hide();
         }

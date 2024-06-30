@@ -133,7 +133,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             try
             {
                 // Validasi apakah txtPegawai kosong
-                if (string.IsNullOrWhiteSpace(txtPegawai.Text))
+                if (string.IsNullOrWhiteSpace(txtCari.Text))
                 {
                     MessageBox.Show("Silakan isi No Pegawai terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -146,7 +146,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
                     DataTable dataTable = new DataTable();
                     SqlCommand myCommand = new SqlCommand("select * from Dosen where No_Pegawai= @No_Pegawai", connection);
-                    myCommand.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
+                    myCommand.Parameters.AddWithValue("@No_Pegawai", txtCari.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 

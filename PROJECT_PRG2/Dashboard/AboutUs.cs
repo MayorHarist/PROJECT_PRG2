@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROJECT_PRG2.Dashboard;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,7 @@ namespace PROJECT_PRG2
         }
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            TampilanAwal tampilanAwal = new TampilanAwal();
+            DashboardUtama tampilanAwal = new DashboardUtama();
             tampilanAwal.Show();
             this.Hide();
         }

@@ -184,5 +184,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
             dashboard_KepalaTendik.Show();
             this.Hide();
         }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            DataTendik dataTendik = new DataTendik();
+            dataTendik.Show();
+
+        }
     }
 }
