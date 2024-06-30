@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbIDTendik = new System.Windows.Forms.ComboBox();
+            this.pengumumanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.btnHapusPengumuman = new Guna.UI2.WinForms.Guna2Button();
             this.btnTambah = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdatePengumuman = new Guna.UI2.WinForms.Guna2Button();
@@ -53,30 +55,42 @@
             this.deskripsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pengumumanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.pengumumanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.PengumumanTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.TenagaKependidikanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbIDTendik
             // 
-            this.cbIDTendik.DataSource = this.pengumumanBindingSource;
+            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource;
             this.cbIDTendik.DisplayMember = "Nama";
             this.cbIDTendik.FormattingEnabled = true;
-            this.cbIDTendik.ItemHeight = 16;
-            this.cbIDTendik.Location = new System.Drawing.Point(752, 578);
+            this.cbIDTendik.ItemHeight = 13;
+            this.cbIDTendik.Location = new System.Drawing.Point(564, 470);
+            this.cbIDTendik.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbIDTendik.Name = "cbIDTendik";
-            this.cbIDTendik.Size = new System.Drawing.Size(255, 24);
+            this.cbIDTendik.Size = new System.Drawing.Size(192, 21);
             this.cbIDTendik.TabIndex = 131;
-            this.cbIDTendik.ValueMember = "No_Pegawai";
+            this.cbIDTendik.ValueMember = "Id_TKN";
+            // 
+            // pengumumanBindingSource
+            // 
+            this.pengumumanBindingSource.DataMember = "Pengumuman";
+            this.pengumumanBindingSource.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // fINDSMARTDataSet7
+            // 
+            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
+            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnHapusPengumuman
             // 
             this.btnHapusPengumuman.AutoRoundedCorners = true;
-            this.btnHapusPengumuman.BorderRadius = 21;
+            this.btnHapusPengumuman.BorderRadius = 17;
             this.btnHapusPengumuman.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHapusPengumuman.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHapusPengumuman.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -84,16 +98,17 @@
             this.btnHapusPengumuman.FillColor = System.Drawing.Color.HotPink;
             this.btnHapusPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapusPengumuman.ForeColor = System.Drawing.Color.White;
-            this.btnHapusPengumuman.Location = new System.Drawing.Point(853, 674);
+            this.btnHapusPengumuman.Location = new System.Drawing.Point(640, 548);
+            this.btnHapusPengumuman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHapusPengumuman.Name = "btnHapusPengumuman";
-            this.btnHapusPengumuman.Size = new System.Drawing.Size(149, 44);
+            this.btnHapusPengumuman.Size = new System.Drawing.Size(112, 36);
             this.btnHapusPengumuman.TabIndex = 130;
             this.btnHapusPengumuman.Text = "Hapus";
             // 
             // btnTambah
             // 
             this.btnTambah.AutoRoundedCorners = true;
-            this.btnTambah.BorderRadius = 21;
+            this.btnTambah.BorderRadius = 17;
             this.btnTambah.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTambah.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTambah.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -101,9 +116,10 @@
             this.btnTambah.FillColor = System.Drawing.Color.HotPink;
             this.btnTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambah.ForeColor = System.Drawing.Color.White;
-            this.btnTambah.Location = new System.Drawing.Point(548, 674);
+            this.btnTambah.Location = new System.Drawing.Point(411, 548);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(149, 44);
+            this.btnTambah.Size = new System.Drawing.Size(112, 36);
             this.btnTambah.TabIndex = 129;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
@@ -111,7 +127,7 @@
             // btnUpdatePengumuman
             // 
             this.btnUpdatePengumuman.AutoRoundedCorners = true;
-            this.btnUpdatePengumuman.BorderRadius = 21;
+            this.btnUpdatePengumuman.BorderRadius = 17;
             this.btnUpdatePengumuman.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUpdatePengumuman.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUpdatePengumuman.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -119,9 +135,10 @@
             this.btnUpdatePengumuman.FillColor = System.Drawing.Color.HotPink;
             this.btnUpdatePengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdatePengumuman.ForeColor = System.Drawing.Color.White;
-            this.btnUpdatePengumuman.Location = new System.Drawing.Point(368, 674);
+            this.btnUpdatePengumuman.Location = new System.Drawing.Point(276, 548);
+            this.btnUpdatePengumuman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdatePengumuman.Name = "btnUpdatePengumuman";
-            this.btnUpdatePengumuman.Size = new System.Drawing.Size(149, 44);
+            this.btnUpdatePengumuman.Size = new System.Drawing.Size(112, 36);
             this.btnUpdatePengumuman.TabIndex = 128;
             this.btnUpdatePengumuman.Text = "Perbarui";
             this.btnUpdatePengumuman.Click += new System.EventHandler(this.btnUpdatePengumuman_Click);
@@ -130,9 +147,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(188, 484);
+            this.label10.Location = new System.Drawing.Point(141, 393);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 18);
+            this.label10.Size = new System.Drawing.Size(45, 15);
             this.label10.TabIndex = 126;
             this.label10.Text = "Nama";
             // 
@@ -140,9 +158,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(188, 530);
+            this.label7.Location = new System.Drawing.Point(141, 431);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 18);
+            this.label7.Size = new System.Drawing.Size(63, 15);
             this.label7.TabIndex = 125;
             this.label7.Text = "Tanggal ";
             // 
@@ -150,9 +169,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(650, 578);
+            this.label5.Location = new System.Drawing.Point(488, 470);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 23);
+            this.label5.Size = new System.Drawing.Size(50, 15);
             this.label5.TabIndex = 124;
             this.label5.Text = "Tendik";
             // 
@@ -160,9 +180,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(650, 487);
+            this.label4.Location = new System.Drawing.Point(488, 396);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 18);
+            this.label4.Size = new System.Drawing.Size(67, 15);
             this.label4.TabIndex = 123;
             this.label4.Text = "Deskripsi";
             // 
@@ -171,7 +192,8 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(254, 484);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(190, 393);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel1.TabIndex = 119;
@@ -193,13 +215,13 @@
             this.txtDeskripsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtDeskripsi.ForeColor = System.Drawing.Color.Black;
             this.txtDeskripsi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDeskripsi.Location = new System.Drawing.Point(749, 486);
-            this.txtDeskripsi.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDeskripsi.Location = new System.Drawing.Point(562, 395);
+            this.txtDeskripsi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDeskripsi.Name = "txtDeskripsi";
             this.txtDeskripsi.PasswordChar = '\0';
             this.txtDeskripsi.PlaceholderText = "";
             this.txtDeskripsi.SelectedText = "";
-            this.txtDeskripsi.Size = new System.Drawing.Size(255, 83);
+            this.txtDeskripsi.Size = new System.Drawing.Size(191, 67);
             this.txtDeskripsi.TabIndex = 117;
             // 
             // tglPengumuman
@@ -207,17 +229,18 @@
             this.tglPengumuman.Animated = true;
             this.tglPengumuman.AutoRoundedCorners = true;
             this.tglPengumuman.BackColor = System.Drawing.Color.Transparent;
-            this.tglPengumuman.BorderRadius = 19;
+            this.tglPengumuman.BorderRadius = 15;
             this.tglPengumuman.Checked = true;
             this.tglPengumuman.FillColor = System.Drawing.Color.HotPink;
             this.tglPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tglPengumuman.ForeColor = System.Drawing.Color.Black;
             this.tglPengumuman.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.tglPengumuman.Location = new System.Drawing.Point(343, 530);
+            this.tglPengumuman.Location = new System.Drawing.Point(257, 431);
+            this.tglPengumuman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tglPengumuman.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.tglPengumuman.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.tglPengumuman.Name = "tglPengumuman";
-            this.tglPengumuman.Size = new System.Drawing.Size(255, 41);
+            this.tglPengumuman.Size = new System.Drawing.Size(191, 33);
             this.tglPengumuman.TabIndex = 116;
             this.tglPengumuman.Value = new System.DateTime(2024, 6, 15, 22, 37, 28, 314);
             // 
@@ -237,13 +260,13 @@
             this.txtPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtPengumuman.ForeColor = System.Drawing.Color.Black;
             this.txtPengumuman.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPengumuman.Location = new System.Drawing.Point(343, 484);
-            this.txtPengumuman.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPengumuman.Location = new System.Drawing.Point(257, 393);
+            this.txtPengumuman.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPengumuman.Name = "txtPengumuman";
             this.txtPengumuman.PasswordChar = '\0';
             this.txtPengumuman.PlaceholderText = "";
             this.txtPengumuman.SelectedText = "";
-            this.txtPengumuman.Size = new System.Drawing.Size(255, 39);
+            this.txtPengumuman.Size = new System.Drawing.Size(191, 32);
             this.txtPengumuman.TabIndex = 115;
             this.txtPengumuman.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPengumuman_KeyPress);
             // 
@@ -263,19 +286,19 @@
             this.txtIDPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtIDPengumuman.ForeColor = System.Drawing.Color.Black;
             this.txtIDPengumuman.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDPengumuman.Location = new System.Drawing.Point(495, 43);
-            this.txtIDPengumuman.Margin = new System.Windows.Forms.Padding(5);
+            this.txtIDPengumuman.Location = new System.Drawing.Point(371, 35);
+            this.txtIDPengumuman.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIDPengumuman.Name = "txtIDPengumuman";
             this.txtIDPengumuman.PasswordChar = '\0';
             this.txtIDPengumuman.PlaceholderText = "";
             this.txtIDPengumuman.SelectedText = "";
-            this.txtIDPengumuman.Size = new System.Drawing.Size(286, 39);
+            this.txtIDPengumuman.Size = new System.Drawing.Size(214, 32);
             this.txtIDPengumuman.TabIndex = 114;
             // 
             // btnCari
             // 
             this.btnCari.AutoRoundedCorners = true;
-            this.btnCari.BorderRadius = 21;
+            this.btnCari.BorderRadius = 17;
             this.btnCari.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCari.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCari.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -283,26 +306,27 @@
             this.btnCari.FillColor = System.Drawing.Color.HotPink;
             this.btnCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCari.ForeColor = System.Drawing.Color.White;
-            this.btnCari.Location = new System.Drawing.Point(390, 38);
+            this.btnCari.Location = new System.Drawing.Point(292, 31);
+            this.btnCari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(97, 44);
+            this.btnCari.Size = new System.Drawing.Size(73, 36);
             this.btnCari.TabIndex = 132;
             this.btnCari.Text = "Cari";
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView1.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.ColumnHeadersHeight = 18;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -313,21 +337,22 @@
             this.statusDataGridViewTextBoxColumn,
             this.idTKNDataGridViewTextBoxColumn});
             this.guna2DataGridView1.DataSource = this.pengumumanBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(182, 125);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(136, 102);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(914, 205);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(686, 167);
             this.guna2DataGridView1.TabIndex = 133;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -393,26 +418,25 @@
             this.idTKNDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idTKNDataGridViewTextBoxColumn.Name = "idTKNDataGridViewTextBoxColumn";
             // 
-            // pengumumanBindingSource
-            // 
-            this.pengumumanBindingSource.DataMember = "Pengumuman";
-            this.pengumumanBindingSource.DataSource = this.fINDSMARTDataSet7;
-            // 
-            // fINDSMARTDataSet7
-            // 
-            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
-            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // pengumumanTableAdapter
             // 
             this.pengumumanTableAdapter.ClearBeforeFill = true;
             // 
+            // tenagaKependidikanBindingSource
+            // 
+            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // tenagaKependidikanTableAdapter
+            // 
+            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
+            // 
             // UpdatePengumuman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1360, 1016);
+            this.ClientSize = new System.Drawing.Size(1020, 826);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.cbIDTendik);
@@ -430,14 +454,14 @@
             this.Controls.Add(this.txtIDPengumuman);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdatePengumuman";
             this.Text = "UpdatePengumuman";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UpdatePengumuman_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,5 +493,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn deskripsiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idTKNDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource;
+        private FINDSMARTDataSet7TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter;
     }
 }

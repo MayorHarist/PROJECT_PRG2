@@ -122,17 +122,17 @@ namespace PROJECT_PRG2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(414, 544);
+            this.label2.Location = new System.Drawing.Point(414, 559);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 16);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 140);
+            this.label1.Location = new System.Drawing.Point(49, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 14;
             // 
             // guna2BorderlessForm1
@@ -154,18 +154,22 @@ namespace PROJECT_PRG2
             this.btnMasuk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnMasuk.FillColor = System.Drawing.Color.Transparent;
             this.btnMasuk.FocusedColor = System.Drawing.Color.White;
-            this.btnMasuk.Font = new System.Drawing.Font("Poppins", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMasuk.Font = new System.Drawing.Font("Poppins", 20F, System.Drawing.FontStyle.Bold);
             this.btnMasuk.ForeColor = System.Drawing.Color.White;
-            this.btnMasuk.Location = new System.Drawing.Point(113, 558);
+            this.btnMasuk.Location = new System.Drawing.Point(113, 581);
             this.btnMasuk.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnMasuk.Name = "btnMasuk";
             this.btnMasuk.Size = new System.Drawing.Size(511, 61);
             this.btnMasuk.TabIndex = 19;
+            this.btnMasuk.UseTransparentBackground = true;
             this.btnMasuk.Click += new System.EventHandler(this.btnMasuk_Click);
             // 
             // btnKembali
             // 
+            this.btnKembali.Animated = true;
+            this.btnKembali.AutoRoundedCorners = true;
             this.btnKembali.BackColor = System.Drawing.Color.Transparent;
+            this.btnKembali.BorderRadius = 30;
             this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -173,10 +177,10 @@ namespace PROJECT_PRG2
             this.btnKembali.FillColor = System.Drawing.Color.Transparent;
             this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(113, 651);
+            this.btnKembali.Location = new System.Drawing.Point(113, 674);
             this.btnKembali.Margin = new System.Windows.Forms.Padding(2);
             this.btnKembali.Name = "btnKembali";
-            this.btnKembali.Size = new System.Drawing.Size(495, 57);
+            this.btnKembali.Size = new System.Drawing.Size(511, 62);
             this.btnKembali.TabIndex = 18;
             this.btnKembali.UseTransparentBackground = true;
             this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
@@ -197,7 +201,7 @@ namespace PROJECT_PRG2
             this.txtSandi.Font = new System.Drawing.Font("Poppins", 10F);
             this.txtSandi.ForeColor = System.Drawing.Color.White;
             this.txtSandi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSandi.Location = new System.Drawing.Point(121, 471);
+            this.txtSandi.Location = new System.Drawing.Point(121, 486);
             this.txtSandi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtSandi.Name = "txtSandi";
             this.txtSandi.PasswordChar = '*';
@@ -221,10 +225,10 @@ namespace PROJECT_PRG2
             this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(173)))));
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Poppins", 10F);
             this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(121, 379);
+            this.txtUsername.Location = new System.Drawing.Point(121, 387);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
