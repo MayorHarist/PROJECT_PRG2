@@ -45,7 +45,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         private void btnTambah_Click(object sender, EventArgs e)
         {
             InputMatkul inputMatkul = new InputMatkul();
-            inputMatkul.ShowDialog();
+            inputMatkul.Show();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -199,6 +199,19 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             try
             {
                 this.programStudiTableAdapter.FillBy(this.fINDSMARTDataSet2.ProgramStudi);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.dosenTableAdapter.FillBy1(this.fINDSMARTDataSet1.Dosen);
             }
             catch (System.Exception ex)
             {

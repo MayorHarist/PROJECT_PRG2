@@ -2,6 +2,7 @@
 using PROJECT_PRG2.CRUD_JenisPrestasi;
 using PROJECT_PRG2.CRUD_Mahasiswa;
 using PROJECT_PRG2.CRUD_MataKuliah;
+using PROJECT_PRG2.CRUD_Pengumuman;
 using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using PROJECT_PRG2.CRUD_Prodi;
 using System;
@@ -222,6 +223,16 @@ namespace PROJECT_PRG2
             viewMatkul.AutoScroll = true;
             panelMain.Controls.Add(viewMatkul);
             viewMatkul.Show();
+        }
+
+        private void btnPengumuman_Click(object sender, EventArgs e)
+        {
+            UpdatePengumuman updatePengumuman = new UpdatePengumuman();
+            // Atur parent form UpDelet_Prodi ke panelMain
+            updatePengumuman.TopLevel = false;
+            updatePengumuman.AutoScroll = true;
+            panelMain.Controls.Add(updatePengumuman);
+            updatePengumuman.Show();
         }
     }
 }

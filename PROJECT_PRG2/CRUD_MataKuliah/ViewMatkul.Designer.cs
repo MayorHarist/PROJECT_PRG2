@@ -75,13 +75,13 @@
             this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdMatkul = new Guna.UI2.WinForms.Guna2TextBox();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet2TableAdapters.ProgramStudiTableAdapter();
-            this.cbPegawai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbProdi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnHapus = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnTambah = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbPegawai = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvMatkul)).BeginInit();
@@ -571,10 +571,9 @@
             this.cbPegawai.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbPegawai.ForeColor = System.Drawing.Color.Black;
             this.cbPegawai.ItemHeight = 45;
-            this.cbPegawai.Location = new System.Drawing.Point(938, 471);
-            this.cbPegawai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbPegawai.Location = new System.Drawing.Point(1055, 589);
             this.cbPegawai.Name = "cbPegawai";
-            this.cbPegawai.Size = new System.Drawing.Size(264, 51);
+            this.cbPegawai.Size = new System.Drawing.Size(297, 51);
             this.cbPegawai.TabIndex = 119;
             // 
             // cbProdi
@@ -686,6 +685,24 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(193, 46);
             this.guna2TextBox1.TabIndex = 126;
             // 
+            // cbPegawai
+            // 
+            this.cbPegawai.BackColor = System.Drawing.Color.Transparent;
+            this.cbPegawai.BorderColor = System.Drawing.Color.Black;
+            this.cbPegawai.BorderRadius = 10;
+            this.cbPegawai.DataSource = this.dosenBindingSource;
+            this.cbPegawai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbPegawai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPegawai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbPegawai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbPegawai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbPegawai.ForeColor = System.Drawing.Color.Black;
+            this.cbPegawai.ItemHeight = 45;
+            this.cbPegawai.Location = new System.Drawing.Point(1055, 589);
+            this.cbPegawai.Name = "cbPegawai";
+            this.cbPegawai.Size = new System.Drawing.Size(297, 51);
+            this.cbPegawai.TabIndex = 119;
+            // 
             // ViewMatkul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -772,12 +789,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNama;
         private Guna.UI2.WinForms.Guna2TextBox txtIdMatkul;
         private FINDSMARTDataSet2TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
-        private Guna.UI2.WinForms.Guna2ComboBox cbPegawai;
         private Guna.UI2.WinForms.Guna2ComboBox cbProdi;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ImageButton btnHapus;
         private Guna.UI2.WinForms.Guna2ImageButton btnUpdate;
         private Guna.UI2.WinForms.Guna2ImageButton btnTambah;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbPegawai;
     }
 }

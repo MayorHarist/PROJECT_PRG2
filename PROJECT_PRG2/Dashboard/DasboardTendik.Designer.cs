@@ -59,6 +59,7 @@
             // timerLaporan
             // 
             this.timerLaporan.Interval = 10;
+            this.timerLaporan.Tick += new System.EventHandler(this.timerLaporan_Tick);
             // 
             // btnLaporanKRPP
             // 
@@ -70,9 +71,10 @@
             this.btnLaporanKRPP.FillColor = System.Drawing.Color.Transparent;
             this.btnLaporanKRPP.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporanKRPP.ForeColor = System.Drawing.Color.White;
-            this.btnLaporanKRPP.Location = new System.Drawing.Point(0, 59);
+            this.btnLaporanKRPP.Location = new System.Drawing.Point(0, 48);
+            this.btnLaporanKRPP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLaporanKRPP.Name = "btnLaporanKRPP";
-            this.btnLaporanKRPP.Size = new System.Drawing.Size(500, 55);
+            this.btnLaporanKRPP.Size = new System.Drawing.Size(375, 45);
             this.btnLaporanKRPP.TabIndex = 2;
             this.btnLaporanKRPP.Text = "Laporan KRPP Mahasiswa";
             // 
@@ -85,9 +87,10 @@
             this.btnLaporanKRS.FillColor = System.Drawing.Color.Transparent;
             this.btnLaporanKRS.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporanKRS.ForeColor = System.Drawing.Color.White;
-            this.btnLaporanKRS.Location = new System.Drawing.Point(-2, 7);
+            this.btnLaporanKRS.Location = new System.Drawing.Point(-2, 6);
+            this.btnLaporanKRS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLaporanKRS.Name = "btnLaporanKRS";
-            this.btnLaporanKRS.Size = new System.Drawing.Size(500, 55);
+            this.btnLaporanKRS.Size = new System.Drawing.Size(375, 45);
             this.btnLaporanKRS.TabIndex = 0;
             this.btnLaporanKRS.Text = "Laporan KRS Mahasiswa";
             // 
@@ -96,9 +99,10 @@
             this.panelLaporan.BackColor = System.Drawing.Color.Transparent;
             this.panelLaporan.Controls.Add(this.btnLaporanKRPP);
             this.panelLaporan.Controls.Add(this.btnLaporanKRS);
-            this.panelLaporan.Location = new System.Drawing.Point(0, 830);
+            this.panelLaporan.Location = new System.Drawing.Point(25, 840);
+            this.panelLaporan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelLaporan.Name = "panelLaporan";
-            this.panelLaporan.Size = new System.Drawing.Size(503, 103);
+            this.panelLaporan.Size = new System.Drawing.Size(377, 84);
             this.panelLaporan.TabIndex = 15;
             // 
             // btnJenisPrestasi
@@ -110,9 +114,10 @@
             this.btnJenisPrestasi.FillColor = System.Drawing.Color.Transparent;
             this.btnJenisPrestasi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJenisPrestasi.ForeColor = System.Drawing.Color.White;
-            this.btnJenisPrestasi.Location = new System.Drawing.Point(0, 213);
+            this.btnJenisPrestasi.Location = new System.Drawing.Point(0, 173);
+            this.btnJenisPrestasi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnJenisPrestasi.Name = "btnJenisPrestasi";
-            this.btnJenisPrestasi.Size = new System.Drawing.Size(500, 55);
+            this.btnJenisPrestasi.Size = new System.Drawing.Size(375, 45);
             this.btnJenisPrestasi.TabIndex = 6;
             this.btnJenisPrestasi.Text = "Jenis Prestasi";
             this.btnJenisPrestasi.Click += new System.EventHandler(this.btnJenisPrestasi_Click);
@@ -126,9 +131,10 @@
             this.btnPosisiPrestasi.FillColor = System.Drawing.Color.Transparent;
             this.btnPosisiPrestasi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPosisiPrestasi.ForeColor = System.Drawing.Color.White;
-            this.btnPosisiPrestasi.Location = new System.Drawing.Point(0, 264);
+            this.btnPosisiPrestasi.Location = new System.Drawing.Point(0, 214);
+            this.btnPosisiPrestasi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPosisiPrestasi.Name = "btnPosisiPrestasi";
-            this.btnPosisiPrestasi.Size = new System.Drawing.Size(500, 55);
+            this.btnPosisiPrestasi.Size = new System.Drawing.Size(375, 45);
             this.btnPosisiPrestasi.TabIndex = 5;
             this.btnPosisiPrestasi.Text = "Posisi Prestasi";
             this.btnPosisiPrestasi.Click += new System.EventHandler(this.btnPosisiPrestasi_Click);
@@ -142,11 +148,13 @@
             this.btnPengumuman.FillColor = System.Drawing.Color.Transparent;
             this.btnPengumuman.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPengumuman.ForeColor = System.Drawing.Color.White;
-            this.btnPengumuman.Location = new System.Drawing.Point(0, 318);
+            this.btnPengumuman.Location = new System.Drawing.Point(0, 258);
+            this.btnPengumuman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPengumuman.Name = "btnPengumuman";
-            this.btnPengumuman.Size = new System.Drawing.Size(500, 45);
+            this.btnPengumuman.Size = new System.Drawing.Size(375, 37);
             this.btnPengumuman.TabIndex = 4;
             this.btnPengumuman.Text = "Pengumuman";
+            this.btnPengumuman.Click += new System.EventHandler(this.btnPengumuman_Click);
             // 
             // btnMatakuliah
             // 
@@ -157,9 +165,10 @@
             this.btnMatakuliah.FillColor = System.Drawing.Color.Transparent;
             this.btnMatakuliah.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMatakuliah.ForeColor = System.Drawing.Color.White;
-            this.btnMatakuliah.Location = new System.Drawing.Point(0, 110);
+            this.btnMatakuliah.Location = new System.Drawing.Point(0, 89);
+            this.btnMatakuliah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMatakuliah.Name = "btnMatakuliah";
-            this.btnMatakuliah.Size = new System.Drawing.Size(500, 55);
+            this.btnMatakuliah.Size = new System.Drawing.Size(375, 45);
             this.btnMatakuliah.TabIndex = 4;
             this.btnMatakuliah.Text = "Mata Kuliah";
             this.btnMatakuliah.Click += new System.EventHandler(this.btnMatakuliah_Click);
@@ -174,9 +183,10 @@
             this.btnDosen.FillColor = System.Drawing.Color.Transparent;
             this.btnDosen.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDosen.ForeColor = System.Drawing.Color.White;
-            this.btnDosen.Location = new System.Drawing.Point(0, 59);
+            this.btnDosen.Location = new System.Drawing.Point(0, 48);
+            this.btnDosen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDosen.Name = "btnDosen";
-            this.btnDosen.Size = new System.Drawing.Size(500, 55);
+            this.btnDosen.Size = new System.Drawing.Size(375, 45);
             this.btnDosen.TabIndex = 2;
             this.btnDosen.Text = "Dosen";
             this.btnDosen.Click += new System.EventHandler(this.btnDosen_Click);
@@ -190,9 +200,10 @@
             this.btnMahasiswa.FillColor = System.Drawing.Color.Transparent;
             this.btnMahasiswa.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMahasiswa.ForeColor = System.Drawing.Color.White;
-            this.btnMahasiswa.Location = new System.Drawing.Point(0, 160);
+            this.btnMahasiswa.Location = new System.Drawing.Point(0, 130);
+            this.btnMahasiswa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMahasiswa.Name = "btnMahasiswa";
-            this.btnMahasiswa.Size = new System.Drawing.Size(500, 55);
+            this.btnMahasiswa.Size = new System.Drawing.Size(375, 45);
             this.btnMahasiswa.TabIndex = 1;
             this.btnMahasiswa.Text = "Mahasiswa";
             this.btnMahasiswa.Click += new System.EventHandler(this.btnMahasiswa_Click);
@@ -200,6 +211,7 @@
             // timerTRS
             // 
             this.timerTRS.Interval = 10;
+            this.timerTRS.Tick += new System.EventHandler(this.timerTRS_Tick);
             // 
             // btnTrsKRPP
             // 
@@ -211,9 +223,10 @@
             this.btnTrsKRPP.FillColor = System.Drawing.Color.Transparent;
             this.btnTrsKRPP.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrsKRPP.ForeColor = System.Drawing.Color.White;
-            this.btnTrsKRPP.Location = new System.Drawing.Point(0, 59);
+            this.btnTrsKRPP.Location = new System.Drawing.Point(0, 48);
+            this.btnTrsKRPP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTrsKRPP.Name = "btnTrsKRPP";
-            this.btnTrsKRPP.Size = new System.Drawing.Size(500, 55);
+            this.btnTrsKRPP.Size = new System.Drawing.Size(375, 45);
             this.btnTrsKRPP.TabIndex = 2;
             this.btnTrsKRPP.Text = "KRPP Mahasiswa";
             // 
@@ -226,9 +239,10 @@
             this.btnTrsKRS.FillColor = System.Drawing.Color.Transparent;
             this.btnTrsKRS.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrsKRS.ForeColor = System.Drawing.Color.White;
-            this.btnTrsKRS.Location = new System.Drawing.Point(-2, 7);
+            this.btnTrsKRS.Location = new System.Drawing.Point(-2, 6);
+            this.btnTrsKRS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTrsKRS.Name = "btnTrsKRS";
-            this.btnTrsKRS.Size = new System.Drawing.Size(500, 55);
+            this.btnTrsKRS.Size = new System.Drawing.Size(375, 45);
             this.btnTrsKRS.TabIndex = 0;
             this.btnTrsKRS.Text = "KRS Mahasiswa";
             // 
@@ -241,19 +255,25 @@
             this.btnProdi.FillColor = System.Drawing.Color.Transparent;
             this.btnProdi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProdi.ForeColor = System.Drawing.Color.White;
-            this.btnProdi.Location = new System.Drawing.Point(-2, 7);
+            this.btnProdi.Location = new System.Drawing.Point(-2, 6);
+            this.btnProdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProdi.Name = "btnProdi";
-            this.btnProdi.Size = new System.Drawing.Size(500, 55);
+            this.btnProdi.Size = new System.Drawing.Size(375, 45);
             this.btnProdi.TabIndex = 0;
             this.btnProdi.Text = "Program Studi";
             this.btnProdi.Click += new System.EventHandler(this.btnProdi_Click);
+            // 
+            // timerData
+            // 
+            this.timerData.Interval = 10;
+            this.timerData.Tick += new System.EventHandler(this.timerData_Tick);
             // 
             // btnKembali
             // 
             this.btnKembali.Animated = true;
             this.btnKembali.AutoRoundedCorners = true;
             this.btnKembali.BackColor = System.Drawing.Color.Transparent;
-            this.btnKembali.BorderRadius = 30;
+            this.btnKembali.BorderRadius = 24;
             this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -261,9 +281,10 @@
             this.btnKembali.FillColor = System.Drawing.Color.Transparent;
             this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(84, 953);
+            this.btnKembali.Location = new System.Drawing.Point(71, 979);
+            this.btnKembali.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnKembali.Name = "btnKembali";
-            this.btnKembali.Size = new System.Drawing.Size(377, 62);
+            this.btnKembali.Size = new System.Drawing.Size(370, 50);
             this.btnKembali.TabIndex = 16;
             this.btnKembali.UseTransparentBackground = true;
             this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
@@ -273,9 +294,10 @@
             this.panelTransaksi.BackColor = System.Drawing.Color.Transparent;
             this.panelTransaksi.Controls.Add(this.btnTrsKRPP);
             this.panelTransaksi.Controls.Add(this.btnTrsKRS);
-            this.panelTransaksi.Location = new System.Drawing.Point(0, 659);
+            this.panelTransaksi.Location = new System.Drawing.Point(25, 672);
+            this.panelTransaksi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelTransaksi.Name = "panelTransaksi";
-            this.panelTransaksi.Size = new System.Drawing.Size(503, 103);
+            this.panelTransaksi.Size = new System.Drawing.Size(377, 84);
             this.panelTransaksi.TabIndex = 14;
             // 
             // panelData
@@ -288,9 +310,10 @@
             this.panelData.Controls.Add(this.btnDosen);
             this.panelData.Controls.Add(this.btnMahasiswa);
             this.panelData.Controls.Add(this.btnProdi);
-            this.panelData.Location = new System.Drawing.Point(0, 235);
+            this.panelData.Location = new System.Drawing.Point(25, 234);
+            this.panelData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelData.Name = "panelData";
-            this.panelData.Size = new System.Drawing.Size(503, 356);
+            this.panelData.Size = new System.Drawing.Size(377, 289);
             this.panelData.TabIndex = 13;
             // 
             // btnLaporan
@@ -304,9 +327,10 @@
             this.btnLaporan.FillColor = System.Drawing.Color.Transparent;
             this.btnLaporan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLaporan.ForeColor = System.Drawing.Color.White;
-            this.btnLaporan.Location = new System.Drawing.Point(-2, 765);
+            this.btnLaporan.Location = new System.Drawing.Point(23, 788);
+            this.btnLaporan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLaporan.Name = "btnLaporan";
-            this.btnLaporan.Size = new System.Drawing.Size(252, 67);
+            this.btnLaporan.Size = new System.Drawing.Size(189, 54);
             this.btnLaporan.TabIndex = 12;
             this.btnLaporan.UseTransparentBackground = true;
             this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
@@ -322,9 +346,10 @@
             this.btnTransaksi.FillColor = System.Drawing.Color.Transparent;
             this.btnTransaksi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTransaksi.ForeColor = System.Drawing.Color.White;
-            this.btnTransaksi.Location = new System.Drawing.Point(0, 599);
+            this.btnTransaksi.Location = new System.Drawing.Point(25, 624);
+            this.btnTransaksi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTransaksi.Name = "btnTransaksi";
-            this.btnTransaksi.Size = new System.Drawing.Size(252, 67);
+            this.btnTransaksi.Size = new System.Drawing.Size(189, 54);
             this.btnTransaksi.TabIndex = 11;
             this.btnTransaksi.UseTransparentBackground = true;
             this.btnTransaksi.Click += new System.EventHandler(this.btnTransaksi_Click);
@@ -340,9 +365,10 @@
             this.btnData.FillColor = System.Drawing.Color.Transparent;
             this.btnData.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnData.ForeColor = System.Drawing.Color.White;
-            this.btnData.Location = new System.Drawing.Point(-1, 162);
+            this.btnData.Location = new System.Drawing.Point(24, 175);
+            this.btnData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnData.Name = "btnData";
-            this.btnData.Size = new System.Drawing.Size(203, 67);
+            this.btnData.Size = new System.Drawing.Size(152, 54);
             this.btnData.TabIndex = 10;
             this.btnData.UseTransparentBackground = true;
             this.btnData.Click += new System.EventHandler(this.btnData_Click);
@@ -352,15 +378,16 @@
             this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMain.BackColor = System.Drawing.Color.Transparent;
-            this.panelMain.Location = new System.Drawing.Point(548, 34);
+            this.panelMain.Location = new System.Drawing.Point(523, 27);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1360, 1016);
+            this.panelMain.Size = new System.Drawing.Size(1376, 1033);
             this.panelMain.TabIndex = 17;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // DasboardTendik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.dasboard_tendik;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -375,6 +402,7 @@
             this.Controls.Add(this.btnData);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DasboardTendik";
             this.Text = "DasboardTendik";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

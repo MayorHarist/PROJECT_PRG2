@@ -21,6 +21,10 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void UpdatePengumuman_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
+            this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
 
         }
 
@@ -53,7 +57,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                         txtPengumuman.Text = dataTable.Rows[0]["Nama"].ToString();
                         tglPengumuman.Text = DateTime.Now.ToString();
                         txtDeskripsi.Text = dataTable.Rows[0]["Deskripsi"].ToString();
-                        txtStatusPengumuman.Text = dataTable.Rows[0]["Status"].ToString();
+                        
                         cbIDTendik.SelectedText = dataTable.Rows[0]["Id_TKN"].ToString();
                     }
                     else
@@ -65,7 +69,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     txtPengumuman.Enabled = true;
                     tglPengumuman.Enabled = true;
                     txtDeskripsi.Enabled = true;
-                    txtStatusPengumuman.Enabled = true;
+                    
                     cbIDTendik.Enabled = true;
 
                     btnUpdatePengumuman.Enabled = true;
@@ -98,7 +102,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     update.Parameters.AddWithValue("@Nama", txtPengumuman.Text);
                     update.Parameters.AddWithValue("@Tanggal", tglPengumuman.Value);
                     update.Parameters.AddWithValue("@Deskripsi", txtDeskripsi.Text);
-                    update.Parameters.AddWithValue("@Status", txtStatusPengumuman.Text);
+                    
                     update.Parameters.AddWithValue("@Id_TKN", cbIDTendik.SelectedValue);
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
@@ -121,7 +125,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             txtPengumuman.Text = "";
             tglPengumuman.Value = DateTime.Now;
             txtDeskripsi.Text = "";
-            txtStatusPengumuman.Text = "";
+           
             cbIDTendik.SelectedValue = "";
         }
 
@@ -145,7 +149,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     delete.CommandType = CommandType.StoredProcedure;
 
                     delete.Parameters.AddWithValue("@Id_Pengumuman", txtIDPengumuman.Text);
-                    delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
+                    //delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
 
                     delete.ExecuteNonQuery();
 
@@ -168,6 +172,12 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                 e.Handled = true;
                 MessageBox.Show("Hanya masukkan huruf!");
             }
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            Pengumuman pengumuman = new Pengumuman();
+            pengumuman.Show();
         }
     }
 }

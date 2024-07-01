@@ -21,8 +21,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void UpTendik_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
+           
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet6.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet6.TenagaKependidikan);
             // TODO: This line of code loads data into the 'tendik.TenagaKependidikan' table. You can move, or remove it, as needed.
             
 
@@ -38,7 +42,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     return;
                 }
 
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -69,7 +73,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
                         TelpTendik.Text = dataTable.Rows[0]["Telepon"].ToString();
                         userNmTendik.Text = dataTable.Rows[0]["Username"].ToString();
                         txtPassTendik.Text = dataTable.Rows[0]["Password"].ToString();
-                        txtStatusTendik.Text = dataTable.Rows[0]["Status"].ToString();
                     }
 
                     txtIDTendik.Enabled = true;
@@ -82,7 +85,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     TelpTendik.Enabled = true;
                     userNmTendik.Enabled = true;
                     txtPassTendik.Enabled= true;
-                    txtStatusTendik.Enabled = true;
 
                     btnUbahTendik.Enabled = true;
                     btnHapusTendik.Enabled = true;
@@ -99,7 +101,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
         {
             try
             {
-                string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionstring))
                 {
                     connection.Open();
@@ -118,7 +120,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     update.Parameters.AddWithValue("@Telepon", TelpTendik.Text);
                     update.Parameters.AddWithValue("@Username", userNmTendik.Text);
                     update.Parameters.AddWithValue("@Password", txtPassTendik.Text);
-                    update.Parameters.AddWithValue("@Status", txtStatusTendik.Text);
 
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
@@ -147,14 +148,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             TelpTendik.Text = "";
             userNmTendik.Text = "";
             txtPassTendik.Text = "";
-            txtStatusTendik.Text = "";
         }
 
         private void btnHapusTendik_Click(object sender, EventArgs e)
         {
             try
             {
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connectionString);
 
                 connection.Open();
@@ -163,7 +163,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 delete.CommandType = CommandType.StoredProcedure;
 
                 delete.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
-                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
 
                 delete.ExecuteNonQuery();
 
@@ -183,6 +182,13 @@ namespace PROJECT_PRG2.CRUD_Tendik
             Dashboard_KepalaTendik dashboard_KepalaTendik = new Dashboard_KepalaTendik();
             dashboard_KepalaTendik.Show();
             this.Hide();
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            DataTendik dataTendik = new DataTendik();
+            dataTendik.Show();
+
         }
     }
 }

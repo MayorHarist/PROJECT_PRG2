@@ -133,6 +133,16 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dashboard_Utama_Smart2 {
+            get {
+                object obj = ResourceManager.GetObject("Dashboard Utama Smart2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DESIGN_FINDSMART__1_ {
             get {
                 object obj = ResourceManager.GetObject("DESIGN FINDSMART (1)", resourceCulture);
@@ -156,6 +166,26 @@ namespace PROJECT_PRG2.Properties {
         internal static System.Drawing.Bitmap DESIGN_FINDSMART__1_2 {
             get {
                 object obj = ResourceManager.GetObject("DESIGN FINDSMART (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_FINDSMART__1_3 {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN FINDSMART (1)3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_FINDSMART__2_ {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN FINDSMART (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
