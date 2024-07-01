@@ -70,7 +70,7 @@ namespace PROJECT_PRG2
             this.panelData.BackColor = System.Drawing.Color.Transparent;
             this.panelData.Controls.Add(this.btnProdi);
             this.panelData.Location = new System.Drawing.Point(12, 233);
-            this.panelData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelData.Margin = new System.Windows.Forms.Padding(2);
             this.panelData.Name = "panelData";
             this.panelData.Size = new System.Drawing.Size(377, 52);
             this.panelData.TabIndex = 169;
@@ -82,10 +82,10 @@ namespace PROJECT_PRG2
             this.btnProdi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnProdi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnProdi.FillColor = System.Drawing.Color.Transparent;
-            this.btnProdi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProdi.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProdi.ForeColor = System.Drawing.Color.White;
             this.btnProdi.Location = new System.Drawing.Point(-2, 2);
-            this.btnProdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProdi.Margin = new System.Windows.Forms.Padding(2);
             this.btnProdi.Name = "btnProdi";
             this.btnProdi.Size = new System.Drawing.Size(375, 45);
             this.btnProdi.TabIndex = 0;
@@ -104,7 +104,7 @@ namespace PROJECT_PRG2
             this.btnData.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnData.ForeColor = System.Drawing.Color.White;
             this.btnData.Location = new System.Drawing.Point(11, 171);
-            this.btnData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnData.Margin = new System.Windows.Forms.Padding(2);
             this.btnData.Name = "btnData";
             this.btnData.Size = new System.Drawing.Size(152, 54);
             this.btnData.TabIndex = 168;
@@ -117,7 +117,7 @@ namespace PROJECT_PRG2
             this.panelLaporan.Controls.Add(this.btnLaporanKRPP);
             this.panelLaporan.Controls.Add(this.btnLaporanKRS);
             this.panelLaporan.Location = new System.Drawing.Point(14, 352);
-            this.panelLaporan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLaporan.Margin = new System.Windows.Forms.Padding(2);
             this.panelLaporan.Name = "panelLaporan";
             this.panelLaporan.Size = new System.Drawing.Size(377, 84);
             this.panelLaporan.TabIndex = 171;
@@ -130,10 +130,10 @@ namespace PROJECT_PRG2
             this.btnLaporanKRPP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLaporanKRPP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLaporanKRPP.FillColor = System.Drawing.Color.Transparent;
-            this.btnLaporanKRPP.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLaporanKRPP.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporanKRPP.ForeColor = System.Drawing.Color.White;
             this.btnLaporanKRPP.Location = new System.Drawing.Point(0, 48);
-            this.btnLaporanKRPP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLaporanKRPP.Margin = new System.Windows.Forms.Padding(2);
             this.btnLaporanKRPP.Name = "btnLaporanKRPP";
             this.btnLaporanKRPP.Size = new System.Drawing.Size(375, 45);
             this.btnLaporanKRPP.TabIndex = 2;
@@ -146,10 +146,10 @@ namespace PROJECT_PRG2
             this.btnLaporanKRS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLaporanKRS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLaporanKRS.FillColor = System.Drawing.Color.Transparent;
-            this.btnLaporanKRS.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLaporanKRS.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporanKRS.ForeColor = System.Drawing.Color.White;
             this.btnLaporanKRS.Location = new System.Drawing.Point(-2, 6);
-            this.btnLaporanKRS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLaporanKRS.Margin = new System.Windows.Forms.Padding(2);
             this.btnLaporanKRS.Name = "btnLaporanKRS";
             this.btnLaporanKRS.Size = new System.Drawing.Size(375, 45);
             this.btnLaporanKRS.TabIndex = 0;
@@ -167,7 +167,7 @@ namespace PROJECT_PRG2
             this.btnLaporan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLaporan.ForeColor = System.Drawing.Color.White;
             this.btnLaporan.Location = new System.Drawing.Point(12, 299);
-            this.btnLaporan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLaporan.Margin = new System.Windows.Forms.Padding(2);
             this.btnLaporan.Name = "btnLaporan";
             this.btnLaporan.Size = new System.Drawing.Size(189, 54);
             this.btnLaporan.TabIndex = 170;
@@ -190,7 +190,7 @@ namespace PROJECT_PRG2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMain.BackColor = System.Drawing.Color.Transparent;
             this.panelMain.Location = new System.Drawing.Point(531, 21);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1500, 1035);
             this.panelMain.TabIndex = 173;

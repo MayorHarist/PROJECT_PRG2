@@ -89,12 +89,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard\AboutUs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard\AboutUs.Designer.cs">
-      <DependentUpon>AboutUs.cs</DependentUpon>
-    </Compile>
     <Compile Include="CRUD_Dosen\InputDosen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,9 +324,6 @@
     <Compile Include="Transaksi\trsKRPP.Designer.cs">
       <DependentUpon>trsKRPP.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard\AboutUs.resx">
-      <DependentUpon>AboutUs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Dosen\InputDosen.resx">
       <DependentUpon>InputDosen.cs</DependentUpon>
     </EmbeddedResource>
