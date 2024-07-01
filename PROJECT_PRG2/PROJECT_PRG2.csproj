@@ -645,5 +645,20 @@
   <ItemGroup>
     <None Include="Resources\DESIGN FINDSMART %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN JenisPrestasi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN Posisi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN Matkul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN Pengumuman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN Prodi.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

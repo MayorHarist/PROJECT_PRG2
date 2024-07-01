@@ -12,6 +12,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         public InputMahasiswa()
         {
             InitializeComponent();
+            autoid();
         }
 
         private void InputMahasiswa_Load(object sender, EventArgs e)
@@ -59,6 +60,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     {
                         MessageBox.Show("Unable to saved: " + ex.Message);
                     }
+                    autoid();
                 }
             }
             else
@@ -66,7 +68,25 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                 MessageBox.Show("Semua data harus diisi dengan benar.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        public string autoid()
+        {
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            SqlConnection connection = new SqlConnection(connectionstring);
+            {
+                connection.Open();
+                string countQuery = "SELECT COUNT(*) FROM Mahasiswa";
 
+                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                {
+                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
+
+                    string newID = "MHS" + count.ToString("000");
+
+                    txtNIM.Text = newID;
+                    return newID;
+                }
+            }
+        }
         private bool IsFormValid()
         {
             // Validasi untuk memastikan semua data telah diisi
