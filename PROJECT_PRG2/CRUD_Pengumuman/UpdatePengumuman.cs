@@ -18,7 +18,6 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             InitializeComponent();
         }
 
-
         private void UpdatePengumuman_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
@@ -102,7 +101,6 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                 MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnTambahPengumuman_Click(object sender, EventArgs e)
         {
             Pengumuman pengumuman = new Pengumuman();
