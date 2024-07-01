@@ -743,11 +743,11 @@
             this.btnUpdate.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnUpdate.ImageRotate = 0F;
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdate.Location = new System.Drawing.Point(972, 851);
+            this.btnUpdate.Location = new System.Drawing.Point(969, 851);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnUpdate.Size = new System.Drawing.Size(23, 31);
+            this.btnUpdate.Size = new System.Drawing.Size(32, 32);
             this.btnUpdate.TabIndex = 167;
             this.btnUpdate.UseTransparentBackground = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
