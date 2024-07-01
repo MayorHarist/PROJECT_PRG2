@@ -80,7 +80,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.btnTambahTendik.Name = "btnTambahTendik";
             this.btnTambahTendik.Size = new System.Drawing.Size(112, 36);
             this.btnTambahTendik.TabIndex = 83;
-            this.btnTambahTendik.Text = "Tambah";
+            this.btnTambahTendik.Text = "Simpan";
             this.btnTambahTendik.Click += new System.EventHandler(this.btnTambahTendik_Click);
             // 
             // label11
