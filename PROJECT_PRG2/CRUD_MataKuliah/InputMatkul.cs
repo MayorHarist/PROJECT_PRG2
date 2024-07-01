@@ -35,7 +35,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 insert.Parameters.AddWithValue("Jumlah_SKS", txtSKS.Text);
                 insert.Parameters.AddWithValue("Jenis", txtJenis.Text);
                 insert.Parameters.AddWithValue("Semester", txtSemester.Text);
-                insert.Parameters.AddWithValue("Status", txtStatus.Text);
                 insert.Parameters.AddWithValue("No_Pegawai", cbPegawai.SelectedValue);
                 insert.Parameters.AddWithValue("Id_Prodi", cbProdi.SelectedValue);
 
@@ -61,7 +60,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 string.IsNullOrWhiteSpace(txtSKS.Text) ||
                 string.IsNullOrWhiteSpace(txtJenis.Text) ||
                 string.IsNullOrWhiteSpace(txtSemester.Text) ||
-                string.IsNullOrWhiteSpace(txtStatus.Text) ||
                 cbPegawai.SelectedValue == null ||
                 cbProdi.SelectedValue == null)
             {
@@ -91,13 +89,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 return false;
             }
 
-            if (!Regex.IsMatch(txtStatus.Text, @"^[a-zA-Z]+$"))
-            {
-                MessageBox.Show("Data Status harus berisi hanya huruf.", "Peringatan",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
             return true;
         }
 
@@ -113,7 +104,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             txtSKS.Text = "";
             txtJenis.Text = "";
             txtSemester.Text = "";
-            txtStatus.Text = "";
             cbPegawai.SelectedValue = "";
             cbProdi.SelectedValue = "";
         }

@@ -213,9 +213,59 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_JenisPrestasi1 {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN JenisPrestasi1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DESIGN_log_sebagai {
             get {
                 object obj = ResourceManager.GetObject("DESIGN log sebagai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_Matkul {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN Matkul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_Pengumuman {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN Pengumuman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_Posisi {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN Posisi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_Prodi {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN Prodi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

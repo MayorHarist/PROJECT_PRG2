@@ -37,12 +37,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSimpan
             // 
             this.btnSimpan.AutoRoundedCorners = true;
+            this.btnSimpan.BackColor = System.Drawing.Color.Transparent;
             this.btnSimpan.BorderRadius = 13;
             this.btnSimpan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSimpan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -50,7 +50,7 @@
             this.btnSimpan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSimpan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSimpan.ForeColor = System.Drawing.Color.White;
-            this.btnSimpan.Location = new System.Drawing.Point(449, 339);
+            this.btnSimpan.Location = new System.Drawing.Point(497, 442);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(108, 28);
             this.btnSimpan.TabIndex = 29;
@@ -60,6 +60,7 @@
             // btnBatal
             // 
             this.btnBatal.AutoRoundedCorners = true;
+            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
             this.btnBatal.BorderRadius = 13;
             this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -67,7 +68,7 @@
             this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(245, 339);
+            this.btnBatal.Location = new System.Drawing.Point(319, 442);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(108, 28);
             this.btnBatal.TabIndex = 28;
@@ -77,6 +78,7 @@
             // btnKembali
             // 
             this.btnKembali.AutoRoundedCorners = true;
+            this.btnKembali.BackColor = System.Drawing.Color.Transparent;
             this.btnKembali.BorderRadius = 13;
             this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -84,7 +86,7 @@
             this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(73, 339);
+            this.btnKembali.Location = new System.Drawing.Point(121, 442);
             this.btnKembali.Name = "btnKembali";
             this.btnKembali.Size = new System.Drawing.Size(108, 28);
             this.btnKembali.TabIndex = 27;
@@ -102,7 +104,7 @@
             this.txtDeskripsi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDeskripsi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDeskripsi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDeskripsi.Location = new System.Drawing.Point(297, 212);
+            this.txtDeskripsi.Location = new System.Drawing.Point(360, 260);
             this.txtDeskripsi.Multiline = true;
             this.txtDeskripsi.Name = "txtDeskripsi";
             this.txtDeskripsi.PasswordChar = '\0';
@@ -125,7 +127,7 @@
             this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Location = new System.Drawing.Point(297, 169);
+            this.txtNama.Location = new System.Drawing.Point(360, 217);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
             this.txtNama.PlaceholderText = "";
@@ -147,7 +149,7 @@
             this.txtIdPosisiPrestasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdPosisiPrestasi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdPosisiPrestasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdPosisiPrestasi.Location = new System.Drawing.Point(297, 129);
+            this.txtIdPosisiPrestasi.Location = new System.Drawing.Point(360, 177);
             this.txtIdPosisiPrestasi.Name = "txtIdPosisiPrestasi";
             this.txtIdPosisiPrestasi.PasswordChar = '\0';
             this.txtIdPosisiPrestasi.PlaceholderText = "";
@@ -160,8 +162,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(68, 212);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(131, 260);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 28);
             this.label4.TabIndex = 19;
@@ -170,8 +174,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 169);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(131, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 28);
             this.label3.TabIndex = 18;
@@ -180,27 +186,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 129);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(131, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 28);
             this.label2.TabIndex = 17;
             this.label2.Text = "ID Posisi Prestasi";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(290, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 33);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Form Posisi Prestasi";
-            // 
             // InputPospres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.DESIGN_Posisi;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(804, 736);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.btnBatal);
@@ -211,8 +211,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "InputPospres";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InputPospres";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -230,6 +231,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
     }
 }

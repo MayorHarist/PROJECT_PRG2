@@ -45,6 +45,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             {
                 MessageBox.Show("Unable to saved: " + ex.Message);
             }
+            autoid();
         }
         public string autoid()
         {
@@ -67,7 +68,6 @@ namespace PROJECT_PRG2.CRUD_Prodi
         }
         private void clear()
         {
-            txtIdProdi.Text = "";
             txtNama.Text = "";
             txtJenjangPendidikan.Text = "";
             txtAkreditasi.Text = "";
