@@ -131,7 +131,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             try
             {
                 // Validasi apakah txtIdMatkul kosong
-                if (string.IsNullOrWhiteSpace(txtIdMatkul.Text))
+                if (string.IsNullOrWhiteSpace(txtCari.Text))
                 {
                     MessageBox.Show("Silakan isi Id Mata Kuliah dahulu.", "Peringatan",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -145,7 +145,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
                     DataTable dataTable = new DataTable();
                     SqlCommand myCommand = new SqlCommand("select * from MataKuliah where Id_Matkul= @Id_Matkul", connection);
-                    myCommand.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
+                    myCommand.Parameters.AddWithValue("@Id_Matkul", txtCari.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
@@ -161,6 +161,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                         cbProdi.SelectedText = dataTable.Rows[0]["Id_Prodi"].ToString();
                     }
 
+                    txtIdMatkul.Enabled = true;
                     txtNama.Enabled = true;
                     txtSKS.Enabled = true;
                     txtJenis.Enabled = true;

@@ -44,60 +44,8 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             txtUsername.Enabled = enabled;
             txtPassword.Enabled = enabled;
 
-            btnUbah.Enabled = enabled;
+            btnUpdate.Enabled = enabled;
             btnHapus.Enabled = enabled;
-        }
-
-        private void btnUbah_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    SqlCommand update = new SqlCommand("sp_UpdateMahasiswa", connection);
-                    update.CommandType = CommandType.StoredProcedure;
-
-                    // Tambahkan parameter sesuai dengan input dari form
-                    update.Parameters.AddWithValue("@NIM", txtNIM.Text);
-
-                    if (cbProdi.SelectedValue == null)
-                    {
-                        MessageBox.Show("Silakan pilih program studi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    update.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedValue);
-                    update.Parameters.AddWithValue("@Nama", txtNama.Text);
-                    update.Parameters.AddWithValue("@Tanggal_Lahir", DateTimeTanggal.Value);
-                    update.Parameters.AddWithValue("@Jenis_Kelamin", rbLaki.Checked ? "Laki-laki" : "Perempuan");
-                    update.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
-                    update.Parameters.AddWithValue("@Email", txtEmail.Text);
-                    update.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
-                    update.Parameters.AddWithValue("@Tahun_Masuk", txtTahunMasuk.Text);
-                    update.Parameters.AddWithValue("@Username", txtUsername.Text);
-                    update.Parameters.AddWithValue("@Password", txtPassword.Text);
-
-                    // Eksekusi stored procedure
-                    update.ExecuteNonQuery();
-
-                    // Menampilkan pesan jika eksekusi berhasil
-                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Memperbarui data di tampilan (jika ada)
-                    this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
-                    // Panggil metode clear() jika ingin membersihkan form setelah update
-                    clear();
-                    SetControlsEnabled(false);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void clear()
@@ -199,7 +147,72 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             }
         }
 
-        private void btnHapus_Click(object sender, EventArgs e)
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            DasboardTendik dasboardTendik = new DasboardTendik();  
+            dasboardTendik.Show();
+            this.Hide();
+        }
+
+        private void btnTambahMhs_Click(object sender, EventArgs e)
+        {
+            InputMahasiswa inputMahasiswa = new InputMahasiswa();
+            inputMahasiswa.Show();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    SqlCommand update = new SqlCommand("sp_UpdateMahasiswa", connection);
+                    update.CommandType = CommandType.StoredProcedure;
+
+                    // Tambahkan parameter sesuai dengan input dari form
+                    update.Parameters.AddWithValue("@NIM", txtNIM.Text);
+
+                    if (cbProdi.SelectedValue == null)
+                    {
+                        MessageBox.Show("Silakan pilih program studi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    update.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedValue);
+                    update.Parameters.AddWithValue("@Nama", txtNama.Text);
+                    update.Parameters.AddWithValue("@Tanggal_Lahir", DateTimeTanggal.Value);
+                    update.Parameters.AddWithValue("@Jenis_Kelamin", rbLaki.Checked ? "Laki-laki" : "Perempuan");
+                    update.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
+                    update.Parameters.AddWithValue("@Email", txtEmail.Text);
+                    update.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
+                    update.Parameters.AddWithValue("@Tahun_Masuk", txtTahunMasuk.Text);
+                    update.Parameters.AddWithValue("@Username", txtUsername.Text);
+                    update.Parameters.AddWithValue("@Password", txtPassword.Text);
+
+                    // Eksekusi stored procedure
+                    update.ExecuteNonQuery();
+
+                    // Menampilkan pesan jika eksekusi berhasil
+                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Memperbarui data di tampilan (jika ada)
+                    this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
+                    // Panggil metode clear() jika ingin membersihkan form setelah update
+                    clear();
+                    SetControlsEnabled(false);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnHapus__Click(object sender, EventArgs e)
         {
             try
             {
@@ -226,19 +239,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnTambah_Click(object sender, EventArgs e)
-        {
-            InputMahasiswa inputMahasiswa = new InputMahasiswa();
-            inputMahasiswa.Show();
-        }
-
-        private void btnKembali_Click(object sender, EventArgs e)
-        {
-            DasboardTendik dasboardTendik = new DasboardTendik();  
-            dasboardTendik.Show();
-            this.Hide();
         }
     }
 }

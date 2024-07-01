@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMatkul));
             this.mataKuliahTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.MataKuliahTableAdapter();
             this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
@@ -108,19 +110,21 @@
             // 
             // gdvMatkul
             // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.gdvMatkul.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvMatkul.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gdvMatkul.AutoGenerateColumns = false;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdvMatkul.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.gdvMatkul.ColumnHeadersHeight = 25;
-            this.gdvMatkul.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gdvMatkul.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdvMatkul.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gdvMatkul.ColumnHeadersHeight = 30;
             this.gdvMatkul.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idMatkulDataGridViewTextBoxColumn,
             this.namaDataGridViewTextBoxColumn,
@@ -131,20 +135,31 @@
             this.noPegawaiDataGridViewTextBoxColumn,
             this.idProdiDataGridViewTextBoxColumn});
             this.gdvMatkul.DataSource = this.mataKuliahBindingSource;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdvMatkul.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdvMatkul.DefaultCellStyle = dataGridViewCellStyle11;
             this.gdvMatkul.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
             this.gdvMatkul.Location = new System.Drawing.Point(99, 112);
-            this.gdvMatkul.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gdvMatkul.Margin = new System.Windows.Forms.Padding(2);
             this.gdvMatkul.Name = "gdvMatkul";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdvMatkul.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.gdvMatkul.RowHeadersVisible = false;
             this.gdvMatkul.RowHeadersWidth = 62;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvMatkul.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.gdvMatkul.RowTemplate.Height = 28;
             this.gdvMatkul.Size = new System.Drawing.Size(1178, 463);
             this.gdvMatkul.TabIndex = 0;
@@ -157,11 +172,11 @@
             this.gdvMatkul.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.gdvMatkul.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
             this.gdvMatkul.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.gdvMatkul.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gdvMatkul.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.gdvMatkul.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gdvMatkul.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gdvMatkul.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gdvMatkul.ThemeStyle.HeaderStyle.Height = 25;
+            this.gdvMatkul.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gdvMatkul.ThemeStyle.HeaderStyle.Height = 30;
             this.gdvMatkul.ThemeStyle.ReadOnly = false;
             this.gdvMatkul.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             this.gdvMatkul.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -175,9 +190,9 @@
             // idMatkulDataGridViewTextBoxColumn
             // 
             this.idMatkulDataGridViewTextBoxColumn.DataPropertyName = "Id_Matkul";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idMatkulDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idMatkulDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.idMatkulDataGridViewTextBoxColumn.HeaderText = "Id Matkul";
             this.idMatkulDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idMatkulDataGridViewTextBoxColumn.Name = "idMatkulDataGridViewTextBoxColumn";
@@ -186,9 +201,9 @@
             // namaDataGridViewTextBoxColumn
             // 
             this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.namaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
             this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
@@ -196,9 +211,9 @@
             // jumlahSKSDataGridViewTextBoxColumn
             // 
             this.jumlahSKSDataGridViewTextBoxColumn.DataPropertyName = "Jumlah_SKS";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jumlahSKSDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jumlahSKSDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.jumlahSKSDataGridViewTextBoxColumn.HeaderText = "Jumlah SKS";
             this.jumlahSKSDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.jumlahSKSDataGridViewTextBoxColumn.Name = "jumlahSKSDataGridViewTextBoxColumn";
@@ -206,9 +221,9 @@
             // jenisDataGridViewTextBoxColumn
             // 
             this.jenisDataGridViewTextBoxColumn.DataPropertyName = "Jenis";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jenisDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jenisDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.jenisDataGridViewTextBoxColumn.HeaderText = "Jenis";
             this.jenisDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.jenisDataGridViewTextBoxColumn.Name = "jenisDataGridViewTextBoxColumn";
@@ -216,9 +231,9 @@
             // semesterDataGridViewTextBoxColumn
             // 
             this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.semesterDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.semesterDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
             this.semesterDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
@@ -226,9 +241,9 @@
             // statusDataGridViewTextBoxColumn
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
@@ -236,9 +251,9 @@
             // noPegawaiDataGridViewTextBoxColumn
             // 
             this.noPegawaiDataGridViewTextBoxColumn.DataPropertyName = "No_Pegawai";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noPegawaiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noPegawaiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.noPegawaiDataGridViewTextBoxColumn.HeaderText = "No Pegawai";
             this.noPegawaiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.noPegawaiDataGridViewTextBoxColumn.Name = "noPegawaiDataGridViewTextBoxColumn";
@@ -246,9 +261,9 @@
             // idProdiDataGridViewTextBoxColumn
             // 
             this.idProdiDataGridViewTextBoxColumn.DataPropertyName = "Id_Prodi";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idProdiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idProdiDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.idProdiDataGridViewTextBoxColumn.HeaderText = "Id Prodi";
             this.idProdiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idProdiDataGridViewTextBoxColumn.Name = "idProdiDataGridViewTextBoxColumn";
@@ -270,6 +285,7 @@
             this.txtCari.ForeColor = System.Drawing.Color.Black;
             this.txtCari.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCari.Location = new System.Drawing.Point(557, 24);
+            this.txtCari.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCari.Name = "txtCari";
             this.txtCari.PasswordChar = '\0';
             this.txtCari.PlaceholderText = "";
@@ -287,7 +303,7 @@
             this.btnCari.ImageRotate = 0F;
             this.btnCari.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCari.Location = new System.Drawing.Point(497, 11);
-            this.btnCari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCari.Margin = new System.Windows.Forms.Padding(2);
             this.btnCari.Name = "btnCari";
             this.btnCari.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnCari.Size = new System.Drawing.Size(55, 56);
@@ -370,6 +386,7 @@
             this.txtStatus.ForeColor = System.Drawing.Color.Black;
             this.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtStatus.Location = new System.Drawing.Point(589, 785);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.PasswordChar = '\0';
             this.txtStatus.PlaceholderText = "";
@@ -450,6 +467,7 @@
             this.txtSemester.ForeColor = System.Drawing.Color.Black;
             this.txtSemester.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSemester.Location = new System.Drawing.Point(589, 701);
+            this.txtSemester.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSemester.Name = "txtSemester";
             this.txtSemester.PasswordChar = '\0';
             this.txtSemester.PlaceholderText = "";
@@ -475,6 +493,7 @@
             this.txtJenis.ForeColor = System.Drawing.Color.Black;
             this.txtJenis.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJenis.Location = new System.Drawing.Point(589, 629);
+            this.txtJenis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJenis.Name = "txtJenis";
             this.txtJenis.PasswordChar = '\0';
             this.txtJenis.PlaceholderText = "";
@@ -500,6 +519,7 @@
             this.txtSKS.ForeColor = System.Drawing.Color.Black;
             this.txtSKS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSKS.Location = new System.Drawing.Point(313, 785);
+            this.txtSKS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSKS.Name = "txtSKS";
             this.txtSKS.PasswordChar = '\0';
             this.txtSKS.PlaceholderText = "";
@@ -525,6 +545,7 @@
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Location = new System.Drawing.Point(313, 701);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
             this.txtNama.PlaceholderText = "";
@@ -544,11 +565,13 @@
             this.txtIdMatkul.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtIdMatkul.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIdMatkul.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdMatkul.Enabled = false;
             this.txtIdMatkul.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdMatkul.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtIdMatkul.ForeColor = System.Drawing.Color.Black;
             this.txtIdMatkul.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdMatkul.Location = new System.Drawing.Point(313, 629);
+            this.txtIdMatkul.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIdMatkul.Name = "txtIdMatkul";
             this.txtIdMatkul.PasswordChar = '\0';
             this.txtIdMatkul.PlaceholderText = "";
@@ -582,7 +605,7 @@
             this.btnHapus.ImageRotate = 0F;
             this.btnHapus.ImageSize = new System.Drawing.Size(30, 30);
             this.btnHapus.Location = new System.Drawing.Point(991, 788);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(2);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnHapus.Size = new System.Drawing.Size(23, 25);
@@ -600,7 +623,7 @@
             this.btnUpdate.ImageRotate = 0F;
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
             this.btnUpdate.Location = new System.Drawing.Point(942, 785);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnUpdate.Size = new System.Drawing.Size(29, 31);
@@ -618,7 +641,7 @@
             this.btnTambah.ImageRotate = 0F;
             this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
             this.btnTambah.Location = new System.Drawing.Point(890, 783);
-            this.btnTambah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnTambah.Size = new System.Drawing.Size(27, 32);
@@ -643,6 +666,7 @@
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Location = new System.Drawing.Point(882, 781);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
@@ -655,6 +679,7 @@
             this.cbPegawai.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dosenBindingSource, "No_Pegawai", true));
             this.cbPegawai.DataSource = this.dosenBindingSource;
             this.cbPegawai.DisplayMember = "Nama";
+            this.cbPegawai.Enabled = false;
             this.cbPegawai.FormattingEnabled = true;
             this.cbPegawai.Location = new System.Drawing.Point(881, 629);
             this.cbPegawai.Name = "cbPegawai";
@@ -667,6 +692,7 @@
             this.cbProdi.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.programStudiBindingSource, "Id_Prodi", true));
             this.cbProdi.DataSource = this.programStudiBindingSource;
             this.cbProdi.DisplayMember = "Nama";
+            this.cbProdi.Enabled = false;
             this.cbProdi.FormattingEnabled = true;
             this.cbProdi.IntegralHeight = false;
             this.cbProdi.ItemHeight = 13;
@@ -709,7 +735,7 @@
             this.Controls.Add(this.gdvMatkul);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ViewMatkul";
             this.Text = "ViewMatkul";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

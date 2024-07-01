@@ -34,9 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnTampilkan = new Guna.UI2.WinForms.Guna2Button();
             this.dtgViewMahasiswa = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
-            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mahasiswaTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.MahasiswaTableAdapter();
             this.nIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,16 +46,20 @@
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
+            this.mahasiswaTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.MahasiswaTableAdapter();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgViewMahasiswa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTampilkan
             // 
             this.btnTampilkan.Animated = true;
             this.btnTampilkan.AutoRoundedCorners = true;
-            this.btnTampilkan.BorderRadius = 21;
+            this.btnTampilkan.BorderRadius = 17;
             this.btnTampilkan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTampilkan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTampilkan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -66,27 +67,29 @@
             this.btnTampilkan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTampilkan.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold);
             this.btnTampilkan.ForeColor = System.Drawing.Color.White;
-            this.btnTampilkan.Location = new System.Drawing.Point(765, 666);
+            this.btnTampilkan.Location = new System.Drawing.Point(574, 541);
+            this.btnTampilkan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTampilkan.Name = "btnTampilkan";
-            this.btnTampilkan.Size = new System.Drawing.Size(180, 45);
+            this.btnTampilkan.Size = new System.Drawing.Size(135, 37);
             this.btnTampilkan.TabIndex = 2;
             this.btnTampilkan.Text = "Tampilkan";
             this.btnTampilkan.Click += new System.EventHandler(this.btnTampilkan_Click);
             // 
             // dtgViewMahasiswa
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
             this.dtgViewMahasiswa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgViewMahasiswa.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgViewMahasiswa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgViewMahasiswa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgViewMahasiswa.ColumnHeadersHeight = 34;
+            this.dtgViewMahasiswa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgViewMahasiswa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nIMDataGridViewTextBoxColumn,
             this.idProdiDataGridViewTextBoxColumn,
@@ -102,56 +105,44 @@
             this.statusDataGridViewTextBoxColumn});
             this.dtgViewMahasiswa.DataSource = this.mahasiswaBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgViewMahasiswa.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgViewMahasiswa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgViewMahasiswa.Location = new System.Drawing.Point(396, 285);
+            this.dtgViewMahasiswa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
+            this.dtgViewMahasiswa.Location = new System.Drawing.Point(297, 232);
+            this.dtgViewMahasiswa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgViewMahasiswa.Name = "dtgViewMahasiswa";
             this.dtgViewMahasiswa.RowHeadersVisible = false;
             this.dtgViewMahasiswa.RowHeadersWidth = 51;
             this.dtgViewMahasiswa.RowTemplate.Height = 24;
-            this.dtgViewMahasiswa.Size = new System.Drawing.Size(1085, 226);
+            this.dtgViewMahasiswa.Size = new System.Drawing.Size(814, 184);
             this.dtgViewMahasiswa.TabIndex = 3;
-            this.dtgViewMahasiswa.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgViewMahasiswa.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
+            this.dtgViewMahasiswa.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
             this.dtgViewMahasiswa.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dtgViewMahasiswa.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dtgViewMahasiswa.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dtgViewMahasiswa.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dtgViewMahasiswa.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dtgViewMahasiswa.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgViewMahasiswa.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgViewMahasiswa.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
+            this.dtgViewMahasiswa.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
             this.dtgViewMahasiswa.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgViewMahasiswa.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgViewMahasiswa.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgViewMahasiswa.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgViewMahasiswa.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgViewMahasiswa.ThemeStyle.HeaderStyle.Height = 34;
             this.dtgViewMahasiswa.ThemeStyle.ReadOnly = false;
-            this.dtgViewMahasiswa.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgViewMahasiswa.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             this.dtgViewMahasiswa.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgViewMahasiswa.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgViewMahasiswa.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgViewMahasiswa.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgViewMahasiswa.ThemeStyle.RowsStyle.Height = 24;
-            this.dtgViewMahasiswa.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgViewMahasiswa.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // fINDSMARTDataSet6
-            // 
-            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
-            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mahasiswaBindingSource
-            // 
-            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
-            this.mahasiswaBindingSource.DataSource = this.fINDSMARTDataSet6;
-            // 
-            // mahasiswaTableAdapter
-            // 
-            this.mahasiswaTableAdapter.ClearBeforeFill = true;
+            this.dtgViewMahasiswa.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            this.dtgViewMahasiswa.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // nIMDataGridViewTextBoxColumn
             // 
@@ -237,19 +228,41 @@
             this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
+            // mahasiswaBindingSource
+            // 
+            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
+            this.mahasiswaBindingSource.DataSource = this.fINDSMARTDataSet6;
+            // 
+            // fINDSMARTDataSet6
+            // 
+            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
+            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mahasiswaTableAdapter
+            // 
+            this.mahasiswaTableAdapter.ClearBeforeFill = true;
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // ViewMahasiswa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1360, 994);
             this.Controls.Add(this.dtgViewMahasiswa);
             this.Controls.Add(this.btnTampilkan);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ViewMahasiswa";
             this.Text = "ViewMahasiswa";
             this.Load += new System.EventHandler(this.ViewMahasiswa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgViewMahasiswa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,5 +286,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }
