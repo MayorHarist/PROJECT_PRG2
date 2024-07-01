@@ -28,113 +28,134 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         }
 
-        private void btnCari_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Validasi apakah txtIdMatkul kosong
-                if (string.IsNullOrWhiteSpace(txtIDPengumuman.Text))
-                {
-                    MessageBox.Show("ID Pengumuman masih kosong.", "Peringatan",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);//validasi jika ID pengumuman kosong 
-                    return;
-                }
-
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("select * from Pengumuman where Id_Pengumuman= @Id_Pengumuman", connection);
-                    myCommand.Parameters.AddWithValue("@Id_Pengumuman", txtIDPengumuman.Text);
-                    SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
-                    myAdapter.Fill(dataTable);
-
-                    if (dataTable.Rows.Count > 0)
-                    {
-                        txtIDPengumuman.Text = dataTable.Rows[0]["Id_Pengumuman"].ToString();
-                        txtPengumuman.Text = dataTable.Rows[0]["Nama"].ToString();
-                        tglPengumuman.Text = DateTime.Now.ToString();
-                        txtDeskripsi.Text = dataTable.Rows[0]["Deskripsi"].ToString();
-                        
-                        cbIDTendik.SelectedText = dataTable.Rows[0]["Id_TKN"].ToString();
-                    }
-                    else
-
-                    {
-                        MessageBox.Show("ID Pengumuman tidak ditemukan.","Peringatan",MessageBoxButtons.OK, MessageBoxIcon.Warning); //Validasi jika ID tidak ditemukan
-                    }
-                    txtIDPengumuman.Enabled = true;
-                    txtPengumuman.Enabled = true;
-                    tglPengumuman.Enabled = true;
-                    txtDeskripsi.Enabled = true;
-                    
-                    cbIDTendik.Enabled = true;
-
-                    btnUpdatePengumuman.Enabled = true;
-                    btnHapusPengumuman.Enabled = true;
-                    btnTambah.Enabled = true;
-
-                        connection.Close();
-                    }
-                }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnUpdatePengumuman_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    SqlCommand update = new SqlCommand("sp_UpdateMatkul", connection);
-                    update.CommandType = CommandType.StoredProcedure;
-
-                    // Tambahkan parameter untuk stored procedure
-                    update.Parameters.AddWithValue("@Id_Pengumuman", txtIDPengumuman.Text);
-                    update.Parameters.AddWithValue("@Nama", txtPengumuman.Text);
-                    update.Parameters.AddWithValue("@Tanggal", tglPengumuman.Value);
-                    update.Parameters.AddWithValue("@Deskripsi", txtDeskripsi.Text);
-                    
-                    update.Parameters.AddWithValue("@Id_TKN", cbIDTendik.SelectedValue);
-                    // Eksekusi stored procedure
-                    update.ExecuteNonQuery();
-
-                    // Menampilkan pesan jika eksekusi berhasil
-                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clear();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         private void clear()
         {
-            txtIDPengumuman.Text = "";
+            txtCariPM.Text = "";
             txtPengumuman.Text = "";
             tglPengumuman.Value = DateTime.Now;
             txtDeskripsi.Text = "";
            
             cbIDTendik.SelectedValue = "";
         }
-
-        private void btnBatalPengumuman_Click(object sender, EventArgs e)
+        private void txtPengumuman_KeyPress(object sender, KeyPressEventArgs e)
         {
-            clear();
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya masukkan huruf!");
+            }
+        }
+        private void btnCari__Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtIDPM.Text))
+                {
+                    MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    DataTable dataTable = new DataTable();
+                    SqlCommand myCommand = new SqlCommand("SELECT * FROM ProgramStudi WHERE Id_Prodi=@Id_Prodi", connection);
+                    myCommand.Parameters.AddWithValue("@Id_Prodi", txtCariPM.Text);
+                    SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
+                    myAdapter.Fill(dataTable);
+
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        txtIDPM.Text = dataTable.Rows[0]["Id_Pengumuman"].ToString();
+                        txtPengumuman.Text = dataTable.Rows[0]["Nama"].ToString();
+                        // Convert Tanggal_Lahir to DateTime
+                        DateTime tanggalpengumuman;
+                        if (DateTime.TryParse(dataTable.Rows[0]["Tanggal"].ToString(), out tanggalpengumuman))
+                        {
+                            tglPengumuman.Value = tanggalpengumuman;
+                        }
+                        txtDeskripsi.Text = dataTable.Rows[0]["Deskripsi"].ToString();
+                        cbIDTendik.SelectedValue = dataTable.Rows[0]["Id_TKN"].ToString();
+
+                        txtIDPM.Enabled = true;
+                        txtPengumuman.Enabled = true;
+                        tglPengumuman.Enabled = true;
+                        txtDeskripsi.Enabled = true;
+                        cbIDTendik.Enabled = true;
+
+                        btnUpPengumuman.Enabled = true;
+                        btnHapusPM.Enabled = true;
+                    }
+                    else
+                    {
+                        // Menampilkan pesan jika data tidak ditemukan
+                        MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btnHapusPengumuman_Click(object sender, EventArgs e)
+        private void btnTambahPengumuman_Click(object sender, EventArgs e)
+        {
+            Pengumuman pengumuman = new Pengumuman();
+            pengumuman.Show();
+        }
+
+        private void btnUpPengumuman_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionstring = "integrated security=false; data source=.; initial catalog=FINDSMART";
+                using (SqlConnection connection = new SqlConnection(connectionstring))
+                {
+                    connection.Open();
+
+                    SqlCommand update = new SqlCommand("sp_UpdatePengumuman", connection);
+                    update.CommandType = CommandType.StoredProcedure;
+
+                    // Tambahkan parameter sesuai dengan input dari form
+                    update.Parameters.AddWithValue("@Id_Pengumuman", txtIDPM.Text);
+
+                    if (cbIDTendik.SelectedValue == null)
+                    {
+                        MessageBox.Show("Silakan pilih Tendik.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    update.Parameters.AddWithValue("@Id_TKN", txtIDPM.Text);
+                    update.Parameters.AddWithValue("@Nama", txtPengumuman.Text);
+                    update.Parameters.AddWithValue("@Tanggal", tglPengumuman.Value);
+                    update.Parameters.AddWithValue("@Deskripsi", txtDeskripsi.Text);
+                    update.Parameters.AddWithValue("@Id_TKN", cbIDTendik.SelectedValue);
+
+                    // Eksekusi stored procedure
+                    update.ExecuteNonQuery();
+
+                    // Menampilkan pesan jika eksekusi berhasil
+                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Memperbarui data di tampilan (jika ada)
+                    this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+                    this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
+                    clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnHapusPM_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Apakah anda yakin ingin menghapus data ini ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -148,7 +169,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     SqlCommand delete = new SqlCommand("sp_DeletePengumuman", connection);
                     delete.CommandType = CommandType.StoredProcedure;
 
-                    delete.Parameters.AddWithValue("@Id_Pengumuman", txtIDPengumuman.Text);
+                    delete.Parameters.AddWithValue("@Id_Pengumuman", txtCariPM.Text);
                     //delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
 
                     delete.ExecuteNonQuery();
@@ -163,21 +184,6 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void txtPengumuman_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("Hanya masukkan huruf!");
-            }
-        }
-
-        private void btnTambah_Click(object sender, EventArgs e)
-        {
-            Pengumuman pengumuman = new Pengumuman();
-            pengumuman.Show();
         }
     }
 }

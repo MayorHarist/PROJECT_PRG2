@@ -94,23 +94,29 @@ namespace PROJECT_PRG2.CRUD_Tendik
                             TelpTendik.Text = dataTable.Rows[0]["Telepon"].ToString();
                             userNmTendik.Text = dataTable.Rows[0]["Username"].ToString();
                             txtPassTendik.Text = dataTable.Rows[0]["Password"].ToString();
+
+                            txtIDTendik.Enabled = true;
+                            txtNamaTendik.Enabled = true;
+                            tglLahirTendik.Enabled = true;
+                            rbLaki.Enabled = true;
+                            rbPuan.Enabled = true;
+                            txtAlmatTendik.Enabled = true;
+                            txtEmailTendik.Enabled = true;
+                            TelpTendik.Enabled = true;
+                            userNmTendik.Enabled = true;
+                            txtPassTendik.Enabled = true;
+
+                            btnUpdate.Enabled = true;
+                            btnHapus_.Enabled = true;
+                        }
+                        else
+                        {
+                            // Menampilkan pesan jika data tidak ditemukan
+                            MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         }
                         connection.Close();
                     }
-
-                    txtIDTendik.Enabled = true;
-                    txtNamaTendik.Enabled = true;
-                    tglLahirTendik.Enabled = true;
-                    rbLaki.Enabled = true;
-                    rbPuan.Enabled = true;
-                    txtAlmatTendik.Enabled = true;
-                    txtEmailTendik.Enabled = true;
-                    TelpTendik.Enabled = true;
-                    userNmTendik.Enabled = true;
-                    txtPassTendik.Enabled = true;
-
-                    btnUpdate.Enabled = true;
-                    btnHapus_.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -149,6 +155,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     // Menampilkan pesan jika eksekusi berhasil
                     MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Memperbarui data di tampilan (jika ada)
+                    this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
                     clear();
                 }
             }
