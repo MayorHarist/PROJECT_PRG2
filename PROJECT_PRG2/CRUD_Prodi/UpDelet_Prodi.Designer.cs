@@ -66,7 +66,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(61, 525);
+            this.label3.Location = new System.Drawing.Point(238, 641);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 21);
@@ -79,7 +79,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(344, 526);
+            this.label14.Location = new System.Drawing.Point(521, 642);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(132, 21);
@@ -92,7 +92,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(628, 526);
+            this.label15.Location = new System.Drawing.Point(805, 642);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(74, 21);
@@ -115,7 +115,7 @@
             this.txtAkreditasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtAkreditasi.ForeColor = System.Drawing.Color.Black;
             this.txtAkreditasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAkreditasi.Location = new System.Drawing.Point(620, 547);
+            this.txtAkreditasi.Location = new System.Drawing.Point(797, 663);
             this.txtAkreditasi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtAkreditasi.Name = "txtAkreditasi";
             this.txtAkreditasi.PasswordChar = '\0';
@@ -140,7 +140,7 @@
             this.txtJenjangPendidikan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtJenjangPendidikan.ForeColor = System.Drawing.Color.Black;
             this.txtJenjangPendidikan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJenjangPendidikan.Location = new System.Drawing.Point(336, 547);
+            this.txtJenjangPendidikan.Location = new System.Drawing.Point(513, 663);
             this.txtJenjangPendidikan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtJenjangPendidikan.Name = "txtJenjangPendidikan";
             this.txtJenjangPendidikan.PasswordChar = '\0';
@@ -165,7 +165,7 @@
             this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Location = new System.Drawing.Point(53, 547);
+            this.txtNama.Location = new System.Drawing.Point(230, 663);
             this.txtNama.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
@@ -190,7 +190,7 @@
             this.txtIdProdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtIdProdi.ForeColor = System.Drawing.Color.Black;
             this.txtIdProdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdProdi.Location = new System.Drawing.Point(407, 30);
+            this.txtIdProdi.Location = new System.Drawing.Point(584, 146);
             this.txtIdProdi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtIdProdi.Name = "txtIdProdi";
             this.txtIdProdi.PasswordChar = '\0';
@@ -230,7 +230,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgProdi.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgProdi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgProdi.Location = new System.Drawing.Point(40, 107);
+            this.dtgProdi.Location = new System.Drawing.Point(217, 223);
             this.dtgProdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgProdi.Name = "dtgProdi";
             this.dtgProdi.RowHeadersVisible = false;
@@ -314,7 +314,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(662, 712);
+            this.label2.Location = new System.Drawing.Point(839, 828);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 21);
@@ -337,7 +337,7 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 9F);
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(655, 735);
+            this.guna2TextBox1.Location = new System.Drawing.Point(832, 851);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
@@ -354,7 +354,7 @@
             this.btnHapus.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnHapus.ImageRotate = 0F;
             this.btnHapus.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHapus.Location = new System.Drawing.Point(767, 742);
+            this.btnHapus.Location = new System.Drawing.Point(944, 858);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -372,7 +372,7 @@
             this.btnUpdate.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnUpdate.ImageRotate = 0F;
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdate.Location = new System.Drawing.Point(710, 738);
+            this.btnUpdate.Location = new System.Drawing.Point(887, 854);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -390,7 +390,7 @@
             this.btnTambah.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnTambah.ImageRotate = 0F;
             this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTambah.Location = new System.Drawing.Point(663, 738);
+            this.btnTambah.Location = new System.Drawing.Point(840, 854);
             this.btnTambah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -408,7 +408,7 @@
             this.btnCari.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnCari.ImageRotate = 0F;
             this.btnCari.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCari.Location = new System.Drawing.Point(367, 28);
+            this.btnCari.Location = new System.Drawing.Point(544, 144);
             this.btnCari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCari.Name = "btnCari";
             this.btnCari.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -423,7 +423,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1020, 826);
+            this.ClientSize = new System.Drawing.Size(1376, 1033);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnUpdate);
