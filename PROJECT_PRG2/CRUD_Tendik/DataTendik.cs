@@ -105,7 +105,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
         }
         private void clear()
         {
-            txtIDTendik.Text = "";
             txtNamaTendik.Text = "";
             tglLahirTendik.Value = DateTime.Now;
             rbLaki.Checked = false;
