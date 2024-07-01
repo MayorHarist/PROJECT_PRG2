@@ -118,23 +118,28 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         public string autoid()
         {
+            string newID = "";
+
             string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+
+            using (SqlConnection connection = new SqlConnection(connectionstring))
             {
                 connection.Open();
+
                 string countQuery = "SELECT COUNT(*) FROM TenagaKependidikan";
 
                 using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
                 {
                     int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
 
-                    string newID = "TKN" + count.ToString("000");
-
-                    txtIDTendik.Text = newID;
-                    return newID;
+                    newID = "TKN" + count.ToString("000");
                 }
             }
+
+            // txtIDTendik.Text = newID; // Jangan mengubah UI di dalam method ini
+            return newID;
         }
+
 
         private void btnBatalTendik_Click(object sender, EventArgs e)
         {
