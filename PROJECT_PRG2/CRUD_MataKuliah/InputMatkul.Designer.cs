@@ -291,7 +291,7 @@
             this.txtIdMatkul.Font = new System.Drawing.Font("Poppins", 9F);
             this.txtIdMatkul.ForeColor = System.Drawing.Color.Black;
             this.txtIdMatkul.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdMatkul.Location = new System.Drawing.Point(329, 140);
+            this.txtIdMatkul.Location = new System.Drawing.Point(330, 139);
             this.txtIdMatkul.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIdMatkul.Name = "txtIdMatkul";
             this.txtIdMatkul.PasswordChar = '\0';
