@@ -23,15 +23,35 @@ namespace PROJECT_PRG2.CRUD_Tendik
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
             this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
-           
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.TenagaKependidikan' table. You can move, or remove it, as needed.
-            //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet6.TenagaKependidikan);
-            // TODO: This line of code loads data into the 'tendik.TenagaKependidikan' table. You can move, or remove it, as needed.
-            
-
         }
-        private void btnCariTendik_Click(object sender, EventArgs e)
+
+        private void clear()
+        {
+            txtIDTendik.Text = "";
+            txtNamaTendik.Text = "";
+            tglLahirTendik.Value = DateTime.Now;
+            rbLaki.Checked = false;
+            rbPuan.Checked = false;
+            txtAlmatTendik.Text = "";
+            txtEmailTendik.Text = "";
+            TelpTendik.Text = "";
+            userNmTendik.Text = "";
+            txtPassTendik.Text = "";
+        }
+        private void btnTambahTendik_Click(object sender, EventArgs e)
+        {
+            DataTendik dataTendik = new DataTendik();
+            dataTendik.Show();
+        }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            Dashboard_KepalaTendik dashboard_KepalaTendik = new Dashboard_KepalaTendik();
+            dashboard_KepalaTendik.Show();
+            this.Hide();
+        }
+
+        private void btnCari__Click(object sender, EventArgs e)
         {
             try
             {
@@ -42,14 +62,14 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     return;
                 }
 
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=false; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
                     DataTable dataTable = new DataTable();
                     SqlCommand myCommand = new SqlCommand("SELECT * FROM TenagaKependidikan WHERE Id_TKN=@Id_TKN", connection);
-                    myCommand.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
+                    myCommand.Parameters.AddWithValue("@Id_TKN", txtCari.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
@@ -63,16 +83,19 @@ namespace PROJECT_PRG2.CRUD_Tendik
                         {
                             tglLahirTendik.Value = tanggalLahir;
                         }
-
-                        // Set the radio button based on Jenis_Kelamin
-                        string jenisKelamin = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
-                        rbLaki.Checked = jenisKelamin == "Laki-laki";
-                        rbPuan.Checked = jenisKelamin == "Perempuan";
-                        txtAlmatTendik.Text = dataTable.Rows[0]["Alamat"].ToString();
-                        txtEmailTendik.Text = dataTable.Rows[0]["Email"].ToString();
-                        TelpTendik.Text = dataTable.Rows[0]["Telepon"].ToString();
-                        userNmTendik.Text = dataTable.Rows[0]["Username"].ToString();
-                        txtPassTendik.Text = dataTable.Rows[0]["Password"].ToString();
+                        if (dataTable.Rows.Count > 0)
+                        {
+                            // Set the radio button based on Jenis_Kelamin
+                            string jenisKelamin = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
+                            rbLaki.Checked = jenisKelamin == "Laki-laki";
+                            rbPuan.Checked = jenisKelamin == "Perempuan";
+                            txtAlmatTendik.Text = dataTable.Rows[0]["Alamat"].ToString();
+                            txtEmailTendik.Text = dataTable.Rows[0]["Email"].ToString();
+                            TelpTendik.Text = dataTable.Rows[0]["Telepon"].ToString();
+                            userNmTendik.Text = dataTable.Rows[0]["Username"].ToString();
+                            txtPassTendik.Text = dataTable.Rows[0]["Password"].ToString();
+                        }
+                        connection.Close();
                     }
 
                     txtIDTendik.Enabled = true;
@@ -84,12 +107,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     txtEmailTendik.Enabled = true;
                     TelpTendik.Enabled = true;
                     userNmTendik.Enabled = true;
-                    txtPassTendik.Enabled= true;
+                    txtPassTendik.Enabled = true;
 
-                    btnUbahTendik.Enabled = true;
-                    btnHapusTendik.Enabled = true;
-
-                    connection.Close();
+                    btnUpdate.Enabled = true;
+                    btnHapus_.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -97,11 +118,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void btnUbahTendik_Click(object sender, EventArgs e)
+
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionstring = "integrated security=false; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionstring))
                 {
                     connection.Open();
@@ -136,25 +158,11 @@ namespace PROJECT_PRG2.CRUD_Tendik
             }
         }
 
-        private void clear()
-        {
-            txtIDTendik.Text = "";
-            txtNamaTendik.Text = "";
-            tglLahirTendik.Value = DateTime.Now;
-            rbLaki.Checked = false;
-            rbPuan.Checked = false;
-            txtAlmatTendik.Text = "";
-            txtEmailTendik.Text = "";
-            TelpTendik.Text = "";
-            userNmTendik.Text = "";
-            txtPassTendik.Text = "";
-        }
-
-        private void btnHapusTendik_Click(object sender, EventArgs e)
+        private void btnHapus__Click(object sender, EventArgs e)
         {
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=false; data source=.; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connectionString);
 
                 connection.Open();
@@ -175,20 +183,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnKembali_Click(object sender, EventArgs e)
-        {
-            Dashboard_KepalaTendik dashboard_KepalaTendik = new Dashboard_KepalaTendik();
-            dashboard_KepalaTendik.Show();
-            this.Hide();
-        }
-
-        private void btnTambah_Click(object sender, EventArgs e)
-        {
-            DataTendik dataTendik = new DataTendik();
-            dataTendik.Show();
-
         }
     }
 }
