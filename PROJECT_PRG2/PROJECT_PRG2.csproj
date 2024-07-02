@@ -215,6 +215,12 @@
     <Compile Include="Dashboard\DasboardTendik.Designer.cs">
       <DependentUpon>DasboardTendik.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\DashboardMahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardMahasiswa.Designer.cs">
+      <DependentUpon>DashboardMahasiswa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\DashboardUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,12 @@
     <Compile Include="Transaksi\trsKRPP.Designer.cs">
       <DependentUpon>trsKRPP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaksi\trsKRS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\trsKRS.Designer.cs">
+      <DependentUpon>trsKRS.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CRUD_Dosen\InputDosen.resx">
       <DependentUpon>InputDosen.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,6 +400,9 @@
     <EmbeddedResource Include="Dashboard\DasboardTendik.resx">
       <DependentUpon>DasboardTendik.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DashboardMahasiswa.resx">
+      <DependentUpon>DashboardMahasiswa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\DashboardUtama.resx">
       <DependentUpon>DashboardUtama.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,6 +431,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Transaksi\trsKRS.resx">
+      <DependentUpon>trsKRS.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="FINDSMART.xsc">
       <DependentUpon>FINDSMART.xsd</DependentUpon>
     </None>
@@ -659,6 +677,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DESIGN Prodi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN Tendik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN Tendik1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Mahasiswa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
