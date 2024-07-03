@@ -29,7 +29,7 @@ namespace PROJECT_PRG2
             //Application.Run(new TampilanAwal());
             //Application.Run(new InputMatkul());
             //Application.Run(new UpTendik());
-            Application.Run(new DashboardMahasiswa());
+            Application.Run(new DasboardTendik());
             //Application.Run(new DasboardTendik());
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new View_JenisPrestasi());

@@ -18,6 +18,9 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             InitializeComponent();
             autoid();
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -99,7 +102,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void clear()
         {
-            txtIdMatkul.Text = "";
             txtNama.Text = "";
             txtSKS.Text = "";
             txtJenis.Text = "";
@@ -110,10 +112,14 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void InputMatkul_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
+            //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet6.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet6.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet2.ProgramStudi' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'fINDSMARTDataSet1.Dosen' table. You can move, or remove it, as needed.
             //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet1.Dosen);
@@ -122,7 +128,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01;initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
             {
                 connection.Open();

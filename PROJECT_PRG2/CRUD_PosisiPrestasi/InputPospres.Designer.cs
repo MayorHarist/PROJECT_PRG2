@@ -103,6 +103,7 @@
             this.txtDeskripsi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDeskripsi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDeskripsi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDeskripsi.ForeColor = System.Drawing.Color.Black;
             this.txtDeskripsi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDeskripsi.Location = new System.Drawing.Point(360, 260);
             this.txtDeskripsi.Multiline = true;
@@ -116,7 +117,10 @@
             // 
             // txtNama
             // 
+            this.txtNama.Animated = true;
             this.txtNama.AutoRoundedCorners = true;
+            this.txtNama.BackColor = System.Drawing.Color.Transparent;
+            this.txtNama.BorderColor = System.Drawing.Color.Transparent;
             this.txtNama.BorderRadius = 13;
             this.txtNama.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNama.DefaultText = "";
@@ -126,10 +130,12 @@
             this.txtNama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Location = new System.Drawing.Point(360, 217);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
+            this.txtNama.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.txtNama.PlaceholderText = "";
             this.txtNama.SelectedText = "";
             this.txtNama.Size = new System.Drawing.Size(245, 28);
@@ -139,6 +145,8 @@
             // txtIdPosisiPrestasi
             // 
             this.txtIdPosisiPrestasi.AutoRoundedCorners = true;
+            this.txtIdPosisiPrestasi.BackColor = System.Drawing.Color.Transparent;
+            this.txtIdPosisiPrestasi.BorderColor = System.Drawing.Color.Transparent;
             this.txtIdPosisiPrestasi.BorderRadius = 13;
             this.txtIdPosisiPrestasi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIdPosisiPrestasi.DefaultText = "";
@@ -148,6 +156,7 @@
             this.txtIdPosisiPrestasi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIdPosisiPrestasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdPosisiPrestasi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdPosisiPrestasi.ForeColor = System.Drawing.Color.Black;
             this.txtIdPosisiPrestasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdPosisiPrestasi.Location = new System.Drawing.Point(360, 177);
             this.txtIdPosisiPrestasi.Name = "txtIdPosisiPrestasi";
@@ -212,6 +221,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InputPospres";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InputPospres";

@@ -116,7 +116,7 @@
             this.txtIdJenisPrestasi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIdJenisPrestasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdJenisPrestasi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdJenisPrestasi.ForeColor = System.Drawing.Color.White;
+            this.txtIdJenisPrestasi.ForeColor = System.Drawing.Color.Black;
             this.txtIdJenisPrestasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdJenisPrestasi.Location = new System.Drawing.Point(333, 126);
             this.txtIdJenisPrestasi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -142,7 +142,7 @@
             this.txtNama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNama.ForeColor = System.Drawing.Color.White;
+            this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Location = new System.Drawing.Point(333, 166);
             this.txtNama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -167,7 +167,7 @@
             this.txtPeran.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPeran.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPeran.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPeran.ForeColor = System.Drawing.Color.White;
+            this.txtPeran.ForeColor = System.Drawing.Color.Black;
             this.txtPeran.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPeran.Location = new System.Drawing.Point(333, 209);
             this.txtPeran.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -191,7 +191,7 @@
             this.txtPenyelenggara.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPenyelenggara.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPenyelenggara.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPenyelenggara.ForeColor = System.Drawing.Color.White;
+            this.txtPenyelenggara.ForeColor = System.Drawing.Color.Black;
             this.txtPenyelenggara.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPenyelenggara.Location = new System.Drawing.Point(333, 253);
             this.txtPenyelenggara.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -215,7 +215,7 @@
             this.txtPoint.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPoint.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPoint.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPoint.ForeColor = System.Drawing.Color.White;
+            this.txtPoint.ForeColor = System.Drawing.Color.Black;
             this.txtPoint.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPoint.Location = new System.Drawing.Point(333, 297);
             this.txtPoint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

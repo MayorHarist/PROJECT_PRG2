@@ -245,6 +245,7 @@
             this.btnTrsKRS.Size = new System.Drawing.Size(375, 45);
             this.btnTrsKRS.TabIndex = 0;
             this.btnTrsKRS.Text = "KRS Mahasiswa";
+            this.btnTrsKRS.Click += new System.EventHandler(this.btnTrsKRS_Click);
             // 
             // btnProdi
             // 
