@@ -460,6 +460,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.txtIDTendik.Name = "txtIDTendik";
             this.txtIDTendik.PasswordChar = '\0';
             this.txtIDTendik.PlaceholderText = "";
+            this.txtIDTendik.ReadOnly = true;
             this.txtIDTendik.SelectedText = "";
             this.txtIDTendik.Size = new System.Drawing.Size(223, 31);
             this.txtIDTendik.TabIndex = 59;
