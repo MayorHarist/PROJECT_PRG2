@@ -21,12 +21,11 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void UpTendik_Load(object sender, EventArgs e)
         {
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+            
         }
 
         private void clear()
         {
-            txtIDTendik.Text = "";
             txtNamaTendik.Text = "";
             tglLahirTendik.Value = DateTime.Now;
             rbLaki.Checked = false;

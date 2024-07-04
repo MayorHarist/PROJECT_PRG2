@@ -359,7 +359,6 @@
             this.tglLahirTendik.AutoRoundedCorners = true;
             this.tglLahirTendik.BackColor = System.Drawing.Color.Transparent;
             this.tglLahirTendik.BorderRadius = 16;
-            this.tglLahirTendik.Checked = true;
             this.tglLahirTendik.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(173)))));
             this.tglLahirTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tglLahirTendik.ForeColor = System.Drawing.Color.White;
@@ -469,6 +468,7 @@
             this.txtIDTendik.Name = "txtIDTendik";
             this.txtIDTendik.PasswordChar = '\0';
             this.txtIDTendik.PlaceholderText = "";
+            this.txtIDTendik.ReadOnly = true;
             this.txtIDTendik.SelectedText = "";
             this.txtIDTendik.Size = new System.Drawing.Size(191, 31);
             this.txtIDTendik.TabIndex = 135;

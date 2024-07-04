@@ -1,4 +1,7 @@
-﻿namespace PROJECT_PRG2.CRUD_Prodi
+﻿using System;
+using System.Windows.Forms;
+
+namespace PROJECT_PRG2.CRUD_Prodi
 {
     partial class UpDelet_Prodi
     {
@@ -264,6 +267,7 @@
             this.dtgProdi.ThemeStyle.RowsStyle.Height = 24;
             this.dtgProdi.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgProdi.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgProdi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProdi_CellContentClick);
             // 
             // label2
             // 
@@ -518,6 +522,11 @@
 
         }
 
+        private void txtAkreditasi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label14;
@@ -539,10 +548,5 @@
         private Guna.UI2.WinForms.Guna2Button btnBatal;
         private Guna.UI2.WinForms.Guna2TextBox txtCari;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProdiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jenjangPendidikanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn akreditasiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
     }
 }

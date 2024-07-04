@@ -20,8 +20,10 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void UpdatePengumuman_Load(object sender, EventArgs e)
         {
-            
-
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
+            this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
         }
 
         private void clear()
@@ -45,7 +47,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtIDPM.Text))
+                if (string.IsNullOrWhiteSpace(txtCariPM.Text))
                 {
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -102,10 +104,14 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         {
             Pengumuman pengumuman = new Pengumuman();
             pengumuman.Show();
+
+            // Menambahkan tooltip untuk ImageButton
+            toolTip1.SetToolTip(btnTambahPengumuman, "Tambah Data");
         }
 
         private void btnUpPengumuman_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
@@ -142,6 +148,9 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
                     this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
                     clear();
+
+                    // Menambahkan tooltip untuk ImageButton
+                    tooltipupdate.SetToolTip(btnTambahPengumuman, "Perbarui Data");
                 }
             }
             catch (Exception ex)
@@ -173,6 +182,9 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     MessageBox.Show("Data berhasil dihapus", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
+
+                    // Menambahkan tooltip untuk ImageButton
+                    tooltipHapus.SetToolTip(btnTambahPengumuman, "Hapus Data");
                 }
                 catch (Exception ex)
                 {

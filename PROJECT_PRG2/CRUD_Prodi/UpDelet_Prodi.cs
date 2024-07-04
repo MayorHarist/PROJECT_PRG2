@@ -164,24 +164,9 @@ namespace PROJECT_PRG2.CRUD_Prodi
             clear();
         }
 
-        private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
+        private void dtgProdi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Cek apakah karakter yang diinputkan adalah huruf atau backspace (untuk menghapus)
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
-            {
-                // Jika bukan huruf atau backspace, batalkan input
-                e.Handled = true;
-            }
-        }
 
-        private void txtAkreditasi_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Cek apakah karakter yang diinputkan adalah huruf atau backspace (untuk menghapus)
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
-            {
-                // Jika bukan huruf atau backspace, batalkan input
-                e.Handled = true;
-            }
         }
     }
 }
