@@ -10097,7 +10097,7 @@ SELECT Id_Prodi, Nama, Jenjang_Pendidikan, Akreditasi, Status FROM ProgramStudi 
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id_Prodi, Nama, Jenjang_Pendidikan, Akreditasi, Status FROM dbo.ProgramStu" +
-                "di";
+                "di WHERE Status=\'Aktif\'";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

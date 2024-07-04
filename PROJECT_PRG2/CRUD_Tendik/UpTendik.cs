@@ -21,7 +21,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void UpTendik_Load(object sender, EventArgs e)
         {
-            
+            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
         }
 
         private void clear()
@@ -55,7 +55,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             try
             {
                 // Validasi apakah txtPegawai kosong
-                if (string.IsNullOrWhiteSpace(txtIDTendik.Text))
+                if (string.IsNullOrWhiteSpace(txtCari.Text))
                 {
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;

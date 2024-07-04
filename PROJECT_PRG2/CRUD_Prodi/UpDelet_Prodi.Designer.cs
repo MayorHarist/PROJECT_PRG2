@@ -41,14 +41,6 @@
             this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdProdi = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtgProdi = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jenjangPendidikanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.akreditasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
-            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnHapus = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -58,6 +50,14 @@
             this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
             this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
+            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
+            this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jenjangPendidikanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.akreditasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
@@ -265,55 +265,6 @@
             this.dtgProdi.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgProdi.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // idProdiDataGridViewTextBoxColumn
-            // 
-            this.idProdiDataGridViewTextBoxColumn.DataPropertyName = "Id_Prodi";
-            this.idProdiDataGridViewTextBoxColumn.HeaderText = "Id_Prodi";
-            this.idProdiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idProdiDataGridViewTextBoxColumn.Name = "idProdiDataGridViewTextBoxColumn";
-            // 
-            // namaDataGridViewTextBoxColumn
-            // 
-            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
-            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
-            this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            // 
-            // jenjangPendidikanDataGridViewTextBoxColumn
-            // 
-            this.jenjangPendidikanDataGridViewTextBoxColumn.DataPropertyName = "Jenjang_Pendidikan";
-            this.jenjangPendidikanDataGridViewTextBoxColumn.HeaderText = "Jenjang_Pendidikan";
-            this.jenjangPendidikanDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.jenjangPendidikanDataGridViewTextBoxColumn.Name = "jenjangPendidikanDataGridViewTextBoxColumn";
-            // 
-            // akreditasiDataGridViewTextBoxColumn
-            // 
-            this.akreditasiDataGridViewTextBoxColumn.DataPropertyName = "Akreditasi";
-            this.akreditasiDataGridViewTextBoxColumn.HeaderText = "Akreditasi";
-            this.akreditasiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.akreditasiDataGridViewTextBoxColumn.Name = "akreditasiDataGridViewTextBoxColumn";
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            // 
-            // programStudiBindingSource
-            // 
-            this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet7;
-            // 
-            // fINDSMARTDataSet7
-            // 
-            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
-            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // programStudiTableAdapter
-            // 
-            this.programStudiTableAdapter.ClearBeforeFill = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -478,6 +429,56 @@
             this.label1.TabIndex = 215;
             this.label1.Text = "Id Prodi";
             // 
+            // programStudiBindingSource
+            // 
+            this.programStudiBindingSource.DataMember = "ProgramStudi";
+            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // fINDSMARTDataSet7
+            // 
+            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
+            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // programStudiTableAdapter
+            // 
+            this.programStudiTableAdapter.ClearBeforeFill = true;
+            // 
+            // idProdiDataGridViewTextBoxColumn
+            // 
+            this.idProdiDataGridViewTextBoxColumn.DataPropertyName = "Id_Prodi";
+            this.idProdiDataGridViewTextBoxColumn.HeaderText = "ID Prodi";
+            this.idProdiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idProdiDataGridViewTextBoxColumn.Name = "idProdiDataGridViewTextBoxColumn";
+            // 
+            // namaDataGridViewTextBoxColumn
+            // 
+            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
+            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            // 
+            // jenjangPendidikanDataGridViewTextBoxColumn
+            // 
+            this.jenjangPendidikanDataGridViewTextBoxColumn.DataPropertyName = "Jenjang_Pendidikan";
+            this.jenjangPendidikanDataGridViewTextBoxColumn.HeaderText = "Jenjang Pendidikan";
+            this.jenjangPendidikanDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.jenjangPendidikanDataGridViewTextBoxColumn.Name = "jenjangPendidikanDataGridViewTextBoxColumn";
+            // 
+            // akreditasiDataGridViewTextBoxColumn
+            // 
+            this.akreditasiDataGridViewTextBoxColumn.DataPropertyName = "Akreditasi";
+            this.akreditasiDataGridViewTextBoxColumn.HeaderText = "Akreditasi";
+            this.akreditasiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.akreditasiDataGridViewTextBoxColumn.Name = "akreditasiDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.Visible = false;
+            // 
             // UpDelet_Prodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,11 +530,6 @@
         private FINDSMARTDataSet7 fINDSMARTDataSet7;
         private System.Windows.Forms.BindingSource programStudiBindingSource;
         private FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProdiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jenjangPendidikanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn akreditasiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private Guna.UI2.WinForms.Guna2ImageButton btnCari;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ImageButton btnHapus;
@@ -543,5 +539,10 @@
         private Guna.UI2.WinForms.Guna2Button btnBatal;
         private Guna.UI2.WinForms.Guna2TextBox txtCari;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProdiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jenjangPendidikanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn akreditasiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
     }
 }
