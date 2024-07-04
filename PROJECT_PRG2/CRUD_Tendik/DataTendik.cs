@@ -30,7 +30,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void btnTambahTendik_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
             // Validasi email menggunakan regex
@@ -120,7 +120,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
         {
             string newID = "";
 
-            string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
 
             using (SqlConnection connection = new SqlConnection(connectionstring))
             {

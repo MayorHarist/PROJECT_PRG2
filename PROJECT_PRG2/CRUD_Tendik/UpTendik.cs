@@ -62,7 +62,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     return;
                 }
 
-                string connectionString = "integrated security=false; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -129,7 +129,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
         {
             try
             {
-                string connectionstring = "integrated security=false; data source=.; initial catalog=FINDSMART";
+                string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionstring))
                 {
                     connection.Open();
@@ -168,29 +168,33 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void btnHapus__Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Apakah anda yakin ingin menghapus data ini ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string connectionString = "integrated security=false; data source=.; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connectionString);
+                try
+                {
+                    string connectionString = "integrated security=false; data source=.;  user=sa; password=polman; initial catalog=FINDSMART";
+                    SqlConnection connection = new SqlConnection(connectionString);
 
-                connection.Open();
+                    connection.Open();
 
-                SqlCommand delete = new SqlCommand("sp_DeleteTendik", connection);
-                delete.CommandType = CommandType.StoredProcedure;
+                    SqlCommand delete = new SqlCommand("sp_DeleteTendik", connection);
+                    delete.CommandType = CommandType.StoredProcedure;
 
-                delete.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
+                    delete.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
 
-                delete.ExecuteNonQuery();
+                    delete.ExecuteNonQuery();
 
 
-                MessageBox.Show("Data berhasil dihapus", "Informasi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                    MessageBox.Show("Data berhasil dihapus", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            } 
         }
     }
 }

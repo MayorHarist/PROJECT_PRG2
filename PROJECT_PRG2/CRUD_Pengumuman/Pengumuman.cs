@@ -21,7 +21,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void btnTambahPengumuman_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
 
             // Memastikan apakah data yang akan diismpan sudah benar, jika belum maka masih bisa mengisi ulang sebelum simpan
@@ -96,7 +96,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
+            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
             SqlConnection connection = new SqlConnection(connectionstring);
             {
                 connection.Open();
