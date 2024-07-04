@@ -71,82 +71,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             rbPerempuan.Checked = false;
         }
 
-        private void btnCari_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Validasi apakah txtNIM kosong
-                if (string.IsNullOrWhiteSpace(txtNIM.Text))
-                {
-                    MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("SELECT * FROM Mahasiswa WHERE NIM=@NIM", connection);
-                    myCommand.Parameters.AddWithValue("@NIM", txtNIM.Text);
-                    SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
-                    myAdapter.Fill(dataTable);
-
-                    if (dataTable.Rows.Count > 0)
-                    {
-                        txtNIM.Text = dataTable.Rows[0]["NIM"].ToString();
-                        cbProdi.SelectedValue = dataTable.Rows[0]["Id_Prodi"];  // Gunakan SelectedValue
-                        txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
-
-                        // Convert Tanggal_Lahir to DateTime
-                        DateTime tanggalLahir;
-                        if (DateTime.TryParse(dataTable.Rows[0]["Tanggal_Lahir"].ToString(), out tanggalLahir))
-                        {
-                            DateTimeTanggal.Value = tanggalLahir;
-                        }
-
-                        string jenisKelamin = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
-                        if (jenisKelamin == "Laki-laki")
-                        {
-                            rbLaki.Checked = true;
-                        }
-                        else if (jenisKelamin == "Perempuan")
-                        {
-                            rbPerempuan.Checked = true;
-                        }
-                        else
-                        {
-                            rbLaki.Checked = false;
-                            rbPerempuan.Checked = false;
-                        }
-                        txtAlamat.Text = dataTable.Rows[0]["Alamat"].ToString();
-                        txtEmail.Text = dataTable.Rows[0]["Email"].ToString();
-                        txtTelepon.Text = dataTable.Rows[0]["Telepon"].ToString();
-                        txtTahunMasuk.Text = dataTable.Rows[0]["Tahun_Masuk"].ToString();
-                        txtUsername.Text = dataTable.Rows[0]["Username"].ToString();
-                        txtPassword.Text = dataTable.Rows[0]["Password"].ToString();
-
-                        // Mengaktifkan kontrol jika data ditemukan
-                        SetControlsEnabled(true);
-                    }
-                    else
-                    {
-                        // Menampilkan pesan jika data tidak ditemukan
-                        MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // Menonaktifkan kontrol jika data tidak ditemukan
-                        SetControlsEnabled(false);
-                    }
-
-                    connection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void btnKembali_Click(object sender, EventArgs e)
         {
             DasboardTendik dasboardTendik = new DasboardTendik();  
@@ -238,6 +162,82 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCari__Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Validasi apakah txtNIM kosong
+                if (string.IsNullOrWhiteSpace(txtNIM.Text))
+                {
+                    MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    DataTable dataTable = new DataTable();
+                    SqlCommand myCommand = new SqlCommand("SELECT * FROM Mahasiswa WHERE NIM=@NIM", connection);
+                    myCommand.Parameters.AddWithValue("@NIM", txtNIM.Text);
+                    SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
+                    myAdapter.Fill(dataTable);
+
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        txtNIM.Text = dataTable.Rows[0]["NIM"].ToString();
+                        cbProdi.SelectedValue = dataTable.Rows[0]["Id_Prodi"];  // Gunakan SelectedValue
+                        txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
+
+                        // Convert Tanggal_Lahir to DateTime
+                        DateTime tanggalLahir;
+                        if (DateTime.TryParse(dataTable.Rows[0]["Tanggal_Lahir"].ToString(), out tanggalLahir))
+                        {
+                            DateTimeTanggal.Value = tanggalLahir;
+                        }
+
+                        string jenisKelamin = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
+                        if (jenisKelamin == "Laki-laki")
+                        {
+                            rbLaki.Checked = true;
+                        }
+                        else if (jenisKelamin == "Perempuan")
+                        {
+                            rbPerempuan.Checked = true;
+                        }
+                        else
+                        {
+                            rbLaki.Checked = false;
+                            rbPerempuan.Checked = false;
+                        }
+                        txtAlamat.Text = dataTable.Rows[0]["Alamat"].ToString();
+                        txtEmail.Text = dataTable.Rows[0]["Email"].ToString();
+                        txtTelepon.Text = dataTable.Rows[0]["Telepon"].ToString();
+                        txtTahunMasuk.Text = dataTable.Rows[0]["Tahun_Masuk"].ToString();
+                        txtUsername.Text = dataTable.Rows[0]["Username"].ToString();
+                        txtPassword.Text = dataTable.Rows[0]["Password"].ToString();
+
+                        // Mengaktifkan kontrol jika data ditemukan
+                        SetControlsEnabled(true);
+                    }
+                    else
+                    {
+                        // Menampilkan pesan jika data tidak ditemukan
+                        MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Menonaktifkan kontrol jika data tidak ditemukan
+                        SetControlsEnabled(false);
+                    }
+
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
