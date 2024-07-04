@@ -121,11 +121,12 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtIdProdi.Text))
+                if (string.IsNullOrWhiteSpace(txtCari.Text))
                 {
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -133,7 +134,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
                     DataTable dataTable = new DataTable();
                     SqlCommand myCommand = new SqlCommand("SELECT * FROM ProgramStudi WHERE Id_Prodi=@Id_Prodi", connection);
-                    myCommand.Parameters.AddWithValue("@Id_Prodi", txtIdProdi.Text);
+                    myCommand.Parameters.AddWithValue("@Id_Prodi", txtCari.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
@@ -144,6 +145,11 @@ namespace PROJECT_PRG2.CRUD_Prodi
                         txtJenjangPendidikan.Text = dataTable.Rows[0]["Jenjang_Pendidikan"].ToString();
                         txtAkreditasi.Text = dataTable.Rows[0]["Akreditasi"].ToString();
                     }
+                    else
+                    {
+                        MessageBox.Show("ID Prodi tidak ditemukan di dalam database.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                     connection.Close();
                 }
             }
@@ -156,6 +162,26 @@ namespace PROJECT_PRG2.CRUD_Prodi
         private void btnBatal_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+        private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cek apakah karakter yang diinputkan adalah huruf atau backspace (untuk menghapus)
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                // Jika bukan huruf atau backspace, batalkan input
+                e.Handled = true;
+            }
+        }
+
+        private void txtAkreditasi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Cek apakah karakter yang diinputkan adalah huruf atau backspace (untuk menghapus)
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                // Jika bukan huruf atau backspace, batalkan input
+                e.Handled = true;
+            }
         }
     }
 }
