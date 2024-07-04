@@ -19,6 +19,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             InitializeComponent();
             autoid();
             AddTextBoxValidations();
+            DateTimeTanggal.ValueChanged += DateTimeTanggal_ValueChanged; 
         }
 
         private void AddTextBoxValidations()
@@ -26,8 +27,6 @@ namespace PROJECT_PRG2.CRUD_Dosen
             txtPegawai.KeyPress += ValidateAlphanumeric;
             txtNIDN.KeyPress += ValidateNumeric;
             txtNama.KeyPress += ValidateAlphabetic;
-            txtBidang.KeyPress += ValidateAlphabetic;
-            txtPendidikan.KeyPress += ValidateAlphabetic;
             txtTelepon.KeyPress += ValidateNumeric;
         }
 
@@ -36,7 +35,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Hanya huruf dan angka yang diperbolehkan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hanya huruf dan angka yang diperbolehkan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -45,7 +44,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Hanya angka yang diperbolehkan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hanya angka yang diperbolehkan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -54,7 +53,16 @@ namespace PROJECT_PRG2.CRUD_Dosen
             if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Hanya huruf yang diperbolehkan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hanya huruf yang diperbolehkan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void DateTimeTanggal_ValueChanged(object sender, EventArgs e)
+        {
+            if (DateTimeTanggal.Value > DateTime.Now)
+            {
+                MessageBox.Show("Tanggal lahir tidak boleh lebih dari hari ini.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DateTimeTanggal.Value = DateTime.Now; // Set nilai kembali ke tanggal hari ini
             }
         }
 
@@ -152,25 +160,19 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 string.IsNullOrEmpty(txtEmail.Text) ||
                 string.IsNullOrEmpty(txtTelepon.Text))
             {
-                MessageBox.Show("Semua field harus diisi.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Semua field harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (!Regex.IsMatch(txtEmail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
-                MessageBox.Show("Format email tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Format email tidak valid.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (!Regex.IsMatch(txtTelepon.Text, @"^\d{10,15}$"))
             {
-                MessageBox.Show("Format nomor telepon tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (DateTimeTanggal.Value > DateTime.Now)
-            {
-                MessageBox.Show("Tanggal lahir tidak boleh lebih dari hari ini.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Format nomor telepon tidak valid.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -189,7 +191,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
                 if (NIDNCount > 0)
                 {
-                    MessageBox.Show("NIDN sudah ada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("NIDN sudah ada.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
 
@@ -200,7 +202,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
                 if (EmailCount > 0)
                 {
-                    MessageBox.Show("Email sudah ada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Email sudah ada.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
 
@@ -211,13 +213,13 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
                 if (TeleponCount > 0)
                 {
-                    MessageBox.Show("Nomor telepon sudah ada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Nomor telepon sudah ada.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Terjadi kesalahan saat validasi: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Terjadi kesalahan saat validasi: " + ex.Message, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             finally

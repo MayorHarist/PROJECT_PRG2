@@ -186,6 +186,7 @@
             this.txtAkreditasi.SelectedText = "";
             this.txtAkreditasi.Size = new System.Drawing.Size(190, 31);
             this.txtAkreditasi.TabIndex = 37;
+            this.txtAkreditasi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAkreditasi_KeyPress);
             // 
             // txtJenjangPendidikan
             // 
@@ -236,6 +237,7 @@
             this.txtNama.SelectedText = "";
             this.txtNama.Size = new System.Drawing.Size(190, 31);
             this.txtNama.TabIndex = 35;
+            this.txtNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNama_KeyPress);
             // 
             // txtIdProdi
             // 
