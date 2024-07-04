@@ -1,4 +1,7 @@
-﻿namespace PROJECT_PRG2.CRUD_Prodi
+﻿using System;
+using System.Windows.Forms;
+
+namespace PROJECT_PRG2.CRUD_Prodi
 {
     partial class UpDelet_Prodi
     {
@@ -518,6 +521,11 @@
 
         }
 
+        private void txtAkreditasi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label14;
@@ -544,5 +552,7 @@
         private Guna.UI2.WinForms.Guna2Button btnBatal;
         private Guna.UI2.WinForms.Guna2TextBox txtCari;
         private System.Windows.Forms.Label label1;
+
+        public KeyPressEventHandler txtNama_KeyPress { get; private set; }
     }
 }
