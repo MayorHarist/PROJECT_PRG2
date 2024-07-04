@@ -83,6 +83,10 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
+            this.toolTambahTendik = new System.Windows.Forms.ToolTip(this.components);
+            this.toolUpdateTendik = new System.Windows.Forms.ToolTip(this.components);
+            this.toolHpsTendik = new System.Windows.Forms.ToolTip(this.components);
+            this.toolCariTendik = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
@@ -704,6 +708,7 @@
             this.btnCari_.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnCari_.Size = new System.Drawing.Size(59, 60);
             this.btnCari_.TabIndex = 165;
+            this.toolCariTendik.SetToolTip(this.btnCari_, "Cari Data");
             this.btnCari_.Click += new System.EventHandler(this.btnCari__Click);
             // 
             // label2
@@ -733,6 +738,7 @@
             this.btnHapus_.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnHapus_.Size = new System.Drawing.Size(23, 25);
             this.btnHapus_.TabIndex = 168;
+            this.toolHpsTendik.SetToolTip(this.btnHapus_, "Hapus Data");
             this.btnHapus_.UseTransparentBackground = true;
             this.btnHapus_.Click += new System.EventHandler(this.btnHapus__Click);
             // 
@@ -751,6 +757,7 @@
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnUpdate.Size = new System.Drawing.Size(32, 32);
             this.btnUpdate.TabIndex = 167;
+            this.toolUpdateTendik.SetToolTip(this.btnUpdate, "Perbarui Data");
             this.btnUpdate.UseTransparentBackground = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -769,6 +776,7 @@
             this.btnTambahTendik.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnTambahTendik.Size = new System.Drawing.Size(27, 32);
             this.btnTambahTendik.TabIndex = 166;
+            this.toolTambahTendik.SetToolTip(this.btnTambahTendik, "Tambah Data");
             this.btnTambahTendik.UseTransparentBackground = true;
             this.btnTambahTendik.Click += new System.EventHandler(this.btnTambahTendik_Click);
             // 
@@ -941,5 +949,9 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button btnBatal;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
+        private System.Windows.Forms.ToolTip toolCariTendik;
+        private System.Windows.Forms.ToolTip toolHpsTendik;
+        private System.Windows.Forms.ToolTip toolUpdateTendik;
+        private System.Windows.Forms.ToolTip toolTambahTendik;
     }
 }

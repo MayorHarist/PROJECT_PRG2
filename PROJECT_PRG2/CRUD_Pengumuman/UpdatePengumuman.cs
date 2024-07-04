@@ -84,13 +84,14 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
                         btnUpPengumuman.Enabled = true;
                         btnHapusPM.Enabled = true;
+
+                        // Menambahkan tooltip untuk ImageButton
+                        tooltipCari.SetToolTip(btnCari_, "Cari Data");
                     }
                     else
                     {
                         // Menampilkan pesan jika data tidak ditemukan
                         MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
                     }
                     connection.Close();
                 }

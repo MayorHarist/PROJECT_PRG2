@@ -41,6 +41,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
         {
             DataTendik dataTendik = new DataTendik();
             dataTendik.Show();
+
+            // Menambahkan tooltip untuk ImageButton
+            toolTambahTendik.SetToolTip(btnTambahTendik, "Tambah Data");
         }
 
         private void btnKembali_Click(object sender, EventArgs e)
@@ -93,6 +96,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
                             TelpTendik.Text = dataTable.Rows[0]["Telepon"].ToString();
                             userNmTendik.Text = dataTable.Rows[0]["Username"].ToString();
                             txtPassTendik.Text = dataTable.Rows[0]["Password"].ToString();
+
+                            // Menambahkan tooltip untuk ImageButton
+                            toolCariTendik.SetToolTip(btnCari_, "Cari Data");
 
                             txtIDTendik.Enabled = true;
                             txtNamaTendik.Enabled = true;
@@ -157,6 +163,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     // Memperbarui data di tampilan (jika ada)
                     this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
                     clear();
+
+                    // Menambahkan tooltip untuk ImageButton
+                    toolUpdateTendik.SetToolTip(btnUpdate, "Perbarui Data");
                 }
             }
             catch (Exception ex)
@@ -187,6 +196,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     MessageBox.Show("Data berhasil dihapus", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
+
+                    // Menambahkan tooltip untuk ImageButton
+                    toolHpsTendik.SetToolTip(btnHapus_, "Hapus Data");
                 }
                 catch (Exception ex)
                 {

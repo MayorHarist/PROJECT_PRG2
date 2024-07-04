@@ -67,6 +67,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tooltipupdate = new System.Windows.Forms.ToolTip(this.components);
             this.tooltipHapus = new System.Windows.Forms.ToolTip(this.components);
+            this.tooltipCari = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource)).BeginInit();
@@ -371,6 +372,7 @@
             this.btnCari_.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnCari_.Size = new System.Drawing.Size(59, 60);
             this.btnCari_.TabIndex = 166;
+            this.tooltipCari.SetToolTip(this.btnCari_, "Cari Data");
             this.btnCari_.Click += new System.EventHandler(this.btnCari__Click);
             // 
             // label2
@@ -617,5 +619,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip tooltipupdate;
         private System.Windows.Forms.ToolTip tooltipHapus;
+        private System.Windows.Forms.ToolTip tooltipCari;
     }
 }
