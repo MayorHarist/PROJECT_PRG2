@@ -152,5 +152,10 @@ namespace PROJECT_PRG2.CRUD_Prodi
                 MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
     }
 }

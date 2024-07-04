@@ -20,10 +20,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void UpdatePengumuman_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
-            this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
+            
 
         }
 
@@ -182,6 +179,19 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
+            this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
         }
     }
 }

@@ -22,25 +22,6 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void ViewDosen_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
-            // Ensure the Guna2DataGridView scrollbars are set correctly
-            this.dgvDosen.ScrollBars = ScrollBars.Both;
-
-            // Ensure AutoSizeColumnsMode is set
-            this.dgvDosen.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            // Ensure some columns exceed the width of the DataGridView
-            foreach (DataGridViewColumn column in dgvDosen.Columns)
-            {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                column.Width = 200; // Adjust this width as necessary
-            }
-
-            // Refresh the DataGridView to ensure scrollbars appear
-            this.dgvDosen.Refresh();
         }
 
         private void btnTampil_Click(object sender, EventArgs e)
@@ -275,6 +256,10 @@ namespace PROJECT_PRG2.CRUD_Dosen
             txtEmail.Text = "";
             txtTelepon.Text = "";
         }
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
 
         private void dgvDsn_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -322,6 +307,28 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 btnUpdate.Enabled = true;
                 btnHapus.Enabled = true;
             }
+        }
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            // Ensure the Guna2DataGridView scrollbars are set correctly
+            this.dgvDosen.ScrollBars = ScrollBars.Both;
+
+            // Ensure AutoSizeColumnsMode is set
+            this.dgvDosen.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Ensure some columns exceed the width of the DataGridView
+            foreach (DataGridViewColumn column in dgvDosen.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                column.Width = 200; // Adjust this width as necessary
+            }
+
+            // Refresh the DataGridView to ensure scrollbars appear
+            this.dgvDosen.Refresh();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -378,6 +385,8 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
 
         }
+
+       
     }
 }
 

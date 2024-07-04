@@ -80,6 +80,8 @@
             this.mataKuliahTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.MataKuliahTableAdapter();
             this.dosenTableAdapter1 = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.DosenTableAdapter();
             this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
+            this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.gdvMatkul)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
@@ -100,7 +102,7 @@
             this.gdvMatkul.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -140,10 +142,10 @@
             this.gdvMatkul.RowHeadersVisible = false;
             this.gdvMatkul.RowHeadersWidth = 62;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gdvMatkul.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gdvMatkul.RowTemplate.Height = 28;
-            this.gdvMatkul.Size = new System.Drawing.Size(1178, 463);
+            this.gdvMatkul.Size = new System.Drawing.Size(1158, 390);
             this.gdvMatkul.TabIndex = 0;
             this.gdvMatkul.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
             this.gdvMatkul.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
@@ -155,7 +157,7 @@
             this.gdvMatkul.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
             this.gdvMatkul.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
             this.gdvMatkul.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.gdvMatkul.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvMatkul.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gdvMatkul.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.gdvMatkul.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gdvMatkul.ThemeStyle.HeaderStyle.Height = 30;
@@ -240,7 +242,7 @@
             this.txtCari.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCari.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCari.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCari.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtCari.ForeColor = System.Drawing.Color.Black;
             this.txtCari.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCari.Location = new System.Drawing.Point(557, 24);
@@ -283,22 +285,22 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(322, 677);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 21);
+            this.label11.Size = new System.Drawing.Size(45, 15);
             this.label11.TabIndex = 113;
             this.label11.Text = "Nama";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(322, 761);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 21);
+            this.label10.Size = new System.Drawing.Size(85, 15);
             this.label10.TabIndex = 112;
             this.label10.Text = "Jumlah SKS";
             // 
@@ -319,11 +321,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(877, 677);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 21);
+            this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 115;
             this.label2.Text = "Id Prodi";
             // 
@@ -341,7 +343,7 @@
             this.txtStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtStatus.Enabled = false;
             this.txtStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStatus.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtStatus.ForeColor = System.Drawing.Color.Black;
             this.txtStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtStatus.Location = new System.Drawing.Point(589, 785);
@@ -356,55 +358,55 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(584, 602);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 21);
+            this.label9.Size = new System.Drawing.Size(41, 15);
             this.label9.TabIndex = 111;
             this.label9.Text = "Jenis";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(584, 677);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 21);
+            this.label8.Size = new System.Drawing.Size(68, 15);
             this.label8.TabIndex = 110;
             this.label8.Text = "Semester";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(584, 761);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 21);
+            this.label7.Size = new System.Drawing.Size(47, 15);
             this.label7.TabIndex = 109;
             this.label7.Text = "Status";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(877, 602);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 21);
+            this.label6.Size = new System.Drawing.Size(84, 15);
             this.label6.TabIndex = 108;
             this.label6.Text = "No Pegawai";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(322, 602);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 21);
+            this.label1.Size = new System.Drawing.Size(66, 15);
             this.label1.TabIndex = 107;
             this.label1.Text = "Id Matkul";
             // 
@@ -422,7 +424,7 @@
             this.txtSemester.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSemester.Enabled = false;
             this.txtSemester.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSemester.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSemester.ForeColor = System.Drawing.Color.Black;
             this.txtSemester.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSemester.Location = new System.Drawing.Point(589, 701);
@@ -448,7 +450,7 @@
             this.txtJenis.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtJenis.Enabled = false;
             this.txtJenis.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJenis.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtJenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtJenis.ForeColor = System.Drawing.Color.Black;
             this.txtJenis.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJenis.Location = new System.Drawing.Point(589, 629);
@@ -474,7 +476,7 @@
             this.txtSKS.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSKS.Enabled = false;
             this.txtSKS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSKS.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtSKS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtSKS.ForeColor = System.Drawing.Color.Black;
             this.txtSKS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSKS.Location = new System.Drawing.Point(313, 785);
@@ -500,7 +502,7 @@
             this.txtNama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNama.Enabled = false;
             this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Location = new System.Drawing.Point(313, 701);
@@ -526,7 +528,7 @@
             this.txtIdMatkul.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIdMatkul.Enabled = false;
             this.txtIdMatkul.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdMatkul.Font = new System.Drawing.Font("Poppins", 9F);
+            this.txtIdMatkul.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtIdMatkul.ForeColor = System.Drawing.Color.Black;
             this.txtIdMatkul.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdMatkul.Location = new System.Drawing.Point(313, 629);
@@ -546,11 +548,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(886, 757);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(896, 820);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 21);
+            this.label3.Size = new System.Drawing.Size(33, 15);
             this.label3.TabIndex = 127;
             this.label3.Text = "Aksi";
             // 
@@ -563,7 +565,7 @@
             this.btnHapus.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnHapus.ImageRotate = 0F;
             this.btnHapus.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHapus.Location = new System.Drawing.Point(991, 788);
+            this.btnHapus.Location = new System.Drawing.Point(1001, 851);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(2);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -581,7 +583,7 @@
             this.btnUpdate.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnUpdate.ImageRotate = 0F;
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdate.Location = new System.Drawing.Point(942, 785);
+            this.btnUpdate.Location = new System.Drawing.Point(952, 848);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -599,7 +601,7 @@
             this.btnTambah.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnTambah.ImageRotate = 0F;
             this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTambah.Location = new System.Drawing.Point(890, 783);
+            this.btnTambah.Location = new System.Drawing.Point(900, 846);
             this.btnTambah.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -621,10 +623,10 @@
             this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 9F);
+            this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(882, 781);
+            this.guna2TextBox1.Location = new System.Drawing.Point(892, 844);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
@@ -683,6 +685,42 @@
             // 
             this.programStudiTableAdapter1.ClearBeforeFill = true;
             // 
+            // btnBatal
+            // 
+            this.btnBatal.AutoRoundedCorners = true;
+            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
+            this.btnBatal.BorderRadius = 13;
+            this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBatal.ForeColor = System.Drawing.Color.White;
+            this.btnBatal.Location = new System.Drawing.Point(589, 851);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(133, 28);
+            this.btnBatal.TabIndex = 130;
+            this.btnBatal.Text = "Batal";
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoRoundedCorners = true;
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BorderRadius = 13;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(892, 540);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(145, 28);
+            this.btnRefresh.TabIndex = 131;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // ViewMatkul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -690,6 +728,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1376, 1033);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.cbProdi);
             this.Controls.Add(this.cbPegawai);
             this.Controls.Add(this.label3);
@@ -781,5 +821,7 @@
         private FINDSMARTDataSet7TableAdapters.DosenTableAdapter dosenTableAdapter1;
         private System.Windows.Forms.BindingSource programStudiBindingSource1;
         private FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter1;
+        private Guna.UI2.WinForms.Guna2Button btnBatal;
+        private Guna.UI2.WinForms.Guna2Button btnRefresh;
     }
 }

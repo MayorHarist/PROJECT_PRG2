@@ -24,28 +24,22 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
             //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
-
         }
 
         public void clear()
         {
-            txtIdJenisPrestasi.Text = "";
             txtNama.Text = "";
             txtPeran.Text = "";
             txtPenyelenggara.Text = "";
             txtPoint.Text = "";
         }
-
-        private void btnTambah_Click(object sender, EventArgs e)
+        private void btnTambahJP_Click(object sender, EventArgs e)
         {
             // Membuat instance dari form InputJepres
             InputJepres inputJepres = new InputJepres();
 
             // Menampilkan form InputJepres
             inputJepres.Show();
-
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
-            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -55,8 +49,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
 
         }
-
-        private void btnPerbaharui_Click(object sender, EventArgs e)
+        private void btnUpdateJP_Click(object sender, EventArgs e)
         {
             try
             {
@@ -88,46 +81,14 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 MessageBox.Show(ex.ToString(), "Error: ", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
-
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
             //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
             this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
-
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
             clear();
-        }
-
-        private void btnHapus_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connectionString);
-                connection.Open();
-
-                SqlCommand delete = new SqlCommand("sp_DeleteJenisPrestasi", connection);
-                delete.CommandType = CommandType.StoredProcedure;
-
-                delete.Parameters.AddWithValue("@Id_JenisPrestasi", txtIdJenisPrestasi.Text);
-                delete.ExecuteNonQuery();
-
-                MessageBox.Show("Data jenis prestasi berhasil dihapus", "Informasi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
-            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
-            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
-
         }
 
         private void btnCari_Click(object sender, EventArgs e)
@@ -166,6 +127,35 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 e.Handled = true; // Membatalkan aksi penghapusan
                 MessageBox.Show("Id sudah dibuat otomatis", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnHapusJP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+
+                SqlCommand delete = new SqlCommand("sp_DeleteJenisPrestasi", connection);
+                delete.CommandType = CommandType.StoredProcedure;
+
+                delete.Parameters.AddWithValue("@Id_JenisPrestasi", txtIdJenisPrestasi.Text);
+                delete.ExecuteNonQuery();
+
+                MessageBox.Show("Data jenis prestasi berhasil dihapus", "Informasi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clear();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
+            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
         }
     }
 }

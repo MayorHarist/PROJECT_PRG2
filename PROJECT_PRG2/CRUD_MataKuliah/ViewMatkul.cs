@@ -20,12 +20,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void ViewMatkul_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter1.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter1.Fill(this.fINDSMARTDataSet7.Dosen);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
-            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+           
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.MataKuliah' table. You can move, or remove it, as needed.
             //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet6.MataKuliah);
             // TODO: This line of code loads data into the 'fINDSMART.MataKuliah' table. You can move, or remove it, as needed.
@@ -229,6 +224,21 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMARTDataSet7.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
+            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
         }
     }
 }

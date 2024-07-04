@@ -52,16 +52,12 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             }
         }
 
-        private void btnTambah_Click(object sender, EventArgs e)
+        private void btnTambahPP_Click(object sender, EventArgs e)
         {
             // Membuat instance dari form InputJepres
             InputPospres inputPospres = new InputPospres();
-
             // Menampilkan form InputJepres
             inputPospres.Show();
-
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
-            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -75,7 +71,6 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void clear()
         {
-            txtIdPosisiPrestasi.Text = "";
             txtNama.Text = "";
             txtDeskripsi.Text = "";
         }
@@ -85,7 +80,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             clear();
         }
 
-        private void btnPerbaharui_Click(object sender, EventArgs e)
+        private void btnUpdatePP_Click(object sender, EventArgs e)
         {
             try
             {
@@ -121,7 +116,17 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
         }
 
-        private void btnHapus_Click(object sender, EventArgs e)
+        private void txtIdPosisiPrestasi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Jika tombol yang ditekan adalah backspace atau delete
+            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete)
+            {
+                e.Handled = true; // Membatalkan aksi penghapusan
+                MessageBox.Show("Id sudah dibuat otomatis", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnHapusPP_Click(object sender, EventArgs e)
         {
             try
             {
@@ -148,16 +153,6 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
             //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
             this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
-        }
-
-        private void txtIdPosisiPrestasi_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Jika tombol yang ditekan adalah backspace atau delete
-            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete)
-            {
-                e.Handled = true; // Membatalkan aksi penghapusan
-                MessageBox.Show("Id sudah dibuat otomatis", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
     }
 }

@@ -20,14 +20,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         private void UpDeletMahasiswa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Mahasiswa' table. You can move, or remove it, as needed.
-            this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
             
-
-            // Set default state of controls
-            SetControlsEnabled(false);
         }
 
         private void SetControlsEnabled(bool enabled)
@@ -239,6 +232,23 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             {
                 MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Mahasiswa' table. You can move, or remove it, as needed.
+            this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
+
+
+            // Set default state of controls
+            SetControlsEnabled(false);
         }
     }
 }

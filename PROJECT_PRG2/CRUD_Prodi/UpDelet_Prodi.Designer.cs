@@ -55,6 +55,7 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnTambah = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnCari = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
@@ -64,12 +65,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(238, 641);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 21);
+            this.label3.Size = new System.Drawing.Size(45, 15);
             this.label3.TabIndex = 194;
             this.label3.Text = "Nama";
             // 
@@ -77,12 +78,12 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(521, 642);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 21);
+            this.label14.Size = new System.Drawing.Size(134, 15);
             this.label14.TabIndex = 188;
             this.label14.Text = "Jenjang Pendidikan";
             // 
@@ -90,12 +91,12 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(805, 642);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(74, 21);
+            this.label15.Size = new System.Drawing.Size(70, 15);
             this.label15.TabIndex = 187;
             this.label15.Text = "Akreditasi";
             // 
@@ -116,7 +117,7 @@
             this.txtAkreditasi.ForeColor = System.Drawing.Color.Black;
             this.txtAkreditasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAkreditasi.Location = new System.Drawing.Point(797, 663);
-            this.txtAkreditasi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtAkreditasi.Margin = new System.Windows.Forms.Padding(5);
             this.txtAkreditasi.Name = "txtAkreditasi";
             this.txtAkreditasi.PasswordChar = '\0';
             this.txtAkreditasi.PlaceholderText = "";
@@ -141,7 +142,7 @@
             this.txtJenjangPendidikan.ForeColor = System.Drawing.Color.Black;
             this.txtJenjangPendidikan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJenjangPendidikan.Location = new System.Drawing.Point(513, 663);
-            this.txtJenjangPendidikan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtJenjangPendidikan.Margin = new System.Windows.Forms.Padding(5);
             this.txtJenjangPendidikan.Name = "txtJenjangPendidikan";
             this.txtJenjangPendidikan.PasswordChar = '\0';
             this.txtJenjangPendidikan.PlaceholderText = "";
@@ -166,7 +167,7 @@
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Location = new System.Drawing.Point(230, 663);
-            this.txtNama.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(5);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
             this.txtNama.PlaceholderText = "";
@@ -191,7 +192,7 @@
             this.txtIdProdi.ForeColor = System.Drawing.Color.Black;
             this.txtIdProdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdProdi.Location = new System.Drawing.Point(584, 146);
-            this.txtIdProdi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtIdProdi.Margin = new System.Windows.Forms.Padding(5);
             this.txtIdProdi.Name = "txtIdProdi";
             this.txtIdProdi.PasswordChar = '\0';
             this.txtIdProdi.PlaceholderText = "";
@@ -231,7 +232,7 @@
             this.dtgProdi.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgProdi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgProdi.Location = new System.Drawing.Point(217, 223);
-            this.dtgProdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgProdi.Margin = new System.Windows.Forms.Padding(2);
             this.dtgProdi.Name = "dtgProdi";
             this.dtgProdi.RowHeadersVisible = false;
             this.dtgProdi.RowHeadersWidth = 51;
@@ -313,11 +314,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(839, 828);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 21);
+            this.label2.Size = new System.Drawing.Size(33, 15);
             this.label2.TabIndex = 213;
             this.label2.Text = "Aksi";
             // 
@@ -334,7 +335,7 @@
             this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Poppins", 9F);
+            this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Location = new System.Drawing.Point(832, 851);
@@ -355,7 +356,7 @@
             this.btnHapus.ImageRotate = 0F;
             this.btnHapus.ImageSize = new System.Drawing.Size(30, 30);
             this.btnHapus.Location = new System.Drawing.Point(944, 858);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(2);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnHapus.Size = new System.Drawing.Size(23, 25);
@@ -373,7 +374,7 @@
             this.btnUpdate.ImageRotate = 0F;
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
             this.btnUpdate.Location = new System.Drawing.Point(887, 854);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnUpdate.Size = new System.Drawing.Size(37, 33);
@@ -391,7 +392,7 @@
             this.btnTambah.ImageRotate = 0F;
             this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
             this.btnTambah.Location = new System.Drawing.Point(840, 854);
-            this.btnTambah.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnTambah.Size = new System.Drawing.Size(27, 32);
@@ -409,13 +410,31 @@
             this.btnCari.ImageRotate = 0F;
             this.btnCari.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCari.Location = new System.Drawing.Point(544, 144);
-            this.btnCari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCari.Margin = new System.Windows.Forms.Padding(2);
             this.btnCari.Name = "btnCari";
             this.btnCari.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnCari.Size = new System.Drawing.Size(32, 32);
             this.btnCari.TabIndex = 208;
             this.btnCari.UseTransparentBackground = true;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            // 
+            // btnBatal
+            // 
+            this.btnBatal.AutoRoundedCorners = true;
+            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
+            this.btnBatal.BorderRadius = 13;
+            this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBatal.ForeColor = System.Drawing.Color.White;
+            this.btnBatal.Location = new System.Drawing.Point(524, 855);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(133, 28);
+            this.btnBatal.TabIndex = 214;
+            this.btnBatal.Text = "Batal";
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // UpDelet_Prodi
             // 
@@ -424,6 +443,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1376, 1033);
+            this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnUpdate);
@@ -440,7 +460,7 @@
             this.Controls.Add(this.txtIdProdi);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UpDelet_Prodi";
             this.Text = "UpDelet_Prodi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -476,5 +496,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnUpdate;
         private Guna.UI2.WinForms.Guna2ImageButton btnTambah;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Button btnBatal;
     }
 }

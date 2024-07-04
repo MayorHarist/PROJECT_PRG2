@@ -81,6 +81,8 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnTambahTendik = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
@@ -794,12 +796,50 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(145, 37);
             this.guna2TextBox1.TabIndex = 169;
             // 
+            // btnBatal
+            // 
+            this.btnBatal.AutoRoundedCorners = true;
+            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
+            this.btnBatal.BorderRadius = 13;
+            this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBatal.ForeColor = System.Drawing.Color.White;
+            this.btnBatal.Location = new System.Drawing.Point(890, 798);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(133, 28);
+            this.btnBatal.TabIndex = 171;
+            this.btnBatal.Text = "Batal";
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoRoundedCorners = true;
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BorderRadius = 13;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(890, 383);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(138, 28);
+            this.btnRefresh.TabIndex = 172;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // UpTendik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1376, 1033);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHapus_);
             this.Controls.Add(this.btnUpdate);
@@ -899,5 +939,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnUpdate;
         private Guna.UI2.WinForms.Guna2ImageButton btnTambahTendik;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Button btnBatal;
+        private Guna.UI2.WinForms.Guna2Button btnRefresh;
     }
 }

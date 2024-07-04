@@ -109,9 +109,6 @@
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.btnTampil = new Guna.UI2.WinForms.Guna2Button();
             this.dgvDsn = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dosenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
-            this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.DosenTableAdapter();
             this.noPegawaiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nIDNDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,6 +119,11 @@
             this.alamatDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teleponDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
+            this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.DosenTableAdapter();
+            this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
@@ -150,11 +152,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(917, 771);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(916, 702);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 19);
+            this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 95;
             this.label2.Text = "Aksi";
             // 
@@ -174,7 +176,7 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(909, 796);
+            this.guna2TextBox1.Location = new System.Drawing.Point(908, 727);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
@@ -191,7 +193,7 @@
             this.btnHapus.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnHapus.ImageRotate = 0F;
             this.btnHapus.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHapus.Location = new System.Drawing.Point(1019, 802);
+            this.btnHapus.Location = new System.Drawing.Point(1018, 733);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(2);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -209,7 +211,7 @@
             this.btnUpdate.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnUpdate.ImageRotate = 0F;
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdate.Location = new System.Drawing.Point(969, 799);
+            this.btnUpdate.Location = new System.Drawing.Point(968, 730);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -227,7 +229,7 @@
             this.btnTambah.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnTambah.ImageRotate = 0F;
             this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTambah.Location = new System.Drawing.Point(923, 798);
+            this.btnTambah.Location = new System.Drawing.Point(922, 729);
             this.btnTambah.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -418,12 +420,12 @@
             this.rbLaki.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
             this.rbLaki.CheckedState.InnerOffset = -4;
             this.rbLaki.Enabled = false;
-            this.rbLaki.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbLaki.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbLaki.ForeColor = System.Drawing.Color.Black;
             this.rbLaki.Location = new System.Drawing.Point(590, 647);
             this.rbLaki.Margin = new System.Windows.Forms.Padding(2);
             this.rbLaki.Name = "rbLaki";
-            this.rbLaki.Size = new System.Drawing.Size(79, 23);
+            this.rbLaki.Size = new System.Drawing.Size(70, 17);
             this.rbLaki.TabIndex = 67;
             this.rbLaki.Text = "Laki - laki";
             this.rbLaki.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -443,12 +445,12 @@
             this.rbPerempuan.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
             this.rbPerempuan.CheckedState.InnerOffset = -4;
             this.rbPerempuan.Enabled = false;
-            this.rbPerempuan.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbPerempuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbPerempuan.ForeColor = System.Drawing.Color.Black;
             this.rbPerempuan.Location = new System.Drawing.Point(703, 647);
             this.rbPerempuan.Margin = new System.Windows.Forms.Padding(2);
             this.rbPerempuan.Name = "rbPerempuan";
-            this.rbPerempuan.Size = new System.Drawing.Size(90, 23);
+            this.rbPerempuan.Size = new System.Drawing.Size(79, 17);
             this.rbPerempuan.TabIndex = 68;
             this.rbPerempuan.Text = "Perempuan";
             this.rbPerempuan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -561,11 +563,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(306, 547);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 19);
+            this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 77;
             this.label1.Text = "No Pegawai";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -574,11 +576,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(905, 615);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 19);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 79;
             this.label3.Text = "Telepon";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -587,11 +589,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(905, 547);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 19);
+            this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 80;
             this.label4.Text = "Email";
             // 
@@ -599,11 +601,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(586, 680);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 19);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 81;
             this.label5.Text = "Alamat";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -612,11 +614,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(586, 626);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 19);
+            this.label6.Size = new System.Drawing.Size(84, 13);
             this.label6.TabIndex = 82;
             this.label6.Text = "Jenis Kelamin";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -625,11 +627,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(586, 551);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 19);
+            this.label7.Size = new System.Drawing.Size(85, 13);
             this.label7.TabIndex = 83;
             this.label7.Text = "Tanggal Lahir";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -638,11 +640,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(307, 793);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 19);
+            this.label8.Size = new System.Drawing.Size(121, 13);
             this.label8.TabIndex = 84;
             this.label8.Text = "Pendidikan Terakhir";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -651,11 +653,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(308, 727);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 19);
+            this.label9.Size = new System.Drawing.Size(115, 13);
             this.label9.TabIndex = 85;
             this.label9.Text = "Bidang Kompetensi";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -664,11 +666,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(308, 665);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 19);
+            this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 86;
             this.label10.Text = "Nama";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -677,11 +679,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(307, 607);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 19);
+            this.label11.Size = new System.Drawing.Size(38, 13);
             this.label11.TabIndex = 87;
             this.label11.Text = "NIDN";
             this.label11.Click += new System.EventHandler(this.label11_Click);
@@ -971,15 +973,13 @@
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDsn.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDsn.AutoGenerateColumns = false;
-            this.dgvDsn.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvDsn.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvDsn.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1012,7 +1012,7 @@
             this.dgvDsn.Name = "dgvDsn";
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle14.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1020,10 +1020,10 @@
             this.dgvDsn.RowHeadersVisible = false;
             this.dgvDsn.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDsn.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvDsn.RowTemplate.Height = 24;
-            this.dgvDsn.Size = new System.Drawing.Size(1181, 387);
+            this.dgvDsn.Size = new System.Drawing.Size(1181, 329);
             this.dgvDsn.TabIndex = 98;
             this.dgvDsn.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
             this.dgvDsn.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
@@ -1048,6 +1048,106 @@
             this.dgvDsn.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
             this.dgvDsn.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // noPegawaiDataGridViewTextBoxColumn1
+            // 
+            this.noPegawaiDataGridViewTextBoxColumn1.DataPropertyName = "No_Pegawai";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noPegawaiDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.noPegawaiDataGridViewTextBoxColumn1.HeaderText = "No Pegawai";
+            this.noPegawaiDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.noPegawaiDataGridViewTextBoxColumn1.Name = "noPegawaiDataGridViewTextBoxColumn1";
+            // 
+            // nIDNDataGridViewTextBoxColumn1
+            // 
+            this.nIDNDataGridViewTextBoxColumn1.DataPropertyName = "NIDN";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nIDNDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.nIDNDataGridViewTextBoxColumn1.HeaderText = "NIDN";
+            this.nIDNDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.nIDNDataGridViewTextBoxColumn1.Name = "nIDNDataGridViewTextBoxColumn1";
+            // 
+            // namaDataGridViewTextBoxColumn1
+            // 
+            this.namaDataGridViewTextBoxColumn1.DataPropertyName = "Nama";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namaDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.namaDataGridViewTextBoxColumn1.HeaderText = "Nama";
+            this.namaDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.namaDataGridViewTextBoxColumn1.Name = "namaDataGridViewTextBoxColumn1";
+            // 
+            // bidangKompetensiDataGridViewTextBoxColumn1
+            // 
+            this.bidangKompetensiDataGridViewTextBoxColumn1.DataPropertyName = "Bidang_Kompetensi";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bidangKompetensiDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.bidangKompetensiDataGridViewTextBoxColumn1.HeaderText = "Bidang Kompetensi";
+            this.bidangKompetensiDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.bidangKompetensiDataGridViewTextBoxColumn1.Name = "bidangKompetensiDataGridViewTextBoxColumn1";
+            // 
+            // pendidikanTerakhirDataGridViewTextBoxColumn1
+            // 
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1.DataPropertyName = "Pendidikan_Terakhir";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1.HeaderText = "Pendidikan Terakhir";
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1.Name = "pendidikanTerakhirDataGridViewTextBoxColumn1";
+            // 
+            // tanggalLahirDataGridViewTextBoxColumn1
+            // 
+            this.tanggalLahirDataGridViewTextBoxColumn1.DataPropertyName = "Tanggal_Lahir";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tanggalLahirDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.tanggalLahirDataGridViewTextBoxColumn1.HeaderText = "Tanggal Lahir";
+            this.tanggalLahirDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.tanggalLahirDataGridViewTextBoxColumn1.Name = "tanggalLahirDataGridViewTextBoxColumn1";
+            // 
+            // jenisKelaminDataGridViewTextBoxColumn1
+            // 
+            this.jenisKelaminDataGridViewTextBoxColumn1.DataPropertyName = "Jenis_Kelamin";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jenisKelaminDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.jenisKelaminDataGridViewTextBoxColumn1.HeaderText = "Jenis Kelamin";
+            this.jenisKelaminDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.jenisKelaminDataGridViewTextBoxColumn1.Name = "jenisKelaminDataGridViewTextBoxColumn1";
+            // 
+            // alamatDataGridViewTextBoxColumn1
+            // 
+            this.alamatDataGridViewTextBoxColumn1.DataPropertyName = "Alamat";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alamatDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.alamatDataGridViewTextBoxColumn1.HeaderText = "Alamat";
+            this.alamatDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.alamatDataGridViewTextBoxColumn1.Name = "alamatDataGridViewTextBoxColumn1";
+            // 
+            // emailDataGridViewTextBoxColumn1
+            // 
+            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle11;
+            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
+            // 
+            // teleponDataGridViewTextBoxColumn1
+            // 
+            this.teleponDataGridViewTextBoxColumn1.DataPropertyName = "Telepon";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teleponDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle12;
+            this.teleponDataGridViewTextBoxColumn1.HeaderText = "Telepon";
+            this.teleponDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.teleponDataGridViewTextBoxColumn1.Name = "teleponDataGridViewTextBoxColumn1";
+            // 
             // dosenBindingSource
             // 
             this.dosenBindingSource.DataMember = "Dosen";
@@ -1062,105 +1162,41 @@
             // 
             this.dosenTableAdapter.ClearBeforeFill = true;
             // 
-            // noPegawaiDataGridViewTextBoxColumn1
+            // btnBatal
             // 
-            this.noPegawaiDataGridViewTextBoxColumn1.DataPropertyName = "No_Pegawai";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noPegawaiDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.noPegawaiDataGridViewTextBoxColumn1.HeaderText = "No Pegawai";
-            this.noPegawaiDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.noPegawaiDataGridViewTextBoxColumn1.Name = "noPegawaiDataGridViewTextBoxColumn1";
+            this.btnBatal.AutoRoundedCorners = true;
+            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
+            this.btnBatal.BorderRadius = 13;
+            this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBatal.ForeColor = System.Drawing.Color.White;
+            this.btnBatal.Location = new System.Drawing.Point(908, 814);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(145, 28);
+            this.btnBatal.TabIndex = 99;
+            this.btnBatal.Text = "Batal";
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
-            // nIDNDataGridViewTextBoxColumn1
+            // btnRefresh
             // 
-            this.nIDNDataGridViewTextBoxColumn1.DataPropertyName = "NIDN";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nIDNDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.nIDNDataGridViewTextBoxColumn1.HeaderText = "NIDN";
-            this.nIDNDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.nIDNDataGridViewTextBoxColumn1.Name = "nIDNDataGridViewTextBoxColumn1";
-            // 
-            // namaDataGridViewTextBoxColumn1
-            // 
-            this.namaDataGridViewTextBoxColumn1.DataPropertyName = "Nama";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.namaDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.namaDataGridViewTextBoxColumn1.HeaderText = "Nama";
-            this.namaDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.namaDataGridViewTextBoxColumn1.Name = "namaDataGridViewTextBoxColumn1";
-            // 
-            // bidangKompetensiDataGridViewTextBoxColumn1
-            // 
-            this.bidangKompetensiDataGridViewTextBoxColumn1.DataPropertyName = "Bidang_Kompetensi";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bidangKompetensiDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.bidangKompetensiDataGridViewTextBoxColumn1.HeaderText = "Bidang Kompetensi";
-            this.bidangKompetensiDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.bidangKompetensiDataGridViewTextBoxColumn1.Name = "bidangKompetensiDataGridViewTextBoxColumn1";
-            // 
-            // pendidikanTerakhirDataGridViewTextBoxColumn1
-            // 
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1.DataPropertyName = "Pendidikan_Terakhir";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1.HeaderText = "Pendidikan Terakhir";
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1.Name = "pendidikanTerakhirDataGridViewTextBoxColumn1";
-            // 
-            // tanggalLahirDataGridViewTextBoxColumn1
-            // 
-            this.tanggalLahirDataGridViewTextBoxColumn1.DataPropertyName = "Tanggal_Lahir";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tanggalLahirDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.tanggalLahirDataGridViewTextBoxColumn1.HeaderText = "Tanggal Lahir";
-            this.tanggalLahirDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.tanggalLahirDataGridViewTextBoxColumn1.Name = "tanggalLahirDataGridViewTextBoxColumn1";
-            // 
-            // jenisKelaminDataGridViewTextBoxColumn1
-            // 
-            this.jenisKelaminDataGridViewTextBoxColumn1.DataPropertyName = "Jenis_Kelamin";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jenisKelaminDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.jenisKelaminDataGridViewTextBoxColumn1.HeaderText = "Jenis Kelamin";
-            this.jenisKelaminDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.jenisKelaminDataGridViewTextBoxColumn1.Name = "jenisKelaminDataGridViewTextBoxColumn1";
-            // 
-            // alamatDataGridViewTextBoxColumn1
-            // 
-            this.alamatDataGridViewTextBoxColumn1.DataPropertyName = "Alamat";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alamatDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle10;
-            this.alamatDataGridViewTextBoxColumn1.HeaderText = "Alamat";
-            this.alamatDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.alamatDataGridViewTextBoxColumn1.Name = "alamatDataGridViewTextBoxColumn1";
-            // 
-            // emailDataGridViewTextBoxColumn1
-            // 
-            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle11;
-            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
-            // 
-            // teleponDataGridViewTextBoxColumn1
-            // 
-            this.teleponDataGridViewTextBoxColumn1.DataPropertyName = "Telepon";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teleponDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle12;
-            this.teleponDataGridViewTextBoxColumn1.HeaderText = "Telepon";
-            this.teleponDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.teleponDataGridViewTextBoxColumn1.Name = "teleponDataGridViewTextBoxColumn1";
+            this.btnRefresh.AutoRoundedCorners = true;
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BorderRadius = 13;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(908, 500);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(145, 28);
+            this.btnRefresh.TabIndex = 132;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // ViewDosen
             // 
@@ -1169,6 +1205,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1376, 1033);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.dgvDsn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHapus);
@@ -1209,7 +1247,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ViewDosen";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "View Dosen";
+            this.Text = resources.GetString("$this.Text");
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ViewDosen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).EndInit();
@@ -1286,5 +1324,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn alamatDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn teleponDataGridViewTextBoxColumn1;
+        private Guna.UI2.WinForms.Guna2Button btnBatal;
+        private Guna.UI2.WinForms.Guna2Button btnRefresh;
     }
 }
