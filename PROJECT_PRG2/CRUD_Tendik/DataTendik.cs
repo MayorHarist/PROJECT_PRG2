@@ -133,6 +133,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
 
                     newID = "TKN" + count.ToString("000");
+
+                    txtIDTendik.Text = newID;
+                    return newID;
                 }
             }
 
@@ -147,10 +150,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         }
 
-        private void btnTampilTendik_Click(object sender, EventArgs e)
-        {
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet6.TenagaKependidikan);
-        }
+        
 
 
         private void btnKembali_Click(object sender, EventArgs e)
@@ -224,5 +224,14 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

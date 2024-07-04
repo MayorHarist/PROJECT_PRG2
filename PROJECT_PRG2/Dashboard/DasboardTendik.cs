@@ -5,6 +5,7 @@ using PROJECT_PRG2.CRUD_MataKuliah;
 using PROJECT_PRG2.CRUD_Pengumuman;
 using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using PROJECT_PRG2.CRUD_Prodi;
+using PROJECT_PRG2.Transaksi;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -233,6 +234,16 @@ namespace PROJECT_PRG2
             updatePengumuman.AutoScroll = true;
             panelMain.Controls.Add(updatePengumuman);
             updatePengumuman.Show();
+        }
+
+        private void btnTrsKRS_Click(object sender, EventArgs e)
+        {
+            trsKRS trsKRS = new trsKRS();
+            // Atur parent form UpDelet_Prodi ke panelMain
+            trsKRS.TopLevel = false;
+            trsKRS.AutoScroll = true;
+            panelMain.Controls.Add(trsKRS);
+            trsKRS.Show();
         }
     }
 }

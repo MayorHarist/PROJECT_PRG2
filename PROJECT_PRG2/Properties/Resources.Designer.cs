@@ -113,6 +113,16 @@ namespace PROJECT_PRG2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dashboard_Mahasiswa {
+            get {
+                object obj = ResourceManager.GetObject("Dashboard Mahasiswa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dashboard_Utama_Smart {
             get {
                 object obj = ResourceManager.GetObject("Dashboard Utama Smart", resourceCulture);
@@ -266,6 +276,26 @@ namespace PROJECT_PRG2.Properties {
         internal static System.Drawing.Bitmap DESIGN_Prodi {
             get {
                 object obj = ResourceManager.GetObject("DESIGN Prodi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_Tendik {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN Tendik", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DESIGN_Tendik1 {
+            get {
+                object obj = ResourceManager.GetObject("DESIGN Tendik1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

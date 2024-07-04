@@ -20,8 +20,14 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void ViewMatkul_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMARTDataSet7.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
+            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.MataKuliah' table. You can move, or remove it, as needed.
-            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet6.MataKuliah);
+            //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet6.MataKuliah);
             // TODO: This line of code loads data into the 'fINDSMART.MataKuliah' table. You can move, or remove it, as needed.
 
 
@@ -46,6 +52,8 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             InputMatkul inputMatkul = new InputMatkul();
             inputMatkul.Show();
+            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -72,6 +80,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
+                    this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
 
                     // Menampilkan pesan jika eksekusi berhasil
                     MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
@@ -90,7 +99,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             try
             {
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connectionString);
 
                 connection.Open();
@@ -103,6 +112,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
                 delete.ExecuteNonQuery();
 
+                this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
 
                 MessageBox.Show("Data berhasil dihapus", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -138,7 +148,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     return;
                 }
 
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();

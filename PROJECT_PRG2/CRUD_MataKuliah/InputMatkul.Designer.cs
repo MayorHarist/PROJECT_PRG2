@@ -44,16 +44,16 @@
             this.txtIdMatkul = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbPegawai = new System.Windows.Forms.ComboBox();
-            this.dosenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMARTDataSet6 = new PROJECT_PRG2.FINDSMARTDataSet6();
             this.cbProdi = new System.Windows.Forms.ComboBox();
-            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.DosenTableAdapter();
-            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter();
             this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
+            this.dosenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.DosenTableAdapter();
+            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -316,7 +316,7 @@
             // cbPegawai
             // 
             this.cbPegawai.DataSource = this.dosenBindingSource;
-            this.cbPegawai.DisplayMember = "No_Pegawai";
+            this.cbPegawai.DisplayMember = "Nama";
             this.cbPegawai.FormattingEnabled = true;
             this.cbPegawai.ItemHeight = 13;
             this.cbPegawai.Location = new System.Drawing.Point(328, 339);
@@ -325,16 +325,6 @@
             this.cbPegawai.Size = new System.Drawing.Size(192, 21);
             this.cbPegawai.TabIndex = 66;
             this.cbPegawai.ValueMember = "No_Pegawai";
-            // 
-            // dosenBindingSource
-            // 
-            this.dosenBindingSource.DataMember = "Dosen";
-            this.dosenBindingSource.DataSource = this.fINDSMARTDataSet6;
-            // 
-            // fINDSMARTDataSet6
-            // 
-            this.fINDSMARTDataSet6.DataSetName = "FINDSMARTDataSet6";
-            this.fINDSMARTDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbProdi
             // 
@@ -348,19 +338,6 @@
             this.cbProdi.Size = new System.Drawing.Size(192, 21);
             this.cbProdi.TabIndex = 67;
             this.cbProdi.ValueMember = "Id_Prodi";
-            // 
-            // programStudiBindingSource
-            // 
-            this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet6;
-            // 
-            // dosenTableAdapter
-            // 
-            this.dosenTableAdapter.ClearBeforeFill = true;
-            // 
-            // programStudiTableAdapter
-            // 
-            this.programStudiTableAdapter.ClearBeforeFill = true;
             // 
             // btnKembali
             // 
@@ -387,6 +364,29 @@
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // fINDSMARTDataSet7
+            // 
+            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
+            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dosenBindingSource
+            // 
+            this.dosenBindingSource.DataMember = "Dosen";
+            this.dosenBindingSource.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // dosenTableAdapter
+            // 
+            this.dosenTableAdapter.ClearBeforeFill = true;
+            // 
+            // programStudiBindingSource
+            // 
+            this.programStudiBindingSource.DataMember = "ProgramStudi";
+            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // programStudiTableAdapter
+            // 
+            this.programStudiTableAdapter.ClearBeforeFill = true;
             // 
             // InputMatkul
             // 
@@ -419,8 +419,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Input Mata Kuliah";
             this.Load += new System.EventHandler(this.InputMatkul_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -445,12 +445,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbPegawai;
         private System.Windows.Forms.ComboBox cbProdi;
-        private FINDSMARTDataSet6 fINDSMARTDataSet6;
-        private System.Windows.Forms.BindingSource dosenBindingSource;
-        private FINDSMARTDataSet6TableAdapters.DosenTableAdapter dosenTableAdapter;
-        private System.Windows.Forms.BindingSource programStudiBindingSource;
-        private FINDSMARTDataSet6TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
         private Guna.UI2.WinForms.Guna2Button btnKembali;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private FINDSMARTDataSet7 fINDSMARTDataSet7;
+        private System.Windows.Forms.BindingSource dosenBindingSource;
+        private FINDSMARTDataSet7TableAdapters.DosenTableAdapter dosenTableAdapter;
+        private System.Windows.Forms.BindingSource programStudiBindingSource;
+        private FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
     }
 }
