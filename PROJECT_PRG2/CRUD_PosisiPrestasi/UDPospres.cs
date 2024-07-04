@@ -154,5 +154,15 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
             this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
         }
+
+        private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

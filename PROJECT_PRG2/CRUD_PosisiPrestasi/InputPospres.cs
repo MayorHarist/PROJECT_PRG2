@@ -104,6 +104,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
                 MessageBox.Show("Data berhasil disimpan", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clear();
+                autoid();
             }
             catch (Exception ex)
             {
