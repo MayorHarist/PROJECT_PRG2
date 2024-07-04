@@ -60,13 +60,13 @@
             this.btnBatalPengumuman.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBatalPengumuman.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBatalPengumuman.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBatalPengumuman.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(255)))));
-            this.btnBatalPengumuman.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatalPengumuman.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBatalPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatalPengumuman.ForeColor = System.Drawing.Color.White;
             this.btnBatalPengumuman.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnBatalPengumuman.ImageOffset = new System.Drawing.Point(20, 20);
             this.btnBatalPengumuman.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnBatalPengumuman.Location = new System.Drawing.Point(343, 548);
+            this.btnBatalPengumuman.Location = new System.Drawing.Point(489, 560);
             this.btnBatalPengumuman.Margin = new System.Windows.Forms.Padding(2);
             this.btnBatalPengumuman.Name = "btnBatalPengumuman";
             this.btnBatalPengumuman.Size = new System.Drawing.Size(112, 36);
@@ -78,12 +78,12 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(234, 256);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 21);
+            this.label10.Size = new System.Drawing.Size(45, 15);
             this.label10.TabIndex = 108;
             this.label10.Text = "Nama";
             // 
@@ -91,12 +91,12 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(234, 292);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 21);
+            this.label7.Size = new System.Drawing.Size(63, 15);
             this.label7.TabIndex = 105;
             this.label7.Text = "Tanggal ";
             // 
@@ -104,12 +104,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(234, 416);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 21);
+            this.label5.Size = new System.Drawing.Size(50, 15);
             this.label5.TabIndex = 103;
             this.label5.Text = "Tendik";
             // 
@@ -117,12 +117,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(234, 341);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 21);
+            this.label4.Size = new System.Drawing.Size(67, 15);
             this.label4.TabIndex = 102;
             this.label4.Text = "Deskripsi";
             // 
@@ -130,12 +130,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(234, 217);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 21);
+            this.label1.Size = new System.Drawing.Size(114, 15);
             this.label1.TabIndex = 99;
             this.label1.Text = "ID Pengumuman";
             // 
@@ -167,7 +167,7 @@
             this.txtDeskripsi.Animated = true;
             this.txtDeskripsi.BackColor = System.Drawing.Color.Transparent;
             this.txtDeskripsi.BorderColor = System.Drawing.Color.Black;
-            this.txtDeskripsi.BorderRadius = 10;
+            this.txtDeskripsi.BorderRadius = 13;
             this.txtDeskripsi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDeskripsi.DefaultText = "";
             this.txtDeskripsi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -213,7 +213,7 @@
             this.txtPengumuman.Animated = true;
             this.txtPengumuman.BackColor = System.Drawing.Color.Transparent;
             this.txtPengumuman.BorderColor = System.Drawing.Color.Black;
-            this.txtPengumuman.BorderRadius = 10;
+            this.txtPengumuman.BorderRadius = 13;
             this.txtPengumuman.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPengumuman.DefaultText = "";
             this.txtPengumuman.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -238,7 +238,7 @@
             this.txtIDPengumuman.Animated = true;
             this.txtIDPengumuman.BackColor = System.Drawing.Color.Transparent;
             this.txtIDPengumuman.BorderColor = System.Drawing.Color.Black;
-            this.txtIDPengumuman.BorderRadius = 10;
+            this.txtIDPengumuman.BorderRadius = 13;
             this.txtIDPengumuman.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIDPengumuman.DefaultText = "";
             this.txtIDPengumuman.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -290,18 +290,18 @@
             this.btnTambahPengumuman.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTambahPengumuman.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTambahPengumuman.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTambahPengumuman.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(255)))));
-            this.btnTambahPengumuman.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTambahPengumuman.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTambahPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTambahPengumuman.ForeColor = System.Drawing.Color.White;
             this.btnTambahPengumuman.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnTambahPengumuman.ImageOffset = new System.Drawing.Point(20, 20);
             this.btnTambahPengumuman.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnTambahPengumuman.Location = new System.Drawing.Point(182, 548);
+            this.btnTambahPengumuman.Location = new System.Drawing.Point(328, 560);
             this.btnTambahPengumuman.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambahPengumuman.Name = "btnTambahPengumuman";
             this.btnTambahPengumuman.Size = new System.Drawing.Size(112, 36);
             this.btnTambahPengumuman.TabIndex = 114;
-            this.btnTambahPengumuman.Text = "Tambah";
+            this.btnTambahPengumuman.Text = "Simpan";
             this.btnTambahPengumuman.Click += new System.EventHandler(this.btnTambahPengumuman_Click);
             // 
             // btnKembali
@@ -313,13 +313,13 @@
             this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKembali.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(255)))));
-            this.btnKembali.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKembali.FillColor = System.Drawing.Color.Navy;
+            this.btnKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKembali.ForeColor = System.Drawing.Color.White;
             this.btnKembali.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnKembali.ImageOffset = new System.Drawing.Point(20, 20);
             this.btnKembali.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnKembali.Location = new System.Drawing.Point(510, 548);
+            this.btnKembali.Location = new System.Drawing.Point(172, 560);
             this.btnKembali.Margin = new System.Windows.Forms.Padding(2);
             this.btnKembali.Name = "btnKembali";
             this.btnKembali.Size = new System.Drawing.Size(112, 36);
