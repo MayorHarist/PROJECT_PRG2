@@ -157,5 +157,10 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
             clear();
         }
+
+        private void dtgProdi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
