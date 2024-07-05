@@ -20,6 +20,12 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void ViewMatkul_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
+            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
 
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.MataKuliah' table. You can move, or remove it, as needed.
             //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet6.MataKuliah);
@@ -67,12 +73,11 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     // Tambahkan parameter untuk stored procedure
                     update.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
                     update.Parameters.AddWithValue("@Nama", txtNama.Text);
-                    update.Parameters.AddWithValue("@Jumlah_SKS", txtSKS.Text);
+                    update.Parameters.AddWithValue("@Jumlah_SKS", Convert.ToInt32(txtSKS.Text));
                     update.Parameters.AddWithValue("@Jenis", txtJenis.Text);
-                    update.Parameters.AddWithValue("@Semester", txtSemester.Text);
-                    update.Parameters.AddWithValue("@Status", txtStatus.Text);
-                    update.Parameters.AddWithValue("@No_Pegawai", cbPegawai.SelectedText);
-                    update.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedText);
+                    update.Parameters.AddWithValue("@Semester", Convert.ToInt32(txtSemester.Text));
+                    update.Parameters.AddWithValue("@No_Pegawai", cbPegawai.SelectedValue.ToString());
+                    update.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedValue.ToString());
 
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
@@ -91,6 +96,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             }
         }
 
+
         private void btnHapus_Click(object sender, EventArgs e)
         {
             try
@@ -104,7 +110,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 delete.CommandType = CommandType.StoredProcedure;
 
                 delete.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
-                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
 
                 delete.ExecuteNonQuery();
 
@@ -163,8 +168,8 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                         txtJenis.Text = dataTable.Rows[0]["Jenis"].ToString();
                         txtSemester.Text = dataTable.Rows[0]["Semester"].ToString();
                         txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
-                        cbPegawai.SelectedText = dataTable.Rows[0]["No_Pegawai"].ToString();
-                        cbProdi.SelectedText = dataTable.Rows[0]["Id_Prodi"].ToString();
+                        cbPegawai.SelectedValue = dataTable.Rows[0]["No_Pegawai"].ToString();
+                        cbProdi.SelectedValue = dataTable.Rows[0]["Id_Prodi"].ToString();
                     }
 
                     txtIdMatkul.Enabled = true;
@@ -188,44 +193,11 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             }
         }
 
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.dosenTableAdapter.FillBy(this.fINDSMARTDataSet1.Dosen);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+        
 
-        }
+        
 
-        private void fillByToolStripButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.programStudiTableAdapter.FillBy(this.fINDSMARTDataSet2.ProgramStudi);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.dosenTableAdapter.FillBy1(this.fINDSMARTDataSet1.Dosen);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
+       
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
@@ -234,11 +206,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter1.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter1.Fill(this.fINDSMARTDataSet7.Dosen);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
             this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
         }
     }

@@ -31,7 +31,7 @@ namespace PROJECT_PRG2
             //Application.Run(new InputMatkul());
             //Application.Run(new UpTendik());
             //Application.Run(new UpdatePengumuman());
-            Application.Run(new trsKRS());
+            Application.Run(new ViewMatkul());
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new View_JenisPrestasi());
             //Application.Run(new UpdateDelete_JenisPrestasi());

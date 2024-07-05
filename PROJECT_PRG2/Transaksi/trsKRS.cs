@@ -18,10 +18,18 @@ namespace PROJECT_PRG2.Transaksi
         {
             InitializeComponent();
             buatkolom();
+            AutoidKRS();
+
+            
         }
+        string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
 
         private void trsKRS_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
+            
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
             this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Mahasiswa' table. You can move, or remove it, as needed.
@@ -66,7 +74,7 @@ namespace PROJECT_PRG2.Transaksi
         {
             
                 // Dapatkan mata kuliah dan semester yang dipilih
-                string matkul = cbMatkul.SelectedItem.ToString();
+                string matkul = cbMatkul.SelectedValue.ToString();
                 string semester = cbSemester.SelectedItem.ToString();
 
                 // Buat baris baru untuk DataGridView
@@ -111,7 +119,7 @@ namespace PROJECT_PRG2.Transaksi
         private void btnSimpan_Click(object sender, EventArgs e)
         {
             // Get the values for the TransaksiKRS table
-            string idTrsKRS = Guid.NewGuid().ToString();
+            string idTrsKRS = txtidTrsKrs.Text;
             int semester = int.Parse(cbSemester.SelectedItem.ToString());
             DateTime tanggalPengisian = DateTime.Now; // use current date and time
             decimal ip = decimal.Parse(txtIP.Text);
@@ -119,10 +127,11 @@ namespace PROJECT_PRG2.Transaksi
             string idTKN = cbTendik.SelectedItem.ToString(); // get selected Id_TKN from combobox
 
             // Call the stored procedure
-            using (SqlConnection connection = new SqlConnection("your_connection_string_here"))
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("InsertTransaksiKRS", connection);
+                SqlCommand command = new SqlCommand("sp_InsertTransaksiKRS", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.AddWithValue("@Id_TrsKRS", idTrsKRS);
@@ -148,7 +157,7 @@ namespace PROJECT_PRG2.Transaksi
                 string idMatkul = row.Cells[0].Value.ToString();
 
                 // Call the sp_InsertDetailMatkul stored procedure
-                using (SqlConnection connection = new SqlConnection("your_connection_string_here"))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     SqlCommand command = new SqlCommand("sp_InsertDetailMatkul", connection);
@@ -168,6 +177,42 @@ namespace PROJECT_PRG2.Transaksi
             }
 
             MessageBox.Show("Data berhasil disimpan!");
+        }
+
+        private void cbProdi_Leave(object sender, EventArgs e)
+        {
+            string IdMahasiswa = cbProdi.SelectedValue.ToString();
+            string semester = cbSemester.SelectedItem.ToString();
+            // Query dan binding untuk cbPajak
+            string query = "SELECT Id_Prodi, Nama FROM Mahasiswa WHERE Id_Prodi=@D";
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            // Menambahkan nilai parameter @D
+            cmd.Parameters.AddWithValue("@D", IdMahasiswa); // ganti nilaiParameterD dengan nilai yang sesuai
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            cbMahasiswa.DisplayMember = "Nama";
+            cbMahasiswa.ValueMember = "Id_Mahasiswa";
+            cbMahasiswa.DataSource = dt;
+
+            // Query dan binding untuk cbPajak
+            string query1 = "SELECT Id_Matkul, Nama FROM MataKuliah WHERE Id_Prodi=@M AND Semester=@S";
+            SqlCommand cmd1 = new SqlCommand(query1, connection);
+
+            // Menambahkan nilai parameter @D
+            cmd1.Parameters.AddWithValue("@M", IdMahasiswa); // ganti nilaiParameterD dengan nilai yang sesuai
+            cmd1.Parameters.AddWithValue("@S", semester);
+            SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
+            DataTable dt1 = new DataTable();
+            adapter1.Fill(dt1);
+
+            cbMatkul.DisplayMember = "Nama";
+            cbMatkul.ValueMember = "Id_Matkul";
+            cbMatkul.DataSource = dt1;
         }
     }
 }
