@@ -119,7 +119,10 @@
             // 
             // btnKembali
             // 
+            this.btnKembali.Animated = true;
+            this.btnKembali.AutoRoundedCorners = true;
             this.btnKembali.BackColor = System.Drawing.Color.Transparent;
+            this.btnKembali.BorderRadius = 32;
             this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -141,7 +144,7 @@
             this.btnMasuk.AutoRoundedCorners = true;
             this.btnMasuk.BackColor = System.Drawing.Color.Transparent;
             this.btnMasuk.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMasuk.BorderRadius = 34;
+            this.btnMasuk.BorderRadius = 32;
             this.btnMasuk.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMasuk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMasuk.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -153,7 +156,7 @@
             this.btnMasuk.Location = new System.Drawing.Point(114, 579);
             this.btnMasuk.Margin = new System.Windows.Forms.Padding(2);
             this.btnMasuk.Name = "btnMasuk";
-            this.btnMasuk.Size = new System.Drawing.Size(515, 71);
+            this.btnMasuk.Size = new System.Drawing.Size(515, 67);
             this.btnMasuk.TabIndex = 13;
             this.btnMasuk.Click += new System.EventHandler(this.btnMasuk_Click);
             // 

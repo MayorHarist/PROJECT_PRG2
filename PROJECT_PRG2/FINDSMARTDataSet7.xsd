@@ -45,8 +45,8 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Status FROM dbo.Dosen</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon, Status FROM dbo.Dosen WHERE Status='Aktif'</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -1223,74 +1223,37 @@ SELECT NIM, Id_Prodi, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DetailMatkul" msprop:Generator_RowEvHandlerName="DetailMatkulRowChangeEventHandler" msprop:Generator_RowDeletedName="DetailMatkulRowDeleted" msprop:Generator_RowDeletingName="DetailMatkulRowDeleting" msprop:Generator_RowEvArgName="DetailMatkulRowChangeEvent" msprop:Generator_TablePropName="DetailMatkul" msprop:Generator_RowChangedName="DetailMatkulRowChanged" msprop:Generator_RowChangingName="DetailMatkulRowChanging" msprop:Generator_TableClassName="DetailMatkulDataTable" msprop:Generator_RowClassName="DetailMatkulRow" msprop:Generator_TableVarName="tableDetailMatkul" msprop:Generator_UserTableName="DetailMatkul">
+        <xs:element name="DetailMatkul" msprop:Generator_RowClassName="DetailMatkulRow" msprop:Generator_RowEvHandlerName="DetailMatkulRowChangeEventHandler" msprop:Generator_RowDeletedName="DetailMatkulRowDeleted" msprop:Generator_RowDeletingName="DetailMatkulRowDeleting" msprop:Generator_RowEvArgName="DetailMatkulRowChangeEvent" msprop:Generator_TablePropName="DetailMatkul" msprop:Generator_RowChangedName="DetailMatkulRowChanged" msprop:Generator_UserTableName="DetailMatkul" msprop:Generator_RowChangingName="DetailMatkulRowChanging" msprop:Generator_TableClassName="DetailMatkulDataTable" msprop:Generator_TableVarName="tableDetailMatkul">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id_DetMatkul" msprop:Generator_ColumnPropNameInRow="Id_DetMatkul" msprop:Generator_ColumnPropNameInTable="Id_DetMatkulColumn" msprop:Generator_ColumnVarNameInTable="columnId_DetMatkul" msprop:Generator_UserColumnName="Id_DetMatkul">
+              <xs:element name="Id_DetMatkul" msprop:Generator_UserColumnName="Id_DetMatkul" msprop:Generator_ColumnPropNameInTable="Id_DetMatkulColumn" msprop:Generator_ColumnPropNameInRow="Id_DetMatkul" msprop:Generator_ColumnVarNameInTable="columnId_DetMatkul">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Nilai_Tugas" msprop:Generator_ColumnPropNameInRow="Nilai_Tugas" msprop:Generator_ColumnPropNameInTable="Nilai_TugasColumn" msprop:Generator_ColumnVarNameInTable="columnNilai_Tugas" msprop:Generator_UserColumnName="Nilai_Tugas" type="xs:decimal" />
-              <xs:element name="Nilai_Quiz" msprop:Generator_ColumnPropNameInRow="Nilai_Quiz" msprop:Generator_ColumnPropNameInTable="Nilai_QuizColumn" msprop:Generator_ColumnVarNameInTable="columnNilai_Quiz" msprop:Generator_UserColumnName="Nilai_Quiz" type="xs:decimal" />
-              <xs:element name="Nilai_UTS" msprop:Generator_ColumnPropNameInRow="Nilai_UTS" msprop:Generator_ColumnPropNameInTable="Nilai_UTSColumn" msprop:Generator_ColumnVarNameInTable="columnNilai_UTS" msprop:Generator_UserColumnName="Nilai_UTS" type="xs:decimal" />
-              <xs:element name="Nilai_UAS" msprop:Generator_ColumnPropNameInRow="Nilai_UAS" msprop:Generator_ColumnPropNameInTable="Nilai_UASColumn" msprop:Generator_ColumnVarNameInTable="columnNilai_UAS" msprop:Generator_UserColumnName="Nilai_UAS" type="xs:decimal" />
-              <xs:element name="Nilai_Projek" msprop:Generator_ColumnPropNameInRow="Nilai_Projek" msprop:Generator_ColumnPropNameInTable="Nilai_ProjekColumn" msprop:Generator_ColumnVarNameInTable="columnNilai_Projek" msprop:Generator_UserColumnName="Nilai_Projek" type="xs:decimal" />
-              <xs:element name="Nilai_Akhir" msprop:Generator_ColumnPropNameInRow="Nilai_Akhir" msprop:Generator_ColumnPropNameInTable="Nilai_AkhirColumn" msprop:Generator_ColumnVarNameInTable="columnNilai_Akhir" msprop:Generator_UserColumnName="Nilai_Akhir" type="xs:decimal" />
-              <xs:element name="Indeks_Nilai" msprop:Generator_ColumnPropNameInRow="Indeks_Nilai" msprop:Generator_ColumnPropNameInTable="Indeks_NilaiColumn" msprop:Generator_ColumnVarNameInTable="columnIndeks_Nilai" msprop:Generator_UserColumnName="Indeks_Nilai">
+              <xs:element name="Nilai_Tugas" msprop:Generator_UserColumnName="Nilai_Tugas" msprop:Generator_ColumnPropNameInTable="Nilai_TugasColumn" msprop:Generator_ColumnPropNameInRow="Nilai_Tugas" msprop:Generator_ColumnVarNameInTable="columnNilai_Tugas" type="xs:decimal" />
+              <xs:element name="Nilai_Quiz" msprop:Generator_UserColumnName="Nilai_Quiz" msprop:Generator_ColumnPropNameInTable="Nilai_QuizColumn" msprop:Generator_ColumnPropNameInRow="Nilai_Quiz" msprop:Generator_ColumnVarNameInTable="columnNilai_Quiz" type="xs:decimal" />
+              <xs:element name="Nilai_UTS" msprop:Generator_UserColumnName="Nilai_UTS" msprop:Generator_ColumnPropNameInTable="Nilai_UTSColumn" msprop:Generator_ColumnPropNameInRow="Nilai_UTS" msprop:Generator_ColumnVarNameInTable="columnNilai_UTS" type="xs:decimal" />
+              <xs:element name="Nilai_UAS" msprop:Generator_UserColumnName="Nilai_UAS" msprop:Generator_ColumnPropNameInTable="Nilai_UASColumn" msprop:Generator_ColumnPropNameInRow="Nilai_UAS" msprop:Generator_ColumnVarNameInTable="columnNilai_UAS" type="xs:decimal" />
+              <xs:element name="Nilai_Projek" msprop:Generator_UserColumnName="Nilai_Projek" msprop:Generator_ColumnPropNameInTable="Nilai_ProjekColumn" msprop:Generator_ColumnPropNameInRow="Nilai_Projek" msprop:Generator_ColumnVarNameInTable="columnNilai_Projek" type="xs:decimal" />
+              <xs:element name="Nilai_Akhir" msprop:Generator_UserColumnName="Nilai_Akhir" msprop:Generator_ColumnPropNameInTable="Nilai_AkhirColumn" msprop:Generator_ColumnPropNameInRow="Nilai_Akhir" msprop:Generator_ColumnVarNameInTable="columnNilai_Akhir" type="xs:decimal" />
+              <xs:element name="Indeks_Nilai" msprop:Generator_UserColumnName="Indeks_Nilai" msprop:Generator_ColumnPropNameInTable="Indeks_NilaiColumn" msprop:Generator_ColumnPropNameInRow="Indeks_Nilai" msprop:Generator_ColumnVarNameInTable="columnIndeks_Nilai">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Id_Matkul" msprop:Generator_ColumnPropNameInRow="Id_Matkul" msprop:Generator_ColumnPropNameInTable="Id_MatkulColumn" msprop:Generator_ColumnVarNameInTable="columnId_Matkul" msprop:Generator_UserColumnName="Id_Matkul">
+              <xs:element name="Id_Matkul" msprop:Generator_UserColumnName="Id_Matkul" msprop:Generator_ColumnPropNameInTable="Id_MatkulColumn" msprop:Generator_ColumnPropNameInRow="Id_Matkul" msprop:Generator_ColumnVarNameInTable="columnId_Matkul">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Id_TrsKRS" msprop:Generator_ColumnPropNameInRow="Id_TrsKRS" msprop:Generator_ColumnPropNameInTable="Id_TrsKRSColumn" msprop:Generator_ColumnVarNameInTable="columnId_TrsKRS" msprop:Generator_UserColumnName="Id_TrsKRS">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="TransaksiKRS" msprop:Generator_RowEvHandlerName="TransaksiKRSRowChangeEventHandler" msprop:Generator_RowDeletedName="TransaksiKRSRowDeleted" msprop:Generator_RowDeletingName="TransaksiKRSRowDeleting" msprop:Generator_RowEvArgName="TransaksiKRSRowChangeEvent" msprop:Generator_TablePropName="TransaksiKRS" msprop:Generator_RowChangedName="TransaksiKRSRowChanged" msprop:Generator_RowChangingName="TransaksiKRSRowChanging" msprop:Generator_TableClassName="TransaksiKRSDataTable" msprop:Generator_RowClassName="TransaksiKRSRow" msprop:Generator_TableVarName="tableTransaksiKRS" msprop:Generator_UserTableName="TransaksiKRS">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Id_TrsKRS" msprop:Generator_ColumnPropNameInRow="Id_TrsKRS" msprop:Generator_ColumnPropNameInTable="Id_TrsKRSColumn" msprop:Generator_ColumnVarNameInTable="columnId_TrsKRS" msprop:Generator_UserColumnName="Id_TrsKRS">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Semester" msprop:Generator_ColumnPropNameInRow="Semester" msprop:Generator_ColumnPropNameInTable="SemesterColumn" msprop:Generator_ColumnVarNameInTable="columnSemester" msprop:Generator_UserColumnName="Semester" type="xs:int" />
-              <xs:element name="Tanggal_Pengisian" msprop:Generator_ColumnPropNameInRow="Tanggal_Pengisian" msprop:Generator_ColumnPropNameInTable="Tanggal_PengisianColumn" msprop:Generator_ColumnVarNameInTable="columnTanggal_Pengisian" msprop:Generator_UserColumnName="Tanggal_Pengisian" type="xs:dateTime" />
-              <xs:element name="IP" msprop:Generator_ColumnPropNameInRow="IP" msprop:Generator_ColumnPropNameInTable="IPColumn" msprop:Generator_ColumnVarNameInTable="columnIP" msprop:Generator_UserColumnName="IP" type="xs:decimal" />
-              <xs:element name="Id_Prodi" msprop:Generator_ColumnPropNameInRow="Id_Prodi" msprop:Generator_ColumnPropNameInTable="Id_ProdiColumn" msprop:Generator_ColumnVarNameInTable="columnId_Prodi" msprop:Generator_UserColumnName="Id_Prodi">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="NIM" msprop:Generator_ColumnPropNameInRow="NIM" msprop:Generator_ColumnPropNameInTable="NIMColumn" msprop:Generator_ColumnVarNameInTable="columnNIM" msprop:Generator_UserColumnName="NIM">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Id_TKN" msprop:Generator_ColumnPropNameInRow="Id_TKN" msprop:Generator_ColumnPropNameInTable="Id_TKNColumn" msprop:Generator_ColumnVarNameInTable="columnId_TKN" msprop:Generator_UserColumnName="Id_TKN">
+              <xs:element name="Id_TrsKRS" msprop:Generator_UserColumnName="Id_TrsKRS" msprop:Generator_ColumnPropNameInTable="Id_TrsKRSColumn" msprop:Generator_ColumnPropNameInRow="Id_TrsKRS" msprop:Generator_ColumnVarNameInTable="columnId_TrsKRS">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
@@ -1300,76 +1263,113 @@ SELECT NIM, Id_Prodi, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TransaksiPengajuanKRPP" msprop:Generator_RowEvHandlerName="TransaksiPengajuanKRPPRowChangeEventHandler" msprop:Generator_RowDeletedName="TransaksiPengajuanKRPPRowDeleted" msprop:Generator_RowDeletingName="TransaksiPengajuanKRPPRowDeleting" msprop:Generator_RowEvArgName="TransaksiPengajuanKRPPRowChangeEvent" msprop:Generator_TablePropName="TransaksiPengajuanKRPP" msprop:Generator_RowChangedName="TransaksiPengajuanKRPPRowChanged" msprop:Generator_RowChangingName="TransaksiPengajuanKRPPRowChanging" msprop:Generator_TableClassName="TransaksiPengajuanKRPPDataTable" msprop:Generator_RowClassName="TransaksiPengajuanKRPPRow" msprop:Generator_TableVarName="tableTransaksiPengajuanKRPP" msprop:Generator_UserTableName="TransaksiPengajuanKRPP">
+        <xs:element name="TransaksiKRS" msprop:Generator_RowClassName="TransaksiKRSRow" msprop:Generator_RowEvHandlerName="TransaksiKRSRowChangeEventHandler" msprop:Generator_RowDeletedName="TransaksiKRSRowDeleted" msprop:Generator_RowDeletingName="TransaksiKRSRowDeleting" msprop:Generator_RowEvArgName="TransaksiKRSRowChangeEvent" msprop:Generator_TablePropName="TransaksiKRS" msprop:Generator_RowChangedName="TransaksiKRSRowChanged" msprop:Generator_UserTableName="TransaksiKRS" msprop:Generator_RowChangingName="TransaksiKRSRowChanging" msprop:Generator_TableClassName="TransaksiKRSDataTable" msprop:Generator_TableVarName="tableTransaksiKRS">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id_TransKRPP" msprop:Generator_ColumnPropNameInRow="Id_TransKRPP" msprop:Generator_ColumnPropNameInTable="Id_TransKRPPColumn" msprop:Generator_ColumnVarNameInTable="columnId_TransKRPP" msprop:Generator_UserColumnName="Id_TransKRPP">
+              <xs:element name="Id_TrsKRS" msprop:Generator_UserColumnName="Id_TrsKRS" msprop:Generator_ColumnPropNameInTable="Id_TrsKRSColumn" msprop:Generator_ColumnPropNameInRow="Id_TrsKRS" msprop:Generator_ColumnVarNameInTable="columnId_TrsKRS">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Nama_Prestasi" msprop:Generator_ColumnPropNameInRow="Nama_Prestasi" msprop:Generator_ColumnPropNameInTable="Nama_PrestasiColumn" msprop:Generator_ColumnVarNameInTable="columnNama_Prestasi" msprop:Generator_UserColumnName="Nama_Prestasi">
+              <xs:element name="Semester" msprop:Generator_UserColumnName="Semester" msprop:Generator_ColumnPropNameInTable="SemesterColumn" msprop:Generator_ColumnPropNameInRow="Semester" msprop:Generator_ColumnVarNameInTable="columnSemester" type="xs:int" />
+              <xs:element name="Tanggal_Pengisian" msprop:Generator_UserColumnName="Tanggal_Pengisian" msprop:Generator_ColumnPropNameInTable="Tanggal_PengisianColumn" msprop:Generator_ColumnPropNameInRow="Tanggal_Pengisian" msprop:Generator_ColumnVarNameInTable="columnTanggal_Pengisian" type="xs:dateTime" />
+              <xs:element name="IP" msprop:Generator_UserColumnName="IP" msprop:Generator_ColumnPropNameInTable="IPColumn" msprop:Generator_ColumnPropNameInRow="IP" msprop:Generator_ColumnVarNameInTable="columnIP" type="xs:decimal" />
+              <xs:element name="Id_Prodi" msprop:Generator_UserColumnName="Id_Prodi" msprop:Generator_ColumnPropNameInTable="Id_ProdiColumn" msprop:Generator_ColumnPropNameInRow="Id_Prodi" msprop:Generator_ColumnVarNameInTable="columnId_Prodi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NIM" msprop:Generator_UserColumnName="NIM" msprop:Generator_ColumnPropNameInTable="NIMColumn" msprop:Generator_ColumnPropNameInRow="NIM" msprop:Generator_ColumnVarNameInTable="columnNIM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id_TKN" msprop:Generator_UserColumnName="Id_TKN" msprop:Generator_ColumnPropNameInTable="Id_TKNColumn" msprop:Generator_ColumnPropNameInRow="Id_TKN" msprop:Generator_ColumnVarNameInTable="columnId_TKN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TransaksiPengajuanKRPP" msprop:Generator_RowClassName="TransaksiPengajuanKRPPRow" msprop:Generator_RowEvHandlerName="TransaksiPengajuanKRPPRowChangeEventHandler" msprop:Generator_RowDeletedName="TransaksiPengajuanKRPPRowDeleted" msprop:Generator_RowDeletingName="TransaksiPengajuanKRPPRowDeleting" msprop:Generator_RowEvArgName="TransaksiPengajuanKRPPRowChangeEvent" msprop:Generator_TablePropName="TransaksiPengajuanKRPP" msprop:Generator_RowChangedName="TransaksiPengajuanKRPPRowChanged" msprop:Generator_UserTableName="TransaksiPengajuanKRPP" msprop:Generator_RowChangingName="TransaksiPengajuanKRPPRowChanging" msprop:Generator_TableClassName="TransaksiPengajuanKRPPDataTable" msprop:Generator_TableVarName="tableTransaksiPengajuanKRPP">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_TransKRPP" msprop:Generator_UserColumnName="Id_TransKRPP" msprop:Generator_ColumnPropNameInTable="Id_TransKRPPColumn" msprop:Generator_ColumnPropNameInRow="Id_TransKRPP" msprop:Generator_ColumnVarNameInTable="columnId_TransKRPP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nama_Prestasi" msprop:Generator_UserColumnName="Nama_Prestasi" msprop:Generator_ColumnPropNameInTable="Nama_PrestasiColumn" msprop:Generator_ColumnPropNameInRow="Nama_Prestasi" msprop:Generator_ColumnVarNameInTable="columnNama_Prestasi">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Uraian_Singkat" msprop:Generator_ColumnPropNameInRow="Uraian_Singkat" msprop:Generator_ColumnPropNameInTable="Uraian_SingkatColumn" msprop:Generator_ColumnVarNameInTable="columnUraian_Singkat" msprop:Generator_UserColumnName="Uraian_Singkat">
+              <xs:element name="Uraian_Singkat" msprop:Generator_UserColumnName="Uraian_Singkat" msprop:Generator_ColumnPropNameInTable="Uraian_SingkatColumn" msprop:Generator_ColumnPropNameInRow="Uraian_Singkat" msprop:Generator_ColumnVarNameInTable="columnUraian_Singkat">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Lembaga_Pelaksana" msprop:Generator_ColumnPropNameInRow="Lembaga_Pelaksana" msprop:Generator_ColumnPropNameInTable="Lembaga_PelaksanaColumn" msprop:Generator_ColumnVarNameInTable="columnLembaga_Pelaksana" msprop:Generator_UserColumnName="Lembaga_Pelaksana">
+              <xs:element name="Lembaga_Pelaksana" msprop:Generator_UserColumnName="Lembaga_Pelaksana" msprop:Generator_ColumnPropNameInTable="Lembaga_PelaksanaColumn" msprop:Generator_ColumnPropNameInRow="Lembaga_Pelaksana" msprop:Generator_ColumnVarNameInTable="columnLembaga_Pelaksana">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Tanggal_Prestasi" msprop:Generator_ColumnPropNameInRow="Tanggal_Prestasi" msprop:Generator_ColumnPropNameInTable="Tanggal_PrestasiColumn" msprop:Generator_ColumnVarNameInTable="columnTanggal_Prestasi" msprop:Generator_UserColumnName="Tanggal_Prestasi" type="xs:dateTime" />
-              <xs:element name="Tanggal_Pengajuan" msprop:Generator_ColumnPropNameInRow="Tanggal_Pengajuan" msprop:Generator_ColumnPropNameInTable="Tanggal_PengajuanColumn" msprop:Generator_ColumnVarNameInTable="columnTanggal_Pengajuan" msprop:Generator_UserColumnName="Tanggal_Pengajuan" type="xs:dateTime" />
-              <xs:element name="Tanggal_Persetujuan" msprop:Generator_ColumnPropNameInRow="Tanggal_Persetujuan" msprop:Generator_ColumnPropNameInTable="Tanggal_PersetujuanColumn" msprop:Generator_ColumnVarNameInTable="columnTanggal_Persetujuan" msprop:Generator_UserColumnName="Tanggal_Persetujuan" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Catatan" msprop:Generator_ColumnPropNameInRow="Catatan" msprop:Generator_ColumnPropNameInTable="CatatanColumn" msprop:Generator_ColumnVarNameInTable="columnCatatan" msprop:Generator_UserColumnName="Catatan">
+              <xs:element name="Tanggal_Prestasi" msprop:Generator_UserColumnName="Tanggal_Prestasi" msprop:Generator_ColumnPropNameInTable="Tanggal_PrestasiColumn" msprop:Generator_ColumnPropNameInRow="Tanggal_Prestasi" msprop:Generator_ColumnVarNameInTable="columnTanggal_Prestasi" type="xs:dateTime" />
+              <xs:element name="Tanggal_Pengajuan" msprop:Generator_UserColumnName="Tanggal_Pengajuan" msprop:Generator_ColumnPropNameInTable="Tanggal_PengajuanColumn" msprop:Generator_ColumnPropNameInRow="Tanggal_Pengajuan" msprop:Generator_ColumnVarNameInTable="columnTanggal_Pengajuan" type="xs:dateTime" />
+              <xs:element name="Tanggal_Persetujuan" msprop:Generator_UserColumnName="Tanggal_Persetujuan" msprop:Generator_ColumnPropNameInTable="Tanggal_PersetujuanColumn" msprop:Generator_ColumnPropNameInRow="Tanggal_Persetujuan" msprop:Generator_ColumnVarNameInTable="columnTanggal_Persetujuan" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Catatan" msprop:Generator_UserColumnName="Catatan" msprop:Generator_ColumnPropNameInTable="CatatanColumn" msprop:Generator_ColumnPropNameInRow="Catatan" msprop:Generator_ColumnVarNameInTable="columnCatatan">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_UserColumnName="Status">
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NIM" msprop:Generator_ColumnPropNameInRow="NIM" msprop:Generator_ColumnPropNameInTable="NIMColumn" msprop:Generator_ColumnVarNameInTable="columnNIM" msprop:Generator_UserColumnName="NIM">
+              <xs:element name="NIM" msprop:Generator_UserColumnName="NIM" msprop:Generator_ColumnPropNameInTable="NIMColumn" msprop:Generator_ColumnPropNameInRow="NIM" msprop:Generator_ColumnVarNameInTable="columnNIM">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Id_TKN" msprop:Generator_ColumnPropNameInRow="Id_TKN" msprop:Generator_ColumnPropNameInTable="Id_TKNColumn" msprop:Generator_ColumnVarNameInTable="columnId_TKN" msprop:Generator_UserColumnName="Id_TKN">
+              <xs:element name="Id_TKN" msprop:Generator_UserColumnName="Id_TKN" msprop:Generator_ColumnPropNameInTable="Id_TKNColumn" msprop:Generator_ColumnPropNameInRow="Id_TKN" msprop:Generator_ColumnVarNameInTable="columnId_TKN">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Id_JenisPrestasi" msprop:Generator_ColumnPropNameInRow="Id_JenisPrestasi" msprop:Generator_ColumnPropNameInTable="Id_JenisPrestasiColumn" msprop:Generator_ColumnVarNameInTable="columnId_JenisPrestasi" msprop:Generator_UserColumnName="Id_JenisPrestasi">
+              <xs:element name="Id_JenisPrestasi" msprop:Generator_UserColumnName="Id_JenisPrestasi" msprop:Generator_ColumnPropNameInTable="Id_JenisPrestasiColumn" msprop:Generator_ColumnPropNameInRow="Id_JenisPrestasi" msprop:Generator_ColumnVarNameInTable="columnId_JenisPrestasi">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Id_PosisiPrestasi" msprop:Generator_ColumnPropNameInRow="Id_PosisiPrestasi" msprop:Generator_ColumnPropNameInTable="Id_PosisiPrestasiColumn" msprop:Generator_ColumnVarNameInTable="columnId_PosisiPrestasi" msprop:Generator_UserColumnName="Id_PosisiPrestasi">
+              <xs:element name="Id_PosisiPrestasi" msprop:Generator_UserColumnName="Id_PosisiPrestasi" msprop:Generator_ColumnPropNameInTable="Id_PosisiPrestasiColumn" msprop:Generator_ColumnPropNameInRow="Id_PosisiPrestasi" msprop:Generator_ColumnVarNameInTable="columnId_PosisiPrestasi">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
@@ -1379,83 +1379,83 @@ SELECT NIM, Id_Prodi, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Mahasiswa" msprop:Generator_RowEvHandlerName="MahasiswaRowChangeEventHandler" msprop:Generator_RowDeletedName="MahasiswaRowDeleted" msprop:Generator_RowDeletingName="MahasiswaRowDeleting" msprop:Generator_RowEvArgName="MahasiswaRowChangeEvent" msprop:Generator_TablePropName="Mahasiswa" msprop:Generator_RowChangedName="MahasiswaRowChanged" msprop:Generator_RowChangingName="MahasiswaRowChanging" msprop:Generator_TableClassName="MahasiswaDataTable" msprop:Generator_RowClassName="MahasiswaRow" msprop:Generator_TableVarName="tableMahasiswa" msprop:Generator_UserTableName="Mahasiswa">
+        <xs:element name="Mahasiswa" msprop:Generator_RowClassName="MahasiswaRow" msprop:Generator_RowEvHandlerName="MahasiswaRowChangeEventHandler" msprop:Generator_RowDeletedName="MahasiswaRowDeleted" msprop:Generator_RowDeletingName="MahasiswaRowDeleting" msprop:Generator_RowEvArgName="MahasiswaRowChangeEvent" msprop:Generator_TablePropName="Mahasiswa" msprop:Generator_RowChangedName="MahasiswaRowChanged" msprop:Generator_UserTableName="Mahasiswa" msprop:Generator_RowChangingName="MahasiswaRowChanging" msprop:Generator_TableClassName="MahasiswaDataTable" msprop:Generator_TableVarName="tableMahasiswa">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="NIM" msprop:Generator_ColumnPropNameInRow="NIM" msprop:Generator_ColumnPropNameInTable="NIMColumn" msprop:Generator_ColumnVarNameInTable="columnNIM" msprop:Generator_UserColumnName="NIM">
+              <xs:element name="NIM" msprop:Generator_UserColumnName="NIM" msprop:Generator_ColumnPropNameInTable="NIMColumn" msprop:Generator_ColumnPropNameInRow="NIM" msprop:Generator_ColumnVarNameInTable="columnNIM">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Id_Prodi" msprop:Generator_ColumnPropNameInRow="Id_Prodi" msprop:Generator_ColumnPropNameInTable="Id_ProdiColumn" msprop:Generator_ColumnVarNameInTable="columnId_Prodi" msprop:Generator_UserColumnName="Id_Prodi">
+              <xs:element name="Id_Prodi" msprop:Generator_UserColumnName="Id_Prodi" msprop:Generator_ColumnPropNameInTable="Id_ProdiColumn" msprop:Generator_ColumnPropNameInRow="Id_Prodi" msprop:Generator_ColumnVarNameInTable="columnId_Prodi">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Nama" msprop:Generator_ColumnPropNameInRow="Nama" msprop:Generator_ColumnPropNameInTable="NamaColumn" msprop:Generator_ColumnVarNameInTable="columnNama" msprop:Generator_UserColumnName="Nama">
+              <xs:element name="Nama" msprop:Generator_UserColumnName="Nama" msprop:Generator_ColumnPropNameInTable="NamaColumn" msprop:Generator_ColumnPropNameInRow="Nama" msprop:Generator_ColumnVarNameInTable="columnNama">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Tanggal_Lahir" msprop:Generator_ColumnPropNameInRow="Tanggal_Lahir" msprop:Generator_ColumnPropNameInTable="Tanggal_LahirColumn" msprop:Generator_ColumnVarNameInTable="columnTanggal_Lahir" msprop:Generator_UserColumnName="Tanggal_Lahir" type="xs:dateTime" />
-              <xs:element name="Jenis_Kelamin" msprop:Generator_ColumnPropNameInRow="Jenis_Kelamin" msprop:Generator_ColumnPropNameInTable="Jenis_KelaminColumn" msprop:Generator_ColumnVarNameInTable="columnJenis_Kelamin" msprop:Generator_UserColumnName="Jenis_Kelamin">
+              <xs:element name="Tanggal_Lahir" msprop:Generator_UserColumnName="Tanggal_Lahir" msprop:Generator_ColumnPropNameInTable="Tanggal_LahirColumn" msprop:Generator_ColumnPropNameInRow="Tanggal_Lahir" msprop:Generator_ColumnVarNameInTable="columnTanggal_Lahir" type="xs:dateTime" />
+              <xs:element name="Jenis_Kelamin" msprop:Generator_UserColumnName="Jenis_Kelamin" msprop:Generator_ColumnPropNameInTable="Jenis_KelaminColumn" msprop:Generator_ColumnPropNameInRow="Jenis_Kelamin" msprop:Generator_ColumnVarNameInTable="columnJenis_Kelamin">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Alamat" msprop:Generator_ColumnPropNameInRow="Alamat" msprop:Generator_ColumnPropNameInTable="AlamatColumn" msprop:Generator_ColumnVarNameInTable="columnAlamat" msprop:Generator_UserColumnName="Alamat">
+              <xs:element name="Alamat" msprop:Generator_UserColumnName="Alamat" msprop:Generator_ColumnPropNameInTable="AlamatColumn" msprop:Generator_ColumnPropNameInRow="Alamat" msprop:Generator_ColumnVarNameInTable="columnAlamat">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Email" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_UserColumnName="Email">
+              <xs:element name="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnVarNameInTable="columnEmail">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Telepon" msprop:Generator_ColumnPropNameInRow="Telepon" msprop:Generator_ColumnPropNameInTable="TeleponColumn" msprop:Generator_ColumnVarNameInTable="columnTelepon" msprop:Generator_UserColumnName="Telepon">
+              <xs:element name="Telepon" msprop:Generator_UserColumnName="Telepon" msprop:Generator_ColumnPropNameInTable="TeleponColumn" msprop:Generator_ColumnPropNameInRow="Telepon" msprop:Generator_ColumnVarNameInTable="columnTelepon">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Tahun_Masuk" msprop:Generator_ColumnPropNameInRow="Tahun_Masuk" msprop:Generator_ColumnPropNameInTable="Tahun_MasukColumn" msprop:Generator_ColumnVarNameInTable="columnTahun_Masuk" msprop:Generator_UserColumnName="Tahun_Masuk" type="xs:int" />
-              <xs:element name="Username" msprop:Generator_ColumnPropNameInRow="Username" msprop:Generator_ColumnPropNameInTable="UsernameColumn" msprop:Generator_ColumnVarNameInTable="columnUsername" msprop:Generator_UserColumnName="Username">
+              <xs:element name="Tahun_Masuk" msprop:Generator_UserColumnName="Tahun_Masuk" msprop:Generator_ColumnPropNameInTable="Tahun_MasukColumn" msprop:Generator_ColumnPropNameInRow="Tahun_Masuk" msprop:Generator_ColumnVarNameInTable="columnTahun_Masuk" type="xs:int" />
+              <xs:element name="Username" msprop:Generator_UserColumnName="Username" msprop:Generator_ColumnPropNameInTable="UsernameColumn" msprop:Generator_ColumnPropNameInRow="Username" msprop:Generator_ColumnVarNameInTable="columnUsername">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Password" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_UserColumnName="Password">
+              <xs:element name="Password" msprop:Generator_UserColumnName="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnVarNameInTable="columnPassword">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_UserColumnName="Status">
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Total_Point_KRPP" msprop:Generator_ColumnPropNameInRow="Total_Point_KRPP" msprop:Generator_ColumnPropNameInTable="Total_Point_KRPPColumn" msprop:Generator_ColumnVarNameInTable="columnTotal_Point_KRPP" msprop:Generator_UserColumnName="Total_Point_KRPP" type="xs:int" minOccurs="0" />
-              <xs:element name="IPK" msprop:Generator_ColumnPropNameInRow="IPK" msprop:Generator_ColumnPropNameInTable="IPKColumn" msprop:Generator_ColumnVarNameInTable="columnIPK" msprop:Generator_UserColumnName="IPK" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total_Point_KRPP" msprop:Generator_UserColumnName="Total_Point_KRPP" msprop:Generator_ColumnPropNameInTable="Total_Point_KRPPColumn" msprop:Generator_ColumnPropNameInRow="Total_Point_KRPP" msprop:Generator_ColumnVarNameInTable="columnTotal_Point_KRPP" type="xs:int" minOccurs="0" />
+              <xs:element name="IPK" msprop:Generator_UserColumnName="IPK" msprop:Generator_ColumnPropNameInTable="IPKColumn" msprop:Generator_ColumnPropNameInRow="IPK" msprop:Generator_ColumnVarNameInTable="columnIPK" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1508,19 +1508,19 @@ SELECT NIM, Id_Prodi, Nama, Tanggal_Lahir, Jenis_Kelamin, Alamat, Email, Telepon
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__MataKulia__Id_Pr__17036CC0" msdata:parent="ProgramStudi" msdata:child="MataKuliah" msdata:parentkey="Id_Prodi" msdata:childkey="Id_Prodi" msprop:Generator_UserParentTable="ProgramStudi" msprop:Generator_UserChildTable="MataKuliah" msprop:Generator_RelationVarName="relationFK__MataKulia__Id_Pr__17036CC0" msprop:Generator_ChildPropName="GetMataKuliahRows" msprop:Generator_ParentPropName="ProgramStudiRow" msprop:Generator_UserRelationName="FK__MataKulia__Id_Pr__17036CC0" />
-      <msdata:Relationship name="FK__MataKulia__No_Pe__160F4887" msdata:parent="Dosen" msdata:child="MataKuliah" msdata:parentkey="No_Pegawai" msdata:childkey="No_Pegawai" msprop:Generator_UserParentTable="Dosen" msprop:Generator_UserChildTable="MataKuliah" msprop:Generator_RelationVarName="relationFK__MataKulia__No_Pe__160F4887" msprop:Generator_ChildPropName="GetMataKuliahRows" msprop:Generator_UserRelationName="FK__MataKulia__No_Pe__160F4887" msprop:Generator_ParentPropName="DosenRow" />
-      <msdata:Relationship name="FK__Pengumuma__Id_TK__1EA48E88" msdata:parent="TenagaKependidikan" msdata:child="Pengumuman" msdata:parentkey="Id_TKN" msdata:childkey="Id_TKN" msprop:Generator_UserParentTable="TenagaKependidikan" msprop:Generator_UserChildTable="Pengumuman" msprop:Generator_RelationVarName="relationFK__Pengumuma__Id_TK__1EA48E88" msprop:Generator_ChildPropName="GetPengumumanRows" msprop:Generator_ParentPropName="TenagaKependidikanRow" msprop:Generator_UserRelationName="FK__Pengumuma__Id_TK__1EA48E88" />
-      <msdata:Relationship name="FK__DetailMat__Id_Ma__1209AD79" msdata:parent="MataKuliah" msdata:child="DetailMatkul" msdata:parentkey="Id_Matkul" msdata:childkey="Id_Matkul" msprop:Generator_UserParentTable="MataKuliah" msprop:Generator_UserChildTable="DetailMatkul" msprop:Generator_RelationVarName="relationFK__DetailMat__Id_Ma__1209AD79" msprop:Generator_ChildPropName="GetDetailMatkulRows" msprop:Generator_ParentPropName="MataKuliahRow" msprop:Generator_UserRelationName="FK__DetailMat__Id_Ma__1209AD79" />
-      <msdata:Relationship name="FK__DetailMat__Id_Tr__12FDD1B2" msdata:parent="TransaksiKRS" msdata:child="DetailMatkul" msdata:parentkey="Id_TrsKRS" msdata:childkey="Id_TrsKRS" msprop:Generator_UserParentTable="TransaksiKRS" msprop:Generator_UserChildTable="DetailMatkul" msprop:Generator_RelationVarName="relationFK__DetailMat__Id_Tr__12FDD1B2" msprop:Generator_UserRelationName="FK__DetailMat__Id_Tr__12FDD1B2" msprop:Generator_ChildPropName="GetDetailMatkulRows" msprop:Generator_ParentPropName="TransaksiKRSRow" />
-      <msdata:Relationship name="FK__Transaksi__Id_Pr__0C50D423" msdata:parent="ProgramStudi" msdata:child="TransaksiKRS" msdata:parentkey="Id_Prodi" msdata:childkey="Id_Prodi" msprop:Generator_UserParentTable="ProgramStudi" msprop:Generator_UserChildTable="TransaksiKRS" msprop:Generator_RelationVarName="relationFK__Transaksi__Id_Pr__0C50D423" msprop:Generator_ChildPropName="GetTransaksiKRSRows" msprop:Generator_ParentPropName="ProgramStudiRow" msprop:Generator_UserRelationName="FK__Transaksi__Id_Pr__0C50D423" />
-      <msdata:Relationship name="FK__Transaksi__Id_TK__0E391C95" msdata:parent="TenagaKependidikan" msdata:child="TransaksiKRS" msdata:parentkey="Id_TKN" msdata:childkey="Id_TKN" msprop:Generator_UserParentTable="TenagaKependidikan" msprop:Generator_UserChildTable="TransaksiKRS" msprop:Generator_RelationVarName="relationFK__Transaksi__Id_TK__0E391C95" msprop:Generator_ChildPropName="GetTransaksiKRSRows" msprop:Generator_ParentPropName="TenagaKependidikanRow" msprop:Generator_UserRelationName="FK__Transaksi__Id_TK__0E391C95" />
-      <msdata:Relationship name="FK__Transaksi__Id_Je__662B2B3B" msdata:parent="JenisPrestasi" msdata:child="TransaksiPengajuanKRPP" msdata:parentkey="Id_JenisPrestasi" msdata:childkey="Id_JenisPrestasi" msprop:Generator_UserParentTable="JenisPrestasi" msprop:Generator_UserChildTable="TransaksiPengajuanKRPP" msprop:Generator_RelationVarName="relationFK__Transaksi__Id_Je__662B2B3B" msprop:Generator_ChildPropName="GetTransaksiPengajuanKRPPRows" msprop:Generator_ParentPropName="JenisPrestasiRow" msprop:Generator_UserRelationName="FK__Transaksi__Id_Je__662B2B3B" />
-      <msdata:Relationship name="FK__Transaksi__Id_Po__671F4F74" msdata:parent="PosisiPrestasi" msdata:child="TransaksiPengajuanKRPP" msdata:parentkey="Id_PosisiPrestasi" msdata:childkey="Id_PosisiPrestasi" msprop:Generator_UserParentTable="PosisiPrestasi" msprop:Generator_UserChildTable="TransaksiPengajuanKRPP" msprop:Generator_RelationVarName="relationFK__Transaksi__Id_Po__671F4F74" msprop:Generator_ChildPropName="GetTransaksiPengajuanKRPPRows" msprop:Generator_ParentPropName="PosisiPrestasiRow" msprop:Generator_UserRelationName="FK__Transaksi__Id_Po__671F4F74" />
-      <msdata:Relationship name="FK__Transaksi__Id_TK__6442E2C9" msdata:parent="TenagaKependidikan" msdata:child="TransaksiPengajuanKRPP" msdata:parentkey="Id_TKN" msdata:childkey="Id_TKN" msprop:Generator_UserParentTable="TenagaKependidikan" msprop:Generator_UserChildTable="TransaksiPengajuanKRPP" msprop:Generator_RelationVarName="relationFK__Transaksi__Id_TK__6442E2C9" msprop:Generator_ChildPropName="GetTransaksiPengajuanKRPPRows" msprop:Generator_ParentPropName="TenagaKependidikanRow" msprop:Generator_UserRelationName="FK__Transaksi__Id_TK__6442E2C9" />
-      <msdata:Relationship name="FK__TransaksiKR__NIM__0D44F85C" msdata:parent="Mahasiswa" msdata:child="TransaksiKRS" msdata:parentkey="NIM" msdata:childkey="NIM" msprop:Generator_UserParentTable="Mahasiswa" msprop:Generator_UserChildTable="TransaksiKRS" msprop:Generator_RelationVarName="relationFK__TransaksiKR__NIM__0D44F85C" msprop:Generator_UserRelationName="FK__TransaksiKR__NIM__0D44F85C" msprop:Generator_ChildPropName="GetTransaksiKRSRows" msprop:Generator_ParentPropName="MahasiswaRow" />
-      <msdata:Relationship name="FK__TransaksiPe__NIM__65370702" msdata:parent="Mahasiswa" msdata:child="TransaksiPengajuanKRPP" msdata:parentkey="NIM" msdata:childkey="NIM" msprop:Generator_UserParentTable="Mahasiswa" msprop:Generator_UserChildTable="TransaksiPengajuanKRPP" msprop:Generator_RelationVarName="relationFK__TransaksiPe__NIM__65370702" msprop:Generator_UserRelationName="FK__TransaksiPe__NIM__65370702" msprop:Generator_ChildPropName="GetTransaksiPengajuanKRPPRows" msprop:Generator_ParentPropName="MahasiswaRow" />
-      <msdata:Relationship name="FK__Mahasiswa__Id_Pr__70DDC3D8" msdata:parent="ProgramStudi" msdata:child="Mahasiswa" msdata:parentkey="Id_Prodi" msdata:childkey="Id_Prodi" msprop:Generator_UserParentTable="ProgramStudi" msprop:Generator_UserChildTable="Mahasiswa" msprop:Generator_RelationVarName="relationFK__Mahasiswa__Id_Pr__70DDC3D8" msprop:Generator_ChildPropName="GetMahasiswaRows" msprop:Generator_ParentPropName="ProgramStudiRow" msprop:Generator_UserRelationName="FK__Mahasiswa__Id_Pr__70DDC3D8" />
+      <msdata:Relationship name="FK__MataKulia__Id_Pr__17036CC0" msdata:parent="ProgramStudi" msdata:child="MataKuliah" msdata:parentkey="Id_Prodi" msdata:childkey="Id_Prodi" msprop:Generator_UserParentTable="ProgramStudi" msprop:Generator_UserChildTable="MataKuliah" msprop:Generator_RelationVarName="relationFK__MataKulia__Id_Pr__17036CC0" msprop:Generator_ChildPropName="GetMataKuliahRows" msprop:Generator_UserRelationName="FK__MataKulia__Id_Pr__17036CC0" msprop:Generator_ParentPropName="ProgramStudiRow" />
+      <msdata:Relationship name="FK__MataKulia__No_Pe__160F4887" msdata:parent="Dosen" msdata:child="MataKuliah" msdata:parentkey="No_Pegawai" msdata:childkey="No_Pegawai" msprop:Generator_UserParentTable="Dosen" msprop:Generator_UserChildTable="MataKuliah" msprop:Generator_RelationVarName="relationFK__MataKulia__No_Pe__160F4887" msprop:Generator_ChildPropName="GetMataKuliahRows" msprop:Generator_ParentPropName="DosenRow" msprop:Generator_UserRelationName="FK__MataKulia__No_Pe__160F4887" />
+      <msdata:Relationship name="FK__Pengumuma__Id_TK__1EA48E88" msdata:parent="TenagaKependidikan" msdata:child="Pengumuman" msdata:parentkey="Id_TKN" msdata:childkey="Id_TKN" msprop:Generator_UserParentTable="TenagaKependidikan" msprop:Generator_UserChildTable="Pengumuman" msprop:Generator_RelationVarName="relationFK__Pengumuma__Id_TK__1EA48E88" msprop:Generator_ChildPropName="GetPengumumanRows" msprop:Generator_UserRelationName="FK__Pengumuma__Id_TK__1EA48E88" msprop:Generator_ParentPropName="TenagaKependidikanRow" />
+      <msdata:Relationship name="FK__DetailMat__Id_Ma__1209AD79" msdata:parent="MataKuliah" msdata:child="DetailMatkul" msdata:parentkey="Id_Matkul" msdata:childkey="Id_Matkul" msprop:Generator_UserParentTable="MataKuliah" msprop:Generator_UserChildTable="DetailMatkul" msprop:Generator_RelationVarName="relationFK__DetailMat__Id_Ma__1209AD79" msprop:Generator_ChildPropName="GetDetailMatkulRows" msprop:Generator_UserRelationName="FK__DetailMat__Id_Ma__1209AD79" msprop:Generator_ParentPropName="MataKuliahRow" />
+      <msdata:Relationship name="FK__DetailMat__Id_Tr__12FDD1B2" msdata:parent="TransaksiKRS" msdata:child="DetailMatkul" msdata:parentkey="Id_TrsKRS" msdata:childkey="Id_TrsKRS" msprop:Generator_UserParentTable="TransaksiKRS" msprop:Generator_UserChildTable="DetailMatkul" msprop:Generator_RelationVarName="relationFK__DetailMat__Id_Tr__12FDD1B2" msprop:Generator_ChildPropName="GetDetailMatkulRows" msprop:Generator_ParentPropName="TransaksiKRSRow" msprop:Generator_UserRelationName="FK__DetailMat__Id_Tr__12FDD1B2" />
+      <msdata:Relationship name="FK__Transaksi__Id_Pr__0C50D423" msdata:parent="ProgramStudi" msdata:child="TransaksiKRS" msdata:parentkey="Id_Prodi" msdata:childkey="Id_Prodi" msprop:Generator_UserParentTable="ProgramStudi" msprop:Generator_UserChildTable="TransaksiKRS" msprop:Generator_RelationVarName="relationFK__Transaksi__Id_Pr__0C50D423" msprop:Generator_ChildPropName="GetTransaksiKRSRows" msprop:Generator_UserRelationName="FK__Transaksi__Id_Pr__0C50D423" msprop:Generator_ParentPropName="ProgramStudiRow" />
+      <msdata:Relationship name="FK__Transaksi__Id_TK__0E391C95" msdata:parent="TenagaKependidikan" msdata:child="TransaksiKRS" msdata:parentkey="Id_TKN" msdata:childkey="Id_TKN" msprop:Generator_UserParentTable="TenagaKependidikan" msprop:Generator_UserChildTable="TransaksiKRS" msprop:Generator_RelationVarName="relationFK__Transaksi__Id_TK__0E391C95" msprop:Generator_ChildPropName="GetTransaksiKRSRows" msprop:Generator_UserRelationName="FK__Transaksi__Id_TK__0E391C95" msprop:Generator_ParentPropName="TenagaKependidikanRow" />
+      <msdata:Relationship name="FK__Transaksi__Id_Je__662B2B3B" msdata:parent="JenisPrestasi" msdata:child="TransaksiPengajuanKRPP" msdata:parentkey="Id_JenisPrestasi" msdata:childkey="Id_JenisPrestasi" msprop:Generator_UserParentTable="JenisPrestasi" msprop:Generator_UserChildTable="TransaksiPengajuanKRPP" msprop:Generator_RelationVarName="relationFK__Transaksi__Id_Je__662B2B3B" msprop:Generator_ChildPropName="GetTransaksiPengajuanKRPPRows" msprop:Generator_UserRelationName="FK__Transaksi__Id_Je__662B2B3B" msprop:Generator_ParentPropName="JenisPrestasiRow" />
+      <msdata:Relationship name="FK__Transaksi__Id_Po__671F4F74" msdata:parent="PosisiPrestasi" msdata:child="TransaksiPengajuanKRPP" msdata:parentkey="Id_PosisiPrestasi" msdata:childkey="Id_PosisiPrestasi" msprop:Generator_UserParentTable="PosisiPrestasi" msprop:Generator_UserChildTable="TransaksiPengajuanKRPP" msprop:Generator_RelationVarName="relationFK__Transaksi__Id_Po__671F4F74" msprop:Generator_ChildPropName="GetTransaksiPengajuanKRPPRows" msprop:Generator_UserRelationName="FK__Transaksi__Id_Po__671F4F74" msprop:Generator_ParentPropName="PosisiPrestasiRow" />
+      <msdata:Relationship name="FK__Transaksi__Id_TK__6442E2C9" msdata:parent="TenagaKependidikan" msdata:child="TransaksiPengajuanKRPP" msdata:parentkey="Id_TKN" msdata:childkey="Id_TKN" msprop:Generator_UserParentTable="TenagaKependidikan" msprop:Generator_UserChildTable="TransaksiPengajuanKRPP" msprop:Generator_RelationVarName="relationFK__Transaksi__Id_TK__6442E2C9" msprop:Generator_ChildPropName="GetTransaksiPengajuanKRPPRows" msprop:Generator_UserRelationName="FK__Transaksi__Id_TK__6442E2C9" msprop:Generator_ParentPropName="TenagaKependidikanRow" />
+      <msdata:Relationship name="FK__TransaksiKR__NIM__0D44F85C" msdata:parent="Mahasiswa" msdata:child="TransaksiKRS" msdata:parentkey="NIM" msdata:childkey="NIM" msprop:Generator_UserParentTable="Mahasiswa" msprop:Generator_UserChildTable="TransaksiKRS" msprop:Generator_RelationVarName="relationFK__TransaksiKR__NIM__0D44F85C" msprop:Generator_ChildPropName="GetTransaksiKRSRows" msprop:Generator_ParentPropName="MahasiswaRow" msprop:Generator_UserRelationName="FK__TransaksiKR__NIM__0D44F85C" />
+      <msdata:Relationship name="FK__TransaksiPe__NIM__65370702" msdata:parent="Mahasiswa" msdata:child="TransaksiPengajuanKRPP" msdata:parentkey="NIM" msdata:childkey="NIM" msprop:Generator_UserParentTable="Mahasiswa" msprop:Generator_UserChildTable="TransaksiPengajuanKRPP" msprop:Generator_RelationVarName="relationFK__TransaksiPe__NIM__65370702" msprop:Generator_ChildPropName="GetTransaksiPengajuanKRPPRows" msprop:Generator_ParentPropName="MahasiswaRow" msprop:Generator_UserRelationName="FK__TransaksiPe__NIM__65370702" />
+      <msdata:Relationship name="FK__Mahasiswa__Id_Pr__70DDC3D8" msdata:parent="ProgramStudi" msdata:child="Mahasiswa" msdata:parentkey="Id_Prodi" msdata:childkey="Id_Prodi" msprop:Generator_UserParentTable="ProgramStudi" msprop:Generator_UserChildTable="Mahasiswa" msprop:Generator_RelationVarName="relationFK__Mahasiswa__Id_Pr__70DDC3D8" msprop:Generator_ChildPropName="GetMahasiswaRows" msprop:Generator_UserRelationName="FK__Mahasiswa__Id_Pr__70DDC3D8" msprop:Generator_ParentPropName="ProgramStudiRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

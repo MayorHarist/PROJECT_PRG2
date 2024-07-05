@@ -7020,7 +7020,8 @@ SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_L
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT No_Pegawai, NIDN, Nama, Bidang_Kompetensi, Pendidikan_Terakhir, Tanggal_La" +
-                "hir, Jenis_Kelamin, Alamat, Email, Telepon, Status FROM dbo.Dosen";
+                "hir, Jenis_Kelamin, Alamat, Email, Telepon, Status FROM dbo.Dosen WHERE Status=\'" +
+                "Aktif\'";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

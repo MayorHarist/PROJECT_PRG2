@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using PROJECT_PRG2.CRUD_Prodi;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PROJECT_PRG2.CRUD_Dosen
 {
@@ -22,6 +23,8 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void ViewDosen_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
+            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
             this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
         }
@@ -53,7 +56,8 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
             InputDosen inputDosen = new InputDosen();
             inputDosen.Show();
-         
+
+            toolTipTambah.SetToolTip(btnTambah, "Tambah Data");
         }
 
         
@@ -124,7 +128,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
                     DataTable dataTable = new DataTable();
                     SqlCommand myCommand = new SqlCommand("select * from Dosen where No_Pegawai= @No_Pegawai", connection);
-                    myCommand.Parameters.AddWithValue("@No_Pegawai", txtCari.Text);
+                    myCommand.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
@@ -152,6 +156,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                         txtTelepon.Text = dataTable.Rows[0]["Telepon"].ToString();
                     }
 
+                    txtPegawai.Enabled = true;
                     txtNIDN.Enabled = true;
                     txtNama.Enabled = true;
                     txtBidang.Enabled = true;
@@ -388,7 +393,25 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         }
 
-       
+        private void txtPendidikan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void tooltipupdate_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void tooltipHapus_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }
 

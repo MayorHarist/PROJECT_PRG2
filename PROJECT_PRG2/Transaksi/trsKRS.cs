@@ -214,5 +214,44 @@ namespace PROJECT_PRG2.Transaksi
             cbMatkul.ValueMember = "Id_Matkul";
             cbMatkul.DataSource = dt1;
         }
+
+        private void txtNilaiProjek_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal nilaiTugas = decimal.Parse(txtNilaiTugas.Text);
+                decimal nilaiQuiz = decimal.Parse(txtNilaiQuiz.Text);
+                decimal nilaiUTS = decimal.Parse(txtNilaiUTS.Text);
+                decimal nilaiUAS = decimal.Parse(txtNilaiUAS.Text);
+                decimal nilaiProjek = decimal.Parse(txtNilaiProjek.Text);
+
+                decimal nilaiAkhir = (nilaiTugas + nilaiQuiz + nilaiUTS + nilaiUAS + nilaiProjek) / 5.0m;
+
+                char indeksNilai;
+                if (nilaiAkhir >= 85)
+                    indeksNilai = 'A';
+                else if (nilaiAkhir >= 70)
+                    indeksNilai = 'B';
+                else if (nilaiAkhir >= 60)
+                    indeksNilai = 'C';
+                else if (nilaiAkhir >= 40)
+                    indeksNilai = 'D';
+                else
+                    indeksNilai = 'E';
+
+                // Set the Text properties of the TextBoxes
+                txtNilaiAkhir.Text = nilaiAkhir.ToString("F2"); // Format the nilaiAkhir to 2 decimal places
+                txtIndeksNilai.Text = indeksNilai.ToString();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please enter valid decimal numbers in all fields.");
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("The number entered is too large or too small.");
+            }
+        }
+
     }
 }
