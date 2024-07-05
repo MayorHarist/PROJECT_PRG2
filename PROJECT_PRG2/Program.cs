@@ -8,6 +8,7 @@ using PROJECT_PRG2.CRUD_Prodi;
 using PROJECT_PRG2.CRUD_Tendik;
 using PROJECT_PRG2.Dashboard;
 using PROJECT_PRG2.LoginMenu;
+using PROJECT_PRG2.Transaksi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,8 +30,8 @@ namespace PROJECT_PRG2
             //Application.Run(new TampilanAwal());
             //Application.Run(new InputMatkul());
             //Application.Run(new UpTendik());
-            Application.Run(new UpdatePengumuman());
-            //Application.Run(new DasboardTendik());
+            //Application.Run(new UpdatePengumuman());
+            Application.Run(new trsKRS());
             //Application.Run(new UpdateDelete_JenisPrestasi());
             //Application.Run(new View_JenisPrestasi());
             //Application.Run(new UpdateDelete_JenisPrestasi());
