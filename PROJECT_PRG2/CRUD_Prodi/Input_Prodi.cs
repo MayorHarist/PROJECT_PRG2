@@ -66,7 +66,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
                 using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
+                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 2;
 
                     string newID = "PROD" + count.ToString("000");
 

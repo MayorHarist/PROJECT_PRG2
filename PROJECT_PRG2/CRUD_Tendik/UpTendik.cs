@@ -26,7 +26,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void clear()
         {
-            txtIDTendik.Text = "";
             txtNamaTendik.Text = "";
             tglLahirTendik.Value = DateTime.Now;
             rbLaki.Checked = false;
@@ -55,7 +54,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             try
             {
                 // Validasi apakah txtPegawai kosong
-                if (string.IsNullOrWhiteSpace(txtIDTendik.Text))
+                if (string.IsNullOrWhiteSpace(txtCari.Text))
                 {
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
