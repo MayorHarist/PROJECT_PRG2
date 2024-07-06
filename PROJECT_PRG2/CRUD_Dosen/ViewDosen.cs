@@ -205,6 +205,22 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
             try
             {
+                // Validasi apakah semua data telah terisi
+                if (string.IsNullOrWhiteSpace(txtPegawai.Text) ||
+                    string.IsNullOrWhiteSpace(txtNIDN.Text) ||
+                    string.IsNullOrWhiteSpace(txtNama.Text) ||
+                    string.IsNullOrWhiteSpace(txtBidang.Text) ||
+                    string.IsNullOrWhiteSpace(txtPendidikan.Text) ||
+                    string.IsNullOrWhiteSpace(DateTimeTanggal.Text) ||
+                    (!rbLaki.Checked && !rbPerempuan.Checked) ||
+                    string.IsNullOrWhiteSpace(txtAlamat.Text) ||
+                    string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                    string.IsNullOrWhiteSpace(txtTelepon.Text))
+                {
+                    MessageBox.Show("Silakan isi semua data terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -240,6 +256,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
 
