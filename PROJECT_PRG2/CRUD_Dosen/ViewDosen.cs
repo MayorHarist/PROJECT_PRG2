@@ -203,89 +203,110 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void btnUbah_Click(object sender, EventArgs e)
         {
-            try
+            // Menampilkan kotak dialog konfirmasi
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin mengubah data ini?", "Konfirmasi Pengubahan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Jika pengguna memilih "Yes", lanjutkan dengan pengubahan
+            if (result == DialogResult.Yes)
             {
-                // Validasi apakah semua data telah terisi
-                if (string.IsNullOrWhiteSpace(txtPegawai.Text) ||
-                    string.IsNullOrWhiteSpace(txtNIDN.Text) ||
-                    string.IsNullOrWhiteSpace(txtNama.Text) ||
-                    string.IsNullOrWhiteSpace(txtBidang.Text) ||
-                    string.IsNullOrWhiteSpace(txtPendidikan.Text) ||
-                    string.IsNullOrWhiteSpace(DateTimeTanggal.Text) ||
-                    (!rbLaki.Checked && !rbPerempuan.Checked) ||
-                    string.IsNullOrWhiteSpace(txtAlamat.Text) ||
-                    string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                    string.IsNullOrWhiteSpace(txtTelepon.Text))
+                try
                 {
-                    MessageBox.Show("Silakan isi semua data terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    // Validasi apakah semua data telah terisi
+                    if (string.IsNullOrWhiteSpace(txtPegawai.Text) ||
+                        string.IsNullOrWhiteSpace(txtNIDN.Text) ||
+                        string.IsNullOrWhiteSpace(txtNama.Text) ||
+                        string.IsNullOrWhiteSpace(txtBidang.Text) ||
+                        string.IsNullOrWhiteSpace(txtPendidikan.Text) ||
+                        string.IsNullOrWhiteSpace(DateTimeTanggal.Text) ||
+                        (!rbLaki.Checked && !rbPerempuan.Checked) ||
+                        string.IsNullOrWhiteSpace(txtAlamat.Text) ||
+                        string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                        string.IsNullOrWhiteSpace(txtTelepon.Text))
+                    {
+                        MessageBox.Show("Silakan isi semua data terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        SqlCommand update = new SqlCommand("sp_UpdateDosen", connection);
+                        update.CommandType = CommandType.StoredProcedure;
+
+                        string jenisKelamin = rbLaki.Checked ? "Laki-laki" : "Perempuan";
+
+                        // Tambahkan parameter untuk stored procedure
+                        update.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
+                        update.Parameters.AddWithValue("@NIDN", txtNIDN.Text);
+                        update.Parameters.AddWithValue("@Nama", txtNama.Text);
+                        update.Parameters.AddWithValue("@Bidang_Kompetensi", txtBidang.Text);
+                        update.Parameters.AddWithValue("@Pendidikan_Terakhir", txtPendidikan.Text);
+                        update.Parameters.AddWithValue("@Tanggal_Lahir", DateTimeTanggal.Value);
+                        update.Parameters.AddWithValue("@Jenis_Kelamin", jenisKelamin);
+                        update.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
+                        update.Parameters.AddWithValue("@Email", txtEmail.Text);
+                        update.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
+
+                        // Eksekusi stored procedure
+                        update.ExecuteNonQuery();
+
+                        // Menampilkan pesan jika eksekusi berhasil
+                        MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
+                    }
                 }
-
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                catch (Exception ex)
                 {
-                    connection.Open();
-
-                    SqlCommand update = new SqlCommand("sp_UpdateDosen", connection);
-                    update.CommandType = CommandType.StoredProcedure;
-
-                    string jenisKelamin = rbLaki.Checked ? "Laki-laki" : "Perempuan";
-
-                    // Tambahkan parameter untuk stored procedure
-                    update.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
-                    update.Parameters.AddWithValue("@NIDN", txtNIDN.Text);
-                    update.Parameters.AddWithValue("@Nama", txtNama.Text);
-                    update.Parameters.AddWithValue("@Bidang_Kompetensi", txtBidang.Text);
-                    update.Parameters.AddWithValue("@Pendidikan_Terakhir", txtPendidikan.Text);
-                    update.Parameters.AddWithValue("@Tanggal_Lahir", DateTimeTanggal.Value);
-                    update.Parameters.AddWithValue("@Jenis_Kelamin", jenisKelamin);
-                    update.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
-                    update.Parameters.AddWithValue("@Email", txtEmail.Text);
-                    update.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
-
-                    // Eksekusi stored procedure
-                    update.ExecuteNonQuery();
-
-                    // Menampilkan pesan jika eksekusi berhasil
-                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clear();
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Jika pengguna memilih "No", tidak melakukan apapun
+                MessageBox.Show("Pengubahan data dibatalkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
+
 
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
-            try
+            // Menampilkan kotak dialog konfirmasi
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi Penghapusan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Jika pengguna memilih "Yes", lanjutkan dengan penghapusan
+            if (result == DialogResult.Yes)
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connectionString);
+                try
+                {
+                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
 
-                connection.Open();
+                        SqlCommand delete = new SqlCommand("DELETE FROM Dosen WHERE No_Pegawai = @No_Pegawai", connection);
+                        delete.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
 
-                SqlCommand delete = new SqlCommand("sp_DeleteDosen", connection);
-                delete.CommandType = CommandType.StoredProcedure;
+                        delete.ExecuteNonQuery();
 
-                delete.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
-
-                delete.ExecuteNonQuery();
-
-
-                MessageBox.Show("Data berhasil dihapus", "Informasi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
+                        MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Jika pengguna memilih "No", tidak melakukan apapun
+                MessageBox.Show("Penghapusan data dibatalkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
         private void clear()
         {
