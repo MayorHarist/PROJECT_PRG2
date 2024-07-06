@@ -196,7 +196,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             try
             {
-                // Validasi apakah txtIdMatkul kosong
+                // Validasi apakah txtCari kosong
                 if (string.IsNullOrWhiteSpace(txtCari.Text))
                 {
                     MessageBox.Show("Silakan isi Id Mata Kuliah dahulu.", "Peringatan",
@@ -210,8 +210,9 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     connection.Open();
 
                     DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("select * from MataKuliah where Id_Matkul= @Id_Matkul", connection);
-                    myCommand.Parameters.AddWithValue("@Id_Matkul", txtCari.Text);
+                    SqlCommand myCommand = new SqlCommand("sp_CariMatkul", connection);
+                    myCommand.CommandType = CommandType.StoredProcedure;
+                    myCommand.Parameters.AddWithValue("@Cari", txtCari.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
@@ -225,6 +226,11 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                         txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
                         cbPegawai.SelectedValue = dataTable.Rows[0]["No_Pegawai"].ToString();
                         cbProdi.SelectedValue = dataTable.Rows[0]["Id_Prodi"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Informasi",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     txtIdMatkul.Enabled = true;
@@ -248,11 +254,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             }
         }
 
-        
-
-        
-
-       
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
