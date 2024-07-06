@@ -114,10 +114,10 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
             try
             {
-                // Validasi apakah txtPegawai kosong
+                // Validasi apakah txtCari kosong
                 if (string.IsNullOrWhiteSpace(txtCari.Text))
                 {
-                    MessageBox.Show("Silakan isi No Pegawai terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Silahkan isi kata kunci pencarian terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -127,49 +127,69 @@ namespace PROJECT_PRG2.CRUD_Dosen
                     connection.Open();
 
                     DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("select * from Dosen where No_Pegawai= @No_Pegawai", connection);
-                    myCommand.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
+                    SqlCommand myCommand = new SqlCommand("sp_CariDosen", connection);
+                    myCommand.CommandType = CommandType.StoredProcedure;
+                    myCommand.Parameters.AddWithValue("@Cari", txtCari.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
                     if (dataTable.Rows.Count > 0)
                     {
-                        txtPegawai.Text = dataTable.Rows[0]["No_Pegawai"].ToString();
-                        txtNIDN.Text = dataTable.Rows[0]["NIDN"].ToString();
-                        txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
-                        txtBidang.Text = dataTable.Rows[0]["Bidang_Kompetensi"].ToString();
-                        txtPendidikan.Text = dataTable.Rows[0]["Pendidikan_Terakhir"].ToString();
+                        DataRow row = dataTable.Rows[0];
 
-                        // Convert Tanggal_Lahir to DateTime
-                        DateTime tanggalLahir;
-                        if (DateTime.TryParse(dataTable.Rows[0]["Tanggal_Lahir"].ToString(), out tanggalLahir))
+                        // Validasi field sebelum mengisi
+                        txtPegawai.Text = row["No_Pegawai"]?.ToString() ?? string.Empty;
+                        txtNIDN.Text = row["NIDN"]?.ToString() ?? string.Empty;
+                        txtNama.Text = row["Nama"]?.ToString() ?? string.Empty;
+                        txtBidang.Text = row["Bidang_Kompetensi"]?.ToString() ?? string.Empty;
+                        txtPendidikan.Text = row["Pendidikan_Terakhir"]?.ToString() ?? string.Empty;
+
+                        // Validasi dan konversi Tanggal_Lahir
+                        if (DateTime.TryParse(row["Tanggal_Lahir"]?.ToString(), out DateTime tanggalLahir))
                         {
                             DateTimeTanggal.Value = tanggalLahir;
                         }
+                        else
+                        {
+                            MessageBox.Show("Format Tanggal Lahir tidak valid.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
 
-                        // Set the radio button based on Jenis_Kelamin
-                        string jenisKelamin = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
-                        rbLaki.Checked = jenisKelamin == "Laki-laki";
-                        rbPerempuan.Checked = jenisKelamin == "Perempuan";
-                        txtAlamat.Text = dataTable.Rows[0]["Alamat"].ToString();
-                        txtEmail.Text = dataTable.Rows[0]["Email"].ToString();
-                        txtTelepon.Text = dataTable.Rows[0]["Telepon"].ToString();
+                        // Validasi dan set radio button Jenis_Kelamin
+                        string jenisKelamin = row["Jenis_Kelamin"]?.ToString();
+                        if (jenisKelamin == "Laki-laki" || jenisKelamin == "Perempuan")
+                        {
+                            rbLaki.Checked = jenisKelamin == "Laki-laki";
+                            rbPerempuan.Checked = jenisKelamin == "Perempuan";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Jenis Kelamin tidak valid.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+
+                        txtAlamat.Text = row["Alamat"]?.ToString() ?? string.Empty;
+                        txtEmail.Text = row["Email"]?.ToString() ?? string.Empty;
+                        txtTelepon.Text = row["Telepon"]?.ToString() ?? string.Empty;
+
+                        // Aktifkan input field dan tombol
+                        txtPegawai.Enabled = true;
+                        txtNIDN.Enabled = true;
+                        txtNama.Enabled = true;
+                        txtBidang.Enabled = true;
+                        txtPendidikan.Enabled = true;
+                        DateTimeTanggal.Enabled = true;
+                        rbLaki.Enabled = true;
+                        rbPerempuan.Enabled = true;
+                        txtAlamat.Enabled = true;
+                        txtEmail.Enabled = true;
+                        txtTelepon.Enabled = true;
+
+                        btnUpdate.Enabled = true;
+                        btnHapus.Enabled = true;
                     }
-
-                    txtPegawai.Enabled = true;
-                    txtNIDN.Enabled = true;
-                    txtNama.Enabled = true;
-                    txtBidang.Enabled = true;
-                    txtPendidikan.Enabled = true;
-                    DateTimeTanggal.Enabled = true;
-                    rbLaki.Enabled = true;
-                    rbPerempuan.Enabled = true;
-                    txtAlamat.Enabled = true;
-                    txtEmail.Enabled = true;
-                    txtTelepon.Enabled = true;
-
-                    btnUpdate.Enabled = true;
-                    btnHapus.Enabled = true;
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
                     connection.Close();
                 }
@@ -178,6 +198,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             {
                 MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void btnUbah_Click(object sender, EventArgs e)
