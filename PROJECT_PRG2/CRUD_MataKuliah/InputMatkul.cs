@@ -25,7 +25,45 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            if (Validasi())
+            // Validasi apakah semua field telah diisi
+            if (string.IsNullOrWhiteSpace(txtIdMatkul.Text) ||
+                string.IsNullOrWhiteSpace(txtNama.Text) ||
+                string.IsNullOrWhiteSpace(txtSKS.Text) ||
+                string.IsNullOrWhiteSpace(txtJenis.Text) ||
+                string.IsNullOrWhiteSpace(txtSemester.Text) ||
+                cbPegawai.SelectedValue == null ||
+                cbProdi.SelectedValue == null)
+            {
+                MessageBox.Show("Silakan lengkapi semua data terlebih dahulu.", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validasi tambahan sesuai kebutuhan
+            // Misalnya, validasi untuk SKS harus angka
+            int sks;
+            if (!int.TryParse(txtSKS.Text, out sks))
+            {
+                MessageBox.Show("Jumlah SKS harus berupa angka.", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Konstruksi teks konfirmasi
+            string dataKonfirmasi = "Data yang akan disimpan:\n\n" +
+                             "ID Mata Kuliah: " + txtIdMatkul.Text + "\n" +
+                             "Nama: " + txtNama.Text + "\n" +
+                             "Jumlah SKS: " + txtSKS.Text + "\n" +
+                             "Jenis: " + txtJenis.Text + "\n" +
+                             "Semester: " + txtSemester.Text + "\n" +
+                             "Pegawai: " + cbPegawai.Text + "\n" +
+                             "Program Studi: " + cbProdi.Text + "\n\n" +
+                             "Apakah Anda yakin ingin menyimpan data?";
+
+            DialogResult result = MessageBox.Show(dataKonfirmasi, "Konfirmasi",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
             {
                 string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
                 SqlConnection connection = new SqlConnection(connectionstring);
@@ -33,13 +71,13 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 SqlCommand insert = new SqlCommand("sp_InsertMatkul", connection);
                 insert.CommandType = CommandType.StoredProcedure;
 
-                insert.Parameters.AddWithValue("Id_Matkul", txtIdMatkul.Text);
-                insert.Parameters.AddWithValue("Nama", txtNama.Text);
-                insert.Parameters.AddWithValue("Jumlah_SKS", txtSKS.Text);
-                insert.Parameters.AddWithValue("Jenis", txtJenis.Text);
-                insert.Parameters.AddWithValue("Semester", txtSemester.Text);
-                insert.Parameters.AddWithValue("No_Pegawai", cbPegawai.SelectedValue);
-                insert.Parameters.AddWithValue("Id_Prodi", cbProdi.SelectedValue);
+                insert.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
+                insert.Parameters.AddWithValue("@Nama", txtNama.Text);
+                insert.Parameters.AddWithValue("@Jumlah_SKS", txtSKS.Text);
+                insert.Parameters.AddWithValue("@Jenis", txtJenis.Text);
+                insert.Parameters.AddWithValue("@Semester", txtSemester.Text);
+                insert.Parameters.AddWithValue("@No_Pegawai", cbPegawai.SelectedValue.ToString());
+                insert.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedValue.ToString());
 
                 try
                 {
@@ -53,8 +91,13 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 {
                     MessageBox.Show("Tidak dapat menyimpan data: " + ex.Message);
                 }
+                finally
+                {
+                    connection.Close();
+                }
             }
         }
+
 
         private bool Validasi()
         {
