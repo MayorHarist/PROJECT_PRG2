@@ -60,6 +60,39 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            // Validasi apakah semua data telah terisi
+            if (string.IsNullOrWhiteSpace(txtIdMatkul.Text) ||
+                string.IsNullOrWhiteSpace(txtNama.Text) ||
+                string.IsNullOrWhiteSpace(txtSKS.Text) ||
+                string.IsNullOrWhiteSpace(txtJenis.Text) ||
+                string.IsNullOrWhiteSpace(txtSemester.Text) ||
+                cbPegawai.SelectedValue == null ||
+                cbProdi.SelectedValue == null)
+            {
+                MessageBox.Show("Silakan isi semua data terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tampilkan kotak dialog konfirmasi
+            DialogResult result = MessageBox.Show(
+                $"Apakah Anda yakin ingin mengubah data berikut?\n\n" +
+                $"ID Mata Kuliah: {txtIdMatkul.Text}\n" +
+                $"Nama: {txtNama.Text}\n" +
+                $"Jumlah SKS: {txtSKS.Text}\n" +
+                $"Jenis: {txtJenis.Text}\n" +
+                $"Semester: {txtSemester.Text}\n" +
+                $"No Pegawai: {cbPegawai.SelectedValue.ToString()}\n" +
+                $"ID Prodi: {cbProdi.SelectedValue.ToString()}\n",
+                "Konfirmasi Pembaruan Data",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            // Jika pengguna memilih 'No', batalkan pembaruan
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
             try
             {
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
@@ -97,33 +130,55 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         }
 
 
+
         private void btnHapus_Click(object sender, EventArgs e)
         {
+            // Validasi apakah ID Mata Kuliah telah diisi
+            if (string.IsNullOrWhiteSpace(txtIdMatkul.Text))
+            {
+                MessageBox.Show("Silakan pilih data yang akan dihapus.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tampilkan kotak dialog konfirmasi
+            DialogResult result = MessageBox.Show(
+                $"Apakah Anda yakin ingin menghapus data mata kuliah dengan ID {txtIdMatkul.Text}?",
+                "Konfirmasi Penghapusan Data",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            // Jika pengguna memilih 'No', batalkan penghapusan
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
             try
             {
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connectionString);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                connection.Open();
+                    // Menggunakan SqlCommand untuk menjalankan trigger di SQL Server
+                    SqlCommand deleteCommand = new SqlCommand("DELETE FROM Matakuliah WHERE Id_Matkul = @Id_Matkul", connection);
+                    deleteCommand.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
+                    deleteCommand.ExecuteNonQuery();
 
-                SqlCommand delete = new SqlCommand("sp_DeleteMatkul", connection);
-                delete.CommandType = CommandType.StoredProcedure;
+                    this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
 
-                delete.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
-
-                delete.ExecuteNonQuery();
-
-                this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
-
-                MessageBox.Show("Data berhasil dihapus", "Informasi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
+                    // Menampilkan pesan jika eksekusi berhasil
+                    MessageBox.Show("Data berhasil dihapus", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void clear()
         {
