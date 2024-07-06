@@ -24,9 +24,9 @@ namespace PROJECT_PRG2.CRUD_Dosen
         private void ViewDosen_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
-            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+            //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
         }
 
         private void btnTampil_Click(object sender, EventArgs e)
