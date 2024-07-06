@@ -157,22 +157,21 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string countQuery = "SELECT COUNT(*) FROM Dosen";
+                string functionQuery = "SELECT dbo.autoIdDosen()";
 
-                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                using (SqlCommand functionCommand = new SqlCommand(functionQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-                    string newID = "DOS" + count.ToString("000");
-
+                    string newID = functionCommand.ExecuteScalar().ToString();
                     txtPegawai.Text = newID;
                     return newID;
                 }
             }
         }
+
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
