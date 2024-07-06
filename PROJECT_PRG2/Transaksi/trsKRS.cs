@@ -1,83 +1,67 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PROJECT_PRG2.Transaksi
 {
     public partial class trsKRS : Form
     {
+        string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
+
         public trsKRS()
         {
             InitializeComponent();
             buatkolom();
             AutoidKRS();
-
-            
         }
-        string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
 
         private void trsKRS_Load(object sender, EventArgs e)
         {
-            
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+            // Load data into dropdowns when the form loads
             this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
-            
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
             this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Mahasiswa' table. You can move, or remove it, as needed.
             this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
-
         }
+
+        // Method to generate new KRS ID
         public string AutoidKRS()
         {
-            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 string countQuery = "SELECT COUNT(*) FROM TransaksiKRS";
 
+                // Execute count query
                 using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
                 {
                     int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-
                     string newID = "KRS" + count.ToString("000");
-
-                    // Assuming you have a TextBox named txtIdTransKRS to display the new ID
                     txtidTrsKrs.Text = newID;
-
                     return newID;
                 }
             }
         }
+
+        // Method to generate new DetailMatkul ID
         public string AutoidDetMatkul()
         {
-            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 string countQuery = "SELECT COUNT(*) FROM DetailMatkul";
 
+                // Execute count query
                 using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
                 {
                     int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-
                     string newID = "DET" + count.ToString("000");
-
                     return newID;
                 }
             }
         }
 
-
+        // Method to create columns in DataGridView
         void buatkolom()
         {
             dtgDetailMatkul.Columns.Clear();
@@ -91,11 +75,12 @@ namespace PROJECT_PRG2.Transaksi
             dtgDetailMatkul.Columns.Add("Indeks_Nilai", "Indeks Nilai");
         }
 
+        // Button 'Tambah' click event handler
         private void btnTambah_Click(object sender, EventArgs e)
         {
             try
             {
-                // Pastikan semua kotak teks diisi
+                // Validate input fields
                 if (string.IsNullOrWhiteSpace(txtNilaiTugas.Text) ||
                     string.IsNullOrWhiteSpace(txtNilaiQuiz.Text) ||
                     string.IsNullOrWhiteSpace(txtNilaiUTS.Text) ||
@@ -106,15 +91,14 @@ namespace PROJECT_PRG2.Transaksi
                     return;
                 }
 
-                // Dapatkan mata kuliah dan semester yang dipilih
+                // Get selected values
                 string matkul = cbMatkul.SelectedValue.ToString();
-                string semester = cbSemester.SelectedItem.ToString();
 
-                // Buat baris baru untuk DataGridView
+                // Create a new row for DataGridView
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(dtgDetailMatkul);
 
-                // Set nilai untuk setiap kolom
+                // Set values for each cell in the new row
                 row.Cells[0].Value = matkul;
                 row.Cells[1].Value = txtNilaiTugas.Text;
                 row.Cells[2].Value = txtNilaiQuiz.Text;
@@ -122,13 +106,12 @@ namespace PROJECT_PRG2.Transaksi
                 row.Cells[4].Value = txtNilaiUAS.Text;
                 row.Cells[5].Value = txtNilaiProjek.Text;
 
-                // Hitung Nilai Akhir dan Indeks Nilai
+                // Calculate final grade and index
                 decimal nilaiTugas = decimal.Parse(txtNilaiTugas.Text);
                 decimal nilaiQuiz = decimal.Parse(txtNilaiQuiz.Text);
                 decimal nilaiUTS = decimal.Parse(txtNilaiUTS.Text);
                 decimal nilaiUAS = decimal.Parse(txtNilaiUAS.Text);
                 decimal nilaiProjek = decimal.Parse(txtNilaiProjek.Text);
-
                 decimal nilaiAkhir = (nilaiTugas + nilaiQuiz + nilaiUTS + nilaiUAS + nilaiProjek) / 5.0m;
 
                 char indeksNilai;
@@ -143,13 +126,14 @@ namespace PROJECT_PRG2.Transaksi
                 else
                     indeksNilai = 'E';
 
-                row.Cells[6].Value = nilaiAkhir.ToString("N2"); // Nilai Akhir
-                row.Cells[7].Value = indeksNilai.ToString(); // Indeks Nilai
+                // Set calculated values to DataGridView
+                row.Cells[6].Value = nilaiAkhir.ToString("N2");
+                row.Cells[7].Value = indeksNilai.ToString();
 
-                // Tambahkan baris ke DataGridView
+                // Add new row to DataGridView
                 dtgDetailMatkul.Rows.Add(row);
 
-                // Hitung dan tampilkan IP di TextBox
+                // Calculate and display IP
                 CalculateAndDisplayIP();
             }
             catch (FormatException ex)
@@ -162,111 +146,134 @@ namespace PROJECT_PRG2.Transaksi
             }
         }
 
+        // Method to calculate and display IP
         private void CalculateAndDisplayIP()
         {
-            decimal totalNilaiAkhir = 0;
-            int jumlahMatkul = 0;
+            decimal totalNilaiSKS = 0;
+            int totalSKS = 0;
 
             foreach (DataGridViewRow row in dtgDetailMatkul.Rows)
             {
-                if (row.Cells[6].Value != null) // Pastikan nilai akhir ada
+                if (row.Cells[6].Value != null && row.Cells[7].Value != null)
                 {
-                    totalNilaiAkhir += decimal.Parse(row.Cells[6].Value.ToString());
-                    jumlahMatkul++;
+                    decimal nilaiAkhir = decimal.Parse(row.Cells[6].Value.ToString());
+                    char indeksNilai = row.Cells[7].Value.ToString()[0];
+
+                    string idMatkul = row.Cells[0].Value.ToString();
+                    int sks = GetSKS(idMatkul);
+
+                    decimal nilaiBobot = GetBobot(indeksNilai) * sks;
+                    totalNilaiSKS += nilaiBobot;
+                    totalSKS += sks;
                 }
             }
 
-            decimal ip = jumlahMatkul > 0 ? totalNilaiAkhir / jumlahMatkul : 0;
+            decimal ip = totalSKS > 0 ? totalNilaiSKS / totalSKS : 0;
             txtIP.Text = ip.ToString("N2");
         }
 
-
-
-        private void btnSimpan_Click(object sender, EventArgs e)
+        // Method to get SKS based on Id_Matkul
+        private int GetSKS(string idMatkul)
         {
-            // Hitung total nilai akhir dan jumlah mata kuliah
-            decimal totalNilaiAkhir = 0;
-            int jumlahMatkul = 0;
-
-            foreach (DataGridViewRow row in dtgDetailMatkul.Rows)
-            {
-                if (row.Cells[6].Value != null) // Pastikan nilai akhir ada
-                {
-                    totalNilaiAkhir += decimal.Parse(row.Cells[6].Value.ToString());
-                    jumlahMatkul++;
-                }
-            }
-
-            // Hitung IP
-            decimal ip = jumlahMatkul > 0 ? totalNilaiAkhir / jumlahMatkul : 0;
-            txtIP.Text = ip.ToString("N2");
-
-            // Get the values for the TransaksiKRS table
-            string idTrsKRS = txtidTrsKrs.Text;
-            int semester = int.Parse(cbSemester.SelectedItem.ToString());
-            DateTime tanggalPengisian = DateTime.Now; // use current date and time
-            string nim = cbMahasiswa.SelectedValue.ToString(); // get selected NIM from combobox
-            string idTKN = cbTendik.SelectedValue.ToString(); // get selected Id_TKN from combobox
-            string idProdi = cbProdi.SelectedValue.ToString(); // get selected Id_Prodi from combobox
-
-            // Call the stored procedure for TransaksiKRS
-            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("sp_InsertTransaksiKRS", connection);
-                command.CommandType = CommandType.StoredProcedure;
-
-                command.Parameters.AddWithValue("@Id_TrsKRS", idTrsKRS);
-                command.Parameters.AddWithValue("@Semester", semester);
-                command.Parameters.AddWithValue("@Tanggal_Pengisian", tanggalPengisian);
-                command.Parameters.AddWithValue("@IP", ip);
-                command.Parameters.AddWithValue("@Id_Prodi", idProdi);
-                command.Parameters.AddWithValue("@NIM", nim);
-                command.Parameters.AddWithValue("@Id_TKN", idTKN);
-
-                command.ExecuteNonQuery();
-            }
-
-            // Now, loop through each row in the DataGridView and call the sp_InsertDetailMatkul stored procedure
-            foreach (DataGridViewRow row in dtgDetailMatkul.Rows)
-            {
-                if (row.Cells[0].Value != null) // Pastikan ada mata kuliah yang diinput
+                string query = "SELECT Jumlah_SKS FROM MataKuliah WHERE Id_Matkul = @Id_Matkul";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
-                    // Get the values for each column
-                    string idDetMatkul = AutoidDetMatkul();
-                    string nilaiTugas = row.Cells[1].Value.ToString();
-                    string nilaiQuiz = row.Cells[2].Value.ToString();
-                    string nilaiUTS = row.Cells[3].Value.ToString();
-                    string nilaiUAS = row.Cells[4].Value.ToString();
-                    string nilaiProjek = row.Cells[5].Value.ToString();
-                    string idMatkul = row.Cells[0].Value.ToString();
-
-                    // Call the sp_InsertDetailMatkul stored procedure
-                    using (SqlConnection connection = new SqlConnection(connectionString))
-                    {
-                        connection.Open();
-                        SqlCommand command = new SqlCommand("sp_InsertDetailMatkul", connection);
-                        command.CommandType = CommandType.StoredProcedure;
-
-                        command.Parameters.AddWithValue("@Id_DetMatkul", idDetMatkul);
-                        command.Parameters.AddWithValue("@Nilai_Tugas", nilaiTugas);
-                        command.Parameters.AddWithValue("@Nilai_Quiz", nilaiQuiz);
-                        command.Parameters.AddWithValue("@Nilai_UTS", nilaiUTS);
-                        command.Parameters.AddWithValue("@Nilai_UAS", nilaiUAS);
-                        command.Parameters.AddWithValue("@Nilai_Projek", nilaiProjek);
-                        command.Parameters.AddWithValue("@Id_Matkul", idMatkul);
-                        command.Parameters.AddWithValue("@Id_TrsKRS", idTrsKRS);
-
-                        command.ExecuteNonQuery();
-                    }
+                    cmd.Parameters.AddWithValue("@Id_Matkul", idMatkul);
+                    return (int)cmd.ExecuteScalar();
                 }
             }
-
-            MessageBox.Show("Data berhasil disimpan!");
         }
 
+        // Method to get grade weight based on index
+        private decimal GetBobot(char indeksNilai)
+        {
+            switch (indeksNilai)
+            {
+                case 'A': return 4.0m;
+                case 'B': return 3.0m;
+                case 'C': return 2.0m;
+                case 'D': return 1.0m;
+                case 'E': return 0.0m;
+                default: return 0.0m;
+            }
+        }
 
+        // Button 'Simpan' click event handler
+        private void btnSimpan_Click(object sender, EventArgs e)
+        {
+            CalculateAndDisplayIP();
+
+            // Get values to be saved
+            string idTrsKRS = txtidTrsKrs.Text;
+            int semester = int.Parse(cbSemester.SelectedItem.ToString());
+            DateTime tanggalPengisian = DateTime.Now;
+            string nim = cbMahasiswa.SelectedValue.ToString();
+            string idTKN = cbTendik.SelectedValue.ToString();
+            string idProdi = cbProdi.SelectedValue.ToString();
+            decimal ip = decimal.Parse(txtIP.Text);
+
+            // Save to TransaksiKRS table
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("sp_InsertTransaksiKRS", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Id_TrsKRS", idTrsKRS);
+                cmd.Parameters.AddWithValue("@Semester", semester);
+                cmd.Parameters.AddWithValue("@Tanggal_Pengisian", tanggalPengisian);
+                cmd.Parameters.AddWithValue("@NIM", nim);
+                cmd.Parameters.AddWithValue("@Id_TKN", idTKN);
+                cmd.Parameters.AddWithValue("@Id_Prodi", idProdi);
+                cmd.Parameters.AddWithValue("@IP", ip);
+
+                cmd.ExecuteNonQuery();
+
+                // Save to DetailMatkul table
+                foreach (DataGridViewRow row in dtgDetailMatkul.Rows)
+                {
+                    if (row.Cells[0].Value != null) // Make sure there is a course entered
+                    {
+                        //string idDetMatkul = AutoidDetMatkul();
+                        string nilaiTugas = row.Cells[1].Value.ToString();
+                        string nilaiQuiz = row.Cells[2].Value.ToString();
+                        string nilaiUTS = row.Cells[3].Value.ToString();
+                        string nilaiUAS = row.Cells[4].Value.ToString();
+                        string nilaiProjek = row.Cells[5].Value.ToString();
+                        string nilaiAkhir = row.Cells[6].Value.ToString();
+                        string indeksNilai = row.Cells[7].Value.ToString();
+                        string idMatkul = row.Cells[0].Value.ToString();
+
+                        using (SqlConnection connection2 = new SqlConnection(connectionString))
+                        {
+                            connection2.Open();
+                            SqlCommand cmd2 = new SqlCommand("sp_InsertDetailMatkul", connection2);
+                            cmd2.CommandType = CommandType.StoredProcedure;
+
+                            string idDetMatkul = AutoidDetMatkul(); // Dapatkan ID yang dihasilkan secara otomatis
+                            cmd2.Parameters.AddWithValue("@Id_DetMatkul", idDetMatkul); // Tambahkan parameter
+                            cmd2.Parameters.AddWithValue("@Nilai_Tugas", nilaiTugas);
+                            cmd2.Parameters.AddWithValue("@Nilai_Quiz", nilaiQuiz);
+                            cmd2.Parameters.AddWithValue("@Nilai_UTS", nilaiUTS);
+                            cmd2.Parameters.AddWithValue("@Nilai_UAS", nilaiUAS);
+                            cmd2.Parameters.AddWithValue("@Nilai_Projek", nilaiProjek);
+                            cmd2.Parameters.AddWithValue("@Id_Matkul", idMatkul);
+                            cmd2.Parameters.AddWithValue("@Id_TrsKRS", idTrsKRS);
+
+                            cmd2.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+                // Show success message and reset form
+                MessageBox.Show("Data has been successfully saved.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AutoidKRS();
+                dtgDetailMatkul.Rows.Clear();
+            }
+        }
 
         private void cbProdi_Leave(object sender, EventArgs e)
         {
@@ -304,7 +311,7 @@ namespace PROJECT_PRG2.Transaksi
             cbMatkul.DataSource = dt1;
         }
 
-        private void txtNilaiProjek_Leave_1(object sender, EventArgs e)
+        private void txtNilaiProjek_Leave(object sender, EventArgs e)
         {
             try
             {
