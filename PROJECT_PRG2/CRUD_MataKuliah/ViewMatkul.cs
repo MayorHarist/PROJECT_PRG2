@@ -160,17 +160,18 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 {
                     connection.Open();
 
-                    // Menggunakan SqlCommand untuk menjalankan trigger di SQL Server
+                    // Menggunakan SqlCommand untuk menjalankan perintah DELETE yang akan memicu trigger trgInsteadOfDeleteMatkul
                     SqlCommand deleteCommand = new SqlCommand("DELETE FROM Matakuliah WHERE Id_Matkul = @Id_Matkul", connection);
                     deleteCommand.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
                     deleteCommand.ExecuteNonQuery();
 
-                    this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
-
                     // Menampilkan pesan jika eksekusi berhasil
                     MessageBox.Show("Data berhasil dihapus", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clear();
+
+                    // Refresh data grid atau tindakan lain setelah penghapusan
+                    this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+                    clear(); // Memanggil metode clear untuk membersihkan input fields
                 }
             }
             catch (Exception ex)
@@ -180,6 +181,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         }
 
 
+
         private void clear()
         {
             txtIdMatkul.Text = "";
@@ -187,7 +189,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             txtSKS.Text = "";
             txtJenis.Text = "";
             txtSemester.Text = "";
-            txtStatus.Text = "";
             cbPegawai.SelectedText = "";
             cbProdi.SelectedText = "";
         }
@@ -223,7 +224,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                         txtSKS.Text = dataTable.Rows[0]["Jumlah_SKS"].ToString();
                         txtJenis.Text = dataTable.Rows[0]["Jenis"].ToString();
                         txtSemester.Text = dataTable.Rows[0]["Semester"].ToString();
-                        txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
                         cbPegawai.SelectedValue = dataTable.Rows[0]["No_Pegawai"].ToString();
                         cbProdi.SelectedValue = dataTable.Rows[0]["Id_Prodi"].ToString();
                     }
@@ -238,7 +238,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     txtSKS.Enabled = true;
                     txtJenis.Enabled = true;
                     txtSemester.Enabled = true;
-                    txtStatus.Enabled = true;
                     cbPegawai.Enabled = true;
                     cbProdi.Enabled = true;
 
@@ -255,6 +254,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         }
 
 
+
         private void btnBatal_Click(object sender, EventArgs e)
         {
             clear();
@@ -263,6 +263,12 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+        }
+
+        private void btnRefersh_Click(object sender, EventArgs e)
+        {
+            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+
         }
     }
 }

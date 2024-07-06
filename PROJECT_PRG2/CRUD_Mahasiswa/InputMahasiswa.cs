@@ -70,23 +70,23 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         }
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string countQuery = "SELECT COUNT(*) FROM Mahasiswa";
 
-                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                string functionQuery = "SELECT dbo.autoIdMahasiswa()";
+
+                using (SqlCommand command = new SqlCommand(functionQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-
-                    string newID = "MHS" + count.ToString("000");
+                    string newID = command.ExecuteScalar().ToString();
 
                     txtNIM.Text = newID;
                     return newID;
                 }
             }
         }
+
         private bool IsFormValid()
         {
             // Validasi untuk memastikan semua data telah diisi

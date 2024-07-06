@@ -32,8 +32,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             cbProdi.Enabled = enabled;
             txtNama.Enabled = enabled;
             DateTimeTanggal.Enabled = enabled;
-            rbLaki.Enabled = enabled;
-            rbPerempuan.Enabled = enabled;
+            
             txtAlamat.Enabled = enabled;
             txtEmail.Enabled = enabled;
             txtTelepon.Enabled = enabled;
@@ -54,6 +53,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             txtEmail.Clear();
             txtTelepon.Clear();
             txtTahunMasuk.Clear();
+            txtKelamin.Clear();
             txtUsername.Clear();
             txtPassword.Clear();
 
@@ -63,9 +63,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             // Mengatur ulang DateTimePicker ke tanggal saat ini
             DateTimeTanggal.Value = DateTime.Now;
 
-            // Reset RadioButton
-            rbLaki.Checked = false;
-            rbPerempuan.Checked = false;
+            
         }
 
         private void btnKembali_Click(object sender, EventArgs e)
@@ -105,7 +103,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     update.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedValue);
                     update.Parameters.AddWithValue("@Nama", txtNama.Text);
                     update.Parameters.AddWithValue("@Tanggal_Lahir", DateTimeTanggal.Value);
-                    update.Parameters.AddWithValue("@Jenis_Kelamin", rbLaki.Checked ? "Laki-laki" : "Perempuan");
+                    update.Parameters.AddWithValue("@Jenis_Kelamin", txtKelamin.Text);
                     update.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
                     update.Parameters.AddWithValue("@Email", txtEmail.Text);
                     update.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
@@ -142,9 +140,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                 {
                     connection.Open();
 
-                    SqlCommand delete = new SqlCommand("sp_DeleteMahasiswa", connection);
-                    delete.CommandType = CommandType.StoredProcedure;
-
+                    SqlCommand delete = new SqlCommand("DELETE FROM Mahasiswa WHERE NIM = @NIM", connection);
                     delete.Parameters.AddWithValue("@NIM", txtNIM.Text);
 
                     delete.ExecuteNonQuery();
@@ -162,12 +158,21 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             }
         }
 
-        private void btnCari__Click(object sender, EventArgs e)
+
+
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        
+
+        private void btnCari_Click(object sender, EventArgs e)
         {
             try
             {
                 // Validasi apakah txtNIM kosong
-                if (string.IsNullOrWhiteSpace(txtNIM.Text))
+                if (string.IsNullOrWhiteSpace(txtCari.Text))
                 {
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -178,8 +183,9 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     connection.Open();
 
                     DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("SELECT * FROM Mahasiswa WHERE NIM=@NIM", connection);
-                    myCommand.Parameters.AddWithValue("@NIM", txtNIM.Text);
+                    SqlCommand myCommand = new SqlCommand("sp_CariMahasiswa", connection);
+                    myCommand.CommandType = CommandType.StoredProcedure;
+                    myCommand.Parameters.AddWithValue("@Cari", txtCari.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
@@ -196,20 +202,8 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                             DateTimeTanggal.Value = tanggalLahir;
                         }
 
-                        string jenisKelamin = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
-                        if (jenisKelamin == "Laki-laki")
-                        {
-                            rbLaki.Checked = true;
-                        }
-                        else if (jenisKelamin == "Perempuan")
-                        {
-                            rbPerempuan.Checked = true;
-                        }
-                        else
-                        {
-                            rbLaki.Checked = false;
-                            rbPerempuan.Checked = false;
-                        }
+                        txtKelamin.Text = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
+                        
                         txtAlamat.Text = dataTable.Rows[0]["Alamat"].ToString();
                         txtEmail.Text = dataTable.Rows[0]["Email"].ToString();
                         txtTelepon.Text = dataTable.Rows[0]["Telepon"].ToString();
@@ -238,12 +232,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             }
         }
 
-        private void btnBatal_Click(object sender, EventArgs e)
-        {
-            clear();
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void btnRefersh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
             this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);

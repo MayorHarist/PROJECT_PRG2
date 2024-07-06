@@ -205,5 +205,11 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
             this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
         }
+
+        private void btnRefersh_Click(object sender, EventArgs e)
+        {
+            this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
+
+        }
     }
 }

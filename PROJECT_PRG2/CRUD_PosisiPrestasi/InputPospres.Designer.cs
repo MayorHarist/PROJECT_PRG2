@@ -49,7 +49,7 @@
             this.btnSimpan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSimpan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSimpan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSimpan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSimpan.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimpan.ForeColor = System.Drawing.Color.White;
             this.btnSimpan.Location = new System.Drawing.Point(318, 442);
             this.btnSimpan.Name = "btnSimpan";
@@ -68,7 +68,7 @@
             this.btnBatal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBatal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBatal.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.White;
             this.btnBatal.Location = new System.Drawing.Point(497, 442);
             this.btnBatal.Name = "btnBatal";
@@ -87,7 +87,7 @@
             this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnKembali.FillColor = System.Drawing.Color.Navy;
-            this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKembali.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKembali.ForeColor = System.Drawing.Color.White;
             this.btnKembali.Location = new System.Drawing.Point(121, 442);
             this.btnKembali.Name = "btnKembali";
@@ -109,6 +109,7 @@
             this.txtDeskripsi.ForeColor = System.Drawing.Color.Black;
             this.txtDeskripsi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDeskripsi.Location = new System.Drawing.Point(360, 260);
+            this.txtDeskripsi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDeskripsi.Multiline = true;
             this.txtDeskripsi.Name = "txtDeskripsi";
             this.txtDeskripsi.PasswordChar = '\0';
@@ -124,7 +125,7 @@
             this.txtNama.AutoRoundedCorners = true;
             this.txtNama.BackColor = System.Drawing.Color.Transparent;
             this.txtNama.BorderColor = System.Drawing.Color.Transparent;
-            this.txtNama.BorderRadius = 13;
+            this.txtNama.BorderRadius = 20;
             this.txtNama.BorderThickness = 0;
             this.txtNama.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNama.DefaultText = "";
@@ -136,13 +137,14 @@
             this.txtNama.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Location = new System.Drawing.Point(360, 217);
+            this.txtNama.Location = new System.Drawing.Point(360, 203);
+            this.txtNama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
             this.txtNama.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.txtNama.PlaceholderText = "";
             this.txtNama.SelectedText = "";
-            this.txtNama.Size = new System.Drawing.Size(245, 28);
+            this.txtNama.Size = new System.Drawing.Size(245, 42);
             this.txtNama.TabIndex = 23;
             this.txtNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNama_KeyPress);
             // 
@@ -151,7 +153,7 @@
             this.txtIdPosisiPrestasi.AutoRoundedCorners = true;
             this.txtIdPosisiPrestasi.BackColor = System.Drawing.Color.Transparent;
             this.txtIdPosisiPrestasi.BorderColor = System.Drawing.Color.Transparent;
-            this.txtIdPosisiPrestasi.BorderRadius = 13;
+            this.txtIdPosisiPrestasi.BorderRadius = 18;
             this.txtIdPosisiPrestasi.BorderThickness = 0;
             this.txtIdPosisiPrestasi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIdPosisiPrestasi.DefaultText = "";
@@ -163,13 +165,14 @@
             this.txtIdPosisiPrestasi.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdPosisiPrestasi.ForeColor = System.Drawing.Color.Black;
             this.txtIdPosisiPrestasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdPosisiPrestasi.Location = new System.Drawing.Point(360, 177);
+            this.txtIdPosisiPrestasi.Location = new System.Drawing.Point(360, 157);
+            this.txtIdPosisiPrestasi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIdPosisiPrestasi.Name = "txtIdPosisiPrestasi";
             this.txtIdPosisiPrestasi.PasswordChar = '\0';
             this.txtIdPosisiPrestasi.PlaceholderText = "";
             this.txtIdPosisiPrestasi.ReadOnly = true;
             this.txtIdPosisiPrestasi.SelectedText = "";
-            this.txtIdPosisiPrestasi.Size = new System.Drawing.Size(175, 28);
+            this.txtIdPosisiPrestasi.Size = new System.Drawing.Size(245, 38);
             this.txtIdPosisiPrestasi.TabIndex = 22;
             this.txtIdPosisiPrestasi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdPosisiPrestasi_KeyPress);
             // 
@@ -177,11 +180,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(131, 260);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 20);
+            this.label4.Size = new System.Drawing.Size(90, 28);
             this.label4.TabIndex = 19;
             this.label4.Text = "Deskripsi";
             // 
@@ -189,11 +192,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(131, 217);
+            this.label3.Location = new System.Drawing.Point(131, 203);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
+            this.label3.Size = new System.Drawing.Size(63, 28);
             this.label3.TabIndex = 18;
             this.label3.Text = "Nama";
             // 
@@ -201,11 +204,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(131, 177);
+            this.label2.Location = new System.Drawing.Point(131, 157);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 20);
+            this.label2.Size = new System.Drawing.Size(150, 28);
             this.label2.TabIndex = 17;
             this.label2.Text = "ID Posisi Prestasi";
             // 

@@ -97,22 +97,21 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         public string autoid()
         {
             string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+
+            using (SqlConnection connection = new SqlConnection(connectionstring))
             {
                 connection.Open();
-                string countQuery = "SELECT COUNT(*) FROM Pengumuman";
+                string functionQuery = "SELECT dbo.autoIdPengumuman()";
 
-                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                using (SqlCommand functionCommand = new SqlCommand(functionQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-
-                    string newID = "PM" + count.ToString("000");
-
+                    string newID = functionCommand.ExecuteScalar().ToString();
                     txtIDPengumuman.Text = newID;
                     return newID;
                 }
             }
         }
+
 
         private void btnBatalPengumuman_Click(object sender, EventArgs e)
         {

@@ -164,5 +164,11 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
                 MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnRefersh_Click(object sender, EventArgs e)
+        {
+            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
+
+        }
     }
 }

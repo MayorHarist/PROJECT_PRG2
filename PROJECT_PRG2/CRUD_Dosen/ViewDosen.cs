@@ -10,10 +10,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 {
     public partial class ViewDosen : Form
     {
-        private bool panelDataMuncul = false;
-        private bool panelTransaksiMuncul = false;
-        private bool panelLaporanMuncul = false;
-        private int step = 10;
+        
 
         public ViewDosen()
         {
@@ -153,19 +150,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                         {
                             MessageBox.Show("Format Tanggal Lahir tidak valid.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
-
-                        // Validasi dan set radio button Jenis_Kelamin
-                        string jenisKelamin = row["Jenis_Kelamin"]?.ToString();
-                        if (jenisKelamin == "Laki-laki" || jenisKelamin == "Perempuan")
-                        {
-                            rbLaki.Checked = jenisKelamin == "Laki-laki";
-                            rbPerempuan.Checked = jenisKelamin == "Perempuan";
-                        }
-                        else
-                        {
-                            MessageBox.Show("Jenis Kelamin tidak valid.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-
+                        txtKelamin.Text= row["Jenis_Kelamin"]?.ToString() ?? string.Empty;
                         txtAlamat.Text = row["Alamat"]?.ToString() ?? string.Empty;
                         txtEmail.Text = row["Email"]?.ToString() ?? string.Empty;
                         txtTelepon.Text = row["Telepon"]?.ToString() ?? string.Empty;
@@ -177,8 +162,8 @@ namespace PROJECT_PRG2.CRUD_Dosen
                         txtBidang.Enabled = true;
                         txtPendidikan.Enabled = true;
                         DateTimeTanggal.Enabled = true;
-                        rbLaki.Enabled = true;
-                        rbPerempuan.Enabled = true;
+                        /*rbLaki.Enabled = true;
+                        rbPerempuan.Enabled = true;*/
                         txtAlamat.Enabled = true;
                         txtEmail.Enabled = true;
                         txtTelepon.Enabled = true;
@@ -218,7 +203,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                         string.IsNullOrWhiteSpace(txtBidang.Text) ||
                         string.IsNullOrWhiteSpace(txtPendidikan.Text) ||
                         string.IsNullOrWhiteSpace(DateTimeTanggal.Text) ||
-                        (!rbLaki.Checked && !rbPerempuan.Checked) ||
+                        string.IsNullOrWhiteSpace(txtKelamin.Text) ||
                         string.IsNullOrWhiteSpace(txtAlamat.Text) ||
                         string.IsNullOrWhiteSpace(txtEmail.Text) ||
                         string.IsNullOrWhiteSpace(txtTelepon.Text))
@@ -235,7 +220,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                         SqlCommand update = new SqlCommand("sp_UpdateDosen", connection);
                         update.CommandType = CommandType.StoredProcedure;
 
-                        string jenisKelamin = rbLaki.Checked ? "Laki-laki" : "Perempuan";
+                        
 
                         // Tambahkan parameter untuk stored procedure
                         update.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
@@ -244,7 +229,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                         update.Parameters.AddWithValue("@Bidang_Kompetensi", txtBidang.Text);
                         update.Parameters.AddWithValue("@Pendidikan_Terakhir", txtPendidikan.Text);
                         update.Parameters.AddWithValue("@Tanggal_Lahir", DateTimeTanggal.Value);
-                        update.Parameters.AddWithValue("@Jenis_Kelamin", jenisKelamin);
+                        update.Parameters.AddWithValue("@Jenis_Kelamin", txtKelamin.Text);
                         update.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
                         update.Parameters.AddWithValue("@Email", txtEmail.Text);
                         update.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
@@ -316,8 +301,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             txtBidang.Text = "";
             txtPendidikan.Text = "";
             DateTimeTanggal.Value = DateTime.Now;
-            rbLaki.Checked = false;
-            rbPerempuan.Checked = false;
+            txtKelamin.Text = "";
             txtAlamat.Text = "";
             txtEmail.Text = "";
             txtTelepon.Text = "";
@@ -350,9 +334,8 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 }
 
                 // Set radio button berdasarkan Jenis_Kelamin
-                string jenisKelamin = row.Cells["Jenis_Kelamin"].Value?.ToString();
-                rbLaki.Checked = jenisKelamin == "Laki-laki";
-                rbPerempuan.Checked = jenisKelamin == "Perempuan";
+                txtKelamin.Text = row.Cells["Jenis_Kelamin"].Value?.ToString();
+                
 
                 txtAlamat.Text = row.Cells["Alamat"].Value?.ToString();
                 txtEmail.Text = row.Cells["Email"].Value?.ToString();
@@ -364,8 +347,6 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 txtBidang.Enabled = true;
                 txtPendidikan.Enabled = true;
                 DateTimeTanggal.Enabled = true;
-                rbLaki.Enabled = true;
-                rbPerempuan.Enabled = true;
                 txtAlamat.Enabled = true;
                 txtEmail.Enabled = true;
                 txtTelepon.Enabled = true;

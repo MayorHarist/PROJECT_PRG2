@@ -171,8 +171,8 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            using (SqlConnection connection = new SqlConnection(connectionstring))
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 string functionQuery = "SELECT dbo.autoIdMatkul()";
@@ -185,6 +185,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 }
             }
         }
+
 
 
         private void btnKembali_Click(object sender, EventArgs e)
