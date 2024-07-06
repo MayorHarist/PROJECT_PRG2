@@ -58,6 +58,26 @@ namespace PROJECT_PRG2.Transaksi
                 }
             }
         }
+        public string AutoidDetMatkul()
+        {
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string countQuery = "SELECT COUNT(*) FROM DetailMatkul";
+
+                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                {
+                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
+
+                    string newID = "DET" + count.ToString("000");
+
+                    return newID;
+                }
+            }
+        }
+
+
         void buatkolom()
         {
             dtgDetailMatkul.Columns.Clear();
@@ -214,7 +234,7 @@ namespace PROJECT_PRG2.Transaksi
                 if (row.Cells[0].Value != null) // Pastikan ada mata kuliah yang diinput
                 {
                     // Get the values for each column
-                    string idDetMatkul = Guid.NewGuid().ToString();
+                    string idDetMatkul = AutoidDetMatkul();
                     string nilaiTugas = row.Cells[1].Value.ToString();
                     string nilaiQuiz = row.Cells[2].Value.ToString();
                     string nilaiUTS = row.Cells[3].Value.ToString();
@@ -253,7 +273,7 @@ namespace PROJECT_PRG2.Transaksi
             string IdMahasiswa = cbProdi.SelectedValue.ToString();
             string semester = cbSemester.SelectedItem.ToString();
             // Query dan binding untuk cbPajak
-            string query = "SELECT Id_Prodi, Nama FROM Mahasiswa WHERE Id_Prodi=@D";
+            string query = "SELECT NIM, Nama FROM Mahasiswa WHERE Id_Prodi=@D";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand cmd = new SqlCommand(query, connection);
 
@@ -265,7 +285,7 @@ namespace PROJECT_PRG2.Transaksi
             adapter.Fill(dt);
 
             cbMahasiswa.DisplayMember = "Nama";
-            cbMahasiswa.ValueMember = "Id_Mahasiswa";
+            cbMahasiswa.ValueMember = "NIM";
             cbMahasiswa.DataSource = dt;
 
             // Query dan binding untuk cbPajak
