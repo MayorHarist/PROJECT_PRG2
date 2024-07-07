@@ -52,7 +52,8 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+                //string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -114,8 +115,9 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             
             try
             {
-                string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionstring))
+                //string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
@@ -165,18 +167,24 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             {
                 try
                 {
-                    string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+                    //string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                     SqlConnection connection = new SqlConnection(connectionString);
 
                     connection.Open();
 
-                    SqlCommand delete = new SqlCommand("sp_DeletePengumuman", connection);
+                    /*SqlCommand delete = new SqlCommand("sp_DeletePengumuman", connection);
                     delete.CommandType = CommandType.StoredProcedure;
 
                     delete.Parameters.AddWithValue("@Id_Pengumuman", txtCariPM.Text);
                     //delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
 
+                    delete.ExecuteNonQuery();*/
+
+                    SqlCommand delete = new SqlCommand("DELETE FROM Pengumuman WHERE Id_Pengumuman = @Id_Pengumuman", connection);
+                    delete.Parameters.AddWithValue("@Id_Pengumuman", txtIDPM.Text);
                     delete.ExecuteNonQuery();
+
 
 
                     MessageBox.Show("Data berhasil dihapus", "Informasi",

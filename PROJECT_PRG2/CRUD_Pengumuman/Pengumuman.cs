@@ -21,8 +21,9 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void btnTambahPengumuman_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            //string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            SqlConnection connection = new SqlConnection(connectionString);
 
             // Memastikan apakah data yang akan diismpan sudah benar, jika belum maka masih bisa mengisi ulang sebelum simpan
             string message = $"Apakah data berikut sudah benar?\n\n" +
@@ -96,9 +97,9 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         public string autoid()
         {
-            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
 
-            using (SqlConnection connection = new SqlConnection(connectionstring))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 string functionQuery = "SELECT dbo.autoIdPengumuman()";
@@ -126,7 +127,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         private void Pengumuman_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
 
         }
     }

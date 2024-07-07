@@ -523,7 +523,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
         private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void txtAkreditasi_KeyPress(object sender, KeyPressEventArgs e)

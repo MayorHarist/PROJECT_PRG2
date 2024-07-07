@@ -28,9 +28,10 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            //string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
 
-            using (SqlConnection connection = new SqlConnection(connectionstring))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 string functionQuery = "SELECT dbo.autoIdPospres()";
@@ -59,8 +60,8 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            SqlConnection connection = new SqlConnection(connectionString);
 
             //Validasi masukan pengguna dalam variabel
             string idposisiprestasi = txtIdPosisiPrestasi.Text;

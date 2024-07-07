@@ -20,6 +20,8 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void ViewDosen_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDataSet.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
             //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
@@ -118,7 +120,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                     return;
                 }
 
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -212,7 +214,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                         return;
                     }
 
-                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
@@ -266,7 +268,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             {
                 try
                 {
-                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();

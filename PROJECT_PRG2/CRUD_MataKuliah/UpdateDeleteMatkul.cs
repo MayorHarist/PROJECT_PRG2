@@ -30,7 +30,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     return;
                 }
 
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -77,7 +77,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             try
             {
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -115,17 +115,13 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             try
             {
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 SqlConnection connection = new SqlConnection(connectionString);
 
                 connection.Open();
 
-                SqlCommand delete = new SqlCommand("sp_DeleteMatkul", connection);
-                delete.CommandType = CommandType.StoredProcedure;
-
+                SqlCommand delete = new SqlCommand("DELETE FROM Matakuliah WHERE Id_Matkul = @Id_Matkul", connection);
                 delete.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
-                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
-
                 delete.ExecuteNonQuery();
 
 

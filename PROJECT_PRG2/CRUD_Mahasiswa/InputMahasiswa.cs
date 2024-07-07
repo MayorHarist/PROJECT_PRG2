@@ -18,7 +18,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         private void InputMahasiswa_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
            
 
         }
@@ -28,7 +28,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             // Validasi semua data harus diisi
             if (IsFormValid())
             {
-                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionstring))
                 {
                     SqlCommand insert = new SqlCommand("sp_InsertMahasiswa", connection);
@@ -70,7 +70,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         }
         public string autoid()
         {
-            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();

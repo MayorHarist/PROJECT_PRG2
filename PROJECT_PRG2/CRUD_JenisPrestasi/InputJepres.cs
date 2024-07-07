@@ -26,7 +26,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         public string autoid()
         {
-            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -46,7 +46,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
             SqlConnection connection = new SqlConnection(connectionstring);
 
             //Validasi masukan pengguna dalam variabel

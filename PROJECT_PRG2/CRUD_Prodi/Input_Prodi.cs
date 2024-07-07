@@ -31,8 +31,8 @@ namespace PROJECT_PRG2.CRUD_Prodi
                 return;
             }
 
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            SqlConnection connection = new SqlConnection(connectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertProdi", connection);
             insert.CommandType = CommandType.StoredProcedure;
@@ -58,23 +58,23 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            //string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            SqlConnection connection = new SqlConnection(connectionString);
             {
                 connection.Open();
-                string countQuery = "SELECT COUNT(*) FROM ProgramStudi";
 
-                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                string functionQuery = "SELECT dbo.autoIdProdi()";
+
+                using (SqlCommand functionCommand = new SqlCommand(functionQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 2;
-
-                    string newID = "PROD" + count.ToString("000");
-
+                    string newID = functionCommand.ExecuteScalar().ToString();
                     txtIdProdi.Text = newID;
                     return newID;
                 }
             }
         }
+
 
         private void clear()
         {

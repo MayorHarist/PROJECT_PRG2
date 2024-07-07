@@ -754,7 +754,7 @@
             this.btnBatal.Size = new System.Drawing.Size(133, 28);
             this.btnBatal.TabIndex = 171;
             this.btnBatal.Text = "Batal";
-            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
+            //this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // btnRefresh
             // 

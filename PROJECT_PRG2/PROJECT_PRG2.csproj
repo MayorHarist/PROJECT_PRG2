@@ -276,6 +276,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FINDSMARTDataSet7.cs">
+      <DependentUpon>FINDSMARTDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FINDSMARTDataSet7.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -290,6 +293,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINDSMART_MABRESDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMART_MABRESDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginMenu\LoginKepalaTendik.cs">
       <SubType>Form</SubType>
@@ -554,6 +562,17 @@
     </None>
     <None Include="FINDSMARTDataSet9.xss">
       <DependentUpon>FINDSMARTDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet.xsc">
+      <DependentUpon>FINDSMART_MABRESDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMART_MABRESDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet.xss">
+      <DependentUpon>FINDSMART_MABRESDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

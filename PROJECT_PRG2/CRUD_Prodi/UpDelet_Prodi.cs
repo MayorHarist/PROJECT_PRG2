@@ -32,7 +32,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
         private void UpDelet_Prodi_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'fINDSMARTDataSet3.ProgramStudi' table. You can move, or remove it, as needed.
             
@@ -51,16 +51,22 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                //string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 SqlConnection connection = new SqlConnection(connectionString);
 
                 connection.Open();
 
-                SqlCommand delete = new SqlCommand("sp_DeleteProdi", connection);
+                /*SqlCommand delete = new SqlCommand("sp_DeleteProdi", connection);
                 delete.CommandType = CommandType.StoredProcedure;
 
                 delete.Parameters.AddWithValue("@Id_Prodi", txtIdProdi.Text);
 
+                delete.ExecuteNonQuery();*/
+
+
+                SqlCommand delete = new SqlCommand("DELETE FROM ProgramStudi WHERE Id_Prodi = @Id_Prodi", connection);
+                delete.Parameters.AddWithValue("@Id_Prodi", txtIdProdi.Text);
                 delete.ExecuteNonQuery();
 
 
@@ -89,8 +95,9 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
             try
             {
-                string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionstring))
+                //string connectionstring = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
@@ -127,7 +134,8 @@ namespace PROJECT_PRG2.CRUD_Prodi
                     return;
                 }
 
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                //string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();

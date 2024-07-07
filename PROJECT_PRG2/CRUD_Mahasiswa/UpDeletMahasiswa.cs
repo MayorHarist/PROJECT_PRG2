@@ -83,7 +83,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         {
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -135,7 +135,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         {
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -177,7 +177,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_SMART";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
