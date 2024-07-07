@@ -29,7 +29,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                     return;
                 }
 
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -93,7 +93,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
             try
             {
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -114,7 +114,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                     update.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
                     update.Parameters.AddWithValue("@Email", txtEmail.Text);
                     update.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
-                    update.Parameters.AddWithValue("@Status", txtStatus.Text);
+                    //update.Parameters.AddWithValue("@Status", txtStatus.Text);
 
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
@@ -136,27 +136,28 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
             try
             {
-                string connectionString = "integrated security=true; data source=DESKTOP-1B9620N\\MSSQLSERVER01; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connectionString);
-                
-                connection.Open();
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                SqlCommand delete = new SqlCommand("sp_DeleteDosen", connection);
-                delete.CommandType = CommandType.StoredProcedure;
+                    SqlCommand delete = new SqlCommand("DELETE FROM Dosen WHERE No_Pegawai = @No_Pegawai", connection);
 
-                delete.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
-                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
+                    // Add parameter for the DELETE command
+                    delete.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
 
-                delete.ExecuteNonQuery();
+                    // Execute the DELETE command (trigger will update status)
+                    delete.ExecuteNonQuery();
 
-
-                MessageBox.Show("Data berhasil dihapus", "Informasi", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
+                    // Show message if execution is successful
+                    MessageBox.Show("Data berhasil dihapus", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

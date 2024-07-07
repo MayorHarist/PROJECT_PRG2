@@ -105,7 +105,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
             if (result == DialogResult.Yes)
             {
-                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
                 SqlConnection connection = new SqlConnection(connectionstring);
 
                 SqlCommand insert = new SqlCommand("sp_InsertDosen", connection);
@@ -156,7 +156,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         public string autoid()
         {
-            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
