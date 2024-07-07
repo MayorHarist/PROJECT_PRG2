@@ -47,8 +47,13 @@
             this.btnTambahPengumuman = new Guna.UI2.WinForms.Guna2Button();
             this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
             this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.TenagaKependidikanTableAdapter();
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
+            this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBatalPengumuman
@@ -260,7 +265,7 @@
             // 
             // cbIDTendik
             // 
-            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource;
+            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource1;
             this.cbIDTendik.DisplayMember = "Nama";
             this.cbIDTendik.FormattingEnabled = true;
             this.cbIDTendik.ItemHeight = 13;
@@ -331,6 +336,20 @@
             // 
             this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
             // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tenagaKependidikanBindingSource1
+            // 
+            this.tenagaKependidikanBindingSource1.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // tenagaKependidikanTableAdapter1
+            // 
+            this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
+            // 
             // Pengumuman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +380,8 @@
             this.Load += new System.EventHandler(this.Pengumuman_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,5 +406,8 @@
         private FINDSMARTDataSet7 fINDSMARTDataSet7;
         private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource;
         private FINDSMARTDataSet7TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter;
+        private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
+        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource1;
+        private FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter1;
     }
 }
