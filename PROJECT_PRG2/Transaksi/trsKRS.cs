@@ -7,7 +7,7 @@ namespace PROJECT_PRG2.Transaksi
 {
     public partial class trsKRS : Form
     {
-        string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART";
+        string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
 
         public trsKRS()
         {
