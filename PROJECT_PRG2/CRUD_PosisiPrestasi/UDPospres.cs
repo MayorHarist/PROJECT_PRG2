@@ -21,6 +21,8 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void UDPospres_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.PosisiPrestasi' table. You can move, or remove it, as needed.
+            this.posisiPrestasiTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.PosisiPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet71.PosisiPrestasi' table. You can move, or remove it, as needed.
             //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
 

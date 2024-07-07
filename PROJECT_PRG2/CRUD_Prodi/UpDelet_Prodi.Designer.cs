@@ -61,9 +61,14 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
+            this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -228,7 +233,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.jenjangPendidikanDataGridViewTextBoxColumn,
             this.akreditasiDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
-            this.dtgProdi.DataSource = this.programStudiBindingSource;
+            this.dtgProdi.DataSource = this.programStudiBindingSource1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -482,6 +487,20 @@ namespace PROJECT_PRG2.CRUD_Prodi
             // 
             this.programStudiTableAdapter.ClearBeforeFill = true;
             // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // programStudiBindingSource1
+            // 
+            this.programStudiBindingSource1.DataMember = "ProgramStudi";
+            this.programStudiBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // programStudiTableAdapter1
+            // 
+            this.programStudiTableAdapter1.ClearBeforeFill = true;
+            // 
             // UpDelet_Prodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -516,6 +535,8 @@ namespace PROJECT_PRG2.CRUD_Prodi
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,5 +578,8 @@ namespace PROJECT_PRG2.CRUD_Prodi
         private Guna.UI2.WinForms.Guna2Button btnBatal;
         private Guna.UI2.WinForms.Guna2TextBox txtCari;
         private System.Windows.Forms.Label label1;
+        private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
+        private BindingSource programStudiBindingSource1;
+        private FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter programStudiTableAdapter1;
     }
 }

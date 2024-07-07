@@ -21,6 +21,10 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
             //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Dosen);
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -155,6 +159,10 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void InputMatkul_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
             //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.

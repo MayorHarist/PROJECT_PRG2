@@ -83,9 +83,14 @@
             this.rbLaki = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.rbPuan = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
+            this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -359,6 +364,7 @@
             this.tglLahirTendik.AutoRoundedCorners = true;
             this.tglLahirTendik.BackColor = System.Drawing.Color.Transparent;
             this.tglLahirTendik.BorderRadius = 16;
+            this.tglLahirTendik.Checked = true;
             this.tglLahirTendik.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(173)))));
             this.tglLahirTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tglLahirTendik.ForeColor = System.Drawing.Color.White;
@@ -498,7 +504,7 @@
             this.teleponDataGridViewTextBoxColumn,
             this.usernameDataGridViewTextBoxColumn,
             this.passwordDataGridViewTextBoxColumn});
-            this.dgvUpTendik.DataSource = this.tenagaKependidikanBindingSource;
+            this.dgvUpTendik.DataSource = this.tenagaKependidikanBindingSource1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -754,7 +760,6 @@
             this.btnBatal.Size = new System.Drawing.Size(133, 28);
             this.btnBatal.TabIndex = 171;
             this.btnBatal.Text = "Batal";
-            //this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // btnRefresh
             // 
@@ -832,6 +837,20 @@
             this.rbPuan.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rbPuan.UseVisualStyleBackColor = false;
             // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tenagaKependidikanBindingSource1
+            // 
+            this.tenagaKependidikanBindingSource1.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // tenagaKependidikanTableAdapter1
+            // 
+            this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
+            // 
             // UpTendik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -885,6 +904,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -941,5 +962,8 @@
         private Guna.UI2.WinForms.Guna2RadioButton rbLaki;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2RadioButton rbPuan;
+        private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
+        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource1;
+        private FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter1;
     }
 }

@@ -18,10 +18,16 @@ namespace PROJECT_PRG2.Transaksi
 
         private void trsKRS_Load(object sender, EventArgs e)
         {
-            // Load data into dropdowns when the form loads
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
-            this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
+            this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            /* // Load data into dropdowns when the form loads
+             this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+             this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+             this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);*/
         }
 
         // Method to generate new KRS ID

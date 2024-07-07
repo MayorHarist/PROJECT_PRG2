@@ -27,7 +27,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
         private void btnTampilkan_Click(object sender, EventArgs e)
         {
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
+            //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
         }
     }
 }

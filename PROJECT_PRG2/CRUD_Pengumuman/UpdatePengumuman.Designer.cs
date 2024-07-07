@@ -67,15 +67,23 @@
             this.tooltipupdate = new System.Windows.Forms.ToolTip(this.components);
             this.tooltipHapus = new System.Windows.Forms.ToolTip(this.components);
             this.btnRefersh = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
+            this.pengumumanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pengumumanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.PengumumanTableAdapter();
+            this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbIDTendik
             // 
-            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource;
+            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource1;
             this.cbIDTendik.DisplayMember = "Nama";
             this.cbIDTendik.FormattingEnabled = true;
             this.cbIDTendik.ItemHeight = 13;
@@ -274,7 +282,7 @@
             this.tanggalDataGridViewTextBoxColumn,
             this.deskripsiDataGridViewTextBoxColumn,
             this.idTKNDataGridViewTextBoxColumn});
-            this.guna2DataGridView1.DataSource = this.pengumumanBindingSource;
+            this.guna2DataGridView1.DataSource = this.pengumumanBindingSource1;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -314,6 +322,7 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
             // idPengumumanDataGridViewTextBoxColumn
             // 
@@ -537,6 +546,29 @@
             this.btnRefersh.TabIndex = 250;
             this.btnRefersh.Click += new System.EventHandler(this.btnRefersh_Click);
             // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pengumumanBindingSource1
+            // 
+            this.pengumumanBindingSource1.DataMember = "Pengumuman";
+            this.pengumumanBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // pengumumanTableAdapter1
+            // 
+            this.pengumumanTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tenagaKependidikanBindingSource1
+            // 
+            this.tenagaKependidikanBindingSource1.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // tenagaKependidikanTableAdapter1
+            // 
+            this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
+            // 
             // UpdatePengumuman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -574,6 +606,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -615,5 +650,10 @@
         private System.Windows.Forms.ToolTip tooltipupdate;
         private System.Windows.Forms.ToolTip tooltipHapus;
         private Guna.UI2.WinForms.Guna2ImageButton btnRefersh;
+        private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
+        private System.Windows.Forms.BindingSource pengumumanBindingSource1;
+        private FINDSMART_MABRESDsAllTableAdapters.PengumumanTableAdapter pengumumanTableAdapter1;
+        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource1;
+        private FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter1;
     }
 }

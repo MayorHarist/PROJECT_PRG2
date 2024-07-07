@@ -17,10 +17,12 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         private void InputMahasiswa_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
+            //this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
             //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-           
-
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)

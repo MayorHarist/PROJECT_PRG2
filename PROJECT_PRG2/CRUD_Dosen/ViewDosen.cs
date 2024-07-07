@@ -20,8 +20,10 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void ViewDosen_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.Dosen);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDataSet.Dosen);
+            //this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDataSet.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
             //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
@@ -70,17 +72,17 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 string teksPencarian = txtCari.Text + e.KeyChar;
 
                 // Panggil metode untuk menyaring DataGridView
-                FilterDataGridView(teksPencarian);
+                //FilterDataGridView(teksPencarian);
             }
             else if (e.KeyChar == (char)Keys.Back && txtCari.Text.Length > 0)
             {
                 // Tangani tombol backspace
                 string teksPencarian = txtCari.Text.Substring(0, txtCari.Text.Length - 1);
-                FilterDataGridView(teksPencarian);
+                //FilterDataGridView(teksPencarian);
             }
         }
 
-        private void FilterDataGridView(string teksPencarian)
+        /*private void FilterDataGridView(string teksPencarian)
         {
             // Asumsikan `dosenTableAdapter` adalah adapter dan `fINDSMART` adalah DataSet
             string query = $@"SELECT * FROM Dosen WHERE 
@@ -107,7 +109,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
             // Perbarui DataGridView dengan hasil pencarian
             dgvDosen.DataSource = hasilPencarian;
-        }
+        }*/
 
         private void btnCari_Click(object sender, EventArgs e)
         {
@@ -360,9 +362,12 @@ namespace PROJECT_PRG2.CRUD_Dosen
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.Dosen);
+
             // Ensure the Guna2DataGridView scrollbars are set correctly
             this.dgvDosen.ScrollBars = ScrollBars.Both;
 

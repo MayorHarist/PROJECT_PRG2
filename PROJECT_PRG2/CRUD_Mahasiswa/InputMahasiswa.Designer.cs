@@ -60,8 +60,18 @@
             this.txtAlamat = new System.Windows.Forms.RichTextBox();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
             this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
+            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mahasiswaTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.MahasiswaTableAdapter();
+            this.mahasiswaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -515,7 +525,7 @@
             // 
             // cbProdi
             // 
-            this.cbProdi.DataSource = this.programStudiBindingSource;
+            this.cbProdi.DataSource = this.programStudiBindingSource1;
             this.cbProdi.DisplayMember = "Nama";
             this.cbProdi.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProdi.FormattingEnabled = true;
@@ -571,6 +581,34 @@
             this.btnKembali.Text = "Kembali";
             this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mahasiswaBindingSource
+            // 
+            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
+            this.mahasiswaBindingSource.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // mahasiswaTableAdapter
+            // 
+            this.mahasiswaTableAdapter.ClearBeforeFill = true;
+            // 
+            // mahasiswaBindingSource1
+            // 
+            this.mahasiswaBindingSource1.DataMember = "Mahasiswa";
+            this.mahasiswaBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // programStudiBindingSource1
+            // 
+            this.programStudiBindingSource1.DataMember = "ProgramStudi";
+            this.programStudiBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // programStudiTableAdapter1
+            // 
+            this.programStudiTableAdapter1.ClearBeforeFill = true;
+            // 
             // InputMahasiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -615,6 +653,10 @@
             this.Load += new System.EventHandler(this.InputMahasiswa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,5 +695,11 @@
         private System.Windows.Forms.BindingSource programStudiBindingSource;
         private FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
         private Guna.UI2.WinForms.Guna2Button btnKembali;
+        private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
+        private System.Windows.Forms.BindingSource mahasiswaBindingSource;
+        private FINDSMART_MABRESDsAllTableAdapters.MahasiswaTableAdapter mahasiswaTableAdapter;
+        private System.Windows.Forms.BindingSource mahasiswaBindingSource1;
+        private System.Windows.Forms.BindingSource programStudiBindingSource1;
+        private FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter programStudiTableAdapter1;
     }
 }

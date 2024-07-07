@@ -27,8 +27,8 @@ namespace PROJECT_PRG2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new DashboardUtama());
-            Application.Run(new UpTendik());
+            Application.Run(new DashboardUtama());
+            //Application.Run(new Input_Prodi());
         }
     }
 }
