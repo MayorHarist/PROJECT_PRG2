@@ -46,6 +46,8 @@
             this.peranDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.penyelenggaraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jenisPrestasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.jenisPrestasiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
@@ -70,14 +72,17 @@
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
-            this.jenisPrestasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jenisPrestasiTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.JenisPrestasiTableAdapter();
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
+            this.jenisPrestasiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.jenisPrestasiTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.JenisPrestasiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCari
@@ -128,7 +133,7 @@
             this.peranDataGridViewTextBoxColumn,
             this.penyelenggaraDataGridViewTextBoxColumn,
             this.pointDataGridViewTextBoxColumn});
-            this.guna2DataGridView1.DataSource = this.jenisPrestasiBindingSource;
+            this.guna2DataGridView1.DataSource = this.jenisPrestasiBindingSource2;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,6 +229,16 @@
             this.pointDataGridViewTextBoxColumn.HeaderText = "Point";
             this.pointDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pointDataGridViewTextBoxColumn.Name = "pointDataGridViewTextBoxColumn";
+            // 
+            // jenisPrestasiBindingSource
+            // 
+            this.jenisPrestasiBindingSource.DataMember = "JenisPrestasi";
+            this.jenisPrestasiBindingSource.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // jenisPrestasiBindingSource1
             // 
@@ -631,19 +646,23 @@
             this.guna2TextBox4.TabIndex = 25;
             this.guna2TextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPoint_KeyPress);
             // 
-            // fINDSMART_MABRESDsAll
-            // 
-            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
-            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // jenisPrestasiBindingSource
-            // 
-            this.jenisPrestasiBindingSource.DataMember = "JenisPrestasi";
-            this.jenisPrestasiBindingSource.DataSource = this.fINDSMART_MABRESDsAll;
-            // 
             // jenisPrestasiTableAdapter
             // 
             this.jenisPrestasiTableAdapter.ClearBeforeFill = true;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jenisPrestasiBindingSource2
+            // 
+            this.jenisPrestasiBindingSource2.DataMember = "JenisPrestasi";
+            this.jenisPrestasiBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // jenisPrestasiTableAdapter2
+            // 
+            this.jenisPrestasiTableAdapter2.ClearBeforeFill = true;
             // 
             // UDJepres
             // 
@@ -680,10 +699,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UDJepres_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -725,5 +746,8 @@
         private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
         private System.Windows.Forms.BindingSource jenisPrestasiBindingSource;
         private FINDSMART_MABRESDsAllTableAdapters.JenisPrestasiTableAdapter jenisPrestasiTableAdapter;
+        private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
+        private System.Windows.Forms.BindingSource jenisPrestasiBindingSource2;
+        private FINDSMART_MABRESDataSet1TableAdapters.JenisPrestasiTableAdapter jenisPrestasiTableAdapter2;
     }
 }
