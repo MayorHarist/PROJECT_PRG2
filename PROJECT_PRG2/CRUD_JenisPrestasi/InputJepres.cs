@@ -46,8 +46,8 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            SqlConnection connection = new SqlConnection(connectionString);
 
             //Validasi masukan pengguna dalam variabel
             string idjenisprestasi = txtIdJenisPrestasi.Text;

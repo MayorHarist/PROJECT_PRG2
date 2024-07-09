@@ -21,14 +21,10 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         private void UpDeletMahasiswa_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
-            this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
-            //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Mahasiswa' table. You can move, or remove it, as needed.
-            //this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
-
+            this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
+           
         }
 
         private void SetControlsEnabled(bool enabled)
@@ -41,8 +37,8 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             txtEmail.Enabled = enabled;
             txtTelepon.Enabled = enabled;
             txtTahunMasuk.Enabled = enabled;
-            txtUsername.Enabled = enabled;
-            txtPassword.Enabled = enabled;
+            //txtUsername.Enabled = enabled;
+            //xtPassword.Enabled = enabled;
 
             btnUpdate.Enabled = enabled;
             btnHapus.Enabled = enabled;
@@ -58,8 +54,8 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             txtTelepon.Clear();
             txtTahunMasuk.Clear();
             txtKelamin.Clear();
-            txtUsername.Clear();
-            txtPassword.Clear();
+            //txtUsername.Clear();
+            //txtPassword.Clear();
 
             // Reset ComboBox
             cbProdi.SelectedIndex = -1;  // Mengatur ulang ComboBox ke nilai default (tidak ada pilihan)
@@ -112,8 +108,8 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     update.Parameters.AddWithValue("@Email", txtEmail.Text);
                     update.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
                     update.Parameters.AddWithValue("@Tahun_Masuk", txtTahunMasuk.Text);
-                    update.Parameters.AddWithValue("@Username", txtUsername.Text);
-                    update.Parameters.AddWithValue("@Password", txtPassword.Text);
+                    //update.Parameters.AddWithValue("@Username", txtUsername.Text);
+                    //update.Parameters.AddWithValue("@Password", txtPassword.Text);
 
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
@@ -123,9 +119,9 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
-                    this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+                    this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
                     // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
-                    this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
+                    this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
                     // Memperbarui data di tampilan (jika ada)
                     //this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
                     // Panggil metode clear() jika ingin membersihkan form setelah update
@@ -155,7 +151,10 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
                     MessageBox.Show("Data berhasil dihapus", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
+                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+                    //this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
+                    this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
                     clear();
                     SetControlsEnabled(false);
                 }
@@ -216,8 +215,8 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                         txtEmail.Text = dataTable.Rows[0]["Email"].ToString();
                         txtTelepon.Text = dataTable.Rows[0]["Telepon"].ToString();
                         txtTahunMasuk.Text = dataTable.Rows[0]["Tahun_Masuk"].ToString();
-                        txtUsername.Text = dataTable.Rows[0]["Username"].ToString();
-                        txtPassword.Text = dataTable.Rows[0]["Password"].ToString();
+                        //txtUsername.Text = dataTable.Rows[0]["Username"].ToString();
+                        //txtPassword.Text = dataTable.Rows[0]["Password"].ToString();
 
                         // Mengaktifkan kontrol jika data ditemukan
                         SetControlsEnabled(true);
@@ -242,15 +241,10 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         private void btnRefersh_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
-            //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Mahasiswa' table. You can move, or remove it, as needed.
-            //this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            //this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
-            this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
-
+            this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
 
             // Set default state of controls
             SetControlsEnabled(false);

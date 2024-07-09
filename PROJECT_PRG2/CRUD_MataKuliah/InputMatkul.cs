@@ -69,8 +69,8 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
             if (result == DialogResult.Yes)
             {
-                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
-                SqlConnection connection = new SqlConnection(connectionstring);
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                SqlConnection connection = new SqlConnection(connectionString);
 
                 SqlCommand insert = new SqlCommand("sp_InsertMatkul", connection);
                 insert.CommandType = CommandType.StoredProcedure;

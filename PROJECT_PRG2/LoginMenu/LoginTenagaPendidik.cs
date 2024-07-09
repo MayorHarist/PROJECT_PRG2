@@ -16,7 +16,7 @@ namespace PROJECT_PRG2
 {
     public partial class LoginSbgTenDik : Form
     {
-        private string connectionString = "integrated security=true; data source =.; initial catalog=FINDSMART";
+        private string connectionString = "integrated security=true; data source =.; initial catalog=FINDSMART_MABRES";
 
         public LoginSbgTenDik()
         {

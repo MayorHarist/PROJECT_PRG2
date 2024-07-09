@@ -21,7 +21,7 @@ namespace PROJECT_PRG2
         private Guna.UI2.WinForms.Guna2Button btnKembali;
         private Guna.UI2.WinForms.Guna2TextBox txtSandi;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
-        private string connectionString = "integrated security=true; data source =.; initial catalog=FINDSMART";
+        private string connectionString = "integrated security=true; data source =.; initial catalog=FINDSMART_MABRES";
         public LoginMahasiswa()
         {
             InitializeComponent();

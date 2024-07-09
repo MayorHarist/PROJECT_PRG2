@@ -105,8 +105,8 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
             if (result == DialogResult.Yes)
             {
-                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
-                SqlConnection connection = new SqlConnection(connectionstring);
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                SqlConnection connection = new SqlConnection(connectionString);
 
                 SqlCommand insert = new SqlCommand("sp_InsertDosen", connection);
                 insert.CommandType = CommandType.StoredProcedure;
@@ -206,8 +206,8 @@ namespace PROJECT_PRG2.CRUD_Dosen
             }
 
             // Validasi lanjutan
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            SqlConnection connection = new SqlConnection(connectionString);
 
             try
             {
