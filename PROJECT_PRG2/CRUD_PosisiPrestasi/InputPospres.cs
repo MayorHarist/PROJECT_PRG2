@@ -28,23 +28,23 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            //string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string countQuery = "SELECT COUNT(*) FROM PosisiPrestasi";
+                string functionQuery = "SELECT dbo.autoIdPospres()";
 
-                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                using (SqlCommand functionCommand = new SqlCommand(functionQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-
-                    string newID = "PP" + count.ToString("000");
-
+                    string newID = functionCommand.ExecuteScalar().ToString();
                     txtIdPosisiPrestasi.Text = newID;
                     return newID;
                 }
             }
         }
+
 
         private void clear()
         {
@@ -60,8 +60,8 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            SqlConnection connection = new SqlConnection(connectionString);
 
             //Validasi masukan pengguna dalam variabel
             string idposisiprestasi = txtIdPosisiPrestasi.Text;

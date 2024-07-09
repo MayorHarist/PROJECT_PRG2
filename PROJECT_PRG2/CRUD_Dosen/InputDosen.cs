@@ -78,40 +78,70 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 return;
             }
 
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
-
-            SqlCommand insert = new SqlCommand("sp_InsertDosen", connection);
-            insert.CommandType = CommandType.StoredProcedure;
-
-            insert.Parameters.AddWithValue("No_Pegawai", txtPegawai.Text);
-            insert.Parameters.AddWithValue("NIDN", txtNIDN.Text);
-            insert.Parameters.AddWithValue("Nama", txtNama.Text);
-            insert.Parameters.AddWithValue("Bidang_Kompetensi", txtBidang.Text);
-            insert.Parameters.AddWithValue("Pendidikan_Terakhir", txtPendidikan.Text);
-            insert.Parameters.AddWithValue("Tanggal_Lahir", DateTimeTanggal.Value);
+            string noPegawai = txtPegawai.Text;
+            string nidn = txtNIDN.Text;
+            string nama = txtNama.Text;
+            string bidang = txtBidang.Text;
+            string pendidikan = txtPendidikan.Text;
+            DateTime tanggalLahir = DateTimeTanggal.Value;
             string jenisKelamin = rbLaki.Checked ? "Laki-Laki" : rbPerempuan.Checked ? "Perempuan" : string.Empty;
-            insert.Parameters.AddWithValue("Jenis_Kelamin", jenisKelamin);
-            insert.Parameters.AddWithValue("Alamat", txtAlamat.Text);
-            insert.Parameters.AddWithValue("Email", txtEmail.Text);
-            insert.Parameters.AddWithValue("Telepon", txtTelepon.Text);
+            string alamat = txtAlamat.Text;
+            string email = txtEmail.Text;
+            string telepon = txtTelepon.Text;
 
-            try
+            string message = $"Apakah Anda yakin ingin menyimpan data berikut?\n\n" +
+                             $"No Pegawai: {noPegawai}\n" +
+                             $"NIDN: {nidn}\n" +
+                             $"Nama: {nama}\n" +
+                             $"Bidang Kompetensi: {bidang}\n" +
+                             $"Pendidikan Terakhir: {pendidikan}\n" +
+                             $"Tanggal Lahir: {tanggalLahir.ToShortDateString()}\n" +
+                             $"Jenis Kelamin: {jenisKelamin}\n" +
+                             $"Alamat: {alamat}\n" +
+                             $"Email: {email}\n" +
+                             $"Telepon: {telepon}";
+
+            DialogResult result = MessageBox.Show(message, "Konfirmasi Simpan Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
             {
-                connection.Open();
-                insert.ExecuteNonQuery();
-                MessageBox.Show("Data berhasil disimpan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
+                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
+                SqlConnection connection = new SqlConnection(connectionstring);
+
+                SqlCommand insert = new SqlCommand("sp_InsertDosen", connection);
+                insert.CommandType = CommandType.StoredProcedure;
+
+                insert.Parameters.AddWithValue("No_Pegawai", noPegawai);
+                insert.Parameters.AddWithValue("NIDN", nidn);
+                insert.Parameters.AddWithValue("Nama", nama);
+                insert.Parameters.AddWithValue("Bidang_Kompetensi", bidang);
+                insert.Parameters.AddWithValue("Pendidikan_Terakhir", pendidikan);
+                insert.Parameters.AddWithValue("Tanggal_Lahir", tanggalLahir);
+                insert.Parameters.AddWithValue("Jenis_Kelamin", jenisKelamin);
+                insert.Parameters.AddWithValue("Alamat", alamat);
+                insert.Parameters.AddWithValue("Email", email);
+                insert.Parameters.AddWithValue("Telepon", telepon);
+
+                try
+                {
+                    connection.Open();
+                    insert.ExecuteNonQuery();
+                    MessageBox.Show("Data berhasil disimpan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tidak dapat menyimpan: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Tidak dapat menyimpan: " + ex.Message);
+                MessageBox.Show("Penyimpanan data dibatalkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void clear()
         {
-            txtPegawai.Text = "";
             txtNIDN.Text = "";
             txtNama.Text = "";
             txtBidang.Text = "";
@@ -126,22 +156,21 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string countQuery = "SELECT COUNT(*) FROM Dosen";
+                string functionQuery = "SELECT dbo.autoIdDosen()";
 
-                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                using (SqlCommand functionCommand = new SqlCommand(functionQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-                    string newID = "DOS" + count.ToString("000");
-
+                    string newID = functionCommand.ExecuteScalar().ToString();
                     txtPegawai.Text = newID;
                     return newID;
                 }
             }
         }
+
 
         private void btnKembali_Click(object sender, EventArgs e)
         {

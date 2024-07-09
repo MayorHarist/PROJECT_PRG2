@@ -4,15 +4,13 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using PROJECT_PRG2.CRUD_Prodi;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PROJECT_PRG2.CRUD_Dosen
 {
     public partial class ViewDosen : Form
     {
-        private bool panelDataMuncul = false;
-        private bool panelTransaksiMuncul = false;
-        private bool panelLaporanMuncul = false;
-        private int step = 10;
+        
 
         public ViewDosen()
         {
@@ -22,8 +20,14 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void ViewDosen_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet.Dosen' table. You can move, or remove it, as needed.
+            //this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDataSet.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
+            //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
         }
 
         private void btnTampil_Click(object sender, EventArgs e)
@@ -53,7 +57,8 @@ namespace PROJECT_PRG2.CRUD_Dosen
         {
             InputDosen inputDosen = new InputDosen();
             inputDosen.Show();
-         
+
+            toolTipTambah.SetToolTip(btnTambah, "Tambah Data");
         }
 
         
@@ -67,17 +72,17 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 string teksPencarian = txtCari.Text + e.KeyChar;
 
                 // Panggil metode untuk menyaring DataGridView
-                FilterDataGridView(teksPencarian);
+                //FilterDataGridView(teksPencarian);
             }
             else if (e.KeyChar == (char)Keys.Back && txtCari.Text.Length > 0)
             {
                 // Tangani tombol backspace
                 string teksPencarian = txtCari.Text.Substring(0, txtCari.Text.Length - 1);
-                FilterDataGridView(teksPencarian);
+                //FilterDataGridView(teksPencarian);
             }
         }
 
-        private void FilterDataGridView(string teksPencarian)
+        /*private void FilterDataGridView(string teksPencarian)
         {
             // Asumsikan `dosenTableAdapter` adalah adapter dan `fINDSMART` adalah DataSet
             string query = $@"SELECT * FROM Dosen WHERE 
@@ -104,67 +109,76 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
             // Perbarui DataGridView dengan hasil pencarian
             dgvDosen.DataSource = hasilPencarian;
-        }
+        }*/
 
         private void btnCari_Click(object sender, EventArgs e)
         {
             try
             {
-                // Validasi apakah txtPegawai kosong
+                // Validasi apakah txtCari kosong
                 if (string.IsNullOrWhiteSpace(txtCari.Text))
                 {
-                    MessageBox.Show("Silakan isi No Pegawai terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Silahkan isi kata kunci pencarian terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
                     DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("select * from Dosen where No_Pegawai= @No_Pegawai", connection);
-                    myCommand.Parameters.AddWithValue("@No_Pegawai", txtCari.Text);
+                    SqlCommand myCommand = new SqlCommand("sp_CariDosen", connection);
+                    myCommand.CommandType = CommandType.StoredProcedure;
+                    myCommand.Parameters.AddWithValue("@Cari", txtCari.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
                     if (dataTable.Rows.Count > 0)
                     {
-                        txtPegawai.Text = dataTable.Rows[0]["No_Pegawai"].ToString();
-                        txtNIDN.Text = dataTable.Rows[0]["NIDN"].ToString();
-                        txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
-                        txtBidang.Text = dataTable.Rows[0]["Bidang_Kompetensi"].ToString();
-                        txtPendidikan.Text = dataTable.Rows[0]["Pendidikan_Terakhir"].ToString();
+                        DataRow row = dataTable.Rows[0];
 
-                        // Convert Tanggal_Lahir to DateTime
-                        DateTime tanggalLahir;
-                        if (DateTime.TryParse(dataTable.Rows[0]["Tanggal_Lahir"].ToString(), out tanggalLahir))
+                        // Validasi field sebelum mengisi
+                        txtPegawai.Text = row["No_Pegawai"]?.ToString() ?? string.Empty;
+                        txtNIDN.Text = row["NIDN"]?.ToString() ?? string.Empty;
+                        txtNama.Text = row["Nama"]?.ToString() ?? string.Empty;
+                        txtBidang.Text = row["Bidang_Kompetensi"]?.ToString() ?? string.Empty;
+                        txtPendidikan.Text = row["Pendidikan_Terakhir"]?.ToString() ?? string.Empty;
+
+                        // Validasi dan konversi Tanggal_Lahir
+                        if (DateTime.TryParse(row["Tanggal_Lahir"]?.ToString(), out DateTime tanggalLahir))
                         {
                             DateTimeTanggal.Value = tanggalLahir;
                         }
+                        else
+                        {
+                            MessageBox.Show("Format Tanggal Lahir tidak valid.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        txtKelamin.Text= row["Jenis_Kelamin"]?.ToString() ?? string.Empty;
+                        txtAlamat.Text = row["Alamat"]?.ToString() ?? string.Empty;
+                        txtEmail.Text = row["Email"]?.ToString() ?? string.Empty;
+                        txtTelepon.Text = row["Telepon"]?.ToString() ?? string.Empty;
 
-                        // Set the radio button based on Jenis_Kelamin
-                        string jenisKelamin = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
-                        rbLaki.Checked = jenisKelamin == "Laki-laki";
-                        rbPerempuan.Checked = jenisKelamin == "Perempuan";
-                        txtAlamat.Text = dataTable.Rows[0]["Alamat"].ToString();
-                        txtEmail.Text = dataTable.Rows[0]["Email"].ToString();
-                        txtTelepon.Text = dataTable.Rows[0]["Telepon"].ToString();
+                        // Aktifkan input field dan tombol
+                        txtPegawai.Enabled = true;
+                        txtNIDN.Enabled = true;
+                        txtNama.Enabled = true;
+                        txtBidang.Enabled = true;
+                        txtPendidikan.Enabled = true;
+                        DateTimeTanggal.Enabled = true;
+                        /*rbLaki.Enabled = true;
+                        rbPerempuan.Enabled = true;*/
+                        txtAlamat.Enabled = true;
+                        txtEmail.Enabled = true;
+                        txtTelepon.Enabled = true;
+
+                        btnUpdate.Enabled = true;
+                        btnHapus.Enabled = true;
                     }
-
-                    txtNIDN.Enabled = true;
-                    txtNama.Enabled = true;
-                    txtBidang.Enabled = true;
-                    txtPendidikan.Enabled = true;
-                    DateTimeTanggal.Enabled = true;
-                    rbLaki.Enabled = true;
-                    rbPerempuan.Enabled = true;
-                    txtAlamat.Enabled = true;
-                    txtEmail.Enabled = true;
-                    txtTelepon.Enabled = true;
-
-                    btnUpdate.Enabled = true;
-                    btnHapus.Enabled = true;
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
                     connection.Close();
                 }
@@ -173,76 +187,115 @@ namespace PROJECT_PRG2.CRUD_Dosen
             {
                 MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void btnUbah_Click(object sender, EventArgs e)
         {
-            try
+            // Menampilkan kotak dialog konfirmasi
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin mengubah data ini?", "Konfirmasi Pengubahan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Jika pengguna memilih "Yes", lanjutkan dengan pengubahan
+            if (result == DialogResult.Yes)
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                try
                 {
-                    connection.Open();
+                    // Validasi apakah semua data telah terisi
+                    if (string.IsNullOrWhiteSpace(txtPegawai.Text) ||
+                        string.IsNullOrWhiteSpace(txtNIDN.Text) ||
+                        string.IsNullOrWhiteSpace(txtNama.Text) ||
+                        string.IsNullOrWhiteSpace(txtBidang.Text) ||
+                        string.IsNullOrWhiteSpace(txtPendidikan.Text) ||
+                        string.IsNullOrWhiteSpace(DateTimeTanggal.Text) ||
+                        string.IsNullOrWhiteSpace(txtKelamin.Text) ||
+                        string.IsNullOrWhiteSpace(txtAlamat.Text) ||
+                        string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                        string.IsNullOrWhiteSpace(txtTelepon.Text))
+                    {
+                        MessageBox.Show("Silakan isi semua data terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
-                    SqlCommand update = new SqlCommand("sp_UpdateDosen", connection);
-                    update.CommandType = CommandType.StoredProcedure;
+                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
 
-                    string jenisKelamin = rbLaki.Checked ? "Laki-laki" : "Perempuan";
+                        SqlCommand update = new SqlCommand("sp_UpdateDosen", connection);
+                        update.CommandType = CommandType.StoredProcedure;
 
-                    // Tambahkan parameter untuk stored procedure
-                    update.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
-                    update.Parameters.AddWithValue("@NIDN", txtNIDN.Text);
-                    update.Parameters.AddWithValue("@Nama", txtNama.Text);
-                    update.Parameters.AddWithValue("@Bidang_Kompetensi", txtBidang.Text);
-                    update.Parameters.AddWithValue("@Pendidikan_Terakhir", txtPendidikan.Text);
-                    update.Parameters.AddWithValue("@Tanggal_Lahir", DateTimeTanggal.Value);
-                    update.Parameters.AddWithValue("@Jenis_Kelamin", jenisKelamin);
-                    update.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
-                    update.Parameters.AddWithValue("@Email", txtEmail.Text);
-                    update.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
+                        
 
-                    // Eksekusi stored procedure
-                    update.ExecuteNonQuery();
+                        // Tambahkan parameter untuk stored procedure
+                        update.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
+                        update.Parameters.AddWithValue("@NIDN", txtNIDN.Text);
+                        update.Parameters.AddWithValue("@Nama", txtNama.Text);
+                        update.Parameters.AddWithValue("@Bidang_Kompetensi", txtBidang.Text);
+                        update.Parameters.AddWithValue("@Pendidikan_Terakhir", txtPendidikan.Text);
+                        update.Parameters.AddWithValue("@Tanggal_Lahir", DateTimeTanggal.Value);
+                        update.Parameters.AddWithValue("@Jenis_Kelamin", txtKelamin.Text);
+                        update.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
+                        update.Parameters.AddWithValue("@Email", txtEmail.Text);
+                        update.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
 
-                    // Menampilkan pesan jika eksekusi berhasil
-                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clear();
+                        // Eksekusi stored procedure
+                        update.ExecuteNonQuery();
+
+                        // Menampilkan pesan jika eksekusi berhasil
+                        MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Jika pengguna memilih "No", tidak melakukan apapun
+                MessageBox.Show("Pengubahan data dibatalkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
-            try
+            // Menampilkan kotak dialog konfirmasi
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi Penghapusan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Jika pengguna memilih "Yes", lanjutkan dengan penghapusan
+            if (result == DialogResult.Yes)
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connectionString);
+                try
+                {
+                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
 
-                connection.Open();
+                        SqlCommand delete = new SqlCommand("DELETE FROM Dosen WHERE No_Pegawai = @No_Pegawai", connection);
+                        delete.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
 
-                SqlCommand delete = new SqlCommand("sp_DeleteDosen", connection);
-                delete.CommandType = CommandType.StoredProcedure;
+                        delete.ExecuteNonQuery();
 
-                delete.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
-
-                delete.ExecuteNonQuery();
-
-
-                MessageBox.Show("Data berhasil dihapus", "Informasi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
+                        MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Jika pengguna memilih "No", tidak melakukan apapun
+                MessageBox.Show("Penghapusan data dibatalkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
         private void clear()
         {
@@ -252,8 +305,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
             txtBidang.Text = "";
             txtPendidikan.Text = "";
             DateTimeTanggal.Value = DateTime.Now;
-            rbLaki.Checked = false;
-            rbPerempuan.Checked = false;
+            txtKelamin.Text = "";
             txtAlamat.Text = "";
             txtEmail.Text = "";
             txtTelepon.Text = "";
@@ -286,9 +338,8 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 }
 
                 // Set radio button berdasarkan Jenis_Kelamin
-                string jenisKelamin = row.Cells["Jenis_Kelamin"].Value?.ToString();
-                rbLaki.Checked = jenisKelamin == "Laki-laki";
-                rbPerempuan.Checked = jenisKelamin == "Perempuan";
+                txtKelamin.Text = row.Cells["Jenis_Kelamin"].Value?.ToString();
+                
 
                 txtAlamat.Text = row.Cells["Alamat"].Value?.ToString();
                 txtEmail.Text = row.Cells["Email"].Value?.ToString();
@@ -300,8 +351,6 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 txtBidang.Enabled = true;
                 txtPendidikan.Enabled = true;
                 DateTimeTanggal.Enabled = true;
-                rbLaki.Enabled = true;
-                rbPerempuan.Enabled = true;
                 txtAlamat.Enabled = true;
                 txtEmail.Enabled = true;
                 txtTelepon.Enabled = true;
@@ -313,9 +362,12 @@ namespace PROJECT_PRG2.CRUD_Dosen
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.Dosen);
+
             // Ensure the Guna2DataGridView scrollbars are set correctly
             this.dgvDosen.ScrollBars = ScrollBars.Both;
 
@@ -388,7 +440,25 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         }
 
-       
+        private void txtPendidikan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void tooltipupdate_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void tooltipHapus_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }
 

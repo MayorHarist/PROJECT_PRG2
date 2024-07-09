@@ -30,8 +30,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void btnTambahTendik_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            //string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            SqlConnection connection = new SqlConnection(connectionString);
 
             // Validasi email menggunakan regex
             if (!IsValidEmail(txtEmailTendik.Text))
@@ -118,30 +119,22 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         public string autoid()
         {
-            string newID = "";
-
-            string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
-
-            using (SqlConnection connection = new SqlConnection(connectionstring))
+            //string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
+                string functionQuery = "SELECT dbo.autoIdTendik()";
 
-                string countQuery = "SELECT COUNT(*) FROM TenagaKependidikan";
-
-                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                using (SqlCommand functionCommand = new SqlCommand(functionQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-
-                    newID = "TKN" + count.ToString("000");
-
+                    string newID = functionCommand.ExecuteScalar().ToString();
                     txtIDTendik.Text = newID;
                     return newID;
                 }
             }
-
-            // txtIDTendik.Text = newID; // Jangan mengubah UI di dalam method ini
-            return newID;
         }
+
 
 
         private void btnBatalTendik_Click(object sender, EventArgs e)

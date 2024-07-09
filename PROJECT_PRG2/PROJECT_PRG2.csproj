@@ -276,6 +276,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FINDSMARTDataSet7.cs">
+      <DependentUpon>FINDSMARTDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FINDSMARTDataSet7.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -290,6 +293,19 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMARTDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINDSMART_MABRESDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMART_MABRESDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINDSMART_MABRESDsAll.cs">
+      <DependentUpon>FINDSMART_MABRESDsAll.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINDSMART_MABRESDsAll.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMART_MABRESDsAll.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginMenu\LoginKepalaTendik.cs">
       <SubType>Form</SubType>
@@ -555,6 +571,28 @@
     <None Include="FINDSMARTDataSet9.xss">
       <DependentUpon>FINDSMARTDataSet9.xsd</DependentUpon>
     </None>
+    <None Include="FINDSMART_MABRESDataSet.xsc">
+      <DependentUpon>FINDSMART_MABRESDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMART_MABRESDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet.xss">
+      <DependentUpon>FINDSMART_MABRESDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMART_MABRESDsAll.xsc">
+      <DependentUpon>FINDSMART_MABRESDsAll.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMART_MABRESDsAll.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMART_MABRESDsAll.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMART_MABRESDsAll.xss">
+      <DependentUpon>FINDSMART_MABRESDsAll.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -686,6 +724,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Dashboard Mahasiswa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_594822.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

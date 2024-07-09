@@ -20,10 +20,14 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void UpdatePengumuman_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Pengumuman' table. You can move, or remove it, as needed.
+            this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
-            this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
+            //this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
         }
 
         private void clear()
@@ -52,7 +56,8 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+                //string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -115,8 +120,9 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             
             try
             {
-                string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
-                using (SqlConnection connection = new SqlConnection(connectionstring))
+                //string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
@@ -146,8 +152,12 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Memperbarui data di tampilan (jika ada)
-                    this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
-                    this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
+                    //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+                    //this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
+                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
+                    this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Pengumuman' table. You can move, or remove it, as needed.
+                    this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
                     clear();
 
                     // Menambahkan tooltip untuk ImageButton
@@ -166,18 +176,24 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             {
                 try
                 {
-                    string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+                    //string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+                    string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                     SqlConnection connection = new SqlConnection(connectionString);
 
                     connection.Open();
 
-                    SqlCommand delete = new SqlCommand("sp_DeletePengumuman", connection);
+                    /*SqlCommand delete = new SqlCommand("sp_DeletePengumuman", connection);
                     delete.CommandType = CommandType.StoredProcedure;
 
                     delete.Parameters.AddWithValue("@Id_Pengumuman", txtCariPM.Text);
                     //delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
 
+                    delete.ExecuteNonQuery();*/
+
+                    SqlCommand delete = new SqlCommand("DELETE FROM Pengumuman WHERE Id_Pengumuman = @Id_Pengumuman", connection);
+                    delete.Parameters.AddWithValue("@Id_Pengumuman", txtIDPM.Text);
                     delete.ExecuteNonQuery();
+
 
 
                     MessageBox.Show("Data berhasil dihapus", "Informasi",
@@ -202,9 +218,29 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
-            this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
+            //this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Pengumuman' table. You can move, or remove it, as needed.
+            this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
+
+        }
+
+        private void btnRefersh_Click(object sender, EventArgs e)
+        {
+            //this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Pengumuman' table. You can move, or remove it, as needed.
+            this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
+          
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

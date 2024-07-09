@@ -18,28 +18,70 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             InitializeComponent();
             autoid();
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Dosen);
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            if (Validasi())
+            // Validasi apakah semua field telah diisi
+            if (string.IsNullOrWhiteSpace(txtIdMatkul.Text) ||
+                string.IsNullOrWhiteSpace(txtNama.Text) ||
+                string.IsNullOrWhiteSpace(txtSKS.Text) ||
+                string.IsNullOrWhiteSpace(txtJenis.Text) ||
+                string.IsNullOrWhiteSpace(txtSemester.Text) ||
+                cbPegawai.SelectedValue == null ||
+                cbProdi.SelectedValue == null)
             {
-                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+                MessageBox.Show("Silakan lengkapi semua data terlebih dahulu.", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validasi tambahan sesuai kebutuhan
+            // Misalnya, validasi untuk SKS harus angka
+            int sks;
+            if (!int.TryParse(txtSKS.Text, out sks))
+            {
+                MessageBox.Show("Jumlah SKS harus berupa angka.", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Konstruksi teks konfirmasi
+            string dataKonfirmasi = "Data yang akan disimpan:\n\n" +
+                             "ID Mata Kuliah: " + txtIdMatkul.Text + "\n" +
+                             "Nama: " + txtNama.Text + "\n" +
+                             "Jumlah SKS: " + txtSKS.Text + "\n" +
+                             "Jenis: " + txtJenis.Text + "\n" +
+                             "Semester: " + txtSemester.Text + "\n" +
+                             "Pegawai: " + cbPegawai.Text + "\n" +
+                             "Program Studi: " + cbProdi.Text + "\n\n" +
+                             "Apakah Anda yakin ingin menyimpan data?";
+
+            DialogResult result = MessageBox.Show(dataKonfirmasi, "Konfirmasi",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
                 SqlConnection connection = new SqlConnection(connectionstring);
 
                 SqlCommand insert = new SqlCommand("sp_InsertMatkul", connection);
                 insert.CommandType = CommandType.StoredProcedure;
 
-                insert.Parameters.AddWithValue("Id_Matkul", txtIdMatkul.Text);
-                insert.Parameters.AddWithValue("Nama", txtNama.Text);
-                insert.Parameters.AddWithValue("Jumlah_SKS", txtSKS.Text);
-                insert.Parameters.AddWithValue("Jenis", txtJenis.Text);
-                insert.Parameters.AddWithValue("Semester", txtSemester.Text);
-                insert.Parameters.AddWithValue("No_Pegawai", cbPegawai.SelectedValue);
-                insert.Parameters.AddWithValue("Id_Prodi", cbProdi.SelectedValue);
+                insert.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
+                insert.Parameters.AddWithValue("@Nama", txtNama.Text);
+                insert.Parameters.AddWithValue("@Jumlah_SKS", txtSKS.Text);
+                insert.Parameters.AddWithValue("@Jenis", txtJenis.Text);
+                insert.Parameters.AddWithValue("@Semester", txtSemester.Text);
+                insert.Parameters.AddWithValue("@No_Pegawai", cbPegawai.SelectedValue.ToString());
+                insert.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedValue.ToString());
 
                 try
                 {
@@ -53,8 +95,13 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 {
                     MessageBox.Show("Tidak dapat menyimpan data: " + ex.Message);
                 }
+                finally
+                {
+                    connection.Close();
+                }
             }
         }
+
 
         private bool Validasi()
         {
@@ -112,10 +159,14 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void InputMatkul_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+            //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+            //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
             //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet6.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.Dosen' table. You can move, or remove it, as needed.
@@ -128,23 +179,22 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string countQuery = "SELECT COUNT(*) FROM MataKuliah";
+                string functionQuery = "SELECT dbo.autoIdMatkul()";
 
-                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                using (SqlCommand functionCommand = new SqlCommand(functionQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-
-                    string newID = "M" + count.ToString("000");
-
+                    string newID = functionCommand.ExecuteScalar().ToString();
                     txtIdMatkul.Text = newID;
                     return newID;
                 }
             }
         }
+
+
 
         private void btnKembali_Click(object sender, EventArgs e)
         {

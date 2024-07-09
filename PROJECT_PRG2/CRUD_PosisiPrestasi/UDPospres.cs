@@ -21,8 +21,10 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void UDPospres_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.PosisiPrestasi' table. You can move, or remove it, as needed.
+            this.posisiPrestasiTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.PosisiPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet71.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
+            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
 
         }
 
@@ -30,8 +32,8 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         {
             try
             {
-                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connnectionString);
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
 
                 DataTable dataTable = new DataTable();
@@ -65,7 +67,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
             //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
             //this.posisiPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.PosisiPrestasi);
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
+            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
 
         }
 
@@ -84,7 +86,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         {
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 SqlConnection connection = new SqlConnection(connectionString);
                 {
                     connection.Open();
@@ -113,7 +115,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
             // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
             //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
+            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
         }
 
         private void txtIdPosisiPrestasi_KeyPress(object sender, KeyPressEventArgs e)
@@ -130,13 +132,17 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         {
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
 
-                SqlCommand delete = new SqlCommand("sp_DeletePosisiPrestasi", connection);
-                delete.CommandType = CommandType.StoredProcedure;
+                /* SqlCommand delete = new SqlCommand("sp_DeletePosisiPrestasi", connection);
+                 delete.CommandType = CommandType.StoredProcedure;
 
+                 delete.Parameters.AddWithValue("@Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
+                 delete.ExecuteNonQuery();*/
+
+                SqlCommand delete = new SqlCommand("DELETE FROM PosisiPrestasi WHERE Id_PosisiPrestasi = @Id_PosisiPrestasi", connection);
                 delete.Parameters.AddWithValue("@Id_PosisiPrestasi", txtIdPosisiPrestasi.Text);
                 delete.ExecuteNonQuery();
 
@@ -152,7 +158,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
             // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
             //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
+            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
         }
 
         private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
@@ -163,6 +169,12 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
                 e.Handled = true;
                 MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnRefersh_Click(object sender, EventArgs e)
+        {
+            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
+
         }
     }
 }

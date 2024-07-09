@@ -17,10 +17,12 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         private void InputMahasiswa_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
+            //this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-           
-
+            //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             // Validasi semua data harus diisi
             if (IsFormValid())
             {
-                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+                string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionstring))
                 {
                     SqlCommand insert = new SqlCommand("sp_InsertMahasiswa", connection);
@@ -70,23 +72,23 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         }
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string countQuery = "SELECT COUNT(*) FROM Mahasiswa";
 
-                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                string functionQuery = "SELECT dbo.autoIdMahasiswa()";
+
+                using (SqlCommand command = new SqlCommand(functionQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-
-                    string newID = "MHS" + count.ToString("000");
+                    string newID = command.ExecuteScalar().ToString();
 
                     txtNIM.Text = newID;
                     return newID;
                 }
             }
         }
+
         private bool IsFormValid()
         {
             // Validasi untuk memastikan semua data telah diisi

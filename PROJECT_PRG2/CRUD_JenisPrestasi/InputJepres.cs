@@ -26,17 +26,16 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         public string autoid()
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
-            SqlConnection connection = new SqlConnection(connectionstring);
+            string connectionString = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string countQuery = "SELECT COUNT(*) FROM JenisPrestasi";
 
-                using (SqlCommand countCommand = new SqlCommand(countQuery, connection))
+                string functionQuery = "SELECT dbo.autoIdJepres()";
+
+                using (SqlCommand command = new SqlCommand(functionQuery, connection))
                 {
-                    int count = Convert.ToInt32(countCommand.ExecuteScalar()) + 1;
-
-                    string newID = "JP" + count.ToString("000");
+                    string newID = command.ExecuteScalar().ToString();
 
                     txtIdJenisPrestasi.Text = newID;
                     return newID;
@@ -44,9 +43,10 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             }
         }
 
+
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
+            string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART_MABRES";
             SqlConnection connection = new SqlConnection(connectionstring);
 
             //Validasi masukan pengguna dalam variabel

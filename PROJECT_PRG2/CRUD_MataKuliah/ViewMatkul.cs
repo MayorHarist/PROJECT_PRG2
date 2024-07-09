@@ -20,12 +20,24 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void ViewMatkul_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.MataKuliah' table. You can move, or remove it, as needed.
+            this.mataKuliahTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.MataKuliah);
+            /* // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
+             this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
+             this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
+             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
+             this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
 
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet6.MataKuliah' table. You can move, or remove it, as needed.
-            //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet6.MataKuliah);
-            // TODO: This line of code loads data into the 'fINDSMART.MataKuliah' table. You can move, or remove it, as needed.
+             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.MataKuliah' table. You can move, or remove it, as needed.
+             //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet6.MataKuliah);
+             // TODO: This line of code loads data into the 'fINDSMART.MataKuliah' table. You can move, or remove it, as needed.
 
-            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+             this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);*/
 
         }
 
@@ -48,12 +60,50 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             InputMatkul inputMatkul = new InputMatkul();
             inputMatkul.Show();
-            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+            //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);  // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.MataKuliah' table. You can move, or remove it, as needed.
+            this.mataKuliahTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.MataKuliah);
 
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            // Validasi apakah semua data telah terisi
+            if (string.IsNullOrWhiteSpace(txtIdMatkul.Text) ||
+                string.IsNullOrWhiteSpace(txtNama.Text) ||
+                string.IsNullOrWhiteSpace(txtSKS.Text) ||
+                string.IsNullOrWhiteSpace(txtJenis.Text) ||
+                string.IsNullOrWhiteSpace(txtSemester.Text) ||
+                cbPegawai.SelectedValue == null ||
+                cbProdi.SelectedValue == null)
+            {
+                MessageBox.Show("Silakan isi semua data terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tampilkan kotak dialog konfirmasi
+            DialogResult result = MessageBox.Show(
+                $"Apakah Anda yakin ingin mengubah data berikut?\n\n" +
+                $"ID Mata Kuliah: {txtIdMatkul.Text}\n" +
+                $"Nama: {txtNama.Text}\n" +
+                $"Jumlah SKS: {txtSKS.Text}\n" +
+                $"Jenis: {txtJenis.Text}\n" +
+                $"Semester: {txtSemester.Text}\n" +
+                $"No Pegawai: {cbPegawai.SelectedValue.ToString()}\n" +
+                $"ID Prodi: {cbProdi.SelectedValue.ToString()}\n",
+                "Konfirmasi Pembaruan Data",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            // Jika pengguna memilih 'No', batalkan pembaruan
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
             try
             {
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
@@ -67,12 +117,11 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     // Tambahkan parameter untuk stored procedure
                     update.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
                     update.Parameters.AddWithValue("@Nama", txtNama.Text);
-                    update.Parameters.AddWithValue("@Jumlah_SKS", txtSKS.Text);
+                    update.Parameters.AddWithValue("@Jumlah_SKS", Convert.ToInt32(txtSKS.Text));
                     update.Parameters.AddWithValue("@Jenis", txtJenis.Text);
-                    update.Parameters.AddWithValue("@Semester", txtSemester.Text);
-                    update.Parameters.AddWithValue("@Status", txtStatus.Text);
-                    update.Parameters.AddWithValue("@No_Pegawai", cbPegawai.SelectedText);
-                    update.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedText);
+                    update.Parameters.AddWithValue("@Semester", Convert.ToInt32(txtSemester.Text));
+                    update.Parameters.AddWithValue("@No_Pegawai", cbPegawai.SelectedValue.ToString());
+                    update.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedValue.ToString());
 
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
@@ -91,34 +140,58 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             }
         }
 
+
+
         private void btnHapus_Click(object sender, EventArgs e)
         {
+            // Validasi apakah ID Mata Kuliah telah diisi
+            if (string.IsNullOrWhiteSpace(txtIdMatkul.Text))
+            {
+                MessageBox.Show("Silakan pilih data yang akan dihapus.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tampilkan kotak dialog konfirmasi
+            DialogResult result = MessageBox.Show(
+                $"Apakah Anda yakin ingin menghapus data mata kuliah dengan ID {txtIdMatkul.Text}?",
+                "Konfirmasi Penghapusan Data",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            // Jika pengguna memilih 'No', batalkan penghapusan
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
             try
             {
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connectionString);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                connection.Open();
+                    // Menggunakan SqlCommand untuk menjalankan perintah DELETE yang akan memicu trigger trgInsteadOfDeleteMatkul
+                    SqlCommand deleteCommand = new SqlCommand("DELETE FROM Matakuliah WHERE Id_Matkul = @Id_Matkul", connection);
+                    deleteCommand.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
+                    deleteCommand.ExecuteNonQuery();
 
-                SqlCommand delete = new SqlCommand("sp_DeleteMatkul", connection);
-                delete.CommandType = CommandType.StoredProcedure;
+                    // Menampilkan pesan jika eksekusi berhasil
+                    MessageBox.Show("Data berhasil dihapus", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                delete.Parameters.AddWithValue("@Id_Matkul", txtIdMatkul.Text);
-                delete.Parameters.AddWithValue("@Status", "Tidak Aktif");
-
-                delete.ExecuteNonQuery();
-
-                this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
-
-                MessageBox.Show("Data berhasil dihapus", "Informasi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
+                    // Refresh data grid atau tindakan lain setelah penghapusan
+                    //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+                    clear(); // Memanggil metode clear untuk membersihkan input fields
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
         private void clear()
         {
@@ -127,7 +200,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             txtSKS.Text = "";
             txtJenis.Text = "";
             txtSemester.Text = "";
-            txtStatus.Text = "";
             cbPegawai.SelectedText = "";
             cbProdi.SelectedText = "";
         }
@@ -136,7 +208,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             try
             {
-                // Validasi apakah txtIdMatkul kosong
+                // Validasi apakah txtCari kosong
                 if (string.IsNullOrWhiteSpace(txtCari.Text))
                 {
                     MessageBox.Show("Silakan isi Id Mata Kuliah dahulu.", "Peringatan",
@@ -150,8 +222,9 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     connection.Open();
 
                     DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("select * from MataKuliah where Id_Matkul= @Id_Matkul", connection);
-                    myCommand.Parameters.AddWithValue("@Id_Matkul", txtCari.Text);
+                    SqlCommand myCommand = new SqlCommand("sp_CariMatkul", connection);
+                    myCommand.CommandType = CommandType.StoredProcedure;
+                    myCommand.Parameters.AddWithValue("@Cari", txtCari.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
@@ -162,9 +235,13 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                         txtSKS.Text = dataTable.Rows[0]["Jumlah_SKS"].ToString();
                         txtJenis.Text = dataTable.Rows[0]["Jenis"].ToString();
                         txtSemester.Text = dataTable.Rows[0]["Semester"].ToString();
-                        txtStatus.Text = dataTable.Rows[0]["Status"].ToString();
-                        cbPegawai.SelectedText = dataTable.Rows[0]["No_Pegawai"].ToString();
-                        cbProdi.SelectedText = dataTable.Rows[0]["Id_Prodi"].ToString();
+                        cbPegawai.SelectedValue = dataTable.Rows[0]["No_Pegawai"].ToString();
+                        cbProdi.SelectedValue = dataTable.Rows[0]["Id_Prodi"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Informasi",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     txtIdMatkul.Enabled = true;
@@ -172,7 +249,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     txtSKS.Enabled = true;
                     txtJenis.Enabled = true;
                     txtSemester.Enabled = true;
-                    txtStatus.Enabled = true;
                     cbPegawai.Enabled = true;
                     cbProdi.Enabled = true;
 
@@ -188,44 +264,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             }
         }
 
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.dosenTableAdapter.FillBy(this.fINDSMARTDataSet1.Dosen);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
 
-        }
-
-        private void fillByToolStripButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.programStudiTableAdapter.FillBy(this.fINDSMARTDataSet2.ProgramStudi);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.dosenTableAdapter.FillBy1(this.fINDSMARTDataSet1.Dosen);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
@@ -234,12 +273,25 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter1.Fill(this.fINDSMARTDataSet7.ProgramStudi);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter1.Fill(this.fINDSMARTDataSet7.Dosen);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
-            this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+            //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.MataKuliah' table. You can move, or remove it, as needed.
+            this.mataKuliahTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.MataKuliah);
+        }
+
+        private void btnRefersh_Click(object sender, EventArgs e)
+        {
+            //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Dosen);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.MataKuliah' table. You can move, or remove it, as needed.
+            this.mataKuliahTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.MataKuliah);
+
         }
     }
 }

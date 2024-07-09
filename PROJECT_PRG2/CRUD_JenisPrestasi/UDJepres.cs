@@ -20,8 +20,10 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         private void UDJepres_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.JenisPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.JenisPrestasi' table. You can move, or remove it, as needed.
-            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
             //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
         }
@@ -46,14 +48,14 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
             //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
-            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
 
         }
         private void btnUpdateJP_Click(object sender, EventArgs e)
         {
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 SqlConnection connection = new SqlConnection(connectionString);
                 {
                     connection.Open();
@@ -83,7 +85,7 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             }
             // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
             //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
-            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
@@ -95,29 +97,43 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         {
             try
             {
-                string connnectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connnectionString);
-                connection.Open();
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                DataTable dataTable = new DataTable();
-                SqlCommand myCommand = new SqlCommand("Select * from JenisPrestasi where Id_JenisPrestasi= @Id_JenisPrestasi", connection);
-                myCommand.Parameters.AddWithValue("@Id_JenisPrestasi", txtCari.Text);
-                SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
-                myAdapter.Fill(dataTable);
+                    DataTable dataTable = new DataTable();
+                    using (SqlCommand myCommand = new SqlCommand("sp_CariJepres", connection))
+                    {
+                        myCommand.CommandType = CommandType.StoredProcedure;
+                        myCommand.Parameters.AddWithValue("@Cari", string.IsNullOrEmpty(txtCari.Text) ? (object)DBNull.Value : txtCari.Text);
 
-                txtIdJenisPrestasi.Text = dataTable.Rows[0]["Id_JenisPrestasi"].ToString();
-                txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
-                txtPeran.Text = dataTable.Rows[0]["Peran"].ToString();
-                txtPenyelenggara.Text = dataTable.Rows[0]["Penyelenggara"].ToString();
-                txtPoint.Text = dataTable.Rows[0]["Point"].ToString();
+                        using (SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand))
+                        {
+                            myAdapter.Fill(dataTable);
+                        }
+                    }
 
-                connection.Close();
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        txtIdJenisPrestasi.Text = dataTable.Rows[0]["Id_JenisPrestasi"].ToString();
+                        txtNama.Text = dataTable.Rows[0]["Nama"].ToString();
+                        txtPeran.Text = dataTable.Rows[0]["Peran"].ToString();
+                        txtPenyelenggara.Text = dataTable.Rows[0]["Penyelenggara"].ToString();
+                        txtPoint.Text = dataTable.Rows[0]["Point"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No records found.");
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error : " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
+
 
         private void txtIdJenisPrestasi_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -133,30 +149,32 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
         {
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
-                SqlConnection connection = new SqlConnection(connectionString);
-                connection.Open();
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                SqlCommand delete = new SqlCommand("sp_DeleteJenisPrestasi", connection);
-                delete.CommandType = CommandType.StoredProcedure;
+                    using (SqlCommand delete = new SqlCommand("DELETE FROM JenisPrestasi WHERE Id_JenisPrestasi = @Id_JenisPrestasi", connection))
+                    {
+                        delete.Parameters.AddWithValue("@Id_JenisPrestasi", txtIdJenisPrestasi.Text);
+                        delete.ExecuteNonQuery();
+                    }
 
-                delete.Parameters.AddWithValue("@Id_JenisPrestasi", txtIdJenisPrestasi.Text);
-                delete.ExecuteNonQuery();
+                    MessageBox.Show("Data jenis prestasi berhasil dihapus (status updated to 'Tidak Aktif')", "Informasi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
 
-                MessageBox.Show("Data jenis prestasi berhasil dihapus", "Informasi",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
-
+                    // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
+                    //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
+                    //this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet8.JenisPrestasi' table. You can move, or remove it, as needed.
-            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMARTDataSet8.JenisPrestasi);
-            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.JenisPrestasi);
         }
+
 
         private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -174,6 +192,13 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
                 e.Handled = true;
                 MessageBox.Show("Point hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnRefersh_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.JenisPrestasi);
+
         }
     }
 }

@@ -52,9 +52,17 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.DosenTableAdapter();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
+            this.dosenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dosenTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.DosenTableAdapter();
+            this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -315,7 +323,7 @@
             // 
             // cbPegawai
             // 
-            this.cbPegawai.DataSource = this.dosenBindingSource;
+            this.cbPegawai.DataSource = this.dosenBindingSource1;
             this.cbPegawai.DisplayMember = "Nama";
             this.cbPegawai.FormattingEnabled = true;
             this.cbPegawai.ItemHeight = 13;
@@ -338,7 +346,7 @@
             // 
             // cbProdi
             // 
-            this.cbProdi.DataSource = this.programStudiBindingSource;
+            this.cbProdi.DataSource = this.programStudiBindingSource1;
             this.cbProdi.DisplayMember = "Nama";
             this.cbProdi.FormattingEnabled = true;
             this.cbProdi.ItemHeight = 13;
@@ -388,6 +396,29 @@
             // 
             this.programStudiTableAdapter.ClearBeforeFill = true;
             // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dosenBindingSource1
+            // 
+            this.dosenBindingSource1.DataMember = "Dosen";
+            this.dosenBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // dosenTableAdapter1
+            // 
+            this.dosenTableAdapter1.ClearBeforeFill = true;
+            // 
+            // programStudiBindingSource1
+            // 
+            this.programStudiBindingSource1.DataMember = "ProgramStudi";
+            this.programStudiBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // programStudiTableAdapter1
+            // 
+            this.programStudiTableAdapter1.ClearBeforeFill = true;
+            // 
             // InputMatkul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,6 +453,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,5 +486,10 @@
         private FINDSMARTDataSet7TableAdapters.DosenTableAdapter dosenTableAdapter;
         private System.Windows.Forms.BindingSource programStudiBindingSource;
         private FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
+        private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
+        private System.Windows.Forms.BindingSource dosenBindingSource1;
+        private FINDSMART_MABRESDsAllTableAdapters.DosenTableAdapter dosenTableAdapter1;
+        private System.Windows.Forms.BindingSource programStudiBindingSource1;
+        private FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter programStudiTableAdapter1;
     }
 }
