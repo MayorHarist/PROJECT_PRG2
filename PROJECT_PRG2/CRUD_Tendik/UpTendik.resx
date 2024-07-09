@@ -288,6 +288,9 @@
         uBYMT9++NsQ1YjD73+J31qTlo+Lsttv/A1SXKCOCVqMXAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="tTipHapusTendik.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>777, 54</value>
+  </metadata>
   <data name="btnUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -493,6 +496,9 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="tTipEditTendik.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>649, 54</value>
+  </metadata>
   <data name="btnTambahTendik.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -1021,7 +1027,16 @@
         queE76e6PYqfnY+xJpX6//PrMjZXyig0AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="tTipTambahTendik.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>499, 54</value>
+  </metadata>
   <metadata name="tenagaKependidikanTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>262, 54</value>
+  </metadata>
+  <metadata name="tTipRefreshTendik.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 91</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>181</value>
   </metadata>
 </root>

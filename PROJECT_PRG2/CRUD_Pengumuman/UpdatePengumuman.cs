@@ -13,6 +13,8 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 {
     public partial class UpdatePengumuman : Form
     {
+        private object tooltipCari;
+
         public UpdatePengumuman()
         {
             InitializeComponent();
@@ -89,13 +91,13 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
                         btnUpPengumuman.Enabled = true;
                         btnHapusPM.Enabled = true;
+
+                        
                     }
                     else
                     {
                         // Menampilkan pesan jika data tidak ditemukan
                         MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
                     }
                     connection.Close();
                 }

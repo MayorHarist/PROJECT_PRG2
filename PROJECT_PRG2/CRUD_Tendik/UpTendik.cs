@@ -42,6 +42,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
         {
             DataTendik dataTendik = new DataTendik();
             dataTendik.Show();
+
+            // Menambahkan tooltip untuk ImageButton
+            tTipTambahTendik.SetToolTip(btnTambahTendik, "Tambah Data");
         }
 
         private void btnKembali_Click(object sender, EventArgs e)
@@ -95,6 +98,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
                             TelpTendik.Text = dataTable.Rows[0]["Telepon"].ToString();
                             userNmTendik.Text = dataTable.Rows[0]["Username"].ToString();
                             txtPassTendik.Text = dataTable.Rows[0]["Password"].ToString();
+
+                           
 
                             txtIDTendik.Enabled = true;
                             txtNamaTendik.Enabled = true;
@@ -161,6 +166,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     // Memperbarui data di tampilan (jika ada)
                     this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
                     clear();
+
+                    // Menambahkan tooltip untuk ImageButton
+                    tTipEditTendik.SetToolTip(btnUpdate, "Perbarui Data");
                 }
             }
             catch (Exception ex)
@@ -188,6 +196,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     MessageBox.Show("Data berhasil dihapus", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
+
+                    // Menambahkan tooltip untuk ImageButton
+                    tTipHapusTendik.SetToolTip(btnHapus_, "Hapus Data");
                 }
                 catch (Exception ex)
                 {
@@ -197,12 +208,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
             } 
         }
 
-
-
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void btnRefersh_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
-            //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
             this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
         }

@@ -68,6 +68,8 @@
             this.teleponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
@@ -79,18 +81,20 @@
             this.btnTambahTendik = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.rbLaki = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.rbPuan = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
-            this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
+            this.tTipTambahTendik = new System.Windows.Forms.ToolTip(this.components);
+            this.tTipEditTendik = new System.Windows.Forms.ToolTip(this.components);
+            this.tTipHapusTendik = new System.Windows.Forms.ToolTip(this.components);
+            this.btnRefersh = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.tTipRefreshTendik = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -520,7 +524,7 @@
             this.dgvUpTendik.RowHeadersVisible = false;
             this.dgvUpTendik.RowHeadersWidth = 72;
             this.dgvUpTendik.RowTemplate.Height = 31;
-            this.dgvUpTendik.Size = new System.Drawing.Size(903, 289);
+            this.dgvUpTendik.Size = new System.Drawing.Size(900, 256);
             this.dgvUpTendik.TabIndex = 163;
             this.dgvUpTendik.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
             this.dgvUpTendik.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
@@ -599,6 +603,16 @@
             this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             // 
+            // tenagaKependidikanBindingSource1
+            // 
+            this.tenagaKependidikanBindingSource1.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tenagaKependidikanBindingSource
             // 
             this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
@@ -616,14 +630,14 @@
             this.txtCari.BorderColor = System.Drawing.Color.Black;
             this.txtCari.BorderRadius = 10;
             this.txtCari.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCari.DefaultText = "";
+            this.txtCari.DefaultText = "Cari Tendik";
             this.txtCari.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCari.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCari.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCari.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCari.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtCari.ForeColor = System.Drawing.Color.Black;
+            this.txtCari.ForeColor = System.Drawing.Color.Gray;
             this.txtCari.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCari.Location = new System.Drawing.Point(619, 44);
             this.txtCari.Margin = new System.Windows.Forms.Padding(5);
@@ -681,6 +695,7 @@
             this.btnHapus_.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnHapus_.Size = new System.Drawing.Size(23, 25);
             this.btnHapus_.TabIndex = 168;
+            this.tTipHapusTendik.SetToolTip(this.btnHapus_, "Hapus Data");
             this.btnHapus_.UseTransparentBackground = true;
             this.btnHapus_.Click += new System.EventHandler(this.btnHapus__Click);
             // 
@@ -699,6 +714,7 @@
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnUpdate.Size = new System.Drawing.Size(32, 32);
             this.btnUpdate.TabIndex = 167;
+            this.tTipEditTendik.SetToolTip(this.btnUpdate, "Perbarui Data");
             this.btnUpdate.UseTransparentBackground = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -717,6 +733,7 @@
             this.btnTambahTendik.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnTambahTendik.Size = new System.Drawing.Size(27, 32);
             this.btnTambahTendik.TabIndex = 166;
+            this.tTipTambahTendik.SetToolTip(this.btnTambahTendik, "Tambah Data");
             this.btnTambahTendik.UseTransparentBackground = true;
             this.btnTambahTendik.Click += new System.EventHandler(this.btnTambahTendik_Click);
             // 
@@ -760,24 +777,6 @@
             this.btnBatal.Size = new System.Drawing.Size(133, 28);
             this.btnBatal.TabIndex = 171;
             this.btnBatal.Text = "Batal";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AutoRoundedCorners = true;
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BorderRadius = 13;
-            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(890, 383);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(138, 28);
-            this.btnRefresh.TabIndex = 172;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // rbLaki
             // 
@@ -837,19 +836,25 @@
             this.rbPuan.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rbPuan.UseVisualStyleBackColor = false;
             // 
-            // fINDSMART_MABRESDsAll
-            // 
-            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
-            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tenagaKependidikanBindingSource1
-            // 
-            this.tenagaKependidikanBindingSource1.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
-            // 
             // tenagaKependidikanTableAdapter1
             // 
             this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
+            // 
+            // btnRefersh
+            // 
+            this.btnRefersh.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnRefersh.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnRefersh.Image = global::PROJECT_PRG2.Properties.Resources.refresh_594822;
+            this.btnRefersh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnRefersh.ImageRotate = 0F;
+            this.btnRefersh.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRefersh.Location = new System.Drawing.Point(952, 383);
+            this.btnRefersh.Name = "btnRefersh";
+            this.btnRefersh.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnRefersh.Size = new System.Drawing.Size(45, 51);
+            this.btnRefersh.TabIndex = 252;
+            this.tTipRefreshTendik.SetToolTip(this.btnRefersh, "Refresh Data");
+            this.btnRefersh.Click += new System.EventHandler(this.btnRefersh_Click);
             // 
             // UpTendik
             // 
@@ -857,7 +862,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1376, 1033);
-            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnRefersh);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHapus_);
@@ -902,10 +907,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UpTendik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -958,12 +963,16 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnTambahTendik;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button btnBatal;
-        private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private Guna.UI2.WinForms.Guna2RadioButton rbLaki;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2RadioButton rbPuan;
         private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
         private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource1;
         private FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter1;
+        private System.Windows.Forms.ToolTip tTipTambahTendik;
+        private System.Windows.Forms.ToolTip tTipEditTendik;
+        private System.Windows.Forms.ToolTip tTipHapusTendik;
+        private Guna.UI2.WinForms.Guna2ImageButton btnRefersh;
+        private System.Windows.Forms.ToolTip tTipRefreshTendik;
     }
 }
