@@ -340,6 +340,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TendikBaru.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Transaksi\KRPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\KRPP.Designer.cs">
+      <DependentUpon>KRPP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaksi\trsKRPP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,6 +453,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Transaksi\KRPP.resx">
+      <DependentUpon>KRPP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transaksi\trsKRPP.resx">
       <DependentUpon>trsKRPP.cs</DependentUpon>
     </EmbeddedResource>
@@ -730,6 +739,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh_594822.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KRPP.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
