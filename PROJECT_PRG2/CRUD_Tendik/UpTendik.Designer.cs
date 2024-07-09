@@ -81,7 +81,6 @@
             this.btnTambahTendik = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.rbLaki = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.rbPuan = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -89,6 +88,8 @@
             this.tTipTambahTendik = new System.Windows.Forms.ToolTip(this.components);
             this.tTipEditTendik = new System.Windows.Forms.ToolTip(this.components);
             this.tTipHapusTendik = new System.Windows.Forms.ToolTip(this.components);
+            this.btnRefersh = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.tTipRefreshTendik = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
@@ -523,7 +524,7 @@
             this.dgvUpTendik.RowHeadersVisible = false;
             this.dgvUpTendik.RowHeadersWidth = 72;
             this.dgvUpTendik.RowTemplate.Height = 31;
-            this.dgvUpTendik.Size = new System.Drawing.Size(903, 289);
+            this.dgvUpTendik.Size = new System.Drawing.Size(900, 256);
             this.dgvUpTendik.TabIndex = 163;
             this.dgvUpTendik.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
             this.dgvUpTendik.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
@@ -777,24 +778,6 @@
             this.btnBatal.TabIndex = 171;
             this.btnBatal.Text = "Batal";
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AutoRoundedCorners = true;
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BorderRadius = 13;
-            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(890, 383);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(138, 28);
-            this.btnRefresh.TabIndex = 172;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // rbLaki
             // 
             this.rbLaki.AutoSize = true;
@@ -857,13 +840,29 @@
             // 
             this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
             // 
+            // btnRefersh
+            // 
+            this.btnRefersh.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnRefersh.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnRefersh.Image = global::PROJECT_PRG2.Properties.Resources.refresh_594822;
+            this.btnRefersh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnRefersh.ImageRotate = 0F;
+            this.btnRefersh.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRefersh.Location = new System.Drawing.Point(952, 383);
+            this.btnRefersh.Name = "btnRefersh";
+            this.btnRefersh.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnRefersh.Size = new System.Drawing.Size(45, 51);
+            this.btnRefersh.TabIndex = 252;
+            this.tTipRefreshTendik.SetToolTip(this.btnRefersh, "Refresh Data");
+            this.btnRefersh.Click += new System.EventHandler(this.btnRefersh_Click);
+            // 
             // UpTendik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1376, 1033);
-            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnRefersh);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnHapus_);
@@ -964,7 +963,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnTambahTendik;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button btnBatal;
-        private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private Guna.UI2.WinForms.Guna2RadioButton rbLaki;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2RadioButton rbPuan;
@@ -974,5 +972,7 @@
         private System.Windows.Forms.ToolTip tTipTambahTendik;
         private System.Windows.Forms.ToolTip tTipEditTendik;
         private System.Windows.Forms.ToolTip tTipHapusTendik;
+        private Guna.UI2.WinForms.Guna2ImageButton btnRefersh;
+        private System.Windows.Forms.ToolTip tTipRefreshTendik;
     }
 }
