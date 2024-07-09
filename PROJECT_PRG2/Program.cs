@@ -27,7 +27,7 @@ namespace PROJECT_PRG2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new trsKRS());
+            Application.Run(new ViewDosen());
             //Application.Run(new trsKRS());
         }
     }

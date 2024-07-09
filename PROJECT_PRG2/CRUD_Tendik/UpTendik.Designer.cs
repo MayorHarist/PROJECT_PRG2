@@ -81,20 +81,24 @@
             this.btnTambahTendik = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
-            this.rbLaki = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label12 = new System.Windows.Forms.Label();
-            this.rbPuan = new Guna.UI2.WinForms.Guna2RadioButton();
             this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
             this.tTipTambahTendik = new System.Windows.Forms.ToolTip(this.components);
             this.tTipEditTendik = new System.Windows.Forms.ToolTip(this.components);
             this.tTipHapusTendik = new System.Windows.Forms.ToolTip(this.components);
             this.btnRefersh = new Guna.UI2.WinForms.Guna2ImageButton();
             this.tTipRefreshTendik = new System.Windows.Forms.ToolTip(this.components);
+            this.txtKelamin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
+            this.tenagaKependidikanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tenagaKependidikanTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -291,7 +295,7 @@
             this.TelpTendik.AutoRoundedCorners = true;
             this.TelpTendik.BackColor = System.Drawing.Color.Transparent;
             this.TelpTendik.BorderColor = System.Drawing.Color.Black;
-            this.TelpTendik.BorderRadius = 14;
+            this.TelpTendik.BorderRadius = 19;
             this.TelpTendik.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TelpTendik.DefaultText = "";
             this.TelpTendik.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -308,7 +312,7 @@
             this.TelpTendik.PasswordChar = '\0';
             this.TelpTendik.PlaceholderText = "";
             this.TelpTendik.SelectedText = "";
-            this.TelpTendik.Size = new System.Drawing.Size(191, 31);
+            this.TelpTendik.Size = new System.Drawing.Size(243, 41);
             this.TelpTendik.TabIndex = 144;
             // 
             // txtEmailTendik
@@ -333,7 +337,7 @@
             this.txtEmailTendik.PasswordChar = '\0';
             this.txtEmailTendik.PlaceholderText = "";
             this.txtEmailTendik.SelectedText = "";
-            this.txtEmailTendik.Size = new System.Drawing.Size(191, 31);
+            this.txtEmailTendik.Size = new System.Drawing.Size(243, 41);
             this.txtEmailTendik.TabIndex = 143;
             // 
             // txtAlmatTendik
@@ -367,7 +371,7 @@
             this.tglLahirTendik.Animated = true;
             this.tglLahirTendik.AutoRoundedCorners = true;
             this.tglLahirTendik.BackColor = System.Drawing.Color.Transparent;
-            this.tglLahirTendik.BorderRadius = 16;
+            this.tglLahirTendik.BorderRadius = 19;
             this.tglLahirTendik.Checked = true;
             this.tglLahirTendik.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(173)))));
             this.tglLahirTendik.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -378,7 +382,7 @@
             this.tglLahirTendik.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.tglLahirTendik.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.tglLahirTendik.Name = "tglLahirTendik";
-            this.tglLahirTendik.Size = new System.Drawing.Size(191, 34);
+            this.tglLahirTendik.Size = new System.Drawing.Size(243, 41);
             this.tglLahirTendik.TabIndex = 139;
             this.tglLahirTendik.Value = new System.DateTime(2024, 6, 15, 22, 37, 28, 314);
             // 
@@ -404,7 +408,7 @@
             this.txtPassTendik.PasswordChar = '\0';
             this.txtPassTendik.PlaceholderText = "";
             this.txtPassTendik.SelectedText = "";
-            this.txtPassTendik.Size = new System.Drawing.Size(191, 31);
+            this.txtPassTendik.Size = new System.Drawing.Size(243, 41);
             this.txtPassTendik.TabIndex = 138;
             // 
             // userNmTendik
@@ -429,7 +433,7 @@
             this.userNmTendik.PasswordChar = '\0';
             this.userNmTendik.PlaceholderText = "";
             this.userNmTendik.SelectedText = "";
-            this.userNmTendik.Size = new System.Drawing.Size(191, 31);
+            this.userNmTendik.Size = new System.Drawing.Size(243, 41);
             this.userNmTendik.TabIndex = 137;
             // 
             // txtNamaTendik
@@ -454,7 +458,7 @@
             this.txtNamaTendik.PasswordChar = '\0';
             this.txtNamaTendik.PlaceholderText = "";
             this.txtNamaTendik.SelectedText = "";
-            this.txtNamaTendik.Size = new System.Drawing.Size(191, 31);
+            this.txtNamaTendik.Size = new System.Drawing.Size(243, 41);
             this.txtNamaTendik.TabIndex = 136;
             // 
             // txtIDTendik
@@ -480,7 +484,7 @@
             this.txtIDTendik.PlaceholderText = "";
             this.txtIDTendik.ReadOnly = true;
             this.txtIDTendik.SelectedText = "";
-            this.txtIDTendik.Size = new System.Drawing.Size(191, 31);
+            this.txtIDTendik.Size = new System.Drawing.Size(243, 41);
             this.txtIDTendik.TabIndex = 135;
             // 
             // dgvUpTendik
@@ -508,7 +512,7 @@
             this.teleponDataGridViewTextBoxColumn,
             this.usernameDataGridViewTextBoxColumn,
             this.passwordDataGridViewTextBoxColumn});
-            this.dgvUpTendik.DataSource = this.tenagaKependidikanBindingSource1;
+            this.dgvUpTendik.DataSource = this.tenagaKependidikanBindingSource2;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -518,13 +522,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUpTendik.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUpTendik.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.dgvUpTendik.Location = new System.Drawing.Point(220, 122);
+            this.dgvUpTendik.Location = new System.Drawing.Point(62, 122);
             this.dgvUpTendik.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUpTendik.Name = "dgvUpTendik";
             this.dgvUpTendik.RowHeadersVisible = false;
             this.dgvUpTendik.RowHeadersWidth = 72;
             this.dgvUpTendik.RowTemplate.Height = 31;
-            this.dgvUpTendik.Size = new System.Drawing.Size(900, 256);
+            this.dgvUpTendik.Size = new System.Drawing.Size(1241, 256);
             this.dgvUpTendik.TabIndex = 163;
             this.dgvUpTendik.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
             this.dgvUpTendik.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
@@ -639,13 +643,13 @@
             this.txtCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtCari.ForeColor = System.Drawing.Color.Gray;
             this.txtCari.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCari.Location = new System.Drawing.Point(619, 44);
+            this.txtCari.Location = new System.Drawing.Point(619, 40);
             this.txtCari.Margin = new System.Windows.Forms.Padding(5);
             this.txtCari.Name = "txtCari";
             this.txtCari.PasswordChar = '\0';
             this.txtCari.PlaceholderText = "";
             this.txtCari.SelectedText = "";
-            this.txtCari.Size = new System.Drawing.Size(191, 31);
+            this.txtCari.Size = new System.Drawing.Size(362, 36);
             this.txtCari.TabIndex = 164;
             // 
             // tenagaKependidikanTableAdapter
@@ -673,7 +677,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(887, 708);
+            this.label2.Location = new System.Drawing.Point(1155, 701);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 15);
@@ -689,7 +693,7 @@
             this.btnHapus_.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnHapus_.ImageRotate = 0F;
             this.btnHapus_.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHapus_.Location = new System.Drawing.Point(1005, 734);
+            this.btnHapus_.Location = new System.Drawing.Point(1273, 727);
             this.btnHapus_.Margin = new System.Windows.Forms.Padding(2);
             this.btnHapus_.Name = "btnHapus_";
             this.btnHapus_.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -708,7 +712,7 @@
             this.btnUpdate.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnUpdate.ImageRotate = 0F;
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdate.Location = new System.Drawing.Point(952, 731);
+            this.btnUpdate.Location = new System.Drawing.Point(1220, 724);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -727,7 +731,7 @@
             this.btnTambahTendik.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnTambahTendik.ImageRotate = 0F;
             this.btnTambahTendik.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTambahTendik.Location = new System.Drawing.Point(904, 731);
+            this.btnTambahTendik.Location = new System.Drawing.Point(1172, 724);
             this.btnTambahTendik.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambahTendik.Name = "btnTambahTendik";
             this.btnTambahTendik.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -753,7 +757,7 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(890, 726);
+            this.guna2TextBox1.Location = new System.Drawing.Point(1158, 719);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
@@ -772,35 +776,11 @@
             this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(890, 798);
+            this.btnBatal.Location = new System.Drawing.Point(1158, 791);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(133, 28);
             this.btnBatal.TabIndex = 171;
             this.btnBatal.Text = "Batal";
-            // 
-            // rbLaki
-            // 
-            this.rbLaki.AutoSize = true;
-            this.rbLaki.BackColor = System.Drawing.Color.Transparent;
-            this.rbLaki.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rbLaki.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbLaki.CheckedState.BorderThickness = 0;
-            this.rbLaki.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbLaki.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
-            this.rbLaki.CheckedState.InnerOffset = -4;
-            this.rbLaki.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.rbLaki.ForeColor = System.Drawing.Color.Black;
-            this.rbLaki.Location = new System.Drawing.Point(291, 690);
-            this.rbLaki.Margin = new System.Windows.Forms.Padding(2);
-            this.rbLaki.Name = "rbLaki";
-            this.rbLaki.Size = new System.Drawing.Size(77, 19);
-            this.rbLaki.TabIndex = 140;
-            this.rbLaki.Text = "Laki - laki";
-            this.rbLaki.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbLaki.UncheckedState.BorderThickness = 2;
-            this.rbLaki.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbLaki.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rbLaki.UseVisualStyleBackColor = false;
             // 
             // label12
             // 
@@ -812,29 +792,6 @@
             this.label12.Size = new System.Drawing.Size(98, 15);
             this.label12.TabIndex = 153;
             this.label12.Text = "Jenis Kelamin";
-            // 
-            // rbPuan
-            // 
-            this.rbPuan.AutoSize = true;
-            this.rbPuan.BackColor = System.Drawing.Color.Transparent;
-            this.rbPuan.CheckedState.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.rbPuan.CheckedState.BorderThickness = 0;
-            this.rbPuan.CheckedState.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.rbPuan.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
-            this.rbPuan.CheckedState.InnerOffset = -4;
-            this.rbPuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.rbPuan.ForeColor = System.Drawing.Color.Black;
-            this.rbPuan.Location = new System.Drawing.Point(375, 692);
-            this.rbPuan.Margin = new System.Windows.Forms.Padding(2);
-            this.rbPuan.Name = "rbPuan";
-            this.rbPuan.Size = new System.Drawing.Size(90, 19);
-            this.rbPuan.TabIndex = 141;
-            this.rbPuan.Text = "Perempuan";
-            this.rbPuan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbPuan.UncheckedState.BorderThickness = 2;
-            this.rbPuan.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbPuan.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rbPuan.UseVisualStyleBackColor = false;
             // 
             // tenagaKependidikanTableAdapter1
             // 
@@ -848,7 +805,7 @@
             this.btnRefersh.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnRefersh.ImageRotate = 0F;
             this.btnRefersh.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnRefersh.Location = new System.Drawing.Point(952, 383);
+            this.btnRefersh.Location = new System.Drawing.Point(1258, 398);
             this.btnRefersh.Name = "btnRefersh";
             this.btnRefersh.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnRefersh.Size = new System.Drawing.Size(45, 51);
@@ -856,12 +813,53 @@
             this.tTipRefreshTendik.SetToolTip(this.btnRefersh, "Refresh Data");
             this.btnRefersh.Click += new System.EventHandler(this.btnRefersh_Click);
             // 
+            // txtKelamin
+            // 
+            this.txtKelamin.Animated = true;
+            this.txtKelamin.BackColor = System.Drawing.Color.Transparent;
+            this.txtKelamin.BorderColor = System.Drawing.Color.Black;
+            this.txtKelamin.BorderRadius = 10;
+            this.txtKelamin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKelamin.DefaultText = "";
+            this.txtKelamin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtKelamin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtKelamin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKelamin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKelamin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKelamin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtKelamin.ForeColor = System.Drawing.Color.Black;
+            this.txtKelamin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKelamin.Location = new System.Drawing.Point(284, 683);
+            this.txtKelamin.Margin = new System.Windows.Forms.Padding(5);
+            this.txtKelamin.Name = "txtKelamin";
+            this.txtKelamin.PasswordChar = '\0';
+            this.txtKelamin.PlaceholderText = "";
+            this.txtKelamin.ReadOnly = true;
+            this.txtKelamin.SelectedText = "";
+            this.txtKelamin.Size = new System.Drawing.Size(243, 41);
+            this.txtKelamin.TabIndex = 253;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tenagaKependidikanBindingSource2
+            // 
+            this.tenagaKependidikanBindingSource2.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // tenagaKependidikanTableAdapter2
+            // 
+            this.tenagaKependidikanTableAdapter2.ClearBeforeFill = true;
+            // 
             // UpTendik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1376, 1033);
+            this.Controls.Add(this.txtKelamin);
             this.Controls.Add(this.btnRefersh);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label2);
@@ -885,8 +883,6 @@
             this.Controls.Add(this.TelpTendik);
             this.Controls.Add(this.txtEmailTendik);
             this.Controls.Add(this.txtAlmatTendik);
-            this.Controls.Add(this.rbPuan);
-            this.Controls.Add(this.rbLaki);
             this.Controls.Add(this.tglLahirTendik);
             this.Controls.Add(this.txtPassTendik);
             this.Controls.Add(this.userNmTendik);
@@ -911,6 +907,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -963,9 +961,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnTambahTendik;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button btnBatal;
-        private Guna.UI2.WinForms.Guna2RadioButton rbLaki;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2RadioButton rbPuan;
         private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
         private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource1;
         private FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter1;
@@ -974,5 +970,9 @@
         private System.Windows.Forms.ToolTip tTipHapusTendik;
         private Guna.UI2.WinForms.Guna2ImageButton btnRefersh;
         private System.Windows.Forms.ToolTip tTipRefreshTendik;
+        private Guna.UI2.WinForms.Guna2TextBox txtKelamin;
+        private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
+        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource2;
+        private FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter2;
     }
 }

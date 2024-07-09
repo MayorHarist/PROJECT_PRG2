@@ -44,6 +44,8 @@
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noPegawaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mataKuliahBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.mataKuliahBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
@@ -66,8 +68,10 @@
             this.btnTambah = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbPegawai = new System.Windows.Forms.ComboBox();
+            this.dosenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dosenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbProdi = new System.Windows.Forms.ComboBox();
+            this.programStudiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnBatal = new Guna.UI2.WinForms.Guna2Button();
@@ -75,23 +79,30 @@
             this.dosenTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.DosenTableAdapter();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
             this.btnRefersh = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
-            this.mataKuliahBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mataKuliahTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.MataKuliahTableAdapter();
-            this.programStudiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter();
-            this.dosenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dosenTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.DosenTableAdapter();
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
+            this.mataKuliahBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.mataKuliahTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.MataKuliahTableAdapter();
+            this.programStudiBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter();
+            this.dosenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dosenTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gdvMatkul)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // gdvMatkul
@@ -119,7 +130,7 @@
             this.statusDataGridViewTextBoxColumn,
             this.noPegawaiDataGridViewTextBoxColumn,
             this.idProdiDataGridViewTextBoxColumn});
-            this.gdvMatkul.DataSource = this.mataKuliahBindingSource1;
+            this.gdvMatkul.DataSource = this.mataKuliahBindingSource2;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,6 +230,16 @@
             this.idProdiDataGridViewTextBoxColumn.DataPropertyName = "Id_Prodi";
             this.idProdiDataGridViewTextBoxColumn.HeaderText = "Id_Prodi";
             this.idProdiDataGridViewTextBoxColumn.Name = "idProdiDataGridViewTextBoxColumn";
+            // 
+            // mataKuliahBindingSource1
+            // 
+            this.mataKuliahBindingSource1.DataMember = "MataKuliah";
+            this.mataKuliahBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // mataKuliahBindingSource
             // 
@@ -573,7 +594,7 @@
             // 
             // cbPegawai
             // 
-            this.cbPegawai.DataSource = this.dosenBindingSource1;
+            this.cbPegawai.DataSource = this.dosenBindingSource2;
             this.cbPegawai.DisplayMember = "Nama";
             this.cbPegawai.Enabled = false;
             this.cbPegawai.FormattingEnabled = true;
@@ -583,6 +604,11 @@
             this.cbPegawai.TabIndex = 128;
             this.cbPegawai.ValueMember = "No_Pegawai";
             // 
+            // dosenBindingSource1
+            // 
+            this.dosenBindingSource1.DataMember = "Dosen";
+            this.dosenBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
             // dosenBindingSource
             // 
             this.dosenBindingSource.DataMember = "Dosen";
@@ -590,7 +616,7 @@
             // 
             // cbProdi
             // 
-            this.cbProdi.DataSource = this.programStudiBindingSource2;
+            this.cbProdi.DataSource = this.programStudiBindingSource3;
             this.cbProdi.DisplayMember = "Nama";
             this.cbProdi.Enabled = false;
             this.cbProdi.FormattingEnabled = true;
@@ -601,6 +627,11 @@
             this.cbProdi.Size = new System.Drawing.Size(203, 21);
             this.cbProdi.TabIndex = 129;
             this.cbProdi.ValueMember = "Id_Prodi";
+            // 
+            // programStudiBindingSource2
+            // 
+            this.programStudiBindingSource2.DataMember = "ProgramStudi";
+            this.programStudiBindingSource2.DataSource = this.fINDSMART_MABRESDsAll;
             // 
             // programStudiBindingSource
             // 
@@ -652,37 +683,49 @@
             this.btnRefersh.TabIndex = 249;
             this.btnRefersh.Click += new System.EventHandler(this.btnRefersh_Click);
             // 
-            // fINDSMART_MABRESDsAll
-            // 
-            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
-            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mataKuliahBindingSource1
-            // 
-            this.mataKuliahBindingSource1.DataMember = "MataKuliah";
-            this.mataKuliahBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
-            // 
             // mataKuliahTableAdapter1
             // 
             this.mataKuliahTableAdapter1.ClearBeforeFill = true;
-            // 
-            // programStudiBindingSource2
-            // 
-            this.programStudiBindingSource2.DataMember = "ProgramStudi";
-            this.programStudiBindingSource2.DataSource = this.fINDSMART_MABRESDsAll;
             // 
             // programStudiTableAdapter1
             // 
             this.programStudiTableAdapter1.ClearBeforeFill = true;
             // 
-            // dosenBindingSource1
-            // 
-            this.dosenBindingSource1.DataMember = "Dosen";
-            this.dosenBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
-            // 
             // dosenTableAdapter1
             // 
             this.dosenTableAdapter1.ClearBeforeFill = true;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mataKuliahBindingSource2
+            // 
+            this.mataKuliahBindingSource2.DataMember = "MataKuliah";
+            this.mataKuliahBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // mataKuliahTableAdapter2
+            // 
+            this.mataKuliahTableAdapter2.ClearBeforeFill = true;
+            // 
+            // programStudiBindingSource3
+            // 
+            this.programStudiBindingSource3.DataMember = "ProgramStudi";
+            this.programStudiBindingSource3.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // programStudiTableAdapter2
+            // 
+            this.programStudiTableAdapter2.ClearBeforeFill = true;
+            // 
+            // dosenBindingSource2
+            // 
+            this.dosenBindingSource2.DataMember = "Dosen";
+            this.dosenBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // dosenTableAdapter2
+            // 
+            this.dosenTableAdapter2.ClearBeforeFill = true;
             // 
             // ViewMatkul
             // 
@@ -723,15 +766,19 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ViewMatkul_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gdvMatkul)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -785,5 +832,12 @@
         private FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter programStudiTableAdapter1;
         private System.Windows.Forms.BindingSource dosenBindingSource1;
         private FINDSMART_MABRESDsAllTableAdapters.DosenTableAdapter dosenTableAdapter1;
+        private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
+        private System.Windows.Forms.BindingSource mataKuliahBindingSource2;
+        private FINDSMART_MABRESDataSet1TableAdapters.MataKuliahTableAdapter mataKuliahTableAdapter2;
+        private System.Windows.Forms.BindingSource programStudiBindingSource3;
+        private FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter2;
+        private System.Windows.Forms.BindingSource dosenBindingSource2;
+        private FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter dosenTableAdapter2;
     }
 }

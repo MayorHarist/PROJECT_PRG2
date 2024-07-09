@@ -22,10 +22,14 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void UpdatePengumuman_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Pengumuman' table. You can move, or remove it, as needed.
+            this.pengumumanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.Pengumuman);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Pengumuman' table. You can move, or remove it, as needed.
-            this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
+            //this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
             //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
@@ -152,13 +156,9 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Memperbarui data di tampilan (jika ada)
-                    //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
-                    //this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
-                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
-                    this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
-                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Pengumuman' table. You can move, or remove it, as needed.
-                    this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
+                    
+                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Pengumuman' table. You can move, or remove it, as needed.
+                    this.pengumumanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.Pengumuman);
                     clear();
 
                     // Menambahkan tooltip untuk ImageButton
@@ -216,27 +216,19 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             clear();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
-            //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
-            //this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
-            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
-            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Pengumuman' table. You can move, or remove it, as needed.
-            this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
-
-        }
+        
 
         private void btnRefersh_Click(object sender, EventArgs e)
         {
             //this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Pengumuman' table. You can move, or remove it, as needed.
-            this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
-          
+            //this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Pengumuman' table. You can move, or remove it, as needed.
+            this.pengumumanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.Pengumuman);
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

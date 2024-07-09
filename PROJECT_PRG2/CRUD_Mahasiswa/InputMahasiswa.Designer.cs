@@ -62,12 +62,17 @@
             this.mahasiswaTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.MahasiswaTableAdapter();
             this.mahasiswaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter();
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
+            this.programStudiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -445,7 +450,7 @@
             // 
             // cbProdi
             // 
-            this.cbProdi.DataSource = this.programStudiBindingSource1;
+            this.cbProdi.DataSource = this.programStudiBindingSource2;
             this.cbProdi.DisplayMember = "Nama";
             this.cbProdi.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProdi.FormattingEnabled = true;
@@ -529,6 +534,20 @@
             // 
             this.programStudiTableAdapter1.ClearBeforeFill = true;
             // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // programStudiBindingSource2
+            // 
+            this.programStudiBindingSource2.DataMember = "ProgramStudi";
+            this.programStudiBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // programStudiTableAdapter2
+            // 
+            this.programStudiTableAdapter2.ClearBeforeFill = true;
+            // 
             // InputMahasiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,6 +592,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,5 +634,8 @@
         private System.Windows.Forms.BindingSource mahasiswaBindingSource1;
         private System.Windows.Forms.BindingSource programStudiBindingSource1;
         private FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter programStudiTableAdapter1;
+        private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
+        private System.Windows.Forms.BindingSource programStudiBindingSource2;
+        private FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter2;
     }
 }

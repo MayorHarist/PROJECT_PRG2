@@ -42,18 +42,23 @@
             this.txtPengumuman = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIDPengumuman = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbIDTendik = new System.Windows.Forms.ComboBox();
+            this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.btnTambahPengumuman = new Guna.UI2.WinForms.Guna2Button();
             this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
             this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.TenagaKependidikanTableAdapter();
-            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
-            this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
+            this.tenagaKependidikanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tenagaKependidikanTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBatalPengumuman
@@ -265,7 +270,7 @@
             // 
             // cbIDTendik
             // 
-            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource1;
+            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource2;
             this.cbIDTendik.DisplayMember = "Nama";
             this.cbIDTendik.FormattingEnabled = true;
             this.cbIDTendik.ItemHeight = 13;
@@ -275,6 +280,16 @@
             this.cbIDTendik.Size = new System.Drawing.Size(192, 21);
             this.cbIDTendik.TabIndex = 113;
             this.cbIDTendik.ValueMember = "Id_TKN";
+            // 
+            // tenagaKependidikanBindingSource1
+            // 
+            this.tenagaKependidikanBindingSource1.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tenagaKependidikanBindingSource
             // 
@@ -336,19 +351,23 @@
             // 
             this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
             // 
-            // fINDSMART_MABRESDsAll
-            // 
-            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
-            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tenagaKependidikanBindingSource1
-            // 
-            this.tenagaKependidikanBindingSource1.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
-            // 
             // tenagaKependidikanTableAdapter1
             // 
             this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tenagaKependidikanBindingSource2
+            // 
+            this.tenagaKependidikanBindingSource2.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // tenagaKependidikanTableAdapter2
+            // 
+            this.tenagaKependidikanTableAdapter2.ClearBeforeFill = true;
             // 
             // Pengumuman
             // 
@@ -378,10 +397,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pengumuman";
             this.Load += new System.EventHandler(this.Pengumuman_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,5 +430,8 @@
         private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
         private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource1;
         private FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter1;
+        private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
+        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource2;
+        private FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter2;
     }
 }

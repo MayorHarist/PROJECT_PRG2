@@ -21,8 +21,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void UpTendik_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
 
         }
 
@@ -30,8 +32,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
         {
             txtNamaTendik.Text = "";
             tglLahirTendik.Value = DateTime.Now;
-            rbLaki.Checked = false;
-            rbPuan.Checked = false;
+            txtKelamin.Text = "";
             txtAlmatTendik.Text = "";
             txtEmailTendik.Text = "";
             TelpTendik.Text = "";
@@ -90,9 +91,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
                         if (dataTable.Rows.Count > 0)
                         {
                             // Set the radio button based on Jenis_Kelamin
-                            string jenisKelamin = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
-                            rbLaki.Checked = jenisKelamin == "Laki-laki";
-                            rbPuan.Checked = jenisKelamin == "Perempuan";
+                            txtKelamin.Text = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
                             txtAlmatTendik.Text = dataTable.Rows[0]["Alamat"].ToString();
                             txtEmailTendik.Text = dataTable.Rows[0]["Email"].ToString();
                             TelpTendik.Text = dataTable.Rows[0]["Telepon"].ToString();
@@ -104,8 +103,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
                             txtIDTendik.Enabled = true;
                             txtNamaTendik.Enabled = true;
                             tglLahirTendik.Enabled = true;
-                            rbLaki.Enabled = true;
-                            rbPuan.Enabled = true;
                             txtAlmatTendik.Enabled = true;
                             txtEmailTendik.Enabled = true;
                             TelpTendik.Enabled = true;
@@ -149,8 +146,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     update.Parameters.AddWithValue("@Nama", txtNamaTendik.Text);
                     update.Parameters.AddWithValue("@Tanggal_Lahir", tglLahirTendik.Value);
                     // Tentukan nilai jenis kelamin berdasarkan radio button yang dipilih
-                    string jenisKelamin = rbLaki.Checked ? "Laki-Laki" : rbPuan.Checked ? "Perempuan" : string.Empty;
-                    update.Parameters.AddWithValue("@Jenis_Kelamin", jenisKelamin);
+                    
+                    update.Parameters.AddWithValue("@Jenis_Kelamin", txtKelamin.Text);
                     update.Parameters.AddWithValue("@Alamat", txtAlmatTendik.Text);
                     update.Parameters.AddWithValue("@Email", txtEmailTendik.Text);
                     update.Parameters.AddWithValue("@Telepon", TelpTendik.Text);
@@ -211,7 +208,9 @@ namespace PROJECT_PRG2.CRUD_Tendik
         private void btnRefersh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
+
         }
     }
 }
