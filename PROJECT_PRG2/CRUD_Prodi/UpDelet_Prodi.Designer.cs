@@ -32,9 +32,9 @@ namespace PROJECT_PRG2.CRUD_Prodi
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpDelet_Prodi));
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -49,6 +49,8 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.jenjangPendidikanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.akreditasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,26 +63,25 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
-            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
-            this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter();
+            this.btnRefersh = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(409, 637);
+            this.label3.Location = new System.Drawing.Point(406, 625);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.Size = new System.Drawing.Size(63, 28);
             this.label3.TabIndex = 194;
             this.label3.Text = "Nama";
             // 
@@ -88,12 +89,12 @@ namespace PROJECT_PRG2.CRUD_Prodi
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(692, 638);
+            this.label14.Location = new System.Drawing.Point(689, 626);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(134, 15);
+            this.label14.Size = new System.Drawing.Size(178, 28);
             this.label14.TabIndex = 188;
             this.label14.Text = "Jenjang Pendidikan";
             // 
@@ -101,12 +102,12 @@ namespace PROJECT_PRG2.CRUD_Prodi
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(976, 638);
+            this.label15.Location = new System.Drawing.Point(973, 626);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 15);
+            this.label15.Size = new System.Drawing.Size(98, 28);
             this.label15.TabIndex = 187;
             this.label15.Text = "Akreditasi";
             // 
@@ -132,7 +133,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtAkreditasi.PasswordChar = '\0';
             this.txtAkreditasi.PlaceholderText = "";
             this.txtAkreditasi.SelectedText = "";
-            this.txtAkreditasi.Size = new System.Drawing.Size(191, 31);
+            this.txtAkreditasi.Size = new System.Drawing.Size(243, 41);
             this.txtAkreditasi.TabIndex = 181;
             this.txtAkreditasi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAkreditasi_KeyPress);
             // 
@@ -158,7 +159,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtJenjangPendidikan.PasswordChar = '\0';
             this.txtJenjangPendidikan.PlaceholderText = "";
             this.txtJenjangPendidikan.SelectedText = "";
-            this.txtJenjangPendidikan.Size = new System.Drawing.Size(191, 31);
+            this.txtJenjangPendidikan.Size = new System.Drawing.Size(243, 41);
             this.txtJenjangPendidikan.TabIndex = 180;
             // 
             // txtNama
@@ -183,7 +184,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtNama.PasswordChar = '\0';
             this.txtNama.PlaceholderText = "";
             this.txtNama.SelectedText = "";
-            this.txtNama.Size = new System.Drawing.Size(191, 31);
+            this.txtNama.Size = new System.Drawing.Size(243, 41);
             this.txtNama.TabIndex = 173;
             this.txtNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNama_KeyPress);
             // 
@@ -209,22 +210,22 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtIdProdi.PasswordChar = '\0';
             this.txtIdProdi.PlaceholderText = "";
             this.txtIdProdi.SelectedText = "";
-            this.txtIdProdi.Size = new System.Drawing.Size(191, 31);
+            this.txtIdProdi.Size = new System.Drawing.Size(243, 41);
             this.txtIdProdi.TabIndex = 172;
             // 
             // dtgProdi
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgProdi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dtgProdi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgProdi.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgProdi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgProdi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgProdi.ColumnHeadersHeight = 18;
             this.dtgProdi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgProdi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -234,22 +235,22 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.akreditasiDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dtgProdi.DataSource = this.programStudiBindingSource1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgProdi.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgProdi.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgProdi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgProdi.Location = new System.Drawing.Point(217, 223);
+            this.dtgProdi.Location = new System.Drawing.Point(64, 93);
             this.dtgProdi.Margin = new System.Windows.Forms.Padding(2);
             this.dtgProdi.Name = "dtgProdi";
             this.dtgProdi.RowHeadersVisible = false;
             this.dtgProdi.RowHeadersWidth = 51;
             this.dtgProdi.RowTemplate.Height = 24;
-            this.dtgProdi.Size = new System.Drawing.Size(942, 184);
+            this.dtgProdi.Size = new System.Drawing.Size(1242, 442);
             this.dtgProdi.TabIndex = 200;
             this.dtgProdi.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgProdi.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -309,6 +310,16 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.Visible = false;
             // 
+            // programStudiBindingSource1
+            // 
+            this.programStudiBindingSource1.DataMember = "ProgramStudi";
+            this.programStudiBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // programStudiBindingSource
             // 
             this.programStudiBindingSource.DataMember = "ProgramStudi";
@@ -323,11 +334,11 @@ namespace PROJECT_PRG2.CRUD_Prodi
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(839, 828);
+            this.label2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(982, 724);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 15);
+            this.label2.Size = new System.Drawing.Size(48, 28);
             this.label2.TabIndex = 213;
             this.label2.Text = "Aksi";
             // 
@@ -347,12 +358,12 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(832, 851);
+            this.guna2TextBox1.Location = new System.Drawing.Point(979, 755);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(145, 37);
+            this.guna2TextBox1.Size = new System.Drawing.Size(205, 43);
             this.guna2TextBox1.TabIndex = 212;
             // 
             // btnHapus
@@ -364,11 +375,11 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.btnHapus.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnHapus.ImageRotate = 0F;
             this.btnHapus.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHapus.Location = new System.Drawing.Point(944, 858);
+            this.btnHapus.Location = new System.Drawing.Point(1127, 758);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(2);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnHapus.Size = new System.Drawing.Size(23, 25);
+            this.btnHapus.Size = new System.Drawing.Size(36, 36);
             this.btnHapus.TabIndex = 211;
             this.btnHapus.UseTransparentBackground = true;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
@@ -382,7 +393,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.btnUpdate.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnUpdate.ImageRotate = 0F;
             this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdate.Location = new System.Drawing.Point(887, 854);
+            this.btnUpdate.Location = new System.Drawing.Point(1058, 760);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -400,11 +411,11 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.btnTambah.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnTambah.ImageRotate = 0F;
             this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTambah.Location = new System.Drawing.Point(840, 854);
+            this.btnTambah.Location = new System.Drawing.Point(994, 758);
             this.btnTambah.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnTambah.Size = new System.Drawing.Size(27, 32);
+            this.btnTambah.Size = new System.Drawing.Size(36, 36);
             this.btnTambah.TabIndex = 209;
             this.btnTambah.UseTransparentBackground = true;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
@@ -418,11 +429,11 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.btnCari.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnCari.ImageRotate = 0F;
             this.btnCari.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCari.Location = new System.Drawing.Point(544, 144);
+            this.btnCari.Location = new System.Drawing.Point(483, 20);
             this.btnCari.Margin = new System.Windows.Forms.Padding(2);
             this.btnCari.Name = "btnCari";
             this.btnCari.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnCari.Size = new System.Drawing.Size(32, 32);
+            this.btnCari.Size = new System.Drawing.Size(42, 37);
             this.btnCari.TabIndex = 208;
             this.btnCari.UseTransparentBackground = true;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
@@ -438,7 +449,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(524, 855);
+            this.btnBatal.Location = new System.Drawing.Point(1173, 846);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(133, 28);
             this.btnBatal.TabIndex = 214;
@@ -452,34 +463,34 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtCari.BorderColor = System.Drawing.Color.Black;
             this.txtCari.BorderRadius = 10;
             this.txtCari.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCari.DefaultText = "";
+            this.txtCari.DefaultText = "Cari Data Program Studi";
             this.txtCari.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCari.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCari.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCari.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCari.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtCari.ForeColor = System.Drawing.Color.Black;
+            this.txtCari.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCari.ForeColor = System.Drawing.Color.Gray;
             this.txtCari.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCari.Location = new System.Drawing.Point(593, 145);
+            this.txtCari.Location = new System.Drawing.Point(532, 21);
             this.txtCari.Margin = new System.Windows.Forms.Padding(5);
             this.txtCari.Name = "txtCari";
             this.txtCari.PasswordChar = '\0';
             this.txtCari.PlaceholderText = "";
             this.txtCari.SelectedText = "";
-            this.txtCari.Size = new System.Drawing.Size(191, 31);
+            this.txtCari.Size = new System.Drawing.Size(362, 36);
             this.txtCari.TabIndex = 172;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(156, 639);
+            this.label1.Location = new System.Drawing.Point(153, 627);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 15);
+            this.label1.Size = new System.Drawing.Size(74, 28);
             this.label1.TabIndex = 215;
             this.label1.Text = "Id Prodi";
             // 
@@ -487,19 +498,23 @@ namespace PROJECT_PRG2.CRUD_Prodi
             // 
             this.programStudiTableAdapter.ClearBeforeFill = true;
             // 
-            // fINDSMART_MABRESDsAll
-            // 
-            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
-            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // programStudiBindingSource1
-            // 
-            this.programStudiBindingSource1.DataMember = "ProgramStudi";
-            this.programStudiBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
-            // 
             // programStudiTableAdapter1
             // 
             this.programStudiTableAdapter1.ClearBeforeFill = true;
+            // 
+            // btnRefersh
+            // 
+            this.btnRefersh.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnRefersh.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnRefersh.Image = global::PROJECT_PRG2.Properties.Resources.refresh_594822;
+            this.btnRefersh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnRefersh.ImageRotate = 0F;
+            this.btnRefersh.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRefersh.Location = new System.Drawing.Point(1261, 558);
+            this.btnRefersh.Name = "btnRefersh";
+            this.btnRefersh.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnRefersh.Size = new System.Drawing.Size(45, 51);
+            this.btnRefersh.TabIndex = 252;
             // 
             // UpDelet_Prodi
             // 
@@ -508,6 +523,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1376, 1033);
+            this.Controls.Add(this.btnRefersh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label2);
@@ -533,10 +549,10 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UpDelet_Prodi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProdi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -581,5 +597,6 @@ namespace PROJECT_PRG2.CRUD_Prodi
         private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
         private BindingSource programStudiBindingSource1;
         private FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter programStudiTableAdapter1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnRefersh;
     }
 }

@@ -113,6 +113,8 @@
             this.alamatDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teleponDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.dosenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDataSet = new PROJECT_PRG2.FINDSMART_MABRESDataSet();
             this.dosenBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -131,18 +133,21 @@
             this.tooltipHapus = new System.Windows.Forms.ToolTip(this.components);
             this.txtKelamin = new Guna.UI2.WinForms.Guna2TextBox();
             this.dosenTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDataSetTableAdapters.DosenTableAdapter();
-            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
-            this.dosenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dosenTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.DosenTableAdapter();
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
+            this.dosenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dosenTableAdapter3 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKMataKuliaNoPe160F4887BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -900,7 +905,7 @@
             this.alamatDataGridViewTextBoxColumn1,
             this.emailDataGridViewTextBoxColumn1,
             this.teleponDataGridViewTextBoxColumn1});
-            this.dgvDsn.DataSource = this.dosenBindingSource2;
+            this.dgvDsn.DataSource = this.dosenBindingSource3;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1050,6 +1055,16 @@
             this.teleponDataGridViewTextBoxColumn1.HeaderText = "Telepon";
             this.teleponDataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.teleponDataGridViewTextBoxColumn1.Name = "teleponDataGridViewTextBoxColumn1";
+            // 
+            // dosenBindingSource2
+            // 
+            this.dosenBindingSource2.DataMember = "Dosen";
+            this.dosenBindingSource2.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dosenBindingSource1
             // 
@@ -1231,19 +1246,23 @@
             // 
             this.dosenTableAdapter1.ClearBeforeFill = true;
             // 
-            // fINDSMART_MABRESDsAll
-            // 
-            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
-            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dosenBindingSource2
-            // 
-            this.dosenBindingSource2.DataMember = "Dosen";
-            this.dosenBindingSource2.DataSource = this.fINDSMART_MABRESDsAll;
-            // 
             // dosenTableAdapter2
             // 
             this.dosenTableAdapter2.ClearBeforeFill = true;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dosenBindingSource3
+            // 
+            this.dosenBindingSource3.DataMember = "Dosen";
+            this.dosenBindingSource3.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // dosenTableAdapter3
+            // 
+            this.dosenTableAdapter3.ClearBeforeFill = true;
             // 
             // ViewDosen
             // 
@@ -1298,13 +1317,15 @@
             this.Load += new System.EventHandler(this.ViewDosen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKMataKuliaNoPe160F4887BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1387,5 +1408,8 @@
         private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
         private System.Windows.Forms.BindingSource dosenBindingSource2;
         private FINDSMART_MABRESDsAllTableAdapters.DosenTableAdapter dosenTableAdapter2;
+        private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
+        private System.Windows.Forms.BindingSource dosenBindingSource3;
+        private FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter dosenTableAdapter3;
     }
 }

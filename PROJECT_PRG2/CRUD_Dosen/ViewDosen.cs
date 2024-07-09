@@ -20,8 +20,10 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void ViewDosen_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter3.Fill(this.fINDSMART_MABRESDataSet1.Dosen);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.Dosen);
+            ///this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.Dosen);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet.Dosen' table. You can move, or remove it, as needed.
             //this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDataSet.Dosen);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.MataKuliah' table. You can move, or remove it, as needed.
@@ -366,7 +368,9 @@ namespace PROJECT_PRG2.CRUD_Dosen
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Dosen' table. You can move, or remove it, as needed.
             //this.dosenTableAdapter.Fill(this.fINDSMARTDataSet7.Dosen);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.Dosen);
+            //this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.Dosen);
+            this.dosenTableAdapter3.Fill(this.fINDSMART_MABRESDataSet1.Dosen);
+
 
             // Ensure the Guna2DataGridView scrollbars are set correctly
             this.dgvDosen.ScrollBars = ScrollBars.Both;

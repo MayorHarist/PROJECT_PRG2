@@ -299,6 +299,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMART_MABRESDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FINDSMART_MABRESDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMART_MABRESDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FINDSMART_MABRESDsAll.cs">
       <DependentUpon>FINDSMART_MABRESDsAll.xsd</DependentUpon>
     </Compile>
@@ -584,6 +589,17 @@
     </None>
     <None Include="FINDSMART_MABRESDataSet.xss">
       <DependentUpon>FINDSMART_MABRESDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet1.xsc">
+      <DependentUpon>FINDSMART_MABRESDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMART_MABRESDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet1.xss">
+      <DependentUpon>FINDSMART_MABRESDataSet1.xsd</DependentUpon>
     </None>
     <None Include="FINDSMART_MABRESDsAll.xsc">
       <DependentUpon>FINDSMART_MABRESDsAll.xsd</DependentUpon>

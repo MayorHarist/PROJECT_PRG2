@@ -109,5 +109,16 @@ namespace PROJECT_PRG2.Properties {
                 return ((string)(this["FINDSMART_MABRESConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-1B9620N;Initial Catalog=FINDSMART_MABRES;Integrated Security=" +
+            "True;TrustServerCertificate=True")]
+        public string FINDSMART_MABRESharist {
+            get {
+                return ((string)(this["FINDSMART_MABRESharist"]));
+            }
+        }
     }
 }
