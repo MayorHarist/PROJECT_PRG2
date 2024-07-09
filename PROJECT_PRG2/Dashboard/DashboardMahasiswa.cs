@@ -105,7 +105,7 @@ namespace PROJECT_PRG2.Dashboard
 
         private void btnTrsKRPP_Click(object sender, EventArgs e)
         {
-            trsKRPP trsKRPP = new trsKRPP();
+            KRPP trsKRPP = new KRPP();
             // Atur parent form UpDelet_Prodi ke panelMain
             trsKRPP.TopLevel = false;
             trsKRPP.AutoScroll = true;
