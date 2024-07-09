@@ -381,7 +381,7 @@
             this.btnCari_.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnCari_.Size = new System.Drawing.Size(39, 39);
             this.btnCari_.TabIndex = 166;
-            this.tooltipCari.SetToolTip(this.btnCari_, "Cari Data");
+            //this.tooltipCari.SetToolTip(this.btnCari_, "Cari Data");
             this.btnCari_.Click += new System.EventHandler(this.btnCari__Click);
             // 
             // label2

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpTendik));
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -68,6 +68,8 @@
             this.teleponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
@@ -83,14 +85,12 @@
             this.rbLaki = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.rbPuan = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
-            this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -481,17 +481,17 @@
             // 
             // dgvUpTendik
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.dgvUpTendik.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.dgvUpTendik.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUpTendik.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUpTendik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUpTendik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvUpTendik.ColumnHeadersHeight = 30;
             this.dgvUpTendik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvUpTendik.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -505,14 +505,14 @@
             this.usernameDataGridViewTextBoxColumn,
             this.passwordDataGridViewTextBoxColumn});
             this.dgvUpTendik.DataSource = this.tenagaKependidikanBindingSource1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUpTendik.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUpTendik.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvUpTendik.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
             this.dgvUpTendik.Location = new System.Drawing.Point(220, 122);
             this.dgvUpTendik.Margin = new System.Windows.Forms.Padding(2);
@@ -599,6 +599,16 @@
             this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             // 
+            // tenagaKependidikanBindingSource1
+            // 
+            this.tenagaKependidikanBindingSource1.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tenagaKependidikanBindingSource
             // 
             this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
@@ -616,14 +626,14 @@
             this.txtCari.BorderColor = System.Drawing.Color.Black;
             this.txtCari.BorderRadius = 10;
             this.txtCari.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCari.DefaultText = "";
+            this.txtCari.DefaultText = "Cari Tendik";
             this.txtCari.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCari.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCari.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCari.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCari.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCari.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtCari.ForeColor = System.Drawing.Color.Black;
+            this.txtCari.ForeColor = System.Drawing.Color.Gray;
             this.txtCari.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCari.Location = new System.Drawing.Point(619, 44);
             this.txtCari.Margin = new System.Windows.Forms.Padding(5);
@@ -652,7 +662,6 @@
             this.btnCari_.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnCari_.Size = new System.Drawing.Size(37, 35);
             this.btnCari_.TabIndex = 165;
-            this.toolCariTendik.SetToolTip(this.btnCari_, "Cari Data");
             this.btnCari_.Click += new System.EventHandler(this.btnCari__Click);
             // 
             // label2
@@ -682,7 +691,6 @@
             this.btnHapus_.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnHapus_.Size = new System.Drawing.Size(23, 25);
             this.btnHapus_.TabIndex = 168;
-            this.toolHpsTendik.SetToolTip(this.btnHapus_, "Hapus Data");
             this.btnHapus_.UseTransparentBackground = true;
             this.btnHapus_.Click += new System.EventHandler(this.btnHapus__Click);
             // 
@@ -701,7 +709,6 @@
             this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnUpdate.Size = new System.Drawing.Size(32, 32);
             this.btnUpdate.TabIndex = 167;
-            this.toolUpdateTendik.SetToolTip(this.btnUpdate, "Perbarui Data");
             this.btnUpdate.UseTransparentBackground = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -720,7 +727,6 @@
             this.btnTambahTendik.PressedState.ImageSize = new System.Drawing.Size(31, 31);
             this.btnTambahTendik.Size = new System.Drawing.Size(27, 32);
             this.btnTambahTendik.TabIndex = 166;
-            this.toolTambahTendik.SetToolTip(this.btnTambahTendik, "Tambah Data");
             this.btnTambahTendik.UseTransparentBackground = true;
             this.btnTambahTendik.Click += new System.EventHandler(this.btnTambahTendik_Click);
             // 
@@ -841,16 +847,6 @@
             this.rbPuan.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rbPuan.UseVisualStyleBackColor = false;
             // 
-            // fINDSMART_MABRESDsAll
-            // 
-            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
-            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tenagaKependidikanBindingSource1
-            // 
-            this.tenagaKependidikanBindingSource1.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
-            // 
             // tenagaKependidikanTableAdapter1
             // 
             this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
@@ -906,10 +902,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UpTendik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUpTendik)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

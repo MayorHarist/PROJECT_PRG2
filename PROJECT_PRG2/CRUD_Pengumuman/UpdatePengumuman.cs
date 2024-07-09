@@ -13,6 +13,8 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 {
     public partial class UpdatePengumuman : Form
     {
+        private object tooltipCari;
+
         public UpdatePengumuman()
         {
             InitializeComponent();
