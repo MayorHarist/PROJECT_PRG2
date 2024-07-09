@@ -91,6 +91,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 MessageBox.Show("Data berhasil disimpan", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clear();
+                
             }
             catch (Exception ex)
             {

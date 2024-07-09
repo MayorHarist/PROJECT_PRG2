@@ -92,8 +92,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                         btnUpPengumuman.Enabled = true;
                         btnHapusPM.Enabled = true;
 
-                        // Menambahkan tooltip untuk ImageButton
-                        tooltipCari.SetToolTip(btnCari_, "Cari Data");
+                        
                     }
                     else
                     {
