@@ -245,5 +245,15 @@ namespace PROJECT_PRG2
             panelMain.Controls.Add(trsKRS);
             trsKRS.Show();
         }
+
+        private void btnTrsKRPP_Click(object sender, EventArgs e)
+        {
+            trsKRPP trsKRPP = new trsKRPP();
+            // Atur parent form UpDelet_Prodi ke panelMain
+            trsKRPP.TopLevel = false;
+            trsKRPP.AutoScroll = true;
+            panelMain.Controls.Add(trsKRPP);
+            trsKRPP.Show();
+        }
     }
 }

@@ -759,5 +759,8 @@
   <ItemGroup>
     <None Include="Resources\KRPP.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESIGN FINDSMART %284%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

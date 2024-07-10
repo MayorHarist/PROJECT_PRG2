@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.btnLoginTendik = new Guna.UI2.WinForms.Guna2Button();
             this.btnKTendik = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
@@ -49,36 +48,13 @@
             this.btnExit.FocusedColor = System.Drawing.Color.White;
             this.btnExit.Font = new System.Drawing.Font("Poppins", 20F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(83, 736);
+            this.btnExit.Location = new System.Drawing.Point(76, 664);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(557, 78);
             this.btnExit.TabIndex = 12;
             this.btnExit.UseTransparentBackground = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.AutoRoundedCorners = true;
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderRadius = 38;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.FocusedColor = System.Drawing.Color.White;
-            this.guna2Button4.Font = new System.Drawing.Font("Poppins", 20F, System.Drawing.FontStyle.Bold);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(83, 625);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(557, 78);
-            this.guna2Button4.TabIndex = 12;
-            this.guna2Button4.UseTransparentBackground = true;
-            this.guna2Button4.Click += new System.EventHandler(this.btnLoginMhs_Click);
             // 
             // btnLoginTendik
             // 
@@ -95,7 +71,7 @@
             this.btnLoginTendik.FocusedColor = System.Drawing.Color.White;
             this.btnLoginTendik.Font = new System.Drawing.Font("Poppins", 20F, System.Drawing.FontStyle.Bold);
             this.btnLoginTendik.ForeColor = System.Drawing.Color.White;
-            this.btnLoginTendik.Location = new System.Drawing.Point(83, 514);
+            this.btnLoginTendik.Location = new System.Drawing.Point(76, 555);
             this.btnLoginTendik.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnLoginTendik.Name = "btnLoginTendik";
             this.btnLoginTendik.Size = new System.Drawing.Size(557, 78);
@@ -118,7 +94,7 @@
             this.btnKTendik.FocusedColor = System.Drawing.Color.White;
             this.btnKTendik.Font = new System.Drawing.Font("Poppins", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKTendik.ForeColor = System.Drawing.Color.White;
-            this.btnKTendik.Location = new System.Drawing.Point(83, 403);
+            this.btnKTendik.Location = new System.Drawing.Point(76, 444);
             this.btnKTendik.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnKTendik.Name = "btnKTendik";
             this.btnKTendik.Size = new System.Drawing.Size(557, 78);
@@ -129,11 +105,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.DESIGN_log_sebagai;
+            this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.DESIGN_FINDSMART__4_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.btnKTendik);
-            this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLoginTendik);
             this.DoubleBuffered = true;
@@ -149,7 +124,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button btnExit;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button btnLoginTendik;
         private Guna.UI2.WinForms.Guna2Button btnKTendik;
     }

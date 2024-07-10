@@ -51,6 +51,8 @@
             this.txtNIM = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbProdi = new System.Windows.Forms.ComboBox();
+            this.programStudiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -62,17 +64,15 @@
             this.mahasiswaTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.MahasiswaTableAdapter();
             this.mahasiswaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter();
-            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
-            this.programStudiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -296,12 +296,12 @@
             // 
             this.rbPerempuan.AutoSize = true;
             this.rbPerempuan.BackColor = System.Drawing.Color.Transparent;
-            this.rbPerempuan.CheckedState.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.rbPerempuan.CheckedState.BorderColor = System.Drawing.Color.Lime;
             this.rbPerempuan.CheckedState.BorderThickness = 0;
-            this.rbPerempuan.CheckedState.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.rbPerempuan.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
+            this.rbPerempuan.CheckedState.FillColor = System.Drawing.Color.Lime;
+            this.rbPerempuan.CheckedState.InnerColor = System.Drawing.Color.DarkGreen;
             this.rbPerempuan.CheckedState.InnerOffset = -4;
-            this.rbPerempuan.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbPerempuan.Font = new System.Drawing.Font("Poppins", 12F);
             this.rbPerempuan.ForeColor = System.Drawing.Color.White;
             this.rbPerempuan.Location = new System.Drawing.Point(303, 358);
             this.rbPerempuan.Margin = new System.Windows.Forms.Padding(2);
@@ -320,12 +320,12 @@
             this.rbLaki.AutoSize = true;
             this.rbLaki.BackColor = System.Drawing.Color.Transparent;
             this.rbLaki.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rbLaki.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbLaki.CheckedState.BorderColor = System.Drawing.Color.Lime;
             this.rbLaki.CheckedState.BorderThickness = 0;
-            this.rbLaki.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbLaki.CheckedState.InnerColor = System.Drawing.SystemColors.MenuHighlight;
+            this.rbLaki.CheckedState.FillColor = System.Drawing.Color.Lime;
+            this.rbLaki.CheckedState.InnerColor = System.Drawing.Color.DarkGreen;
             this.rbLaki.CheckedState.InnerOffset = -4;
-            this.rbLaki.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbLaki.Font = new System.Drawing.Font("Poppins", 12F);
             this.rbLaki.ForeColor = System.Drawing.Color.White;
             this.rbLaki.Location = new System.Drawing.Point(195, 358);
             this.rbLaki.Margin = new System.Windows.Forms.Padding(2);
@@ -462,6 +462,16 @@
             this.cbProdi.TabIndex = 68;
             this.cbProdi.ValueMember = "Id_Prodi";
             // 
+            // programStudiBindingSource2
+            // 
+            this.programStudiBindingSource2.DataMember = "ProgramStudi";
+            this.programStudiBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // programStudiBindingSource1
             // 
             this.programStudiBindingSource1.DataMember = "ProgramStudi";
@@ -534,16 +544,6 @@
             // 
             this.programStudiTableAdapter1.ClearBeforeFill = true;
             // 
-            // fINDSMART_MABRESDataSet1
-            // 
-            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
-            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // programStudiBindingSource2
-            // 
-            this.programStudiBindingSource2.DataMember = "ProgramStudi";
-            this.programStudiBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
-            // 
             // programStudiTableAdapter2
             // 
             this.programStudiTableAdapter2.ClearBeforeFill = true;
@@ -586,14 +586,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InputMahasiswa";
             this.Load += new System.EventHandler(this.InputMahasiswa_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

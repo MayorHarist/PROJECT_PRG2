@@ -62,7 +62,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Unable to saved: " + ex.Message);
+                        MessageBox.Show("Unable to save: " + ex.Message);
                     }
                     autoid();
                 }
@@ -72,6 +72,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                 MessageBox.Show("Semua data harus diisi dengan benar.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
         public string autoid()
         {
             string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
@@ -101,8 +102,8 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                 string.IsNullOrWhiteSpace(txtEmail.Text) ||
                 string.IsNullOrWhiteSpace(txtTelepon.Text) ||
                 string.IsNullOrWhiteSpace(txtTahunMasuk.Text))
-                //string.IsNullOrWhiteSpace(txtUsername.Text) ||
-                //string.IsNullOrWhiteSpace(txtPassword.Text))
+            //string.IsNullOrWhiteSpace(txtUsername.Text) ||
+            //string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 return false;
             }
@@ -121,6 +122,13 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                 return false;
             }
 
+            // Validasi apakah email sudah ada dalam database
+            if (!IsEmailUnique(txtEmail.Text))
+            {
+                MessageBox.Show("Email sudah ada dalam database.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             return true;
         }
 
@@ -130,6 +138,23 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             Regex regex = new Regex(pattern);
             return regex.IsMatch(email);
+        }
+
+        private bool IsEmailUnique(string email)
+        {
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT COUNT(*) FROM Mahasiswa WHERE Email = @Email";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Email", email);
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    return count == 0;
+                }
+            }
         }
 
         private void clear()
@@ -165,7 +190,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-           
             this.Hide();
         }
     }

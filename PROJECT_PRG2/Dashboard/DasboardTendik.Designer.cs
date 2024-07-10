@@ -229,6 +229,7 @@
             this.btnTrsKRPP.Size = new System.Drawing.Size(375, 45);
             this.btnTrsKRPP.TabIndex = 2;
             this.btnTrsKRPP.Text = "KRPP Mahasiswa";
+            this.btnTrsKRPP.Click += new System.EventHandler(this.btnTrsKRPP_Click);
             // 
             // btnTrsKRS
             // 

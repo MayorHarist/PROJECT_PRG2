@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdatePengumuman));
             this.cbIDTendik = new System.Windows.Forms.ComboBox();
+            this.tenagaKependidikanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -54,6 +56,7 @@
             this.tanggalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deskripsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pengumumanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.pengumumanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pengumumanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.PengumumanTableAdapter();
             this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.TenagaKependidikanTableAdapter();
@@ -73,21 +76,18 @@
             this.pengumumanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.PengumumanTableAdapter();
             this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
             this.tTipRefreshPengumuman = new System.Windows.Forms.ToolTip(this.components);
-            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
-            this.pengumumanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.pengumumanTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.PengumumanTableAdapter();
-            this.tenagaKependidikanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tenagaKependidikanTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbIDTendik
@@ -102,6 +102,16 @@
             this.cbIDTendik.Size = new System.Drawing.Size(220, 21);
             this.cbIDTendik.TabIndex = 131;
             this.cbIDTendik.ValueMember = "Id_TKN";
+            // 
+            // tenagaKependidikanBindingSource2
+            // 
+            this.tenagaKependidikanBindingSource2.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tenagaKependidikanBindingSource1
             // 
@@ -262,20 +272,21 @@
             this.txtCariPM.BorderColor = System.Drawing.Color.Black;
             this.txtCariPM.BorderRadius = 10;
             this.txtCariPM.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCariPM.DefaultText = "Cari Data Pengumuman";
+            this.txtCariPM.DefaultText = "";
             this.txtCariPM.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCariPM.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCariPM.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCariPM.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCariPM.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCariPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCariPM.ForeColor = System.Drawing.Color.Gray;
+            this.txtCariPM.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCariPM.ForeColor = System.Drawing.Color.Black;
             this.txtCariPM.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCariPM.Location = new System.Drawing.Point(580, 39);
             this.txtCariPM.Margin = new System.Windows.Forms.Padding(4);
             this.txtCariPM.Name = "txtCariPM";
             this.txtCariPM.PasswordChar = '\0';
-            this.txtCariPM.PlaceholderText = "";
+            this.txtCariPM.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtCariPM.PlaceholderText = "Cari Data Pengumuman";
             this.txtCariPM.SelectedText = "";
             this.txtCariPM.Size = new System.Drawing.Size(362, 36);
             this.txtCariPM.TabIndex = 114;
@@ -377,6 +388,11 @@
             this.idTKNDataGridViewTextBoxColumn.HeaderText = "Id_TKN";
             this.idTKNDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idTKNDataGridViewTextBoxColumn.Name = "idTKNDataGridViewTextBoxColumn";
+            // 
+            // pengumumanBindingSource2
+            // 
+            this.pengumumanBindingSource2.DataMember = "Pengumuman";
+            this.pengumumanBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
             // 
             // pengumumanBindingSource1
             // 
@@ -579,24 +595,9 @@
             // 
             this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
             // 
-            // fINDSMART_MABRESDataSet1
-            // 
-            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
-            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pengumumanBindingSource2
-            // 
-            this.pengumumanBindingSource2.DataMember = "Pengumuman";
-            this.pengumumanBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
-            // 
             // pengumumanTableAdapter2
             // 
             this.pengumumanTableAdapter2.ClearBeforeFill = true;
-            // 
-            // tenagaKependidikanBindingSource2
-            // 
-            this.tenagaKependidikanBindingSource2.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
             // 
             // tenagaKependidikanTableAdapter2
             // 
@@ -635,16 +636,16 @@
             this.Text = "UpdatePengumuman";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UpdatePengumuman_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
