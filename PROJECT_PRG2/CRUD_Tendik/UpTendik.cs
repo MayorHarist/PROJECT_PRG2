@@ -6,8 +6,8 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace PROJECT_PRG2.CRUD_Tendik
@@ -25,7 +25,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
             this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
             //this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
-
         }
 
         private void clear()
@@ -39,6 +38,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
             userNmTendik.Text = "";
             txtPassTendik.Text = "";
         }
+
         private void btnTambahTendik_Click(object sender, EventArgs e)
         {
             DataTendik dataTendik = new DataTendik();
@@ -88,38 +88,32 @@ namespace PROJECT_PRG2.CRUD_Tendik
                         {
                             tglLahirTendik.Value = tanggalLahir;
                         }
-                        if (dataTable.Rows.Count > 0)
-                        {
-                            // Set the radio button based on Jenis_Kelamin
-                            txtKelamin.Text = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
-                            txtAlmatTendik.Text = dataTable.Rows[0]["Alamat"].ToString();
-                            txtEmailTendik.Text = dataTable.Rows[0]["Email"].ToString();
-                            TelpTendik.Text = dataTable.Rows[0]["Telepon"].ToString();
-                            userNmTendik.Text = dataTable.Rows[0]["Username"].ToString();
-                            txtPassTendik.Text = dataTable.Rows[0]["Password"].ToString();
+                        // Set the radio button based on Jenis_Kelamin
+                        txtKelamin.Text = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
+                        txtAlmatTendik.Text = dataTable.Rows[0]["Alamat"].ToString();
+                        txtEmailTendik.Text = dataTable.Rows[0]["Email"].ToString();
+                        TelpTendik.Text = dataTable.Rows[0]["Telepon"].ToString();
+                        userNmTendik.Text = dataTable.Rows[0]["Username"].ToString();
+                        txtPassTendik.Text = dataTable.Rows[0]["Password"].ToString();
 
-                           
+                        txtIDTendik.Enabled = true;
+                        txtNamaTendik.Enabled = true;
+                        tglLahirTendik.Enabled = true;
+                        txtAlmatTendik.Enabled = true;
+                        txtEmailTendik.Enabled = true;
+                        TelpTendik.Enabled = true;
+                        userNmTendik.Enabled = true;
+                        txtPassTendik.Enabled = true;
 
-                            txtIDTendik.Enabled = true;
-                            txtNamaTendik.Enabled = true;
-                            tglLahirTendik.Enabled = true;
-                            txtAlmatTendik.Enabled = true;
-                            txtEmailTendik.Enabled = true;
-                            TelpTendik.Enabled = true;
-                            userNmTendik.Enabled = true;
-                            txtPassTendik.Enabled = true;
-
-                            btnUpdate.Enabled = true;
-                            btnHapus_.Enabled = true;
-                        }
-                        else
-                        {
-                            // Menampilkan pesan jika data tidak ditemukan
-                            MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        }
-                        connection.Close();
+                        btnUpdate.Enabled = true;
+                        btnHapus_.Enabled = true;
                     }
+                    else
+                    {
+                        // Menampilkan pesan jika data tidak ditemukan
+                        MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    connection.Close();
                 }
             }
             catch (Exception ex)
@@ -134,10 +128,24 @@ namespace PROJECT_PRG2.CRUD_Tendik
             {
                 //string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
-              
+
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
+
+                    // Validate email format
+                    if (!IsValidEmail(txtEmailTendik.Text))
+                    {
+                        MessageBox.Show("Format email tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Check if email already exists
+                    if (EmailExists(txtEmailTendik.Text))
+                    {
+                        MessageBox.Show("Email sudah terdaftar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
                     SqlCommand update = new SqlCommand("sp_UpdateTendik", connection);
                     update.CommandType = CommandType.StoredProcedure;
@@ -145,8 +153,6 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     update.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
                     update.Parameters.AddWithValue("@Nama", txtNamaTendik.Text);
                     update.Parameters.AddWithValue("@Tanggal_Lahir", tglLahirTendik.Value);
-                    // Tentukan nilai jenis kelamin berdasarkan radio button yang dipilih
-                    
                     update.Parameters.AddWithValue("@Jenis_Kelamin", txtKelamin.Text);
                     update.Parameters.AddWithValue("@Alamat", txtAlmatTendik.Text);
                     update.Parameters.AddWithValue("@Email", txtEmailTendik.Text);
@@ -154,17 +160,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     update.Parameters.AddWithValue("@Username", userNmTendik.Text);
                     update.Parameters.AddWithValue("@Password", txtPassTendik.Text);
 
-                    // Eksekusi stored procedure
                     update.ExecuteNonQuery();
 
-                    // Menampilkan pesan jika eksekusi berhasil
-                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Memperbarui data di tampilan (jika ada)
+                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
                     clear();
 
-                    // Menambahkan tooltip untuk ImageButton
                     tTipEditTendik.SetToolTip(btnUpdate, "Perbarui Data");
                 }
             }
@@ -190,27 +191,62 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     delete.Parameters.AddWithValue("@Id_TKN", txtIDTendik.Text);
                     delete.ExecuteNonQuery();
 
-                    MessageBox.Show("Data berhasil dihapus", "Informasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
 
-                    // Menambahkan tooltip untuk ImageButton
                     tTipHapusTendik.SetToolTip(btnHapus_, "Hapus Data");
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-            } 
+            }
         }
 
         private void btnRefersh_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
-            //this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
             this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
+        }
 
+        private void txtNamaTendik_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TelpTendik_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (TelpTendik.Text.Length >= 13 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
+        }
+
+        private bool EmailExists(string email)
+        {
+            //string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM TenagaKependidikan WHERE Email = @Email", connection);
+                command.Parameters.AddWithValue("@Email", email);
+                int count = Convert.ToInt32(command.ExecuteScalar());
+                return count > 0;
+            }
         }
     }
 }

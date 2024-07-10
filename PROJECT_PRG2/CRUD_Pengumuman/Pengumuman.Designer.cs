@@ -185,11 +185,12 @@
             this.txtDeskripsi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDeskripsi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDeskripsi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDeskripsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtDeskripsi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDeskripsi.ForeColor = System.Drawing.Color.Black;
             this.txtDeskripsi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDeskripsi.Location = new System.Drawing.Point(351, 341);
             this.txtDeskripsi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDeskripsi.Multiline = true;
             this.txtDeskripsi.Name = "txtDeskripsi";
             this.txtDeskripsi.PasswordChar = '\0';
             this.txtDeskripsi.PlaceholderText = "";
@@ -231,7 +232,7 @@
             this.txtPengumuman.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPengumuman.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPengumuman.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtPengumuman.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPengumuman.ForeColor = System.Drawing.Color.Black;
             this.txtPengumuman.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPengumuman.Location = new System.Drawing.Point(351, 256);
@@ -242,6 +243,7 @@
             this.txtPengumuman.SelectedText = "";
             this.txtPengumuman.Size = new System.Drawing.Size(191, 31);
             this.txtPengumuman.TabIndex = 87;
+            this.txtPengumuman.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPengumuman_KeyPress);
             // 
             // txtIDPengumuman
             // 
@@ -256,7 +258,7 @@
             this.txtIDPengumuman.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIDPengumuman.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIDPengumuman.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtIDPengumuman.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDPengumuman.ForeColor = System.Drawing.Color.Black;
             this.txtIDPengumuman.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDPengumuman.Location = new System.Drawing.Point(351, 217);
@@ -264,6 +266,7 @@
             this.txtIDPengumuman.Name = "txtIDPengumuman";
             this.txtIDPengumuman.PasswordChar = '\0';
             this.txtIDPengumuman.PlaceholderText = "";
+            this.txtIDPengumuman.ReadOnly = true;
             this.txtIDPengumuman.SelectedText = "";
             this.txtIDPengumuman.Size = new System.Drawing.Size(191, 31);
             this.txtIDPengumuman.TabIndex = 86;
@@ -272,12 +275,13 @@
             // 
             this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource2;
             this.cbIDTendik.DisplayMember = "Nama";
+            this.cbIDTendik.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIDTendik.FormattingEnabled = true;
-            this.cbIDTendik.ItemHeight = 13;
+            this.cbIDTendik.ItemHeight = 28;
             this.cbIDTendik.Location = new System.Drawing.Point(353, 416);
             this.cbIDTendik.Margin = new System.Windows.Forms.Padding(2);
             this.cbIDTendik.Name = "cbIDTendik";
-            this.cbIDTendik.Size = new System.Drawing.Size(192, 21);
+            this.cbIDTendik.Size = new System.Drawing.Size(192, 36);
             this.cbIDTendik.TabIndex = 113;
             this.cbIDTendik.ValueMember = "Id_TKN";
             // 

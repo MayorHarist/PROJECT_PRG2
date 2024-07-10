@@ -192,6 +192,23 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         }
 
+        private bool EmailAlreadyExists(string email, string currentNoPegawai)
+        {
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            string query = "SELECT COUNT(*) FROM Dosen WHERE Email = @Email AND No_Pegawai != @CurrentNoPegawai";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Email", email);
+                command.Parameters.AddWithValue("@CurrentNoPegawai", currentNoPegawai);
+
+                connection.Open();
+                int count = (int)command.ExecuteScalar();
+                return count > 0;
+            }
+        }
+
         private void btnUbah_Click(object sender, EventArgs e)
         {
             // Menampilkan kotak dialog konfirmasi
@@ -208,13 +225,19 @@ namespace PROJECT_PRG2.CRUD_Dosen
                         string.IsNullOrWhiteSpace(txtNama.Text) ||
                         string.IsNullOrWhiteSpace(txtBidang.Text) ||
                         string.IsNullOrWhiteSpace(txtPendidikan.Text) ||
-                        string.IsNullOrWhiteSpace(DateTimeTanggal.Text) ||
                         string.IsNullOrWhiteSpace(txtKelamin.Text) ||
                         string.IsNullOrWhiteSpace(txtAlamat.Text) ||
                         string.IsNullOrWhiteSpace(txtEmail.Text) ||
                         string.IsNullOrWhiteSpace(txtTelepon.Text))
                     {
                         MessageBox.Show("Silakan isi semua data terlebih dahulu.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Validasi email tidak boleh sama dengan data lain
+                    if (EmailAlreadyExists(txtEmail.Text, txtPegawai.Text))
+                    {
+                        MessageBox.Show("Email sudah ada di dalam database untuk data lain.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
@@ -225,8 +248,6 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
                         SqlCommand update = new SqlCommand("sp_UpdateDosen", connection);
                         update.CommandType = CommandType.StoredProcedure;
-
-                        
 
                         // Tambahkan parameter untuk stored procedure
                         update.Parameters.AddWithValue("@No_Pegawai", txtPegawai.Text);
@@ -259,6 +280,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 MessageBox.Show("Pengubahan data dibatalkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
 
 
@@ -388,80 +410,22 @@ namespace PROJECT_PRG2.CRUD_Dosen
             // Refresh the DataGridView to ensure scrollbars appear
             this.dgvDosen.Refresh();
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void txtTelepon_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbLaki_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbPerempuan_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPendidikan_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void tooltipupdate_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void tooltipHapus_Popup(object sender, PopupEventArgs e)
-        {
-
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

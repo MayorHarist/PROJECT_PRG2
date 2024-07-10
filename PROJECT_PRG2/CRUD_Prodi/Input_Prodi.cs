@@ -31,6 +31,13 @@ namespace PROJECT_PRG2.CRUD_Prodi
                 return;
             }
 
+            // Validasi nama prodi tidak boleh sudah ada di database
+            if (ProdiExists(txtNama.Text))
+            {
+                MessageBox.Show("Nama Program Studi sudah ada di database.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
             SqlConnection connection = new SqlConnection(connectionString);
 
@@ -56,25 +63,47 @@ namespace PROJECT_PRG2.CRUD_Prodi
             autoid();
         }
 
-        public string autoid()
+        private bool ProdiExists(string namaProdi)
         {
-            //string connectionstring = "integrated security=true; data source=.;initial catalog=FINDSMART";
             string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
             SqlConnection connection = new SqlConnection(connectionString);
+
+            SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM ProgramStudi WHERE Nama = @Nama", connection);
+            command.Parameters.AddWithValue("@Nama", namaProdi);
+
+            try
             {
                 connection.Open();
-
-                string functionQuery = "SELECT dbo.autoIdProdi()";
-
-                using (SqlCommand functionCommand = new SqlCommand(functionQuery, connection))
-                {
-                    string newID = functionCommand.ExecuteScalar().ToString();
-                    txtIdProdi.Text = newID;
-                    return newID;
-                }
+                int count = (int)command.ExecuteScalar();
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nama Program Studi Sudah Ada" + ex.Message);
+                return false;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
+        public string autoid()
+        {
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            connection.Open();
+
+            string functionQuery = "SELECT dbo.autoIdProdi()";
+
+            using (SqlCommand functionCommand = new SqlCommand(functionQuery, connection))
+            {
+                string newID = functionCommand.ExecuteScalar().ToString();
+                txtIdProdi.Text = newID;
+                return newID;
+            }
+        }
 
         private void clear()
         {
@@ -95,21 +124,19 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
         private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Cek apakah karakter yang diinputkan adalah huruf atau backspace (untuk menghapus)
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
-                // Jika bukan huruf atau backspace, batalkan input
                 e.Handled = true;
+                MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void txtAkreditasi_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Cek apakah karakter yang diinputkan adalah huruf atau backspace (untuk menghapus)
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
-                // Jika bukan huruf atau backspace, batalkan input
                 e.Handled = true;
+                MessageBox.Show("Tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

@@ -23,7 +23,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
         private void DataTendik_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.TenagaKependidikan' table. You can move, or remove it, as needed.
-            
+
             // TODO: This line of code loads data into the 'tendik.TenagaKependidikan' table. You can move, or remove it, as needed.
             //karna tadinya ada tabel view gitu... di inputnya
         }
@@ -43,30 +43,47 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
             //Create Requred Validator untuk verifikasi masukan pengguna wajib diisi,
             //dengan memeriksa apakah semua data terisi atau belum
-            if (string.IsNullOrWhiteSpace(txtIDTendik.Text) || string.IsNullOrWhiteSpace(txtNamaTendik.Text) || string.IsNullOrWhiteSpace(txtAlmatTendik.Text) || 
-                string.IsNullOrWhiteSpace(txtEmailTendik.Text) || string.IsNullOrWhiteSpace(TelpTendik.Text) || string.IsNullOrWhiteSpace(userNmTendik.Text) || 
+            if (string.IsNullOrWhiteSpace(txtIDTendik.Text) || string.IsNullOrWhiteSpace(txtNamaTendik.Text) || string.IsNullOrWhiteSpace(txtAlmatTendik.Text) ||
+                string.IsNullOrWhiteSpace(txtEmailTendik.Text) || string.IsNullOrWhiteSpace(TelpTendik.Text) || string.IsNullOrWhiteSpace(userNmTendik.Text) ||
                 string.IsNullOrWhiteSpace(txtPassTendik.Text))
             {
                 MessageBox.Show("Seluruh Data wajib diisi!", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            //Memastikan apakah data yang akan diismpan sudah benar, jika belum maka masih bisa mengisi ulang sebelum simpan
+
+            // Memastikan apakah data yang akan diismpan sudah benar, jika belum maka masih bisa mengisi ulang sebelum simpan
             string message = $"Apakah data berikut sudah benar?\n\n" +
-                    $"ID TKN: {txtIDTendik.Text}\n" +
-                    $"Nama: {txtNamaTendik.Text}\n" +
-                    $"Tanggal_Lahir: {tglLahirTendik.Value}\n" +
-                    $"Jenis_Kelamin: {(rbLaki.Checked ? "Laki-Laki" : rbPuan.Checked ? "Perempuan" : "Belum dipilih")}\n" +
-                    $"Alamat: {txtAlmatTendik.Text}\n" +
-                    $"Email: {txtEmailTendik.Text}\n" +
-                    $"Telepon: {TelpTendik.Text}\n" +
-                    $"Username: {userNmTendik.Text}\n" +
-                    $"Password: {txtPassTendik.Text}\n";
+                            $"ID TKN: {txtIDTendik.Text}\n" +
+                            $"Nama: {txtNamaTendik.Text}\n" +
+                            $"Tanggal_Lahir: {tglLahirTendik.Value}\n" +
+                            $"Jenis_Kelamin: {(rbLaki.Checked ? "Laki-Laki" : rbPuan.Checked ? "Perempuan" : "Belum dipilih")}\n" +
+                            $"Alamat: {txtAlmatTendik.Text}\n" +
+                            $"Email: {txtEmailTendik.Text}\n" +
+                            $"Telepon: {TelpTendik.Text}\n" +
+                            $"Username: {userNmTendik.Text}\n" +
+                            $"Password: {txtPassTendik.Text}\n";
 
             DialogResult result = MessageBox.Show(message, "Konfirmasi Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
             {
                 return; // Jika pengguna menekan 'No', hentikan proses submit
+            }
+
+            // Check if email already exists in database
+            using (SqlConnection connectionCheck = new SqlConnection(connectionString))
+            {
+                connectionCheck.Open();
+                string query = "SELECT COUNT(*) FROM TenagaKependidikan WHERE Email = @Email";
+                SqlCommand command = new SqlCommand(query, connectionCheck);
+                command.Parameters.AddWithValue("@Email", txtEmailTendik.Text);
+                int count = (int)command.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    MessageBox.Show("Email sudah ada di database. Silakan gunakan alamat email yang berbeda.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
 
             SqlCommand insert = new SqlCommand("sp_InsertTendik", connection);
@@ -91,7 +108,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 MessageBox.Show("Data berhasil disimpan", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clear();
-                
+                autoid();
+
             }
             catch (Exception ex)
             {
@@ -136,31 +154,26 @@ namespace PROJECT_PRG2.CRUD_Tendik
             }
         }
 
-
-
         private void btnBatalTendik_Click(object sender, EventArgs e)
         {
             clear();
 
         }
 
-        
-
-
         private void btnKembali_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
 
-
         private void txtNamaTendik_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Masukkan hanya berupa huruf!");
+                MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
         private void TelpTendik_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
@@ -168,54 +181,12 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 e.Handled = true;
                 MessageBox.Show("Masukkan hanya berupa Angka !");
             }
-        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void tenagaKependidikanBindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tenagaKependidikanBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvTendik_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            if (TelpTendik.Text.Length >= 13 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nomor telepon tidak boleh lebih dari 13 digit.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

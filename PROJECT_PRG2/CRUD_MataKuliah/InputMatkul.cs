@@ -84,6 +84,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     MessageBox.Show("Data berhasil disimpan", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
+                    autoid();
                 }
                 catch (Exception ex)
                 {
@@ -197,6 +198,24 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         private void btnKembali_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void txtSemester_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtSKS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

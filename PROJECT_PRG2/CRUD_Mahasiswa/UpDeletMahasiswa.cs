@@ -28,7 +28,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             //this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
             ///this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
-           
+
         }
 
         private void SetControlsEnabled(bool enabled)
@@ -36,7 +36,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             cbProdi.Enabled = enabled;
             txtNama.Enabled = enabled;
             DateTimeTanggal.Enabled = enabled;
-            
+
             txtAlamat.Enabled = enabled;
             txtEmail.Enabled = enabled;
             txtTelepon.Enabled = enabled;
@@ -66,13 +66,11 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
             // Mengatur ulang DateTimePicker ke tanggal saat ini
             DateTimeTanggal.Value = DateTime.Now;
-
-            
         }
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            DasboardTendik dasboardTendik = new DasboardTendik();  
+            DasboardTendik dasboardTendik = new DasboardTendik();
             dasboardTendik.Show();
             this.Hide();
         }
@@ -87,10 +85,19 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         {
             try
             {
+                if (!ValidateFields())
+                    return;
+
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
+
+                    if (EmailExists(txtEmail.Text, connection))
+                    {
+                        MessageBox.Show("Email sudah terdaftar.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
                     SqlCommand update = new SqlCommand("sp_UpdateMahasiswa", connection);
                     update.CommandType = CommandType.StoredProcedure;
@@ -122,15 +129,9 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    
                     // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
                     this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.Mahasiswa);
-                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
-                    //this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
-                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
-                    //this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
-                    // Memperbarui data di tampilan (jika ada)
-                    //this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
+
                     // Panggil metode clear() jika ingin membersihkan form setelah update
                     clear();
                     SetControlsEnabled(false);
@@ -174,14 +175,10 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             }
         }
 
-
-
         private void btnBatal_Click(object sender, EventArgs e)
         {
             clear();
         }
-
-        
 
         private void btnCari_Click(object sender, EventArgs e)
         {
@@ -193,7 +190,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_SMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -219,7 +216,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                         }
 
                         txtKelamin.Text = dataTable.Rows[0]["Jenis_Kelamin"].ToString();
-                        
+
                         txtAlamat.Text = dataTable.Rows[0]["Alamat"].ToString();
                         txtEmail.Text = dataTable.Rows[0]["Email"].ToString();
                         txtTelepon.Text = dataTable.Rows[0]["Telepon"].ToString();
@@ -259,6 +256,43 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
             // Set default state of controls
             SetControlsEnabled(false);
+        }
+
+        private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtTelepon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private bool EmailExists(string email, SqlConnection connection)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Mahasiswa WHERE Email = @Email", connection);
+            cmd.Parameters.AddWithValue("@Email", email);
+            int count = (int)cmd.ExecuteScalar();
+            return count > 0;
+        }
+
+        private bool ValidateFields()
+        {
+            if (txtTelepon.Text.Length > 13)
+            {
+                MessageBox.Show("Nomor telepon tidak boleh lebih dari 13 digit.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
         }
     }
 }
