@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FINDSMART_MABRESDataSet2" targetNamespace="http://tempuri.org/FINDSMART_MABRESDataSet2.xsd" xmlns:mstns="http://tempuri.org/FINDSMART_MABRESDataSet2.xsd" xmlns="http://tempuri.org/FINDSMART_MABRESDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FINDSMART_MABRESConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FINDSMART_MABRESConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PROJECT_PRG2.Properties.Settings.GlobalReference.Default.FINDSMART_MABRESConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MahasiswaBerprestasiTableAdapter" GeneratorDataComponentClassName="MahasiswaBerprestasiTableAdapter" Name="MahasiswaBerprestasi" UserDataComponentName="MahasiswaBerprestasiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FINDSMART_MABRESConnectionString (Settings)" DbObjectName="FINDSMART_MABRES.dbo.MahasiswaBerprestasi" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT NIM, Nama_Mahasiswa, Jenis_Kelamin, Tahun_Masuk, Nama_Prodi, IPK, Total_Point_KRPP FROM dbo.MahasiswaBerprestasi</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NIM" DataSetColumn="NIM" />
+              <Mapping SourceColumn="Nama_Mahasiswa" DataSetColumn="Nama_Mahasiswa" />
+              <Mapping SourceColumn="Jenis_Kelamin" DataSetColumn="Jenis_Kelamin" />
+              <Mapping SourceColumn="Tahun_Masuk" DataSetColumn="Tahun_Masuk" />
+              <Mapping SourceColumn="Nama_Prodi" DataSetColumn="Nama_Prodi" />
+              <Mapping SourceColumn="IPK" DataSetColumn="IPK" />
+              <Mapping SourceColumn="Total_Point_KRPP" DataSetColumn="Total_Point_KRPP" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FINDSMART_MABRESDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="FINDSMART_MABRESDataSet2" msprop:Generator_DataSetName="FINDSMART_MABRESDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MahasiswaBerprestasi" msprop:Generator_RowEvHandlerName="MahasiswaBerprestasiRowChangeEventHandler" msprop:Generator_RowDeletedName="MahasiswaBerprestasiRowDeleted" msprop:Generator_RowDeletingName="MahasiswaBerprestasiRowDeleting" msprop:Generator_RowEvArgName="MahasiswaBerprestasiRowChangeEvent" msprop:Generator_TablePropName="MahasiswaBerprestasi" msprop:Generator_RowChangedName="MahasiswaBerprestasiRowChanged" msprop:Generator_RowChangingName="MahasiswaBerprestasiRowChanging" msprop:Generator_TableClassName="MahasiswaBerprestasiDataTable" msprop:Generator_RowClassName="MahasiswaBerprestasiRow" msprop:Generator_TableVarName="tableMahasiswaBerprestasi" msprop:Generator_UserTableName="MahasiswaBerprestasi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NIM" msprop:Generator_ColumnPropNameInRow="NIM" msprop:Generator_ColumnPropNameInTable="NIMColumn" msprop:Generator_ColumnVarNameInTable="columnNIM" msprop:Generator_UserColumnName="NIM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nama_Mahasiswa" msprop:Generator_ColumnPropNameInRow="Nama_Mahasiswa" msprop:Generator_ColumnPropNameInTable="Nama_MahasiswaColumn" msprop:Generator_ColumnVarNameInTable="columnNama_Mahasiswa" msprop:Generator_UserColumnName="Nama_Mahasiswa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Jenis_Kelamin" msprop:Generator_ColumnPropNameInRow="Jenis_Kelamin" msprop:Generator_ColumnPropNameInTable="Jenis_KelaminColumn" msprop:Generator_ColumnVarNameInTable="columnJenis_Kelamin" msprop:Generator_UserColumnName="Jenis_Kelamin">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tahun_Masuk" msprop:Generator_ColumnPropNameInRow="Tahun_Masuk" msprop:Generator_ColumnPropNameInTable="Tahun_MasukColumn" msprop:Generator_ColumnVarNameInTable="columnTahun_Masuk" msprop:Generator_UserColumnName="Tahun_Masuk" type="xs:int" />
+              <xs:element name="Nama_Prodi" msprop:Generator_ColumnPropNameInRow="Nama_Prodi" msprop:Generator_ColumnPropNameInTable="Nama_ProdiColumn" msprop:Generator_ColumnVarNameInTable="columnNama_Prodi" msprop:Generator_UserColumnName="Nama_Prodi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPK" msprop:Generator_ColumnPropNameInRow="IPK" msprop:Generator_ColumnPropNameInTable="IPKColumn" msprop:Generator_ColumnVarNameInTable="columnIPK" msprop:Generator_UserColumnName="IPK" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total_Point_KRPP" msprop:Generator_ColumnPropNameInRow="Total_Point_KRPP" msprop:Generator_ColumnPropNameInTable="Total_Point_KRPPColumn" msprop:Generator_ColumnVarNameInTable="columnTotal_Point_KRPP" msprop:Generator_UserColumnName="Total_Point_KRPP" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MahasiswaBerprestasi" />
+      <xs:field xpath="mstns:NIM" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
