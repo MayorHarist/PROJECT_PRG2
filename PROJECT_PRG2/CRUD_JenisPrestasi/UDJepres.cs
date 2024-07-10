@@ -199,5 +199,10 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
             this.jenisPrestasiTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.JenisPrestasi);
 
         }
+
+        private void txtCari_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

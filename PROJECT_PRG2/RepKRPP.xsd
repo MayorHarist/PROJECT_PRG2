@@ -9,10 +9,11 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LaporanMahasiswaKRPPTableAdapter" GeneratorDataComponentClassName="LaporanMahasiswaKRPPTableAdapter" Name="LaporanMahasiswaKRPP" UserDataComponentName="LaporanMahasiswaKRPPTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="FINDSMART_MABRESConnectionString (Settings)" DbObjectName="FINDSMART_MABRES.dbo.LaporanMahasiswaKRPP" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="FINDSMART_MABRESConnectionString (Settings)" DbObjectName="FINDSMART_MABRES.dbo.LaporanMahasiswaKRPP" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT NIM, Nama_Mahasiswa, Jenis_Kelamin, Tahun_Masuk, Nama_Prodi, Total_Point_KRPP FROM dbo.LaporanMahasiswaKRPP</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        NIM, Nama_Mahasiswa, Jenis_Kelamin, Tahun_Masuk, Nama_Prodi, Total_Point_KRPP
+FROM            LaporanMahasiswaKRPP</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -36,39 +37,39 @@
   <xs:element name="RepKRPP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="RepKRPP" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="RepKRPP">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="LaporanMahasiswaKRPP" msprop:Generator_RowClassName="LaporanMahasiswaKRPPRow" msprop:Generator_RowEvHandlerName="LaporanMahasiswaKRPPRowChangeEventHandler" msprop:Generator_RowDeletedName="LaporanMahasiswaKRPPRowDeleted" msprop:Generator_RowDeletingName="LaporanMahasiswaKRPPRowDeleting" msprop:Generator_RowEvArgName="LaporanMahasiswaKRPPRowChangeEvent" msprop:Generator_TablePropName="LaporanMahasiswaKRPP" msprop:Generator_RowChangedName="LaporanMahasiswaKRPPRowChanged" msprop:Generator_UserTableName="LaporanMahasiswaKRPP" msprop:Generator_RowChangingName="LaporanMahasiswaKRPPRowChanging" msprop:Generator_TableClassName="LaporanMahasiswaKRPPDataTable" msprop:Generator_TableVarName="tableLaporanMahasiswaKRPP">
+        <xs:element name="LaporanMahasiswaKRPP" msprop:Generator_RowEvHandlerName="LaporanMahasiswaKRPPRowChangeEventHandler" msprop:Generator_RowDeletedName="LaporanMahasiswaKRPPRowDeleted" msprop:Generator_RowDeletingName="LaporanMahasiswaKRPPRowDeleting" msprop:Generator_RowEvArgName="LaporanMahasiswaKRPPRowChangeEvent" msprop:Generator_TablePropName="LaporanMahasiswaKRPP" msprop:Generator_RowChangedName="LaporanMahasiswaKRPPRowChanged" msprop:Generator_UserTableName="LaporanMahasiswaKRPP" msprop:Generator_RowChangingName="LaporanMahasiswaKRPPRowChanging" msprop:Generator_RowClassName="LaporanMahasiswaKRPPRow" msprop:Generator_TableClassName="LaporanMahasiswaKRPPDataTable" msprop:Generator_TableVarName="tableLaporanMahasiswaKRPP">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="NIM" msprop:Generator_UserColumnName="NIM" msprop:Generator_ColumnPropNameInTable="NIMColumn" msprop:Generator_ColumnPropNameInRow="NIM" msprop:Generator_ColumnVarNameInTable="columnNIM">
+              <xs:element name="NIM" msprop:Generator_ColumnPropNameInTable="NIMColumn" msprop:Generator_ColumnPropNameInRow="NIM" msprop:Generator_UserColumnName="NIM" msprop:Generator_ColumnVarNameInTable="columnNIM">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Nama_Mahasiswa" msprop:Generator_UserColumnName="Nama_Mahasiswa" msprop:Generator_ColumnPropNameInTable="Nama_MahasiswaColumn" msprop:Generator_ColumnPropNameInRow="Nama_Mahasiswa" msprop:Generator_ColumnVarNameInTable="columnNama_Mahasiswa">
+              <xs:element name="Nama_Mahasiswa" msprop:Generator_ColumnPropNameInTable="Nama_MahasiswaColumn" msprop:Generator_ColumnPropNameInRow="Nama_Mahasiswa" msprop:Generator_UserColumnName="Nama_Mahasiswa" msprop:Generator_ColumnVarNameInTable="columnNama_Mahasiswa">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Jenis_Kelamin" msprop:Generator_UserColumnName="Jenis_Kelamin" msprop:Generator_ColumnPropNameInTable="Jenis_KelaminColumn" msprop:Generator_ColumnPropNameInRow="Jenis_Kelamin" msprop:Generator_ColumnVarNameInTable="columnJenis_Kelamin">
+              <xs:element name="Jenis_Kelamin" msprop:Generator_ColumnPropNameInTable="Jenis_KelaminColumn" msprop:Generator_ColumnPropNameInRow="Jenis_Kelamin" msprop:Generator_UserColumnName="Jenis_Kelamin" msprop:Generator_ColumnVarNameInTable="columnJenis_Kelamin">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Tahun_Masuk" msprop:Generator_UserColumnName="Tahun_Masuk" msprop:Generator_ColumnPropNameInTable="Tahun_MasukColumn" msprop:Generator_ColumnPropNameInRow="Tahun_Masuk" msprop:Generator_ColumnVarNameInTable="columnTahun_Masuk" type="xs:int" />
-              <xs:element name="Nama_Prodi" msprop:Generator_UserColumnName="Nama_Prodi" msprop:Generator_ColumnPropNameInTable="Nama_ProdiColumn" msprop:Generator_ColumnPropNameInRow="Nama_Prodi" msprop:Generator_ColumnVarNameInTable="columnNama_Prodi">
+              <xs:element name="Tahun_Masuk" msprop:Generator_ColumnPropNameInTable="Tahun_MasukColumn" msprop:Generator_ColumnPropNameInRow="Tahun_Masuk" msprop:Generator_UserColumnName="Tahun_Masuk" msprop:Generator_ColumnVarNameInTable="columnTahun_Masuk" type="xs:int" />
+              <xs:element name="Nama_Prodi" msprop:Generator_ColumnPropNameInTable="Nama_ProdiColumn" msprop:Generator_ColumnPropNameInRow="Nama_Prodi" msprop:Generator_UserColumnName="Nama_Prodi" msprop:Generator_ColumnVarNameInTable="columnNama_Prodi">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Total_Point_KRPP" msprop:Generator_UserColumnName="Total_Point_KRPP" msprop:Generator_ColumnPropNameInTable="Total_Point_KRPPColumn" msprop:Generator_ColumnPropNameInRow="Total_Point_KRPP" msprop:Generator_ColumnVarNameInTable="columnTotal_Point_KRPP" type="xs:int" minOccurs="0" />
+              <xs:element name="Total_Point_KRPP" msprop:Generator_ColumnPropNameInTable="Total_Point_KRPPColumn" msprop:Generator_ColumnPropNameInRow="Total_Point_KRPP" msprop:Generator_UserColumnName="Total_Point_KRPP" msprop:Generator_ColumnVarNameInTable="columnTotal_Point_KRPP" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

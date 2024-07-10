@@ -16,5 +16,12 @@ namespace PROJECT_PRG2.Laporan
         {
             InitializeComponent();
         }
+
+        private void LaporanKRS_KRPP_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'repMabres.MahasiswaBerprestasi' table. You can move, or remove it, as needed.
+            this.mahasiswaBerprestasiTableAdapter.Fill(this.repMabres.MahasiswaBerprestasi);
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
