@@ -32,6 +32,8 @@ namespace PROJECT_PRG2.CRUD_JenisPrestasi
 
         public void clear()
         {
+            txtCari.Text = "";
+            txtIdJenisPrestasi.Text = "";
             txtNama.Text = "";
             txtPeran.Text = "";
             txtPenyelenggara.Text = "";

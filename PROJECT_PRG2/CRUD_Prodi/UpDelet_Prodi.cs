@@ -18,15 +18,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
 
             InitializeComponent();
-            /*panelData.Height = 0;
-            panelTransaksi.Height = 0;
-            panelLaporan.Height = 0;
-            timerData.Interval = 10;
-            timerData.Tick += timerData_Tick;
-            timerTRS.Interval = 10;
-            timerTRS.Tick += timerTRS_Tick;
-            timerLaporan.Interval = 10;
-            timerLaporan.Tick += timerLaporan_Tick;*/
+            
         }
 
         private void UpDelet_Prodi_Load(object sender, EventArgs e)
@@ -45,6 +37,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
         }
         private void clear()
         {
+            txtCari.Text = "";
             txtIdProdi.Text = "";
             txtNama.Text = "";
             txtJenjangPendidikan.Text = "";
@@ -184,6 +177,24 @@ namespace PROJECT_PRG2.CRUD_Prodi
         {
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
             this.programStudiTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
+        }
+
+        private void txtAkreditasi_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtNama_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

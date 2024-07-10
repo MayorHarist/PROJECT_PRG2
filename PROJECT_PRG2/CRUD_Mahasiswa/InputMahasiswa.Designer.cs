@@ -266,6 +266,7 @@
             this.txtTelepon.SelectedText = "";
             this.txtTelepon.Size = new System.Drawing.Size(190, 31);
             this.txtTelepon.TabIndex = 43;
+            this.txtTelepon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelepon_KeyPress_1);
             // 
             // txtEmail
             // 
@@ -408,6 +409,7 @@
             this.txtNama.SelectedText = "";
             this.txtNama.Size = new System.Drawing.Size(190, 31);
             this.txtNama.TabIndex = 35;
+            this.txtNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNama_KeyPress);
             // 
             // txtNIM
             // 
@@ -452,13 +454,13 @@
             // 
             this.cbProdi.DataSource = this.programStudiBindingSource2;
             this.cbProdi.DisplayMember = "Nama";
-            this.cbProdi.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProdi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProdi.FormattingEnabled = true;
-            this.cbProdi.ItemHeight = 23;
+            this.cbProdi.ItemHeight = 28;
             this.cbProdi.Location = new System.Drawing.Point(206, 193);
             this.cbProdi.Margin = new System.Windows.Forms.Padding(2);
             this.cbProdi.Name = "cbProdi";
-            this.cbProdi.Size = new System.Drawing.Size(192, 31);
+            this.cbProdi.Size = new System.Drawing.Size(192, 36);
             this.cbProdi.TabIndex = 68;
             this.cbProdi.ValueMember = "Id_Prodi";
             // 

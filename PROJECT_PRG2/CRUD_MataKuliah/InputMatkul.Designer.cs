@@ -134,9 +134,9 @@
             this.label6.Location = new System.Drawing.Point(146, 375);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 28);
+            this.label6.Size = new System.Drawing.Size(64, 28);
             this.label6.TabIndex = 54;
-            this.label6.Text = "Pegawai";
+            this.label6.Text = "Dosen";
             // 
             // label1
             // 
@@ -204,7 +204,7 @@
             this.txtSemester.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSemester.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSemester.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtSemester.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSemester.ForeColor = System.Drawing.Color.Black;
             this.txtSemester.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSemester.Location = new System.Drawing.Point(343, 332);
@@ -215,6 +215,7 @@
             this.txtSemester.SelectedText = "";
             this.txtSemester.Size = new System.Drawing.Size(190, 31);
             this.txtSemester.TabIndex = 37;
+            this.txtSemester.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSemester_KeyPress);
             // 
             // txtJenis
             // 
@@ -229,7 +230,7 @@
             this.txtJenis.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtJenis.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtJenis.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtJenis.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJenis.ForeColor = System.Drawing.Color.Black;
             this.txtJenis.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJenis.Location = new System.Drawing.Point(344, 293);
@@ -254,7 +255,7 @@
             this.txtSKS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSKS.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSKS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSKS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtSKS.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSKS.ForeColor = System.Drawing.Color.Black;
             this.txtSKS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSKS.Location = new System.Drawing.Point(344, 256);
@@ -265,6 +266,7 @@
             this.txtSKS.SelectedText = "";
             this.txtSKS.Size = new System.Drawing.Size(190, 31);
             this.txtSKS.TabIndex = 35;
+            this.txtSKS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSKS_KeyPress);
             // 
             // txtNama
             // 
@@ -279,7 +281,7 @@
             this.txtNama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtNama.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNama.Location = new System.Drawing.Point(344, 218);
@@ -304,7 +306,7 @@
             this.txtIdMatkul.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIdMatkul.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIdMatkul.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdMatkul.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtIdMatkul.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdMatkul.ForeColor = System.Drawing.Color.Black;
             this.txtIdMatkul.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdMatkul.Location = new System.Drawing.Point(345, 179);
@@ -312,6 +314,7 @@
             this.txtIdMatkul.Name = "txtIdMatkul";
             this.txtIdMatkul.PasswordChar = '\0';
             this.txtIdMatkul.PlaceholderText = "";
+            this.txtIdMatkul.ReadOnly = true;
             this.txtIdMatkul.SelectedText = "";
             this.txtIdMatkul.Size = new System.Drawing.Size(190, 31);
             this.txtIdMatkul.TabIndex = 33;
@@ -333,12 +336,13 @@
             // 
             this.cbPegawai.DataSource = this.dosenBindingSource2;
             this.cbPegawai.DisplayMember = "Nama";
+            this.cbPegawai.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPegawai.FormattingEnabled = true;
-            this.cbPegawai.ItemHeight = 13;
-            this.cbPegawai.Location = new System.Drawing.Point(343, 379);
+            this.cbPegawai.ItemHeight = 28;
+            this.cbPegawai.Location = new System.Drawing.Point(342, 369);
             this.cbPegawai.Margin = new System.Windows.Forms.Padding(2);
             this.cbPegawai.Name = "cbPegawai";
-            this.cbPegawai.Size = new System.Drawing.Size(192, 21);
+            this.cbPegawai.Size = new System.Drawing.Size(192, 36);
             this.cbPegawai.TabIndex = 66;
             this.cbPegawai.ValueMember = "No_Pegawai";
             // 
@@ -376,12 +380,13 @@
             // 
             this.cbProdi.DataSource = this.programStudiBindingSource2;
             this.cbProdi.DisplayMember = "Nama";
+            this.cbProdi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProdi.FormattingEnabled = true;
-            this.cbProdi.ItemHeight = 13;
+            this.cbProdi.ItemHeight = 28;
             this.cbProdi.Location = new System.Drawing.Point(343, 411);
             this.cbProdi.Margin = new System.Windows.Forms.Padding(2);
             this.cbProdi.Name = "cbProdi";
-            this.cbProdi.Size = new System.Drawing.Size(192, 21);
+            this.cbProdi.Size = new System.Drawing.Size(192, 36);
             this.cbProdi.TabIndex = 67;
             this.cbProdi.ValueMember = "Id_Prodi";
             // 

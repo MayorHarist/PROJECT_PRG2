@@ -68,6 +68,8 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void clear()
         {
+            txtCari.Text = "";
+            txtIdPosisiPrestasi.Text = "";
             txtNama.Text = "";
             txtDeskripsi.Text = "";
         }

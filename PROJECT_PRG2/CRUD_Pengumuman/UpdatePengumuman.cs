@@ -38,6 +38,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void clear()
         {
+            txtIDPM.Text = "";
             txtCariPM.Text = "";
             txtPengumuman.Text = "";
             tglPengumuman.Value = DateTime.Now;
@@ -47,10 +48,10 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         }
         private void txtPengumuman_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Hanya masukkan huruf!");
+                MessageBox.Show("Tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnCari__Click(object sender, EventArgs e)
@@ -69,8 +70,8 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     connection.Open();
 
                     DataTable dataTable = new DataTable();
-                    SqlCommand myCommand = new SqlCommand("SELECT * FROM ProgramStudi WHERE Id_Prodi=@Id_Prodi", connection);
-                    myCommand.Parameters.AddWithValue("@Id_Prodi", txtCariPM.Text);
+                    SqlCommand myCommand = new SqlCommand("SELECT * FROM Pengumuman WHERE Id_Pengumuman=@Id_Pengumuman", connection);
+                    myCommand.Parameters.AddWithValue("@Id_Pengumuman", txtCariPM.Text);
                     SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
                     myAdapter.Fill(dataTable);
 
@@ -143,7 +144,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                         return;
                     }
 
-                    update.Parameters.AddWithValue("@Id_TKN", txtIDPM.Text);
+                    //update.Parameters.AddWithValue("@Id_Pengumuman", txtIDPM.Text);
                     update.Parameters.AddWithValue("@Nama", txtPengumuman.Text);
                     update.Parameters.AddWithValue("@Tanggal", tglPengumuman.Value);
                     update.Parameters.AddWithValue("@Deskripsi", txtDeskripsi.Text);

@@ -83,7 +83,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(406, 625);
+            this.label3.Location = new System.Drawing.Point(428, 625);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 28);
@@ -96,7 +96,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(689, 626);
+            this.label14.Location = new System.Drawing.Point(704, 626);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(178, 28);
@@ -129,7 +129,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtAkreditasi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAkreditasi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAkreditasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAkreditasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtAkreditasi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAkreditasi.ForeColor = System.Drawing.Color.Black;
             this.txtAkreditasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAkreditasi.Location = new System.Drawing.Point(968, 659);
@@ -140,7 +140,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtAkreditasi.SelectedText = "";
             this.txtAkreditasi.Size = new System.Drawing.Size(243, 41);
             this.txtAkreditasi.TabIndex = 181;
-            this.txtAkreditasi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAkreditasi_KeyPress);
+            this.txtAkreditasi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAkreditasi_KeyPress_1);
             // 
             // txtJenjangPendidikan
             // 
@@ -155,10 +155,10 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtJenjangPendidikan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtJenjangPendidikan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtJenjangPendidikan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJenjangPendidikan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtJenjangPendidikan.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJenjangPendidikan.ForeColor = System.Drawing.Color.Black;
             this.txtJenjangPendidikan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJenjangPendidikan.Location = new System.Drawing.Point(684, 659);
+            this.txtJenjangPendidikan.Location = new System.Drawing.Point(699, 659);
             this.txtJenjangPendidikan.Margin = new System.Windows.Forms.Padding(5);
             this.txtJenjangPendidikan.Name = "txtJenjangPendidikan";
             this.txtJenjangPendidikan.PasswordChar = '\0';
@@ -180,10 +180,10 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtNama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtNama.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Location = new System.Drawing.Point(401, 659);
+            this.txtNama.Location = new System.Drawing.Point(423, 659);
             this.txtNama.Margin = new System.Windows.Forms.Padding(5);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
@@ -191,7 +191,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtNama.SelectedText = "";
             this.txtNama.Size = new System.Drawing.Size(243, 41);
             this.txtNama.TabIndex = 173;
-            this.txtNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNama_KeyPress);
+            this.txtNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNama_KeyPress_1);
             // 
             // txtIdProdi
             // 
@@ -206,7 +206,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtIdProdi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIdProdi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIdProdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdProdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtIdProdi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdProdi.ForeColor = System.Drawing.Color.Black;
             this.txtIdProdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdProdi.Location = new System.Drawing.Point(146, 659);

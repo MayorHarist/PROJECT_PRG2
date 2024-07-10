@@ -107,7 +107,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -167,7 +167,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
             try
             {
-                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART";
+                string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -196,6 +196,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void clear()
         {
+            txtCari.Text = "";
             txtIdMatkul.Text = "";
             txtNama.Text = "";
             txtSKS.Text = "";
@@ -272,16 +273,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             clear();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            //this.mataKuliahTableAdapter.Fill(this.fINDSMARTDataSet7.MataKuliah);
-            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Dosen);
-            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
-            // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.MataKuliah' table. You can move, or remove it, as needed.
-            this.mataKuliahTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.MataKuliah);
-        }
+        
 
         private void btnRefersh_Click(object sender, EventArgs e)
         {
@@ -294,6 +286,33 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             //this.mataKuliahTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.MataKuliah;
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.MataKuliah' table. You can move, or remove it, as needed.
             this.mataKuliahTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.MataKuliah);
+        }
+
+        private void txtSemester_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtSKS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
