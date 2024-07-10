@@ -31,22 +31,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         }
 
-        private void SetControlsEnabled(bool enabled)
-        {
-            cbProdi.Enabled = enabled;
-            txtNama.Enabled = enabled;
-            DateTimeTanggal.Enabled = enabled;
-
-            txtAlamat.Enabled = enabled;
-            txtEmail.Enabled = enabled;
-            txtTelepon.Enabled = enabled;
-            txtTahunMasuk.Enabled = enabled;
-            //txtUsername.Enabled = enabled;
-            //xtPassword.Enabled = enabled;
-
-            btnUpdate.Enabled = enabled;
-            btnHapus.Enabled = enabled;
-        }
+        
 
         private void clear()
         {
@@ -134,7 +119,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
                     // Panggil metode clear() jika ingin membersihkan form setelah update
                     clear();
-                    SetControlsEnabled(false);
                 }
             }
             catch (Exception ex)
@@ -166,7 +150,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
                     this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.Mahasiswa);
                     clear();
-                    SetControlsEnabled(false);
+                    
                 }
             }
             catch (Exception ex)
@@ -225,7 +209,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                         //txtPassword.Text = dataTable.Rows[0]["Password"].ToString();
 
                         // Mengaktifkan kontrol jika data ditemukan
-                        SetControlsEnabled(true);
                     }
                     else
                     {
@@ -233,7 +216,6 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                         MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Menonaktifkan kontrol jika data tidak ditemukan
-                        SetControlsEnabled(false);
                     }
 
                     connection.Close();
@@ -254,8 +236,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
             this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.Mahasiswa);
 
-            // Set default state of controls
-            SetControlsEnabled(false);
+            
         }
 
         private void txtNama_KeyPress(object sender, KeyPressEventArgs e)

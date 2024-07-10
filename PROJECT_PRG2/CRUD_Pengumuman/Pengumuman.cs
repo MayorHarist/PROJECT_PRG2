@@ -75,6 +75,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                 MessageBox.Show("Data berhasil disimpan", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clear();
+                autoid();
             }
             catch (Exception ex)
             {

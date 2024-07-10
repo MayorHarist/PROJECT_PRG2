@@ -214,6 +214,7 @@ namespace PROJECT_PRG2.CRUD_Prodi
             this.txtIdProdi.Name = "txtIdProdi";
             this.txtIdProdi.PasswordChar = '\0';
             this.txtIdProdi.PlaceholderText = "";
+            this.txtIdProdi.ReadOnly = true;
             this.txtIdProdi.SelectedText = "";
             this.txtIdProdi.Size = new System.Drawing.Size(243, 41);
             this.txtIdProdi.TabIndex = 172;

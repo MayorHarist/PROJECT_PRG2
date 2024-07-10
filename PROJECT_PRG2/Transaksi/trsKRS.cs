@@ -299,6 +299,8 @@ namespace PROJECT_PRG2.Transaksi
                 MessageBox.Show("Data has been successfully saved.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AutoidKRS();
                 dtgDetailMatkul.Rows.Clear();
+                this.transaksiKRSTableAdapter.Fill(this.fINDSMART_MABRESDataSet1.TransaksiKRS);
+
             }
         }
 

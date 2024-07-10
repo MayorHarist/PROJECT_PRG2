@@ -25,7 +25,7 @@ namespace PROJECT_PRG2.Transaksi
 
             // Set tglPengisian to the current date and disable it
             tglPengisian.Value = DateTime.Now;
-            tglPengisian.Enabled = false;
+            //tglPengisian.Enabled = false;
         }
 
         public string AutoidKRPP()
@@ -48,16 +48,26 @@ namespace PROJECT_PRG2.Transaksi
 
         private void trsKRPP_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
+            this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.Mahasiswa);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.JenisPrestasi' table. You can move, or remove it, as needed.
+            this.jenisPrestasiTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.JenisPrestasi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.PosisiPrestasi' table. You can move, or remove it, as needed.
+            this.posisiPrestasiTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.PosisiPrestasi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.PosisiPrestasi);
+            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.PosisiPrestasi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.JenisPrestasi' table. You can move, or remove it, as needed.
-            this.jenisPrestasiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.JenisPrestasi);
+            //this.jenisPrestasiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.JenisPrestasi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
-            this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
+            //this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            //this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
             // Mengaitkan event handler SelectedIndexChanged dengan cbJepres
             cbJepres.SelectedIndexChanged += new EventHandler(cbJepres_SelectedIndexChanged);
 

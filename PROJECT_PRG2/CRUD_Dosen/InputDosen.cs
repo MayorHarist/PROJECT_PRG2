@@ -128,6 +128,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
                     insert.ExecuteNonQuery();
                     MessageBox.Show("Data berhasil disimpan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
+                    autoid();
                 }
                 catch (Exception ex)
                 {

@@ -116,7 +116,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(168, 416);
+            this.label5.Location = new System.Drawing.Point(166, 444);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 28);
@@ -195,7 +195,7 @@
             this.txtDeskripsi.PasswordChar = '\0';
             this.txtDeskripsi.PlaceholderText = "";
             this.txtDeskripsi.SelectedText = "";
-            this.txtDeskripsi.Size = new System.Drawing.Size(191, 67);
+            this.txtDeskripsi.Size = new System.Drawing.Size(191, 93);
             this.txtDeskripsi.TabIndex = 94;
             // 
             // tglPengumuman
@@ -278,7 +278,7 @@
             this.cbIDTendik.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIDTendik.FormattingEnabled = true;
             this.cbIDTendik.ItemHeight = 28;
-            this.cbIDTendik.Location = new System.Drawing.Point(353, 416);
+            this.cbIDTendik.Location = new System.Drawing.Point(351, 444);
             this.cbIDTendik.Margin = new System.Windows.Forms.Padding(2);
             this.cbIDTendik.Name = "cbIDTendik";
             this.cbIDTendik.Size = new System.Drawing.Size(192, 36);

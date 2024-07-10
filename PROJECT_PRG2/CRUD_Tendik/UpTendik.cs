@@ -29,6 +29,8 @@ namespace PROJECT_PRG2.CRUD_Tendik
 
         private void clear()
         {
+            txtCari.Text = "";
+            txtIDTendik.Text = "";
             txtNamaTendik.Text = "";
             tglLahirTendik.Value = DateTime.Now;
             txtKelamin.Text = "";
@@ -247,6 +249,11 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 int count = Convert.ToInt32(command.ExecuteScalar());
                 return count > 0;
             }
+        }
+
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }

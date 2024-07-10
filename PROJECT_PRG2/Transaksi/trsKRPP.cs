@@ -21,8 +21,10 @@ namespace PROJECT_PRG2.Transaksi
 
         private void trsKRPP_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TransaksiPengajuanKRPP' table. You can move, or remove it, as needed.
+            this.transaksiPengajuanKRPPTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.TransaksiPengajuanKRPP);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TransaksiPengajuanKRPP' table. You can move, or remove it, as needed.
-            this.transaksiPengajuanKRPPTableAdapter.Fill(this.fINDSMART_MABRESDsAll.TransaksiPengajuanKRPP);
+            //this.transaksiPengajuanKRPPTableAdapter.Fill(this.fINDSMART_MABRESDsAll.TransaksiPengajuanKRPP);
 
         }
 
@@ -38,7 +40,9 @@ namespace PROJECT_PRG2.Transaksi
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TransaksiPengajuanKRPP' table. You can move, or remove it, as needed.
-            this.transaksiPengajuanKRPPTableAdapter.Fill(this.fINDSMART_MABRESDsAll.TransaksiPengajuanKRPP);
+            this.transaksiPengajuanKRPPTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.TransaksiPengajuanKRPP);
+
+            //this.transaksiPengajuanKRPPTableAdapter.Fill(this.fINDSMART_MABRESDsAll.TransaksiPengajuanKRPP);
         }
 
         private void btnCari_Click(object sender, EventArgs e)

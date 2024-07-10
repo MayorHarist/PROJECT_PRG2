@@ -323,6 +323,7 @@ namespace PROJECT_PRG2.CRUD_Dosen
 
         private void clear()
         {
+            txtCari.Text = "";
             txtPegawai.Text = "";
             txtNIDN.Text = "";
             txtNama.Text = "";
