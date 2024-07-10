@@ -135,7 +135,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 {
                     connection.Open();
 
-                    // Validate email format
+                    /*// Validate email format
                     if (!IsValidEmail(txtEmailTendik.Text))
                     {
                         MessageBox.Show("Format email tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -147,7 +147,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     {
                         MessageBox.Show("Email sudah terdaftar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
-                    }
+                    }*/
 
                     SqlCommand update = new SqlCommand("sp_UpdateTendik", connection);
                     update.CommandType = CommandType.StoredProcedure;
@@ -165,7 +165,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
                     update.ExecuteNonQuery();
 
                     MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+                    //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
                     clear();
 
                     tTipEditTendik.SetToolTip(btnUpdate, "Perbarui Data");

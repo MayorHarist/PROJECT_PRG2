@@ -33,6 +33,7 @@
             this.btnLaporanKRPP = new Guna.UI2.WinForms.Guna2Button();
             this.btnLaporanKRS = new Guna.UI2.WinForms.Guna2Button();
             this.panelLaporan = new System.Windows.Forms.Panel();
+            this.btnMabres = new Guna.UI2.WinForms.Guna2Button();
             this.btnJenisPrestasi = new Guna.UI2.WinForms.Guna2Button();
             this.btnPosisiPrestasi = new Guna.UI2.WinForms.Guna2Button();
             this.btnPengumuman = new Guna.UI2.WinForms.Guna2Button();
@@ -51,7 +52,6 @@
             this.btnTransaksi = new Guna.UI2.WinForms.Guna2Button();
             this.btnData = new Guna.UI2.WinForms.Guna2Button();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btnMabres = new Guna.UI2.WinForms.Guna2Button();
             this.panelLaporan.SuspendLayout();
             this.panelTransaksi.SuspendLayout();
             this.panelData.SuspendLayout();
@@ -72,7 +72,7 @@
             this.btnLaporanKRPP.FillColor = System.Drawing.Color.Transparent;
             this.btnLaporanKRPP.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporanKRPP.ForeColor = System.Drawing.Color.White;
-            this.btnLaporanKRPP.Location = new System.Drawing.Point(0, 48);
+            this.btnLaporanKRPP.Location = new System.Drawing.Point(0, 45);
             this.btnLaporanKRPP.Margin = new System.Windows.Forms.Padding(2);
             this.btnLaporanKRPP.Name = "btnLaporanKRPP";
             this.btnLaporanKRPP.Size = new System.Drawing.Size(375, 45);
@@ -108,6 +108,24 @@
             this.panelLaporan.Name = "panelLaporan";
             this.panelLaporan.Size = new System.Drawing.Size(377, 122);
             this.panelLaporan.TabIndex = 15;
+            // 
+            // btnMabres
+            // 
+            this.btnMabres.BorderColor = System.Drawing.Color.BurlyWood;
+            this.btnMabres.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMabres.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMabres.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMabres.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMabres.FillColor = System.Drawing.Color.Transparent;
+            this.btnMabres.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMabres.ForeColor = System.Drawing.Color.White;
+            this.btnMabres.Location = new System.Drawing.Point(0, 81);
+            this.btnMabres.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMabres.Name = "btnMabres";
+            this.btnMabres.Size = new System.Drawing.Size(375, 45);
+            this.btnMabres.TabIndex = 3;
+            this.btnMabres.Text = "Laporan Mahasiswa Berprestasi";
+            this.btnMabres.Click += new System.EventHandler(this.btnMabres_Click);
             // 
             // btnJenisPrestasi
             // 
@@ -390,24 +408,6 @@
             this.panelMain.Size = new System.Drawing.Size(1376, 1033);
             this.panelMain.TabIndex = 17;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
-            // 
-            // btnMabres
-            // 
-            this.btnMabres.BorderColor = System.Drawing.Color.BurlyWood;
-            this.btnMabres.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMabres.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMabres.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMabres.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMabres.FillColor = System.Drawing.Color.Transparent;
-            this.btnMabres.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMabres.ForeColor = System.Drawing.Color.White;
-            this.btnMabres.Location = new System.Drawing.Point(0, 81);
-            this.btnMabres.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMabres.Name = "btnMabres";
-            this.btnMabres.Size = new System.Drawing.Size(375, 45);
-            this.btnMabres.TabIndex = 3;
-            this.btnMabres.Text = "Laporan Mahasiswa Berprestasi";
-            this.btnMabres.Click += new System.EventHandler(this.btnMabres_Click);
             // 
             // DasboardTendik
             // 

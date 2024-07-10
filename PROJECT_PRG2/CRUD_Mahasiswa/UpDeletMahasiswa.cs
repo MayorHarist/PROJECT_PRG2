@@ -36,6 +36,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         private void clear()
         {
             // Membersihkan TextBox
+            txtCari.Clear();
             txtNIM.Clear();
             txtNama.Clear();
             txtAlamat.Clear();
@@ -78,11 +79,11 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                 {
                     connection.Open();
 
-                    if (EmailExists(txtEmail.Text, connection))
+                    /*if (EmailExists(txtEmail.Text, connection))
                     {
                         MessageBox.Show("Email sudah terdaftar.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
-                    }
+                    }*/
 
                     SqlCommand update = new SqlCommand("sp_UpdateMahasiswa", connection);
                     update.CommandType = CommandType.StoredProcedure;

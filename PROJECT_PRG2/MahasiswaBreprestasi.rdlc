@@ -581,7 +581,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Height>1.2cm</Height>
-        <Width>28.94943cm</Width>
+        <Width>28.94941cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -716,7 +716,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Email: tokomajusejahtera@gmail.com</Value>
+                  <Value>Email: findsmart@gmail.com</Value>
                   <Style>
                     <FontFamily>Poppins</FontFamily>
                   </Style>

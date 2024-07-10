@@ -287,6 +287,7 @@
             this.txtidTrsKrs.Name = "txtidTrsKrs";
             this.txtidTrsKrs.PasswordChar = '\0';
             this.txtidTrsKrs.PlaceholderText = "";
+            this.txtidTrsKrs.ReadOnly = true;
             this.txtidTrsKrs.SelectedText = "";
             this.txtidTrsKrs.Size = new System.Drawing.Size(268, 36);
             this.txtidTrsKrs.TabIndex = 2;

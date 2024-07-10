@@ -38,14 +38,10 @@ namespace PROJECT_PRG2
             timerTRS.Tick += timerTRS_Tick;
             timerLaporan.Interval = 10;
             timerLaporan.Tick += timerLaporan_Tick;
-
-
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
-
-
         }
 
         private void timerData_Tick(object sender, EventArgs e)
@@ -150,31 +146,96 @@ namespace PROJECT_PRG2
             }
         }
 
-        public void btnProdi_Click(object sender, EventArgs e)
+        private void ShowFormInPanel(Form form)
         {
+            // Cek apakah form sudah ada di panel
+            Form existingForm = panelMain.Controls.OfType<Form>().FirstOrDefault(f => f.GetType() == form.GetType());
 
-            // Buat instance form UpDelet_Prodi
-            UpDelet_Prodi upDeletProdiForm = new UpDelet_Prodi();
-
-            // Atur parent form UpDelet_Prodi ke panelMain
-            upDeletProdiForm.TopLevel = false;
-            upDeletProdiForm.AutoScroll = true;
-            panelMain.Controls.Add(upDeletProdiForm);
-            upDeletProdiForm.Show();
-/*
-            UpDelet_Prodi upDelet_Prodi = new UpDelet_Prodi();
-            upDelet_Prodi.Show();
-            this.Hide();*/
+            if (existingForm != null)
+            {
+                // Jika form sudah ada, bawa ke depan
+                existingForm.BringToFront();
+            }
+            else
+            {
+                // Jika form belum ada, tambahkan ke panel
+                form.TopLevel = false;
+                form.AutoScroll = true;
+                panelMain.Controls.Add(form);
+                form.Show();
+            }
         }
+
+        private void btnProdi_Click(object sender, EventArgs e)
+        {
+            UpDelet_Prodi upDeletProdiForm = new UpDelet_Prodi();
+            ShowFormInPanel(upDeletProdiForm);
+        }
+
         private void btnMahasiswa_Click(object sender, EventArgs e)
         {
-            // Buat instance form UpDelete_Mahasiswa
-            UpDeletMahasiswa upDeletMahasiswa = new UpDeletMahasiswa();
-            // Atur parent form UpDelet_Prodi ke panelMain
-            upDeletMahasiswa.TopLevel = false;
-            upDeletMahasiswa.AutoScroll = true;
-            panelMain.Controls.Add(upDeletMahasiswa);
-            upDeletMahasiswa.Show();
+            UpDeletMahasiswa upDeletMahasiswaForm = new UpDeletMahasiswa();
+            ShowFormInPanel(upDeletMahasiswaForm);
+        }
+
+        private void btnDosen_Click(object sender, EventArgs e)
+        {
+            ViewDosen viewDosenForm = new ViewDosen();
+            ShowFormInPanel(viewDosenForm);
+        }
+
+        private void btnJenisPrestasi_Click(object sender, EventArgs e)
+        {
+            UDJepres udJepresForm = new UDJepres();
+            ShowFormInPanel(udJepresForm);
+        }
+
+        private void btnPosisiPrestasi_Click(object sender, EventArgs e)
+        {
+            UDPospres udPospresForm = new UDPospres();
+            ShowFormInPanel(udPospresForm);
+        }
+
+        private void btnMatakuliah_Click(object sender, EventArgs e)
+        {
+            ViewMatkul viewMatkulForm = new ViewMatkul();
+            ShowFormInPanel(viewMatkulForm);
+        }
+
+        private void btnPengumuman_Click(object sender, EventArgs e)
+        {
+            UpdatePengumuman updatePengumumanForm = new UpdatePengumuman();
+            ShowFormInPanel(updatePengumumanForm);
+        }
+
+        private void btnTrsKRS_Click(object sender, EventArgs e)
+        {
+            trsKRS trsKRSForm = new trsKRS();
+            ShowFormInPanel(trsKRSForm);
+        }
+
+        private void btnTrsKRPP_Click(object sender, EventArgs e)
+        {
+            trsKRPP trsKRPPForm = new trsKRPP();
+            ShowFormInPanel(trsKRPPForm);
+        }
+
+        private void btnLaporanKRS_Click(object sender, EventArgs e)
+        {
+            LaporanKRS laporanKRSForm = new LaporanKRS();
+            ShowFormInPanel(laporanKRSForm);
+        }
+
+        private void btnLaporanKRPP_Click(object sender, EventArgs e)
+        {
+            LaporanKRPP laporanKRPPForm = new LaporanKRPP();
+            ShowFormInPanel(laporanKRPPForm);
+        }
+
+        private void btnMabres_Click(object sender, EventArgs e)
+        {
+            LaporanKRS_KRPP laporanKRS_KRPPForm = new LaporanKRS_KRPP();
+            ShowFormInPanel(laporanKRS_KRPPForm);
         }
 
         private void btnKembali_Click(object sender, EventArgs e)
@@ -182,106 +243,6 @@ namespace PROJECT_PRG2
             Login login = new Login();
             login.Show();
             this.Hide();
-        }
-
-        private void btnDosen_Click(object sender, EventArgs e)
-        {
-            // Buat instance form UDJenisPrestasi
-            ViewDosen viewDosen = new ViewDosen();
-            // Atur parent form UpDelet_Prodi ke panelMain
-            viewDosen.TopLevel = false;
-            viewDosen.AutoScroll = true;
-            panelMain.Controls.Add(viewDosen);
-            viewDosen.Show();
-        }
-
-        private void btnJenisPrestasi_Click(object sender, EventArgs e)
-        {
-            // Buat instance form UDJenisPrestasi
-            UDJepres udJepres = new UDJepres();
-            // Atur parent form UpDelet_Prodi ke panelMain
-            udJepres.TopLevel = false;
-            udJepres.AutoScroll = true;
-            panelMain.Controls.Add(udJepres);
-            udJepres.Show();
-        }
-
-        private void btnPosisiPrestasi_Click(object sender, EventArgs e)
-        {
-            // Buat instance form UDPosisPrestasi
-            UDPospres udPospres = new UDPospres();
-            // Atur parent form UpDelet_Prodi ke panelMain
-            udPospres.TopLevel = false;
-            udPospres.AutoScroll = true;
-            panelMain.Controls.Add(udPospres);
-            udPospres.Show();
-        }
-
-        private void btnMatakuliah_Click(object sender, EventArgs e)
-        {
-            ViewMatkul viewMatkul = new ViewMatkul();
-            // Atur parent form UpDelet_Prodi ke panelMain
-            viewMatkul.TopLevel = false;
-            viewMatkul.AutoScroll = true;
-            panelMain.Controls.Add(viewMatkul);
-            viewMatkul.Show();
-        }
-
-        private void btnPengumuman_Click(object sender, EventArgs e)
-        {
-            UpdatePengumuman updatePengumuman = new UpdatePengumuman();
-            // Atur parent form UpDelet_Prodi ke panelMain
-            updatePengumuman.TopLevel = false;
-            updatePengumuman.AutoScroll = true;
-            panelMain.Controls.Add(updatePengumuman);
-            updatePengumuman.Show();
-        }
-
-        private void btnTrsKRS_Click(object sender, EventArgs e)
-        {
-            trsKRS trsKRS = new trsKRS();
-            // Atur parent form UpDelet_Prodi ke panelMain
-            trsKRS.TopLevel = false;
-            trsKRS.AutoScroll = true;
-            panelMain.Controls.Add(trsKRS);
-            trsKRS.Show();
-        }
-
-        private void btnTrsKRPP_Click(object sender, EventArgs e)
-        {
-            trsKRPP trsKRPP = new trsKRPP();
-            trsKRPP.TopLevel = false;
-            trsKRPP.AutoScroll = true;
-            panelMain.Controls.Add(trsKRPP);
-            trsKRPP.Show();
-
-        }
-
-        private void btnLaporanKRS_Click(object sender, EventArgs e)
-        {
-            LaporanKRS laporanKRS = new LaporanKRS();
-            laporanKRS.TopLevel = false;
-            laporanKRS.AutoScroll = true;
-            panelMain.Controls.Add(laporanKRS);
-            laporanKRS.Show();
-        }
-
-        private void btnLaporanKRPP_Click(object sender, EventArgs e)
-        {
-            LaporanKRPP laporanKRPP = new LaporanKRPP();
-            laporanKRPP.TopLevel = false;
-            laporanKRPP.AutoScroll = true;
-            panelMain.Controls.Add(laporanKRPP);
-            laporanKRPP.Show();
-        }
-
-        private void btnMabres_Click(object sender, EventArgs e)
-        {
-            LaporanKRS_KRPP laporanKRS_KRPP = new LaporanKRS_KRPP();
-            laporanKRS_KRPP.TopLevel = false;
-            laporanKRS_KRPP.AutoScroll= true;
-            panelMain.Controls.Add (laporanKRS_KRPP);
-            laporanKRS_KRPP.Show();
         }
     }
 }

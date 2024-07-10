@@ -48,7 +48,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewDosen));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -59,6 +58,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewDosen));
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
@@ -103,6 +103,18 @@
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.btnTampil = new Guna.UI2.WinForms.Guna2Button();
             this.dgvDsn = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.noPegawaiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nIDNDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bidangKompetensiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tanggalLahirDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jenisKelaminDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamatDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teleponDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.dosenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.dosenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -124,21 +136,11 @@
             this.btnTambah = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnCari = new Guna.UI2.WinForms.Guna2ImageButton();
             this.fKMataKuliaNoPe160F4887BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.noPegawaiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nIDNDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bidangKompetensiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tanggalLahirDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jenisKelaminDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alamatDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teleponDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dosenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.dosenTableAdapter3 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).BeginInit();
@@ -146,8 +148,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKMataKuliaNoPe160F4887BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -873,7 +873,7 @@
             this.dgvDsn.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 12F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -892,9 +892,9 @@
             this.emailDataGridViewTextBoxColumn1,
             this.teleponDataGridViewTextBoxColumn1});
             this.dgvDsn.DataSource = this.dosenBindingSource3;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Poppins", 12F);
             dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
@@ -917,7 +917,7 @@
             dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDsn.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvDsn.RowTemplate.Height = 24;
-            this.dgvDsn.Size = new System.Drawing.Size(1249, 346);
+            this.dgvDsn.Size = new System.Drawing.Size(1307, 346);
             this.dgvDsn.TabIndex = 98;
             this.dgvDsn.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
             this.dgvDsn.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
@@ -941,6 +941,116 @@
             this.dgvDsn.ThemeStyle.RowsStyle.Height = 24;
             this.dgvDsn.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
             this.dgvDsn.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // noPegawaiDataGridViewTextBoxColumn1
+            // 
+            this.noPegawaiDataGridViewTextBoxColumn1.DataPropertyName = "No_Pegawai";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noPegawaiDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.noPegawaiDataGridViewTextBoxColumn1.HeaderText = "No Pegawai";
+            this.noPegawaiDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.noPegawaiDataGridViewTextBoxColumn1.Name = "noPegawaiDataGridViewTextBoxColumn1";
+            // 
+            // namaDataGridViewTextBoxColumn1
+            // 
+            this.namaDataGridViewTextBoxColumn1.DataPropertyName = "Nama";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 12F);
+            this.namaDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.namaDataGridViewTextBoxColumn1.HeaderText = "Nama";
+            this.namaDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.namaDataGridViewTextBoxColumn1.Name = "namaDataGridViewTextBoxColumn1";
+            // 
+            // nIDNDataGridViewTextBoxColumn1
+            // 
+            this.nIDNDataGridViewTextBoxColumn1.DataPropertyName = "NIDN";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nIDNDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.nIDNDataGridViewTextBoxColumn1.HeaderText = "NIDN";
+            this.nIDNDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.nIDNDataGridViewTextBoxColumn1.Name = "nIDNDataGridViewTextBoxColumn1";
+            // 
+            // bidangKompetensiDataGridViewTextBoxColumn1
+            // 
+            this.bidangKompetensiDataGridViewTextBoxColumn1.DataPropertyName = "Bidang_Kompetensi";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 12F);
+            this.bidangKompetensiDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.bidangKompetensiDataGridViewTextBoxColumn1.HeaderText = "Bidang Kompetensi";
+            this.bidangKompetensiDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.bidangKompetensiDataGridViewTextBoxColumn1.Name = "bidangKompetensiDataGridViewTextBoxColumn1";
+            // 
+            // pendidikanTerakhirDataGridViewTextBoxColumn1
+            // 
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1.DataPropertyName = "Pendidikan_Terakhir";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 12F);
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1.HeaderText = "Pendidikan Terakhir";
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1.Name = "pendidikanTerakhirDataGridViewTextBoxColumn1";
+            // 
+            // tanggalLahirDataGridViewTextBoxColumn1
+            // 
+            this.tanggalLahirDataGridViewTextBoxColumn1.DataPropertyName = "Tanggal_Lahir";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 12F);
+            this.tanggalLahirDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.tanggalLahirDataGridViewTextBoxColumn1.HeaderText = "Tanggal Lahir";
+            this.tanggalLahirDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.tanggalLahirDataGridViewTextBoxColumn1.Name = "tanggalLahirDataGridViewTextBoxColumn1";
+            // 
+            // jenisKelaminDataGridViewTextBoxColumn1
+            // 
+            this.jenisKelaminDataGridViewTextBoxColumn1.DataPropertyName = "Jenis_Kelamin";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Poppins", 12F);
+            this.jenisKelaminDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.jenisKelaminDataGridViewTextBoxColumn1.HeaderText = "Jenis Kelamin";
+            this.jenisKelaminDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.jenisKelaminDataGridViewTextBoxColumn1.Name = "jenisKelaminDataGridViewTextBoxColumn1";
+            // 
+            // alamatDataGridViewTextBoxColumn1
+            // 
+            this.alamatDataGridViewTextBoxColumn1.DataPropertyName = "Alamat";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Poppins", 12F);
+            this.alamatDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.alamatDataGridViewTextBoxColumn1.HeaderText = "Alamat";
+            this.alamatDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.alamatDataGridViewTextBoxColumn1.Name = "alamatDataGridViewTextBoxColumn1";
+            // 
+            // emailDataGridViewTextBoxColumn1
+            // 
+            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Poppins", 12F);
+            this.emailDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle11;
+            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
+            // 
+            // teleponDataGridViewTextBoxColumn1
+            // 
+            this.teleponDataGridViewTextBoxColumn1.DataPropertyName = "Telepon";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Poppins", 12F);
+            this.teleponDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle12;
+            this.teleponDataGridViewTextBoxColumn1.HeaderText = "Telepon";
+            this.teleponDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.teleponDataGridViewTextBoxColumn1.Name = "teleponDataGridViewTextBoxColumn1";
+            // 
+            // dosenBindingSource3
+            // 
+            this.dosenBindingSource3.DataMember = "Dosen";
+            this.dosenBindingSource3.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dosenBindingSource2
             // 
@@ -1123,116 +1233,6 @@
             this.fKMataKuliaNoPe160F4887BindingSource.DataMember = "FK__MataKulia__No_Pe__160F4887";
             this.fKMataKuliaNoPe160F4887BindingSource.DataSource = this.dosenBindingSource;
             // 
-            // noPegawaiDataGridViewTextBoxColumn1
-            // 
-            this.noPegawaiDataGridViewTextBoxColumn1.DataPropertyName = "No_Pegawai";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noPegawaiDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.noPegawaiDataGridViewTextBoxColumn1.HeaderText = "No Pegawai";
-            this.noPegawaiDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.noPegawaiDataGridViewTextBoxColumn1.Name = "noPegawaiDataGridViewTextBoxColumn1";
-            // 
-            // namaDataGridViewTextBoxColumn1
-            // 
-            this.namaDataGridViewTextBoxColumn1.DataPropertyName = "Nama";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 12F);
-            this.namaDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.namaDataGridViewTextBoxColumn1.HeaderText = "Nama";
-            this.namaDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.namaDataGridViewTextBoxColumn1.Name = "namaDataGridViewTextBoxColumn1";
-            // 
-            // nIDNDataGridViewTextBoxColumn1
-            // 
-            this.nIDNDataGridViewTextBoxColumn1.DataPropertyName = "NIDN";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nIDNDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.nIDNDataGridViewTextBoxColumn1.HeaderText = "NIDN";
-            this.nIDNDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.nIDNDataGridViewTextBoxColumn1.Name = "nIDNDataGridViewTextBoxColumn1";
-            // 
-            // bidangKompetensiDataGridViewTextBoxColumn1
-            // 
-            this.bidangKompetensiDataGridViewTextBoxColumn1.DataPropertyName = "Bidang_Kompetensi";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 12F);
-            this.bidangKompetensiDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.bidangKompetensiDataGridViewTextBoxColumn1.HeaderText = "Bidang Kompetensi";
-            this.bidangKompetensiDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.bidangKompetensiDataGridViewTextBoxColumn1.Name = "bidangKompetensiDataGridViewTextBoxColumn1";
-            // 
-            // pendidikanTerakhirDataGridViewTextBoxColumn1
-            // 
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1.DataPropertyName = "Pendidikan_Terakhir";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 12F);
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1.HeaderText = "Pendidikan Terakhir";
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1.Name = "pendidikanTerakhirDataGridViewTextBoxColumn1";
-            // 
-            // tanggalLahirDataGridViewTextBoxColumn1
-            // 
-            this.tanggalLahirDataGridViewTextBoxColumn1.DataPropertyName = "Tanggal_Lahir";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 12F);
-            this.tanggalLahirDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.tanggalLahirDataGridViewTextBoxColumn1.HeaderText = "Tanggal Lahir";
-            this.tanggalLahirDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.tanggalLahirDataGridViewTextBoxColumn1.Name = "tanggalLahirDataGridViewTextBoxColumn1";
-            // 
-            // jenisKelaminDataGridViewTextBoxColumn1
-            // 
-            this.jenisKelaminDataGridViewTextBoxColumn1.DataPropertyName = "Jenis_Kelamin";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Poppins", 12F);
-            this.jenisKelaminDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.jenisKelaminDataGridViewTextBoxColumn1.HeaderText = "Jenis Kelamin";
-            this.jenisKelaminDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.jenisKelaminDataGridViewTextBoxColumn1.Name = "jenisKelaminDataGridViewTextBoxColumn1";
-            // 
-            // alamatDataGridViewTextBoxColumn1
-            // 
-            this.alamatDataGridViewTextBoxColumn1.DataPropertyName = "Alamat";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Poppins", 12F);
-            this.alamatDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle10;
-            this.alamatDataGridViewTextBoxColumn1.HeaderText = "Alamat";
-            this.alamatDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.alamatDataGridViewTextBoxColumn1.Name = "alamatDataGridViewTextBoxColumn1";
-            // 
-            // emailDataGridViewTextBoxColumn1
-            // 
-            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Poppins", 12F);
-            this.emailDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle11;
-            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
-            // 
-            // teleponDataGridViewTextBoxColumn1
-            // 
-            this.teleponDataGridViewTextBoxColumn1.DataPropertyName = "Telepon";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Poppins", 12F);
-            this.teleponDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle12;
-            this.teleponDataGridViewTextBoxColumn1.HeaderText = "Telepon";
-            this.teleponDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.teleponDataGridViewTextBoxColumn1.Name = "teleponDataGridViewTextBoxColumn1";
-            // 
-            // dosenBindingSource3
-            // 
-            this.dosenBindingSource3.DataMember = "Dosen";
-            this.dosenBindingSource3.DataSource = this.fINDSMART_MABRESDataSet1;
-            // 
-            // fINDSMART_MABRESDataSet1
-            // 
-            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
-            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dosenTableAdapter3
             // 
             this.dosenTableAdapter3.ClearBeforeFill = true;
@@ -1290,6 +1290,8 @@
             this.Load += new System.EventHandler(this.ViewDosen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).EndInit();
@@ -1297,8 +1299,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKMataKuliaNoPe160F4887BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
