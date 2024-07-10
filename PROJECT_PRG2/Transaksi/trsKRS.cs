@@ -18,12 +18,18 @@ namespace PROJECT_PRG2.Transaksi
 
         private void trsKRS_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TransaksiKRS' table. You can move, or remove it, as needed.
+            this.transaksiKRSTableAdapter.Fill(this.fINDSMART_MABRESDataSet1.TransaksiKRS);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TenagaKependidikan' table. You can move, or remove it, as needed.
+            this.tenagaKependidikanTableAdapter.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
+
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
          
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            //this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
         }
 
         // Method to generate new KRS ID
@@ -137,6 +143,9 @@ namespace PROJECT_PRG2.Transaksi
 
                 // Calculate and display IP
                 CalculateAndDisplayIP();
+
+                // Clear input fields
+                ClearFields();
             }
             catch (FormatException ex)
             {
@@ -147,6 +156,22 @@ namespace PROJECT_PRG2.Transaksi
                 MessageBox.Show("The number entered is too large or too small.\n" + ex.Message);
             }
         }
+
+        private void ClearFields()
+        {
+            // Clear TextBox values
+            txtNilaiTugas.Text = "";
+            txtNilaiQuiz.Text = "";
+            txtNilaiUTS.Text = "";
+            txtNilaiUAS.Text = "";
+            txtNilaiProjek.Text = "";
+            txtNilaiAkhir.Text = "";
+            txtIndeksNilai.Text = "";
+
+            // Reset ComboBox selection
+            cbMatkul.SelectedIndex = -1;
+        }
+
 
         // Method to calculate and display IP
         private void CalculateAndDisplayIP()

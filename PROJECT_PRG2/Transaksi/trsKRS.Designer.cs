@@ -43,8 +43,6 @@
             this.DateTimeTanggal = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtIP = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbMahasiswa = new System.Windows.Forms.ComboBox();
-            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,7 +52,6 @@
             this.cbTendik = new System.Windows.Forms.ComboBox();
             this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
-            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.cbMatkul = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -73,36 +70,47 @@
             this.txtIndeksNilai = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnTambah = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnSimpan = new Guna.UI2.WinForms.Guna2Button();
-            this.mahasiswaTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.MahasiswaTableAdapter();
-            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.TenagaKependidikanTableAdapter();
             this.cbProdi = new System.Windows.Forms.ComboBox();
             this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label15 = new System.Windows.Forms.Label();
-            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter();
             this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter();
             this.mahasiswaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mahasiswaTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.MahasiswaTableAdapter();
             this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
             this.mataKuliahBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mataKuliahTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.MataKuliahTableAdapter();
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
+            this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter();
+            this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter();
+            this.transaksiKRSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.transaksiKRSTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.TransaksiKRSTableAdapter();
+            this.idTrsKRSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tanggalPengisianDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nIMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetailMatkul)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transaksiKRSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2DataGridView1
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.guna2DataGridView1.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,6 +121,15 @@
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 4;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idTrsKRSDataGridViewTextBoxColumn,
+            this.semesterDataGridViewTextBoxColumn,
+            this.tanggalPengisianDataGridViewTextBoxColumn,
+            this.iPDataGridViewTextBoxColumn,
+            this.idProdiDataGridViewTextBoxColumn,
+            this.nIMDataGridViewTextBoxColumn,
+            this.idTKNDataGridViewTextBoxColumn});
+            this.guna2DataGridView1.DataSource = this.transaksiKRSBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,6 +220,7 @@
             // 
             this.txtidTrsKrs.Animated = true;
             this.txtidTrsKrs.AutoRoundedCorners = true;
+            this.txtidTrsKrs.BorderColor = System.Drawing.Color.Black;
             this.txtidTrsKrs.BorderRadius = 17;
             this.txtidTrsKrs.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtidTrsKrs.DefaultText = "";
@@ -235,7 +253,6 @@
             this.cbSemester.Name = "cbSemester";
             this.cbSemester.Size = new System.Drawing.Size(259, 21);
             this.cbSemester.TabIndex = 3;
-            this.cbSemester.Text = "-- Pilih --";
             // 
             // DateTimeTanggal
             // 
@@ -261,6 +278,7 @@
             // 
             this.txtIP.Animated = true;
             this.txtIP.AutoRoundedCorners = true;
+            this.txtIP.BorderColor = System.Drawing.Color.Black;
             this.txtIP.BorderRadius = 17;
             this.txtIP.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIP.DefaultText = "";
@@ -286,16 +304,6 @@
             this.cbMahasiswa.Name = "cbMahasiswa";
             this.cbMahasiswa.Size = new System.Drawing.Size(259, 21);
             this.cbMahasiswa.TabIndex = 41;
-            // 
-            // mahasiswaBindingSource
-            // 
-            this.mahasiswaBindingSource.DataMember = "Mahasiswa";
-            this.mahasiswaBindingSource.DataSource = this.fINDSMARTDataSet7;
-            // 
-            // fINDSMARTDataSet7
-            // 
-            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
-            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -359,7 +367,7 @@
             // 
             // cbTendik
             // 
-            this.cbTendik.DataSource = this.tenagaKependidikanBindingSource1;
+            this.cbTendik.DataSource = this.tenagaKependidikanBindingSource;
             this.cbTendik.DisplayMember = "Nama";
             this.cbTendik.FormattingEnabled = true;
             this.cbTendik.Location = new System.Drawing.Point(881, 356);
@@ -377,11 +385,6 @@
             // 
             this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
             this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tenagaKependidikanBindingSource
-            // 
-            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource.DataSource = this.fINDSMARTDataSet7;
             // 
             // label7
             // 
@@ -415,6 +418,7 @@
             // 
             this.txtNilaiTugas.Animated = true;
             this.txtNilaiTugas.AutoRoundedCorners = true;
+            this.txtNilaiTugas.BorderColor = System.Drawing.Color.Black;
             this.txtNilaiTugas.BorderRadius = 17;
             this.txtNilaiTugas.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNilaiTugas.DefaultText = "";
@@ -447,6 +451,7 @@
             // 
             this.txtNilaiQuiz.Animated = true;
             this.txtNilaiQuiz.AutoRoundedCorners = true;
+            this.txtNilaiQuiz.BorderColor = System.Drawing.Color.Black;
             this.txtNilaiQuiz.BorderRadius = 17;
             this.txtNilaiQuiz.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNilaiQuiz.DefaultText = "";
@@ -479,6 +484,7 @@
             // 
             this.txtNilaiUAS.Animated = true;
             this.txtNilaiUAS.AutoRoundedCorners = true;
+            this.txtNilaiUAS.BorderColor = System.Drawing.Color.Black;
             this.txtNilaiUAS.BorderRadius = 17;
             this.txtNilaiUAS.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNilaiUAS.DefaultText = "";
@@ -511,6 +517,7 @@
             // 
             this.txtNilaiUTS.Animated = true;
             this.txtNilaiUTS.AutoRoundedCorners = true;
+            this.txtNilaiUTS.BorderColor = System.Drawing.Color.Black;
             this.txtNilaiUTS.BorderRadius = 17;
             this.txtNilaiUTS.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNilaiUTS.DefaultText = "";
@@ -543,6 +550,7 @@
             // 
             this.txtNilaiProjek.Animated = true;
             this.txtNilaiProjek.AutoRoundedCorners = true;
+            this.txtNilaiProjek.BorderColor = System.Drawing.Color.Black;
             this.txtNilaiProjek.BorderRadius = 17;
             this.txtNilaiProjek.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNilaiProjek.DefaultText = "";
@@ -576,6 +584,7 @@
             // 
             this.txtNilaiAkhir.Animated = true;
             this.txtNilaiAkhir.AutoRoundedCorners = true;
+            this.txtNilaiAkhir.BorderColor = System.Drawing.Color.Black;
             this.txtNilaiAkhir.BorderRadius = 17;
             this.txtNilaiAkhir.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNilaiAkhir.DefaultText = "";
@@ -608,6 +617,7 @@
             // 
             this.txtIndeksNilai.Animated = true;
             this.txtIndeksNilai.AutoRoundedCorners = true;
+            this.txtIndeksNilai.BorderColor = System.Drawing.Color.Black;
             this.txtIndeksNilai.BorderRadius = 17;
             this.txtIndeksNilai.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIndeksNilai.DefaultText = "";
@@ -666,17 +676,9 @@
             this.btnSimpan.Text = "Simpan ";
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
-            // mahasiswaTableAdapter
-            // 
-            this.mahasiswaTableAdapter.ClearBeforeFill = true;
-            // 
-            // tenagaKependidikanTableAdapter
-            // 
-            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
-            // 
             // cbProdi
             // 
-            this.cbProdi.DataSource = this.programStudiBindingSource1;
+            this.cbProdi.DataSource = this.programStudiBindingSource;
             this.cbProdi.DisplayMember = "Nama";
             this.cbProdi.FormattingEnabled = true;
             this.cbProdi.Location = new System.Drawing.Point(881, 280);
@@ -691,11 +693,6 @@
             this.programStudiBindingSource1.DataMember = "ProgramStudi";
             this.programStudiBindingSource1.DataSource = this.fINDSMART_MABRESDsAll;
             // 
-            // programStudiBindingSource
-            // 
-            this.programStudiBindingSource.DataMember = "ProgramStudi";
-            this.programStudiBindingSource.DataSource = this.fINDSMARTDataSet7;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -705,10 +702,6 @@
             this.label15.Size = new System.Drawing.Size(131, 28);
             this.label15.TabIndex = 127;
             this.label15.Text = "Program Studi";
-            // 
-            // programStudiTableAdapter
-            // 
-            this.programStudiTableAdapter.ClearBeforeFill = true;
             // 
             // programStudiTableAdapter1
             // 
@@ -735,6 +728,80 @@
             // mataKuliahTableAdapter
             // 
             this.mataKuliahTableAdapter.ClearBeforeFill = true;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // programStudiBindingSource
+            // 
+            this.programStudiBindingSource.DataMember = "ProgramStudi";
+            this.programStudiBindingSource.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // programStudiTableAdapter
+            // 
+            this.programStudiTableAdapter.ClearBeforeFill = true;
+            // 
+            // tenagaKependidikanBindingSource
+            // 
+            this.tenagaKependidikanBindingSource.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // tenagaKependidikanTableAdapter
+            // 
+            this.tenagaKependidikanTableAdapter.ClearBeforeFill = true;
+            // 
+            // transaksiKRSBindingSource
+            // 
+            this.transaksiKRSBindingSource.DataMember = "TransaksiKRS";
+            this.transaksiKRSBindingSource.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // transaksiKRSTableAdapter
+            // 
+            this.transaksiKRSTableAdapter.ClearBeforeFill = true;
+            // 
+            // idTrsKRSDataGridViewTextBoxColumn
+            // 
+            this.idTrsKRSDataGridViewTextBoxColumn.DataPropertyName = "Id_TrsKRS";
+            this.idTrsKRSDataGridViewTextBoxColumn.HeaderText = "Id_TrsKRS";
+            this.idTrsKRSDataGridViewTextBoxColumn.Name = "idTrsKRSDataGridViewTextBoxColumn";
+            // 
+            // semesterDataGridViewTextBoxColumn
+            // 
+            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
+            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
+            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
+            // 
+            // tanggalPengisianDataGridViewTextBoxColumn
+            // 
+            this.tanggalPengisianDataGridViewTextBoxColumn.DataPropertyName = "Tanggal_Pengisian";
+            this.tanggalPengisianDataGridViewTextBoxColumn.HeaderText = "Tanggal_Pengisian";
+            this.tanggalPengisianDataGridViewTextBoxColumn.Name = "tanggalPengisianDataGridViewTextBoxColumn";
+            // 
+            // iPDataGridViewTextBoxColumn
+            // 
+            this.iPDataGridViewTextBoxColumn.DataPropertyName = "IP";
+            this.iPDataGridViewTextBoxColumn.HeaderText = "IP";
+            this.iPDataGridViewTextBoxColumn.Name = "iPDataGridViewTextBoxColumn";
+            // 
+            // idProdiDataGridViewTextBoxColumn
+            // 
+            this.idProdiDataGridViewTextBoxColumn.DataPropertyName = "Id_Prodi";
+            this.idProdiDataGridViewTextBoxColumn.HeaderText = "Id_Prodi";
+            this.idProdiDataGridViewTextBoxColumn.Name = "idProdiDataGridViewTextBoxColumn";
+            // 
+            // nIMDataGridViewTextBoxColumn
+            // 
+            this.nIMDataGridViewTextBoxColumn.DataPropertyName = "NIM";
+            this.nIMDataGridViewTextBoxColumn.HeaderText = "NIM";
+            this.nIMDataGridViewTextBoxColumn.Name = "nIMDataGridViewTextBoxColumn";
+            // 
+            // idTKNDataGridViewTextBoxColumn
+            // 
+            this.idTKNDataGridViewTextBoxColumn.DataPropertyName = "Id_TKN";
+            this.idTKNDataGridViewTextBoxColumn.HeaderText = "Id_TKN";
+            this.idTKNDataGridViewTextBoxColumn.Name = "idTKNDataGridViewTextBoxColumn";
             // 
             // trsKRS
             // 
@@ -783,15 +850,15 @@
             this.Load += new System.EventHandler(this.trsKRS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetailMatkul)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transaksiKRSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -831,15 +898,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtIndeksNilai;
         private Guna.UI2.WinForms.Guna2ImageButton btnTambah;
         private Guna.UI2.WinForms.Guna2Button btnSimpan;
-        private FINDSMARTDataSet7 fINDSMARTDataSet7;
-        private System.Windows.Forms.BindingSource mahasiswaBindingSource;
-        private FINDSMARTDataSet7TableAdapters.MahasiswaTableAdapter mahasiswaTableAdapter;
-        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource;
-        private FINDSMARTDataSet7TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter;
         private System.Windows.Forms.ComboBox cbProdi;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.BindingSource programStudiBindingSource;
-        private FINDSMARTDataSet7TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
         private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
         private System.Windows.Forms.BindingSource programStudiBindingSource1;
         private FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter programStudiTableAdapter1;
@@ -849,5 +909,19 @@
         private FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter1;
         private System.Windows.Forms.BindingSource mataKuliahBindingSource;
         private FINDSMART_MABRESDsAllTableAdapters.MataKuliahTableAdapter mataKuliahTableAdapter;
+        private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
+        private System.Windows.Forms.BindingSource programStudiBindingSource;
+        private FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter;
+        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource;
+        private FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter;
+        private System.Windows.Forms.BindingSource transaksiKRSBindingSource;
+        private FINDSMART_MABRESDataSet1TableAdapters.TransaksiKRSTableAdapter transaksiKRSTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTrsKRSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tanggalPengisianDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProdiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nIMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idTKNDataGridViewTextBoxColumn;
     }
 }

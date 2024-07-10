@@ -133,6 +133,9 @@
   <data name="Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="KRPP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KRPP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tampilan awal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tampilan awal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,6 +187,9 @@
   <data name="Dasboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dasboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DESIGN JenisPrestasi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DESIGN JenisPrestasi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LoginKepalaTendik" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginKepalaTendik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,9 +217,6 @@
   <data name="DESIGN Pengumuman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DESIGN Pengumuman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh_594822" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh_594822.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LoginTendik" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginTendik1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,10 +226,10 @@
   <data name="Mahasiswa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mahasiswa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DESIGN JenisPrestasi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DESIGN JenisPrestasi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="refresh_594822" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh_594822.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KRPP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KRPP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DESIGN FINDSMART (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DESIGN FINDSMART (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

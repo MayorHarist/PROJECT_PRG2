@@ -21,8 +21,10 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
 
         private void UDPospres_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.PosisiPrestasi' table. You can move, or remove it, as needed.
+            this.posisiPrestasiTableAdapter3.Fill(this.fINDSMART_MABRESDataSet1.PosisiPrestasi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.PosisiPrestasi' table. You can move, or remove it, as needed.
-            this.posisiPrestasiTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.PosisiPrestasi);
+            //this.posisiPrestasiTableAdapter2.Fill(this.fINDSMART_MABRESDsAll.PosisiPrestasi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet71.PosisiPrestasi' table. You can move, or remove it, as needed.
             //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
 
@@ -62,14 +64,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
             inputPospres.Show();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'fINDSMARTDataSet9.PosisiPrestasi' table. You can move, or remove it, as needed.
-            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet9.PosisiPrestasi);
-            //this.posisiPrestasiTableAdapter1.Fill(this.fINDSMARTDataSet7.PosisiPrestasi);
-            //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
-
-        }
+        
 
         private void clear()
         {
@@ -174,7 +169,7 @@ namespace PROJECT_PRG2.CRUD_PosisiPrestasi
         private void btnRefersh_Click(object sender, EventArgs e)
         {
             //this.posisiPrestasiTableAdapter.Fill(this.fINDSMARTDataSet71.PosisiPrestasi);
-
+            this.posisiPrestasiTableAdapter3.Fill(this.fINDSMART_MABRESDataSet1.PosisiPrestasi);
         }
     }
 }

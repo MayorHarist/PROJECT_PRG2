@@ -31,8 +31,10 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
         private void UpDelet_Prodi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            //this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.ProgramStudi' table. You can move, or remove it, as needed.
             //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet6.ProgramStudi' table. You can move, or remove it, as needed.
@@ -74,7 +76,9 @@ namespace PROJECT_PRG2.CRUD_Prodi
 
                 MessageBox.Show("Data berhasil dihapus", "Informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+                //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+                // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
+                this.programStudiTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
                 clear();
             }
             catch (Exception ex)
@@ -116,7 +120,9 @@ namespace PROJECT_PRG2.CRUD_Prodi
                     // Menampilkan pesan jika eksekusi berhasil
                     MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+                    //this.programStudiTableAdapter.Fill(this.fINDSMARTDataSet7.ProgramStudi);
+                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
+                    this.programStudiTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
                     clear();
                 }
             }
@@ -172,6 +178,12 @@ namespace PROJECT_PRG2.CRUD_Prodi
         private void btnBatal_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+        private void btnRefersh_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
         }
     }
 }

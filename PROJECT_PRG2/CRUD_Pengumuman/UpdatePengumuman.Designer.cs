@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdatePengumuman));
             this.cbIDTendik = new System.Windows.Forms.ComboBox();
+            this.tenagaKependidikanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -54,6 +56,7 @@
             this.tanggalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deskripsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pengumumanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.pengumumanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pengumumanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.PengumumanTableAdapter();
             this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.TenagaKependidikanTableAdapter();
@@ -73,18 +76,23 @@
             this.pengumumanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.PengumumanTableAdapter();
             this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
             this.tTipRefreshPengumuman = new System.Windows.Forms.ToolTip(this.components);
+            this.pengumumanTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.PengumumanTableAdapter();
+            this.tenagaKependidikanTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbIDTendik
             // 
-            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource1;
+            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource2;
             this.cbIDTendik.DisplayMember = "Nama";
             this.cbIDTendik.FormattingEnabled = true;
             this.cbIDTendik.ItemHeight = 13;
@@ -94,6 +102,16 @@
             this.cbIDTendik.Size = new System.Drawing.Size(220, 21);
             this.cbIDTendik.TabIndex = 131;
             this.cbIDTendik.ValueMember = "Id_TKN";
+            // 
+            // tenagaKependidikanBindingSource2
+            // 
+            this.tenagaKependidikanBindingSource2.DataMember = "TenagaKependidikan";
+            this.tenagaKependidikanBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tenagaKependidikanBindingSource1
             // 
@@ -123,44 +141,44 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(284, 626);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
+            this.label10.Size = new System.Drawing.Size(63, 28);
             this.label10.TabIndex = 126;
             this.label10.Text = "Nama";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(585, 522);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 20);
+            this.label7.Size = new System.Drawing.Size(84, 28);
             this.label7.TabIndex = 125;
             this.label7.Text = "Tanggal ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(898, 522);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
+            this.label5.Size = new System.Drawing.Size(68, 28);
             this.label5.TabIndex = 124;
             this.label5.Text = "Tendik";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(585, 626);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 20);
+            this.label4.Size = new System.Drawing.Size(90, 28);
             this.label4.TabIndex = 123;
             this.label4.Text = "Deskripsi";
             // 
@@ -254,20 +272,21 @@
             this.txtCariPM.BorderColor = System.Drawing.Color.Black;
             this.txtCariPM.BorderRadius = 10;
             this.txtCariPM.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCariPM.DefaultText = "Cari Data Pengumuman";
+            this.txtCariPM.DefaultText = "";
             this.txtCariPM.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCariPM.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCariPM.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCariPM.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCariPM.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCariPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCariPM.ForeColor = System.Drawing.Color.Gray;
+            this.txtCariPM.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCariPM.ForeColor = System.Drawing.Color.Black;
             this.txtCariPM.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCariPM.Location = new System.Drawing.Point(580, 39);
             this.txtCariPM.Margin = new System.Windows.Forms.Padding(4);
             this.txtCariPM.Name = "txtCariPM";
             this.txtCariPM.PasswordChar = '\0';
-            this.txtCariPM.PlaceholderText = "";
+            this.txtCariPM.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtCariPM.PlaceholderText = "Cari Data Pengumuman";
             this.txtCariPM.SelectedText = "";
             this.txtCariPM.Size = new System.Drawing.Size(362, 36);
             this.txtCariPM.TabIndex = 114;
@@ -293,7 +312,7 @@
             this.tanggalDataGridViewTextBoxColumn,
             this.deskripsiDataGridViewTextBoxColumn,
             this.idTKNDataGridViewTextBoxColumn});
-            this.guna2DataGridView1.DataSource = this.pengumumanBindingSource1;
+            this.guna2DataGridView1.DataSource = this.pengumumanBindingSource2;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -370,6 +389,11 @@
             this.idTKNDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idTKNDataGridViewTextBoxColumn.Name = "idTKNDataGridViewTextBoxColumn";
             // 
+            // pengumumanBindingSource2
+            // 
+            this.pengumumanBindingSource2.DataMember = "Pengumuman";
+            this.pengumumanBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
             // pengumumanBindingSource1
             // 
             this.pengumumanBindingSource1.DataMember = "Pengumuman";
@@ -403,11 +427,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(898, 626);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 20);
+            this.label2.Size = new System.Drawing.Size(48, 28);
             this.label2.TabIndex = 175;
             this.label2.Text = "Aksi";
             // 
@@ -521,11 +545,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(284, 522);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 20);
+            this.label1.Size = new System.Drawing.Size(152, 28);
             this.label1.TabIndex = 177;
             this.label1.Text = "ID Pengumuman";
             // 
@@ -571,6 +595,14 @@
             // 
             this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
             // 
+            // pengumumanTableAdapter2
+            // 
+            this.pengumumanTableAdapter2.ClearBeforeFill = true;
+            // 
+            // tenagaKependidikanTableAdapter2
+            // 
+            this.tenagaKependidikanTableAdapter2.ClearBeforeFill = true;
+            // 
             // UpdatePengumuman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,12 +636,15 @@
             this.Text = "UpdatePengumuman";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UpdatePengumuman_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -658,5 +693,10 @@
         private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource1;
         private FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter1;
         private System.Windows.Forms.ToolTip tTipRefreshPengumuman;
+        private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
+        private System.Windows.Forms.BindingSource pengumumanBindingSource2;
+        private FINDSMART_MABRESDataSet1TableAdapters.PengumumanTableAdapter pengumumanTableAdapter2;
+        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource2;
+        private FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter2;
     }
 }

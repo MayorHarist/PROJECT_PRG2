@@ -20,10 +20,14 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
 
         private void UpDeletMahasiswa_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
+            this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.Mahasiswa);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+            //this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
-            this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
+            ///this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
            
         }
 
@@ -118,10 +122,13 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    
+                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
+                    this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.Mahasiswa);
                     // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
-                    this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
+                    //this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
                     // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
-                    this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
+                    //this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
                     // Memperbarui data di tampilan (jika ada)
                     //this.mahasiswaTableAdapter.Fill(this.fINDSMARTDataSet7.Mahasiswa);
                     // Panggil metode clear() jika ingin membersihkan form setelah update
@@ -154,7 +161,9 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
                     //this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
                     // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
-                    this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
+                    //this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
+                    // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
+                    this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.Mahasiswa);
                     clear();
                     SetControlsEnabled(false);
                 }
@@ -244,7 +253,9 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
             //this.programStudiTableAdapter.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Mahasiswa' table. You can move, or remove it, as needed.
-            this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa);
+            //this.mahasiswaTableAdapter.Fill(this.fINDSMART_MABRESDsAll.Mahasiswa;
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
+            this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.Mahasiswa);
 
             // Set default state of controls
             SetControlsEnabled(false);
