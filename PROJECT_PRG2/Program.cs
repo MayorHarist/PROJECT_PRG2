@@ -7,6 +7,7 @@ using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using PROJECT_PRG2.CRUD_Prodi;
 using PROJECT_PRG2.CRUD_Tendik;
 using PROJECT_PRG2.Dashboard;
+using PROJECT_PRG2.Laporan;
 using PROJECT_PRG2.LoginMenu;
 using PROJECT_PRG2.Transaksi;
 using System;
@@ -27,7 +28,7 @@ namespace PROJECT_PRG2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ViewDosen());
+            Application.Run(new LaporanKRPP());
             //Application.Run(new trsKRS());
         }
     }

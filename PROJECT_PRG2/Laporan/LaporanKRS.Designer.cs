@@ -1,6 +1,6 @@
 ﻿namespace PROJECT_PRG2.Laporan
 {
-    partial class KRS
+    partial class LaporanKRS
     {
         /// <summary>
         /// Required designer variable.

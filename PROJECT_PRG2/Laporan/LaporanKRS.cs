@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace PROJECT_PRG2.Laporan
 {
-    public partial class KRS_KRPP : Form
+    public partial class LaporanKRS : Form
     {
-        public KRS_KRPP()
+        public LaporanKRS()
         {
             InitializeComponent();
+        }
+
+        private void KRS_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }
