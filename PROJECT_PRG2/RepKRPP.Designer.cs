@@ -888,8 +888,8 @@ namespace PROJECT_PRG2.RepKRPPTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT NIM, Nama_Mahasiswa, Jenis_Kelamin, Tahun_Masuk, Nama_Prodi, Total_Point_K" +
-                "RPP FROM dbo.LaporanMahasiswaKRPP";
+            this._commandCollection[0].CommandText = "SELECT        NIM, Nama_Mahasiswa, Jenis_Kelamin, Tahun_Masuk, Nama_Prodi, Total_" +
+                "Point_KRPP\r\nFROM            LaporanMahasiswaKRPP";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
