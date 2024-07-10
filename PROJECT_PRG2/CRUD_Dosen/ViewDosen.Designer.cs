@@ -48,6 +48,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewDosen));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -58,7 +59,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewDosen));
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
@@ -103,18 +103,6 @@
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.btnTampil = new Guna.UI2.WinForms.Guna2Button();
             this.dgvDsn = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.noPegawaiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nIDNDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bidangKompetensiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pendidikanTerakhirDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tanggalLahirDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jenisKelaminDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alamatDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teleponDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dosenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.dosenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.dosenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -130,17 +118,27 @@
             this.txtKelamin = new Guna.UI2.WinForms.Guna2TextBox();
             this.dosenTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDataSetTableAdapters.DosenTableAdapter();
             this.dosenTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.DosenTableAdapter();
-            this.dosenTableAdapter3 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnHapus = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnTambah = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnCari = new Guna.UI2.WinForms.Guna2ImageButton();
             this.fKMataKuliaNoPe160F4887BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.noPegawaiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nIDNDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bidangKompetensiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pendidikanTerakhirDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tanggalLahirDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jenisKelaminDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamatDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teleponDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
+            this.dosenTableAdapter3 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).BeginInit();
@@ -148,6 +146,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKMataKuliaNoPe160F4887BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -942,6 +942,187 @@
             this.dgvDsn.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
             this.dgvDsn.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // dosenBindingSource2
+            // 
+            this.dosenBindingSource2.DataMember = "Dosen";
+            this.dosenBindingSource2.DataSource = this.fINDSMART_MABRESDsAll;
+            // 
+            // fINDSMART_MABRESDsAll
+            // 
+            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
+            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dosenBindingSource1
+            // 
+            this.dosenBindingSource1.DataMember = "Dosen";
+            this.dosenBindingSource1.DataSource = this.fINDSMART_MABRESDataSet;
+            // 
+            // fINDSMART_MABRESDataSet
+            // 
+            this.fINDSMART_MABRESDataSet.DataSetName = "FINDSMART_MABRESDataSet";
+            this.fINDSMART_MABRESDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dosenBindingSource
+            // 
+            this.dosenBindingSource.DataMember = "Dosen";
+            this.dosenBindingSource.DataSource = this.fINDSMARTDataSet7;
+            // 
+            // fINDSMARTDataSet7
+            // 
+            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
+            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnBatal
+            // 
+            this.btnBatal.AutoRoundedCorners = true;
+            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
+            this.btnBatal.BorderRadius = 18;
+            this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBatal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBatal.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.ForeColor = System.Drawing.Color.White;
+            this.btnBatal.Location = new System.Drawing.Point(982, 815);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(145, 39);
+            this.btnBatal.TabIndex = 99;
+            this.btnBatal.Text = "Batal";
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
+            // 
+            // dosenTableAdapter
+            // 
+            this.dosenTableAdapter.ClearBeforeFill = true;
+            // 
+            // mataKuliahTableAdapter
+            // 
+            this.mataKuliahTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtKelamin
+            // 
+            this.txtKelamin.Animated = true;
+            this.txtKelamin.BackColor = System.Drawing.Color.Transparent;
+            this.txtKelamin.BorderColor = System.Drawing.Color.Black;
+            this.txtKelamin.BorderRadius = 10;
+            this.txtKelamin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKelamin.DefaultText = "";
+            this.txtKelamin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtKelamin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtKelamin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKelamin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKelamin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKelamin.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKelamin.ForeColor = System.Drawing.Color.Black;
+            this.txtKelamin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKelamin.Location = new System.Drawing.Point(541, 615);
+            this.txtKelamin.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKelamin.Name = "txtKelamin";
+            this.txtKelamin.PasswordChar = '\0';
+            this.txtKelamin.PlaceholderText = "";
+            this.txtKelamin.SelectedText = "";
+            this.txtKelamin.Size = new System.Drawing.Size(292, 41);
+            this.txtKelamin.TabIndex = 134;
+            // 
+            // dosenTableAdapter1
+            // 
+            this.dosenTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dosenTableAdapter2
+            // 
+            this.dosenTableAdapter2.ClearBeforeFill = true;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnRefresh.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnRefresh.Image = global::PROJECT_PRG2.Properties.Resources.refresh_594822;
+            this.btnRefresh.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnRefresh.ImageRotate = 0F;
+            this.btnRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRefresh.Location = new System.Drawing.Point(1245, 451);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnRefresh.Size = new System.Drawing.Size(45, 51);
+            this.btnRefresh.TabIndex = 133;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnHapus
+            // 
+            this.btnHapus.BackColor = System.Drawing.Color.Transparent;
+            this.btnHapus.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnHapus.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnHapus.Image = ((System.Drawing.Image)(resources.GetObject("btnHapus.Image")));
+            this.btnHapus.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnHapus.ImageRotate = 0F;
+            this.btnHapus.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnHapus.Location = new System.Drawing.Point(1166, 726);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnHapus.Size = new System.Drawing.Size(42, 35);
+            this.btnHapus.TabIndex = 93;
+            this.btnHapus.UseTransparentBackground = true;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnUpdate.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnUpdate.ImageRotate = 0F;
+            this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnUpdate.Location = new System.Drawing.Point(1092, 726);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnUpdate.Size = new System.Drawing.Size(34, 35);
+            this.btnUpdate.TabIndex = 92;
+            this.btnUpdate.UseTransparentBackground = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUbah_Click);
+            // 
+            // btnTambah
+            // 
+            this.btnTambah.BackColor = System.Drawing.Color.Transparent;
+            this.btnTambah.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnTambah.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnTambah.Image = ((System.Drawing.Image)(resources.GetObject("btnTambah.Image")));
+            this.btnTambah.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnTambah.ImageRotate = 0F;
+            this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnTambah.Location = new System.Drawing.Point(1008, 725);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnTambah.Size = new System.Drawing.Size(38, 36);
+            this.btnTambah.TabIndex = 91;
+            this.btnTambah.UseTransparentBackground = true;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
+            // 
+            // btnCari
+            // 
+            this.btnCari.BackColor = System.Drawing.Color.Transparent;
+            this.btnCari.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnCari.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnCari.Image = global::PROJECT_PRG2.Properties.Resources.magnifying_glass_10977492;
+            this.btnCari.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnCari.ImageRotate = 0F;
+            this.btnCari.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCari.Location = new System.Drawing.Point(496, 11);
+            this.btnCari.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.PressedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.btnCari.Size = new System.Drawing.Size(55, 56);
+            this.btnCari.TabIndex = 97;
+            this.btnCari.UseTransparentBackground = true;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            // 
+            // fKMataKuliaNoPe160F4887BindingSource
+            // 
+            this.fKMataKuliaNoPe160F4887BindingSource.DataMember = "FK__MataKulia__No_Pe__160F4887";
+            this.fKMataKuliaNoPe160F4887BindingSource.DataSource = this.dosenBindingSource;
+            // 
             // noPegawaiDataGridViewTextBoxColumn1
             // 
             this.noPegawaiDataGridViewTextBoxColumn1.DataPropertyName = "No_Pegawai";
@@ -1052,190 +1233,9 @@
             this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
             this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dosenBindingSource2
-            // 
-            this.dosenBindingSource2.DataMember = "Dosen";
-            this.dosenBindingSource2.DataSource = this.fINDSMART_MABRESDsAll;
-            // 
-            // fINDSMART_MABRESDsAll
-            // 
-            this.fINDSMART_MABRESDsAll.DataSetName = "FINDSMART_MABRESDsAll";
-            this.fINDSMART_MABRESDsAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dosenBindingSource1
-            // 
-            this.dosenBindingSource1.DataMember = "Dosen";
-            this.dosenBindingSource1.DataSource = this.fINDSMART_MABRESDataSet;
-            // 
-            // fINDSMART_MABRESDataSet
-            // 
-            this.fINDSMART_MABRESDataSet.DataSetName = "FINDSMART_MABRESDataSet";
-            this.fINDSMART_MABRESDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dosenBindingSource
-            // 
-            this.dosenBindingSource.DataMember = "Dosen";
-            this.dosenBindingSource.DataSource = this.fINDSMARTDataSet7;
-            // 
-            // fINDSMARTDataSet7
-            // 
-            this.fINDSMARTDataSet7.DataSetName = "FINDSMARTDataSet7";
-            this.fINDSMARTDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnBatal
-            // 
-            this.btnBatal.AutoRoundedCorners = true;
-            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
-            this.btnBatal.BorderRadius = 18;
-            this.btnBatal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBatal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBatal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBatal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBatal.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(982, 815);
-            this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(145, 39);
-            this.btnBatal.TabIndex = 99;
-            this.btnBatal.Text = "Batal";
-            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
-            // 
-            // dosenTableAdapter
-            // 
-            this.dosenTableAdapter.ClearBeforeFill = true;
-            // 
-            // mataKuliahTableAdapter
-            // 
-            this.mataKuliahTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtKelamin
-            // 
-            this.txtKelamin.Animated = true;
-            this.txtKelamin.BackColor = System.Drawing.Color.Transparent;
-            this.txtKelamin.BorderColor = System.Drawing.Color.Black;
-            this.txtKelamin.BorderRadius = 10;
-            this.txtKelamin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtKelamin.DefaultText = "";
-            this.txtKelamin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtKelamin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtKelamin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtKelamin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtKelamin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKelamin.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKelamin.ForeColor = System.Drawing.Color.Black;
-            this.txtKelamin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKelamin.Location = new System.Drawing.Point(541, 615);
-            this.txtKelamin.Margin = new System.Windows.Forms.Padding(4);
-            this.txtKelamin.Name = "txtKelamin";
-            this.txtKelamin.PasswordChar = '\0';
-            this.txtKelamin.PlaceholderText = "";
-            this.txtKelamin.SelectedText = "";
-            this.txtKelamin.Size = new System.Drawing.Size(292, 41);
-            this.txtKelamin.TabIndex = 134;
-            // 
-            // dosenTableAdapter1
-            // 
-            this.dosenTableAdapter1.ClearBeforeFill = true;
-            // 
-            // dosenTableAdapter2
-            // 
-            this.dosenTableAdapter2.ClearBeforeFill = true;
-            // 
             // dosenTableAdapter3
             // 
             this.dosenTableAdapter3.ClearBeforeFill = true;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnRefresh.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnRefresh.Image = global::PROJECT_PRG2.Properties.Resources.refresh_594822;
-            this.btnRefresh.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnRefresh.ImageRotate = 0F;
-            this.btnRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnRefresh.Location = new System.Drawing.Point(1245, 451);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnRefresh.Size = new System.Drawing.Size(45, 51);
-            this.btnRefresh.TabIndex = 133;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnHapus
-            // 
-            this.btnHapus.BackColor = System.Drawing.Color.Transparent;
-            this.btnHapus.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnHapus.HoverState.ImageSize = new System.Drawing.Size(34, 34);
-            this.btnHapus.Image = ((System.Drawing.Image)(resources.GetObject("btnHapus.Image")));
-            this.btnHapus.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnHapus.ImageRotate = 0F;
-            this.btnHapus.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHapus.Location = new System.Drawing.Point(1166, 726);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHapus.Name = "btnHapus";
-            this.btnHapus.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnHapus.Size = new System.Drawing.Size(42, 35);
-            this.btnHapus.TabIndex = 93;
-            this.btnHapus.UseTransparentBackground = true;
-            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnUpdate.HoverState.ImageSize = new System.Drawing.Size(34, 34);
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnUpdate.ImageRotate = 0F;
-            this.btnUpdate.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdate.Location = new System.Drawing.Point(1092, 726);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnUpdate.Size = new System.Drawing.Size(34, 35);
-            this.btnUpdate.TabIndex = 92;
-            this.btnUpdate.UseTransparentBackground = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUbah_Click);
-            // 
-            // btnTambah
-            // 
-            this.btnTambah.BackColor = System.Drawing.Color.Transparent;
-            this.btnTambah.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnTambah.HoverState.ImageSize = new System.Drawing.Size(34, 34);
-            this.btnTambah.Image = ((System.Drawing.Image)(resources.GetObject("btnTambah.Image")));
-            this.btnTambah.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnTambah.ImageRotate = 0F;
-            this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTambah.Location = new System.Drawing.Point(1008, 725);
-            this.btnTambah.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTambah.Name = "btnTambah";
-            this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnTambah.Size = new System.Drawing.Size(38, 36);
-            this.btnTambah.TabIndex = 91;
-            this.btnTambah.UseTransparentBackground = true;
-            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
-            // 
-            // btnCari
-            // 
-            this.btnCari.BackColor = System.Drawing.Color.Transparent;
-            this.btnCari.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnCari.HoverState.ImageSize = new System.Drawing.Size(34, 34);
-            this.btnCari.Image = global::PROJECT_PRG2.Properties.Resources.magnifying_glass_10977492;
-            this.btnCari.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnCari.ImageRotate = 0F;
-            this.btnCari.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCari.Location = new System.Drawing.Point(496, 11);
-            this.btnCari.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCari.Name = "btnCari";
-            this.btnCari.PressedState.ImageSize = new System.Drawing.Size(31, 31);
-            this.btnCari.Size = new System.Drawing.Size(55, 56);
-            this.btnCari.TabIndex = 97;
-            this.btnCari.UseTransparentBackground = true;
-            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
-            // 
-            // fKMataKuliaNoPe160F4887BindingSource
-            // 
-            this.fKMataKuliaNoPe160F4887BindingSource.DataMember = "FK__MataKulia__No_Pe__160F4887";
-            this.fKMataKuliaNoPe160F4887BindingSource.DataSource = this.dosenBindingSource;
             // 
             // ViewDosen
             // 
@@ -1290,8 +1290,6 @@
             this.Load += new System.EventHandler(this.ViewDosen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDosen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDsn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).EndInit();
@@ -1299,6 +1297,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKMataKuliaNoPe160F4887BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

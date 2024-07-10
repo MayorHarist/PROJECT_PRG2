@@ -296,7 +296,7 @@ namespace PROJECT_PRG2.Transaksi
                 }
 
                 // Show success message and reset form
-                MessageBox.Show("Data has been successfully saved.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data berhasil di simpan.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AutoidKRS();
                 dtgDetailMatkul.Rows.Clear();
                 this.transaksiKRSTableAdapter.Fill(this.fINDSMART_MABRESDataSet1.TransaksiKRS);
@@ -377,6 +377,51 @@ namespace PROJECT_PRG2.Transaksi
                 MessageBox.Show("The number entered is too large or too small.");
             }
 
+        }
+
+        private void txtNilaiProjek_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtNilaiUAS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtNilaiUTS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtNilaiQuiz_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtNilaiTugas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

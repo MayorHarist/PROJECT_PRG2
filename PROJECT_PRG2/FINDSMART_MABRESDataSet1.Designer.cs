@@ -46,6 +46,12 @@ namespace PROJECT_PRG2 {
         
         private TransaksiPengajuanKRPPDataTable tableTransaksiPengajuanKRPP;
         
+        private LaporanMahasiswaBerprestasiDataTable tableLaporanMahasiswaBerprestasi;
+        
+        private LaporanMahasiswaKRPPDataTable tableLaporanMahasiswaKRPP;
+        
+        private MahasiswaBerprestasiDataTable tableMahasiswaBerprestasi;
+        
         private global::System.Data.DataRelation relationFK__DetailMat__Id_Ma__55F4C372;
         
         private global::System.Data.DataRelation relationFK__DetailMat__Id_Tr__56E8E7AB;
@@ -134,6 +140,15 @@ namespace PROJECT_PRG2 {
                 }
                 if ((ds.Tables["TransaksiPengajuanKRPP"] != null)) {
                     base.Tables.Add(new TransaksiPengajuanKRPPDataTable(ds.Tables["TransaksiPengajuanKRPP"]));
+                }
+                if ((ds.Tables["LaporanMahasiswaBerprestasi"] != null)) {
+                    base.Tables.Add(new LaporanMahasiswaBerprestasiDataTable(ds.Tables["LaporanMahasiswaBerprestasi"]));
+                }
+                if ((ds.Tables["LaporanMahasiswaKRPP"] != null)) {
+                    base.Tables.Add(new LaporanMahasiswaKRPPDataTable(ds.Tables["LaporanMahasiswaKRPP"]));
+                }
+                if ((ds.Tables["MahasiswaBerprestasi"] != null)) {
+                    base.Tables.Add(new MahasiswaBerprestasiDataTable(ds.Tables["MahasiswaBerprestasi"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -265,6 +280,36 @@ namespace PROJECT_PRG2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public LaporanMahasiswaBerprestasiDataTable LaporanMahasiswaBerprestasi {
+            get {
+                return this.tableLaporanMahasiswaBerprestasi;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public LaporanMahasiswaKRPPDataTable LaporanMahasiswaKRPP {
+            get {
+                return this.tableLaporanMahasiswaKRPP;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public MahasiswaBerprestasiDataTable MahasiswaBerprestasi {
+            get {
+                return this.tableMahasiswaBerprestasi;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -362,6 +407,15 @@ namespace PROJECT_PRG2 {
                 }
                 if ((ds.Tables["TransaksiPengajuanKRPP"] != null)) {
                     base.Tables.Add(new TransaksiPengajuanKRPPDataTable(ds.Tables["TransaksiPengajuanKRPP"]));
+                }
+                if ((ds.Tables["LaporanMahasiswaBerprestasi"] != null)) {
+                    base.Tables.Add(new LaporanMahasiswaBerprestasiDataTable(ds.Tables["LaporanMahasiswaBerprestasi"]));
+                }
+                if ((ds.Tables["LaporanMahasiswaKRPP"] != null)) {
+                    base.Tables.Add(new LaporanMahasiswaKRPPDataTable(ds.Tables["LaporanMahasiswaKRPP"]));
+                }
+                if ((ds.Tables["MahasiswaBerprestasi"] != null)) {
+                    base.Tables.Add(new MahasiswaBerprestasiDataTable(ds.Tables["MahasiswaBerprestasi"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -462,6 +516,24 @@ namespace PROJECT_PRG2 {
                     this.tableTransaksiPengajuanKRPP.InitVars();
                 }
             }
+            this.tableLaporanMahasiswaBerprestasi = ((LaporanMahasiswaBerprestasiDataTable)(base.Tables["LaporanMahasiswaBerprestasi"]));
+            if ((initTable == true)) {
+                if ((this.tableLaporanMahasiswaBerprestasi != null)) {
+                    this.tableLaporanMahasiswaBerprestasi.InitVars();
+                }
+            }
+            this.tableLaporanMahasiswaKRPP = ((LaporanMahasiswaKRPPDataTable)(base.Tables["LaporanMahasiswaKRPP"]));
+            if ((initTable == true)) {
+                if ((this.tableLaporanMahasiswaKRPP != null)) {
+                    this.tableLaporanMahasiswaKRPP.InitVars();
+                }
+            }
+            this.tableMahasiswaBerprestasi = ((MahasiswaBerprestasiDataTable)(base.Tables["MahasiswaBerprestasi"]));
+            if ((initTable == true)) {
+                if ((this.tableMahasiswaBerprestasi != null)) {
+                    this.tableMahasiswaBerprestasi.InitVars();
+                }
+            }
             this.relationFK__DetailMat__Id_Ma__55F4C372 = this.Relations["FK__DetailMat__Id_Ma__55F4C372"];
             this.relationFK__DetailMat__Id_Tr__56E8E7AB = this.Relations["FK__DetailMat__Id_Tr__56E8E7AB"];
             this.relationFK__Mahasiswa__Id_Pr__44CA3770 = this.Relations["FK__Mahasiswa__Id_Pr__44CA3770"];
@@ -508,6 +580,12 @@ namespace PROJECT_PRG2 {
             base.Tables.Add(this.tableTransaksiKRS);
             this.tableTransaksiPengajuanKRPP = new TransaksiPengajuanKRPPDataTable();
             base.Tables.Add(this.tableTransaksiPengajuanKRPP);
+            this.tableLaporanMahasiswaBerprestasi = new LaporanMahasiswaBerprestasiDataTable();
+            base.Tables.Add(this.tableLaporanMahasiswaBerprestasi);
+            this.tableLaporanMahasiswaKRPP = new LaporanMahasiswaKRPPDataTable();
+            base.Tables.Add(this.tableLaporanMahasiswaKRPP);
+            this.tableMahasiswaBerprestasi = new MahasiswaBerprestasiDataTable();
+            base.Tables.Add(this.tableMahasiswaBerprestasi);
             this.relationFK__DetailMat__Id_Ma__55F4C372 = new global::System.Data.DataRelation("FK__DetailMat__Id_Ma__55F4C372", new global::System.Data.DataColumn[] {
                         this.tableMataKuliah.Id_MatkulColumn}, new global::System.Data.DataColumn[] {
                         this.tableDetailMatkul.Id_MatkulColumn}, false);
@@ -634,6 +712,24 @@ namespace PROJECT_PRG2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeLaporanMahasiswaBerprestasi() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeLaporanMahasiswaKRPP() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeMahasiswaBerprestasi() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -719,6 +815,15 @@ namespace PROJECT_PRG2 {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void TransaksiPengajuanKRPPRowChangeEventHandler(object sender, TransaksiPengajuanKRPPRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void LaporanMahasiswaBerprestasiRowChangeEventHandler(object sender, LaporanMahasiswaBerprestasiRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void LaporanMahasiswaKRPPRowChangeEventHandler(object sender, LaporanMahasiswaKRPPRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void MahasiswaBerprestasiRowChangeEventHandler(object sender, MahasiswaBerprestasiRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -4866,6 +4971,1028 @@ namespace PROJECT_PRG2 {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class LaporanMahasiswaBerprestasiDataTable : global::System.Data.TypedTableBase<LaporanMahasiswaBerprestasiRow> {
+            
+            private global::System.Data.DataColumn columnNIM;
+            
+            private global::System.Data.DataColumn columnNama_Mahasiswa;
+            
+            private global::System.Data.DataColumn columnJenis_Kelamin;
+            
+            private global::System.Data.DataColumn columnTahun_Masuk;
+            
+            private global::System.Data.DataColumn columnNama_Prodi;
+            
+            private global::System.Data.DataColumn columnIPK;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaBerprestasiDataTable() {
+                this.TableName = "LaporanMahasiswaBerprestasi";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal LaporanMahasiswaBerprestasiDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected LaporanMahasiswaBerprestasiDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NIMColumn {
+                get {
+                    return this.columnNIM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Nama_MahasiswaColumn {
+                get {
+                    return this.columnNama_Mahasiswa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Jenis_KelaminColumn {
+                get {
+                    return this.columnJenis_Kelamin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Tahun_MasukColumn {
+                get {
+                    return this.columnTahun_Masuk;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Nama_ProdiColumn {
+                get {
+                    return this.columnNama_Prodi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IPKColumn {
+                get {
+                    return this.columnIPK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaBerprestasiRow this[int index] {
+                get {
+                    return ((LaporanMahasiswaBerprestasiRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanMahasiswaBerprestasiRowChangeEventHandler LaporanMahasiswaBerprestasiRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanMahasiswaBerprestasiRowChangeEventHandler LaporanMahasiswaBerprestasiRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanMahasiswaBerprestasiRowChangeEventHandler LaporanMahasiswaBerprestasiRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanMahasiswaBerprestasiRowChangeEventHandler LaporanMahasiswaBerprestasiRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddLaporanMahasiswaBerprestasiRow(LaporanMahasiswaBerprestasiRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaBerprestasiRow AddLaporanMahasiswaBerprestasiRow(string NIM, string Nama_Mahasiswa, string Jenis_Kelamin, int Tahun_Masuk, string Nama_Prodi, decimal IPK) {
+                LaporanMahasiswaBerprestasiRow rowLaporanMahasiswaBerprestasiRow = ((LaporanMahasiswaBerprestasiRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        NIM,
+                        Nama_Mahasiswa,
+                        Jenis_Kelamin,
+                        Tahun_Masuk,
+                        Nama_Prodi,
+                        IPK};
+                rowLaporanMahasiswaBerprestasiRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLaporanMahasiswaBerprestasiRow);
+                return rowLaporanMahasiswaBerprestasiRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaBerprestasiRow FindByNIM(string NIM) {
+                return ((LaporanMahasiswaBerprestasiRow)(this.Rows.Find(new object[] {
+                            NIM})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                LaporanMahasiswaBerprestasiDataTable cln = ((LaporanMahasiswaBerprestasiDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new LaporanMahasiswaBerprestasiDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnNIM = base.Columns["NIM"];
+                this.columnNama_Mahasiswa = base.Columns["Nama_Mahasiswa"];
+                this.columnJenis_Kelamin = base.Columns["Jenis_Kelamin"];
+                this.columnTahun_Masuk = base.Columns["Tahun_Masuk"];
+                this.columnNama_Prodi = base.Columns["Nama_Prodi"];
+                this.columnIPK = base.Columns["IPK"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnNIM = new global::System.Data.DataColumn("NIM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIM);
+                this.columnNama_Mahasiswa = new global::System.Data.DataColumn("Nama_Mahasiswa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Mahasiswa);
+                this.columnJenis_Kelamin = new global::System.Data.DataColumn("Jenis_Kelamin", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJenis_Kelamin);
+                this.columnTahun_Masuk = new global::System.Data.DataColumn("Tahun_Masuk", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTahun_Masuk);
+                this.columnNama_Prodi = new global::System.Data.DataColumn("Nama_Prodi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Prodi);
+                this.columnIPK = new global::System.Data.DataColumn("IPK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIPK);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNIM}, true));
+                this.columnNIM.AllowDBNull = false;
+                this.columnNIM.Unique = true;
+                this.columnNIM.MaxLength = 10;
+                this.columnNama_Mahasiswa.AllowDBNull = false;
+                this.columnNama_Mahasiswa.MaxLength = 2147483647;
+                this.columnJenis_Kelamin.AllowDBNull = false;
+                this.columnJenis_Kelamin.MaxLength = 10;
+                this.columnTahun_Masuk.AllowDBNull = false;
+                this.columnNama_Prodi.AllowDBNull = false;
+                this.columnNama_Prodi.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaBerprestasiRow NewLaporanMahasiswaBerprestasiRow() {
+                return ((LaporanMahasiswaBerprestasiRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new LaporanMahasiswaBerprestasiRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(LaporanMahasiswaBerprestasiRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.LaporanMahasiswaBerprestasiRowChanged != null)) {
+                    this.LaporanMahasiswaBerprestasiRowChanged(this, new LaporanMahasiswaBerprestasiRowChangeEvent(((LaporanMahasiswaBerprestasiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.LaporanMahasiswaBerprestasiRowChanging != null)) {
+                    this.LaporanMahasiswaBerprestasiRowChanging(this, new LaporanMahasiswaBerprestasiRowChangeEvent(((LaporanMahasiswaBerprestasiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.LaporanMahasiswaBerprestasiRowDeleted != null)) {
+                    this.LaporanMahasiswaBerprestasiRowDeleted(this, new LaporanMahasiswaBerprestasiRowChangeEvent(((LaporanMahasiswaBerprestasiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.LaporanMahasiswaBerprestasiRowDeleting != null)) {
+                    this.LaporanMahasiswaBerprestasiRowDeleting(this, new LaporanMahasiswaBerprestasiRowChangeEvent(((LaporanMahasiswaBerprestasiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveLaporanMahasiswaBerprestasiRow(LaporanMahasiswaBerprestasiRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                FINDSMART_MABRESDataSet1 ds = new FINDSMART_MABRESDataSet1();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "LaporanMahasiswaBerprestasiDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class LaporanMahasiswaKRPPDataTable : global::System.Data.TypedTableBase<LaporanMahasiswaKRPPRow> {
+            
+            private global::System.Data.DataColumn columnNIM;
+            
+            private global::System.Data.DataColumn columnNama_Mahasiswa;
+            
+            private global::System.Data.DataColumn columnJenis_Kelamin;
+            
+            private global::System.Data.DataColumn columnTahun_Masuk;
+            
+            private global::System.Data.DataColumn columnNama_Prodi;
+            
+            private global::System.Data.DataColumn columnTotal_Point_KRPP;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaKRPPDataTable() {
+                this.TableName = "LaporanMahasiswaKRPP";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal LaporanMahasiswaKRPPDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected LaporanMahasiswaKRPPDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NIMColumn {
+                get {
+                    return this.columnNIM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Nama_MahasiswaColumn {
+                get {
+                    return this.columnNama_Mahasiswa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Jenis_KelaminColumn {
+                get {
+                    return this.columnJenis_Kelamin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Tahun_MasukColumn {
+                get {
+                    return this.columnTahun_Masuk;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Nama_ProdiColumn {
+                get {
+                    return this.columnNama_Prodi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Total_Point_KRPPColumn {
+                get {
+                    return this.columnTotal_Point_KRPP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaKRPPRow this[int index] {
+                get {
+                    return ((LaporanMahasiswaKRPPRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanMahasiswaKRPPRowChangeEventHandler LaporanMahasiswaKRPPRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanMahasiswaKRPPRowChangeEventHandler LaporanMahasiswaKRPPRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanMahasiswaKRPPRowChangeEventHandler LaporanMahasiswaKRPPRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event LaporanMahasiswaKRPPRowChangeEventHandler LaporanMahasiswaKRPPRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddLaporanMahasiswaKRPPRow(LaporanMahasiswaKRPPRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaKRPPRow AddLaporanMahasiswaKRPPRow(string NIM, string Nama_Mahasiswa, string Jenis_Kelamin, int Tahun_Masuk, string Nama_Prodi, int Total_Point_KRPP) {
+                LaporanMahasiswaKRPPRow rowLaporanMahasiswaKRPPRow = ((LaporanMahasiswaKRPPRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        NIM,
+                        Nama_Mahasiswa,
+                        Jenis_Kelamin,
+                        Tahun_Masuk,
+                        Nama_Prodi,
+                        Total_Point_KRPP};
+                rowLaporanMahasiswaKRPPRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLaporanMahasiswaKRPPRow);
+                return rowLaporanMahasiswaKRPPRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaKRPPRow FindByNIM(string NIM) {
+                return ((LaporanMahasiswaKRPPRow)(this.Rows.Find(new object[] {
+                            NIM})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                LaporanMahasiswaKRPPDataTable cln = ((LaporanMahasiswaKRPPDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new LaporanMahasiswaKRPPDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnNIM = base.Columns["NIM"];
+                this.columnNama_Mahasiswa = base.Columns["Nama_Mahasiswa"];
+                this.columnJenis_Kelamin = base.Columns["Jenis_Kelamin"];
+                this.columnTahun_Masuk = base.Columns["Tahun_Masuk"];
+                this.columnNama_Prodi = base.Columns["Nama_Prodi"];
+                this.columnTotal_Point_KRPP = base.Columns["Total_Point_KRPP"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnNIM = new global::System.Data.DataColumn("NIM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIM);
+                this.columnNama_Mahasiswa = new global::System.Data.DataColumn("Nama_Mahasiswa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Mahasiswa);
+                this.columnJenis_Kelamin = new global::System.Data.DataColumn("Jenis_Kelamin", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJenis_Kelamin);
+                this.columnTahun_Masuk = new global::System.Data.DataColumn("Tahun_Masuk", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTahun_Masuk);
+                this.columnNama_Prodi = new global::System.Data.DataColumn("Nama_Prodi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Prodi);
+                this.columnTotal_Point_KRPP = new global::System.Data.DataColumn("Total_Point_KRPP", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal_Point_KRPP);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNIM}, true));
+                this.columnNIM.AllowDBNull = false;
+                this.columnNIM.Unique = true;
+                this.columnNIM.MaxLength = 10;
+                this.columnNama_Mahasiswa.AllowDBNull = false;
+                this.columnNama_Mahasiswa.MaxLength = 2147483647;
+                this.columnJenis_Kelamin.AllowDBNull = false;
+                this.columnJenis_Kelamin.MaxLength = 10;
+                this.columnTahun_Masuk.AllowDBNull = false;
+                this.columnNama_Prodi.AllowDBNull = false;
+                this.columnNama_Prodi.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaKRPPRow NewLaporanMahasiswaKRPPRow() {
+                return ((LaporanMahasiswaKRPPRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new LaporanMahasiswaKRPPRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(LaporanMahasiswaKRPPRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.LaporanMahasiswaKRPPRowChanged != null)) {
+                    this.LaporanMahasiswaKRPPRowChanged(this, new LaporanMahasiswaKRPPRowChangeEvent(((LaporanMahasiswaKRPPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.LaporanMahasiswaKRPPRowChanging != null)) {
+                    this.LaporanMahasiswaKRPPRowChanging(this, new LaporanMahasiswaKRPPRowChangeEvent(((LaporanMahasiswaKRPPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.LaporanMahasiswaKRPPRowDeleted != null)) {
+                    this.LaporanMahasiswaKRPPRowDeleted(this, new LaporanMahasiswaKRPPRowChangeEvent(((LaporanMahasiswaKRPPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.LaporanMahasiswaKRPPRowDeleting != null)) {
+                    this.LaporanMahasiswaKRPPRowDeleting(this, new LaporanMahasiswaKRPPRowChangeEvent(((LaporanMahasiswaKRPPRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveLaporanMahasiswaKRPPRow(LaporanMahasiswaKRPPRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                FINDSMART_MABRESDataSet1 ds = new FINDSMART_MABRESDataSet1();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "LaporanMahasiswaKRPPDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class MahasiswaBerprestasiDataTable : global::System.Data.TypedTableBase<MahasiswaBerprestasiRow> {
+            
+            private global::System.Data.DataColumn columnNIM;
+            
+            private global::System.Data.DataColumn columnNama_Mahasiswa;
+            
+            private global::System.Data.DataColumn columnJenis_Kelamin;
+            
+            private global::System.Data.DataColumn columnTahun_Masuk;
+            
+            private global::System.Data.DataColumn columnNama_Prodi;
+            
+            private global::System.Data.DataColumn columnIPK;
+            
+            private global::System.Data.DataColumn columnTotal_Point_KRPP;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MahasiswaBerprestasiDataTable() {
+                this.TableName = "MahasiswaBerprestasi";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal MahasiswaBerprestasiDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected MahasiswaBerprestasiDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NIMColumn {
+                get {
+                    return this.columnNIM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Nama_MahasiswaColumn {
+                get {
+                    return this.columnNama_Mahasiswa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Jenis_KelaminColumn {
+                get {
+                    return this.columnJenis_Kelamin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Tahun_MasukColumn {
+                get {
+                    return this.columnTahun_Masuk;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Nama_ProdiColumn {
+                get {
+                    return this.columnNama_Prodi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IPKColumn {
+                get {
+                    return this.columnIPK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Total_Point_KRPPColumn {
+                get {
+                    return this.columnTotal_Point_KRPP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MahasiswaBerprestasiRow this[int index] {
+                get {
+                    return ((MahasiswaBerprestasiRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MahasiswaBerprestasiRowChangeEventHandler MahasiswaBerprestasiRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MahasiswaBerprestasiRowChangeEventHandler MahasiswaBerprestasiRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MahasiswaBerprestasiRowChangeEventHandler MahasiswaBerprestasiRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event MahasiswaBerprestasiRowChangeEventHandler MahasiswaBerprestasiRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddMahasiswaBerprestasiRow(MahasiswaBerprestasiRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MahasiswaBerprestasiRow AddMahasiswaBerprestasiRow(string NIM, string Nama_Mahasiswa, string Jenis_Kelamin, int Tahun_Masuk, string Nama_Prodi, decimal IPK, int Total_Point_KRPP) {
+                MahasiswaBerprestasiRow rowMahasiswaBerprestasiRow = ((MahasiswaBerprestasiRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        NIM,
+                        Nama_Mahasiswa,
+                        Jenis_Kelamin,
+                        Tahun_Masuk,
+                        Nama_Prodi,
+                        IPK,
+                        Total_Point_KRPP};
+                rowMahasiswaBerprestasiRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMahasiswaBerprestasiRow);
+                return rowMahasiswaBerprestasiRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MahasiswaBerprestasiRow FindByNIM(string NIM) {
+                return ((MahasiswaBerprestasiRow)(this.Rows.Find(new object[] {
+                            NIM})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                MahasiswaBerprestasiDataTable cln = ((MahasiswaBerprestasiDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new MahasiswaBerprestasiDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnNIM = base.Columns["NIM"];
+                this.columnNama_Mahasiswa = base.Columns["Nama_Mahasiswa"];
+                this.columnJenis_Kelamin = base.Columns["Jenis_Kelamin"];
+                this.columnTahun_Masuk = base.Columns["Tahun_Masuk"];
+                this.columnNama_Prodi = base.Columns["Nama_Prodi"];
+                this.columnIPK = base.Columns["IPK"];
+                this.columnTotal_Point_KRPP = base.Columns["Total_Point_KRPP"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnNIM = new global::System.Data.DataColumn("NIM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIM);
+                this.columnNama_Mahasiswa = new global::System.Data.DataColumn("Nama_Mahasiswa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Mahasiswa);
+                this.columnJenis_Kelamin = new global::System.Data.DataColumn("Jenis_Kelamin", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJenis_Kelamin);
+                this.columnTahun_Masuk = new global::System.Data.DataColumn("Tahun_Masuk", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTahun_Masuk);
+                this.columnNama_Prodi = new global::System.Data.DataColumn("Nama_Prodi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNama_Prodi);
+                this.columnIPK = new global::System.Data.DataColumn("IPK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIPK);
+                this.columnTotal_Point_KRPP = new global::System.Data.DataColumn("Total_Point_KRPP", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal_Point_KRPP);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNIM}, true));
+                this.columnNIM.AllowDBNull = false;
+                this.columnNIM.Unique = true;
+                this.columnNIM.MaxLength = 10;
+                this.columnNama_Mahasiswa.AllowDBNull = false;
+                this.columnNama_Mahasiswa.MaxLength = 2147483647;
+                this.columnJenis_Kelamin.AllowDBNull = false;
+                this.columnJenis_Kelamin.MaxLength = 10;
+                this.columnTahun_Masuk.AllowDBNull = false;
+                this.columnNama_Prodi.AllowDBNull = false;
+                this.columnNama_Prodi.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MahasiswaBerprestasiRow NewMahasiswaBerprestasiRow() {
+                return ((MahasiswaBerprestasiRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new MahasiswaBerprestasiRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(MahasiswaBerprestasiRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.MahasiswaBerprestasiRowChanged != null)) {
+                    this.MahasiswaBerprestasiRowChanged(this, new MahasiswaBerprestasiRowChangeEvent(((MahasiswaBerprestasiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.MahasiswaBerprestasiRowChanging != null)) {
+                    this.MahasiswaBerprestasiRowChanging(this, new MahasiswaBerprestasiRowChangeEvent(((MahasiswaBerprestasiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.MahasiswaBerprestasiRowDeleted != null)) {
+                    this.MahasiswaBerprestasiRowDeleted(this, new MahasiswaBerprestasiRowChangeEvent(((MahasiswaBerprestasiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.MahasiswaBerprestasiRowDeleting != null)) {
+                    this.MahasiswaBerprestasiRowDeleting(this, new MahasiswaBerprestasiRowChangeEvent(((MahasiswaBerprestasiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveMahasiswaBerprestasiRow(MahasiswaBerprestasiRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                FINDSMART_MABRESDataSet1 ds = new FINDSMART_MABRESDataSet1();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "MahasiswaBerprestasiDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class DetailMatkulRow : global::System.Data.DataRow {
@@ -6408,6 +7535,330 @@ namespace PROJECT_PRG2 {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class LaporanMahasiswaBerprestasiRow : global::System.Data.DataRow {
+            
+            private LaporanMahasiswaBerprestasiDataTable tableLaporanMahasiswaBerprestasi;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal LaporanMahasiswaBerprestasiRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLaporanMahasiswaBerprestasi = ((LaporanMahasiswaBerprestasiDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NIM {
+                get {
+                    return ((string)(this[this.tableLaporanMahasiswaBerprestasi.NIMColumn]));
+                }
+                set {
+                    this[this.tableLaporanMahasiswaBerprestasi.NIMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nama_Mahasiswa {
+                get {
+                    return ((string)(this[this.tableLaporanMahasiswaBerprestasi.Nama_MahasiswaColumn]));
+                }
+                set {
+                    this[this.tableLaporanMahasiswaBerprestasi.Nama_MahasiswaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Jenis_Kelamin {
+                get {
+                    return ((string)(this[this.tableLaporanMahasiswaBerprestasi.Jenis_KelaminColumn]));
+                }
+                set {
+                    this[this.tableLaporanMahasiswaBerprestasi.Jenis_KelaminColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Tahun_Masuk {
+                get {
+                    return ((int)(this[this.tableLaporanMahasiswaBerprestasi.Tahun_MasukColumn]));
+                }
+                set {
+                    this[this.tableLaporanMahasiswaBerprestasi.Tahun_MasukColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nama_Prodi {
+                get {
+                    return ((string)(this[this.tableLaporanMahasiswaBerprestasi.Nama_ProdiColumn]));
+                }
+                set {
+                    this[this.tableLaporanMahasiswaBerprestasi.Nama_ProdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal IPK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLaporanMahasiswaBerprestasi.IPKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IPK\' in table \'LaporanMahasiswaBerprestasi\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporanMahasiswaBerprestasi.IPKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsIPKNull() {
+                return this.IsNull(this.tableLaporanMahasiswaBerprestasi.IPKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetIPKNull() {
+                this[this.tableLaporanMahasiswaBerprestasi.IPKColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class LaporanMahasiswaKRPPRow : global::System.Data.DataRow {
+            
+            private LaporanMahasiswaKRPPDataTable tableLaporanMahasiswaKRPP;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal LaporanMahasiswaKRPPRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLaporanMahasiswaKRPP = ((LaporanMahasiswaKRPPDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NIM {
+                get {
+                    return ((string)(this[this.tableLaporanMahasiswaKRPP.NIMColumn]));
+                }
+                set {
+                    this[this.tableLaporanMahasiswaKRPP.NIMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nama_Mahasiswa {
+                get {
+                    return ((string)(this[this.tableLaporanMahasiswaKRPP.Nama_MahasiswaColumn]));
+                }
+                set {
+                    this[this.tableLaporanMahasiswaKRPP.Nama_MahasiswaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Jenis_Kelamin {
+                get {
+                    return ((string)(this[this.tableLaporanMahasiswaKRPP.Jenis_KelaminColumn]));
+                }
+                set {
+                    this[this.tableLaporanMahasiswaKRPP.Jenis_KelaminColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Tahun_Masuk {
+                get {
+                    return ((int)(this[this.tableLaporanMahasiswaKRPP.Tahun_MasukColumn]));
+                }
+                set {
+                    this[this.tableLaporanMahasiswaKRPP.Tahun_MasukColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nama_Prodi {
+                get {
+                    return ((string)(this[this.tableLaporanMahasiswaKRPP.Nama_ProdiColumn]));
+                }
+                set {
+                    this[this.tableLaporanMahasiswaKRPP.Nama_ProdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Total_Point_KRPP {
+                get {
+                    try {
+                        return ((int)(this[this.tableLaporanMahasiswaKRPP.Total_Point_KRPPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Total_Point_KRPP\' in table \'LaporanMahasiswaKRPP\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableLaporanMahasiswaKRPP.Total_Point_KRPPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTotal_Point_KRPPNull() {
+                return this.IsNull(this.tableLaporanMahasiswaKRPP.Total_Point_KRPPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTotal_Point_KRPPNull() {
+                this[this.tableLaporanMahasiswaKRPP.Total_Point_KRPPColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class MahasiswaBerprestasiRow : global::System.Data.DataRow {
+            
+            private MahasiswaBerprestasiDataTable tableMahasiswaBerprestasi;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal MahasiswaBerprestasiRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableMahasiswaBerprestasi = ((MahasiswaBerprestasiDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NIM {
+                get {
+                    return ((string)(this[this.tableMahasiswaBerprestasi.NIMColumn]));
+                }
+                set {
+                    this[this.tableMahasiswaBerprestasi.NIMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nama_Mahasiswa {
+                get {
+                    return ((string)(this[this.tableMahasiswaBerprestasi.Nama_MahasiswaColumn]));
+                }
+                set {
+                    this[this.tableMahasiswaBerprestasi.Nama_MahasiswaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Jenis_Kelamin {
+                get {
+                    return ((string)(this[this.tableMahasiswaBerprestasi.Jenis_KelaminColumn]));
+                }
+                set {
+                    this[this.tableMahasiswaBerprestasi.Jenis_KelaminColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Tahun_Masuk {
+                get {
+                    return ((int)(this[this.tableMahasiswaBerprestasi.Tahun_MasukColumn]));
+                }
+                set {
+                    this[this.tableMahasiswaBerprestasi.Tahun_MasukColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nama_Prodi {
+                get {
+                    return ((string)(this[this.tableMahasiswaBerprestasi.Nama_ProdiColumn]));
+                }
+                set {
+                    this[this.tableMahasiswaBerprestasi.Nama_ProdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal IPK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableMahasiswaBerprestasi.IPKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IPK\' in table \'MahasiswaBerprestasi\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMahasiswaBerprestasi.IPKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Total_Point_KRPP {
+                get {
+                    try {
+                        return ((int)(this[this.tableMahasiswaBerprestasi.Total_Point_KRPPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Total_Point_KRPP\' in table \'MahasiswaBerprestasi\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableMahasiswaBerprestasi.Total_Point_KRPPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsIPKNull() {
+                return this.IsNull(this.tableMahasiswaBerprestasi.IPKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetIPKNull() {
+                this[this.tableMahasiswaBerprestasi.IPKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTotal_Point_KRPPNull() {
+                return this.IsNull(this.tableMahasiswaBerprestasi.Total_Point_KRPPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTotal_Point_KRPPNull() {
+                this[this.tableMahasiswaBerprestasi.Total_Point_KRPPColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -6767,6 +8218,108 @@ namespace PROJECT_PRG2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TransaksiPengajuanKRPPRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class LaporanMahasiswaBerprestasiRowChangeEvent : global::System.EventArgs {
+            
+            private LaporanMahasiswaBerprestasiRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaBerprestasiRowChangeEvent(LaporanMahasiswaBerprestasiRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaBerprestasiRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class LaporanMahasiswaKRPPRowChangeEvent : global::System.EventArgs {
+            
+            private LaporanMahasiswaKRPPRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaKRPPRowChangeEvent(LaporanMahasiswaKRPPRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public LaporanMahasiswaKRPPRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class MahasiswaBerprestasiRowChangeEvent : global::System.EventArgs {
+            
+            private MahasiswaBerprestasiRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MahasiswaBerprestasiRowChangeEvent(MahasiswaBerprestasiRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MahasiswaBerprestasiRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -12092,6 +13645,526 @@ SELECT Id_TransKRPP, Nama_Prestasi, Uraian_Singkat, Lembaga_Pelaksana, Tanggal_P
                     string Original_Id_PosisiPrestasi, 
                     string Original_Id_Prodi) {
             return this.Update(Original_Id_TransKRPP, Nama_Prestasi, Uraian_Singkat, Lembaga_Pelaksana, Tanggal_Prestasi, Tanggal_Pengisian, Point, NIM, Id_TKN, Id_JenisPrestasi, Id_PosisiPrestasi, Id_Prodi, Original_Id_TransKRPP, Original_Tanggal_Prestasi, Original_Tanggal_Pengisian, Original_Point, Original_NIM, Original_Id_TKN, Original_Id_JenisPrestasi, Original_Id_PosisiPrestasi, Original_Id_Prodi);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class LaporanMahasiswaBerprestasiTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public LaporanMahasiswaBerprestasiTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "LaporanMahasiswaBerprestasi";
+            tableMapping.ColumnMappings.Add("NIM", "NIM");
+            tableMapping.ColumnMappings.Add("Nama_Mahasiswa", "Nama_Mahasiswa");
+            tableMapping.ColumnMappings.Add("Jenis_Kelamin", "Jenis_Kelamin");
+            tableMapping.ColumnMappings.Add("Tahun_Masuk", "Tahun_Masuk");
+            tableMapping.ColumnMappings.Add("Nama_Prodi", "Nama_Prodi");
+            tableMapping.ColumnMappings.Add("IPK", "IPK");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::PROJECT_PRG2.Properties.Settings.Default.FINDSMART_MABRESharist;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT NIM, Nama_Mahasiswa, Jenis_Kelamin, Tahun_Masuk, Nama_Prodi, IPK FROM dbo." +
+                "LaporanMahasiswaBerprestasi";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(FINDSMART_MABRESDataSet1.LaporanMahasiswaBerprestasiDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual FINDSMART_MABRESDataSet1.LaporanMahasiswaBerprestasiDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            FINDSMART_MABRESDataSet1.LaporanMahasiswaBerprestasiDataTable dataTable = new FINDSMART_MABRESDataSet1.LaporanMahasiswaBerprestasiDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class LaporanMahasiswaKRPPTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public LaporanMahasiswaKRPPTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "LaporanMahasiswaKRPP";
+            tableMapping.ColumnMappings.Add("NIM", "NIM");
+            tableMapping.ColumnMappings.Add("Nama_Mahasiswa", "Nama_Mahasiswa");
+            tableMapping.ColumnMappings.Add("Jenis_Kelamin", "Jenis_Kelamin");
+            tableMapping.ColumnMappings.Add("Tahun_Masuk", "Tahun_Masuk");
+            tableMapping.ColumnMappings.Add("Nama_Prodi", "Nama_Prodi");
+            tableMapping.ColumnMappings.Add("Total_Point_KRPP", "Total_Point_KRPP");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::PROJECT_PRG2.Properties.Settings.Default.FINDSMART_MABRESharist;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT NIM, Nama_Mahasiswa, Jenis_Kelamin, Tahun_Masuk, Nama_Prodi, Total_Point_K" +
+                "RPP FROM dbo.LaporanMahasiswaKRPP";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(FINDSMART_MABRESDataSet1.LaporanMahasiswaKRPPDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual FINDSMART_MABRESDataSet1.LaporanMahasiswaKRPPDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            FINDSMART_MABRESDataSet1.LaporanMahasiswaKRPPDataTable dataTable = new FINDSMART_MABRESDataSet1.LaporanMahasiswaKRPPDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class MahasiswaBerprestasiTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public MahasiswaBerprestasiTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "MahasiswaBerprestasi";
+            tableMapping.ColumnMappings.Add("NIM", "NIM");
+            tableMapping.ColumnMappings.Add("Nama_Mahasiswa", "Nama_Mahasiswa");
+            tableMapping.ColumnMappings.Add("Jenis_Kelamin", "Jenis_Kelamin");
+            tableMapping.ColumnMappings.Add("Tahun_Masuk", "Tahun_Masuk");
+            tableMapping.ColumnMappings.Add("Nama_Prodi", "Nama_Prodi");
+            tableMapping.ColumnMappings.Add("IPK", "IPK");
+            tableMapping.ColumnMappings.Add("Total_Point_KRPP", "Total_Point_KRPP");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::PROJECT_PRG2.Properties.Settings.Default.FINDSMART_MABRESharist;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT NIM, Nama_Mahasiswa, Jenis_Kelamin, Tahun_Masuk, Nama_Prodi, IPK, Total_Po" +
+                "int_KRPP FROM dbo.MahasiswaBerprestasi";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(FINDSMART_MABRESDataSet1.MahasiswaBerprestasiDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual FINDSMART_MABRESDataSet1.MahasiswaBerprestasiDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            FINDSMART_MABRESDataSet1.MahasiswaBerprestasiDataTable dataTable = new FINDSMART_MABRESDataSet1.MahasiswaBerprestasiDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     

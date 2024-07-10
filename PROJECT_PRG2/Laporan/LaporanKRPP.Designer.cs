@@ -29,25 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.laporanMahasiswaBerprestasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.repKRSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.repKRS = new PROJECT_PRG2.RepKRS();
-            this.laporanMahasiswaBerprestasiTableAdapter = new PROJECT_PRG2.RepKRSTableAdapters.LaporanMahasiswaBerprestasiTableAdapter();
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.laporanMahasiswaKRPPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.repKRPP = new PROJECT_PRG2.RepKRPP();
-            this.repKRPPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.laporanMahasiswaKRPPTableAdapter = new PROJECT_PRG2.RepKRPPTableAdapters.LaporanMahasiswaKRPPTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.laporanMahasiswaBerprestasiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repKRSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repKRS)).BeginInit();
+            this.laporanMahasiswaKRPPTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.LaporanMahasiswaKRPPTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laporanMahasiswaKRPPBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repKRPP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repKRPPBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbFilter
@@ -58,6 +49,7 @@
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(193, 31);
             this.cbFilter.TabIndex = 9;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -81,49 +73,25 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.laporanMahasiswaKRPPBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PROJECT_PRG2.ReportKRPP.rdlc";
+            reportDataSource7.Name = "DataSet1";
+            reportDataSource7.Value = this.laporanMahasiswaKRPPBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PROJECT_PRG2.krpp.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(46, 118);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1171, 432);
             this.reportViewer1.TabIndex = 6;
             // 
-            // laporanMahasiswaBerprestasiBindingSource
+            // fINDSMART_MABRESDataSet1
             // 
-            this.laporanMahasiswaBerprestasiBindingSource.DataMember = "LaporanMahasiswaBerprestasi";
-            this.laporanMahasiswaBerprestasiBindingSource.DataSource = this.repKRSBindingSource;
-            // 
-            // repKRSBindingSource
-            // 
-            this.repKRSBindingSource.DataSource = this.repKRS;
-            this.repKRSBindingSource.Position = 0;
-            // 
-            // repKRS
-            // 
-            this.repKRS.DataSetName = "RepKRS";
-            this.repKRS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // laporanMahasiswaBerprestasiTableAdapter
-            // 
-            this.laporanMahasiswaBerprestasiTableAdapter.ClearBeforeFill = true;
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // laporanMahasiswaKRPPBindingSource
             // 
             this.laporanMahasiswaKRPPBindingSource.DataMember = "LaporanMahasiswaKRPP";
-            this.laporanMahasiswaKRPPBindingSource.DataSource = this.repKRPP;
-            // 
-            // repKRPP
-            // 
-            this.repKRPP.DataSetName = "RepKRPP";
-            this.repKRPP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // repKRPPBindingSource
-            // 
-            this.repKRPPBindingSource.DataSource = this.repKRPP;
-            this.repKRPPBindingSource.Position = 0;
+            this.laporanMahasiswaKRPPBindingSource.DataSource = this.fINDSMART_MABRESDataSet1;
             // 
             // laporanMahasiswaKRPPTableAdapter
             // 
@@ -133,20 +101,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1265, 606);
             this.Controls.Add(this.cbFilter);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LaporanKRPP";
             this.Text = "KRPP";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.KRPP_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.laporanMahasiswaBerprestasiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repKRSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repKRS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laporanMahasiswaKRPPBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repKRPP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repKRPPBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,13 +124,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource repKRPPBindingSource;
-        private RepKRPP repKRPP;
-        private RepKRS repKRS;
-        private System.Windows.Forms.BindingSource repKRSBindingSource;
+        private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
         private System.Windows.Forms.BindingSource laporanMahasiswaKRPPBindingSource;
-        private RepKRPPTableAdapters.LaporanMahasiswaKRPPTableAdapter laporanMahasiswaKRPPTableAdapter;
-        private System.Windows.Forms.BindingSource laporanMahasiswaBerprestasiBindingSource;
-        private RepKRSTableAdapters.LaporanMahasiswaBerprestasiTableAdapter laporanMahasiswaBerprestasiTableAdapter;
+        private FINDSMART_MABRESDataSet1TableAdapters.LaporanMahasiswaKRPPTableAdapter laporanMahasiswaKRPPTableAdapter;
     }
 }

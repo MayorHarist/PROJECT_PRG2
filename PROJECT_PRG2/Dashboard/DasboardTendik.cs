@@ -5,6 +5,7 @@ using PROJECT_PRG2.CRUD_MataKuliah;
 using PROJECT_PRG2.CRUD_Pengumuman;
 using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using PROJECT_PRG2.CRUD_Prodi;
+using PROJECT_PRG2.Laporan;
 using PROJECT_PRG2.Transaksi;
 using System;
 using System.Collections.Generic;
@@ -125,12 +126,12 @@ namespace PROJECT_PRG2
         {
             if (panelLaporanMuncul)
             {
-                if (panelLaporan.Height < 103)
+                if (panelLaporan.Height < 122)
                 {
                     panelLaporan.Height += step;
-                    if (panelLaporan.Height >= 103)
+                    if (panelLaporan.Height >= 122)
                     {
-                        panelLaporan.Height = 103;
+                        panelLaporan.Height = 122;
                         timerLaporan.Stop();
                     }
                 }
@@ -249,11 +250,38 @@ namespace PROJECT_PRG2
         private void btnTrsKRPP_Click(object sender, EventArgs e)
         {
             trsKRPP trsKRPP = new trsKRPP();
-            // Atur parent form UpDelet_Prodi ke panelMain
             trsKRPP.TopLevel = false;
             trsKRPP.AutoScroll = true;
             panelMain.Controls.Add(trsKRPP);
             trsKRPP.Show();
+
+        }
+
+        private void btnLaporanKRS_Click(object sender, EventArgs e)
+        {
+            LaporanKRS laporanKRS = new LaporanKRS();
+            laporanKRS.TopLevel = false;
+            laporanKRS.AutoScroll = true;
+            panelMain.Controls.Add(laporanKRS);
+            laporanKRS.Show();
+        }
+
+        private void btnLaporanKRPP_Click(object sender, EventArgs e)
+        {
+            LaporanKRPP laporanKRPP = new LaporanKRPP();
+            laporanKRPP.TopLevel = false;
+            laporanKRPP.AutoScroll = true;
+            panelMain.Controls.Add(laporanKRPP);
+            laporanKRPP.Show();
+        }
+
+        private void btnMabres_Click(object sender, EventArgs e)
+        {
+            LaporanKRS_KRPP laporanKRS_KRPP = new LaporanKRS_KRPP();
+            laporanKRS_KRPP.TopLevel = false;
+            laporanKRS_KRPP.AutoScroll= true;
+            panelMain.Controls.Add (laporanKRS_KRPP);
+            laporanKRS_KRPP.Show();
         }
     }
 }

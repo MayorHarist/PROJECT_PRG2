@@ -1,5 +1,7 @@
 ﻿using PROJECT_PRG2.CRUD_PosisiPrestasi;
 using PROJECT_PRG2.CRUD_Tendik;
+using PROJECT_PRG2.Laporan;
+using PROJECT_PRG2.Transaksi;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,12 +69,12 @@ namespace PROJECT_PRG2
         {
             if (panelLaporanMuncul)
             {
-                if (panelLaporan.Height < 103)
+                if (panelLaporan.Height < 122)
                 {
                     panelLaporan.Height += step;
-                    if (panelLaporan.Height >= 103)
+                    if (panelLaporan.Height >= 122)
                     {
-                        panelLaporan.Height = 103;
+                        panelLaporan.Height = 122;
                         timerLaporan.Stop();
                     }
                 }
@@ -112,6 +114,33 @@ namespace PROJECT_PRG2
             upTendik.AutoScroll = true;
             panelMain.Controls.Add(upTendik);
             upTendik.Show();
+        }
+
+        private void btnLaporanKRS_Click(object sender, EventArgs e)
+        {
+            LaporanKRS  laporanKRS = new LaporanKRS();
+            laporanKRS.TopLevel = false;
+            laporanKRS.AutoScroll = true;
+            panelMain.Controls.Add(laporanKRS);
+            laporanKRS.Show();
+        }
+
+        private void btnLaporanKRPP_Click(object sender, EventArgs e)
+        {
+            LaporanKRPP laporanKRPP = new LaporanKRPP();
+            laporanKRPP.TopLevel = false;
+            laporanKRPP.AutoScroll = true;
+            panelMain.Controls.Add(laporanKRPP);
+            laporanKRPP.Show();
+        }
+
+        private void btnMabres_Click(object sender, EventArgs e)
+        {
+            LaporanKRS_KRPP laporanKRS_KRPP = new LaporanKRS_KRPP();
+            laporanKRS_KRPP.TopLevel = false;
+            laporanKRS_KRPP.AutoScroll = true ;
+            panelMain.Controls.Add (laporanKRS_KRPP);
+            laporanKRS_KRPP .Show();
         }
     }
 }

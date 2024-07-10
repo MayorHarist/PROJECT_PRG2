@@ -51,6 +51,7 @@
             this.btnTransaksi = new Guna.UI2.WinForms.Guna2Button();
             this.btnData = new Guna.UI2.WinForms.Guna2Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnMabres = new Guna.UI2.WinForms.Guna2Button();
             this.panelLaporan.SuspendLayout();
             this.panelTransaksi.SuspendLayout();
             this.panelData.SuspendLayout();
@@ -77,6 +78,7 @@
             this.btnLaporanKRPP.Size = new System.Drawing.Size(375, 45);
             this.btnLaporanKRPP.TabIndex = 2;
             this.btnLaporanKRPP.Text = "Laporan KRPP Mahasiswa";
+            this.btnLaporanKRPP.Click += new System.EventHandler(this.btnLaporanKRPP_Click);
             // 
             // btnLaporanKRS
             // 
@@ -93,16 +95,18 @@
             this.btnLaporanKRS.Size = new System.Drawing.Size(375, 45);
             this.btnLaporanKRS.TabIndex = 0;
             this.btnLaporanKRS.Text = "Laporan KRS Mahasiswa";
+            this.btnLaporanKRS.Click += new System.EventHandler(this.btnLaporanKRS_Click);
             // 
             // panelLaporan
             // 
             this.panelLaporan.BackColor = System.Drawing.Color.Transparent;
+            this.panelLaporan.Controls.Add(this.btnMabres);
             this.panelLaporan.Controls.Add(this.btnLaporanKRPP);
             this.panelLaporan.Controls.Add(this.btnLaporanKRS);
-            this.panelLaporan.Location = new System.Drawing.Point(25, 840);
+            this.panelLaporan.Location = new System.Drawing.Point(25, 832);
             this.panelLaporan.Margin = new System.Windows.Forms.Padding(2);
             this.panelLaporan.Name = "panelLaporan";
-            this.panelLaporan.Size = new System.Drawing.Size(377, 84);
+            this.panelLaporan.Size = new System.Drawing.Size(377, 122);
             this.panelLaporan.TabIndex = 15;
             // 
             // btnJenisPrestasi
@@ -329,7 +333,7 @@
             this.btnLaporan.FillColor = System.Drawing.Color.Transparent;
             this.btnLaporan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLaporan.ForeColor = System.Drawing.Color.White;
-            this.btnLaporan.Location = new System.Drawing.Point(23, 788);
+            this.btnLaporan.Location = new System.Drawing.Point(23, 780);
             this.btnLaporan.Margin = new System.Windows.Forms.Padding(2);
             this.btnLaporan.Name = "btnLaporan";
             this.btnLaporan.Size = new System.Drawing.Size(189, 54);
@@ -387,6 +391,24 @@
             this.panelMain.TabIndex = 17;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
+            // btnMabres
+            // 
+            this.btnMabres.BorderColor = System.Drawing.Color.BurlyWood;
+            this.btnMabres.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMabres.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMabres.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMabres.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMabres.FillColor = System.Drawing.Color.Transparent;
+            this.btnMabres.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMabres.ForeColor = System.Drawing.Color.White;
+            this.btnMabres.Location = new System.Drawing.Point(0, 81);
+            this.btnMabres.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMabres.Name = "btnMabres";
+            this.btnMabres.Size = new System.Drawing.Size(375, 45);
+            this.btnMabres.TabIndex = 3;
+            this.btnMabres.Text = "Laporan Mahasiswa Berprestasi";
+            this.btnMabres.Click += new System.EventHandler(this.btnMabres_Click);
+            // 
             // DasboardTendik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,5 +461,6 @@
         private Guna.UI2.WinForms.Guna2Button btnTransaksi;
         private Guna.UI2.WinForms.Guna2Button btnData;
         private System.Windows.Forms.Panel panelMain;
+        private Guna.UI2.WinForms.Guna2Button btnMabres;
     }
 }

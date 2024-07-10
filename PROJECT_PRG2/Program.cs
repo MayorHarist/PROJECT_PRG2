@@ -28,7 +28,7 @@ namespace PROJECT_PRG2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LaporanKRPP());
+            Application.Run(new DasboardTendik());
         }
     }
 }
