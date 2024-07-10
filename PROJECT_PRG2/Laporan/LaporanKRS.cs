@@ -19,7 +19,8 @@ namespace PROJECT_PRG2.Laporan
 
         private void KRS_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'repKRS.LaporanMahasiswaBerprestasi' table. You can move, or remove it, as needed.
+            this.laporanMahasiswaBerprestasiTableAdapter.Fill(this.repKRS.LaporanMahasiswaBerprestasi);
             this.reportViewer1.RefreshReport();
         }
     }

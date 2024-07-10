@@ -107,6 +107,7 @@
             this.txtCari.SelectedText = "";
             this.txtCari.Size = new System.Drawing.Size(362, 36);
             this.txtCari.TabIndex = 0;
+            this.txtCari.TextChanged += new System.EventHandler(this.txtCari_TextChanged);
             // 
             // guna2DataGridView1
             // 

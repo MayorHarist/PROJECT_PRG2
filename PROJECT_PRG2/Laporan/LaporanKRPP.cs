@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,17 @@ namespace PROJECT_PRG2.Laporan
 
         private void KRPP_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'repKRS.LaporanMahasiswaBerprestasi' table. You can move, or remove it, as needed.
+            this.laporanMahasiswaBerprestasiTableAdapter.Fill(this.repKRS.LaporanMahasiswaBerprestasi);
             // TODO: This line of code loads data into the 'repKRPP.LaporanMahasiswaKRPP' table. You can move, or remove it, as needed.
             this.laporanMahasiswaKRPPTableAdapter.Fill(this.repKRPP.LaporanMahasiswaKRPP);
+            cbFilter.Text = "-- Filter KRPP --";
             this.reportViewer1.RefreshReport();
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
