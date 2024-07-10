@@ -1,6 +1,6 @@
 ﻿namespace PROJECT_PRG2.Laporan
 {
-    partial class KRPP
+    partial class LaporanKRPP
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.laporanMahasiswaKRPPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.repKRPP = new PROJECT_PRG2.RepKRPP();
             this.btnCari = new Guna.UI2.WinForms.Guna2Button();
             this.txtCari = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbUrutkan = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.repKRPPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.repKRS = new PROJECT_PRG2.RepKRS();
+            this.repKRSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.laporanMahasiswaKRPPTableAdapter = new PROJECT_PRG2.RepKRPPTableAdapters.LaporanMahasiswaKRPPTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.laporanMahasiswaKRPPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repKRPP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repKRPPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repKRS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repKRSBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // laporanMahasiswaKRPPBindingSource
+            // 
+            this.laporanMahasiswaKRPPBindingSource.DataMember = "LaporanMahasiswaKRPP";
+            this.laporanMahasiswaKRPPBindingSource.DataSource = this.repKRPP;
+            // 
+            // repKRPP
+            // 
+            this.repKRPP.DataSetName = "RepKRPP";
+            this.repKRPP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnCari
             // 
@@ -100,13 +123,36 @@
             // 
             // reportViewer1
             // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.laporanMahasiswaKRPPBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PROJECT_PRG2.ReportKRPP.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(27, 118);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(747, 304);
             this.reportViewer1.TabIndex = 6;
             // 
-            // KRPP
+            // repKRPPBindingSource
+            // 
+            this.repKRPPBindingSource.DataSource = this.repKRPP;
+            this.repKRPPBindingSource.Position = 0;
+            // 
+            // repKRS
+            // 
+            this.repKRS.DataSetName = "RepKRS";
+            this.repKRS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // repKRSBindingSource
+            // 
+            this.repKRSBindingSource.DataSource = this.repKRS;
+            this.repKRSBindingSource.Position = 0;
+            // 
+            // laporanMahasiswaKRPPTableAdapter
+            // 
+            this.laporanMahasiswaKRPPTableAdapter.ClearBeforeFill = true;
+            // 
+            // LaporanKRPP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,8 +163,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "KRPP";
+            this.Name = "LaporanKRPP";
             this.Text = "KRPP";
+            this.Load += new System.EventHandler(this.KRPP_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.laporanMahasiswaKRPPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repKRPP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repKRPPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repKRS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repKRSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +184,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource repKRPPBindingSource;
+        private RepKRPP repKRPP;
+        private RepKRS repKRS;
+        private System.Windows.Forms.BindingSource repKRSBindingSource;
+        private System.Windows.Forms.BindingSource laporanMahasiswaKRPPBindingSource;
+        private RepKRPPTableAdapters.LaporanMahasiswaKRPPTableAdapter laporanMahasiswaKRPPTableAdapter;
     }
 }
