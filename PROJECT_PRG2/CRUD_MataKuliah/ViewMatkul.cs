@@ -20,12 +20,18 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
 
         private void ViewMatkul_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dATASET_DEAN.Dosen' table. You can move, or remove it, as needed.
+            this.dosenTableAdapter3.Fill(this.dATASET_DEAN.Dosen);
+            // TODO: This line of code loads data into the 'dATASET_DEAN.ProgramStudi' table. You can move, or remove it, as needed.
+            this.programStudiTableAdapter3.Fill(this.dATASET_DEAN.ProgramStudi);
+            // TODO: This line of code loads data into the 'dATASET_DEAN.MataKuliah' table. You can move, or remove it, as needed.
+            this.mataKuliahTableAdapter3.Fill(this.dATASET_DEAN.MataKuliah);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.Dosen);
+            //this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.Dosen);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
+            //this.programStudiTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.MataKuliah' table. You can move, or remove it, as needed.
-            this.mataKuliahTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.MataKuliah);
+            //this.mataKuliahTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.MataKuliah);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.
             //this.dosenTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Dosen);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
@@ -206,8 +212,8 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             txtJenis.Text = "";
             txtSemester.Text = "";
             txtKelas.Text = "";
-            cbPegawai.SelectedText = "";
-            cbProdi.SelectedText = "";
+            cbPegawai.SelectedValue = "";
+            cbProdi.SelectedValue = "";
         }
 
         private void btnCari_Click(object sender, EventArgs e)
@@ -241,7 +247,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                         txtSKS.Text = dataTable.Rows[0]["Jumlah_SKS"].ToString();
                         txtJenis.Text = dataTable.Rows[0]["Jenis"].ToString();
                         txtSemester.Text = dataTable.Rows[0]["Semester"].ToString();
-                        txtKelas.Text = dataTable.Rows[0]["Semester"].ToString();
+                        txtKelas.Text = dataTable.Rows[0]["Kelas"].ToString();
                         cbPegawai.SelectedValue = dataTable.Rows[0]["No_Pegawai"].ToString();
                         cbProdi.SelectedValue = dataTable.Rows[0]["Id_Prodi"].ToString();
                     }
@@ -291,7 +297,8 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.MataKuliah' table. You can move, or remove it, as needed.
             //this.mataKuliahTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.MataKuliah;
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.MataKuliah' table. You can move, or remove it, as needed.
-            this.mataKuliahTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.MataKuliah);
+            //this.mataKuliahTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.MataKuliah);
+            this.mataKuliahTableAdapter3.Fill(this.dATASET_DEAN.MataKuliah);
         }
 
         private void txtSemester_KeyPress(object sender, KeyPressEventArgs e)

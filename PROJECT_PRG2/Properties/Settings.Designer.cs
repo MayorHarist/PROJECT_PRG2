@@ -120,5 +120,16 @@ namespace PROJECT_PRG2.Properties {
                 return ((string)(this["FINDSMART_MABRESharist"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=INBOOK_X1;Initial Catalog=FINDSMART_MABRES;Integrated Security=True;E" +
+            "ncrypt=True;TrustServerCertificate=True")]
+        public string DATASET_DEAN {
+            get {
+                return ((string)(this["DATASET_DEAN"]));
+            }
+        }
     }
 }

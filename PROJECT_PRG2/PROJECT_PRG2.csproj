@@ -254,6 +254,11 @@
     <Compile Include="Dashboard\Dashboard_KepalaTendik.Designer.cs">
       <DependentUpon>Dashboard_KepalaTendik.cs</DependentUpon>
     </Compile>
+    <Compile Include="DATASET_DEAN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DATASET_DEAN.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FINDSMART.cs">
       <DependentUpon>FINDSMART.xsd</DependentUpon>
     </Compile>
@@ -339,6 +344,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FINDSMART_MABRESDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FINDSMART_MABRESDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FINDSMART_MABRESDataSet5.xsd</DependentUpon>
     </Compile>
     <Compile Include="FINDSMART_MABRESDsAll.cs">
       <DependentUpon>FINDSMART_MABRESDsAll.xsd</DependentUpon>
@@ -564,6 +574,17 @@
     <EmbeddedResource Include="Transaksi\trsKRS.resx">
       <DependentUpon>trsKRS.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DATASET_DEAN.xsc">
+      <DependentUpon>DATASET_DEAN.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET_DEAN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DATASET_DEAN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASET_DEAN.xss">
+      <DependentUpon>DATASET_DEAN.xsd</DependentUpon>
+    </None>
     <None Include="FINDSMART.xsc">
       <DependentUpon>FINDSMART.xsd</DependentUpon>
     </None>
@@ -739,6 +760,17 @@
     </None>
     <None Include="FINDSMART_MABRESDataSet4.xss">
       <DependentUpon>FINDSMART_MABRESDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet5.xsc">
+      <DependentUpon>FINDSMART_MABRESDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FINDSMART_MABRESDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FINDSMART_MABRESDataSet5.xss">
+      <DependentUpon>FINDSMART_MABRESDataSet5.xsd</DependentUpon>
     </None>
     <None Include="FINDSMART_MABRESDsAll.xsc">
       <DependentUpon>FINDSMART_MABRESDsAll.xsd</DependentUpon>

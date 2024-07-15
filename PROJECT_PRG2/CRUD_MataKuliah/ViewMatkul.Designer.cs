@@ -29,21 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMatkul));
             this.gdvMatkul = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idMatkulDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jumlahSKSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jenisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noPegawaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mataKuliahBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.mataKuliahBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -91,6 +83,22 @@
             this.dosenTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter();
             this.label4 = new System.Windows.Forms.Label();
             this.txtKelas = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dATASET_DEAN = new PROJECT_PRG2.DATASET_DEAN();
+            this.dATASETDEANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mataKuliahBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.mataKuliahTableAdapter3 = new PROJECT_PRG2.DATASET_DEANTableAdapters.MataKuliahTableAdapter();
+            this.idMatkulDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jumlahSKSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jenisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_Prodi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.No_Pegawai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programStudiBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter3 = new PROJECT_PRG2.DATASET_DEANTableAdapters.ProgramStudiTableAdapter();
+            this.dosenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dosenTableAdapter3 = new PROJECT_PRG2.DATASET_DEANTableAdapters.DosenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gdvMatkul)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
@@ -105,23 +113,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASET_DEAN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASETDEANBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // gdvMatkul
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.gdvMatkul.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.gdvMatkul.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.gdvMatkul.AutoGenerateColumns = false;
             this.gdvMatkul.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdvMatkul.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdvMatkul.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.gdvMatkul.ColumnHeadersHeight = 30;
             this.gdvMatkul.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idMatkulDataGridViewTextBoxColumn,
@@ -129,35 +142,35 @@
             this.jumlahSKSDataGridViewTextBoxColumn,
             this.jenisDataGridViewTextBoxColumn,
             this.semesterDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.noPegawaiDataGridViewTextBoxColumn,
-            this.idProdiDataGridViewTextBoxColumn});
-            this.gdvMatkul.DataSource = this.mataKuliahBindingSource2;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdvMatkul.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Kelas,
+            this.Id_Prodi,
+            this.No_Pegawai});
+            this.gdvMatkul.DataSource = this.mataKuliahBindingSource3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdvMatkul.DefaultCellStyle = dataGridViewCellStyle13;
             this.gdvMatkul.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
             this.gdvMatkul.Location = new System.Drawing.Point(45, 106);
             this.gdvMatkul.Margin = new System.Windows.Forms.Padding(2);
             this.gdvMatkul.Name = "gdvMatkul";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdvMatkul.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdvMatkul.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.gdvMatkul.RowHeadersVisible = false;
             this.gdvMatkul.RowHeadersWidth = 62;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gdvMatkul.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdvMatkul.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.gdvMatkul.RowTemplate.Height = 28;
             this.gdvMatkul.Size = new System.Drawing.Size(1279, 382);
             this.gdvMatkul.TabIndex = 0;
@@ -184,54 +197,6 @@
             this.gdvMatkul.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
             this.gdvMatkul.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.gdvMatkul.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvMatkul_CellContentClick);
-            // 
-            // idMatkulDataGridViewTextBoxColumn
-            // 
-            this.idMatkulDataGridViewTextBoxColumn.DataPropertyName = "Id_Matkul";
-            this.idMatkulDataGridViewTextBoxColumn.HeaderText = "ID Matkul";
-            this.idMatkulDataGridViewTextBoxColumn.Name = "idMatkulDataGridViewTextBoxColumn";
-            // 
-            // namaDataGridViewTextBoxColumn
-            // 
-            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
-            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
-            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            // 
-            // jumlahSKSDataGridViewTextBoxColumn
-            // 
-            this.jumlahSKSDataGridViewTextBoxColumn.DataPropertyName = "Jumlah_SKS";
-            this.jumlahSKSDataGridViewTextBoxColumn.HeaderText = "Jumlah SKS";
-            this.jumlahSKSDataGridViewTextBoxColumn.Name = "jumlahSKSDataGridViewTextBoxColumn";
-            // 
-            // jenisDataGridViewTextBoxColumn
-            // 
-            this.jenisDataGridViewTextBoxColumn.DataPropertyName = "Jenis";
-            this.jenisDataGridViewTextBoxColumn.HeaderText = "Jenis";
-            this.jenisDataGridViewTextBoxColumn.Name = "jenisDataGridViewTextBoxColumn";
-            // 
-            // semesterDataGridViewTextBoxColumn
-            // 
-            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
-            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
-            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            // 
-            // noPegawaiDataGridViewTextBoxColumn
-            // 
-            this.noPegawaiDataGridViewTextBoxColumn.DataPropertyName = "No_Pegawai";
-            this.noPegawaiDataGridViewTextBoxColumn.HeaderText = "No Pegawai";
-            this.noPegawaiDataGridViewTextBoxColumn.Name = "noPegawaiDataGridViewTextBoxColumn";
-            // 
-            // idProdiDataGridViewTextBoxColumn
-            // 
-            this.idProdiDataGridViewTextBoxColumn.DataPropertyName = "Id_Prodi";
-            this.idProdiDataGridViewTextBoxColumn.HeaderText = "ID Prodi";
-            this.idProdiDataGridViewTextBoxColumn.Name = "idProdiDataGridViewTextBoxColumn";
             // 
             // mataKuliahBindingSource2
             // 
@@ -612,7 +577,7 @@
             // 
             // cbPegawai
             // 
-            this.cbPegawai.DataSource = this.dosenBindingSource2;
+            this.cbPegawai.DataSource = this.dosenBindingSource3;
             this.cbPegawai.DisplayMember = "Nama";
             this.cbPegawai.Enabled = false;
             this.cbPegawai.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -641,7 +606,7 @@
             // 
             // cbProdi
             // 
-            this.cbProdi.DataSource = this.programStudiBindingSource3;
+            this.cbProdi.DataSource = this.programStudiBindingSource4;
             this.cbProdi.DisplayMember = "Nama";
             this.cbProdi.Enabled = false;
             this.cbProdi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -775,6 +740,91 @@
             this.txtKelas.Size = new System.Drawing.Size(243, 41);
             this.txtKelas.TabIndex = 250;
             // 
+            // dATASET_DEAN
+            // 
+            this.dATASET_DEAN.DataSetName = "DATASET_DEAN";
+            this.dATASET_DEAN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dATASETDEANBindingSource
+            // 
+            this.dATASETDEANBindingSource.DataSource = this.dATASET_DEAN;
+            this.dATASETDEANBindingSource.Position = 0;
+            // 
+            // mataKuliahBindingSource3
+            // 
+            this.mataKuliahBindingSource3.DataMember = "MataKuliah";
+            this.mataKuliahBindingSource3.DataSource = this.dATASETDEANBindingSource;
+            // 
+            // mataKuliahTableAdapter3
+            // 
+            this.mataKuliahTableAdapter3.ClearBeforeFill = true;
+            // 
+            // idMatkulDataGridViewTextBoxColumn
+            // 
+            this.idMatkulDataGridViewTextBoxColumn.DataPropertyName = "Id_Matkul";
+            this.idMatkulDataGridViewTextBoxColumn.HeaderText = "Id Matkul";
+            this.idMatkulDataGridViewTextBoxColumn.Name = "idMatkulDataGridViewTextBoxColumn";
+            // 
+            // namaDataGridViewTextBoxColumn
+            // 
+            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
+            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            // 
+            // jumlahSKSDataGridViewTextBoxColumn
+            // 
+            this.jumlahSKSDataGridViewTextBoxColumn.DataPropertyName = "Jumlah_SKS";
+            this.jumlahSKSDataGridViewTextBoxColumn.HeaderText = "Jumlah SKS";
+            this.jumlahSKSDataGridViewTextBoxColumn.Name = "jumlahSKSDataGridViewTextBoxColumn";
+            // 
+            // jenisDataGridViewTextBoxColumn
+            // 
+            this.jenisDataGridViewTextBoxColumn.DataPropertyName = "Jenis";
+            this.jenisDataGridViewTextBoxColumn.HeaderText = "Jenis";
+            this.jenisDataGridViewTextBoxColumn.Name = "jenisDataGridViewTextBoxColumn";
+            // 
+            // semesterDataGridViewTextBoxColumn
+            // 
+            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
+            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
+            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
+            // 
+            // Kelas
+            // 
+            this.Kelas.DataPropertyName = "Kelas";
+            this.Kelas.HeaderText = "Kelas";
+            this.Kelas.Name = "Kelas";
+            // 
+            // Id_Prodi
+            // 
+            this.Id_Prodi.DataPropertyName = "Id_Prodi";
+            this.Id_Prodi.HeaderText = "Id Prodi";
+            this.Id_Prodi.Name = "Id_Prodi";
+            // 
+            // No_Pegawai
+            // 
+            this.No_Pegawai.DataPropertyName = "No_Pegawai";
+            this.No_Pegawai.HeaderText = "No Pegawai";
+            this.No_Pegawai.Name = "No_Pegawai";
+            // 
+            // programStudiBindingSource4
+            // 
+            this.programStudiBindingSource4.DataMember = "ProgramStudi";
+            this.programStudiBindingSource4.DataSource = this.dATASETDEANBindingSource;
+            // 
+            // programStudiTableAdapter3
+            // 
+            this.programStudiTableAdapter3.ClearBeforeFill = true;
+            // 
+            // dosenBindingSource3
+            // 
+            this.dosenBindingSource3.DataMember = "Dosen";
+            this.dosenBindingSource3.DataSource = this.dATASETDEANBindingSource;
+            // 
+            // dosenTableAdapter3
+            // 
+            this.dosenTableAdapter3.ClearBeforeFill = true;
+            // 
             // ViewMatkul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -829,6 +879,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASET_DEAN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASETDEANBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mataKuliahBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -881,15 +936,23 @@
         private FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter2;
         private System.Windows.Forms.BindingSource dosenBindingSource2;
         private FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter dosenTableAdapter2;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2TextBox txtKelas;
+        private System.Windows.Forms.BindingSource dATASETDEANBindingSource;
+        private DATASET_DEAN dATASET_DEAN;
+        private System.Windows.Forms.BindingSource mataKuliahBindingSource3;
+        private DATASET_DEANTableAdapters.MataKuliahTableAdapter mataKuliahTableAdapter3;
         private System.Windows.Forms.DataGridViewTextBoxColumn idMatkulDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlahSKSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jenisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noPegawaiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProdiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtKelas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kelas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Prodi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No_Pegawai;
+        private System.Windows.Forms.BindingSource programStudiBindingSource4;
+        private DATASET_DEANTableAdapters.ProgramStudiTableAdapter programStudiTableAdapter3;
+        private System.Windows.Forms.BindingSource dosenBindingSource3;
+        private DATASET_DEANTableAdapters.DosenTableAdapter dosenTableAdapter3;
     }
 }

@@ -64,6 +64,12 @@
             this.programStudiTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.txtKelas = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dATASET_DEAN = new PROJECT_PRG2.DATASET_DEAN();
+            this.dATASETDEANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.programStudiTableAdapter3 = new PROJECT_PRG2.DATASET_DEANTableAdapters.ProgramStudiTableAdapter();
+            this.dosenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dosenTableAdapter3 = new PROJECT_PRG2.DATASET_DEANTableAdapters.DosenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).BeginInit();
@@ -73,6 +79,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASET_DEAN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASETDEANBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -336,7 +346,7 @@
             // 
             // cbPegawai
             // 
-            this.cbPegawai.DataSource = this.dosenBindingSource2;
+            this.cbPegawai.DataSource = this.dosenBindingSource3;
             this.cbPegawai.DisplayMember = "Nama";
             this.cbPegawai.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPegawai.FormattingEnabled = true;
@@ -380,7 +390,7 @@
             // 
             // cbProdi
             // 
-            this.cbProdi.DataSource = this.programStudiBindingSource2;
+            this.cbProdi.DataSource = this.programStudiBindingSource3;
             this.cbProdi.DisplayMember = "Nama";
             this.cbProdi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProdi.FormattingEnabled = true;
@@ -495,6 +505,34 @@
             this.txtKelas.Size = new System.Drawing.Size(190, 31);
             this.txtKelas.TabIndex = 72;
             // 
+            // dATASET_DEAN
+            // 
+            this.dATASET_DEAN.DataSetName = "DATASET_DEAN";
+            this.dATASET_DEAN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dATASETDEANBindingSource
+            // 
+            this.dATASETDEANBindingSource.DataSource = this.dATASET_DEAN;
+            this.dATASETDEANBindingSource.Position = 0;
+            // 
+            // programStudiBindingSource3
+            // 
+            this.programStudiBindingSource3.DataMember = "ProgramStudi";
+            this.programStudiBindingSource3.DataSource = this.dATASETDEANBindingSource;
+            // 
+            // programStudiTableAdapter3
+            // 
+            this.programStudiTableAdapter3.ClearBeforeFill = true;
+            // 
+            // dosenBindingSource3
+            // 
+            this.dosenBindingSource3.DataMember = "Dosen";
+            this.dosenBindingSource3.DataSource = this.dATASETDEANBindingSource;
+            // 
+            // dosenTableAdapter3
+            // 
+            this.dosenTableAdapter3.ClearBeforeFill = true;
+            // 
             // InputMatkul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,6 +575,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASET_DEAN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASETDEANBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -579,5 +621,11 @@
         private FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter2;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtKelas;
+        private System.Windows.Forms.BindingSource dATASETDEANBindingSource;
+        private DATASET_DEAN dATASET_DEAN;
+        private System.Windows.Forms.BindingSource programStudiBindingSource3;
+        private DATASET_DEANTableAdapters.ProgramStudiTableAdapter programStudiTableAdapter3;
+        private System.Windows.Forms.BindingSource dosenBindingSource3;
+        private DATASET_DEANTableAdapters.DosenTableAdapter dosenTableAdapter3;
     }
 }
