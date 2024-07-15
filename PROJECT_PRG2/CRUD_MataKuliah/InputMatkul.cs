@@ -18,32 +18,20 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         {
             InitializeComponent();
             autoid();
-            
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
             // Validasi apakah semua field telah diisi
-            if (string.IsNullOrWhiteSpace(txtIdMatkul.Text) ||
-                string.IsNullOrWhiteSpace(txtNama.Text) ||
-                string.IsNullOrWhiteSpace(txtSKS.Text) ||
-                string.IsNullOrWhiteSpace(txtJenis.Text) ||
-                string.IsNullOrWhiteSpace(txtSemester.Text) ||
-                string.IsNullOrWhiteSpace(txtKelas.Text) ||
-                cbPegawai.SelectedValue == null ||
-                cbProdi.SelectedValue == null)
+            if (!Validasi())
             {
-                MessageBox.Show("Silakan lengkapi semua data terlebih dahulu.", "Peringatan",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Validasi tambahan sesuai kebutuhan
-            // Misalnya, validasi untuk SKS harus angka
-            int sks;
-            if (!int.TryParse(txtSKS.Text, out sks))
+            // Validasi apakah dosen sudah mengajar pelajaran di kelas yang sama
+            if (DosenMengajarKelasYangSama(cbPegawai.SelectedValue.ToString(), txtKelas.Text))
             {
-                MessageBox.Show("Jumlah SKS harus berupa angka.", "Peringatan",
+                MessageBox.Show("Dosen tidak boleh mengajar dua pelajaran di kelas yang sama.", "Peringatan",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -100,7 +88,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             }
         }
 
-
         private bool Validasi()
         {
             if (string.IsNullOrWhiteSpace(txtIdMatkul.Text) ||
@@ -139,6 +126,25 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             }
 
             return true;
+        }
+
+        private bool DosenMengajarKelasYangSama(string noPegawai, string kelas)
+        {
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM MataKuliah WHERE No_Pegawai = @NoPegawai AND Kelas = @Kelas";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NoPegawai", noPegawai);
+                    command.Parameters.AddWithValue("@Kelas", kelas);
+
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
@@ -201,8 +207,6 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 }
             }
         }
-
-
 
         private void btnKembali_Click(object sender, EventArgs e)
         {

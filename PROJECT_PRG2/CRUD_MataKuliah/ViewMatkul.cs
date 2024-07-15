@@ -327,15 +327,5 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void cbPegawai_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
