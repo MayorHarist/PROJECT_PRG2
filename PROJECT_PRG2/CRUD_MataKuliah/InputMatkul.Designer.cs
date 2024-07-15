@@ -62,6 +62,8 @@
             this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter();
             this.dosenTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter();
             this.programStudiTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtKelas = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).BeginInit();
@@ -79,10 +81,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(146, 218);
+            this.label11.Location = new System.Drawing.Point(199, 213);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 28);
+            this.label11.Size = new System.Drawing.Size(68, 30);
             this.label11.TabIndex = 59;
             this.label11.Text = "Nama";
             // 
@@ -92,10 +94,10 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(146, 256);
+            this.label10.Location = new System.Drawing.Point(199, 265);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 28);
+            this.label10.Size = new System.Drawing.Size(116, 30);
             this.label10.TabIndex = 58;
             this.label10.Text = "Jumlah SKS";
             // 
@@ -105,10 +107,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(146, 293);
+            this.label9.Location = new System.Drawing.Point(199, 317);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 28);
+            this.label9.Size = new System.Drawing.Size(58, 30);
             this.label9.TabIndex = 57;
             this.label9.Text = "Jenis";
             // 
@@ -118,10 +120,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(146, 332);
+            this.label8.Location = new System.Drawing.Point(199, 369);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 28);
+            this.label8.Size = new System.Drawing.Size(94, 30);
             this.label8.TabIndex = 56;
             this.label8.Text = "Semester";
             // 
@@ -131,10 +133,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(146, 375);
+            this.label6.Location = new System.Drawing.Point(199, 532);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 28);
+            this.label6.Size = new System.Drawing.Size(66, 30);
             this.label6.TabIndex = 54;
             this.label6.Text = "Dosen";
             // 
@@ -144,10 +146,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(146, 179);
+            this.label1.Location = new System.Drawing.Point(199, 161);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 28);
+            this.label1.Size = new System.Drawing.Size(96, 30);
             this.label1.TabIndex = 49;
             this.label1.Text = "Id Matkul";
             // 
@@ -163,7 +165,7 @@
             this.btnSimpan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSimpan.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimpan.ForeColor = System.Drawing.Color.White;
-            this.btnSimpan.Location = new System.Drawing.Point(372, 517);
+            this.btnSimpan.Location = new System.Drawing.Point(355, 647);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(112, 36);
@@ -183,7 +185,7 @@
             this.btnBatal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnBatal.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(546, 517);
+            this.btnBatal.Location = new System.Drawing.Point(529, 647);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(2);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(112, 36);
@@ -207,7 +209,7 @@
             this.txtSemester.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSemester.ForeColor = System.Drawing.Color.Black;
             this.txtSemester.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSemester.Location = new System.Drawing.Point(343, 332);
+            this.txtSemester.Location = new System.Drawing.Point(388, 369);
             this.txtSemester.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSemester.Name = "txtSemester";
             this.txtSemester.PasswordChar = '\0';
@@ -233,7 +235,7 @@
             this.txtJenis.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJenis.ForeColor = System.Drawing.Color.Black;
             this.txtJenis.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJenis.Location = new System.Drawing.Point(344, 293);
+            this.txtJenis.Location = new System.Drawing.Point(389, 317);
             this.txtJenis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtJenis.Name = "txtJenis";
             this.txtJenis.PasswordChar = '\0';
@@ -258,7 +260,7 @@
             this.txtSKS.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSKS.ForeColor = System.Drawing.Color.Black;
             this.txtSKS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSKS.Location = new System.Drawing.Point(344, 256);
+            this.txtSKS.Location = new System.Drawing.Point(389, 265);
             this.txtSKS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSKS.Name = "txtSKS";
             this.txtSKS.PasswordChar = '\0';
@@ -284,7 +286,7 @@
             this.txtNama.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNama.ForeColor = System.Drawing.Color.Black;
             this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNama.Location = new System.Drawing.Point(344, 218);
+            this.txtNama.Location = new System.Drawing.Point(389, 213);
             this.txtNama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNama.Name = "txtNama";
             this.txtNama.PasswordChar = '\0';
@@ -309,7 +311,7 @@
             this.txtIdMatkul.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdMatkul.ForeColor = System.Drawing.Color.Black;
             this.txtIdMatkul.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdMatkul.Location = new System.Drawing.Point(345, 179);
+            this.txtIdMatkul.Location = new System.Drawing.Point(390, 161);
             this.txtIdMatkul.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIdMatkul.Name = "txtIdMatkul";
             this.txtIdMatkul.PasswordChar = '\0';
@@ -325,10 +327,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(146, 407);
+            this.label2.Location = new System.Drawing.Point(199, 473);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 28);
+            this.label2.Size = new System.Drawing.Size(140, 30);
             this.label2.TabIndex = 63;
             this.label2.Text = "Program Studi";
             // 
@@ -338,11 +340,11 @@
             this.cbPegawai.DisplayMember = "Nama";
             this.cbPegawai.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPegawai.FormattingEnabled = true;
-            this.cbPegawai.ItemHeight = 28;
-            this.cbPegawai.Location = new System.Drawing.Point(342, 369);
+            this.cbPegawai.ItemHeight = 30;
+            this.cbPegawai.Location = new System.Drawing.Point(387, 532);
             this.cbPegawai.Margin = new System.Windows.Forms.Padding(2);
             this.cbPegawai.Name = "cbPegawai";
-            this.cbPegawai.Size = new System.Drawing.Size(192, 36);
+            this.cbPegawai.Size = new System.Drawing.Size(192, 38);
             this.cbPegawai.TabIndex = 66;
             this.cbPegawai.ValueMember = "No_Pegawai";
             // 
@@ -382,11 +384,11 @@
             this.cbProdi.DisplayMember = "Nama";
             this.cbProdi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProdi.FormattingEnabled = true;
-            this.cbProdi.ItemHeight = 28;
-            this.cbProdi.Location = new System.Drawing.Point(343, 411);
+            this.cbProdi.ItemHeight = 30;
+            this.cbProdi.Location = new System.Drawing.Point(388, 473);
             this.cbProdi.Margin = new System.Windows.Forms.Padding(2);
             this.cbProdi.Name = "cbProdi";
-            this.cbProdi.Size = new System.Drawing.Size(192, 36);
+            this.cbProdi.Size = new System.Drawing.Size(192, 38);
             this.cbProdi.TabIndex = 67;
             this.cbProdi.ValueMember = "Id_Prodi";
             // 
@@ -417,7 +419,7 @@
             this.btnKembali.FillColor = System.Drawing.Color.White;
             this.btnKembali.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKembali.ForeColor = System.Drawing.Color.Black;
-            this.btnKembali.Location = new System.Drawing.Point(191, 517);
+            this.btnKembali.Location = new System.Drawing.Point(174, 647);
             this.btnKembali.Margin = new System.Windows.Forms.Padding(2);
             this.btnKembali.Name = "btnKembali";
             this.btnKembali.Size = new System.Drawing.Size(112, 36);
@@ -455,13 +457,53 @@
             // 
             this.programStudiTableAdapter2.ClearBeforeFill = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(199, 421);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 30);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "Kelas";
+            // 
+            // txtKelas
+            // 
+            this.txtKelas.Animated = true;
+            this.txtKelas.BackColor = System.Drawing.Color.Transparent;
+            this.txtKelas.BorderColor = System.Drawing.Color.Black;
+            this.txtKelas.BorderRadius = 13;
+            this.txtKelas.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKelas.DefaultText = "";
+            this.txtKelas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtKelas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtKelas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKelas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKelas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKelas.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKelas.ForeColor = System.Drawing.Color.Black;
+            this.txtKelas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKelas.Location = new System.Drawing.Point(388, 421);
+            this.txtKelas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtKelas.Name = "txtKelas";
+            this.txtKelas.PasswordChar = '\0';
+            this.txtKelas.PlaceholderText = "";
+            this.txtKelas.SelectedText = "";
+            this.txtKelas.Size = new System.Drawing.Size(190, 31);
+            this.txtKelas.TabIndex = 72;
+            // 
             // InputMatkul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.DESIGN_Matkul;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(804, 736);
+            this.ClientSize = new System.Drawing.Size(804, 782);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtKelas);
             this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.cbProdi);
             this.Controls.Add(this.cbPegawai);
@@ -535,5 +577,7 @@
         private FINDSMART_MABRESDataSet1TableAdapters.DosenTableAdapter dosenTableAdapter2;
         private System.Windows.Forms.BindingSource programStudiBindingSource2;
         private FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter2;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txtKelas;
     }
 }

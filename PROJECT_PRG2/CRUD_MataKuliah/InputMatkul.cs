@@ -29,6 +29,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 string.IsNullOrWhiteSpace(txtSKS.Text) ||
                 string.IsNullOrWhiteSpace(txtJenis.Text) ||
                 string.IsNullOrWhiteSpace(txtSemester.Text) ||
+                string.IsNullOrWhiteSpace(txtKelas.Text) ||
                 cbPegawai.SelectedValue == null ||
                 cbProdi.SelectedValue == null)
             {
@@ -54,6 +55,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                              "Jumlah SKS: " + txtSKS.Text + "\n" +
                              "Jenis: " + txtJenis.Text + "\n" +
                              "Semester: " + txtSemester.Text + "\n" +
+                             "Kelas: " + txtKelas.Text + "\n" +
                              "Pegawai: " + cbPegawai.Text + "\n" +
                              "Program Studi: " + cbProdi.Text + "\n\n" +
                              "Apakah Anda yakin ingin menyimpan data?";
@@ -74,6 +76,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 insert.Parameters.AddWithValue("@Jumlah_SKS", txtSKS.Text);
                 insert.Parameters.AddWithValue("@Jenis", txtJenis.Text);
                 insert.Parameters.AddWithValue("@Semester", txtSemester.Text);
+                insert.Parameters.AddWithValue("@Kelas", txtKelas.Text);
                 insert.Parameters.AddWithValue("@No_Pegawai", cbPegawai.SelectedValue.ToString());
                 insert.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedValue.ToString());
 
@@ -105,6 +108,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 string.IsNullOrWhiteSpace(txtSKS.Text) ||
                 string.IsNullOrWhiteSpace(txtJenis.Text) ||
                 string.IsNullOrWhiteSpace(txtSemester.Text) ||
+                string.IsNullOrWhiteSpace(txtKelas.Text) ||
                 cbPegawai.SelectedValue == null ||
                 cbProdi.SelectedValue == null)
             {
@@ -148,6 +152,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             txtSKS.Text = "";
             txtJenis.Text = "";
             txtSemester.Text = "";
+            txtKelas.Text = "";
             cbPegawai.SelectedValue = "";
             cbProdi.SelectedValue = "";
         }

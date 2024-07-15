@@ -78,6 +78,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 string.IsNullOrWhiteSpace(txtSKS.Text) ||
                 string.IsNullOrWhiteSpace(txtJenis.Text) ||
                 string.IsNullOrWhiteSpace(txtSemester.Text) ||
+                string.IsNullOrWhiteSpace(txtKelas.Text) ||
                 cbPegawai.SelectedValue == null ||
                 cbProdi.SelectedValue == null)
             {
@@ -93,6 +94,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 $"Jumlah SKS: {txtSKS.Text}\n" +
                 $"Jenis: {txtJenis.Text}\n" +
                 $"Semester: {txtSemester.Text}\n" +
+                $"Kelas: {txtKelas.Text}\n" +
                 $"No Pegawai: {cbPegawai.SelectedValue.ToString()}\n" +
                 $"ID Prodi: {cbProdi.SelectedValue.ToString()}\n",
                 "Konfirmasi Pembaruan Data",
@@ -121,6 +123,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     update.Parameters.AddWithValue("@Jumlah_SKS", Convert.ToInt32(txtSKS.Text));
                     update.Parameters.AddWithValue("@Jenis", txtJenis.Text);
                     update.Parameters.AddWithValue("@Semester", Convert.ToInt32(txtSemester.Text));
+                    update.Parameters.AddWithValue("@Kelas", txtKelas.Text);
                     update.Parameters.AddWithValue("@No_Pegawai", cbPegawai.SelectedValue.ToString());
                     update.Parameters.AddWithValue("@Id_Prodi", cbProdi.SelectedValue.ToString());
 
@@ -202,6 +205,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
             txtSKS.Text = "";
             txtJenis.Text = "";
             txtSemester.Text = "";
+            txtKelas.Text = "";
             cbPegawai.SelectedText = "";
             cbProdi.SelectedText = "";
         }
@@ -237,6 +241,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                         txtSKS.Text = dataTable.Rows[0]["Jumlah_SKS"].ToString();
                         txtJenis.Text = dataTable.Rows[0]["Jenis"].ToString();
                         txtSemester.Text = dataTable.Rows[0]["Semester"].ToString();
+                        txtKelas.Text = dataTable.Rows[0]["Semester"].ToString();
                         cbPegawai.SelectedValue = dataTable.Rows[0]["No_Pegawai"].ToString();
                         cbProdi.SelectedValue = dataTable.Rows[0]["Id_Prodi"].ToString();
                     }
@@ -251,6 +256,7 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                     txtSKS.Enabled = true;
                     txtJenis.Enabled = true;
                     txtSemester.Enabled = true;
+                    txtKelas.Enabled = true;
                     cbPegawai.Enabled = true;
                     cbProdi.Enabled = true;
 
@@ -313,6 +319,16 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
                 e.Handled = true;
                 MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void cbPegawai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
