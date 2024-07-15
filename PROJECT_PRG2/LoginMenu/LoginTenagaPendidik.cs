@@ -17,7 +17,8 @@ namespace PROJECT_PRG2
     public partial class LoginSbgTenDik : Form
     {
         private string connectionString = "integrated security=true; data source =.; initial catalog=FINDSMART_MABRES";
-
+        private int count;
+        public static string LoggedInId { get; private set; }
         public LoginSbgTenDik()
         {
             InitializeComponent();
@@ -42,21 +43,8 @@ namespace PROJECT_PRG2
                 return;
             }
 
-            // Validasi panjang input (misal, maksimum 50 karakter)
-            if (username.Length > 50)
-            {
-                MessageBox.Show("Nama pengguna terlalu panjang.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (password.Length > 50)
-            {
-                MessageBox.Show("Kata sandi terlalu panjang.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             // SQL Query untuk memverifikasi username dan password
-            string query = "SELECT COUNT(1) FROM TenagaKependidikan WHERE Username=@Username AND Password=@Password";
+            string query = "SELECT Id_TKN FROM TenagaKependidikan WHERE Username=@Username AND Password=@Password";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -72,14 +60,16 @@ namespace PROJECT_PRG2
                         conn.Open();
 
                         // Eksekusi query dan ambil hasil
-                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        object result = cmd.ExecuteScalar();
 
-                        if (count == 1)
+                        if (result != null) // Jika hasil tidak null
                         {
+                            LoggedInId = result.ToString(); // Simpan ID TenagaPendidikan yang login
+
                             MessageBox.Show("Login berhasil!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            // Anda dapat membuka form baru di sini atau mengarahkan pengguna ke bagian lain dari aplikasi Anda
-                            DasboardTendik dasboardTendik = new DasboardTendik();
-                            dasboardTendik.Show();
+                            // Buka form baru atau pindah ke bagian lain dari aplikasi
+                            DasboardTendik dashboardTendik = new DasboardTendik();
+                            dashboardTendik.Show();
                             this.Hide(); // Sembunyikan form login saat form kedua dibuka
                         }
                         else
@@ -96,7 +86,7 @@ namespace PROJECT_PRG2
         }
 
 
-        private void btnKembali_Click(object sender, EventArgs e)
+            private void btnKembali_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();

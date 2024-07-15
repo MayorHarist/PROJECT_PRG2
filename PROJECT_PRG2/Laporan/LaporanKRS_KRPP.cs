@@ -20,6 +20,9 @@ namespace PROJECT_PRG2.Laporan
 
         private void LaporanKRS_KRPP_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.MahasiswaBerprestasi' table. You can move, or remove it, as needed.
+            this.mahasiswaBerprestasiTableAdapter.Fill(this.fINDSMART_MABRESDataSet1.MahasiswaBerprestasi);
+
             // Mengisi data ke dalam 'fINDSMART_MABRESDataSet1.MahasiswaBerprestasi' table.
             BindComboBox();
             cbFilter.Text = "-- Filter KRS & KRPP --";
