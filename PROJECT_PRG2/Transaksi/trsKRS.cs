@@ -575,5 +575,47 @@ namespace PROJECT_PRG2.Transaksi
             }
             
         }
+        private void txtTendik_Click(object sender, EventArgs e)
+        {
+            string idTKN = LoginSbgTenDik.LoggedInId;
+
+            if (string.IsNullOrEmpty(idTKN))
+            {
+                MessageBox.Show("ID TenagaKependidikan tidak ditemukan.", "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+
+            string query = "SELECT Nama FROM TenagaKependidikan WHERE Id_TKN = @Id_TKN";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Id_TKN", idTKN);
+
+                    try
+                    {
+                        conn.Open();
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            string namaTendik = result.ToString();
+                            txtTendik.Text = namaTendik; // Display the name in the TextBox (or any other appropriate control)
+                                                         // Save the idTKN as needed
+                        }
+                        else
+                        {
+                            MessageBox.Show("TenagaKependidikan tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }

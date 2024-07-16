@@ -104,6 +104,8 @@
             this.mataKuliahBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mataKuliahTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.MataKuliahTableAdapter();
             this.txtJenis = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTendik = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transaksiKRSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
@@ -287,7 +289,7 @@
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgDetailMatkul.DefaultCellStyle = dataGridViewCellStyle15;
             this.dtgDetailMatkul.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.dtgDetailMatkul.Location = new System.Drawing.Point(744, 435);
+            this.dtgDetailMatkul.Location = new System.Drawing.Point(744, 476);
             this.dtgDetailMatkul.Name = "dtgDetailMatkul";
             dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
@@ -491,7 +493,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(79, 423);
+            this.label7.Location = new System.Drawing.Point(79, 464);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 28);
             this.label7.TabIndex = 49;
@@ -502,7 +504,7 @@
             this.cbMatkul.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMatkul.ForeColor = System.Drawing.Color.Black;
             this.cbMatkul.FormattingEnabled = true;
-            this.cbMatkul.Location = new System.Drawing.Point(323, 423);
+            this.cbMatkul.Location = new System.Drawing.Point(323, 464);
             this.cbMatkul.Name = "cbMatkul";
             this.cbMatkul.Size = new System.Drawing.Size(277, 36);
             this.cbMatkul.TabIndex = 50;
@@ -512,7 +514,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(79, 523);
+            this.label8.Location = new System.Drawing.Point(79, 564);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 28);
             this.label8.TabIndex = 52;
@@ -534,7 +536,8 @@
             this.txtNilaiTugas.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNilaiTugas.ForeColor = System.Drawing.Color.Black;
             this.txtNilaiTugas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNilaiTugas.Location = new System.Drawing.Point(322, 523);
+            this.txtNilaiTugas.Location = new System.Drawing.Point(322, 564);
+            this.txtNilaiTugas.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtNilaiTugas.Name = "txtNilaiTugas";
             this.txtNilaiTugas.PasswordChar = '\0';
             this.txtNilaiTugas.PlaceholderText = "";
@@ -547,7 +550,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(79, 573);
+            this.label9.Location = new System.Drawing.Point(79, 614);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 28);
             this.label9.TabIndex = 54;
@@ -569,7 +572,8 @@
             this.txtNilaiQuiz.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNilaiQuiz.ForeColor = System.Drawing.Color.Black;
             this.txtNilaiQuiz.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNilaiQuiz.Location = new System.Drawing.Point(322, 573);
+            this.txtNilaiQuiz.Location = new System.Drawing.Point(322, 614);
+            this.txtNilaiQuiz.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtNilaiQuiz.Name = "txtNilaiQuiz";
             this.txtNilaiQuiz.PasswordChar = '\0';
             this.txtNilaiQuiz.PlaceholderText = "";
@@ -582,7 +586,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(79, 673);
+            this.label10.Location = new System.Drawing.Point(79, 714);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 28);
             this.label10.TabIndex = 58;
@@ -604,7 +608,8 @@
             this.txtNilaiUAS.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNilaiUAS.ForeColor = System.Drawing.Color.Black;
             this.txtNilaiUAS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNilaiUAS.Location = new System.Drawing.Point(322, 673);
+            this.txtNilaiUAS.Location = new System.Drawing.Point(322, 714);
+            this.txtNilaiUAS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtNilaiUAS.Name = "txtNilaiUAS";
             this.txtNilaiUAS.PasswordChar = '\0';
             this.txtNilaiUAS.PlaceholderText = "";
@@ -618,7 +623,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(79, 623);
+            this.label11.Location = new System.Drawing.Point(79, 664);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(83, 28);
             this.label11.TabIndex = 56;
@@ -640,7 +645,8 @@
             this.txtNilaiUTS.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNilaiUTS.ForeColor = System.Drawing.Color.Black;
             this.txtNilaiUTS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNilaiUTS.Location = new System.Drawing.Point(322, 623);
+            this.txtNilaiUTS.Location = new System.Drawing.Point(322, 664);
+            this.txtNilaiUTS.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtNilaiUTS.Name = "txtNilaiUTS";
             this.txtNilaiUTS.PasswordChar = '\0';
             this.txtNilaiUTS.PlaceholderText = "";
@@ -653,7 +659,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(79, 723);
+            this.label12.Location = new System.Drawing.Point(79, 764);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(105, 28);
             this.label12.TabIndex = 60;
@@ -675,7 +681,8 @@
             this.txtNilaiProjek.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNilaiProjek.ForeColor = System.Drawing.Color.Black;
             this.txtNilaiProjek.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNilaiProjek.Location = new System.Drawing.Point(322, 723);
+            this.txtNilaiProjek.Location = new System.Drawing.Point(322, 764);
+            this.txtNilaiProjek.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtNilaiProjek.Name = "txtNilaiProjek";
             this.txtNilaiProjek.PasswordChar = '\0';
             this.txtNilaiProjek.PlaceholderText = "";
@@ -689,7 +696,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(79, 773);
+            this.label13.Location = new System.Drawing.Point(79, 814);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(98, 28);
             this.label13.TabIndex = 62;
@@ -711,7 +718,8 @@
             this.txtNilaiAkhir.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNilaiAkhir.ForeColor = System.Drawing.Color.Black;
             this.txtNilaiAkhir.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNilaiAkhir.Location = new System.Drawing.Point(322, 773);
+            this.txtNilaiAkhir.Location = new System.Drawing.Point(322, 814);
+            this.txtNilaiAkhir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtNilaiAkhir.Name = "txtNilaiAkhir";
             this.txtNilaiAkhir.PasswordChar = '\0';
             this.txtNilaiAkhir.PlaceholderText = "";
@@ -724,7 +732,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(79, 823);
+            this.label14.Location = new System.Drawing.Point(79, 864);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(109, 28);
             this.label14.TabIndex = 64;
@@ -746,7 +754,8 @@
             this.txtIndeksNilai.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIndeksNilai.ForeColor = System.Drawing.Color.Black;
             this.txtIndeksNilai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIndeksNilai.Location = new System.Drawing.Point(322, 823);
+            this.txtIndeksNilai.Location = new System.Drawing.Point(322, 864);
+            this.txtIndeksNilai.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtIndeksNilai.Name = "txtIndeksNilai";
             this.txtIndeksNilai.PasswordChar = '\0';
             this.txtIndeksNilai.PlaceholderText = "";
@@ -764,7 +773,7 @@
             this.btnTambah.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnTambah.ImageRotate = 0F;
             this.btnTambah.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTambah.Location = new System.Drawing.Point(634, 423);
+            this.btnTambah.Location = new System.Drawing.Point(634, 464);
             this.btnTambah.Margin = new System.Windows.Forms.Padding(2);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.PressedState.ImageSize = new System.Drawing.Size(31, 31);
@@ -787,7 +796,7 @@
             this.btnSimpan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSimpan.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold);
             this.btnSimpan.ForeColor = System.Drawing.Color.White;
-            this.btnSimpan.Location = new System.Drawing.Point(405, 903);
+            this.btnSimpan.Location = new System.Drawing.Point(488, 937);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(112, 36);
@@ -867,7 +876,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(79, 473);
+            this.label16.Location = new System.Drawing.Point(79, 514);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(59, 28);
             this.label16.TabIndex = 128;
@@ -898,7 +907,8 @@
             this.txtJenis.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJenis.ForeColor = System.Drawing.Color.Black;
             this.txtJenis.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtJenis.Location = new System.Drawing.Point(322, 473);
+            this.txtJenis.Location = new System.Drawing.Point(322, 514);
+            this.txtJenis.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtJenis.Name = "txtJenis";
             this.txtJenis.PasswordChar = '\0';
             this.txtJenis.PlaceholderText = "";
@@ -907,12 +917,51 @@
             this.txtJenis.Size = new System.Drawing.Size(278, 36);
             this.txtJenis.TabIndex = 129;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(79, 361);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(173, 28);
+            this.label6.TabIndex = 131;
+            this.label6.Text = "Tenaga Pendidikan";
+            // 
+            // txtTendik
+            // 
+            this.txtTendik.Animated = true;
+            this.txtTendik.AutoRoundedCorners = true;
+            this.txtTendik.BorderColor = System.Drawing.Color.Black;
+            this.txtTendik.BorderRadius = 17;
+            this.txtTendik.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTendik.DefaultText = "";
+            this.txtTendik.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTendik.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTendik.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTendik.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTendik.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTendik.ForeColor = System.Drawing.Color.Black;
+            this.txtTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTendik.Location = new System.Drawing.Point(322, 361);
+            this.txtTendik.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtTendik.Name = "txtTendik";
+            this.txtTendik.PasswordChar = '\0';
+            this.txtTendik.PlaceholderText = "";
+            this.txtTendik.ReadOnly = true;
+            this.txtTendik.SelectedText = "";
+            this.txtTendik.Size = new System.Drawing.Size(259, 36);
+            this.txtTendik.TabIndex = 130;
+            this.txtTendik.Click += new System.EventHandler(this.txtTendik_Click);
+            // 
             // trsKRS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1360, 994);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtTendik);
             this.Controls.Add(this.txtJenis);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -1027,5 +1076,7 @@
         private System.Windows.Forms.BindingSource mataKuliahBindingSource1;
         private FINDSMART_MABRESDataSet1TableAdapters.MataKuliahTableAdapter mataKuliahTableAdapter1;
         private Guna.UI2.WinForms.Guna2TextBox txtJenis;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2TextBox txtTendik;
     }
 }

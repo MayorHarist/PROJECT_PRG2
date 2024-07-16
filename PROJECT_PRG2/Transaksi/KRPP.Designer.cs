@@ -51,15 +51,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtPoint = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbProdi = new System.Windows.Forms.ComboBox();
+            this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
             this.cbMahasiswa = new System.Windows.Forms.ComboBox();
+            this.mahasiswaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbTendik = new System.Windows.Forms.ComboBox();
             this.tenagaKependidikanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbJepres = new System.Windows.Forms.ComboBox();
+            this.jenisPrestasiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.jenisPrestasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbPospres = new System.Windows.Forms.ComboBox();
+            this.posisiPrestasiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.posisiPrestasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
             this.programStudiTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.ProgramStudiTableAdapter();
@@ -68,29 +72,22 @@
             this.posisiPrestasiTableAdapter = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.PosisiPrestasiTableAdapter();
             this.label6 = new System.Windows.Forms.Label();
             this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
-            this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
-            this.posisiPrestasiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.posisiPrestasiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.PosisiPrestasiTableAdapter();
-            this.jenisPrestasiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.jenisPrestasiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.JenisPrestasiTableAdapter();
-            this.mahasiswaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mahasiswaTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.MahasiswaTableAdapter();
-            this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter();
-            this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter();
+            this.txtTendik = new Guna.UI2.WinForms.Guna2TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.posisiPrestasiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.posisiPrestasiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posisiPrestasiBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posisiPrestasiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtIdKRPP
@@ -103,6 +100,7 @@
             this.txtIdKRPP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIdKRPP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdKRPP.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdKRPP.ForeColor = System.Drawing.Color.Black;
             this.txtIdKRPP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdKRPP.Location = new System.Drawing.Point(254, 114);
             this.txtIdKRPP.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -124,6 +122,7 @@
             this.txtnamaPrestasi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtnamaPrestasi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtnamaPrestasi.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnamaPrestasi.ForeColor = System.Drawing.Color.Black;
             this.txtnamaPrestasi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtnamaPrestasi.Location = new System.Drawing.Point(254, 338);
             this.txtnamaPrestasi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -145,6 +144,7 @@
             this.txtUraian.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUraian.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUraian.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUraian.ForeColor = System.Drawing.Color.Black;
             this.txtUraian.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUraian.Location = new System.Drawing.Point(254, 486);
             this.txtUraian.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -165,6 +165,7 @@
             this.txtLembagaPelaksana.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtLembagaPelaksana.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLembagaPelaksana.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLembagaPelaksana.ForeColor = System.Drawing.Color.Black;
             this.txtLembagaPelaksana.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLembagaPelaksana.Location = new System.Drawing.Point(254, 427);
             this.txtLembagaPelaksana.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -367,6 +368,7 @@
             this.txtPoint.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPoint.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPoint.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPoint.ForeColor = System.Drawing.Color.Black;
             this.txtPoint.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPoint.Location = new System.Drawing.Point(659, 279);
             this.txtPoint.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -383,12 +385,23 @@
             this.cbProdi.DataSource = this.programStudiBindingSource1;
             this.cbProdi.DisplayMember = "Nama";
             this.cbProdi.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProdi.ForeColor = System.Drawing.Color.Black;
             this.cbProdi.FormattingEnabled = true;
             this.cbProdi.Location = new System.Drawing.Point(254, 225);
             this.cbProdi.Name = "cbProdi";
             this.cbProdi.Size = new System.Drawing.Size(200, 31);
             this.cbProdi.TabIndex = 126;
             this.cbProdi.ValueMember = "Id_Prodi";
+            // 
+            // programStudiBindingSource1
+            // 
+            this.programStudiBindingSource1.DataMember = "ProgramStudi";
+            this.programStudiBindingSource1.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
+            // fINDSMART_MABRESDataSet1
+            // 
+            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
+            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // programStudiBindingSource
             // 
@@ -405,6 +418,7 @@
             this.cbMahasiswa.DataSource = this.mahasiswaBindingSource1;
             this.cbMahasiswa.DisplayMember = "Nama";
             this.cbMahasiswa.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMahasiswa.ForeColor = System.Drawing.Color.Black;
             this.cbMahasiswa.FormattingEnabled = true;
             this.cbMahasiswa.Location = new System.Drawing.Point(254, 279);
             this.cbMahasiswa.Name = "cbMahasiswa";
@@ -412,22 +426,15 @@
             this.cbMahasiswa.TabIndex = 127;
             this.cbMahasiswa.ValueMember = "NIM";
             // 
+            // mahasiswaBindingSource1
+            // 
+            this.mahasiswaBindingSource1.DataMember = "Mahasiswa";
+            this.mahasiswaBindingSource1.DataSource = this.fINDSMART_MABRESDataSet1;
+            // 
             // mahasiswaBindingSource
             // 
             this.mahasiswaBindingSource.DataMember = "Mahasiswa";
             this.mahasiswaBindingSource.DataSource = this.fINDSMART_MABRESDsAll;
-            // 
-            // cbTendik
-            // 
-            this.cbTendik.DataSource = this.tenagaKependidikanBindingSource1;
-            this.cbTendik.DisplayMember = "Nama";
-            this.cbTendik.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTendik.FormattingEnabled = true;
-            this.cbTendik.Location = new System.Drawing.Point(254, 178);
-            this.cbTendik.Name = "cbTendik";
-            this.cbTendik.Size = new System.Drawing.Size(200, 31);
-            this.cbTendik.TabIndex = 128;
-            this.cbTendik.ValueMember = "Id_TKN";
             // 
             // tenagaKependidikanBindingSource
             // 
@@ -439,12 +446,18 @@
             this.cbJepres.DataSource = this.jenisPrestasiBindingSource1;
             this.cbJepres.DisplayMember = "Nama";
             this.cbJepres.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbJepres.ForeColor = System.Drawing.Color.Black;
             this.cbJepres.FormattingEnabled = true;
             this.cbJepres.Location = new System.Drawing.Point(659, 229);
             this.cbJepres.Name = "cbJepres";
             this.cbJepres.Size = new System.Drawing.Size(200, 31);
             this.cbJepres.TabIndex = 129;
             this.cbJepres.ValueMember = "Id_JenisPrestasi";
+            // 
+            // jenisPrestasiBindingSource1
+            // 
+            this.jenisPrestasiBindingSource1.DataMember = "JenisPrestasi";
+            this.jenisPrestasiBindingSource1.DataSource = this.fINDSMART_MABRESDataSet1;
             // 
             // jenisPrestasiBindingSource
             // 
@@ -456,12 +469,18 @@
             this.cbPospres.DataSource = this.posisiPrestasiBindingSource1;
             this.cbPospres.DisplayMember = "Nama";
             this.cbPospres.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPospres.ForeColor = System.Drawing.Color.Black;
             this.cbPospres.FormattingEnabled = true;
             this.cbPospres.Location = new System.Drawing.Point(659, 357);
             this.cbPospres.Name = "cbPospres";
             this.cbPospres.Size = new System.Drawing.Size(200, 31);
             this.cbPospres.TabIndex = 130;
             this.cbPospres.ValueMember = "Id_PosisiPrestasi";
+            // 
+            // posisiPrestasiBindingSource1
+            // 
+            this.posisiPrestasiBindingSource1.DataMember = "PosisiPrestasi";
+            this.posisiPrestasiBindingSource1.DataSource = this.fINDSMART_MABRESDataSet1;
             // 
             // posisiPrestasiBindingSource
             // 
@@ -515,66 +534,54 @@
             this.btnKembali.Text = "Kembali";
             this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
-            // fINDSMART_MABRESDataSet1
-            // 
-            this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
-            this.fINDSMART_MABRESDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // posisiPrestasiBindingSource1
-            // 
-            this.posisiPrestasiBindingSource1.DataMember = "PosisiPrestasi";
-            this.posisiPrestasiBindingSource1.DataSource = this.fINDSMART_MABRESDataSet1;
-            // 
             // posisiPrestasiTableAdapter1
             // 
             this.posisiPrestasiTableAdapter1.ClearBeforeFill = true;
-            // 
-            // jenisPrestasiBindingSource1
-            // 
-            this.jenisPrestasiBindingSource1.DataMember = "JenisPrestasi";
-            this.jenisPrestasiBindingSource1.DataSource = this.fINDSMART_MABRESDataSet1;
             // 
             // jenisPrestasiTableAdapter1
             // 
             this.jenisPrestasiTableAdapter1.ClearBeforeFill = true;
             // 
-            // mahasiswaBindingSource1
-            // 
-            this.mahasiswaBindingSource1.DataMember = "Mahasiswa";
-            this.mahasiswaBindingSource1.DataSource = this.fINDSMART_MABRESDataSet1;
-            // 
             // mahasiswaTableAdapter1
             // 
             this.mahasiswaTableAdapter1.ClearBeforeFill = true;
-            // 
-            // programStudiBindingSource1
-            // 
-            this.programStudiBindingSource1.DataMember = "ProgramStudi";
-            this.programStudiBindingSource1.DataSource = this.fINDSMART_MABRESDataSet1;
             // 
             // programStudiTableAdapter1
             // 
             this.programStudiTableAdapter1.ClearBeforeFill = true;
             // 
-            // tenagaKependidikanBindingSource1
+            // txtTendik
             // 
-            this.tenagaKependidikanBindingSource1.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource1.DataSource = this.fINDSMART_MABRESDataSet1;
-            // 
-            // tenagaKependidikanTableAdapter1
-            // 
-            this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
+            this.txtTendik.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTendik.DefaultText = "";
+            this.txtTendik.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTendik.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTendik.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTendik.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTendik.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTendik.ForeColor = System.Drawing.Color.Black;
+            this.txtTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTendik.Location = new System.Drawing.Point(254, 171);
+            this.txtTendik.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtTendik.Name = "txtTendik";
+            this.txtTendik.PasswordChar = '\0';
+            this.txtTendik.PlaceholderText = "";
+            this.txtTendik.SelectedText = "";
+            this.txtTendik.Size = new System.Drawing.Size(200, 36);
+            this.txtTendik.TabIndex = 133;
+            this.txtTendik.Click += new System.EventHandler(this.txtTendik_Click);
             // 
             // KRPP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 589);
+            this.Controls.Add(this.txtTendik);
             this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbPospres);
             this.Controls.Add(this.cbJepres);
-            this.Controls.Add(this.cbTendik);
             this.Controls.Add(this.cbMahasiswa);
             this.Controls.Add(this.cbProdi);
             this.Controls.Add(this.label7);
@@ -602,18 +609,17 @@
             this.Name = "KRPP";
             this.Text = "trsKRPP";
             this.Load += new System.EventHandler(this.trsKRPP_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.posisiPrestasiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.posisiPrestasiBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jenisPrestasiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posisiPrestasiBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posisiPrestasiBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -644,7 +650,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPoint;
         private System.Windows.Forms.ComboBox cbProdi;
         private System.Windows.Forms.ComboBox cbMahasiswa;
-        private System.Windows.Forms.ComboBox cbTendik;
         private System.Windows.Forms.ComboBox cbJepres;
         private System.Windows.Forms.ComboBox cbPospres;
         private FINDSMART_MABRESDsAll fINDSMART_MABRESDsAll;
@@ -669,7 +674,6 @@
         private FINDSMART_MABRESDataSet1TableAdapters.MahasiswaTableAdapter mahasiswaTableAdapter1;
         private System.Windows.Forms.BindingSource programStudiBindingSource1;
         private FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter programStudiTableAdapter1;
-        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource1;
-        private FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter1;
+        private Guna.UI2.WinForms.Guna2TextBox txtTendik;
     }
 }

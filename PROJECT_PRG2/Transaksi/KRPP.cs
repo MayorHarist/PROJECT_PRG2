@@ -49,7 +49,7 @@ namespace PROJECT_PRG2.Transaksi
         private void trsKRPP_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
             this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
@@ -109,10 +109,11 @@ namespace PROJECT_PRG2.Transaksi
             txtUraian.Text = string.Empty;
             txtLembagaPelaksana.Text = string.Empty;
             txtPoint.Text = string.Empty;
+            txtTendik.Text = string.Empty;
 
             // Set semua ComboBox ke default (tidak terpilih)
             cbMahasiswa.SelectedIndex = -1;
-            cbTendik.SelectedIndex = -1;
+            
             cbJepres.SelectedIndex = -1;
             cbPospres.SelectedIndex = -1;
             cbProdi.SelectedIndex = -1;
@@ -132,11 +133,12 @@ namespace PROJECT_PRG2.Transaksi
             DateTime tanggalPrestasi = tglPrestasi.Value;
             DateTime tanggalPengisian = tglPengisian.Value;
             string pointText = txtPoint.Text;
+            string namaTendik = LoginSbgTenDik.LoggedInId;
 
             if (string.IsNullOrEmpty(idTransKRPP) || string.IsNullOrEmpty(namaPrestasi) ||
                 string.IsNullOrEmpty(uraianSingkat) || string.IsNullOrEmpty(lembagaPelaksana) ||
                 string.IsNullOrEmpty(pointText) || cbMahasiswa.SelectedValue == null ||
-                cbTendik.SelectedValue == null || cbJepres.SelectedValue == null ||
+                string.IsNullOrEmpty(namaTendik) || cbJepres.SelectedValue == null ||
                 cbPospres.SelectedValue == null || cbProdi.SelectedValue == null)
             {
                 // Tampilkan pesan kesalahan
@@ -161,7 +163,7 @@ namespace PROJECT_PRG2.Transaksi
                              $"Tanggal Pengisian: {tanggalPengisian.ToShortDateString()}\n" +
                              $"Point: {point}\n" +
                              $"NIM: {cbMahasiswa.SelectedValue}\n" +
-                             $"Tenaga Kependidikan: {cbTendik.SelectedValue}\n" +
+                             $"Tenaga Kependidikan: {namaTendik}\n" +
                              $"Jenis Prestasi: {cbJepres.SelectedValue}\n" +
                              $"Posisi Prestasi: {cbPospres.SelectedValue}\n" +
                              $"Program Studi: {cbProdi.SelectedValue}\n";
@@ -187,7 +189,7 @@ namespace PROJECT_PRG2.Transaksi
             insert.Parameters.AddWithValue("Tanggal_Pengisian", tanggalPengisian);
             insert.Parameters.AddWithValue("Point", point);
             insert.Parameters.AddWithValue("NIM", cbMahasiswa.SelectedValue);
-            insert.Parameters.AddWithValue("Id_TKN", cbTendik.SelectedValue);
+            insert.Parameters.AddWithValue("Id_TKN", namaTendik);
             insert.Parameters.AddWithValue("Id_JenisPrestasi", cbJepres.SelectedValue);
             insert.Parameters.AddWithValue("Id_PosisiPrestasi", cbPospres.SelectedValue);
             insert.Parameters.AddWithValue("Id_Prodi", cbProdi.SelectedValue);
@@ -245,7 +247,7 @@ namespace PROJECT_PRG2.Transaksi
             txtLembagaPelaksana.Text = "";
             txtPoint.Text = "";
             txtUraian.Text = "";
-            cbTendik.Text = "";
+            txtTendik.Text = "";
             cbProdi.Text = "";
             cbPospres.Text = "";
             cbMahasiswa.Text = "";
@@ -288,7 +290,48 @@ namespace PROJECT_PRG2.Transaksi
                 MessageBox.Show("Nama tidak boleh mengandung angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private void txtTendik_Click(object sender, EventArgs e)
+        {
+            string idTKN = LoginSbgTenDik.LoggedInId;
 
+            if (string.IsNullOrEmpty(idTKN))
+            {
+                MessageBox.Show("ID TenagaKependidikan tidak ditemukan.", "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+
+            string query = "SELECT Nama FROM TenagaKependidikan WHERE Id_TKN = @Id_TKN";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Id_TKN", idTKN);
+
+                    try
+                    {
+                        conn.Open();
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            string namaTendik = result.ToString();
+                            txtTendik.Text = namaTendik; // Display the name in the TextBox (or any other appropriate control)
+                                                         // Save the idTKN as needed
+                        }
+                        else
+                        {
+                            MessageBox.Show("TenagaKependidikan tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
         private void btnKembali_Click(object sender, EventArgs e)
         {
             this.Hide();
