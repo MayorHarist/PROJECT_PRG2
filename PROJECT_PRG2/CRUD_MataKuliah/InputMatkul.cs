@@ -166,13 +166,13 @@ namespace PROJECT_PRG2.CRUD_MataKuliah
         private void InputMatkul_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dATASET_DEAN.Dosen' table. You can move, or remove it, as needed.
-            this.dosenTableAdapter3.Fill(this.dATASET_DEAN.Dosen);
+            //this.dosenTableAdapter3.Fill(this.dATASET_DEAN.Dosen);
             // TODO: This line of code loads data into the 'dATASET_DEAN.ProgramStudi' table. You can move, or remove it, as needed.
-            this.programStudiTableAdapter3.Fill(this.dATASET_DEAN.ProgramStudi);
+            //this.programStudiTableAdapter3.Fill(this.dATASET_DEAN.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.ProgramStudi' table. You can move, or remove it, as needed.
-            //this.programStudiTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
+            this.programStudiTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Dosen' table. You can move, or remove it, as needed.
-            //this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.Dosen);
+            this.dosenTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.Dosen);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.ProgramStudi' table. You can move, or remove it, as needed.
             //this.programStudiTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.ProgramStudi);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Dosen' table. You can move, or remove it, as needed.

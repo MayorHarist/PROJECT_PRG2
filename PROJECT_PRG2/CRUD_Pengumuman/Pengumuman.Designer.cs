@@ -32,7 +32,6 @@
             this.btnBatalPengumuman = new Guna.UI2.WinForms.Guna2Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -41,8 +40,6 @@
             this.tglPengumuman = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtPengumuman = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIDPengumuman = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbIDTendik = new System.Windows.Forms.ComboBox();
-            this.tenagaKependidikanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
@@ -52,8 +49,6 @@
             this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
             this.tenagaKependidikanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.TenagaKependidikanTableAdapter();
             this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
-            this.tenagaKependidikanTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
@@ -109,19 +104,6 @@
             this.label7.Size = new System.Drawing.Size(84, 28);
             this.label7.TabIndex = 105;
             this.label7.Text = "Tanggal ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(166, 444);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 28);
-            this.label5.TabIndex = 103;
-            this.label5.Text = "Tendik";
             // 
             // label4
             // 
@@ -271,25 +253,6 @@
             this.txtIDPengumuman.Size = new System.Drawing.Size(191, 31);
             this.txtIDPengumuman.TabIndex = 86;
             // 
-            // cbIDTendik
-            // 
-            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource2;
-            this.cbIDTendik.DisplayMember = "Nama";
-            this.cbIDTendik.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbIDTendik.FormattingEnabled = true;
-            this.cbIDTendik.ItemHeight = 28;
-            this.cbIDTendik.Location = new System.Drawing.Point(351, 444);
-            this.cbIDTendik.Margin = new System.Windows.Forms.Padding(2);
-            this.cbIDTendik.Name = "cbIDTendik";
-            this.cbIDTendik.Size = new System.Drawing.Size(192, 36);
-            this.cbIDTendik.TabIndex = 113;
-            this.cbIDTendik.ValueMember = "Id_TKN";
-            // 
-            // tenagaKependidikanBindingSource2
-            // 
-            this.tenagaKependidikanBindingSource2.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
-            // 
             // fINDSMART_MABRESDataSet1
             // 
             this.fINDSMART_MABRESDataSet1.DataSetName = "FINDSMART_MABRESDataSet1";
@@ -369,10 +332,6 @@
             // 
             this.tenagaKependidikanTableAdapter1.ClearBeforeFill = true;
             // 
-            // tenagaKependidikanTableAdapter2
-            // 
-            this.tenagaKependidikanTableAdapter2.ClearBeforeFill = true;
-            // 
             // Pengumuman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,11 +341,9 @@
             this.ClientSize = new System.Drawing.Size(820, 775);
             this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.btnTambahPengumuman);
-            this.Controls.Add(this.cbIDTendik);
             this.Controls.Add(this.btnBatalPengumuman);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2HtmlLabel2);
@@ -401,7 +358,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pengumuman";
             this.Load += new System.EventHandler(this.Pengumuman_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
@@ -416,7 +372,6 @@
         private Guna.UI2.WinForms.Guna2Button btnBatalPengumuman;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
@@ -425,7 +380,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker tglPengumuman;
         private Guna.UI2.WinForms.Guna2TextBox txtPengumuman;
         private Guna.UI2.WinForms.Guna2TextBox txtIDPengumuman;
-        private System.Windows.Forms.ComboBox cbIDTendik;
         private Guna.UI2.WinForms.Guna2Button btnTambahPengumuman;
         private Guna.UI2.WinForms.Guna2Button btnKembali;
         private FINDSMARTDataSet7 fINDSMARTDataSet7;
@@ -435,7 +389,5 @@
         private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource1;
         private FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter1;
         private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
-        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource2;
-        private FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter2;
     }
 }

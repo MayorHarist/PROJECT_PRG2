@@ -22,6 +22,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         private void btnTambahPengumuman_Click(object sender, EventArgs e)
         {
             //string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+            string idTKN = LoginSbgTenDik.LoggedInId;
             string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
             SqlConnection connection = new SqlConnection(connectionString);
 
@@ -30,8 +31,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     $"Id_Pengumuman: {txtIDPengumuman.Text}\n" +
                     $"Nama: {txtPengumuman.Text}\n" +
                     $"Tanggal: {tglPengumuman.Value}\n" +
-                    $"Deskripsi: {txtDeskripsi.Text}\n" +
-                    $"Id_TKN : {cbIDTendik.Text}\n";
+                    $"Deskripsi: {txtDeskripsi.Text}\n";
 
             DialogResult result = MessageBox.Show(message, "Konfirmasi Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
@@ -46,17 +46,9 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             insert.Parameters.AddWithValue("@Nama", txtPengumuman.Text);
             insert.Parameters.AddWithValue("@Tanggal", tglPengumuman.Value);
             insert.Parameters.AddWithValue("@Deskripsi", txtDeskripsi.Text);
-
+            insert.Parameters.AddWithValue("@Id_TKN", idTKN);
             // Ensure SelectedValue is not null and cast it to the correct type
-            if (cbIDTendik.SelectedValue != null)
-            {
-                insert.Parameters.AddWithValue("@Id_TKN", cbIDTendik.SelectedValue.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Pilih Id_TKN yang valid!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            
 
             // Create Required Validator untuk verifikasi masukan pengguna wajib diisi,
             // dengan memeriksa apakah semua data terisi atau belum
@@ -93,7 +85,6 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             txtPengumuman.Text = "";
             tglPengumuman.Value = DateTime.Now;
             txtDeskripsi.Text = "";
-            cbIDTendik.SelectedValue = "";
         }
 
         public string autoid()
@@ -128,7 +119,6 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         private void Pengumuman_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
             //this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.

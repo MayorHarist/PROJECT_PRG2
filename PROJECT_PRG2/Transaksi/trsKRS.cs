@@ -14,6 +14,9 @@ namespace PROJECT_PRG2.Transaksi
             InitializeComponent();
             buatkolom();
             AutoidKRS();
+
+            DateTimeTanggal.Value = DateTime.Now;
+
         }
 
         private void trsKRS_Load(object sender, EventArgs e)

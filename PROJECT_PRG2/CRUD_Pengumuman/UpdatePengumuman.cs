@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.ReportingServices.Diagnostics.Internal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         private void UpdatePengumuman_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Pengumuman' table. You can move, or remove it, as needed.
             this.pengumumanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.Pengumuman);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.TenagaKependidikan' table. You can move, or remove it, as needed.
@@ -44,7 +45,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             tglPengumuman.Value = DateTime.Now;
             txtDeskripsi.Text = "";
            
-            cbIDTendik.SelectedValue = "";
+            txtTendik.Text = "";
         }
         private void txtPengumuman_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -63,7 +64,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     MessageBox.Show("Data ID harus diisi.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                //string connectionString = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
+
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -79,39 +80,46 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     {
                         txtIDPM.Text = dataTable.Rows[0]["Id_Pengumuman"].ToString();
                         txtPengumuman.Text = dataTable.Rows[0]["Nama"].ToString();
+
                         // Convert Tanggal_Lahir to DateTime
                         DateTime tanggalpengumuman;
                         if (DateTime.TryParse(dataTable.Rows[0]["Tanggal"].ToString(), out tanggalpengumuman))
                         {
                             tglPengumuman.Value = tanggalpengumuman;
                         }
+
                         txtDeskripsi.Text = dataTable.Rows[0]["Deskripsi"].ToString();
-                        cbIDTendik.SelectedValue = dataTable.Rows[0]["Id_TKN"].ToString();
+                        string idTKN = dataTable.Rows[0]["Id_TKN"].ToString();
 
-                        txtIDPM.Enabled = true;
-                        txtPengumuman.Enabled = true;
-                        tglPengumuman.Enabled = true;
-                        txtDeskripsi.Enabled = true;
-                        cbIDTendik.Enabled = true;
+                        // Retrieve the name of TenagaKependidikan using the Id_TKN
+                        SqlCommand nameCommand = new SqlCommand("SELECT Nama FROM TenagaKependidikan WHERE Id_TKN=@Id_TKN", connection);
+                        nameCommand.Parameters.AddWithValue("@Id_TKN", idTKN);
+                        object result = nameCommand.ExecuteScalar();
 
-                        btnUpPengumuman.Enabled = true;
-                        btnHapusPM.Enabled = true;
-
-                        
+                        if (result != null)
+                        {
+                            txtTendik.Text = result.ToString(); // Display the name in txtTendik
+                        }
+                        else
+                        {
+                            txtTendik.Text = "Nama tidak ditemukan";
+                        }
                     }
                     else
                     {
                         // Menampilkan pesan jika data tidak ditemukan
                         MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+
                     connection.Close();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btnTambahPengumuman_Click(object sender, EventArgs e)
         {
             Pengumuman pengumuman = new Pengumuman();
@@ -123,32 +131,35 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
 
         private void btnUpPengumuman_Click(object sender, EventArgs e)
         {
-            
             try
             {
-                //string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
+
+                    // Retrieve the Id_TKN based on the name in txtTendik
+                    SqlCommand getIdTKNCommand = new SqlCommand("SELECT Id_TKN FROM TenagaKependidikan WHERE Nama=@Nama", connection);
+                    getIdTKNCommand.Parameters.AddWithValue("@Nama", txtTendik.Text);
+                    object result = getIdTKNCommand.ExecuteScalar();
+
+                    if (result == null)
+                    {
+                        MessageBox.Show("TenagaKependidikan tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    string idTKN = result.ToString();
 
                     SqlCommand update = new SqlCommand("sp_UpdatePengumuman", connection);
                     update.CommandType = CommandType.StoredProcedure;
 
                     // Tambahkan parameter sesuai dengan input dari form
                     update.Parameters.AddWithValue("@Id_Pengumuman", txtIDPM.Text);
-
-                    if (cbIDTendik.SelectedValue == null)
-                    {
-                        MessageBox.Show("Silakan pilih Tendik.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    //update.Parameters.AddWithValue("@Id_Pengumuman", txtIDPM.Text);
                     update.Parameters.AddWithValue("@Nama", txtPengumuman.Text);
                     update.Parameters.AddWithValue("@Tanggal", tglPengumuman.Value);
                     update.Parameters.AddWithValue("@Deskripsi", txtDeskripsi.Text);
-                    update.Parameters.AddWithValue("@Id_TKN", cbIDTendik.SelectedValue);
+                    update.Parameters.AddWithValue("@Id_TKN", idTKN); // Use the retrieved Id_TKN
 
                     // Eksekusi stored procedure
                     update.ExecuteNonQuery();
@@ -157,7 +168,6 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                     MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    
                     // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Pengumuman' table. You can move, or remove it, as needed.
                     this.pengumumanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.Pengumuman);
                     clear();
@@ -171,6 +181,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void btnHapusPM_Click(object sender, EventArgs e)
         {
@@ -227,7 +238,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDsAll.Pengumuman' table. You can move, or remove it, as needed.
             //this.pengumumanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.Pengumuman);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.TenagaKependidikan' table. You can move, or remove it, as needed.
-            this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
+            //this.tenagaKependidikanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Pengumuman' table. You can move, or remove it, as needed.
             this.pengumumanTableAdapter2.Fill(this.fINDSMART_MABRESDataSet1.Pengumuman);
         }
@@ -236,5 +247,51 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
         {
 
         }
+
+
+
+        private void txtTendik_Click(object sender, EventArgs e)
+        {
+            string idTKN = LoginSbgTenDik.LoggedInId;
+
+            if (string.IsNullOrEmpty(idTKN))
+            {
+                MessageBox.Show("ID TenagaKependidikan tidak ditemukan.", "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
+
+            string query = "SELECT Nama FROM TenagaKependidikan WHERE Id_TKN = @Id_TKN";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Id_TKN", idTKN);
+
+                    try
+                    {
+                        conn.Open();
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            string namaTendik = result.ToString();
+                            txtTendik.Text = namaTendik; // Display the name in the TextBox (or any other appropriate control)
+                                                         // Save the idTKN as needed
+                        }
+                        else
+                        {
+                            MessageBox.Show("TenagaKependidikan tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
     }
 }

@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdatePengumuman));
-            this.cbIDTendik = new System.Windows.Forms.ComboBox();
-            this.tenagaKependidikanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.tenagaKependidikanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDsAll = new PROJECT_PRG2.FINDSMART_MABRESDsAll();
@@ -51,6 +49,11 @@
             this.txtPengumuman = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCariPM = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idPengumumanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tanggalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deskripsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pengumumanBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.pengumumanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pengumumanTableAdapter = new PROJECT_PRG2.FINDSMARTDataSet7TableAdapters.PengumumanTableAdapter();
@@ -72,13 +75,7 @@
             this.tenagaKependidikanTableAdapter1 = new PROJECT_PRG2.FINDSMART_MABRESDsAllTableAdapters.TenagaKependidikanTableAdapter();
             this.tTipRefreshPengumuman = new System.Windows.Forms.ToolTip(this.components);
             this.pengumumanTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.PengumumanTableAdapter();
-            this.tenagaKependidikanTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter();
-            this.idPengumumanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tanggalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deskripsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idTKNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).BeginInit();
+            this.txtTendik = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
@@ -89,24 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pengumumanBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cbIDTendik
-            // 
-            this.cbIDTendik.DataSource = this.tenagaKependidikanBindingSource2;
-            this.cbIDTendik.DisplayMember = "Nama";
-            this.cbIDTendik.FormattingEnabled = true;
-            this.cbIDTendik.ItemHeight = 13;
-            this.cbIDTendik.Location = new System.Drawing.Point(886, 552);
-            this.cbIDTendik.Margin = new System.Windows.Forms.Padding(2);
-            this.cbIDTendik.Name = "cbIDTendik";
-            this.cbIDTendik.Size = new System.Drawing.Size(220, 21);
-            this.cbIDTendik.TabIndex = 131;
-            this.cbIDTendik.ValueMember = "Id_TKN";
-            // 
-            // tenagaKependidikanBindingSource2
-            // 
-            this.tenagaKependidikanBindingSource2.DataMember = "TenagaKependidikan";
-            this.tenagaKependidikanBindingSource2.DataSource = this.fINDSMART_MABRESDataSet1;
             // 
             // fINDSMART_MABRESDataSet1
             // 
@@ -207,7 +186,7 @@
             this.txtDeskripsi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDeskripsi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDeskripsi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDeskripsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtDeskripsi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDeskripsi.ForeColor = System.Drawing.Color.Black;
             this.txtDeskripsi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDeskripsi.Location = new System.Drawing.Point(569, 654);
@@ -253,7 +232,7 @@
             this.txtPengumuman.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPengumuman.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPengumuman.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtPengumuman.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPengumuman.ForeColor = System.Drawing.Color.Black;
             this.txtPengumuman.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPengumuman.Location = new System.Drawing.Point(271, 654);
@@ -294,18 +273,18 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView1.AutoGenerateColumns = false;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.ColumnHeadersHeight = 30;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -315,14 +294,14 @@
             this.deskripsiDataGridViewTextBoxColumn,
             this.idTKNDataGridViewTextBoxColumn});
             this.guna2DataGridView1.DataSource = this.pengumumanBindingSource2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(57, 104);
             this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -355,6 +334,41 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
+            // 
+            // idPengumumanDataGridViewTextBoxColumn
+            // 
+            this.idPengumumanDataGridViewTextBoxColumn.DataPropertyName = "Id_Pengumuman";
+            this.idPengumumanDataGridViewTextBoxColumn.HeaderText = "ID Pengumuman";
+            this.idPengumumanDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idPengumumanDataGridViewTextBoxColumn.Name = "idPengumumanDataGridViewTextBoxColumn";
+            // 
+            // namaDataGridViewTextBoxColumn
+            // 
+            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
+            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            // 
+            // tanggalDataGridViewTextBoxColumn
+            // 
+            this.tanggalDataGridViewTextBoxColumn.DataPropertyName = "Tanggal";
+            this.tanggalDataGridViewTextBoxColumn.HeaderText = "Tanggal";
+            this.tanggalDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tanggalDataGridViewTextBoxColumn.Name = "tanggalDataGridViewTextBoxColumn";
+            // 
+            // deskripsiDataGridViewTextBoxColumn
+            // 
+            this.deskripsiDataGridViewTextBoxColumn.DataPropertyName = "Deskripsi";
+            this.deskripsiDataGridViewTextBoxColumn.HeaderText = "Deskripsi";
+            this.deskripsiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.deskripsiDataGridViewTextBoxColumn.Name = "deskripsiDataGridViewTextBoxColumn";
+            // 
+            // idTKNDataGridViewTextBoxColumn
+            // 
+            this.idTKNDataGridViewTextBoxColumn.DataPropertyName = "Id_TKN";
+            this.idTKNDataGridViewTextBoxColumn.HeaderText = "ID Tendik";
+            this.idTKNDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idTKNDataGridViewTextBoxColumn.Name = "idTKNDataGridViewTextBoxColumn";
             // 
             // pengumumanBindingSource2
             // 
@@ -496,7 +510,7 @@
             this.txtIDPM.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIDPM.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtIDPM.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtIDPM.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDPM.ForeColor = System.Drawing.Color.Black;
             this.txtIDPM.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDPM.Location = new System.Drawing.Point(271, 551);
@@ -566,44 +580,31 @@
             // 
             this.pengumumanTableAdapter2.ClearBeforeFill = true;
             // 
-            // tenagaKependidikanTableAdapter2
+            // txtTendik
             // 
-            this.tenagaKependidikanTableAdapter2.ClearBeforeFill = true;
-            // 
-            // idPengumumanDataGridViewTextBoxColumn
-            // 
-            this.idPengumumanDataGridViewTextBoxColumn.DataPropertyName = "Id_Pengumuman";
-            this.idPengumumanDataGridViewTextBoxColumn.HeaderText = "ID Pengumuman";
-            this.idPengumumanDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idPengumumanDataGridViewTextBoxColumn.Name = "idPengumumanDataGridViewTextBoxColumn";
-            // 
-            // namaDataGridViewTextBoxColumn
-            // 
-            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
-            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
-            this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            // 
-            // tanggalDataGridViewTextBoxColumn
-            // 
-            this.tanggalDataGridViewTextBoxColumn.DataPropertyName = "Tanggal";
-            this.tanggalDataGridViewTextBoxColumn.HeaderText = "Tanggal";
-            this.tanggalDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tanggalDataGridViewTextBoxColumn.Name = "tanggalDataGridViewTextBoxColumn";
-            // 
-            // deskripsiDataGridViewTextBoxColumn
-            // 
-            this.deskripsiDataGridViewTextBoxColumn.DataPropertyName = "Deskripsi";
-            this.deskripsiDataGridViewTextBoxColumn.HeaderText = "Deskripsi";
-            this.deskripsiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.deskripsiDataGridViewTextBoxColumn.Name = "deskripsiDataGridViewTextBoxColumn";
-            // 
-            // idTKNDataGridViewTextBoxColumn
-            // 
-            this.idTKNDataGridViewTextBoxColumn.DataPropertyName = "Id_TKN";
-            this.idTKNDataGridViewTextBoxColumn.HeaderText = "ID Tendik";
-            this.idTKNDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idTKNDataGridViewTextBoxColumn.Name = "idTKNDataGridViewTextBoxColumn";
+            this.txtTendik.Animated = true;
+            this.txtTendik.BackColor = System.Drawing.Color.Transparent;
+            this.txtTendik.BorderColor = System.Drawing.Color.Black;
+            this.txtTendik.BorderRadius = 10;
+            this.txtTendik.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTendik.DefaultText = "";
+            this.txtTendik.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTendik.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTendik.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTendik.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTendik.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTendik.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTendik.ForeColor = System.Drawing.Color.Black;
+            this.txtTendik.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTendik.Location = new System.Drawing.Point(878, 551);
+            this.txtTendik.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTendik.Name = "txtTendik";
+            this.txtTendik.PasswordChar = '\0';
+            this.txtTendik.PlaceholderText = "";
+            this.txtTendik.SelectedText = "";
+            this.txtTendik.Size = new System.Drawing.Size(243, 41);
+            this.txtTendik.TabIndex = 251;
+            this.txtTendik.Click += new System.EventHandler(this.txtTendik_Click);
             // 
             // UpdatePengumuman
             // 
@@ -611,6 +612,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1376, 1033);
+            this.Controls.Add(this.txtTendik);
             this.Controls.Add(this.btnRefersh);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.label1);
@@ -622,7 +624,6 @@
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.btnCari_);
             this.Controls.Add(this.guna2DataGridView1);
-            this.Controls.Add(this.cbIDTendik);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -638,7 +639,6 @@
             this.Text = "UpdatePengumuman";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UpdatePengumuman_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenagaKependidikanBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
@@ -654,8 +654,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbIDTendik;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
@@ -693,12 +691,11 @@
         private FINDSMART_MABRESDataSet1 fINDSMART_MABRESDataSet1;
         private System.Windows.Forms.BindingSource pengumumanBindingSource2;
         private FINDSMART_MABRESDataSet1TableAdapters.PengumumanTableAdapter pengumumanTableAdapter2;
-        private System.Windows.Forms.BindingSource tenagaKependidikanBindingSource2;
-        private FINDSMART_MABRESDataSet1TableAdapters.TenagaKependidikanTableAdapter tenagaKependidikanTableAdapter2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPengumumanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tanggalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deskripsiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idTKNDataGridViewTextBoxColumn;
+        private Guna.UI2.WinForms.Guna2TextBox txtTendik;
     }
 }
