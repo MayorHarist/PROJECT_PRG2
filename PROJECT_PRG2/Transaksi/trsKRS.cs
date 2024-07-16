@@ -442,6 +442,22 @@ namespace PROJECT_PRG2.Transaksi
                 e.Handled = true;
                 MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            if (char.IsDigit(e.KeyChar))
+            {
+                // Get the current text and append the new character
+                string currentText = txtNilaiProjek.Text.Insert(txtNilaiProjek.SelectionStart, e.KeyChar.ToString());
+
+                // Try to parse the new text as an integer
+                if (int.TryParse(currentText, out int result))
+                {
+                    // Check if the number is within the range 1 to 100
+                    if (result < 1 || result > 100)
+                    {
+                        e.Handled = true;
+                        MessageBox.Show("Nilai harus antara 1 dan 100.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
 
         private void txtNilaiUAS_KeyPress(object sender, KeyPressEventArgs e)
@@ -450,6 +466,22 @@ namespace PROJECT_PRG2.Transaksi
             {
                 e.Handled = true;
                 MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (char.IsDigit(e.KeyChar))
+            {
+                // Get the current text and append the new character
+                string currentText = txtNilaiUAS.Text.Insert(txtNilaiUAS.SelectionStart, e.KeyChar.ToString());
+
+                // Try to parse the new text as an integer
+                if (int.TryParse(currentText, out int result))
+                {
+                    // Check if the number is within the range 1 to 100
+                    if (result < 1 || result > 100)
+                    {
+                        e.Handled = true;
+                        MessageBox.Show("Nilai harus antara 1 dan 100.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
         }
 
@@ -460,6 +492,22 @@ namespace PROJECT_PRG2.Transaksi
                 e.Handled = true;
                 MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            if (char.IsDigit(e.KeyChar))
+            {
+                // Get the current text and append the new character
+                string currentText = txtNilaiUTS.Text.Insert(txtNilaiUTS.SelectionStart, e.KeyChar.ToString());
+
+                // Try to parse the new text as an integer
+                if (int.TryParse(currentText, out int result))
+                {
+                    // Check if the number is within the range 1 to 100
+                    if (result < 1 || result > 100)
+                    {
+                        e.Handled = true;
+                        MessageBox.Show("Nilai harus antara 1 dan 100.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
 
         private void txtNilaiQuiz_KeyPress(object sender, KeyPressEventArgs e)
@@ -469,6 +517,22 @@ namespace PROJECT_PRG2.Transaksi
                 e.Handled = true;
                 MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            if (char.IsDigit(e.KeyChar))
+            {
+                // Get the current text and append the new character
+                string currentText = txtNilaiQuiz.Text.Insert(txtNilaiQuiz.SelectionStart, e.KeyChar.ToString());
+
+                // Try to parse the new text as an integer
+                if (int.TryParse(currentText, out int result))
+                {
+                    // Check if the number is within the range 1 to 100
+                    if (result < 1 || result > 100)
+                    {
+                        e.Handled = true;
+                        MessageBox.Show("Nilai harus antara 1 dan 100.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
 
         private void txtNilaiTugas_KeyPress(object sender, KeyPressEventArgs e)
@@ -477,6 +541,22 @@ namespace PROJECT_PRG2.Transaksi
             {
                 e.Handled = true;
                 MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (char.IsDigit(e.KeyChar))
+            {
+                // Get the current text and append the new character
+                string currentText = txtNilaiTugas.Text.Insert(txtNilaiTugas.SelectionStart, e.KeyChar.ToString());
+
+                // Try to parse the new text as an integer
+                if (int.TryParse(currentText, out int result))
+                {
+                    // Check if the number is within the range 1 to 100
+                    if (result < 1 || result > 100)
+                    {
+                        e.Handled = true;
+                        MessageBox.Show("Nilai harus antara 1 dan 100.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
         }
 
