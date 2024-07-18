@@ -241,6 +241,18 @@ namespace PROJECT_PRG2.CRUD_Dosen
                         return;
                     }
 
+                    // Validasi umur tidak boleh kurang dari 21 tahun
+                    DateTime today = DateTime.Today;
+                    DateTime tanggalLahir = DateTimeTanggal.Value;
+                    int age = today.Year - tanggalLahir.Year;
+                    if (tanggalLahir > today.AddYears(-age)) age--;
+
+                    if (age < 21)
+                    {
+                        MessageBox.Show("Umur tidak boleh kurang dari 21 tahun.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return; // Menghentikan proses penyimpanan data jika umur kurang dari 21 tahun
+                    }
+
                     string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {

@@ -177,7 +177,7 @@
             this.txtDeskripsi.PasswordChar = '\0';
             this.txtDeskripsi.PlaceholderText = "";
             this.txtDeskripsi.SelectedText = "";
-            this.txtDeskripsi.Size = new System.Drawing.Size(191, 93);
+            this.txtDeskripsi.Size = new System.Drawing.Size(209, 93);
             this.txtDeskripsi.TabIndex = 94;
             // 
             // tglPengumuman
@@ -188,8 +188,9 @@
             this.tglPengumuman.BackColor = System.Drawing.Color.Transparent;
             this.tglPengumuman.BorderRadius = 16;
             this.tglPengumuman.Checked = true;
+            this.tglPengumuman.Enabled = false;
             this.tglPengumuman.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tglPengumuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.tglPengumuman.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tglPengumuman.ForeColor = System.Drawing.Color.Black;
             this.tglPengumuman.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.tglPengumuman.Location = new System.Drawing.Point(351, 292);
@@ -197,7 +198,7 @@
             this.tglPengumuman.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.tglPengumuman.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.tglPengumuman.Name = "tglPengumuman";
-            this.tglPengumuman.Size = new System.Drawing.Size(191, 34);
+            this.tglPengumuman.Size = new System.Drawing.Size(209, 34);
             this.tglPengumuman.TabIndex = 90;
             this.tglPengumuman.Value = new System.DateTime(2024, 6, 15, 22, 37, 28, 314);
             // 
@@ -223,7 +224,7 @@
             this.txtPengumuman.PasswordChar = '\0';
             this.txtPengumuman.PlaceholderText = "";
             this.txtPengumuman.SelectedText = "";
-            this.txtPengumuman.Size = new System.Drawing.Size(191, 31);
+            this.txtPengumuman.Size = new System.Drawing.Size(209, 31);
             this.txtPengumuman.TabIndex = 87;
             this.txtPengumuman.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPengumuman_KeyPress);
             // 
@@ -250,7 +251,7 @@
             this.txtIDPengumuman.PlaceholderText = "";
             this.txtIDPengumuman.ReadOnly = true;
             this.txtIDPengumuman.SelectedText = "";
-            this.txtIDPengumuman.Size = new System.Drawing.Size(191, 31);
+            this.txtIDPengumuman.Size = new System.Drawing.Size(209, 31);
             this.txtIDPengumuman.TabIndex = 86;
             // 
             // fINDSMART_MABRESDataSet1

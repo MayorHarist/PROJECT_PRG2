@@ -266,7 +266,7 @@
             this.txtTelepon.SelectedText = "";
             this.txtTelepon.Size = new System.Drawing.Size(190, 31);
             this.txtTelepon.TabIndex = 43;
-            this.txtTelepon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelepon_KeyPress_1);
+            this.txtTelepon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelepon_KeyPress);
             // 
             // txtEmail
             // 
@@ -384,6 +384,7 @@
             this.txtTahunMasuk.SelectedText = "";
             this.txtTahunMasuk.Size = new System.Drawing.Size(190, 31);
             this.txtTahunMasuk.TabIndex = 36;
+            this.txtTahunMasuk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTahunMasuk_KeyPress);
             // 
             // txtNama
             // 

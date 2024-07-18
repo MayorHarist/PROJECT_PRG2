@@ -44,6 +44,9 @@
             this.txtIdMatkul = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbPegawai = new System.Windows.Forms.ComboBox();
+            this.dosenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dATASETDEANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dATASET_DEAN = new PROJECT_PRG2.DATASET_DEAN();
             this.dosenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMART_MABRESDataSet1 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1();
             this.dosenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -51,6 +54,7 @@
             this.dosenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINDSMARTDataSet7 = new PROJECT_PRG2.FINDSMARTDataSet7();
             this.cbProdi = new System.Windows.Forms.ComboBox();
+            this.programStudiBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -64,25 +68,21 @@
             this.programStudiTableAdapter2 = new PROJECT_PRG2.FINDSMART_MABRESDataSet1TableAdapters.ProgramStudiTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.txtKelas = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dATASET_DEAN = new PROJECT_PRG2.DATASET_DEAN();
-            this.dATASETDEANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programStudiBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.programStudiTableAdapter3 = new PROJECT_PRG2.DATASET_DEANTableAdapters.ProgramStudiTableAdapter();
-            this.dosenBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dosenTableAdapter3 = new PROJECT_PRG2.DATASET_DEANTableAdapters.DosenTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASETDEANBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASET_DEAN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dATASET_DEAN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dATASETDEANBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -94,7 +94,7 @@
             this.label11.Location = new System.Drawing.Point(199, 213);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 30);
+            this.label11.Size = new System.Drawing.Size(63, 28);
             this.label11.TabIndex = 59;
             this.label11.Text = "Nama";
             // 
@@ -107,7 +107,7 @@
             this.label10.Location = new System.Drawing.Point(199, 265);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 30);
+            this.label10.Size = new System.Drawing.Size(110, 28);
             this.label10.TabIndex = 58;
             this.label10.Text = "Jumlah SKS";
             // 
@@ -120,7 +120,7 @@
             this.label9.Location = new System.Drawing.Point(199, 317);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 30);
+            this.label9.Size = new System.Drawing.Size(56, 28);
             this.label9.TabIndex = 57;
             this.label9.Text = "Jenis";
             // 
@@ -133,7 +133,7 @@
             this.label8.Location = new System.Drawing.Point(199, 369);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 30);
+            this.label8.Size = new System.Drawing.Size(91, 28);
             this.label8.TabIndex = 56;
             this.label8.Text = "Semester";
             // 
@@ -146,7 +146,7 @@
             this.label6.Location = new System.Drawing.Point(199, 532);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 30);
+            this.label6.Size = new System.Drawing.Size(64, 28);
             this.label6.TabIndex = 54;
             this.label6.Text = "Dosen";
             // 
@@ -159,7 +159,7 @@
             this.label1.Location = new System.Drawing.Point(199, 161);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 30);
+            this.label1.Size = new System.Drawing.Size(89, 28);
             this.label1.TabIndex = 49;
             this.label1.Text = "Id Matkul";
             // 
@@ -340,23 +340,38 @@
             this.label2.Location = new System.Drawing.Point(199, 473);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 30);
+            this.label2.Size = new System.Drawing.Size(131, 28);
             this.label2.TabIndex = 63;
             this.label2.Text = "Program Studi";
             // 
             // cbPegawai
             // 
-            this.cbPegawai.DataSource = this.dosenBindingSource3;
+            this.cbPegawai.DataSource = this.dosenBindingSource2;
             this.cbPegawai.DisplayMember = "Nama";
             this.cbPegawai.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPegawai.FormattingEnabled = true;
-            this.cbPegawai.ItemHeight = 30;
+            this.cbPegawai.ItemHeight = 28;
             this.cbPegawai.Location = new System.Drawing.Point(387, 532);
             this.cbPegawai.Margin = new System.Windows.Forms.Padding(2);
             this.cbPegawai.Name = "cbPegawai";
-            this.cbPegawai.Size = new System.Drawing.Size(192, 38);
+            this.cbPegawai.Size = new System.Drawing.Size(192, 36);
             this.cbPegawai.TabIndex = 66;
             this.cbPegawai.ValueMember = "No_Pegawai";
+            // 
+            // dosenBindingSource3
+            // 
+            this.dosenBindingSource3.DataMember = "Dosen";
+            this.dosenBindingSource3.DataSource = this.dATASETDEANBindingSource;
+            // 
+            // dATASETDEANBindingSource
+            // 
+            this.dATASETDEANBindingSource.DataSource = this.dATASET_DEAN;
+            this.dATASETDEANBindingSource.Position = 0;
+            // 
+            // dATASET_DEAN
+            // 
+            this.dATASET_DEAN.DataSetName = "DATASET_DEAN";
+            this.dATASET_DEAN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dosenBindingSource2
             // 
@@ -390,17 +405,22 @@
             // 
             // cbProdi
             // 
-            this.cbProdi.DataSource = this.programStudiBindingSource3;
+            this.cbProdi.DataSource = this.programStudiBindingSource2;
             this.cbProdi.DisplayMember = "Nama";
             this.cbProdi.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProdi.FormattingEnabled = true;
-            this.cbProdi.ItemHeight = 30;
+            this.cbProdi.ItemHeight = 28;
             this.cbProdi.Location = new System.Drawing.Point(388, 473);
             this.cbProdi.Margin = new System.Windows.Forms.Padding(2);
             this.cbProdi.Name = "cbProdi";
-            this.cbProdi.Size = new System.Drawing.Size(192, 38);
+            this.cbProdi.Size = new System.Drawing.Size(192, 36);
             this.cbProdi.TabIndex = 67;
             this.cbProdi.ValueMember = "Id_Prodi";
+            // 
+            // programStudiBindingSource3
+            // 
+            this.programStudiBindingSource3.DataMember = "ProgramStudi";
+            this.programStudiBindingSource3.DataSource = this.dATASETDEANBindingSource;
             // 
             // programStudiBindingSource2
             // 
@@ -476,7 +496,7 @@
             this.label3.Location = new System.Drawing.Point(199, 421);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 30);
+            this.label3.Size = new System.Drawing.Size(58, 28);
             this.label3.TabIndex = 73;
             this.label3.Text = "Kelas";
             // 
@@ -505,29 +525,9 @@
             this.txtKelas.Size = new System.Drawing.Size(190, 31);
             this.txtKelas.TabIndex = 72;
             // 
-            // dATASET_DEAN
-            // 
-            this.dATASET_DEAN.DataSetName = "DATASET_DEAN";
-            this.dATASET_DEAN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dATASETDEANBindingSource
-            // 
-            this.dATASETDEANBindingSource.DataSource = this.dATASET_DEAN;
-            this.dATASETDEANBindingSource.Position = 0;
-            // 
-            // programStudiBindingSource3
-            // 
-            this.programStudiBindingSource3.DataMember = "ProgramStudi";
-            this.programStudiBindingSource3.DataSource = this.dATASETDEANBindingSource;
-            // 
             // programStudiTableAdapter3
             // 
             this.programStudiTableAdapter3.ClearBeforeFill = true;
-            // 
-            // dosenBindingSource3
-            // 
-            this.dosenBindingSource3.DataMember = "Dosen";
-            this.dosenBindingSource3.DataSource = this.dATASETDEANBindingSource;
             // 
             // dosenTableAdapter3
             // 
@@ -566,19 +566,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Input Mata Kuliah";
             this.Load += new System.EventHandler(this.InputMatkul_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASETDEANBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dATASET_DEAN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMART_MABRESDsAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINDSMARTDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dATASET_DEAN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dATASETDEANBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dosenBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

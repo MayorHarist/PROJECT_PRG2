@@ -74,16 +74,22 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                 if (!ValidateFields())
                     return;
 
+                // Validasi umur tidak boleh kurang dari 21 tahun
+                DateTime today = DateTime.Today;
+                DateTime birthDate = DateTimeTanggal.Value;
+                int age = today.Year - birthDate.Year;
+                if (birthDate > today.AddYears(-age)) age--;
+
+                if (age < 18)
+                {
+                    MessageBox.Show("Umur tidak boleh kurang dari 18 tahun.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Menghentikan proses update data jika umur kurang dari 21 tahun
+                }
+
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-
-                    /*if (EmailExists(txtEmail.Text, connection))
-                    {
-                        MessageBox.Show("Email sudah terdaftar.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }*/
 
                     SqlCommand update = new SqlCommand("sp_UpdateMahasiswa", connection);
                     update.CommandType = CommandType.StoredProcedure;
@@ -112,8 +118,7 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                     update.ExecuteNonQuery();
 
                     // Menampilkan pesan jika eksekusi berhasil
-                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Basisdata berhasil diperbaharui", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // TODO: This line of code loads data into the 'fINDSMART_MABRESDataSet1.Mahasiswa' table. You can move, or remove it, as needed.
                     this.mahasiswaTableAdapter1.Fill(this.fINDSMART_MABRESDataSet1.Mahasiswa);
@@ -253,8 +258,13 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
+                e.Handled = true; // Menghentikan input karakter yang bukan angka
+                MessageBox.Show("Nomor telepon hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (txtTelepon.Text.Length >= 13 && !char.IsControl(e.KeyChar))
+            {
                 e.Handled = true;
-                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Nomor telepon tidak boleh lebih dari 13 digit.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -275,6 +285,20 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             }
 
             return true;
+        }
+
+        private void txtTahunMasuk_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Menghentikan input karakter yang bukan angka
+                MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (txtTahunMasuk.Text.Length >= 4 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Tidak boleh lebih dari 4 digit.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -35,6 +35,8 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.Pengumuman' table. You can move, or remove it, as needed.
             //this.pengumumanTableAdapter.Fill(this.fINDSMARTDataSet7.Pengumuman);
+            tglPengumuman.Value = DateTime.Now;
+
         }
 
         private void clear()

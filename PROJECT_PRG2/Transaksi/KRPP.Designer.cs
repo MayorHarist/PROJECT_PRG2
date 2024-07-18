@@ -576,6 +576,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(924, 589);
             this.Controls.Add(this.txtTendik);
             this.Controls.Add(this.btnKembali);
@@ -607,6 +608,7 @@
             this.Controls.Add(this.txtIdKRPP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "KRPP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "trsKRPP";
             this.Load += new System.EventHandler(this.trsKRPP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.programStudiBindingSource1)).EndInit();

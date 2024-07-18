@@ -41,7 +41,19 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 return; // Menghentikan proses penyimpanan data jika email tidak valid
             }
 
-            //Create Requred Validator untuk verifikasi masukan pengguna wajib diisi,
+            // Validasi umur tidak boleh kurang dari 21 tahun
+            DateTime today = DateTime.Today;
+            DateTime birthDate = tglLahirTendik.Value;
+            int age = today.Year - birthDate.Year;
+            if (birthDate > today.AddYears(-age)) age--;
+
+            if (age < 21)
+            {
+                MessageBox.Show("Umur tidak boleh kurang dari 21 tahun.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Menghentikan proses penyimpanan data jika umur kurang dari 21 tahun
+            }
+
+            //Create Required Validator untuk verifikasi masukan pengguna wajib diisi,
             //dengan memeriksa apakah semua data terisi atau belum
             if (string.IsNullOrWhiteSpace(txtIDTendik.Text) || string.IsNullOrWhiteSpace(txtNamaTendik.Text) || string.IsNullOrWhiteSpace(txtAlmatTendik.Text) ||
                 string.IsNullOrWhiteSpace(txtEmailTendik.Text) || string.IsNullOrWhiteSpace(TelpTendik.Text) || string.IsNullOrWhiteSpace(userNmTendik.Text) ||
@@ -113,9 +125,10 @@ namespace PROJECT_PRG2.CRUD_Tendik
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Unable to saved: " + ex.Message);
+                MessageBox.Show("Unable to save: " + ex.Message);
             }
         }
+
         private bool IsValidEmail(string email)
         {
             // Pattern regex untuk validasi email

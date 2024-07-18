@@ -32,6 +32,18 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             // Validasi semua data harus diisi
             if (IsFormValid())
             {
+                // Validasi umur tidak boleh kurang dari 21 tahun
+                DateTime today = DateTime.Today;
+                DateTime birthDate = DateTimeTanggal.Value;
+                int age = today.Year - birthDate.Year;
+                if (birthDate > today.AddYears(-age)) age--;
+
+                if (age < 18)
+                {
+                    MessageBox.Show("Umur tidak boleh kurang dari 18 tahun.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Menghentikan proses penyimpanan data jika umur kurang dari 21 tahun
+                }
+
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -186,6 +198,11 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
                 e.Handled = true; // Menghentikan input karakter yang bukan angka
                 MessageBox.Show("Nomor telepon hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            if (txtTelepon.Text.Length >= 13 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nomor telepon tidak boleh lebih dari 13 digit.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnKembali_Click(object sender, EventArgs e)
@@ -202,12 +219,17 @@ namespace PROJECT_PRG2.CRUD_Mahasiswa
             }
         }
 
-        private void txtTelepon_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void txtTahunMasuk_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                e.Handled = true;
+                e.Handled = true; // Menghentikan input karakter yang bukan angka
                 MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (txtTahunMasuk.Text.Length >= 4 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nomor telepon tidak boleh lebih dari 13 digit.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

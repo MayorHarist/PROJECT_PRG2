@@ -297,7 +297,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROJECT_PRG2.Properties.Resources.DESIGN_Prodi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(804, 736);
+            this.ClientSize = new System.Drawing.Size(814, 575);
             this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);

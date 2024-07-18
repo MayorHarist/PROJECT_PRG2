@@ -123,6 +123,7 @@ namespace PROJECT_PRG2.CRUD_Pengumuman
             //this.tenagaKependidikanTableAdapter1.Fill(this.fINDSMART_MABRESDsAll.TenagaKependidikan);
             // TODO: This line of code loads data into the 'fINDSMARTDataSet7.TenagaKependidikan' table. You can move, or remove it, as needed.
             //this.tenagaKependidikanTableAdapter.Fill(this.fINDSMARTDataSet7.TenagaKependidikan);
+            tglPengumuman.Value = DateTime.Now;
 
         }
 

@@ -131,23 +131,28 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 //string connectionstring = "integrated security=false; data source=.; user=sa; password=polman; initial catalog=FINDSMART";
                 string connectionString = "integrated security=true; data source=.; initial catalog=FINDSMART_MABRES";
 
+                // Validasi email menggunakan regex
+                if (!IsValidEmail(txtEmailTendik.Text))
+                {
+                    MessageBox.Show("Format email tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Menghentikan proses pembaruan data jika email tidak valid
+                }
+
+                // Validasi umur tidak boleh kurang dari 21 tahun
+                DateTime today = DateTime.Today;
+                DateTime birthDate = tglLahirTendik.Value;
+                int age = today.Year - birthDate.Year;
+                if (birthDate > today.AddYears(-age)) age--;
+
+                if (age < 21)
+                {
+                    MessageBox.Show("Umur tidak boleh kurang dari 21 tahun.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Menghentikan proses pembaruan data jika umur kurang dari 21 tahun
+                }
+
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-
-                    /*// Validate email format
-                    if (!IsValidEmail(txtEmailTendik.Text))
-                    {
-                        MessageBox.Show("Format email tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    // Check if email already exists
-                    if (EmailExists(txtEmailTendik.Text))
-                    {
-                        MessageBox.Show("Email sudah terdaftar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }*/
 
                     SqlCommand update = new SqlCommand("sp_UpdateTendik", connection);
                     update.CommandType = CommandType.StoredProcedure;
@@ -176,6 +181,7 @@ namespace PROJECT_PRG2.CRUD_Tendik
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void btnHapus__Click(object sender, EventArgs e)
         {

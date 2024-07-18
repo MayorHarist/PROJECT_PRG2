@@ -78,12 +78,23 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 return;
             }
 
+            // Validasi umur tidak boleh kurang dari 21 tahun
+            DateTime today = DateTime.Today;
+            DateTime tanggalLahir = DateTimeTanggal.Value;
+            int age = today.Year - tanggalLahir.Year;
+            if (tanggalLahir > today.AddYears(-age)) age--;
+
+            if (age < 21)
+            {
+                MessageBox.Show("Umur tidak boleh kurang dari 21 tahun.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Menghentikan proses penyimpanan data jika umur kurang dari 21 tahun
+            }
+
             string noPegawai = txtPegawai.Text;
             string nidn = txtNIDN.Text;
             string nama = txtNama.Text;
             string bidang = txtBidang.Text;
             string pendidikan = txtPendidikan.Text;
-            DateTime tanggalLahir = DateTimeTanggal.Value;
             string jenisKelamin = rbLaki.Checked ? "Laki-Laki" : rbPerempuan.Checked ? "Perempuan" : string.Empty;
             string alamat = txtAlamat.Text;
             string email = txtEmail.Text;
@@ -140,7 +151,6 @@ namespace PROJECT_PRG2.CRUD_Dosen
                 MessageBox.Show("Penyimpanan data dibatalkan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
         private void clear()
         {
             txtNIDN.Text = "";
@@ -275,6 +285,11 @@ namespace PROJECT_PRG2.CRUD_Dosen
             {
                 e.Handled = true;
                 MessageBox.Show("Hanya boleh diisi dengan angka.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (txtTelepon.Text.Length >= 13 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Nomor telepon tidak boleh lebih dari 13 digit.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
